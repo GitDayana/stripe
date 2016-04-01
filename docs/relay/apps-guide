@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Relay API for Apps</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="iXAZbZpZiuY6zg3ME8rWalg537BZrCrSwpE-pu390wQBWhyugzrPVsneVxxNsGrhYIQlWEjH_uoLi6nKbPB3ng==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="selected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="orders-guide" id="details">
+  <header>
+    <h1>Relay API for Apps</h1>
+    <p>The Relay API provides an infrastructure for apps to process orders on behalf of other Stripe users. If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+
+</p>
+  </header>
+  <article>
+
+    <p>Through the Relay API, sellers represent a catalog of physical and digital products in their Stripe accounts, Sellers then authorize any number of <em>apps</em>–shopping and social media platforms–to process orders on their behalf. The end result is an API that supports direct sales from anywhere, be it a tweet, a post on social media, or even from within a dedicated app.</p>
+
+    <p>As an app, you’ll initially need to:</p>
+
+    <ol>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide#set-up-your-platform">Set up your platform</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide#integrate-oauth">Integrate OAuth to connect sellers</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide#find-products-and-skus">Find a seller’s available products and SKUs</a></li>
+    </ol>
+
+    <p>Having done that, you can then:</p>
+
+    <ol>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide#create-orders">Create orders</a> on behalf of connected sellers.</li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide#accept-payment-for-orders">Accept payment for orders</a> on behalf of connected sellers.</li>
+      <li>Optionally <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide#application-fee">take an application fee</a>.</li>
+    </ol>
+
+    <p>To learn more about Relay for sellers, see the <a href="index.html">Relay overview</a>. To quickly develop and test your own app, walk through the recipe for using the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app">Relay Demo</a> seller account.</p>
+
+    <hr />
+
+    <aside class="content note">
+      <h1>Connected account types</h1>
+      <p><a href="../connect/index.html">Connect</a> allows platforms to interact with both <a href="../connect/oauth">standalone</a> and <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">managed</a> Stripe accounts. As Relay promotes the use of multiple apps to sell products, sellers will always have their own standalone accounts.</p>
+    </aside>
+
+    <h2 id="set-up-your-platform">Set up your platform</h2>
+
+    <p>Stripe <a href="../connect/index.html">Connect</a> makes it easy for platforms to interact with other Stripe accounts, accepting money on their behalf, and accessing their data. Thanks to Relay, a platform can now use Connect to process orders as well.</p>
+
+    <p>If you have not done so already, you’ll need to <a href="https://dashboard.stripe.com/account/applications/settings">register your platform</a>. Make a note of your <code>client_id</code> and <code>redirect_uri</code>, as both are used to authorize connections to your account.</p>
+
+    <p>If you have an existing Connect application, you can begin using it with the Relay API immediately, without even updating your API version!</p>
+
+    <hr />
+
+    <h2 id="integrate-oauth">Integrate OAuth to connect sellers</h2>
+
+    <p class="notification">The rest of this guide assumes you have already <a href="https://dashboard.stripe.com/account/applications/settings" class="arrow">registered your platform</a></p>
+
+    <p>As a Connect platform and app, you create an onboarding flow through which merchants authorize your Connect app to act on their behalf. Once a merchant connects to your app, you’ll be able to access their product catalog and create orders against it. Stripe uses a common OAuth process, explained in detail in the <a href="../connect/oauth">Connecting to Standalone Accounts</a> guide.</p>
+
+    <p>Once sellers have connected their Stripe accounts to your platform, you can use the Relay API to find products and SKUs, create orders, and accept payment for orders.</p>
+
+    <hr />
+
+    <h2 id="find-products-and-skus">Find products and SKUs</h2>
+
+    <p>To process orders, apps must first be aware of the products a merchant has. You may obtain this information in various ways, but the ultimate source for truth is making an API call on the merchant’s behalf.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_product_list">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Notice that you’ll make this request on behalf of the connected user, by passing their account ID as explained in <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication with Connect</a>. The API call returns the available product IDs, as well as the product’s descriptions, images, and so on: anything the merchant has provided that will be compelling to your users. You’ll find available products in the <code>data</code> property of the API response.</p>
+
+    <p>Products are umbrellas for what merchants sell, but orders are composed of SKUs: specific variants of a product. When you fetch the seller’s products, we’ll automatically return related SKUs, too.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;object&quot;: &quot;list&quot;,
+  &quot;has_more&quot;: false,
+  &quot;url&quot;: &quot;/v1/products&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;prod_6yK3M2RfEUqrkF&quot;,
+      &quot;created&quot;: 1442100452,
+      &quot;updated&quot;: 1442100452,
+      &quot;object&quot;: &quot;product&quot;,
+      &quot;livemode&quot;: false,
+      &quot;name&quot;: &quot;2015 Limited Edition T-shirt&quot;,
+      &quot;caption&quot;: null,
+      &quot;description&quot;: &quot;Super awesome, one-of-a-kind t-shirt&quot;,
+      &quot;active&quot;: true,
+      &quot;attributes&quot;: [
+        &quot;size&quot;,
+        &quot;gender&quot;,
+        &quot;color&quot;
+      ],
+      &quot;shippable&quot;: true,
+      &quot;metadata&quot;: {},
+      &quot;url&quot;: null,
+      &quot;package_dimensions&quot;: null,
+      &quot;images&quot;: [],
+      &quot;skus&quot;: {
+        &quot;object&quot;: &quot;list&quot;,
+        &quot;total_count&quot;: 3,
+        &quot;has_more&quot;: false,
+        &quot;url&quot;: &quot;/v1/skus?product=prod_6yK3M2RfEUqrkF&amp;active=true&quot;,
+        &quot;data&quot;: [
+          {
+            &quot;id&quot;: &quot;sku_6yK573OC7bNAX0&quot;,
+            &quot;created&quot;: 1442100560,
+            &quot;updated&quot;: 1442100560,
+            &quot;object&quot;: &quot;sku&quot;,
+            &quot;livemode&quot;: false,
+            &quot;product&quot;: &quot;prod_6yK3M2RfEUqrkF&quot;,
+            &quot;image&quot;: null,
+            &quot;active&quot;: true,
+            &quot;price&quot;: 1500,
+            &quot;currency&quot;: &quot;usd&quot;,
+            &quot;inventory&quot;: {
+              &quot;type&quot;: &quot;finite&quot;,
+              &quot;quantity&quot;: 500,
+              &quot;value&quot;: null
+            },
+            &quot;attributes&quot;: {
+              &quot;size&quot;: &quot;Medium&quot;,
+              &quot;gender&quot;: &quot;Unisex&quot;,
+              &quot;color&quot;: &quot;Cyan&quot;
+            },
+            &quot;metadata&quot;: {},
+            &quot;package_dimensions&quot;: null
+          },
+          {
+            &quot;id&quot;: &quot;sku_6yK5PxwPbswVFB&quot;,
+            &quot;created&quot;: 1442100602,
+            &quot;updated&quot;: 1442100602,
+            &quot;object&quot;: &quot;sku&quot;,
+            &quot;livemode&quot;: false,
+            &quot;product&quot;: &quot;prod_6yK3M2RfEUqrkF&quot;,
+            &quot;image&quot;: null,
+            &quot;active&quot;: true,
+            &quot;price&quot;: 1500,
+            &quot;currency&quot;: &quot;usd&quot;,
+            &quot;inventory&quot;: {
+              &quot;type&quot;: &quot;finite&quot;,
+              &quot;quantity&quot;: 400,
+              &quot;value&quot;: null
+            },
+            &quot;attributes&quot;: {
+              &quot;size&quot;: &quot;Large&quot;,
+              &quot;gender&quot;: &quot;Unisex&quot;,
+              &quot;color&quot;: &quot;Cyan&quot;
+            },
+            &quot;metadata&quot;: {},
+            &quot;package_dimensions&quot;: null
+          }
+        ]
+      }
+    }
+  ]
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>If you look at all the SKUs for a product, you’ll see every possible attribute value, for example: <code>size</code> can be “Small”, Medium”, or “Large”; <code>color</code> can be “Cyan” or “Magenta”. Using that information, you can render appropriate dropdown menus or create other interfaces for customers to select what they’re purchasing.</p>
+
+    <p>You should also pay attention to each SKU’s <code>inventory</code>, which reflects whether that particular item is currently purchasable. (Attempts to pay for an order that contains an out-of-stock item will result in an error.)</p>
+
+    <p>You’ll need to store all of the relevant information to make products and SKUs purchasable in orders. The most important bit of information will be the SKU IDs, which go directly into an <code>Order</code>.</p>
+
+    <hr />
+
+    <h2 id="create-orders">Create orders</h2>
+
+    <p>Having identified a seller’s available products (more precisely, SKUs), the next step is to make them available for purchase by your users. This can be as simple as providing a link or button users click, or by building up a shopping cart. The ordering process can begin within a website, a mobile app, a social media tool, or by merely displaying a linked image. (For more on the order workflow, see the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app#order-workflow">Building a Product Discovery App</a> recipe.)</p>
+
+    <p>Once a user has expressed intent to purchase one or more products, create an order in Stripe by providing:</p>
+
+    <ul>
+      <li>SKUs to be purchased</li>
+      <li>Quantity of each</li>
+      <li>Currency of the order</li>
+      <li>Customer details–email address, shipping information, and so on</li>
+    </ul>
+
+    <p>Orders are <a href="../api/index.html#create_order">created</a> on the merchant’s Stripe account, using the merchant’s account ID in the request.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_order_create">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Order creations are synchronous requests. You’ll get an <code>Order</code> object as the response, or an error if a problem occurred.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;id&quot;: &quot;or_6yLD5jBXsLYNcr&quot;,
+  &quot;created&quot;: 1442104773,
+  &quot;updated&quot;: 1442104773,
+  &quot;object&quot;: &quot;order&quot;,
+  &quot;livemode&quot;: false,
+  &quot;status&quot;: &quot;created&quot;,
+  &quot;metadata&quot;: {},
+  &quot;customer&quot;: null,
+  &quot;shipping&quot;: {
+    &quot;name&quot;: &quot;Jenny Rosen&quot;,
+    &quot;address&quot;: {
+      &quot;line1&quot;: &quot;1234 Main Street&quot;,
+      &quot;line2&quot;: null,
+      &quot;city&quot;: &quot;Anytown&quot;,
+      &quot;state&quot;: null,
+      &quot;postal_code&quot;: &quot;12356&quot;,
+      &quot;country&quot;: &quot;US&quot;
+    },
+    &quot;phone&quot;: null
+  },
+  &quot;email&quot;: null,
+  &quot;items&quot;: [
+    {
+      &quot;parent&quot;: &quot;sku_6yK573OC7bNAX0&quot;,
+      &quot;object&quot;: &quot;order_item&quot;,
+      &quot;type&quot;: &quot;sku&quot;,
+      &quot;description&quot;: &quot;2015 Limited Edition T-shirt&quot;,
+      &quot;amount&quot;: 1500,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;quantity&quot;: 1
+    },
+    {
+      &quot;parent&quot;: null,
+      &quot;object&quot;: &quot;order_item&quot;,
+      &quot;type&quot;: &quot;tax&quot;,
+      &quot;description&quot;: &quot;Taxes (included)&quot;,
+      &quot;amount&quot;: 0,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;quantity&quot;: null
+    },
+    {
+      &quot;parent&quot;: &quot;ship_free-shipping&quot;,
+      &quot;object&quot;: &quot;order_item&quot;,
+      &quot;type&quot;: &quot;shipping&quot;,
+      &quot;description&quot;: &quot;Free shipping&quot;,
+      &quot;amount&quot;: 0,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;quantity&quot;: null
+    }
+  ],
+  &quot;shipping_methods&quot;: [
+    {
+      &quot;id&quot;: &quot;ship_free-shipping&quot;,
+      &quot;description&quot;: &quot;Free shipping&quot;,
+      &quot;amount&quot;: 0,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;delivery_estimate&quot;: {
+        &quot;type&quot;: &quot;exact&quot;,
+        &quot;date&quot;: &quot;2016-04-05&quot;
+      }
+    }
+  ],
+  &quot;selected_shipping_method&quot;: &quot;ship_free-shipping&quot;,
+  &quot;amount&quot;: 1500,
+  &quot;currency&quot;: &quot;usd&quot;,
+  &quot;charge&quot;: null
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>As you can see in the response, Stripe automatically plugs in the appropriate shipping and tax costs, per the seller’s settings. You can use these values in the returned <code>Order</code> object to present a final total to your user for payment.</p>
+
+    <p>Behind the scenes, Stripe will notify the seller of the order’s creation by email or webhook notification, depending upon the seller’s settings. (You will also receive webhook notifications at your Connect app’s endpoint.)</p>
+
+    <hr />
+
+    <h2 id="accept-payment-for-orders">Accept payment for orders</h2>
+
+    <p>The final step for the app is to collect payment for the order. Orders are paid for similar to any other charge in Stripe, using either a credit card or an existing <code>Customer</code> object from a Stripe account (with a previously stored source). A simple and common option is to have the customer pay using a credit card, tokenized via <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Stripe.js</a> or <a href="https://stripe.com/docs/checkout/tutorial">Checkout</a>.</p>
+
+    <p>You’ll most likely want to save card details in a <code>Customer</code> object on your own Stripe account, so users of your app have their payment credentials saved for re-use across whichever merchants they want to purchase from in the future.</p>
+
+    <p>Provide the payment source in the <a href="../api/index.html#pay_order">pay order</a> call, and the customer will be charged.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_order_pay">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Note that all of the order creation and payment activity occurs on the seller’s account, on whose behalf you’re operating. The customer’s funds will flow directly to the seller’s Stripe account, and they will be all set to fulfill the order.</p>
+
+    <p>Upon payment, the <code>Order</code> object’s <code>status</code> will be changed to <code>paid</code>, and <code>order.payment_succeed</code> events will be sent to all applicable webhook endpoints.</p>
+
+    <h2 id="application-fee">Take an application fee</h2>
+
+    <p>Apps also have the option to apply an <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#collecting-fees">application fee</a> when accepting payment for an order. No Stripe fees are taken from the application fee; the only Stripe fees are on the charge itself, and those come from the amount going to the seller. <strong>You must make it clear to your connected sellers that you charge an application fee.</strong></p>
+
+    <p>For example, on an order of $100 (USD), if you take an application fee of $1.00 (USD), you will receive $1.00 (USD) in your Stripe account. The seller will receive $95.80 (USD) in their Stripe account: $100, less the $3.20 Stripe fee (2.9% + 30 cents), less your application fee.</p>
+
+    <p>To charge an application fee, pass in the optional <code>application_fee</code> parameter in the pay order call. The <code>application_fee</code> parameter must be a positive integer (e.g., an amount in cents), representing a flat amount, not a percentage.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_order_pay_appfee">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <h2 id="graceful-error-handling">Graceful error handling</h2>
+
+    <p>Creating and paying for orders can fail in a number of ways. To deliver the best possible user experience, you should should display clear, actionable errors whenever something goes wrong. To help you learn about possible errors and thoroughly test your error handling flows, check out our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">advanced error handling guide</a>.</p>
+
+    <hr />
+
+    <h1>Next up</h1>
+    <p>Congrats! You’ve gone through how to use the Relay API’s products, SKUs and orders features. Some things you might want to see next:
+</p>
+    <ul>
+  <li><a href="../connect/index.html">Connect overview</a></li>
+  <li><a href="index.html">Relay Guide for Sellers</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app">Building a Product Discovery App</a></li>
+  <li><a href="../api/index.html#products">Products API docs</a></li>
+  <li><a href="../api/index.html#skus">SKU API docs</a></li>
+  <li><a href="../api/index.html#orders">Order API docs</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["ruby"] = {};
+              APIValues["ruby"]["tutorial_product_list"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nStripe::Product.all(\n  {:limit =\u0026gt; 3},\n  :stripe_account =\u0026gt; \u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_order_create"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nStripe::Order.create(\n  :currency =\u0026gt; \u0026#39;usd\u0026#39;,\n  :items =\u0026gt; [\n    {\n      :type =\u0026gt; \u0026#39;sku\u0026#39;,\n      :parent =\u0026gt; \u0026#39;sku_6yK573OC7bNAX0\u0026#39;\n    }\n  ],\n  :shipping =\u0026gt; {\n    :name =\u0026gt; \u0026#39;Jenny Rosen\u0026#39;,\n    :address =\u0026gt; {\n      :line1 =\u0026gt; \u0026#39;1234 Main Street\u0026#39;,\n      :city =\u0026gt; \u0026#39;Anytown\u0026#39;,\n      :country =\u0026gt; \u0026#39;US\u0026#39;,\n      :postal_code =\u0026gt; \u0026#39;123456\u0026#39;\n    }\n  },\n  :stripe_account =\u0026gt; \u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_order_pay"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\norder = Stripe::Order.retrieve(\u0026#39;or_6yLD5jBXsLYNcr\u0026#39;,\n  :stripe_account =\u0026gt; \u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;)\n\norder.pay(\n  :source =\u0026gt; \u0026#39;tok_16glHpJrQulZCT9iNFY21k34\u0026#39;\n  # Obtained with Stripe.js ^^^\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_order_pay_appfee"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\norder = Stripe::Order.retrieve(\u0026#39;or_6yLD5jBXsLYNcr\u0026#39;,\n  :stripe_account =\u0026gt; \u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;)\n\norder.pay(\n  :application_fee =\u0026gt; 100,\n  :source =\u0026gt; \u0026#39;tok_16glHpJrQulZCT9iNFY21k34\u0026#39;\n  # Obtained with Stripe.js ^^^\n)\u003C/span\u003E";
+          APIValues["python"] = {};
+              APIValues["python"]["tutorial_product_list"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nstripe.Product.all(\n  limit=3,\n  stripe_account=\u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;\n)\u003C/span\u003E";
+              APIValues["python"]["tutorial_order_create"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nstripe.Order.create(\n  currency = \u0026#39;usd\u0026#39;,\n  items = [\n    {\n      type = \u0026#39;sku\u0026#39;,\n      parent = \u0026#39;sku_6yK573OC7bNAX0\u0026#39;\n    }\n  ],\n  shipping = {\n    name = \u0026#39;Jenny Rosen\u0026#39;,\n    address = {\n      line1 = \u0026#39;1234 Main Street\u0026#39;,\n      city = \u0026#39;Anytown\u0026#39;,\n      country = \u0026#39;US\u0026#39;,\n      postal_code = \u0026#39;123456\u0026#39;\n    }\n  },\n  stripe_account=\u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;\n)\u003C/span\u003E";
+              APIValues["python"]["tutorial_order_pay"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\norder = stripe.Order.retrieve(\u0026#39;or_6yLD5jBXsLYNcr\u0026#39;,\n  stripe_account=\u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;)\n\norder.pay(\n  source=\u0026#39;tok_16glHpJrQulZCT9iNFY21k34\u0026#39;\n  # Obtained with Stripe.js ^^^\n)\u003C/span\u003E";
+              APIValues["python"]["tutorial_order_pay_appfee"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\norder = stripe.Order.retrieve(\u0026#39;or_6yLD5jBXsLYNcr\u0026#39;,\n  stripe_account=\u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;)\n\norder.pay(\n  application_fee=100,\n  source=\u0026#39;tok_16glHpJrQulZCT9iNFY21k34\u0026#39;\n  # Obtained with Stripe.js ^^^\n)\u003C/span\u003E";
+          APIValues["php"] = {};
+              APIValues["php"]["tutorial_product_list"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n\\Stripe\\Product::all(\n  array(\u0026quot;limit\u0026quot; =\u0026gt; 3),\n  array(\u0026quot;stripe_account\u0026quot; =\u0026gt; \u0026quot;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026quot;)\n);\u003C/span\u003E";
+              APIValues["php"]["tutorial_order_create"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n\\Stripe\\Order::create(array(\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;items\u0026quot; =\u0026gt; array(\n    array(\n      \u0026quot;type\u0026quot; =\u0026gt; \u0026quot;sku\u0026quot;,\n      \u0026quot;parent\u0026quot; =\u0026gt; \u0026quot;sku_6yK573OC7bNAX0\u0026quot;\n    )\n  ),\n  \u0026quot;shipping\u0026quot; =\u0026gt; array(\n    \u0026quot;name\u0026quot; =\u0026gt; \u0026quot;Jenny Rosen\u0026quot;,\n    \u0026quot;address\u0026quot; =\u0026gt; array(\n      \u0026quot;line1\u0026quot; =\u0026gt; \u0026quot;1234 Main Street\u0026quot;,\n      \u0026quot;city\u0026quot; =\u0026gt; \u0026quot;Anytown\u0026quot;,\n      \u0026quot;country\u0026quot; =\u0026gt; \u0026quot;US\u0026quot;,\n      \u0026quot;postal_code\u0026quot; =\u0026gt; \u0026quot;123456\u0026quot;\n    )\n  ),\n  array(\u0026quot;stripe_account\u0026quot; =\u0026gt; \u0026quot;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026quot;)\n);\u003C/span\u003E";
+              APIValues["php"]["tutorial_order_pay"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n$order = \\Stripe\\Order::retrieve(\u0026quot;or_6yLD5jBXsLYNcr\u0026quot;,\n  array(\u0026quot;stripe_account\u0026quot; =\u0026gt; \u0026quot;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026quot;)\n);\n\n$order.pay(array(\n  \u0026quot;source\u0026quot; =\u0026gt; \u0026quot;tok_16glHpJrQulZCT9iNFY21k34\u0026quot;\n  // Obtained with Stripe.js ^^^\n));\u003C/span\u003E";
+              APIValues["php"]["tutorial_order_pay_appfee"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n$order = \\Stripe\\Order::retrieve(\u0026quot;or_6yLD5jBXsLYNcr\u0026quot;,\n  array(\u0026quot;stripe_account\u0026quot; =\u0026gt; \u0026quot;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026quot;)\n);\n\n$order.pay(array(\n  \u0026quot;application_fee\u0026quot; =\u0026gt; 100,\n  \u0026quot;source\u0026quot; =\u0026gt; \u0026quot;tok_16glHpJrQulZCT9iNFY21k34\u0026quot;\n  # Obtained with Stripe.js ^^^\n));\u003C/span\u003E";
+          APIValues["node"] = {};
+              APIValues["node"]["tutorial_product_list"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.products.list(\n  {limit: 3},\n  {stripe_account: \u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;},\n  function(err, products) {\n  // asynchronously called\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_order_create"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.orders.create({\n  currency: \u0026#39;usd\u0026#39;,\n  items: [\n    {\n      type: \u0026#39;sku\u0026#39;,\n      parent: \u0026#39;sku_6yK573OC7bNAX0\u0026#39;\n    }\n  ],\n  shipping: {\n    name: \u0026#39;Jenny Rosen\u0026#39;,\n    address: {\n      line1: \u0026#39;1234 Main Street\u0026#39;,\n      city: \u0026#39;Anytown\u0026#39;,\n      country: \u0026#39;US\u0026#39;,\n      postal_code: \u0026#39;123456\u0026#39;\n    }\n  }\n}, {\n  stripe_account: \u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;\n}, function(err, order) {\n  // asynchronously called\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_order_pay"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.orders.pay(\u0026quot;or_6yLD5jBXsLYNcr\u0026quot;, {\n  source: \u0026quot;tok_16glHpJrQulZCT9iNFY21k34\u0026quot;\n  // Obtained with Stripe.js ^^^\n}, {\n  stripe_account: \u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;\n}, function(err, order) {\n  // called asynchronously\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_order_pay_appfee"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.orders.retrieve(\u0026quot;or_6yLD5jBXsLYNcr\u0026quot;, {\n  stripe_account: \u0026#39;{CONNECTED_STRIPE_ACCOUNT_ID}\u0026#39;\n}, function(err, order) {\n    if !err {\n      order.pay({\n        application_fee: 100,\n        source: \u0026quot;tok_16glHpJrQulZCT9iNFY21k34\u0026quot;\n        // Obtained with Stripe.js ^^^\n      })\n    }\n});\u003C/span\u003E";
+          APIValues["java"] = {};
+              APIValues["java"]["tutorial_product_list"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; productParams = new HashMap\u0026lt;String, Object\u0026gt;();\nproductParams.put(\u0026quot;limit\u0026quot;, 3);\n\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount({CONNECTED_STRIPE_ACCOUNT_ID}).build();\n\nProduct.list(productParams, requestOptions);\u003C/span\u003E";
+              APIValues["java"]["tutorial_order_create"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; orderParams = new HashMap\u0026lt;String, Object\u0026gt;();\norderParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\nList\u0026lt;Object\u0026gt; itemsParams = new LinkedList\u0026lt;Object\u0026gt;();\nMap\u0026lt;String, String\u0026gt; item1 = new HashMap\u0026lt;String, String\u0026gt;();\nitem1.put(\u0026quot;type\u0026quot;, \u0026quot;sku\u0026quot;);\nitem1.put(\u0026quot;parent\u0026quot;, \u0026quot;sku_6yK573OC7bNAX0\u0026quot;);\nitemsParams.add(item1);\norderParams.put(\u0026quot;items\u0026quot;, itemsParams);\nMap\u0026lt;String, Object\u0026gt; shippingParams = new HashMap\u0026lt;String, Object\u0026gt;();\nshippingParams.put(\u0026quot;name\u0026quot;, \u0026quot;Jenny Rosen\u0026quot;);\nMap\u0026lt;String, Object\u0026gt; addressParams = new HashMap\u0026lt;String, Object\u0026gt;();\naddressParams.put(\u0026quot;line1\u0026quot;, \u0026quot;1234 Main Street\u0026quot;);\naddressParams.put(\u0026quot;city\u0026quot;, \u0026quot;Anytown\u0026quot;);\naddressParams.put(\u0026quot;country\u0026quot;, \u0026quot;US\u0026quot;);\naddressParams.put(\u0026quot;postal_code\u0026quot;, \u0026quot;123456\u0026quot;);\nshippingParams.put(\u0026quot;address\u0026quot;, addressParams);\norderParams.put(\u0026quot;shipping\u0026quot;, shippingParams);\n\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount({CONNECTED_STRIPE_ACCOUNT_ID}).build();\n\nOrder.create(orderParams, requestOptions);\u003C/span\u003E";
+              APIValues["java"]["tutorial_order_pay"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount({CONNECTED_STRIPE_ACCOUNT_ID}).build();\n\nOrder order = Order.retrieve(\u0026quot;or_6yLD5jBXsLYNcr\u0026quot;, requestOptions);\n\nMap\u0026lt;String, Object\u0026gt; orderParams = new HashMap\u0026lt;String, Object\u0026gt;();\norderParams.put(\u0026quot;source\u0026quot;, \u0026quot;tok_16glHpJrQulZCT9iNFY21k34\u0026quot;);\n// Obtained with Stripe.js ^^^\n\norder.pay(orderParams);\u003C/span\u003E";
+              APIValues["java"]["tutorial_order_pay_appfee"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount({CONNECTED_STRIPE_ACCOUNT_ID}).build();\n\nOrder order = Order.retrieve(\u0026quot;or_6yLD5jBXsLYNcr\u0026quot;, requestOptions);\n\nMap\u0026lt;String, Object\u0026gt; orderParams = new HashMap\u0026lt;String, Object\u0026gt;();\norderParams.put(\u0026quot;application_fee\u0026quot;, 100);\norderParams.put(\u0026quot;source\u0026quot;, \u0026quot;tok_16glHpJrQulZCT9iNFY21k34\u0026quot;);\n// Obtained with Stripe.js ^^^\n\norder.pay(orderParams);\u003C/span\u003E";
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

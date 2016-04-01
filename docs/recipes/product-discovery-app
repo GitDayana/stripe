@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Building a Product Discovery App</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="QM0Nzn5AaEBSQVKQgqtn_VFV021--70UOyFQC_d3MCzI5wgNZyMt8KFRCEDc0dt2aegphW-QaSzyO8dndnqUtg==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="relay-guide" id="details">
+  <header>
+    <h1>Building a Product Discovery App</h1>
+    <p>Learn how to develop and test your own product discovery app using <a href="../relay/index.html">Relay</a> and the <a href="https://bestbuy.com">Best Buy</a> product catalog.</p>
+  </header>
+  <article>
+
+    <aside class="intro note">
+      <h1>More recipes</h1>
+      <p>Check out our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes">other recipes</a> and discover more ways to integrate Stripe.</p>
+    </aside>
+    <div id="best_buy-logo-modal" alt="Best Buy logo" class="caption-image right"></div>
+
+    <p>The <a href="../relay/index.html">Relay API</a> expands what Stripe users can do beyond processing charges:</p>
+
+    <ul>
+      <li><em>Sellers</em> can represent a product catalog in Stripe and accept orders.</li>
+      <li><em>App Developers</em> can render products from and submit orders to sellers, acting as new sales channels for them.</li>
+    </ul>
+
+    <p>Through Relay, otherwise complex processes–accessing product feeds, selling products for other businesses, and accepting payments–are reduced to simple and direct API calls.</p>
+
+    <p>The following steps walk through the development of a product-discovery application that provides a “Buy Button” experience. With a quick and obvious user workflow, an HTML link–embedded on a web page, shared through social media, or shown within a mobile app–can be the foundation of a complete ordering process.</p>
+
+    <p>In a normal workflow, as described in the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Relay API for Apps</a> guide, an app developer creates a platform using <a href="../connect/index.html">Stripe Connect</a> and is then granted access to other Stripe accounts through an <a href="../connect/oauth">OAuth flow</a>. To make it easy to get started building Relay-powered apps, <a href="https://bestbuy.com">Best Buy</a> makes their product inventory accessible to app developers in test mode.</p>
+
+    <h2 id="connect-to-best-buy">Connect to Best Buy</h2>
+
+    <aside class="content note">
+      <h1>Demo your product catalog</h1>
+      <p>Please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#108;&#097;&#121;&#045;&#097;&#112;&#112;&#045;&#098;&#101;&#115;&#116;&#098;&#117;&#121;&#064;&#115;&#116;&#114;&#105;&#112;&#101;&#046;&#099;&#111;&#109;">contact us</a> if you’d like to also make your catalog available to users for easy testing purposes as Best Buy has done.</p>
+    </aside>
+
+    <p>With a live application, you would invite sellers to connect their Stripe accounts to your platform. Doing so allows you to access their product catalog and place orders for them directly from your app. For the purpose of this recipe, we automated the connection process using the <em>Best Buy Demo</em> account. The connection gives you the following permissions:</p>
+
+    <ul>
+      <li>Read-only access to Products and SKUs</li>
+      <li>Write access to create and pay for Orders</li>
+    </ul>
+
+    <p>Please note that the connection is created in test mode only (no live orders can be processed), webhooks are disabled, and access is limited to the Relay API endpoints. In order to start creating live mode orders, you will need Best Buy to authenticate your app. Please reach out to <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#108;&#097;&#121;&#045;&#097;&#112;&#112;&#043;&#098;&#101;&#115;&#116;&#098;&#117;&#121;&#064;&#115;&#116;&#114;&#105;&#112;&#101;&#046;&#099;&#111;&#109;">&#114;&#101;&#108;&#097;&#121;&#045;&#097;&#112;&#112;&#043;&#098;&#101;&#115;&#116;&#098;&#117;&#121;&#064;&#115;&#116;&#114;&#105;&#112;&#101;&#046;&#099;&#111;&#109;</a> to request a connection.</p>
+
+    <p class="notification">This tutorial assumes you are logged in and have already <a href="https://dashboard.stripe.com/account/applications/settings" class="arrow">registered your platform</a></p>
+
+    <p>After automatically connecting, you should be all set to retrieve and use the <em>Relay Demo</em> product catalog as described in the following sections.</p>
+
+    <p>If you’ve used Connect before, you may have noticed no API key was returned as part of the connection process. Instead, you can use the <code>Stripe-Account</code> header to make requests on behalf of the <em>Relay Demo</em> account, whose ID is <code>acct_16TZFyGRAn672XBM</code>. Using the <code>Stripe-Account</code> header is described in more detail in <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication with Connect</a>.</p>
+
+    <h2 id="retrieve-products-and-skus">Retrieve products and SKUs</h2>
+
+    <p>After connecting to the <em>Relay Demo</em> account, the next step is to discover the products they’ve made available for sale. Do so by hitting the “list all products” endpoint, passing along a value of true for the <code>active</code> parameter. (Sellers can make products inactive to make them unavailable for purchase.) </p>
+
+    <p>The “list all products” endpoint uses the standard Stripe <a href="../api/index.html#pagination">pagination</a>:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/products?active=true</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+   -H <span class="token string">"Stripe-Account: acct_16TZFyGRAn672XBM"</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>You’ll find available products in the <code>data</code> property of the API response. </p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;object&quot;: &quot;list&quot;,
+  &quot;has_more&quot;: true,
+  &quot;url&quot;: &quot;/v1/products&quot;,
+  &quot;data&quot;: [
+   {
+     &quot;id&quot;: &quot;4397400&quot;,
+     &quot;livemode&quot;: false,
+     &quot;created&quot;: 1445541476,
+     &quot;updated&quot;: 1446082438,
+     &quot;object&quot;: &quot;product&quot;,
+     &quot;active&quot;: true,
+     &quot;name&quot;: &quot;Google - Chromecast (2015 Model) - Black&quot;,
+     &quot;caption&quot;: &quot;Allows you to stream shows, movies, music, sports and games to your TV; compatible with most Apple® iOS and Android phones and tablets, Mac and Windows laptops and Chromebooks&quot;,
+     &quot;description&quot;: &quot;Google Chromecast (2015 Model): Enjoy a world of entertainment with Google Chromecast (2015). Just connect to your HDTV&#39;s HDMI interface and your home Wi-Fi network to get started. You can stream your favorite apps from your compatible phone, tablet or laptop, plus use your phone as a remote to search, play and pause content.
+What&#39;s included:
+- Chromecast (2015 Model)
+- Power cable, power adapter
+&quot;,
+     &quot;url&quot;: &quot;http://www.bestbuy.com/site/google-chromecast-2015-model-black/4397400.p?id=1219757973565&amp;skuId=4397400&amp;cmp=RMX&amp;ky=1uW6SrOhtsDwV32tCtCxtuDpj7SNO9ptQ&quot;,
+     &quot;attributes&quot;: [],
+     &quot;shippable&quot;: true,
+     &quot;package_dimensions&quot;: null,
+     &quot;metadata&quot;: {
+       &quot;best_buy.product_id&quot;: &quot;1219757973565&quot;
+     },
+     &quot;images&quot;: [
+       &quot;http://img.bbystatic.com/BestBuy_US/images/products/4397/4397400_sb.jpg&quot;,
+       &quot;http://img.bbystatic.com/BestBuy_US/images/products/4397/4397400_sa.jpg&quot;,
+       &quot;http://img.bbystatic.com/BestBuy_US/images/products/4397/4397400fp.gif&quot;,
+       &quot;http://img.bbystatic.com/BestBuy_US/images/products/4397/4397400_sc.jpg&quot;
+     ],
+     &quot;skus&quot;: {
+       &quot;url&quot;: &quot;/v1/skus?product=4397400&amp;active=true&quot;,
+       &quot;total_count&quot;: 1,
+       &quot;has_more&quot;: false,
+       &quot;data&quot;: [
+         {
+           &quot;updated&quot;: 1445541476,
+           &quot;product&quot;: &quot;4397400&quot;,
+           &quot;price&quot;: 3500,
+           &quot;package_dimensions&quot;: null,
+           &quot;metadata&quot;: null,
+           &quot;livemode&quot;: false,
+           &quot;inventory&quot;: {
+             &quot;value&quot;: &quot;in_stock&quot;,
+             &quot;type&quot;: &quot;bucket&quot;,
+             &quot;quantity&quot;: null
+           },
+           &quot;image&quot;: null,
+           &quot;currency&quot;: &quot;usd&quot;,
+           &quot;created&quot;: 1445541476,
+           &quot;attributes&quot;: null,
+           &quot;active&quot;: true,
+           &quot;object&quot;: &quot;sku&quot;,
+           &quot;id&quot;: &quot;4397400&quot;
+         }
+       ],
+       &quot;object&quot;: &quot;list&quot;
+     },
+     ...
+   }
+  ]
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>A <em>Product</em> is a representation of something you sell. Each variant of a product is called a SKUs (pronounced “skew”, short for <a href="https://en.wikipedia.org/wiki/Stock_keeping_unit">Stock Keeping Unit</a>). SKUs are what customers actually puchase. As an example a product is a pair of “Nike Free 5.0”, and the SKUs are the different sizes and colors. To process orders on behalf of sellers (such as Best Buy, in this example), you’ll need to know not just the available products, but also the available SKUs.</p>
+
+    <p>As a convenience, <a href="../api/index.html#sku_object">SKU objects</a> are automatically expanded in the product objects returned by the API. For each acceptable product attribute–size, color, etc., SKUs have specified values–small/medium, tan/blue, etc. SKUs also contain inventory and price information. When you create an order, you order a specific SKU and not just a product</p>
+
+    <p>Depending on your app discovery mechanism, you may cache the products and SKUs in your app or database to present them to yours users, but make sure to get up-to-date information from the Relay API as products and SKUs availability may change regularly.</p>
+
+    <div id="spring-static-modal" alt="Spring Experience" class="caption-image right"></div>
+
+    <h2 id="order-workflow">Order workflow</h2>
+
+    <p>Now that you have access to and knowledge of the <em>Relay Demo</em> product catalog, you can create orders through your app. There are a few steps in the process; each will be explained in detail.</p>
+
+    <ul>
+      <li><strong>Present products for purchase</strong>: Render product information (price, availability) and a Buy option to users.</li>
+      <li><strong>Allow user to choose between variants (SKUs)</strong>, if need be: If the product has been identified but not the precise SKU (e.g., size, color, and so forth) a dialog should be presented to the user to select a specific SKU or list of SKUs to purchase.</li>
+      <li><strong>Create customers in Stripe</strong>: For ease of repeat purchases, we encourage you to create customer records in Stripe and then use these records as the basis of orders. As the <em>Relay Demo</em> products are shippable, the customer’s shipping information should be attached to his profile.</li>
+      <li><strong>Create the order</strong>: Create the order in Stripe by providing the items to be purchased and the customer information. Order creation returns computed tax and shipping information that can be presented back to the user for confirmation.</li>
+      <li><strong>Collect payment information</strong>: Collect the customer’s payment details. You can do so at any time prior to paying for the order.</li>
+      <li><strong>Pay for the order</strong>: Using the collected payment information.</li>
+    </ul>
+
+    <h3 id="present-products-for-purchase">Present products for purchase</h3>
+
+    <p>With the product and SKU information in hand, you can present individual items or a catalog to your users for consideration. <a href="../api/index.html#product_object">Products</a> can have multiple images, short captions, long-form descriptions, and associated URLs. Combine these as you see fit in ways that match your app’s feel and intent.</p>
+
+    <p>Through clickable buttons, images, or links, your users can indicate a desire to purchase an item. If a product comes in multiple variations (i.e., has multiple SKUs), additional interface elements can be used to identify the specific variant to buy. Once a specific SKU is identified, an order can be created. (If a product only comes in one variant, then you’ll already know the SKU to use, but orders are always made using SKU IDs, not product IDs.)</p>
+
+    <h3 id="create-a-customer-in-stripe">Create a customer in Stripe</h3>
+
+    <p>Creating reusable customer profiles is central to having a seamless e-commerce experience in your app. By creating customer profiles, repeat purchases can be made with a simple button click and a confirmation; no additional information need be provided. </p>
+
+    <p>The Relay endpoints work harmoniously with our <a href="../api/index.html#customers">Customer objects</a>. An app like yours can create customers in Stripe, and use these customer objects on behalf of the seller (<em>Relay Demo</em> here) to create and pay orders. These customer profiles should be created on <em>your</em> account and they belong to your platform only (here <em>Relay Demo</em> would not have access to them). </p>
+
+    <p>After you’ve collected the customer’s email and shipping information but before creating the order, create the customer in your Stripe account:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/customers</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+   -d <span class="token keyword">email</span>="<span class="token string">jenny@ros.en</span>" \
+   -d <span class="token keyword">shipping[name]</span>="<span class="token string">Jenny Rosen</span>" \
+   -d <span class="token keyword">shipping[address][line1]</span>="<span class="token string">1234 Main Street</span>" \
+   -d <span class="token keyword">shipping[address][city]</span>="<span class="token string">San Francisco</span>" \
+   -d <span class="token keyword">shipping[address][state]</span>=<span class="token string">CA</span> \
+   -d <span class="token keyword">shipping[address][postal_code]</span>=<span class="token string">12345</span> \
+   -d <span class="token keyword">shipping[address][country]</span>=<span class="token string">US</span> \
+   -d <span class="token keyword">shipping[phone]</span>=<span class="token string">8008675309</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>Notice that the request does not include the <code>Stripe-Account</code> header (as in the product fetching request), as this API call is made on behalf of your own account.</p>
+
+    <h3 id="create-an-order">Create an order</h3>
+
+    <p>Creating an order consists of providing one or more SKUs and the customer’s information. All of these details will be made available to the seller so they may fulfill the order. Given that the <em>Relay Demo</em> products are shippable, a shipping address should also be passed at order creation so the shipping rates can be computed. For this reason, the customer’s shipping information was stored as part of the customer profile above, and the customer profile can be used directly for order creation.</p>
+
+    <p>As the order is created in the seller’s Stripe account, you’ll again identify the seller in the request using the <code>Stripe-Account</code> header while using one of your own <code>customer</code> ID.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/orders</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+   -H <span class="token string">"Stripe-Account: acct_16TZFyGRAn672XBM"</span> \
+   -d <span class="token keyword">items[][type]</span>=<span class="token string">sku</span> \
+   -d <span class="token keyword">items[][parent]</span>=<span class="token string">4397400</span> \
+   -d <span class="token keyword">items[][quantity]</span>=<span class="token string">1</span> \
+   -d <span class="token keyword">currency</span>=<span class="token string">usd</span> \
+   -d <span class="token keyword">customer</span>=<span class="token string">cus_PsbkoUSTMqFv3Z</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>When the create order request is made, Stripe will compute and factor in appropriate shipping and tax costs, and return an <code>Order</code> object to you. At this point, you can present the total to the customer as well as shipping options. </p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;id&quot;: &quot;or_17ZqJVGRAn672XBM7eOtn9kX&quot;,
+  &quot;object&quot;: &quot;order&quot;,
+  &quot;amount&quot;: 3780,
+  &quot;application&quot;: null,
+  &quot;application_fee&quot;: null,
+  &quot;charge&quot;: null,
+  &quot;created&quot;: 1454366309,
+  &quot;currency&quot;: &quot;usd&quot;,
+  &quot;customer&quot;: &quot;cus_7pVJlGxBibLVuJ&quot;,
+  &quot;email&quot;: &quot;jenny@ros.en&quot;,
+  &quot;updated&quot;: 1454366312,
+  &quot;status&quot;: &quot;created&quot;,
+  &quot;shipping_methods&quot;: [
+    {
+      &quot;description&quot;: &quot;Standard shipping&quot;,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;amount&quot;: 0,
+      &quot;id&quot;: &quot;Standard&quot;,
+      &quot;delivery_estimate&quot;: {
+        &quot;type&quot;: &quot;exact&quot;,
+        &quot;date&quot;: &quot;2016-04-03&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Expedited shipping&quot;,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;amount&quot;: 1199,
+      &quot;id&quot;: &quot;Expedited&quot;,
+      &quot;delivery_estimate&quot;: {
+        &quot;type&quot;: &quot;exact&quot;,
+        &quot;date&quot;: &quot;2016-04-01&quot;
+      }
+    },
+    {
+      &quot;description&quot;: &quot;Express shipping&quot;,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;amount&quot;: 1998,
+      &quot;id&quot;: &quot;Express&quot;,
+      &quot;delivery_estimate&quot;: {
+        &quot;type&quot;: &quot;exact&quot;,
+        &quot;date&quot;: &quot;2016-03-30&quot;
+      }
+    }
+  ],
+  &quot;shipping&quot;: {
+    &quot;phone&quot;: &quot;8008675309&quot;,
+    &quot;name&quot;: &quot;Jenny Rosen&quot;,
+    &quot;address&quot;: {
+      &quot;state&quot;: &quot;CA&quot;,
+      &quot;postal_code&quot;: &quot;12345&quot;,
+      &quot;line2&quot;: null,
+      &quot;line1&quot;: &quot;1234 Main Street&quot;,
+      &quot;country&quot;: &quot;US&quot;,
+      &quot;city&quot;: &quot;San Francisco&quot;
+    }
+  },
+  &quot;selected_shipping_method&quot;: &quot;Standard&quot;,
+  &quot;metadata&quot;: null,
+  &quot;livemode&quot;: false,
+  &quot;items&quot;: [
+    {
+      &quot;type&quot;: &quot;sku&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;parent&quot;: &quot;4397400&quot;,
+      &quot;description&quot;: &quot;Google - Chromecast (2015 Model) - Black&quot;,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;amount&quot;: 3500,
+      &quot;object&quot;: &quot;order_item&quot;
+    },
+    {
+      &quot;type&quot;: &quot;tax&quot;,
+      &quot;quantity&quot;: null,
+      &quot;parent&quot;: null,
+      &quot;description&quot;: &quot;Sales Tax&quot;,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;amount&quot;: 280,
+      &quot;object&quot;: &quot;order_item&quot;
+    },
+    {
+      &quot;type&quot;: &quot;shipping&quot;,
+      &quot;quantity&quot;: null,
+      &quot;parent&quot;: &quot;Standard&quot;,
+      &quot;description&quot;: &quot;Standard shipping&quot;,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;amount&quot;: 0,
+      &quot;object&quot;: &quot;order_item&quot;
+    }
+  ]
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>Stripe will automatically notify the seller of the order’s creation.</p>
+
+    <h3 id="collect-payment-information">Collect payment information</h3>
+
+    <p>At some point before attempting to pay for the order, you’ll want to add a payment method to the customer record. The card information should be securely taken and tokenized–within your app–using our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios">iOS</a> or <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fandroid">Android</a> integration. As this recipe only uses Best Buy in test mode, you can simply add a <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting#cards">test card</a> directly.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/customers/cus_Zh3j6RvXl6Sgrf</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+   -d <span class="token keyword">source[object]</span>=<span class="token string">card</span> \
+   -d <span class="token keyword">source[number]</span>=<span class="token string">4242424242424242</span> \
+   -d <span class="token keyword">source[exp_month]</span>=<span class="token string">01</span> \
+   -d <span class="token keyword">source[exp_year]</span>=<span class="token string">2038</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>With a stored customer profile and a payment method, you’ll be able to use that customer object to create and pay for orders. Subsequent orders can be processed without needing to ask for billing or payment information again.</p>
+
+    <p>In a normal workflow, you may also consider relying on <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fapple-pay">Apple Pay</a> for a seamless payment experience on iOS. Using Apple Pay, you would be able to attach the retrieved token to the customer and specify it as the source to use while paying the order.</p>
+
+    <h3 id="pay-for-the-order">Pay for the order</h3>
+
+    <p>The final step is to accept a payment method from the customer–if you haven’t already–and pay for the order. If you’re storing customers in Stripe, the payment method will have already been stored as well (per the above), and you can just provide the Stripe customer ID in the pay request. Also if you already specified a customer with valid payment information while creating the order, you must specify the same customer here or simply omit it.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/orders/or_2jtp4oYmmjDfAyknHus6YvaZ/pay</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+   -H <span class="token string">"Stripe-Account: acct_16TZFyGRAn672XBM"</span> \
+   -d <span class="token keyword">customer</span>=<span class="token string">cus_evssspVAKUjSnT</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>Stripe will automatically notify the seller that the order was paid for. You should notify the customer that the order was placed and that he should expect a receipt from the seller.</p>
+
+    <h1>Get in touch</h1>
+    <p>If you notice anything surprising, or have feedback or more importantly questions, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#108;&#097;&#121;&#064;&#115;&#116;&#114;&#105;&#112;&#101;&#046;&#099;&#111;&#109;">get in touch!</a></p>
+
+    <hr />
+
+    <h1>More about Relay</h1>
+    <p>Looking to learn more about Relay? Check out these other guides:</p>
+    <ul>
+  <li><a href="../relay/index.html">Relay API Overview</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Relay API for Apps</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter">Selling on Twitter with Relay</a></li>
+</ul>
+
+  </article>
+</section>
+
+<script type="text/javascript">
+  function connect() {
+    $.get("/relay/relay-demo/connect", function() {
+      location.reload()
+    })
+  }
+  function disconnect() {
+    $.get("/relay/relay-demo/disconnect", function() {
+      location.reload()
+    })
+  }
+</script>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating Payments and Collecting Fees</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="b7z6FnycEfxxKkPM6JujEhgjcfiFBM6MP7NW7EmFdrvnlv_VZf9UTII6GRy24R-ZIJ6LEJRvGrT2qcGAyIjSIQ==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="selected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Creating Payments and Fees</h1>
+    <p>With Connect, you can make charges and create subscriptions on behalf of connected users, optionally taking transaction fees in the process.
+</p>
+  </header>
+  <article>
+
+    <aside class="intro note">
+      <h1>Connect</h1>
+      <p>Don’t know much about Connect yet? Check out the <a href="index.html">overview</a>.
+</p>
+    </aside>
+
+    <p>Connect allows you to use the full <a href="../api/index.html">Stripe API</a> on behalf of your connected users. This means, among <a href="../api/index.html">other functionality</a>, you can:</p>
+
+    <ul>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#creating-payments">Create payments</a> or set up <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#creating-subscriptions">recurring billing</a></li>
+      <li>Collect <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#collecting-fees">application fees</a> for your platform</li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#issuing-refunds">Issue refunds</a></li>
+    </ul>
+
+    <hr />
+
+    <h1 id="creating-payments">Creating payments</h1>
+
+    <aside class="content note">
+      <h1>Chargebacks and refunds</h1>
+      <p>
+    If you’ve opted to <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">directly manage</a> the accounts on your platform, you’ll still be ultimately <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers#negative-balances">responsible</a> for any negative balances your users cannot cover.
+  </p>
+    </aside>
+
+    <p>There are two ways to create a charge on behalf of a connected account:</p>
+
+    <ul>
+      <li>Create the charge directly on the connected account.</li>
+      <li>Create the charge on the platform’s account, but set a <code>destination</code> parameter identifying the Stripe account that should receive the funds from the payment.</li>
+    </ul>
+
+    <p>With the first approach, the connected account is responsible for the fees, refunds, and chargebacks. The payment itself will appear as a charge in the connected account.</p>
+
+    <p>The latter, new approach provides much more customizability but makes the platform account responsible for the fees, refunds, and chargebacks. The payment appears as a charge in the platform account, along with a transfer from the platform account to the connected account.</p>
+
+    <h2 id="charging-directly">Charging directly</h2>
+
+    <p>Processing a charge directly on a connected account requires <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">authentication</a>, best achieved by providing the platform account’s secret key and the <code>Stripe-Account</code> header:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_charge">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <aside class="content note">
+      <h1>Stripe.js</h1>
+      <p>
+    We require <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a> for all platforms—you cannot send credit card data directly from your server.
+  </p>
+    </aside>
+
+    <p>When charging directly on a connected account, you can provide a token created using either the platform’s or the connected account’s publishable key. (When using direct charging of a saved customer, not a token, the <code>Customer</code> object must exist within the connected account, not within the platform account.)</p>
+
+    <p>Charges created directly on a connected account will only be available on that account—you won’t see it in your platform’s dashboard or reporting.</p>
+
+    <h2 id="charging-through-the-platform">Charging through the platform</h2>
+
+    <p>The second way to perform a charge on behalf of a connected account is to create it on your platform’s Stripe account and use the <code>destination</code> parameter–specifying the connected account ID–in the charge request.</p>
+
+    <p>You’ll want to charge through the platform if you’d like to keep all of your charge data on one account (e.g., for aggregated reporting) or if you’d like to have greater flexibility over fees and what customers see on their credit card statement. If you’re <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">managing Stripe accounts</a>, we recommend that you create charges directly on your platform.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_charge_destination">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>When you use the <code>destination</code> parameter:</p>
+
+    <ul>
+      <li>The entire amount of the charge will be immediately transferred to the destination account.
+The ID of the resulting transfer will be returned in the <code>transfer</code> field of the response.</li>
+      <li>The Stripe fee comes out of the charge object on the platform’s account (i.e., you pay the fee).</li>
+      <li>The amount specified by the <code>application_fee</code> parameter (if provided) will be deducted from the total amount and credited to the platform’s account.</li>
+      <li>The charge will be attributed to the destination account for tax reporting.</li>
+      <li>When using a token as the payment source, the token must be created using the platform’s publishable key. If charging a <code>Customer</code> object, the <code>Customer</code> must exist within the platform’s account.</li>
+      <li>The charge will be settled in the default currency of the destination account. If the platform’s account
+doesn’t have a bank account in that currency, the application fee will be converted to the platform’s
+default currency. However, the platform account may accumulate a negative balance in the currency of the
+destination account due to fees and refunds. Stripe will periodically convert funds from the platform’s
+default currency to cover any such negative balances.</li>
+      <li>The platform’s account will need to be switched to <a href="https://dashboard.stripe.com/account/transfers">manual transfers</a>.
+We don’t currently support using this charging approach with the platform account on automatic transfers, but <a href="https://support.stripe.com/email">let us know</a> if this is something you’d like us to support in the future.</li>
+    </ul>
+
+    <p>As you can tell from that list, this approach also creates more objects within Stripe than processing the charge on the connected account directly. The destination account receives a charge object. The platform account will have the charge object and a transfer (the transfer is tied to the destination account’s charge). The platform account will have an application fee object, too, if an <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#collecting-fees">application fee was set</a>. Note, as well, that the Stripe fee is paid by the platform account in this case.</p>
+
+    <p>This may seem complicated, but such complexity is necessary to handle many edge cases of currency conversion and possible refunds. This structure allows each part of the flow to be refunded independently of others. For example, you can choose to refund the charge to a customer’s credit card with or without reversing the transfer to the connected account, and with or without reversing the application fee you took.</p>
+
+    <hr />
+
+    <h1 id="collecting-fees">Collecting application fees</h1>
+
+    <p>With Connect, your platform can take an application fee on charges, <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#creating-subscriptions">subscriptions</a>, and even on <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers#taking-application-fees-from-a-transfer">transfers</a>.</p>
+
+    <p>There are three things to note about application fees, whenever they are requested:</p>
+
+    <ul>
+      <li>The <code>application_fee</code> parameter must be a positive integer (e.g., an amount in cents)</li>
+      <li>The <code>application_fee</code> will be capped at the total transaction amount minus any Stripe fees—no error will be thrown for application fees that are automatically capped</li>
+      <li>No Stripe fees are applied to the application fee</li>
+    </ul>
+
+    <h2 id="fees-on-charges">Fees on charges</h2>
+
+    <p>To charge a fee on top of Stripe’s fees for a one-off charge, all you need to do is pass in the optional <code>application_fee</code> parameter (in cents) when <a href="../api/index.html#create_charge">creating the charge</a>.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_application_fee">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>The resulting charge’s <a href="../api/index.html#retrieve_balance_transaction">balance transaction</a> will include a detailed fee breakdown:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;object&quot;: &quot;balance_transaction&quot;,
+  &quot;type&quot;: &quot;charge&quot;,
+  &quot;amount&quot;: 1000,
+  &quot;currency&quot;: &quot;usd&quot;,
+  &quot;fee&quot;: 182,
+  ...
+  &quot;fee_details&quot;: [
+    {
+      &quot;type&quot;: &quot;stripe_fee&quot;,
+      &quot;amount&quot;: 59,
+      &quot;application&quot;: null,
+      &quot;currency&quot;: &quot;usd&quot;
+    },
+    {
+      &quot;type&quot;: &quot;application_fee&quot;,
+      &quot;amount&quot;: 123,
+      &quot;application&quot;: &quot;ca_32D88BD1qLklliziD7gYQvctJIhWBSQ7&quot;,
+      &quot;currency&quot;: &quot;usd&quot;
+    }
+  ]
+}</span></code></pre>
+      </div>
+    </section>
+
+    <h2 id="flow-of-funds">Flow of funds</h2>
+
+    <p>When you specify an application fee on a charge–either by creating the charge or through recurring billing, the fee amount will be transferred to your (the platform owner’s) Stripe account. If you process a charge directly on a connected account, the charge amount, less the Stripe fees and application fees, will be deposited into the connected user’s account. For example, if a charge of $10 is made as in the example above, $1.23 will be transferred to your account, and $8.18 cents ($10 - $0.59 - $1.23) will be transferred to your connected user’s account.</p>
+
+    <p>If you process a charge on the platform account, and use the <code>destination</code> parameter, the charge amount less the application fee will be deposited into the connected user’s account ($8.77, assuming a $1.23 application fee on a $10 charge). The application fee less the Stripe fees (on the charge amount) will be deposited into your account ($0.64, which is $1.23 - $0.59).</p>
+
+    <p>Any application fees earned will become available to your Stripe account on the normal <a href="../../us/help/pricing#payouts">7-day rolling basis</a>, just like funds from regular Stripe charges. Application fees are viewable in the <a href="https://dashboard.stripe.com/applications/fees">Collected Fees</a> section of the dashboard.</p>
+
+    <h2 id="refunding-fees">Refunding Fees</h2>
+
+    <p>When a charge is refunded, the end customer will always be refunded the full amount of the charge. Stripe will never automatically refund the application fee: you must explicitly refund the application fee, or your connected user—the account on which the charge was created—will eat the cost of the fee.</p>
+
+    <p>You can refund application fees incurred by your application in several ways:</p>
+
+    <ul>
+      <li>From the <a href="https://dashboard.stripe.com/applications/fees">dashboard</a>.</li>
+      <li>Upon <a href="../api/index.html#create_refund">refunding a charge</a> (passing <code>refund_application_fee</code> will refund the application fee proportional to the amount of the charge refunded, as of <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades#2013-12-03">December 3, 2013</a>).</li>
+      <li>Using the <a href="../api/index.html#application_fees">application fees API</a>.</li>
+    </ul>
+
+    <hr />
+
+    <h1 id="creating-subscriptions">Creating subscriptions</h1>
+
+    <p>Through Connect, you can create subscriptions on connected user accounts. You can also take an application fee percentage on those subscription payments. Both the customer and the plan must be defined on the connected account in order to create the subscription.</p>
+
+    <p>Subscriptions do not currently support the <code>destination</code> parameter: they can only be created directly on the connected account. But as with creating charges directly on a connected account, you can create a customer and a subscription in a connected account using a token created with either the platform’s or the connected account’s publishable key.</p>
+
+    <h2 id="fees-on-subscriptions">Fees on subscriptions</h2>
+
+    <p>When creating or updating a subscription, you can specify an <code>application_fee_percent</code> parameter as an integer between 1 and 100. Each billing period, Stripe takes that percentage off the final invoice amount—including any bundled invoice items, discounts, or account balance adjustments—as a fee for your application, on top of any Stripe fees charged.</p>
+
+    <p>For example, take this scenario:</p>
+
+    <ul>
+      <li>The subscription cost per billing cycle is $100</li>
+      <li>There’s a $10 invoice item</li>
+      <li>A 50% coupon applies</li>
+      <li>The <code>application_fee_percent</code> is 10</li>
+    </ul>
+
+    <p>In that case, the total application fee taken will be $5.50: ($100 + $10) * 50% * 10%.</p>
+
+    <p>Application fees on subscriptions must be a percentage, as the amount billed via subscriptions often varies. You cannot set a flat amount for the application fee on a subscription, but can on an invoice as explained below.</p>
+
+    <p>To create a subscription without an application fee, omit the <code>application_fee_percent</code> argument.</p>
+
+    <h2 id="prorations-and-invoice-items">Prorations and Invoice Items</h2>
+
+    <p>Invoices created outside of a subscription billing period will not have the <code>application_fee_percent</code> applied to them. This includes proration invoice items that are immediately invoiced. You’ll need to set an <code>application_fee</code> on the invoice directly for the application fee amount you’d like to charge (see below).</p>
+
+    <p>If you’re not planning to create extra invoices, prorations will be automatically bundled into the next billing cycle and will automatically inherit the <code>application_fee_percent</code> set on the updated subscription.</p>
+
+    <h2 id="invoices">Invoices</h2>
+
+    <p>If you’d like to charge a flat or dynamic fee, or otherwise any fee that can’t be automatically calculated with <code>application_fee_percent</code>, you can add an <code>application_fee</code> directly on the invoice. (Usually this is done programmatically upon receiving an <code>invoice.created</code> webhook nofication, although you can separately create an invoice for pending invoice items and set an application fee on it.)</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_application_fee_invoices">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>The <code>application_fee</code> set directly on an invoice overrides any application fee amount calculated with <code>application_fee_percent</code>, and will be capped at the invoice’s final charge amount.</p>
+
+    <h2 id="permissions">Permissions</h2>
+
+    <p>You cannot update or cancel a subscription that was not created by your application. You also can’t add an <code>application_fee</code> to an invoice that was not created by your application or that contains invoice items belonging to another application.</p>
+
+    <hr />
+
+    <h1 id="issuing-refunds">Issuing refunds on charges</h1>
+
+    <p>Charges created on the platform account can be refunded using the platform account’s secret key:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_refunds">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Charges created on a connected account can be refunded simply by authenticating the platform and identifying the connected account:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_refunds_connected">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>When refunding a charge that has a <code>destination</code> value, by default the destination account will keep the funds that
+were transferred to it, leaving the platform account to cover the negative balance from the
+refund. To pull back the funds from the connected account to cover the refund, set the
+the <code>reverse_transfer</code> parameter to true when creating the refund:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_refunds_reverse">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>When you use the <code>reverse_transfer</code> parameter:</p>
+
+    <ul>
+      <li>A proportional amount of the transfer will be reversed to cover the refund</li>
+      <li>If <code>refund_application_fee</code> parameter is set to true,
+        <ul>
+          <li>If the refund results in the entire charge being refunded, all
+unrefunded application fees will be refunded.</li>
+          <li>Otherwise, a proportional amount of the application fee will be
+refunded to the Connected account.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h1 id="accounting-for-negative-balances">Accounting for negative balances</h1>
+
+    <p>Some actions, such as refunds and chargebacks, create negative transactions in a Stripe account. If at all possible, Stripe automatically offsets those against payments to ensure a positive Stripe balance.</p>
+
+    <p>Stripe first assigns negative transactions to the account on which the associated charge was made. For example, when charging on a connected account, a refund or chargeback will come from the connected account. When charging on the platform using the <code>destination</code> parameter, a refund or chargeback will come from the platform account.</p>
+
+    <p>Ultimate responsiblity for negative balances depends upon the relationship between the platform and the connected account. A connected standalone account is always ultimately responsible. For managed accounts, the <em>platform</em> is ultimately responsible to cover negative balances.</p>
+
+    <p>For example, your platform uses managed
+accounts and you create a charge on a connected account. Should a chargeback occur, we’ll first attempt to take the funds out of the
+managed account balance, because the charge was created on the
+connected account. In most cases, the adjustment is made without problem. If, for some reason,
+we cannot adjust the connected account and its balance goes negative (and is negative for a
+while), we’ll eventually look to the platform account to make the
+balance whole again (because it’s a managed account and the platform
+has ultimate liability).</p>
+
+    <hr />
+
+    <h1>Further reading</h1>
+    <p>Read up on the rest of this section to discover what other Connect functionality is available for your users.</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers">Sharing customers</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case transfers</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+<script type="text/javascript">
+  var APIValues = {};
+    APIValues["curl"] = {};
+      APIValues["curl"]["tutorial_connect_charge"] = "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/charges\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -H \u003Cspan class='token string'\u003E\"Stripe-Account: {CONNECTED_STRIPE_ACCOUNT_ID}\"\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eamount\u003C/span\u003E=\u003Cspan class='token string'\u003E1000\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Ecurrency\u003C/span\u003E=\u003Cspan class='token string'\u003Eusd\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Esource\u003C/span\u003E=\u003Cspan class='token string'\u003E{TOKEN}\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E";
+      APIValues["curl"]["tutorial_application_fee"] = "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/charges\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -H \u003Cspan class='token string'\u003E\"Stripe-Account: {CONNECTED_STRIPE_ACCOUNT_ID}\"\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eamount\u003C/span\u003E=\u003Cspan class='token string'\u003E1000\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Ecurrency\u003C/span\u003E=\u003Cspan class='token string'\u003Eusd\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Esource\u003C/span\u003E=\u003Cspan class='token string'\u003E{TOKEN}\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Edescription\u003C/span\u003E=\"\u003Cspan class='token string'\u003Epayinguser@example.com\u003C/span\u003E\" \\\n   -d \u003Cspan class='token keyword'\u003Eapplication_fee\u003C/span\u003E=\u003Cspan class='token string'\u003E123\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E";
+      APIValues["curl"]["tutorial_application_fee_invoices"] = "# Update the invoice with an application_fee to be applied when the\n# invoice is paid\n\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/invoices/{INVOICE_ID}\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -H \u003Cspan class='token string'\u003E\"Stripe-Account: {CONNECTED_STRIPE_ACCOUNT_ID}\"\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eapplication_fee\u003C/span\u003E=\u003Cspan class='token string'\u003E100\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E";
+      APIValues["curl"]["tutorial_connect_refunds"] = "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/charges/{CHARGE_ID}/refunds\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eamount\u003C/span\u003E=\u003Cspan class='token string'\u003E1000\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E";
+    APIValues["curl"]['tutorial_connect_charge_destination'] = "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/charges\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eamount\u003C/span\u003E=\u003Cspan class='token string'\u003E1000\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Ecurrency\u003C/span\u003E=\u003Cspan class='token string'\u003Eusd\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Esource\u003C/span\u003E=\u003Cspan class='token string'\u003E{TOKEN}\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Edestination\u003C/span\u003E=\u003Cspan class='token string'\u003E{CONNECTED_STRIPE_ACCOUNT_ID}\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E";
+    APIValues["curl"]['tutorial_connect_refunds_connected'] = "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/charges/{CHARGE_ID}/refunds\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -H \u003Cspan class='token string'\u003E\"Stripe-Account: {CONNECTED_STRIPE_ACCOUNT_ID}\"\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eamount\u003C/span\u003E=\u003Cspan class='token string'\u003E1000\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E";
+    APIValues["curl"]['tutorial_connect_refunds_reverse'] = "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/charges/{CHARGE_ID}/refunds\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eamount\u003C/span\u003E=\u003Cspan class='token string'\u003E1000\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Ereverse_transfer\u003C/span\u003E=\u003Cspan class='token string'\u003Etrue\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E";
+    APIValues["ruby"] = {};
+      APIValues["ruby"]["tutorial_connect_charge"] = "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\nStripe::Charge.create({\n  :amount =\u0026gt; 1000,\n  :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n  :source =\u0026gt; {TOKEN}\n}, {:stripe_account =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID})\u003C/span\u003E";
+      APIValues["ruby"]["tutorial_application_fee"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Get the credit card details submitted by the form\ntoken = params[:stripeToken]\n\n# Create the charge on Stripe\u0026#39;s servers - this will charge the user\u0026#39;s card\ncharge = Stripe::Charge.create({\n    :amount =\u0026gt; 1000, # amount in cents\n    :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n    :source =\u0026gt; token,\n    :description =\u0026gt; \u0026quot;Example charge\u0026quot;,\n    :application_fee =\u0026gt; 123 # amount in cents\n  },\n  {:stripe_account =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID}\n)\u003C/span\u003E";
+      APIValues["ruby"]["tutorial_application_fee_invoices"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Update the invoice with an application_fee to be applied when the\n# invoice is paid\ninvoice.application_fee = 100 # amount in cents\ninvoice.save\u003C/span\u003E";
+      APIValues["ruby"]["tutorial_connect_refunds"] = "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\nch = Stripe::Charge.retrieve(CHARGE_ID)\nch.refunds.create(:amount =\u0026gt; 1000)\u003C/span\u003E";
+    APIValues["ruby"]['tutorial_connect_charge_destination'] = "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\nStripe::Charge.create({\n  :amount =\u0026gt; 1000,\n  :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n  :source =\u0026gt; {TOKEN},\n  :destination =\u0026gt; {CONNECTED_STRIPE_ACCOUNT_ID}\n})\u003C/span\u003E";
+    APIValues["ruby"]['tutorial_connect_refunds_connected'] = "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\nch = Stripe::Charge.retrieve(CHARGE_ID, :stripe_account =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID)\nch.refunds.create(:amount =\u0026gt; 1000)\u003C/span\u003E";
+    APIValues["ruby"]['tutorial_connect_refunds_reverse'] = "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\nch = Stripe::Charge.retrieve(CHARGE_ID)\nch.refunds.create(:amount =\u0026gt; 1000, :reverse_transfer =\u0026gt; true)\u003C/span\u003E";
+    APIValues["python"] = {};
+      APIValues["python"]["tutorial_connect_charge"] = "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\nstripe.Charge.create(\n  amount=1000,\n  currency=\u0026#39;usd\u0026#39;,\n  source={TOKEN},\n  stripe_account={CONNECTED_STRIPE_ACCOUNT_ID}\n)\u003C/span\u003E";
+      APIValues["python"]["tutorial_application_fee"] = "\u003Cspan class=\"highlight_js python\"\u003E# Get the credit card details submitted by the form\ntoken = request.POST[\u0026#39;stripeToken\u0026#39;]\n\n# Create the charge on Stripe\u0026#39;s servers - this will charge the user\u0026#39;s card\ncharge = stripe.Charge.create(\n  amount=1000, # amount in cents\n  currency=\u0026quot;usd\u0026quot;,\n  source=token,\n  description=\u0026quot;Example charge\u0026quot;,\n  application_fee=123, # amount in cents\n  stripe_account=CONNECTED_STRIPE_ACCOUNT_ID\n)\u003C/span\u003E";
+      APIValues["python"]["tutorial_application_fee_invoices"] = "\u003Cspan class=\"highlight_js python\"\u003E# Update the invoice with an application_fee to be applied when the\n# invoice is paid\ninvoice.application_fee = 100 # amount in cents\ninvoice.save()\u003C/span\u003E";
+      APIValues["python"]["tutorial_connect_refunds"] = "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\nch = stripe.Charge.retrieve(CHARGE_ID)\nch.refunds.create(amount=1000)\u003C/span\u003E";
+    APIValues["python"]['tutorial_connect_charge_destination'] = "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\nstripe.Charge.create(\n  amount=1000,\n  currency=\u0026#39;usd\u0026#39;,\n  source={TOKEN},\n  destination={CONNECTED_STRIPE_ACCOUNT_ID}\n)\u003C/span\u003E";
+    APIValues["python"]['tutorial_connect_refunds_connected'] = "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\nch = stripe.Charge.retrieve(CHARGE_ID, stripe_account=CONNECTED_STRIPE_ACCOUNT_ID)\nch.refunds.create(amount=1000)\u003C/span\u003E";
+    APIValues["python"]['tutorial_connect_refunds_reverse'] = "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\nch = stripe.Charge.retrieve(CHARGE_ID)\nch.refunds.create(amount=1000, reverse_transfer=true)\u003C/span\u003E";
+    APIValues["php"] = {};
+      APIValues["php"]["tutorial_connect_charge"] = "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n\\Stripe\\Charge::create(array(\n  \u0026#39;amount\u0026#39; =\u0026gt; 1000,\n  \u0026#39;currency\u0026#39; =\u0026gt; \u0026#39;usd\u0026#39;,\n  \u0026#39;source\u0026#39; =\u0026gt; {TOKEN}\n), array(\u0026#39;stripe_account\u0026#39; =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID));\u003C/span\u003E";
+      APIValues["php"]["tutorial_application_fee"] = "\u003Cspan class=\"highlight_js php\"\u003E// Get the credit card details submitted by the form\n$token = $_POST[\u0026#39;stripeToken\u0026#39;];\n\n// Create the charge on Stripe\u0026#39;s servers - this will charge the user\u0026#39;s card\n$charge = \\Stripe\\Charge::create(\n  array(\n    \u0026quot;amount\u0026quot; =\u0026gt; 1000, // amount in cents\n    \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n    \u0026quot;source\u0026quot; =\u0026gt; $token,\n    \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Example charge\u0026quot;,\n    \u0026quot;application_fee\u0026quot; =\u0026gt; 123 // amount in cents\n  ),\n  array(\u0026quot;stripe_account\u0026quot; =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID)\n);\u003C/span\u003E";
+      APIValues["php"]["tutorial_application_fee_invoices"] = "\u003Cspan class=\"highlight_js php\"\u003E// Update the invoice with an application_fee to be applied when the\n// invoice is paid\n$invoice-\u0026gt;application_fee = 100; // amount in cents\n$invoice-\u0026gt;save();\u003C/span\u003E";
+      APIValues["php"]["tutorial_connect_refunds"] = "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n$ch = \\Stripe\\Charge::retrieve(CHARGE_ID);\n$ch-\u0026gt;refunds-\u0026gt;create(array(\u0026#39;amount\u0026#39; =\u0026gt; 1000));\u003C/span\u003E";
+    APIValues["php"]['tutorial_connect_charge_destination'] = "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n\\Stripe\\Charge::create(array(\n  \u0026#39;amount\u0026#39; =\u0026gt; 1000,\n  \u0026#39;currency\u0026#39; =\u0026gt; \u0026#39;usd\u0026#39;,\n  \u0026#39;source\u0026#39; =\u0026gt; {TOKEN},\n  \u0026#39;destination\u0026#39; =\u0026gt; {CONNECTED_STRIPE_ACCOUNT_ID}\n));\u003C/span\u003E";
+    APIValues["php"]['tutorial_connect_refunds_connected'] = "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n$ch = \\Stripe\\Charge::retrieve(CHARGE_ID, array(\u0026#39;stripe_account\u0026#39; =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID));\n$ch-\u0026gt;refunds-\u0026gt;create(array(\u0026#39;amount\u0026#39; =\u0026gt; 1000));\u003C/span\u003E";
+    APIValues["php"]['tutorial_connect_refunds_reverse'] = "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n$ch = \\Stripe\\Charge::retrieve(CHARGE_ID);\n$ch-\u0026gt;refunds-\u0026gt;create(array(\u0026#39;amount\u0026#39; =\u0026gt; 1000, \u0026#39;reverse_transfer\u0026#39; =\u0026gt; true));\u003C/span\u003E";
+    APIValues["node"] = {};
+      APIValues["node"]["tutorial_connect_charge"] = "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.charges.create({\n  amount: 1000,\n  currency: \u0026#39;usd\u0026#39;,\n  source: {TOKEN}\n}, {stripe_account: {CONNECTED_STRIPE_ACCOUNT_ID}});\u003C/span\u003E";
+      APIValues["node"]["tutorial_application_fee"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Get the credit card details submitted by the form\nvar token = request.body.stripeToken;\n\n// Create the charge on Stripe\u0026#39;s servers - this will charge the user\u0026#39;s card\nstripe.charges.create(\n  {\n    amount: 1000, // amount in cents\n    currency: \u0026quot;usd\u0026quot;,\n    source: token,\n    description: \u0026quot;Example charge\u0026quot;,\n    application_fee: 123 // amount in cents\n  },\n  {stripe_account: CONNECTED_STRIPE_ACCOUNT_ID},\n  function(err, charge) {\n    // check for `err`\n    // do something with `charge`\n  }\n);\u003C/span\u003E";
+      APIValues["node"]["tutorial_application_fee_invoices"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Update the invoice with an application_fee to be applied when the\n// invoice is paid\nstripe.invoices.update(\n  invoiceId,\n  {application_fee: 100},\n  {stripe_account: CONNECTED_STRIPE_ACCOUNT_ID},\n  function(err, invoice) {}\n);\u003C/span\u003E";
+      APIValues["node"]["tutorial_connect_refunds"] = "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.charges.createRefund(\n  CHARGE_ID,\n  {amount: 1000},\n  function(err, refund) {}\n);\u003C/span\u003E";
+    APIValues["node"]['tutorial_connect_charge_destination'] = "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.charges.create({\n  amount: 1000,\n  currency: \u0026#39;usd\u0026#39;,\n  source: {TOKEN},\n  destination: {CONNECTED_STRIPE_ACCOUNT_ID}\n});\u003C/span\u003E";
+    APIValues["node"]['tutorial_connect_refunds_connected'] = "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.charges.createRefund(\n  CHARGE_ID,\n  {amount: 1000},\n  {stripe_account: CONNECTED_STRIPE_ACCOUNT_ID}\n  function(err, refund) {}\n);\u003C/span\u003E";
+    APIValues["node"]['tutorial_connect_refunds_reverse'] = "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.charges.createRefund(\n  CHARGE_ID,\n  {amount: 1000, reverse_transfer: true},\n  function(err, refund) {}\n);\u003C/span\u003E";
+    APIValues["java"] = {};
+      APIValues["java"]["tutorial_connect_charge"] = "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount(CONNECTED_STRIPE_ACCOUNT_ID).build();\n\nMap\u0026lt;String, Object\u0026gt; chargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\nchargeParams.put(\u0026quot;amount\u0026quot;, 1000);\nchargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\nchargeParams.put(\u0026quot;source\u0026quot;, {TOKEN});\n\nCharge.create(chargeParams, requestOptions);\u003C/span\u003E";
+      APIValues["java"]["tutorial_application_fee"] = "\u003Cspan class=\"highlight_js java\"\u003E// Get the credit card details submitted by the form\nString token = request.getParameter(\u0026quot;stripeToken\u0026quot;);\n\n// Create the charge on Stripe\u0026#39;s servers - this will charge the user\u0026#39;s card\nMap\u0026lt;String, Object\u0026gt; chargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\nchargeParams.put(\u0026quot;amount\u0026quot;, 1000); // amount in cents\nchargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\nchargeParams.put(\u0026quot;source\u0026quot;, token);\nchargeParams.put(\u0026quot;description\u0026quot;, \u0026quot;Example charge\u0026quot;);\nchargeParams.put(\u0026quot;application_fee\u0026quot;, 123); // amount in cents\n\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount(CONNECTED_STRIPE_ACCOUNT_ID).build();\n\nCharge charge = Charge.create(chargeParams, requestOptions);\u003C/span\u003E";
+      APIValues["java"]["tutorial_application_fee_invoices"] = "\u003Cspan class=\"highlight_js php\"\u003E// Update the invoice with an application_fee to be applied when the\n// invoice is paid\nMap\u0026lt;String, Object\u0026gt; invoiceParams = new HashMap\u0026lt;String, Object\u0026gt;();\ninvoiceParams.put(\u0026quot;application_fee\u0026quot;, 100); // amount in cents\ninvoice.update(invoiceParams, requestOptions);\u003C/span\u003E";
+      APIValues["java"]["tutorial_connect_refunds"] = "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\n\nCharge ch = Charge.retrieve(CHARGE_ID);\n\nMap\u0026lt;String, Object\u0026gt; refundParams = new HashMap\u0026lt;String, Object\u0026gt;();\nrefundParams.put(\u0026quot;amount\u0026quot;, 1000);\n\nch.refund(refundParams);\u003C/span\u003E";
+    APIValues["java"]['tutorial_connect_charge_destination'] = "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\n\nMap\u0026lt;String, Object\u0026gt; chargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\nchargeParams.put(\u0026quot;amount\u0026quot;, 1000);\nchargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\nchargeParams.put(\u0026quot;source\u0026quot;, {TOKEN});\nchargeParams.put(\u0026quot;destination\u0026quot;, {CONNECTED_STRIPE_ACCOUNT_ID});\n\nCharge.create(chargeParams);\u003C/span\u003E";
+    APIValues["java"]['tutorial_connect_refunds_connected'] = "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount(CONNECTED_STRIPE_ACCOUNT_ID).build();\n\nCharge ch = Charge.retrieve(CHARGE_ID, requestOptions);\n\nMap\u0026lt;String, Object\u0026gt; refundParams = new HashMap\u0026lt;String, Object\u0026gt;();\nrefundParams.put(\u0026quot;amount\u0026quot;, 1000);\n\nch.refund(refundParams);\u003C/span\u003E";
+    APIValues["java"]['tutorial_connect_refunds_reverse'] = "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\n\nCharge ch = Charge.retrieve(CHARGE_ID);\n\nMap\u0026lt;String, Object\u0026gt; refundParams = new HashMap\u0026lt;String, Object\u0026gt;();\nrefundParams.put(\u0026quot;amount\u0026quot;, 1000);\nrefundParams.put(\u0026quot;reverse_transfer\u0026quot;, true);\n\nch.refund(refundParams);\u003C/span\u003E";
+</script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

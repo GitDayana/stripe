@@ -1,0 +1,57 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="874" height="220">
+  <defs>
+    <pattern id="cell-grid" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#F5F7F9"/>
+    </pattern>
+    <linearGradient id="gradient-mask" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="white" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#cell-grid)" width="874" height="220"/>
+  <rect fill="url(#gradient-mask)" width="874" height="220"/>
+  <path fill="#0CB" d="M90 18h4v4h-4zm6 0h4v4h-4z"/>
+  <path fill="#D2E031" d="M102 18h4v4h-4zM30 36h4v4h-4zm0 6h4v4h-4z"/>
+  <path fill="#0CB" d="M36 36h4v4h-4zm-12 6h4v4h-4zm12 0h4v4h-4z"/>
+  <path fill="#00A685" d="M24 48h4v4h-4zm0-18h4v4h-4zm12 18h4v4h-4z"/>
+  <path fill="#D2E031" d="M828 144h4v4h-4z"/>
+  <path fill="#00A685" d="M828 138h4v4h-4z"/>
+  <path fill="#0CB" d="M834 138h4v4h-4zm-12 6h4v4h-4zm0-6h4v4h-4z"/>
+  <path fill="#00A685" d="M828 150h4v4h-4z"/>
+  <path fill="#0CB" d="M540 0h4v4h-4z"/>
+  <path fill="#D2E031" d="M546 0h4v4h-4z"/>
+  <path fill="#00A685" d="M558 0h4v4h-4z"/>
+  <path fill="#0CB" d="M558 6h4v4h-4z"/>
+  <path fill="#D2E031" d="M870 210h4v4h-4z"/>
+  <path fill="#0CB" d="M864 204h4v4h-4z"/>
+  <path fill="#00A685" d="M864 216h4v4h-4z"/>
+  <path fill="#0CB" d="M870 216h4v4h-4z"/>
+  <path fill="#00A685" d="M78 6h4v4h-4z"/>
+  <path fill="#0CB" d="M84 6h4v4h-4zm12 0h4v4h-4zm750 6h4v4h-4zm6 0h4v4h-4z"/>
+  <path fill="#D2E031" d="M852 18h4v4h-4z"/>
+  <path fill="#00A685" d="M846 18h4v4h-4zM6 78h4v4H6z"/>
+  <path fill="#0CB" d="M6 84h4v4H6z"/>
+  <path fill="#D2E031" d="M12 84h4v4h-4z"/>
+  <path fill="#0CB" d="M12 78h4v4h-4zm0 12h4v4h-4zm582-78h4v4h-4zm-6 6h4v4h-4zm12 0h4v4h-4z"/>
+  <path fill="#D2E031" d="M600 12h4v4h-4z"/>
+  <path fill="#00A685" d="M594 18h4v4h-4zm0 6h4v4h-4zM30 144h4v4h-4z"/>
+  <path fill="#0CB" d="M30 150h4v4h-4zM366 12h4v4h-4z"/>
+  <path fill="#D2E031" d="M360 12h4v4h-4z"/>
+  <path fill="#0CB" d="M360 18h4v4h-4zm0-12h4v4h-4z"/>
+  <path fill="#D2E031" d="M354 6h4v4h-4z"/>
+  <path fill="#0CB" d="M354 0h4v4h-4z"/>
+  <path fill="#00A685" d="M360 0h4v4h-4z"/>
+  <path fill="#0CB" d="M366 0h4v4h-4zm-30 0h4v4h-4zm-24 0h4v4h-4z"/>
+  <path fill="#00A685" d="M330 0h4v4h-4z"/>
+  <path fill="#D2E031" d="M324 0h4v4h-4zm0 6h4v4h-4z"/>
+  <path fill="#0CB" d="M732 0h4v4h-4z"/>
+  <path fill="#D2E031" d="M732 6h4v4h-4z"/>
+  <path fill="#00A685" d="M738 0h4v4h-4z"/>
+  <path fill="#D2E031" d="M744 0h4v4h-4z"/>
+  <path fill="#0CB" d="M756 6h4v4h-4zm42 18h4v4h-4zm-6 0h4v4h-4z"/>
+  <path fill="#D2E031" d="M792 30h4v4h-4z"/>
+  <path fill="#0CB" d="M390 0h4v4h-4zm0 6h4v4h-4z"/>
+  <path fill="#00A685" d="M396 0h4v4h-4z"/>
+  <path fill="#0CB" d="M786 180h4v4h-4z"/>
+  <path fill="#D2E031" d="M792 180h4v4h-4z"/>
+</svg>

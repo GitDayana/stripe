@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Controlling Bank Transfers</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="xZJ3MqeFA0Ko2UUIYXmOa6JYY0ChyH7lop3dxDY0WHdNuHLxvuZG8lvJH9g_AzLgmuWZqLCjqt1rh0qotzn87Q==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="selected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Bank Transfers</h1>
+    <p>For any Stripe accounts that you manage, you can change the transfer schedule settings or entirely control what transfers get sent.</p>
+  </header>
+  <article>
+    <aside class="intro note">
+      <h1>Managed vs. Standalone Accounts</h1>
+      <p>
+    This section applies solely to <em>managed</em> accounts, where you are responsible for all communication and interaction with the account holder.
+  </p>
+
+      <p>
+  If you’d like to connect to an existing Stripe account, or have Stripe handle details like identity document collection, take a look at <a href="oauth">standalone accounts</a>.
+  </p>
+
+    </aside>
+
+    <p>By default, any transfer or charge you make for any connected account, managed or standalone, accumulates in the connected account’s Stripe balance and is paid out on a daily rolling basis. However, Stripe offers fine-grained control over this behavior for managed accounts.</p>
+
+    <p>For managed accounts, Stripe allows you to:</p>
+
+    <ul>
+      <li>Set the payout bank account or debit card details for the account</li>
+      <li>Control how frequently funds are paid out</li>
+      <li>Decide how Stripe should handle accounts with negative balances</li>
+    </ul>
+
+    <p>Note that transfers to debit cards are limited to $3,000 (USD), and the recipient’s card must be a non-prepaid US Visa or MasterCard debit card.</p>
+
+    <h1 id="bank-accounts">Bank accounts</h1>
+
+    <p>Managed accounts have an <code>external_accounts</code> property, a list of all bank accounts and debit cards associated with this Stripe account: possible destinations for funds.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">  &quot;external_accounts&quot;: {
+    &quot;object&quot;: &quot;list&quot;,
+    &quot;total_count&quot;: 0,
+    &quot;has_more&quot;: false,
+    &quot;url&quot;: &quot;/v1/accounts/acct_14qyt6Alijdnw0EA/external_accounts&quot;,
+    &quot;data&quot;: []
+  },</span></code></pre>
+      </div>
+    </section>
+
+    <p>This attribute can be populated via the <code>external_accounts</code> parameter when creating or updating accounts. The value can be a debit card or bank account token returned from <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js#collecting-bank-account-details">Stripe.js</a>. Alternatively, you can directly provide a hash of the bank account details (this is less ideal, however, as it requires sensitive data hitting your server).</p>
+
+    <h1 id="multiple-accounts">Multiple accounts</h1>
+
+    <p>By default, providing a new value for <code>external_accounts</code> while updating a managed account <em>replaces</em> the existing account with the new one. To <em>add</em> additional bank accounts or debit cards to a connected account, use the <a href="../api/index.html#create_bank_account">bank account</a> and <a href="../api/index.html#create_card">card creation</a> API endpoints.</p>
+
+    <p>By default, when paying out an amount for a particular currency, Stripe pays it to the bank account or debit card in that currency, thereby avoiding exchange fees. If there are multiple accounts in that currency, Stripe will select the one with <code>default_for_currency</code> set.</p>
+
+    <p>Stripe maintains a list of <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">available country/currency combinations</a> for your reference and to help your users choose allowed options.</p>
+
+    <h1 id="payout-information">Payout information</h1>
+
+    <p>The <code>transfer_schedule</code> property on an account indicates how often this Stripe account’s balance is automatically paid out to its bank account:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">  &quot;transfer_schedule&quot;: {
+    &quot;delay_days&quot;: 7,
+    &quot;interval&quot;: &quot;daily&quot;
+  },</span></code></pre>
+      </div>
+    </section>
+
+    <p><code>delay_days</code> is how long charges made on this account should take to become available for payout. This field is useful for controlling automatic payouts. For example, if you want your managed accounts to receive their funds 2 weeks after the charge is made, set <code>interval</code> to <code>daily</code> and this field to <code>14</code>. The default is the lowest permitted value for the account, determined by the country it is in. When setting or updating this field you may pass the string <code>minimum</code> to choose the lowest permitted value.</p>
+
+    <p>There are four possible settings for the <code>interval</code> subfield:</p>
+
+    <ul>
+      <li><code>manual</code> prevents any automatic payouts. You will have to manually pay out the account’s balance using the <a href="../api/index.html#create_transfer">Transfers API</a> (acting as the connected account).</li>
+      <li><code>daily</code> automatically pays out any charges (or linked transfers into this account) <code>delay_days</code> days after they’re charged. The <code>delay_days</code> value cannot be less than your own transfer schedule or less than the default transfer schedule for the account’s country.</li>
+      <li><code>weekly</code> automatically pays out the balance once a week, specified by the <code>weekly_anchor</code> parameter (a lower-case weekday such as <code>monday</code>)</li>
+      <li><code>monthly</code> automatically pays out the balance once a month, specified by the <code>monthly_anchor</code> parameter (a number 1-31)</li>
+    </ul>
+
+    <h1 id="using-manual-transfers">Using manual transfers</h1>
+
+    <p>If you set <code>transfer_schedule[interval]</code> to <code>manual</code>, Stripe will hold funds in the account holder’s balance until told to pay them out to a bank account (or until a maximum of 30 days have passed). In order to trigger a payout of these funds, use the <a href="../api/index.html#create_transfer">Transfers API</a>. For example, to have $10 sent from the managed account’s balance to their bank account:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+  <a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_manual_transfers">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Setting <code>destination=default_for_currency</code> causes Stripe to transfer to the account’s default bank account or debit card for the given currency.</p>
+
+    <p>To find a user’s available balance–the limit that can be transferred at that moment, perform a <a href="../api/index.html#retrieve_balance">retrieve balance</a> call on their behalf.</p>
+
+    <p>Stripe keeps track of balance contributions from different payment sources in separate balances. The <a href="../api/index.html#retrieve_balance">retrieve balance</a> response breaks down the components of each balance by source type. If you want to create a transfer through the API for a non credit-card balance, you’ll have to specify which one to transfer from in your request. Note that it is possible for any source’s balance component to go negative (through refunds or chargebacks), and transfers can’t be created for greater than the aggregate available balance.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+  <a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_non_card_manual_transfer">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>This API call is only for moving funds from a connected Stripe account’s balance into their bank account. If you’re trying to move funds between Stripe accounts, see <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">special-case transfers</a> or <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#charging-through-the-platform">charging through the platform</a>.</p>
+
+    <h1 id="negative-balances">Negative balances</h1>
+
+    <p>Sometimes managed accounts develop negative balances, usually due
+to refunds. In such cases, Stripe keeps track of the negative
+balance, and reconciles it against new funds coming into the
+account. So long as the balance is negative, you’re unable to send bank transfers
+to the account. Stripe will resume sending bank transfers to the managed account once the account’s Stripe balance is again positive.</p>
+
+    <p>In the end you–the platform–are responsible for any negative balances on your managed accounts (this is only true for managed accounts, not standalone accounts). To ensure funds are covered, Stripe will hold a reserve on your platform account’s balance to cover the negative balances across your managed accounts.</p>
+
+    <p>That being said, Stripe does provide assistance in recovering funds from negative balances. You may set the <code>debit_negative_balances</code> flag on managed accounts, which indicates whether or not Stripe will attempt to debit the managed account’s bank account to cover amounts owed. This is not always possible, depending on country and bank account details. We also cannot automatically withdraw from debit cards.</p>
+
+    <hr />
+
+    <h1>Further reading</h1>
+    <p>Check out the rest of the guide for help with your integration.</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed accounts</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating accounts</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["curl"] = {
+            tutorial_manual_transfers: "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/transfers\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -H \u003Cspan class='token string'\u003E\"Stripe-Account: {CONNECTED_STRIPE_ACCOUNT_ID}\"\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eamount\u003C/span\u003E=\u003Cspan class='token string'\u003E1000\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Ecurrency\u003C/span\u003E=\u003Cspan class='token string'\u003Eusd\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Edestination\u003C/span\u003E=\u003Cspan class='token string'\u003Edefault_for_currency\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E",
+            tutorial_non_card_manual_transfer: "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/transfers\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eamount\u003C/span\u003E=\u003Cspan class='token string'\u003E24784\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Ecurrency\u003C/span\u003E=\u003Cspan class='token string'\u003Eusd\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Edestination\u003C/span\u003E=\u003Cspan class='token string'\u003Edefault_for_currency\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Esource_type\u003C/span\u003E=\u003Cspan class='token string'\u003Ebank_account\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E"
+          };
+          APIValues["ruby"] = {
+            tutorial_manual_transfers: "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\nStripe::Transfer.create(\n  {\n    :amount =\u0026gt; 1000,\n    :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n    :destination =\u0026gt; \u0026quot;default_for_currency\u0026quot;\n  },\n  {:stripe_account =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID}\n)\u003C/span\u003E",
+            tutorial_non_card_manual_transfer: "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\nStripe::Transfer.create(\n  :amount =\u0026gt; 24784,\n  :currency =\u0026gt; \u0026#39;usd\u0026#39;,\n  :destination =\u0026gt; \u0026#39;default_for_currency\u0026#39;,\n  :source_type =\u0026gt; \u0026#39;bank_account\u0026#39;,\n)\u003C/span\u003E"
+          };
+          APIValues["python"] = {
+            tutorial_manual_transfers: "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\nstripe.Transfer.create(\n  amount=1000,\n  currency=\u0026#39;usd\u0026#39;,\n  destination=\u0026#39;default_for_currency\u0026#39;,\n  stripe_account=CONNECTED_STRIPE_ACCOUNT_ID\n)\u003C/span\u003E",
+            tutorial_non_card_manual_transfer: "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\nstripe.Transfer.create(\n  amount=24784,\n  currency=\u0026#39;usd\u0026#39;,\n  destination=\u0026#39;default_for_currency\u0026#39;,\n  source_type=\u0026#39;bank_account\u0026#39;,\n)\u003C/span\u003E"
+          };
+          APIValues["php"] = {
+            tutorial_manual_transfers: "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n\\Stripe\\Transfer::create(\n  array(\n    \u0026quot;amount\u0026quot; =\u0026gt; 1000,\n    \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n    \u0026quot;destination\u0026quot; =\u0026gt; \u0026quot;default_for_currency\u0026quot;\n  ),\n  array(\u0026quot;stripe_account\u0026quot; =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID)\n);\u003C/span\u003E",
+            tutorial_non_card_manual_transfer: "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n$tr = \\Stripe\\Transfer::create(array(\n  \u0026quot;amount\u0026quot; =\u0026gt; 24784,\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;destination\u0026quot; =\u0026gt; \u0026quot;default_for_currency\u0026quot;,\n  \u0026quot;source_type\u0026quot; =\u0026gt; \u0026quot;bank_account\u0026quot;\n));\u003C/span\u003E"
+          };
+          APIValues["node"] = {
+            tutorial_manual_transfers: "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.transfers.create(\n  {\n    amount: 1000,\n    currency: \u0026quot;usd\u0026quot;,\n    destination: \u0026quot;default_for_currency\u0026quot;\n  },\n  {stripe_account: CONNECTED_STRIPE_ACCOUNT_ID}\n);\u003C/span\u003E",
+            tutorial_non_card_manual_transfer: "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.transfers.create(\n  {\n    amount: 24784,\n    currency: \u0026#39;usd\u0026#39;,\n    destination: \u0026#39;default_for_currency\u0026#39;,\n    source_type: \u0026#39;bank_account\u0026#39;,\n  }\n);\u003C/span\u003E"
+          };
+          APIValues["java"] = {
+            tutorial_manual_transfers: "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount(CONNECTED_STRIPE_ACCOUNT_ID).build();\n\nMap\u0026lt;String, Object\u0026gt; transferParams = new HashMap\u0026lt;String, Object\u0026gt;();\ntransferParams.put(\u0026quot;amount\u0026quot;, 1000);\ntransferParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\ntransferParams.put(\u0026quot;destination\u0026quot;, \u0026quot;default_for_currency\u0026quot;);\n\nTransfer.create(transferParams, requestOptions);\u003C/span\u003E",
+            tutorial_non_card_manual_transfer: "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\n\nMap\u0026lt;String, Object\u0026gt; transferParams = new HashMap\u0026lt;String, Object\u0026gt;();\ntransferParams.put(\u0026quot;amount\u0026quot;, 24784);\ntransferParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\ntransferParams.put(\u0026quot;destination\u0026quot;, \u0026quot;default_for_currency\u0026quot;);\ntransferParams.put(\u0026quot;source_type\u0026quot;, \u0026quot;bank_account\u0026quot;);\n\nTransfer.create(transferParams);\u003C/span\u003E"
+          };
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

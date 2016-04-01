@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stripe: Register</title>
+
+      <link rel="stylesheet" href="https://b.stripecdn.com/manage/assets/application.manage-75f732ee2d77964066578603b5e1b614.css">
+<!--[if lte IE 9]>
+<link rel="stylesheet" href="https://b.stripecdn.com/manage/assets/application.manage_split2-50aa29c54387dc7bb91da074a2380c9a.css">
+<link rel="stylesheet" href="https://b.stripecdn.com/manage/assets/application.manage_split3-83cbde93eaa78f96867c7f53b8be9790.css">
+<![endif]-->
+<link rel="shortcut icon" href="https://dashboard.stripe.com/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="https://cloud.typography.com/711858/653922/css/fonts.css">
+    <script src="https://b.stripecdn.com/manage/assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="https://b.stripecdn.com/manage/assets/modernizr-16114bbaf42d14126fb991d11fc0b961.js"></script>
+    <script src="https://b.stripecdn.com/manage/assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+    <script src="https://b.stripecdn.com/manage/assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    <script src="https://b.stripecdn.com/manage/assets/password-indicator-69fce9e4c8bfd57e05b82b69d9fbbfeb.js"></script>
+    <script type="application/json" id="register_json">false</script>
+    <script src="https://b.stripecdn.com/manage/assets/register-e42be0d3b032407a00918b8a851e3ccf.js"></script>
+    <script src="https://b.stripecdn.com/manage/assets/zxcvbn-8143efb328ef1456bebfa7ebd1a127be.js" async></script>
+    <!--[if lt IE 9]>
+        <script src="https://b.stripecdn.com/manage/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="https://b.stripecdn.com/manage/assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+  </head>
+
+  <body id="login" class="register-page">
+
+    <div id="login-background"><div class="inner"></div></div>
+
+
+
+     <div id="wrap">
+
+     <!-- Header -->
+     <div id="header">
+         <h1><a href="https://dashboard.stripe.com/">Stripe</a></h1>
+     </div>
+
+      <div id="main-body" class="box css"><div class="inner">
+
+        <div class="title extra">
+               <h2>Create your Stripe account.</h2>
+            <p>
+                &hellip;or save your account later, and <a id="skip-this-step" href="https://dashboard.stripe.com/anonymous" class="arrow">skip this step</a>
+            </p>
+        </div>
+
+          <form method="POST" action="signup">
+
+            <div id="email_suggestion">
+              <p class="email_suggestion-label">
+                Did you mean <strong class="suggested"></strong> instead of <strong class="current"></strong>?
+              </p>
+              <a class="email_suggestion-button accept button grey small">
+                <span>Update my email</span>
+              </a>
+              <a class="email_suggestion-ignore">Close</a>
+            </div>
+
+            <p class="text">
+              <span>
+                <label for="email">Email</label>
+                <input type="email" value="" name="email" id="email" placeholder="Email" />
+              </span>
+            </p>
+              <p class="text">
+                  <span>
+                      <label for="password">Password</label>
+                      <input type="password" value="" name="password" id="password" placeholder="Password" class="password-strength-input" />
+                  </span>
+              </p>
+              <p class="text">
+                  <span>
+                      <label for="confirm_password">Confirm Password</label>
+                      <input type="password" value="" name="confirm_password" id="confirm_password" placeholder="Confirm password" />
+                  </span>
+              </p>
+
+
+              <input type="hidden" name="redirect" value="" />
+              <input type="hidden" name="invite_code" value="" />
+              <input type="hidden" name="invite" value="" />
+              <input type="hidden" name="country" value="" />
+              <input type="hidden" name="csrf_token" value="CxBDuNrn73BlbLaeyX8eZR3FL8eDyu5N5pcGj10FJJ6DOkZ7w4SqwJZ87E6XBaLuJXjVL5KhOnUvjZHj3AiABA=="/>
+
+              <div>
+                  <p class="submit">
+                    <button type="submit" class="button blue medium"><span>Create your Stripe account</span></button>
+                  </p>
+
+                  <p class="remember" style="display:none">
+                      <label><input type="checkbox" name="remember" checked="checked" /> Remember me</label>
+                  </p>
+              </div>
+                <script src="https://b.stripecdn.com/manage/assets/iovation_config-1195793ef31241e2149d6a7b2d3658ba.js"></script>
+  <script src="https://mpsnare.iesnare.com/snare.js"></script>
+  <input type="hidden" name="io_blackbox" id="io_blackbox"/>
+
+          </form>
+
+      </div></div> <!-- END CONTENT -->
+
+      <div class="below-box">
+        <p>
+          Already have an account?
+          <a href="https://dashboard.stripe.com/login">Sign in</a>.
+      </p>
+      </div>
+
+      <div id="footer_spacer"></div>
+        <div id="bottom">
+          <ul>
+              <li class="first"><a href="https://dashboard.stripe.com/reset">Forgot your password?</a></li>
+              <li><a href="privacy">Privacy Policy</a></li>
+              <li><a href="help/contact">Contact</a></li>
+              <li class="last"><a href="https://dashboard.stripe.com/">&copy; Stripe</a></li>
+          </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Relay API Overview</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="BnWroLHG-pDU1BFvT0Z7-66DUNgFdikSoUpnnW8AlIGOX65jqKW_ICfES78RPMdwlj6qMBQd_SpoUPDx7g0wGw==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="selected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="orders-guide" id="details">
+  <header>
+    <h1>Relay API Overview</h1>
+    <p>Expand your commercial reach by selling your products directly within your customers’ favorite apps. If you need help after reading this, check out our answers to <a href="https://support.stripe.com/search?q=relay">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+
+</p>
+  </header>
+  <article>
+
+    <aside class="intro note">
+      <h1>Start selling on Twitter</h1>
+      <p>Learn how to connect your account to Twitter to <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter">sell products through tweets</a>.</p>
+    </aside>
+
+    <p>The Relay API is a subset of the Stripe API consisting of the following objects:</p>
+
+    <ul>
+      <li><a href="../api/index.html#products"><code>Product</code></a>, a blanket representation of an item your business sells (for instance, “2015 Limited Edition T-shirt”).</li>
+      <li><a href="../api/index.html#skus"><code>SKU</code></a> (<a href="https://en.wikipedia.org/wiki/Stock_keeping_unit">Stock Keeping Unit</a>), a specific product variation, taking into account any combination of attributes and cost (for instance, size, color, USD, $20.00).</li>
+      <li><a href="../api/index.html#orders"><code>Order</code></a>, a combination of customer information and the SKUs they want to purchase.</li>
+    </ul>
+
+    <p>Stripe automatically handles inventory changes, factors in <a href="index.html#shipping-and-taxes">shipping costs and taxes</a>, and notifies you of activity via <a href="index.html#using-webhooks">webhooks</a>. To get started with Relay, you should <a href="index.html#define-products-skus">define products and SKUs</a> and <a href="index.html#shipping-and-taxes">set shipping and tax handling strategies</a>.</p>
+
+    <p>The end of this guide presents <a href="index.html#best-practices">best practices</a>, explains how to <a href="index.html#using-webhooks">use webhooks</a>, and details the <a href="index.html#understanding-order-statuses">order lifecycle</a>. Although almost all of this functionality–except for webhooks–can be implemented using the <a href="https://dashboard.stripe.com">Dashboard</a> alone, this guide focuses on developer usage of the Relay API.</p>
+
+    <p>The Relay API also lets Stripe users sell products across an expansive and expanding network of popular media. Customers can buy your goods through tweets, social media posts, in-app interfaces, ads, or even simple links.</p>
+
+    <p>Just add products to your Stripe account and connect to any number of <em>apps</em>–social media platforms like Twitter or mobile shopping apps like ShopStyle. The app can be used to promote your products, will handle the ordering process, and even securely accept payment on your behalf. Once an order is created and paid for, you simply fulfill the order to complete the transaction. You can start selling on third-party applications by <a href="index.html#connect-apps">connecting to Relay apps</a>. This guide also outlines how to <a href="index.html#manage-orders">manage orders from Relay applications</a>.</p>
+
+    <p>To learn more about building an app on the Relay API that other Stripe users can sell their products through, see the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">apps guide</a> or the recipe for using the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app">Relay Demo</a> account.</p>
+
+    <hr />
+
+    <h2 id="define-products-skus">Define products and SKUs</h2>
+
+    <p>Begin by using the API or the Dashboard to represent your product catalog as <code>Product</code> and <code>SKU</code> objects. <code>Product</code> is an umbrella for the types of goods you sell, be they physical–to be shipped–or digital–to be downloaded. (See the <a href="index.html#best-practices">best practices</a> for examples and additional tips.)</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="../index.html">ruby</a>
+  <a href="../index.html">python</a>
+  <a href="../index.html">php</a>
+  <a href="../index.html">node</a>
+  <a href="../index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_product_create">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Products can have associated images, descriptions, and <a href="../api/index.html#products">more</a>. The <code>attributes</code> property is how a product defines the features that can be set on individual SKUs: the specific versions of the product a customer actually buys. For example, the above code says that the “2015 Limited Edition T-shirt” product comes in different variations for size, gender, and color.</p>
+
+    <p>With a product defined, create specific product variations as SKUs, taking into account all possible combinations of attributes.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="../index.html">ruby</a>
+  <a href="../index.html">python</a>
+  <a href="../index.html">php</a>
+  <a href="../index.html">node</a>
+  <a href="../index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_sku_create">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>The above code creates two different SKUs–variants on a product, differentiated by size and price. You will normally have exponentially more SKUs than products. If the “2015 Limited Edition T-shirt” came in three sizes–small, medium, and large–and in two colors–cyan and magenta, there would be at least 6 SKUs representing it.</p>
+
+    <hr />
+
+    <h2 id="shipping-and-taxes">Set shipping and tax handling</h2>
+
+    <p>Real-world orders involve not only the cost of the items being purchased, but also shipping costs and taxes. Stripe can automatically and dynamically add these costs to your orders.</p>
+
+    <p>Configure your shipping and tax preferences in your <a href="https://dashboard.stripe.com/account/orders/settings">Stripe account</a>, by choosing one of three approaches.</p>
+
+    <p>Shipping can be set as:</p>
+
+    <ul>
+      <li><code>free</code>: No additional cost, the default.</li>
+      <li><code>flat_rate</code>: A flat additional cost, regardless of the items ordered, the quantity, or the customer’s geographic location. You can even opt to waive the shipping cost above a certain order total.</li>
+    </ul>
+
+    <p>Tax can be set as:</p>
+
+    <ul>
+      <li><code>included</code>: No additional cost, the default.</li>
+      <li><code>percentage</code>: A flat additional cost, as a percent of the order total, before shipping.</li>
+      <li><code>provider</code>: A third-party provider (<a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Favalara">Avalara</a>) which will provide the tax amount dynamically.</li>
+    </ul>
+
+    <p>Both shipping and taxes can also be set to <code>callback</code>. If you wish to <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fdynamic-shipping-taxes">calculate shipping and taxes yourself</a>, provide an endpoint on your own server that Stripe will reach out to in real-time to retrieve these costs.</p>
+
+    <hr />
+
+    <aside class="content note">
+      <h1>Leaving notes for yourself</h1>
+      <p>Each Relay API object–<code>Product</code>, <code>SKU</code>, and <code>Order</code>–has a <code>metadata</code> attribute. Values stored in metadata will never be seen by customers, but can be used to store additional information for your own benefit. </p>
+    </aside>
+
+    <h2 id="best-practices">Best practices</h2>
+
+    <p>To make the most of Relay, it’ll help to understand where the various objects and attributes come into play. </p>
+
+    <h3 id="defining-products-and-skus">Defining products and SKUs</h3>
+
+    <p>The first decision to make in organizing a catalog is to identify your products and SKUs. This can be tricky to grasp, but is important to get right.</p>
+
+    <p>Working backwards, a SKU is an individual product: the specific item the customer is actually buying. Anything you’d put into a shopping cart–real or online–is represented by a SKU.</p>
+
+    <p>Each product is an umbrella term for a family of SKUs. These should still be identifying, not too generic. “Book”, “coat”, “software”, and “coffee” are all too broad as products. Instead, you’d have:</p>
+
+    <ul>
+      <li>A specific book title as a product, with formats–hardcover, softcover–and translations differentiated as SKUs.</li>
+      <li>An identifiable label and style of coat as a product, with sizes and colors defined as SKUs.</li>
+      <li>A named application as a product, with operating system versions and releases as SKUs.</li>
+      <li>A line of coffee–such as Jamaican Blue Mountain– as a product, with sizes, roasts, and ground establishing SKUs.</li>
+    </ul>
+
+    <p>As a rule of thumb, customers would be unlikely to purchase two different SKUs from the same product family at the same time (unless they really wanted, for example, the same coat in two different colors).</p>
+
+    <h3 id="detailing-products-details-for-customers">Detailing products details for customers</h3>
+
+    <p>Your goal is to provide as much useful, appealing information as you can about your products and SKUs. We recommend you do the following to take full advantage of the Relay API, especially if you plan on <a href="index.html#connect-apps">selling through Relay apps</a>:</p>
+
+    <ul>
+      <li>Use clear, descriptive names</li>
+      <li>Provide at least one product image</li>
+      <li>Use a dedicated web page, linked through the <code>url</code> field, to provide more detailed and alternative information (e.g., a video demonstrating the product)</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="using-webhooks">Using webhooks</h2>
+
+    <p>Receive real-time updates on the state of your products, SKUs, and orders using <a href="../webhooks/index.html">webhooks</a>. The applicable Relay API events are:</p>
+
+    <ul>
+      <li><code>product.created</code></li>
+      <li><code>product.updated</code></li>
+      <li><code>sku.created</code></li>
+      <li><code>sku.updated</code>: e.g., inventory is decreased after a successful order</li>
+      <li><code>order.created</code></li>
+      <li><code>order.updated</code>: the details of an order (e.g., shipping information) are updated</li>
+      <li><code>order.payment_succeeded</code>: payment is made on an order</li>
+      <li><code>order.payment_failed</code>: the payment attempt did not work</li>
+    </ul>
+
+    <p>Your webhook endpoint can take specific actions when these events occur. You can expect to receive an <code>order.created</code> event whenever someone has begun the checkout flow for one of your products. An <code>order.payment_succeeded</code> event represents a purchase.  In other words, once you have received an <code>order.payment_succeeded</code> webhook, it’s time to fulfill whatever product has been purchased.</p>
+
+    <hr />
+
+    <h2 id="understanding-order-statuses">Understanding the order lifecycle</h2>
+
+    <p>When examining the response of any API call or webhook notification, use the <code>Order</code> object’s <code>status</code> attribute to verify the current status of the order and respond accordingly.</p>
+
+    <ul>
+      <li>When an order is first requested, the resulting order object has an initial <code>status</code> of <code>created</code>.</li>
+      <li>When an order is paid, <code>status</code> changes to <code>paid</code>. You should now fulfill the order.</li>
+      <li>After fulfilling the order, update the <code>Order</code> object to change <code>status</code> to <code>fulfilled</code>. Only orders in the <code>paid</code> state can be marked as <code>fulfilled</code>.</li>
+      <li>If the customer cancels the order (through your site) before it’s been fulfilled, refund the associated payment and then update <code>status</code> to <code>canceled</code>.</li>
+      <li>If the order has been fulfilled and the customer returns the purchased items, refund the associated payment and then update <code>status</code> to <code>returned</code>.</li>
+    </ul>
+
+    <p>Put another way:</p>
+
+    <ul>
+      <li>A <code>created</code> order can become <code>paid</code> or <code>canceled</code>.</li>
+      <li>A <code>paid</code> order can become <code>fulfilled</code> or <code>canceled</code>, both of which will refund the payment.</li>
+      <li>A <code>fulfilled</code> order is normally the final state, but can be <code>returned</code> in which case the payment is refunded.</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="connect-apps">Connect to apps</h2>
+
+    <p>Once you’ve defined products and SKUs in your Stripe account, you’re ready to connect your account to apps: popular shopping and social media platforms. By doing so, you enable users of those applications to buy your products without even visiting your website, greatly expanding your business’s reach. Apps can easily sell your products through every interface they offer, including mobile sites and apps. You can use the apps to promote your products, and then apps will take over: creating the orders and accepting payment on your behalf.</p>
+
+    <p>You’ll find some common apps to connect to listed in the <a href="https://dashboard.stripe.com/account/orders">Dashboard</a>.</p>
+
+    <p><img src="../../img/documentation/relay/apps-list-dashboard.png" width="500" height="372" data-hires="true" title="List of available apps in the Dashboard" /></p>
+
+    <p>For apps not listed in the Dashboard, visit the respective app’s site to see if they offer a Stripe Relay integration. If so, they’ll provide a page that likely contains a button like:</p>
+
+    <p><a href="index.html" class="stripe-connect"><span>Connect with Stripe</span></a></p>
+
+    <p>Just click on the button and follow through the interface to connect your account.</p>
+
+    <p>Note that you only need to register your products and SKUs in your Stripe account once, and you can connect to as many apps as you’d like. Just select the right platforms for your business, and Stripe takes care of sending them the right info to display your products in their app.</p>
+
+    <p>Stripe does allow apps to take an application fee on order payments. You may want to check an app’s policy on this before connecting.</p>
+
+    <hr />
+
+    <h2 id="manage-orders">Manage orders from Relay apps</h2>
+
+    <p>When a customer buys products through an app you’ve enabled, the app will:</p>
+
+    <ul>
+      <li><strong>Create an order.</strong> This happens when the customer first establishes intent to purchase the product, such as by clicking a “Buy Button”.</li>
+      <li><strong>Accept payment for the order.</strong> This happens at the end of the checkout flow.</li>
+    </ul>
+
+    <p>With the order paid for, it’s time for you to fulfill it, whether that means providing a downloadable digital good or shipping a physical one.</p>
+
+    <p>Stripe will notify you of orders via <a href="https://dashboard.stripe.com/account/orders">email</a> or <a href="index.html#using-webhooks">webhooks</a>. With webhooks, you’ll want to pay particular attention to <code>order.payment_succeeded</code> events, as they indicate further action is required on your part. With your own Relay integration, a developer would likely build a display of order information in a portal on your site for easy viewing.</p>
+
+    <p>If you’re relying upon email, use the Dashboard to obtain any further necessary information. On a specific order page, you can find the customer and order details.</p>
+
+    <p>Once you’ve delivered the order, mark it as fulfilled in your Stripe account. You can do this on the order’s page in the Dashboard, or by making an <a href="../api/index.html#update_order">update order</a> API call.</p>
+
+    <p>Understand that enabling a Relay application means giving it the ability to create and pay for orders with your products and SKUs. You can still use the API or the Dashboard to manage these orders including marking them as fulfilled, issuing refunds, etc.</p>
+
+    <hr />
+
+    <h1>Next up</h1>
+    <p>Congrats! You’ve gone through how to use the Relay API’s products, SKUs and orders features. Some things you might want to see next:
+</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter">Selling on Twitter</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Relay API for Apps</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app">Building a Product Discovery App</a></li>
+  <li><a href="../api/index.html#products">Products API docs</a></li>
+  <li><a href="../api/index.html#skus">SKU API docs</a></li>
+  <li><a href="../api/index.html#orders">Order API docs</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frelay" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["ruby"] = {};
+              APIValues["ruby"]["tutorial_product_create"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Create the product\nStripe::Product.create(\n  :name =\u0026gt; \u0026#39;2015 Limited Edition T-shirt\u0026#39;,\n  :description =\u0026gt; \u0026#39;Super awesome, one-of-a-kind t-shirt\u0026#39;,\n  # These are the characteristics of the product that SKUs provide values for\n  :attributes =\u0026gt; [\u0026#39;size\u0026#39;, \u0026#39;gender\u0026#39;, \u0026#39;color\u0026#39;]\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_sku_create"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nStripe::SKU.create(\n  :product =\u0026gt; \u0026#39;pr_17trMK2eZvKYlo2CkszCzr3p\u0026#39;,\n  :attributes =\u0026gt; {\n    \u0026#39;size\u0026#39; =\u0026gt; \u0026#39;Medium\u0026#39;,\n    \u0026#39;gender\u0026#39; =\u0026gt; \u0026#39;Unisex\u0026#39;,\n    \u0026#39;color\u0026#39; =\u0026gt; \u0026#39;Cyan\u0026#39;,\n  },\n  :price =\u0026gt; 1500,\n  :currency =\u0026gt; \u0026#39;usd\u0026#39;,\n  :inventory =\u0026gt; {\n    \u0026#39;type\u0026#39; =\u0026gt; \u0026#39;finite\u0026#39;,\n    \u0026#39;quantity\u0026#39; =\u0026gt; 500\n  }\n)\nStripe::SKU.create(\n  :product =\u0026gt; \u0026#39;pr_17trMK2eZvKYlo2CkszCzr3p\u0026#39;,\n  :attributes =\u0026gt; {\n    \u0026#39;size\u0026#39; =\u0026gt; \u0026#39;Large\u0026#39;,\n    \u0026#39;gender\u0026#39; =\u0026gt; \u0026#39;Unisex\u0026#39;,\n    \u0026#39;color\u0026#39; =\u0026gt; \u0026#39;Cyan\u0026#39;\n  },\n  :price =\u0026gt; 1500,\n  :currency =\u0026gt; \u0026#39;usd\u0026#39;,\n  :inventory =\u0026gt; {\n    \u0026#39;type\u0026#39; =\u0026gt; \u0026#39;finite\u0026#39;,\n    \u0026#39;quantity\u0026#39; =\u0026gt; 400\n  }\n)\u003C/span\u003E";
+          APIValues["python"] = {};
+              APIValues["python"]["tutorial_product_create"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Create the product\nstripe.Product.create(\n  name=\u0026#39;2015 Limited Edition T-shirt\u0026#39;,\n  description=\u0026#39;Super awesome, one-of-a-kind t-shirt\u0026#39;,\n  # These are the characteristics of the product that SKUs provide values for\n  attributes=[\u0026#39;size\u0026#39;, \u0026#39;gender\u0026#39;, \u0026#39;color\u0026#39;]\n)\u003C/span\u003E";
+              APIValues["python"]["tutorial_sku_create"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nstripe.SKU.create(\n  product=\u0026#39;pr_17trMK2eZvKYlo2CkszCzr3p\u0026#39;,\n  attributes={\u0026#39;size\u0026#39;: \u0026#39;Medium\u0026#39;, \u0026#39;gender\u0026#39;: \u0026#39;Unisex\u0026#39;, \u0026#39;color\u0026#39;: \u0026#39;Cyan\u0026#39;},\n  price=1500,\n  currency=\u0026#39;usd\u0026#39;,\n  inventory={\u0026#39;type\u0026#39;: \u0026#39;finite\u0026#39;, \u0026#39;quantity\u0026#39;: 500}\n)\nstripe.SKU.create(\n  product=\u0026#39;pr_17trMK2eZvKYlo2CkszCzr3p\u0026#39;,\n  attributes={\u0026#39;size\u0026#39;: \u0026#39;Large\u0026#39;, \u0026#39;gender\u0026#39;: \u0026#39;Unisex\u0026#39;, \u0026#39;color\u0026#39;: \u0026#39;Cyan\u0026#39;},\n  price=1500,\n  currency=\u0026#39;usd\u0026#39;,\n  inventory={\u0026#39;type\u0026#39;: \u0026#39;finite\u0026#39;, \u0026#39;quantity\u0026#39;: 400}\n)\u003C/span\u003E";
+          APIValues["php"] = {};
+              APIValues["php"]["tutorial_product_create"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// Create the product\n\\Stripe\\Product::create(array(\n  \u0026quot;name\u0026quot; =\u0026gt; \u0026#39;2015 Limited Edition T-shirt\u0026#39;,\n  \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Super awesome, one-of-a-kind t-shirt\u0026quot;,\n  // These are the characteristics of the product that SKUs provide values for\n  \u0026quot;attributes\u0026quot; =\u0026gt; [\u0026quot;size\u0026quot;, \u0026quot;gender\u0026quot;, \u0026quot;color\u0026quot;]\n);\u003C/span\u003E";
+              APIValues["php"]["tutorial_sku_create"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n\\Stripe\\SKU::create(array(\n  \u0026quot;product\u0026quot; =\u0026gt; \u0026quot;pr_17trMK2eZvKYlo2CkszCzr3p\u0026quot;,\n  \u0026quot;attributes\u0026quot; =\u0026gt; array(\n    \u0026quot;size\u0026quot; =\u0026gt; \u0026quot;Medium\u0026quot;,\n    \u0026quot;gender\u0026quot; =\u0026gt; \u0026quot;Unisex\u0026quot;,\n    \u0026quot;color\u0026quot; =\u0026gt; \u0026quot;Cyan\u0026quot;\n  ),\n  \u0026quot;price\u0026quot; =\u0026gt; 1500,\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;inventory\u0026quot; =\u0026gt; array(\n    \u0026quot;type\u0026quot; =\u0026gt; \u0026quot;finite\u0026quot;,\n    \u0026quot;quantity\u0026quot; =\u0026gt; 500\n  )\n);\n\\Stripe\\SKU::create(array(\n  \u0026quot;product\u0026quot; =\u0026gt; \u0026quot;pr_17trMK2eZvKYlo2CkszCzr3p\u0026quot;,\n  \u0026quot;attributes\u0026quot; =\u0026gt; array(\n    \u0026quot;size\u0026quot; =\u0026gt; \u0026quot;Large\u0026quot;,\n    \u0026quot;gender\u0026quot; =\u0026gt; \u0026quot;Unisex\u0026quot;,\n    \u0026quot;color\u0026quot; =\u0026gt; \u0026quot;Cyan\u0026quot;\n  ),\n  \u0026quot;price\u0026quot; =\u0026gt; 1500,\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;inventory\u0026quot; =\u0026gt; array(\n    \u0026quot;type\u0026quot; =\u0026gt; \u0026quot;finite\u0026quot;,\n    \u0026quot;quantity\u0026quot; =\u0026gt; 400\n  )\n);\u003C/span\u003E";
+          APIValues["node"] = {};
+              APIValues["node"]["tutorial_product_create"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// Create the product\nstripe.products.create({\n  name: \u0026#39;2015 Limited Edition T-shirt\u0026#39;,\n  description: \u0026#39;Super awesome, one-of-a-kind t-shirt\u0026#39;,\n  // These are the characteristics of the product that SKUs provide values for\n  attributes: [\u0026#39;size\u0026#39;, \u0026#39;gender\u0026#39;, \u0026#39;color\u0026#39;]\n}, function(err, product) {\n  // asynchronously called\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_sku_create"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.skus.create({\n  product: \u0026#39;pr_17trMK2eZvKYlo2CkszCzr3p\u0026#39;,\n  attributes: {\u0026#39;size\u0026#39;: \u0026#39;Medium\u0026#39;, \u0026#39;gender\u0026#39;: \u0026#39;Unisex\u0026#39;, \u0026#39;color\u0026#39;: \u0026#39;Cyan\u0026#39;},\n  price: 1500,\n  currency: \u0026#39;usd\u0026#39;,\n  inventory: {\u0026#39;type\u0026#39;: \u0026#39;finite\u0026#39;, \u0026#39;quantity\u0026#39;: 500}\n}, function(err, sku) {\n  // asynchronously called\n});\nstripe.skus.create({\n  product: \u0026#39;pr_17trMK2eZvKYlo2CkszCzr3p\u0026#39;,\n  attributes: {\u0026#39;size\u0026#39;: \u0026#39;Large\u0026#39;, \u0026#39;gender\u0026#39;: \u0026#39;Unisex\u0026#39;, \u0026#39;color\u0026#39;: \u0026#39;Cyan\u0026#39;},\n  price: 1500,\n  currency: \u0026#39;usd\u0026#39;,\n  inventory: {\u0026#39;type\u0026#39;: \u0026#39;finite\u0026#39;, \u0026#39;quantity\u0026#39;: 400}\n}, function(err, sku) {\n  // asynchronously called\n});\u003C/span\u003E";
+          APIValues["java"] = {};
+              APIValues["java"]["tutorial_product_create"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\n// Create the product\nMap\u0026lt;String, Object\u0026gt; productParams = new HashMap\u0026lt;String, Object\u0026gt;();\nproductParams.put(\u0026quot;name\u0026quot;, \u0026quot;2015 Limited Edition T-shirt\u0026quot;);\nproductParams.put(\u0026quot;description\u0026quot;, \u0026quot;Super awesome, one-of-a-kind t-shirt\u0026quot;);\n// These are the characteristics of the product that SKUs provide values for\nList\u0026lt;String\u0026gt; attributesParams = new LinkedList\u0026lt;String\u0026gt;();\nattributesParams.add(\u0026quot;size\u0026quot;);\nattributesParams.add(\u0026quot;gender\u0026quot;);\nproductParams.put(\u0026quot;attributes\u0026quot;, attributesParams);\n\nProduct.create(productParams);\u003C/span\u003E";
+              APIValues["java"]["tutorial_sku_create"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; skuParams = new HashMap\u0026lt;String, Object\u0026gt;();\nskuParams.put(\u0026quot;product\u0026quot;, \u0026quot;pr_17trMK2eZvKYlo2CkszCzr3p\u0026quot;);\nMap\u0026lt;String, Object\u0026gt; attributesParams = new HashMap\u0026lt;String, Object\u0026gt;();\nattributesParams.put(\u0026quot;size\u0026quot;, \u0026quot;Medium\u0026quot;);\nattributesParams.put(\u0026quot;gender\u0026quot;, \u0026quot;Unisex\u0026quot;);\nattributesParams.put(\u0026quot;color\u0026quot;, \u0026quot;Cyan\u0026quot;);\nskuParams.put(\u0026quot;attributes\u0026quot;, attributesParams);\nskuParams.put(\u0026quot;price\u0026quot;, 1500);\nskuParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\nMap\u0026lt;String, Object\u0026gt; inventoryParams = new HashMap\u0026lt;String, Object\u0026gt;();\ninventoryParams.put(\u0026quot;type\u0026quot;, \u0026quot;finite\u0026quot;);\ninventoryParams.put(\u0026quot;quantity\u0026quot;, 500);\nskuParams.put(\u0026quot;inventory\u0026quot;, inventoryParams);\n\nSKU.create(skuParams);\n\nskuParams.clear();\nskuParams.put(\u0026quot;product\u0026quot;, \u0026quot;pr_17trMK2eZvKYlo2CkszCzr3p\u0026quot;);\nattributesParams.clear();\nattributesParams.put(\u0026quot;size\u0026quot;, \u0026quot;Large\u0026quot;);\nattributesParams.put(\u0026quot;gender\u0026quot;, \u0026quot;Unisex\u0026quot;);\nattributesParams.put(\u0026quot;color\u0026quot;, \u0026quot;Cyan\u0026quot;);\nskuParams.put(\u0026quot;attributes\u0026quot;, attributesParams);\nskuParams.put(\u0026quot;price\u0026quot;, 1500);\nskuParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\ninventoryParams.clear();\ninventoryParams.put(\u0026quot;type\u0026quot;, \u0026quot;finite\u0026quot;);\ninventoryParams.put(\u0026quot;quantity\u0026quot;, 400);\nskuParams.put(\u0026quot;inventory\u0026quot;, inventoryParams);\n\nSKU.create(skuParams);\u003C/span\u003E";
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

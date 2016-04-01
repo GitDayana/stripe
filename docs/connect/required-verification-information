@@ -1,0 +1,4258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Required Information to Verify Managed Accounts</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="X2bEsNfhqRVek58J3ktDSfS9HQeReRKC-ISm-3151gvXTMFzzoLspa2DxdmAMf_CzADn74ASxroxnjGX_HRykQ==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="selected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Required Verification Information</h1>
+    <p>
+      When building a platform using Stripe's managed accounts, you'll need to collect the required verification information for each of your accounts. This information varies depending on the managed account's country.
+    </p>
+    <p>
+      This page is available for convenient reference, but all of this information is also available programatically in the <a href="../api/index.html#country_specs">Country Specs API</a>.
+    </p>
+  </header>
+  <article>
+    <section class="code-example tab-control">
+        <data display-name="AT" hidden>
+          <h1 id="AT">Austria</h1>
+          <h2>Supported bank account currencies for Austria</h2>
+          <p>
+            Accounts created in Austria can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Austria</h2>
+          <p>
+            All accounts in Austria will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Austria</h2>
+          <p>
+            Some merchants in Austria may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Austria</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Austria</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="AU" hidden>
+          <h1 id="AU">Australia</h1>
+          <h2>Supported bank account currencies for Australia</h2>
+          <p>
+            Accounts created in Australia can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>AUD</td>
+                <td>Australia</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Australia</h2>
+          <p>
+            All accounts in Australia will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.state</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Australia</h2>
+          <p>
+            Some merchants in Australia may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Australia</h2>
+          <ul>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Australia</h2>
+          <p>
+            AED, ALL, ANG, ARS, AUD, AWG, BBD, BDT, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LTL, MAD, MDL, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RUB, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, STD, SVC, SZL, THB, TOP, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XOF, XPF, YER, ZAR
+          </p>
+        </data>
+        <data display-name="BE" hidden>
+          <h1 id="BE">Belgium</h1>
+          <h2>Supported bank account currencies for Belgium</h2>
+          <p>
+            Accounts created in Belgium can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Belgium</h2>
+          <p>
+            All accounts in Belgium will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Belgium</h2>
+          <p>
+            Some merchants in Belgium may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Belgium</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Belgium</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="CA" hidden>
+          <h1 id="CA">Canada</h1>
+          <h2>Supported bank account currencies for Canada</h2>
+          <p>
+            Accounts created in Canada can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>CAD</td>
+                <td>Canada</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>Canada, United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Canada</h2>
+          <p>
+            All accounts in Canada will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.state</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_id_number</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_id_number</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Canada</h2>
+          <p>
+            Some merchants in Canada may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Canada</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Canada</h2>
+          <p>
+            CAD, USD
+          </p>
+        </data>
+        <data display-name="DE" hidden>
+          <h1 id="DE">Germany</h1>
+          <h2>Supported bank account currencies for Germany</h2>
+          <p>
+            Accounts created in Germany can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Germany</h2>
+          <p>
+            All accounts in Germany will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Germany</h2>
+          <p>
+            Some merchants in Germany may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Germany</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Germany</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="DK" hidden>
+          <h1 id="DK">Denmark</h1>
+          <h2>Supported bank account currencies for Denmark</h2>
+          <p>
+            Accounts created in Denmark can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Denmark</h2>
+          <p>
+            All accounts in Denmark will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Denmark</h2>
+          <p>
+            Some merchants in Denmark may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Denmark</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Denmark</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="ES" hidden>
+          <h1 id="ES">Spain</h1>
+          <h2>Supported bank account currencies for Spain</h2>
+          <p>
+            Accounts created in Spain can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Spain</h2>
+          <p>
+            All accounts in Spain will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Spain</h2>
+          <p>
+            Some merchants in Spain may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Spain</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Spain</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="FI" hidden>
+          <h1 id="FI">Finland</h1>
+          <h2>Supported bank account currencies for Finland</h2>
+          <p>
+            Accounts created in Finland can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Finland</h2>
+          <p>
+            All accounts in Finland will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Finland</h2>
+          <p>
+            Some merchants in Finland may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Finland</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Finland</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="FR" hidden>
+          <h1 id="FR">France</h1>
+          <h2>Supported bank account currencies for France</h2>
+          <p>
+            Accounts created in France can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for France</h2>
+          <p>
+            All accounts in France will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for France</h2>
+          <p>
+            Some merchants in France may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for France</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for France</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="GB" hidden>
+          <h1 id="GB">United Kingdom</h1>
+          <h2>Supported bank account currencies for United Kingdom</h2>
+          <p>
+            Accounts created in United Kingdom can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for United Kingdom</h2>
+          <p>
+            All accounts in United Kingdom will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for United Kingdom</h2>
+          <p>
+            Some merchants in United Kingdom may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for United Kingdom</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for United Kingdom</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="IE" hidden>
+          <h1 id="IE">Ireland</h1>
+          <h2>Supported bank account currencies for Ireland</h2>
+          <p>
+            Accounts created in Ireland can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Ireland</h2>
+          <p>
+            All accounts in Ireland will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.state</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.state</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Ireland</h2>
+          <p>
+            Some merchants in Ireland may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Ireland</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Ireland</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="IT" hidden>
+          <h1 id="IT">Italy</h1>
+          <h2>Supported bank account currencies for Italy</h2>
+          <p>
+            Accounts created in Italy can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Italy</h2>
+          <p>
+            All accounts in Italy will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Italy</h2>
+          <p>
+            Some merchants in Italy may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Italy</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Italy</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="JP" hidden>
+          <h1 id="JP">Japan</h1>
+          <h2>Supported bank account currencies for Japan</h2>
+          <p>
+            Accounts created in Japan can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>JPY</td>
+                <td>Japan</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Japan</h2>
+          <p>
+            All accounts in Japan will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kana.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kana.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kana.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kana.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kana.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kana.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kana.state</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kana.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kana.town</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kana.town</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kanji.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kanji.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kanji.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kanji.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kanji.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kanji.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kanji.state</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kanji.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address_kanji.town</code>
+                </td>
+                <td>
+                    <code>legal_entity.address_kanji.town</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name_kana</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name_kanji</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name_kana</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name_kana</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name_kanji</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name_kanji</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.gender</code>
+                </td>
+                <td>
+                    <code>legal_entity.gender</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name_kana</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name_kana</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name_kanji</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name_kanji</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kana.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kana.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kana.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kana.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kana.town</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kanji.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kanji.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kanji.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kanji.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address_kanji.town</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.phone_number</code>
+                </td>
+                <td>
+                    <code>legal_entity.phone_number</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Japan</h2>
+          <p>
+            Some merchants in Japan may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+          </table>
+          <h2>Supported payment methods for Japan</h2>
+          <ul>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Japan</h2>
+          <p>
+            JPY
+          </p>
+        </data>
+        <data display-name="LU" hidden>
+          <h1 id="LU">Luxembourg</h1>
+          <h2>Supported bank account currencies for Luxembourg</h2>
+          <p>
+            Accounts created in Luxembourg can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Luxembourg</h2>
+          <p>
+            All accounts in Luxembourg will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Luxembourg</h2>
+          <p>
+            Some merchants in Luxembourg may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Luxembourg</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Luxembourg</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="NL" hidden>
+          <h1 id="NL">Netherlands</h1>
+          <h2>Supported bank account currencies for Netherlands</h2>
+          <p>
+            Accounts created in Netherlands can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Netherlands</h2>
+          <p>
+            All accounts in Netherlands will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Netherlands</h2>
+          <p>
+            Some merchants in Netherlands may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Netherlands</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Netherlands</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="NO" hidden>
+          <h1 id="NO">Norway</h1>
+          <h2>Supported bank account currencies for Norway</h2>
+          <p>
+            Accounts created in Norway can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Norway</h2>
+          <p>
+            All accounts in Norway will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Norway</h2>
+          <p>
+            Some merchants in Norway may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Norway</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Norway</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="SE" hidden>
+          <h1 id="SE">Sweden</h1>
+          <h2>Supported bank account currencies for Sweden</h2>
+          <p>
+            Accounts created in Sweden can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>EUR</td>
+                <td>Austria, Belgium, Denmark, Finland, France, Germany, Ireland, Italy, Luxembourg, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, United Kingdom</td>
+              </tr>
+              <tr>
+                <td>DKK</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>GBP</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>NOK</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>SEK</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for Sweden</h2>
+          <p>
+            All accounts in Sweden will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.additional_owners</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for Sweden</h2>
+          <p>
+            Some merchants in Sweden may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for Sweden</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for Sweden</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+        <data display-name="US" hidden>
+          <h1 id="US">United States</h1>
+          <h2>Supported bank account currencies for United States</h2>
+          <p>
+            Accounts created in United States can be transferred the following currencies.
+          </p>
+          <table>
+            <thead><th>Currency</th><th>can be transferred to banks in these countries</th></thead>
+              <tr>
+                <td>USD</td>
+                <td>United States</td>
+              </tr>
+
+          </table>
+          <h2>Minimum Verification Requirements for United States</h2>
+          <p>
+            All accounts in United States will eventually require each of
+            the following fields if they process enough volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>external_account</code>
+                </td>
+                <td>
+                    <code>external_account</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.city</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.line1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.postal_code</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.address.state</code>
+                </td>
+                <td>
+                    <code>legal_entity.address.state</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <code>legal_entity.business_tax_id</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.day</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.month</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+                <td>
+                    <code>legal_entity.dob.year</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.first_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+                <td>
+                    <code>legal_entity.last_name</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.ssn_last_4</code>
+                </td>
+                <td>
+                    <code>legal_entity.ssn_last_4</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+                <td>
+                    <code>legal_entity.type</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.date</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+                <td>
+                    <code>tos_acceptance.ip</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Additional Verification Requirements for United States</h2>
+          <p>
+            Some merchants in United States may be required to provide the following additional fields depending on
+            our ability to verify their identity. Some merchants will never be asked for this information, even after processing considerable volume.
+          </p>
+          <table>
+            <thead>
+              <th>Individual</th>
+              <th>Company</th>
+            </thead>
+              <tr>
+                <td>
+                    <code>legal_entity.personal_id_number</code>
+                </td>
+                <td>
+                    <code>legal_entity.personal_id_number</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+                <td>
+                    <code>legal_entity.verification.document</code>
+                </td>
+              </tr>
+          </table>
+          <h2>Supported payment methods for United States</h2>
+          <ul>
+              <li>Alipay</li>
+              <li>Card</li>
+              <li>Stripe</li>
+          </ul>
+          
+          <h2>Supported payment currencies for United States</h2>
+          <p>
+            AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BIF, BMD, BND, BOB, BRL, BSD, BWP, BZD, CAD, CDF, CHF, CLP, CNY, COP, CRC, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ETB, EUR, FJD, FKP, GBP, GEL, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, ISK, JMD, JPY, KES, KGS, KHR, KMF, KRW, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LTL, MAD, MDL, MGA, MKD, MNT, MOP, MRO, MUR, MVR, MWK, MXN, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SEK, SGD, SHP, SLL, SOS, SRD, STD, SVC, SZL, THB, TJS, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, UYU, UZS, VND, VUV, WST, XAF, XCD, XOF, XPF, YER, ZAR, ZMW
+          </p>
+        </data>
+    </section>
+  </article>
+</section>
+
+
+
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  <script src="../../assets/tabs-cbb67502aaa9d2e23079a63a3bb8b2cc.js"></script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

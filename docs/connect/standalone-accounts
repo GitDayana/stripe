@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Connecting Standalone Accounts</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="iVBskygadyvXHxXP_v_OgLtEYZTu_hhF_02reRzBB5cBemlQMXkymyQPTx-ghXILg_mbfP-VzH02VzwVncyjDQ==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="selected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+
+  <header>
+    <h1>Connecting to Standalone Accounts</h1>
+    <p>
+    Integrating with standalone Stripe accounts is the fastest and easiest way to get started, since you’ll be offloading the majority of the user experience and user communication to Stripe.
+  </p>
+  </header>
+  <article>
+
+    <p class="notification">This tutorial assumes you have already <a href="https://dashboard.stripe.com/account/applications/settings" class="arrow">registered your platform</a></p>
+
+    <p>A <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts#standalone-accounts"><em>standalone</em></a> Stripe account is a normal Stripe account that is controlled by the account holder: your platform’s user. (By contrast, <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts#managed-accounts"><em>managed</em></a> accounts are fully controlled by the platform.)</p>
+
+    <p>To connect to standalone accounts—either if your users already have accounts or if you’d like them to create accounts—you’ll want to integrate with our standard OAuth flow. With this flow, there’s minimal integration work to do in terms of onboarding, communicating with users, ongoing maintenance, and so on since Stripe handles all of it for you and your users will have access to the Dashboard. (Of course, this also means that there’s not as much user experience customizability.)</p>
+
+    <p>Unless you’re looking to fully control the user experience from the beginning, we recommend starting off with an OAuth integration.</p>
+
+    <hr />
+
+    <h1 id="oauth-flow">What does the flow look like?</h1>
+
+    <aside class="content note">
+      <h1>OAuth 2.0</h1>
+
+      <p>For additional reading, feel free to head over to the <a href="https://tools.ietf.org/html/rfc6749">official OAuth 2.0 spec</a>.</p>
+
+      <p>There’s also a <a href="http://oauth.net/2/">list of OAuth 2.0 clients</a> if you’d rather not implement the details yourself.</p>
+    </aside>
+
+    <p>When a user wants to connect to your platform, they’ll go through these steps:</p>
+
+    <ol>
+      <li>Starting on a page at your site, the user will click a link that takes them to Stripe, passing along your platform’s <code>client_id</code>.</li>
+      <li>On Stripe’s website, the user will be prompted to connect their Stripe account, or create a new account if they don’t already have one.</li>
+      <li>The user will then be redirected back to your site (specifically to your <code>redirect_uri</code>), passing along either an authorization code or an error (if the connection request was denied).</li>
+      <li>Your site then makes a request to our OAuth token endpoint to fetch the user’s authorization credentials, storing them on your site.</li>
+      <li>Subsquent API requests can be made on behalf of the connected account using the authorization credentials.</li>
+    </ol>
+
+    <p>Unlike most OAuth implementations (like Facebook Connect or Sign In with Twitter), we’ve seamlessly added the process of creating a Stripe account right into our authorization flow. You don’t have to worry about whether or not your users already have Stripe accounts.</p>
+
+    <style>
+  div.screenshots {
+    padding: 20px 20px 0;
+  }
+  div.screenshots img {
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),
+                0 2px 3px 0 rgba(0,0,0,0.3);
+  }
+  div.screenshots p {
+    text-align: center;
+    color: #888;
+    padding-top: 15px;
+  }
+</style>
+
+    <div class="screenshots clearfix">
+      <div style="width: 49%; float: left;">
+        <p><a href="../../img/documentation/oauth-authorize-screen.png" data-hires="true" class="zoom" maxsize="868x688"><img src="../../img/documentation/oauth-authorize-thumb.png" width="255" height="202" data-hires="true" /></a></p>
+        <p>The user is logged in, and can connect directly.</p>
+      </div>
+      <div style="width: 49%; float: right;">
+        <p><a href="../../img/documentation/oauth-register-screen.png" data-hires="true" class="zoom" maxsize="868x688"><img src="../../img/documentation/oauth-register-thumb.png" width="255" height="202" data-hires="true" /></a></p>
+        <p>The user needs to create an account.</p>
+      </div>
+    </div>
+
+    <p>When your users land back on your site, their account is ready to accept credit card payments. You can also retrieve their <a href="../api/index.html#account">account status</a> at any time.</p>
+
+    <p>Keep reading for a step-by-step guide to integrating the flow. You can also check out the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth reference</a> for additional details on the request and response parameters.</p>
+
+    <h1 id="integrating-oauth">Integrating OAuth</h1>
+
+    <p>To get started with your integration, you’ll first need to know two key pieces of information from in your <a href="https://dashboard.stripe.com/account/applications/settings">platform settings</a>:</p>
+
+    <ul>
+      <li>Your <code>client_id</code>, a unique identifier for your platform, generated by Stripe.</li>
+      <li>Your <code>redirect_uri</code>, a page on your website to which the user will be redirected after connecting their account (or failing to, should that be the case), set by you.</li>
+    </ul>
+
+    <p>Stripe also provides a development <code>client_id</code>, to make <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting#using-oauth">testing</a> easier.</p>
+
+    <h2 id="connecting-users">Connecting users</h2>
+
+    <p>With these two pieces of information in hand, you’re ready to have your users connect with your platform. We recommend showing a <a href="../../country?country=CH&amp;redirect=%252Fabout%252Fresources">Connect button</a> that sends them to our <code>authorize_url</code> endpoint:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap allow-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash"><span class="token string">https://connect.stripe.com/oauth/authorize</span>?<span class="token keyword">response_type</span>=<span class="token string">code</span>&amp;<span class="token keyword">client_id</span>=<span class="token string">ca_32D88BD1qLklliziD7gYQvctJIhWBSQ7</span>&amp;<span class="token keyword">scope</span>=<span class="token string">read_write</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <aside class="content note">
+      <h1>CSRF Protection</h1>
+      <p>
+    To prevent CSRF attacks, use the <code>state</code> parameter, passing along a unique token as the value. We’ll include the <code>state</code> you gave us when we redirect back.
+  </p>
+    </aside>
+
+    <p>The Stripe endpoint needs to at least receive two parameters:</p>
+
+    <ul>
+      <li><code>response_type</code>, with a value of <code>code</code>.</li>
+      <li>Your <code>client_id</code>.</li>
+    </ul>
+
+    <p>You’ll likely also want to provide the <code>scope</code>. This parameter dictates what your platform will be able to do on behalf of the connected account. The options are <code>read_write</code> and <code>read_only</code>, with <code>read_only</code> being the default.</p>
+
+    <p>For an analytics platform, <code>read_only</code> is appropriate; if you need to perform charges on behalf of the connected user, you will need to request <code>read_write</code> scope instead. See the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth reference</a> for more.</p>
+
+    <p>Here is how this may look (the <code>href</code> value matches that above):</p>
+
+    <p><a href="https://connect.stripe.com/oauth/authorize?response_type=code&amp;client_id=ca_32D88BD1qLklliziD7gYQvctJIhWBSQ7&amp;scope=read_write" class="stripe-connect"><span>Connect with Stripe</span></a></p>
+
+    <h2 id="token-request">After the user has connected</h2>
+
+    <p>When the user arrives at Stripe, they’ll be prompted to allow or deny the connection to your platform, and will then be sent to your <code>redirect_uri</code> page. In the URL, we’ll pass along an authorization code:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap allow-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash"><span class="token string">https://stripe.com/connect/default/oauth/test</span>?<span class="token keyword">scope</span>=<span class="token string">read_write</span>&amp;<span class="token keyword">code</span>=<span class="token string">AUTHORIZATION_CODE</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>If the authorization was denied by the user, we’ll include an error instead:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap allow-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash"><span class="token string">https://stripe.com/connect/default/oauth/test</span>?<span class="token keyword">error</span>=<span class="token string">access_denied</span>&amp;<span class="token keyword">error_description</span>=<span class="token string">The%20user%20denied%20your%20request</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>Using the <code>code</code> parameter, you should make a POST request to our <code>access_token_url</code> endpoint (also see the <a href="oauth#sample-code">sample-code</a> below for non-cURL examples):</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://connect.stripe.com/oauth/token</span> \
+   -d <span class="token keyword">client_secret</span>=<span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2</span> \
+   -d <span class="token keyword">code</span>=<span class="token string">AUTHORIZATION_CODE</span> \
+   -d <span class="token keyword">grant_type</span>=<span class="token string">authorization_code</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>Note that you’ll make the request with your live secret API key or test secret API key, depending on whether you want to get a live or test access token back.</p>
+
+    <p>Stripe will return a response containing the authentication credentials for the user:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;token_type&quot;: &quot;bearer&quot;,
+  &quot;stripe_publishable_key&quot;: PUBLISHABLE_KEY,
+  &quot;scope&quot;: &quot;read_write&quot;,
+  &quot;livemode&quot;: false,
+  &quot;stripe_user_id&quot;: USER_ID,
+  &quot;refresh_token&quot;: REFRESH_TOKEN,
+  &quot;access_token&quot;: ACCESS_TOKEN
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>If there was a problem, we’ll instead return an error:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;error&quot;: &quot;invalid_grant&quot;,
+  &quot;error_description&quot;: &quot;Authorization code does not exist: AUTHORIZATION_CODE&quot;
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>You’re done! The user is now connected to your platform. You’ll want to store all of the returned information in your database for later use.</p>
+
+    <p>You’ll notice that the response also includes a <code>refresh_token</code>. This can be used to <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting#test-keys-for-livemode-applications">generate test access tokens</a> for a production <code>client_id</code> or to roll your access token. You should hold on to this, as you’re only able to get it after this initial POST request.</p>
+
+    <h2 id="customizing-the-user-experience">Customizing the user experience</h2>
+
+    <p>Through additional parameters you can supply Stripe, you can easily customize the user’s experience. Below are a few example uses of those parameters, but see the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth reference</a> for the full list.</p>
+
+    <h3 id="pre-filling-fields">Pre-filling fields</h3>
+
+    <p>If your user needs to set up a new account with Stripe, you can provide the best possible user experience by <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference#get-authorize-request">pre-filling</a> the account form fields with information you already have, like the user’s email and name. Pre-filling has no effect if your user already has an existing Stripe account.</p>
+
+    <p>Alternatively, if you know your user has a Stripe account already, you can use the <code>stripe_landing</code> parameter, with a value of <code>login</code>, to have Stripe show a login screen instead of the default account application.</p>
+
+    <h3 id="redirect-uri">Dynamically setting the redirect URI</h3>
+
+    <p>For security purposes, Stripe will only redirect a user to a pre-defined url. However, Connect allows you to define more than one redirect URI, which can be used to further customize the user’s experience. For example, you could have some of your users redirected back to <code>https://sub1.example.com</code> and others sent to <code>https://sub2.example.com</code>, each with custom behavior.</p>
+
+    <p>First, in your <a href="https://dashboard.stripe.com/account/applications/settings">platform settings</a>, set the redirect URIs to a comma-separated list of allowed URIs. Second, add a <code>redirect_uri</code> parameter to your authorization request with a value found in your comma-separated list.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap allow-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash"><span class="token string">https://connect.stripe.com/oauth/authorize</span>?<span class="token keyword">response_type</span>=<span class="token string">code</span>&amp;<span class="token keyword">client_id</span>=<span class="token string">ca_32D88BD1qLklliziD7gYQvctJIhWBSQ7</span>&amp;<span class="token keyword">scope</span>=<span class="token string">read_write</span>&amp;<span class="token keyword">redirect_uri</span>=<span class="token string">https://sub2.example.com</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>The first URI in your comma-separated list will always be treated as the default.</p>
+
+    <h3 id="deferred-account-activation">Deferred account activation</h3>
+
+    <p>In some cases, you may want to defer account activation until later—that is, let your user start accepting payments without completely setting up their account.</p>
+
+    <p>To do this, you can spin up a standalone account with <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fdeferred-accounts">just a country and email address</a>.</p>
+
+    <h1 id="revoked-access">Revoked Access</h1>
+
+    <p>An <code>account.application.deauthorized</code> <a href="../api/index.html#list_events">webhook
+event</a> is sent when a user disconnects your platform from
+their account. By watching for this event, you can perform any necessary credential cleanup on your
+servers. (Note that a managed account cannot be disconnected by the account’s beneficiary.)</p>
+
+    <p>Additionally, if you want to disconnect access to a standalone account (for
+example, to stop getting webhooks for an account you no longer work
+with), you can POST your <code>client_id</code> and the connected account’s ID to
+<code>https://connect.stripe.com/oauth/deauthorize</code>:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://connect.stripe.com/oauth/deauthorize</span> \
+   -u <span class="token string">{YOUR_SECRET_KEY}:</span> \
+   -d <span class="token keyword">client_id</span>=<span class="token string">ca_32D88BD1qLklliziD7gYQvctJIhWBSQ7</span> \
+   -d <span class="token keyword">stripe_user_id</span>=<span class="token string">acct_qn0Ltsk9oQAqVp</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <h2 id="sample-code">Sample OAuth Applications</h2>
+
+    <p>Here’s some sample code for performing the OAuth flow, but we recommend that you use a <a href="http://oauth.net/2/">client library</a> instead of handling the implementation yourself.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_oauth">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <hr />
+
+    <h1>You’re connected!</h1>
+    <p>
+  Now you can use the API on your user’s behalf to accept payments, set up recurring billing, fetch account data, and more.
+</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and fees</a></li>
+  <li><a href="../api/index.html">Full API reference</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fstandalone-accounts" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+  <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["ruby"] = {
+            tutorial_oauth: "\u003Cspan class=\"highlight_js ruby\"\u003E# See full code example here: https://gist.github.com/2314782\n\n# Using OAuth2 gem by Intridea (https://github.com/intridea/oauth2).\n\n# Additionally, check out this OmniAuth Stripe Connect gem:\n# https://github.com/isaacsanders/omniauth-stripe-connect\n\nconfigure do\n  config = YAML::load(File.open(\u0026#39;config.yml\u0026#39;))\n\n  set :api_key, config[\u0026#39;api_key\u0026#39;]\n  set :client_id, config[\u0026#39;client_id\u0026#39;]\n\n  options = {\n    :site =\u0026gt; \u0026#39;https://connect.stripe.com\u0026#39;,\n    :authorize_url =\u0026gt; \u0026#39;/oauth/authorize\u0026#39;,\n    :token_url =\u0026gt; \u0026#39;/oauth/token\u0026#39;\n  }\n\n  set :client, OAuth2::Client.new(settings.client_id, settings.api_key, options)\nend\n\nget \u0026#39;/authorize\u0026#39; do\n  params = {\n    :scope =\u0026gt; \u0026#39;read_write\u0026#39;\n  }\n\n  # Redirect the user to the authorize_uri endpoint\n  url = settings.client.auth_code.authorize_url(params)\n  redirect url\nend\n\nget \u0026#39;/oauth/callback\u0026#39; do\n  # Pull the authorization_code out of the response\n  code = params[:code]\n\n  # Make a request to the access_token_uri endpoint to get an access_token\n  @resp = settings.client.auth_code.get_token(code, :params =\u0026gt; {:scope =\u0026gt; \u0026#39;read_write\u0026#39;})\n  @access_token = @resp.token\n\n  # Use the access_token as you would a regular live-mode API key\n  # TODO: Stripe logic\n\n  erb :callback\nend\u003C/span\u003E"
+          };
+          APIValues["python"] = {
+            tutorial_oauth: "\u003Cspan class=\"highlight_js python\"\u003E# See full code example here: https://gist.github.com/3517668\n\n@app.route(\u0026#39;/authorize\u0026#39;)\ndef authorize:\n  site   = app.config[\u0026#39;SITE\u0026#39;] + app.config[\u0026#39;AUTHORIZE_URI\u0026#39;]\n  params = {\u0026#39;response_type\u0026#39;: \u0026#39;code\u0026#39;,\n            \u0026#39;scope\u0026#39;: \u0026#39;read_write\u0026#39;,\n            \u0026#39;client_id\u0026#39;: app.config[\u0026#39;CLIENT_ID\u0026#39;]\n           }\n\n  # Redirect to Stripe /oauth/authorize endpoint\n  url = site + \u0026#39;?\u0026#39; + urllib.urlencode(params)\n  return redirect(url)\n\n@app.route(\u0026#39;/oauth/callback\u0026#39;)\ndef callback:\n  code   = request.args.get(\u0026#39;code\u0026#39;)\n  data   = {\u0026#39;grant_type\u0026#39;: \u0026#39;authorization_code\u0026#39;,\n            \u0026#39;client_id\u0026#39;: app.config[\u0026#39;CLIENT_ID\u0026#39;],\n            \u0026#39;client_secret\u0026#39;: app.config[\u0026#39;API_KEY\u0026#39;]\n            \u0026#39;code\u0026#39;: code\n           }\n\n  # Make /oauth/token endpoint POST request\n  url = app.config[\u0026#39;SITE\u0026#39;] + app.config[\u0026#39;TOKEN_URI\u0026#39;]\n  resp = requests.post(url, params=data)\n\n  # Grab access_token (use this as your user\u0026#39;s API key)\n  token = resp.json().get(\u0026#39;access_token\u0026#39;)\n  return render_template(\u0026#39;callback.html\u0026#39;, token=token)\u003C/span\u003E"
+          };
+          APIValues["php"] = {
+            tutorial_oauth: "\u003Cspan class=\"highlight_js php\"\u003E// See full code example here: https://gist.github.com/3507366\n\nif (isset($_GET[\u0026#39;code\u0026#39;])) { // Redirect w/ code\n  $code = $_GET[\u0026#39;code\u0026#39;];\n\n  $token_request_body = array(\n    \u0026#39;grant_type\u0026#39; =\u0026gt; \u0026#39;authorization_code\u0026#39;,\n    \u0026#39;client_id\u0026#39; =\u0026gt; \u0026#39;ca_32D88BD1qLklliziD7gYQvctJIhWBSQ7\u0026#39;,\n    \u0026#39;code\u0026#39; =\u0026gt; $code,\n    \u0026#39;client_secret\u0026#39; =\u0026gt; \u0026#39;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026#39;\n  );\n\n  $req = curl_init(TOKEN_URI);\n  curl_setopt($req, CURLOPT_RETURNTRANSFER, true);\n  curl_setopt($req, CURLOPT_POST, true );\n  curl_setopt($req, CURLOPT_POSTFIELDS, http_build_query($token_request_body));\n\n  // TODO: Additional error handling\n  $respCode = curl_getinfo($req, CURLINFO_HTTP_CODE);\n  $resp = json_decode(curl_exec($req), true);\n  curl_close($req);\n\n  echo $resp[\u0026#39;access_token\u0026#39;];\n} else if (isset($_GET[\u0026#39;error\u0026#39;])) { // Error\n  echo $_GET[\u0026#39;error_description\u0026#39;];\n} else { // Show OAuth link\n  $authorize_request_body = array(\n    \u0026#39;response_type\u0026#39; =\u0026gt; \u0026#39;code\u0026#39;,\n    \u0026#39;scope\u0026#39; =\u0026gt; \u0026#39;read_write\u0026#39;,\n    \u0026#39;client_id\u0026#39; =\u0026gt; \u0026#39;ca_32D88BD1qLklliziD7gYQvctJIhWBSQ7\u0026#39;\n  );\n\n  $url = AUTHORIZE_URI . \u0026#39;?\u0026#39; . http_build_query($authorize_request_body);\n  echo \u0026quot;\u0026lt;a href=\u0026#39;$url\u0026#39;\u0026gt;Connect with Stripe\u0026lt;/a\u0026gt;\u0026quot;;\n}\u003C/span\u003E"
+          };
+          APIValues["node"] = {
+            tutorial_oauth: "\u003Cspan class=\"highlight_js javascript\"\u003E// See full code example here: https://gist.github.com/7109113\n\napp.get(\u0026quot;/authorize\u0026quot;, function(req, res) {\n  // Redirect to Stripe /oauth/authorize endpoint\n  res.redirect(AUTHORIZE_URI + \u0026quot;?\u0026quot; + qs.stringify({\n    response_type: \u0026quot;code\u0026quot;,\n    scope: \u0026quot;read_write\u0026quot;,\n    client_id: CLIENT_ID\n  }));\n});\n\napp.get(\u0026quot;/oauth/callback\u0026quot;, function(req, res) {\n\n  var code = req.query.code;\n\n  // Make /oauth/token endpoint POST request\n  request.post({\n    url: TOKEN_URI,\n    form: {\n      grant_type: \u0026quot;authorization_code\u0026quot;,\n      client_id: CLIENT_ID,\n      code: code,\n      client_secret: API_KEY\n    }\n  }, function(err, r, body) {\n\n    var accessToken = JSON.parse(body).access_token;\n\n    // Do something with your accessToken\n\n    // For demo\u0026quot;s sake, output in response:\n    res.send({ \u0026quot;Your Token\u0026quot;: accessToken });\n\n  });\n});\u003C/span\u003E"
+          };
+          APIValues["java"] = {
+            tutorial_oauth: "\u003Cspan class=\"highlight_js java\"\u003E// See full code example here: https://gist.github.com/4e5cf13ccc98124b1551\n\n// Using Spark framework (http://sparkjava.com)\n\nget(new Route(\u0026quot;/authorize\u0026quot;) {\n    @Override\n    public Object handle(Request request, Response response) {\n        URI uri = new URIBuilder(AUTHORIZE_URI)\n                .setParameter(\u0026quot;response_type\u0026quot;, \u0026quot;code\u0026quot;)\n                .setParameter(\u0026quot;scope\u0026quot;, \u0026quot;read_write\u0026quot;)\n                .setParameter(\u0026quot;client_id\u0026quot;, CLIENT_ID)\n                .build();\n\n        // Redirect to Stripe /oauth/authorize endpoint\n        response.status(201);\n        response.redirect(uri.toString());\n        return \u0026quot;\u0026quot;;\n    }\n});\n\nget(new FreeMarkerRoute(\u0026quot;/oauth/callback\u0026quot;) {\n    @Override\n    public ModelAndView handle(Request request, Response response) {\n        Map\u0026lt;String, Object\u0026gt; viewObjects = new HashMap\u0026lt;String, Object\u0026gt;();\n\n        CloseableHttpClient httpClient = HttpClients.createDefault();\n        String code = request.queryParams(\u0026quot;code\u0026quot;);\n        URI uri = new URIBuilder(TOKEN_URI)\n                .setParameter(\u0026quot;client_secret\u0026quot;, API_KEY)\n                .setParameter(\u0026quot;grant_type\u0026quot;, \u0026quot;authorization_code\u0026quot;)\n                .setParameter(\u0026quot;client_id\u0026quot;, CLIENT_ID)\n                .setParameter(\u0026quot;code\u0026quot;, code)\n                .build();\n\n        // Make /oauth/token endpoint POST request\n        HttpPost httpPost = new HttpPost(uri);\n        CloseableHttpResponse resp = httpClient.execute(httpPost);\n\n        // Grab access_token (use this as your user\u0026#39;s API key)\n        String bodyAsString = EntityUtils.toString(resp.getEntity());\n        Type t = new TypeToken\u0026lt;Map\u0026lt;String, String\u0026gt;\u0026gt;() { }.getType();\n        Map\u0026lt;String, String\u0026gt; map = new GsonBuilder().create().fromJson(bodyAsString, t);\n        String token = map.get(\u0026quot;access_token\u0026quot;);\n\n        viewObjects.put(\u0026quot;token\u0026quot;, token);\n        return modelAndView(viewObjects, \u0026quot;callback.ftl\u0026quot;);\n    }\n});\u003C/span\u003E"
+          };
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

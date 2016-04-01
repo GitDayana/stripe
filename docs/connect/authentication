@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Authentication with Connect</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="kShstUhB75A9N0UMZhLOB3pfyHKk62bk5CIAKUWq_sEZAml2USKqIM4nH9w4aHKMQuIymrWAstwtOJdFxKdaWw==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="selected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Authentication with Connect</h1>
+    <p>Learn how to authenticate as your users, so you can perform any API actions on their behalf.</p>
+  </header>
+  <article>
+
+    <h1 id="api-authentication">API authentication</h1>
+    <p>There are two ways of authenticating requests when performing actions on behalf of a connected account. Both approaches assumes you previously stored information about the connected account for later use: the Stripe account ID and/or the account’s secret and publishable keys.</p>
+
+    <p>For most integrations, you should go with the first option—it’s easier and likely more secure. If you have any application that requires you to publish keys (e.g. a mobile app), you might want to use the second instead.</p>
+
+    <h2 id="authentication-via-the-stripe-account-header">Authentication via the Stripe-Account header</h2>
+
+    <p>The first, preferred, authentication option is to use your (the platform account’s) secret key and pass a <code>Stripe-Account</code> header identifying the connected account for which the request is being made. This code performs a refund of a charge on behalf of a connected account:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/charges/{CHARGE_ID}/refunds</span> \
+   -u <span class="token string">{PLATFORM_SECRET_KEY}:</span> \
+   -H <span class="token string">"Stripe-Account: {CONNECTED_STRIPE_ACCOUNT_ID}"</span> \
+   -d <span class="token keyword">amount</span>=<span class="token string">1000</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>This authentication approach is implied in any API request that includes the Stripe account ID in the URL:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/accounts/{CONNECTED_STRIPE_ACCOUNT_ID}</span> \
+   -u <span class="token string">{PLATFORM_SECRET_KEY}:</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>With this method, you only need to store a single secret key, which can be easier to secure than many keys.</p>
+
+    <p>All of Stripe’s libraries support this style of authentication on a per-request basis:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_stripe_header">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <h2 id="authentication-via-api-keys">Authentication via API keys</h2>
+
+    <p>The second authentication option uses the connected account’s secret and publishable keys instead. Here is the same refund request as above performed using this second authentication method:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/charges/{CHARGE_ID}/refunds</span> \
+   -u <span class="token string">{CONNECTED_ACCOUNT_SECRET_KEY}:</span> \
+   -d <span class="token keyword">amount</span>=<span class="token string">1000</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <aside class="content note">
+      <h1>Saving API keys</h1>
+
+      <p>It’s important to keep in mind that Stripe will <em>only</em> give you access to an account’s keys upon connection (and you can’t retrieve them at a later time), so be sure to save them.</p>
+    </aside>
+
+    <p>The connected account’s secret key can either be provided by the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">account creation’s API call</a> under <code>keys[secret]</code>, or an <code>access_token</code>, provided by the <a href="oauth">OAuth flow</a>.</p>
+
+    <p>You’d only want to use this authentication method if you intend to make the key accessible to the account holder. For example, if you created a mobile application that talks directly to Stripe, you would not want to store your secret key in the application (as then any user would be able to extract your key and use it to access any other user’s account). Instead you should send the account-specific secret key to the application, as it only allows access to the account holder’s account.</p>
+
+    <p>If you are using this method, we recommend that you perform authentication with every request, instead of setting the API key globally.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_api_key">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <h1 id="webhooks">Webhooks</h1>
+
+    <p>You’ll use webhooks to be notified about events that happen in a Stripe account. Your webhook URLs, which receive the event notifications, are configured in your <a href="https://dashboard.stripe.com/account/webhooks">webhook
+settings</a>.</p>
+
+    <p>Note that there are two types of webhooks:</p>
+
+    <ul>
+      <li><em>Account</em> webhooks are for activity on your own account
+(e.g., most requests made using your API keys and without authenticating as another Stripe account).</li>
+      <li><em>Platform</em> webhooks are for activity on any connected account. This
+includes the important <code>account.updated</code> event for any connected accounts.</li>
+    </ul>
+
+    <p>For platform webhooks, it’s important to note that while only test webhooks will be sent to
+your development webhook URLs, <strong>both live and test</strong> webhooks will be
+sent to your production webhook URLs. This is due to the fact that you
+can perform both live and test transactions under a production
+application. For this reason, we recommend you check the <code>livemode</code> value when receiving an event webhook to know what action, if any, should be taken.</p>
+
+    <p>In addition to the documented response properties in the <a href="../api/index.html#events">event object
+reference</a>, each event for a connected account will also contain a top-level <code>user_id</code> property. It identifies the user for whom the webhook
+is being sent.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;id&quot;: &quot;evt_sZlWMRDfnpTc60&quot;,
+  &quot;livemode&quot;: true,
+  &quot;object&quot;: &quot;event&quot;,
+  &quot;type&quot;: &quot;customer.created&quot;,
+  &quot;user_id&quot;: &quot;acct_ehyprOjWEnN5fx&quot;,
+  &quot;pending_webhooks&quot;: 2,
+  &quot;created&quot;: 1349654313,
+  &quot;data&quot;: {...}
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>For more information about webhooks, see the <a href="../webhooks/index.html">webhook
+documentation</a> or <a href="../api/index.html#events">event object
+reference</a>.</p>
+
+    <hr />
+
+    <h1>After authenticating</h1>
+    <p>Check out the rest of the guide to learn how to perform actions on behalf of your users.</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and fees</a></li>
+  <li><a href="../api/index.html">Full API reference</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["ruby"] = {};
+              APIValues["ruby"]["tutorial_connect_stripe_header"] = "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\nStripe::Customer.create(\n  {:description =\u0026gt; \u0026quot;example@stripe.com\u0026quot;},\n  {:stripe_account =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID}\n)\n\n# Fetching an account just needs the ID as a parameter\nStripe::Account.retrieve(CONNECTED_STRIPE_ACCOUNT_ID)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_connect_api_key"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Not recommended: setting global API key state\nStripe.api_key = CONNECTED_ACCOUNT_SECRET_KEY\nStripe::Customer.create(\n  :description =\u0026gt; \u0026quot;example@stripe.com\u0026quot;\n)\n\n# Recommended: sending API key with every request\nStripe::Customer.create(\n  {:description =\u0026gt; \u0026quot;example@stripe.com\u0026quot;},\n  CONNECTED_ACCOUNT_SECRET_KEY # account\u0026#39;s access token from the Connect flow\n)\u003C/span\u003E";
+          APIValues["python"] = {};
+              APIValues["python"]["tutorial_connect_stripe_header"] = "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\nstripe.Customer.create(\n  description=\u0026quot;example@stripe.com\u0026quot;,\n  stripe_account=CONNECTED_STRIPE_ACCOUNT_ID\n)\n\n# Fetching an account just needs the ID as a parameter\nstripe.Account.retrieve(CONNECTED_STRIPE_ACCOUNT_ID)\u003C/span\u003E";
+              APIValues["python"]["tutorial_connect_api_key"] = "\u003Cspan class=\"highlight_js python\"\u003E# Not recommended: setting global API key state\nstripe.api_key = CONNECTED_ACCOUNT_SECRET_KEY\nstripe.Customer.create(\n  description=\u0026quot;example@stripe.com\u0026quot;\n)\n\n# Recommended: sending API key with every request\nstripe.Customer.create(\n  description=\u0026quot;example@stripe.com\u0026quot;,\n  api_key=CONNECTED_ACCOUNT_SECRET_KEY # account\u0026#39;s access token from the Connect flow\n)\u003C/span\u003E";
+          APIValues["php"] = {};
+              APIValues["php"]["tutorial_connect_stripe_header"] = "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n\\Stripe\\Customer::create(\n  array(\u0026quot;description\u0026quot; =\u0026gt; \u0026quot;example@stripe.com\u0026quot;),\n  array(\u0026quot;stripe_account\u0026quot; =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID)\n);\n\n// Fetching an account just needs the ID as a parameter\n\\Stripe\\Account::retrieve(CONNECTED_STRIPE_ACCOUNT_ID);\u003C/span\u003E";
+              APIValues["php"]["tutorial_connect_api_key"] = "\u003Cspan class=\"highlight_js php\"\u003E// Not recommended: setting global API key state\n\\Stripe\\Stripe::setApiKey(CONNECTED_ACCOUNT_SECRET_KEY);\n\\Stripe\\Customer::create(\n  array(\u0026quot;description\u0026quot; =\u0026gt; \u0026quot;example@stripe.com\u0026quot;)\n);\n\n// Recommended: sending API key with every request\n\\Stripe\\Customer::create(\n  array(\u0026quot;description\u0026quot; =\u0026gt; \u0026quot;example@stripe.com\u0026quot;),\n  CONNECTED_ACCOUNT_SECRET_KEY // account\u0026#39;s access token from the Connect flow\n);\u003C/span\u003E";
+          APIValues["node"] = {};
+              APIValues["node"]["tutorial_connect_stripe_header"] = "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.customers.create(\n  {description: \u0026quot;example@stripe.com\u0026quot;},\n  {stripe_account: CONNECTED_STRIPE_ACCOUNT_ID}\n);\n\n// Fetching an account just needs the ID as a parameter\nstripe.accounts.retrieve(CONNECTED_STRIPE_ACCOUNT_ID);\u003C/span\u003E";
+              APIValues["node"]["tutorial_connect_api_key"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Not recommended: setting global API key state\nvar stripe = require(\u0026#39;stripe\u0026#39;)(CONNECTED_ACCOUNT_SECRET_KEY);\nstripe.customers.create({\n  description: \u0026quot;example@stripe.com\u0026quot;\n});\n\n// Recommended: sending API key with every request\nstripe.customers.create(\n  { description: \u0026quot;example@stripe.com\u0026quot; },\n  CONNECTED_ACCOUNT_SECRET_KEY // account\u0026#39;s access token from the Connect flow\n);\u003C/span\u003E";
+          APIValues["java"] = {};
+              APIValues["java"]["tutorial_connect_stripe_header"] = "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount(CONNECTED_STRIPE_ACCOUNT_ID).build();\n\nMap\u0026lt;String, Object\u0026gt; customerParams = new HashMap\u0026lt;String, Object\u0026gt;();\ncustomerParams.put(\u0026quot;description\u0026quot;, \u0026quot;example@stripe.com\u0026quot;);\n\nCustomer.create(customerParams, requestOptions);\n\n// Fetching an account just needs the ID as a parameter\nAccount.retrieve(CONNECTED_STRIPE_ACCOUNT_ID);\u003C/span\u003E";
+              APIValues["java"]["tutorial_connect_api_key"] = "\u003Cspan class=\"highlight_js java\"\u003E// Not recommended: setting global API key state\nStripe.apiKey = CONNECTED_ACCOUNT_SECRET_KEY;\n\nMap\u0026lt;String, Object\u0026gt; customerParams = new HashMap\u0026lt;String, Object\u0026gt;();\ncustomerParams.put(\u0026quot;description\u0026quot;, \u0026quot;example@stripe.com\u0026quot;);\n\nCustomer.create(customerParams);\n\n// Recommended: sending API key with every request\nRequestOptions requestOptions = RequestOptions.builder().setApiKey(CONNECTED_ACCOUNT_SECRET_KEY).build();\n\nMap\u0026lt;String, Object\u0026gt; customerParams = new HashMap\u0026lt;String, Object\u0026gt;();\ncustomerParams.put(\u0026quot;description\u0026quot;, \u0026quot;example@stripe.com\u0026quot;);\n\nCustomer.create(customerParams, requestOptions);\u003C/span\u003E";
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

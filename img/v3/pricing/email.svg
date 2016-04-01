@@ -1,0 +1,16 @@
+<svg id="email.svg" xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b6cbe4;
+      }
+
+      .cls-2 {
+        fill: #dceafb;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_317_copy" data-name="Rectangle 317 copy" class="cls-1" width="17" height="12" rx="2" ry="2"/>
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-2" d="M1082.91,2972.69a1.992,1.992,0,0,1-2.82,0l-6.77-6.77a1.988,1.988,0,0,1,1.68-.92h13a1.988,1.988,0,0,1,1.68.92Z" transform="translate(-1073 -2965)"/>
+</svg>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" id="connect" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="  Stripe Connect is everything marketplaces and platforms need to get users paid. Connect helps marketplaces like Kickstarter, Postmates, Instacart get sellers, crowdfunders, contractors, drivers, handymen paid. Connect works internationally and even helps generate 1099-Ks.
+" />
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon/120x120.png?2" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@stripe" />
+  <meta name="twitter:title" content="Stripe Connect" />
+  <meta name="twitter:description" content="Everything marketplaces and platforms need to get sellers paid." />
+  <meta name="twitter:image:src" content="https://stripe.com/img/connect/social/twitter.png" />
+
+  <meta property="og:title" content="Stripe Connect" />
+  <meta property="og:url" content="https://stripe.com/connect" />
+  <meta property="og:description" content="Everything marketplaces and platforms need to get sellers paid." />
+  <meta property="og:image" content="https://stripe.com/img/connect/social/facebook.png" />
+
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="assets/connect-55c37782ee45d374c0372c46b1486577.css">
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="/assets/connect.ie9-adeb87222a2e0ea137b6c81a33ace93a.css">
+  <![endif]-->
+  <style>
+    @-webkit-keyframes header-in{0%{opacity:0}100%{opacity:1}}@keyframes header-in{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes header-in-85{0%{opacity:0}100%{opacity:.85}}@keyframes header-in-85{0%{opacity:0}100%{opacity:.85}}@-webkit-keyframes star1{0%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(.8);transform:scale(.8)}}@keyframes star1{0%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(.8);transform:scale(.8)}}@-webkit-keyframes star2{0%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(1.3);transform:scale(1.3)}}@keyframes star2{0%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(1.3);transform:scale(1.3)}}@-webkit-keyframes dot1{0%{-webkit-transform:translate(0,0);transform:translate(0,0)}100%{-webkit-transform:translate(30px,15px);transform:translate(30px,15px)}}@keyframes dot1{0%{-webkit-transform:translate(0,0);transform:translate(0,0)}100%{-webkit-transform:translate(30px,15px);transform:translate(30px,15px)}}@-webkit-keyframes dot2{0%{-webkit-transform:translate(0,0);transform:translate(0,0)}100%{-webkit-transform:translate(-15px,-15px);transform:translate(-15px,-15px)}}@keyframes dot2{0%{-webkit-transform:translate(0,0);transform:translate(0,0)}100%{-webkit-transform:translate(-15px,-15px);transform:translate(-15px,-15px)}}@-webkit-keyframes dot3{0%{-webkit-transform:translate(0,0);transform:translate(0,0)}100%{-webkit-transform:translate(0,30px);transform:translate(0,30px)}}@keyframes dot3{0%{-webkit-transform:translate(0,0);transform:translate(0,0)}100%{-webkit-transform:translate(0,30px);transform:translate(0,30px)}}@-webkit-keyframes dot4{0%{-webkit-transform:translate(0,0);transform:translate(0,0)}100%{-webkit-transform:translate(-15px,-30px);transform:translate(-15px,-30px)}}@keyframes dot4{0%{-webkit-transform:translate(0,0);transform:translate(0,0)}100%{-webkit-transform:translate(-15px,-30px);transform:translate(-15px,-30px)}}@-webkit-keyframes flare{0%{-webkit-transform:scale(.5);transform:scale(.5);opacity:.5}100%{-webkit-transform:scale(1);transform:scale(1);opacity:0}}@keyframes flare{0%{-webkit-transform:scale(.5);transform:scale(.5);opacity:.5}100%{-webkit-transform:scale(1);transform:scale(1);opacity:0}}@-webkit-keyframes feature-logo-in{0%{opacity:0}20%{-webkit-transform:translate(0,-25px);transform:translate(0,-25px);opacity:0}100%{-webkit-transform:translate(0,0);transform:translate(0,0);opacity:1}}@keyframes feature-logo-in{0%{opacity:0}20%{-webkit-transform:translate(0,-25px);transform:translate(0,-25px);opacity:0}100%{-webkit-transform:translate(0,0);transform:translate(0,0);opacity:1}}@-webkit-keyframes feature-logo-out{0%{-webkit-transform:translate(0,0);transform:translate(0,0);opacity:1}60%{-webkit-transform:translate(0,20px);transform:translate(0,20px);opacity:0}100%{opacity:0}}@keyframes feature-logo-out{0%{-webkit-transform:translate(0,0);transform:translate(0,0);opacity:1}60%{-webkit-transform:translate(0,20px);transform:translate(0,20px);opacity:0}100%{opacity:0}}@-webkit-keyframes feature-text-in{0%,35%{opacity:0}100%{-webkit-transform:translate(0,0);transform:translate(0,0);opacity:1}}@keyframes feature-text-in{0%,35%{opacity:0}100%{-webkit-transform:translate(0,0);transform:translate(0,0);opacity:1}}@-webkit-keyframes feature-text-out{0%{opacity:1}100%,50%{opacity:0}}@keyframes feature-text-out{0%{opacity:1}100%,50%{opacity:0}}
+  </style>
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="assets/connect-ac7ca0fb34502a06907780a11964f32f.js"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Stripe Connect: Payments built for marketplaces and platforms</title>
+    <meta content="9yFaP5xa5iCybGYzsRx0ZeWGiEdmjySiDU-gz5_NfOd_C1_8hTmjkEF8POPvZsju3Ttyr3fk8JrEVTejHsDYfQ==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class='transparent'>
+  <div class="inner-col">
+    <h1><a href="country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="features">Features</a></li>
+        <li class='pricing'><a href="pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='marketplaces'>Connect</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="blog/page/1">Blog</a></li>
+              <li><a href="country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <section class="page-header">
+
+    <div class="starfield"></div>
+
+    <div class="title">
+      <h1>Stripe Connect</h1>
+      <p>Everything marketplaces and platforms need to get users paid.</p>
+    </div>
+
+    <div class="animation">
+      <div class="sky"></div>
+      <div class="sky-parallax"></div>
+      <div class="meteors"></div>
+      <div class="feature">
+        <ul class="logo">
+          <li class="default"><a href="https://lyft.com">Lyft</a></li>
+          <li><a href="https://kickstarter.com">Kickstarter</a></li>
+          <li><a href="https://shopify.com">Shopify</a></li>
+          <li><a href="https://postmates.com">Postmates</a></li>
+          <li><a href="https://squarespace.com">Squarespace</a></li>
+          <li><a href="https://www.instacart.com">Instacart</a></li>
+          <li><a href="https://doordash.com">DoorDash</a></li>
+        </ul>
+        <ul class="text white-links">
+          <li class="default"><span><a href="https://lyft.com">Lyft</a> uses Connect to create an integrated mobile experience when connecting riders with drivers.</span></li>
+          <li><span><a href="https://kickstarter.com">Kickstarter</a> helps crowdfunding campaigns from around the world get paid using Connect.</span></li>
+          <li><span><a href="https://shopify.com">Shopify</a> uses Connect to let businesses add e-commerce to their sites with just a click.</span></li>
+          <li><span>The <a href="https://postmates.com">Postmates</a> fleet will deliver anything to your door in minutes. Connect helps them get paid.</span></li>
+          <li><span>With Connect, <a href="https://squarespace.com">Squarespace</a> makes it simple for website creators to become online businesses.</span></li>
+          <li><span><a href="https://www.instacart.com">Instacart</a> coordinates payments between stores, delivery agents, and their customers using Connect.</span></li>
+          <li><span><a href="https://doordash.com">DoorDash's</a> rapidly-expanding restaurant delivery network is built&nbsp;on Connect.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="columns">
+      <li class="setup">
+        <h3>Multi-party payments</h3>
+        <p>All the tools you need to run a marketplace: Stripe helps with identity verification, tax reporting, and&nbsp;more.</p>
+      </li>
+      <li class="control">
+        <h3>Full control</h3>
+        <p>Stripe does the heavy lifting while giving you control of everything from the UI to the timing of transfers.</p>
+      </li>
+      <li class="global">
+        <h3>Going global</h3>
+        <p>Your platform can support sellers anywhere Stripe operates (24 countries, more coming this year).</p>
+      </li>
+      <li class="scale">
+        <h3>Scalable and trusted</h3>
+        <p>Platforms and marketplaces of every kind use Stripe to manage billions of dollars in payments each year.</p>
+      </li>
+    </ul>
+
+    <div class="cta">
+      <p>Learn more about getting started with Stripe Connect and adding payments to your platform.</p>
+      <p class="button-group">
+        <a href="docs/connect/index.html" class="button default"><span>Explore the Connect docs</span></a>
+        <a href="signup" class="button secondary"><span>Sign up for Stripe</span></a>
+      </p>
+    </div>
+
+  </section>
+
+  <section class="main setup" id="seller-setup">
+    <div class="content">
+      <header class="icon">
+        <h2>Easy setup for sellers and contractors</h2>
+        <p>Use Connect to spin up accounts and enable payments for your sellers, vendors, contractors, or fleet&mdash;with as much custom control over the experience as you’d like.</p>
+      </header>
+      <aside>
+        <figure class="animated">
+          <div class="back"></div>
+          <div class="front"></div>
+        </figure>
+        <p><a href="https://www.instacart.com">Instacart</a> and <a href="https://kickstarter.com">Kickstarter</a> sport lightweight signup flows for getting drivers or crowdfunding campaigns set up.</p>
+      </aside>
+      <ul class="features">
+        <li class="setup">
+          <h3>Lightweight setup&nbsp;<strong class="new">New</strong></h3>
+          <p>Connect your platform to thousands of existing Stripe sellers, or create new accounts with just an email address. We only need more details when it’s time to deposit funds.</p>
+        </li>
+        <li class="custom">
+          <h3>Custom flows for sellers&nbsp;<strong class="new">New</strong></h3>
+          <p>Alternatively, you can have sellers provide payment info in your app, and you manage their accounts entirely <a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">via the API</a>. Stripe stays out of the way.</p>
+        </li>
+        <li class="payouts">
+          <h3>Secure bank transfers</h3>
+          <p>Sellers can connect to your platform via OAuth, or you can collect their bank account details securely with Stripe.js—sensitive data never hits your servers.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="main accept" id="payments">
+    <div class="content">
+      <header class="icon">
+        <h2>Feature-packed payments</h2>
+        <p>Connect is tightly integrated with the rest of Stripe—everything you need to let customers pay for purchases from around the world, either online or in mobile apps.</p>
+      </header>
+      <aside>
+        <figure class="animated">
+          <div class="back"></div>
+          <div class="front"></div>
+        </figure>
+        <p><a href="http://www.lyft.com">Lyft</a> and <a href="http://www.shyp.com">Shyp</a> let customers save their credit cards and pay drivers with a card on file.</p>
+      </aside>
+      <ul class="features">
+        <li class="fullstack">
+          <h3>APIs for every business model</h3>
+          <p>You can process subscriptions, store multiple cards per customer, enable one-tap payments and <a href="country?country=CH&amp;redirect=%252Fapple-pay">Apple Pay</a>, and much more.</p>
+        </li>
+        <li class="streamline">
+          <h3>The best checkout for buyers</h3>
+          <p>Long checkout pages should be long gone. <a href="country?country=CH&amp;redirect=%252Fcheckout">Checkout</a> and Stripe.js let customers buy securely in a few taps.</p>
+        </li>
+        <li class="currencies icon-4">
+          <h3>Local currencies&nbsp;<strong class="new">New</strong></h3>
+          <p>Increase conversions and let sellers accept payments in <a href="country?country=CH&amp;redirect=%252Fblog%252Fnew-currencies">100+ currencies</a>—even Bitcoin. Sellers receive their earnings in their local currency.</p>
+        </li>
+        <li class="customize">
+          <h3>Custom statement descriptors&nbsp;<strong class="new">New</strong></h3>
+          <p>No more inscrutable credit card charges for customers. You can customize the text on card statements on a per-seller (and per-charge) basis.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="main international" id="international">
+    <div class="content">
+      <header class="icon">
+        <h2>Go international</h2>
+        <p>Connect lets your platform support sellers in any of the countries where Stripe&nbsp;is&nbsp;available.</p>
+      </header>
+      <figure>
+        <video loop poster="img/connect/international/globe_poster@2x.jpg">
+          <source type="video/webm" src="img/connect/international/globe.webm">
+          <source type="video/mp4" src="img/connect/international/globe.mp4">
+        </video>
+      </figure>
+      <ul class="features">
+        <li class="verify">
+          <h3>International seller verification&nbsp;<strong class="new">New</strong></h3>
+          <p>Paying sellers involves observing different laws in each country. Share <a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">simple details</a> about your recipients and we’ll help them get&nbsp;paid.</p>
+        </li>
+        <li class="local">
+          <h3>Optimized for everywhere&nbsp;<strong class="new">New</strong></h3>
+          <p>Behind a unified API, Stripe uses local currencies, local bank networks, and local identity verification to help you deliver the best product&mdash;everywhere.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="main payouts" id="funds-flow">
+    <div class="content">
+      <header class="icon">
+        <h2>Flexible transfers</h2>
+        <p>Connect lets your platform customize complex flows that span multiple customers, sellers, and anyone else who needs to get paid as part of your business.</p>
+      </header>
+      <ul class="features">
+        <li class="fullcontrol">
+          <h3>Custom transfer timing&nbsp;<strong class="new">New</strong></h3>
+          <p>You can either let Stripe automate transfers to sellers, or you can customize payment schedules. You can even choose whether your platform or your sellers pay fees. <a class="arrow" href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#collecting-fees">Learn more</a></p>
+        </li>
+        <li class="route">
+          <h3>Route funds as they come in&nbsp;<strong class="new">New</strong></h3>
+          <p>Your platform’s accounting just got much easier. You can now link a charge with a recipient as it comes in, and Stripe can help handle everything downstream.</p>
+        </li>
+      </ul>
+      <div id="code-snippets">
+        <h3>Simplifying how sellers get paid</h3>
+        <p>Charge and manage payments in a <a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#creating-payments">single&nbsp;API&nbsp;call</a>:</p>
+<pre>
+<span class="hljs-keyword">curl</span> <span class="url">https://api.stripe.com/v1/charges</span> \
+  <span>-u</span> <span class="hljs-string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+  <span>-d</span> <span class="hljs-symbol">destination</span>=<span class="hljs-string">acct_1032D82eZvKYlo2C</span> \
+  <span>-d</span> <span class="hljs-symbol">amount</span>=<span class="hljs-string">500</span> \
+  <span>-d</span> <span class="hljs-symbol">currency</span>=<span class="hljs-string">usd</span> \
+  <span>-d</span> <span class="hljs-symbol">customer</span>=<span class="hljs-string">cus_8Arlq1khxk6uHo</span> \
+  <span>-d</span> <span class="hljs-symbol">application_fee</span>=<span class="hljs-string">100</span>
+</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="main manage" id="manage">
+    <div class="content white-links">
+      <header class="icon">
+        <h2>Manage your platform</h2>
+        <p>Stripe gives you the tools to help run every aspect of your business.</p>
+      </header>
+      <ul class="features">
+        <li class="dashboard">
+          <h3>Everything in a central dashboard</h3>
+          <p>View and manage all incoming payments, customers, outbound transfers, and chargeback claims right from the <a href="https://dashboard.stripe.com/">Dashboard</a>.</p>
+        </li>
+        <li class="thirdparty">
+          <h3>Rich third-party add-ons</h3>
+          <p>Extend the features you offer your sellers with <a href="country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">integrations</a> and add-ons built for platforms.</p>
+        </li>
+        <li class="webhooks">
+          <h3>Common processes, automated</h3>
+          <p><a href="docs/webhooks/index.html">Webhooks</a> let your platform handle asynchronous events in your sellers’ accounts like failed transfers or prompts for ID verification.</p>
+        </li>
+        <li class="tax">
+          <h3>Tax reporting</h3>
+          <p>Where necessary, Stripe helps you generate the right tax documents for your sellers.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="end">
+    <div class="content">
+      <section class="pricing" id="pricing">
+          <h2>Connect pricing</h2>
+          <p>
+            <br><strong>Accepting payments</strong> costs 2.9% + 30c  per&nbsp;transaction, which includes support for international sellers, compliance, and tax reporting.
+          </p>
+
+          <p><br><strong>Getting sellers paid</strong> with <a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts#standalone-accounts">standalone accounts</a> is free. If you'd like to fully customize the seller experience or control the timing of transfers, you can use <a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts#managed-accounts">managed accounts</a>, which cost 0.5%.
+
+          <p><br>Discounts are available for businesses at scale. <a class="arrow" href="mailto:connect+pricing@stripe.com">Get in touch</a></p>
+      </section>
+
+      <section class="connect" id="start">
+          <h2>Get started</h2>
+
+          <p>Building the next Instacart, Tilt, or Shopify? You’re in the right place.</p>
+
+          <p>As a platform, you can use Connect to spin up accounts and enable payments for your sellers with as much custom control over the experience as you’d like.</p>
+
+          <p class="cta">Got questions? Email <a href="mailto:connect@stripe.com">connect@stripe.com</a>.</p>
+          <p class="button-group">
+            <a class="button default" data-adroll-segment='submit_one' href="docs/connect/index.html"><span>Get started with Connect</span></a>
+            <a class="button secondary" href="signup"><span>Sign up</span></a>
+          </p>
+      </section>
+    </div>
+  </section>
+
+  <section class="footer-logos">
+    <a href="https://kickstarter.com">Kickstarter</a>
+    <a href="https://postmates.com">Postmates</a>
+    <a href="https://shopspring.com">Spring</a>
+    <a href="https://indiegogo.com">Indiegogo</a>
+    <a href="https://www.instacart.com">Instacart</a>
+    <a href="https://squarespace.com">Squarespace</a>
+    <a href="https://shyp.com">Shyp</a>
+  </section>
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="country?country=AU&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Australia" src="img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=CA&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Canada" src="img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=DK&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Denmark" src="img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=FI&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Finland" src="img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=GB&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="United Kingdom" src="img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=IE&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Ireland" src="img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=NO&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Norway" src="img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=SE&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Sweden" src="img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=US&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="United States" src="img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=AT&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Austria" src="img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=BE&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Belgium" src="img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=BR&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Brazil" src="img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=FR&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="France" src="img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=DE&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Germany" src="img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=IT&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Italy" src="img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=JP&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Japan" src="img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=LU&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Luxembourg" src="img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=MX&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Mexico" src="img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=NL&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Netherlands" src="img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=PT&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Portugal" src="img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=SG&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Singapore" src="img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=ES&amp;redirect=%252Fconnect" >
+                  <img width="23" height="17" alt="Spain" src="img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=CH&amp;redirect=%252Fconnect" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="pricing">Pricing</a></li>
+      <li><a href="blog/page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("connect");
+    </script>
+
+  </body>
+</html>

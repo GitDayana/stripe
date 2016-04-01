@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en" id="atlas" class="">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Stripe is a suite of APIs that powers commerce for businesses of all sizes." />
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon/120x120.png?2" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@stripe" />
+  <meta name="twitter:title" content="Stripe Atlas" />
+  <meta name="twitter:description" content="A new way to start an internet business anywhere." />
+  <meta name="twitter:image:src" content="https://stripe.com/img/atlas/social.png" />
+
+  <meta property="og:title" content="Stripe Atlas" />
+  <meta property="og:url" content="https://stripe.com/atlas" />
+  <meta property="og:description" content="A new way to start an internet business anywhere." />
+  <meta property="og:image" content="https://stripe.com/img/atlas/social.png" />
+
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="assets/atlas-c2018ae27ed598d8023e356eb69570df.css">
+  <link rel="stylesheet" href="assets/amazing-e56a695addfc9636a22cda46d252ccdd.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+
+
+
+    <title>Stripe: Atlas</title>
+    <meta content="1qTgIlNuViCwi_odpAISvKtiEeyic-PkZBp-eFstuFFejuXhSg0TkEOboM36eK43k9_rBLMYN9ytAOkU2iAcyw==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="features">Features</a></li>
+        <li class='pricing'><a href="pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='marketplaces'>Connect</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="blog/page/1">Blog</a></li>
+              <li><a href="country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        <div id="main-content">
+  <header>
+    <svg viewBox="0 0 1226 340" id="back-rainbow" preserveAspectRatio="none">
+      <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="15%" id="back-rainbow-gradient">
+          <stop stop-color="#8DC6D8" offset="12%"/>
+          <stop stop-color="#CE97DF" offset="40%"/>
+          <stop stop-color="#FFCF9F" offset="90%"/>
+        </linearGradient>
+      </defs>
+      <path d="M1074 0C673.94.2 303.56 126 0 340h1226V6c-50.1-3.72-100.95-5.8-152-6z"
+        fill="url(#back-rainbow-gradient)" />
+    </svg>
+
+    <svg viewBox="0 0 1031 475" id="front-rainbow" preserveAspectRatio="none">
+      <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="25%" id="front-rainbow-gradient">
+          <stop stop-color="#00D7B9" offset="0%"/>
+          <stop stop-color="#B95DD7" offset="50%"/>
+          <stop stop-color="#FFB367" offset="100%"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 475h1031V0C630.46 33.34 270 208.52 0 475z"
+        fill="url(#front-rainbow-gradient)" fill-opacity="0.65" />
+    </svg>
+
+    <svg viewBox="0 0 1280 110" preserveAspectRatio="none" id="header-curve-shadow">
+      <path d="M1280 3.9V110H0C194 71.33 662-19.9 1280 3.9z" />
+    </svg>
+
+    <svg viewBox="0 0 1280 110" preserveAspectRatio="none" id="header-curve">
+      <path d="M1280 3.9V110H0C194 71.33 662-19.9 1280 3.9z" fill="#fff" />
+    </svg>
+
+    <div id="atlas-logo">
+      <span class="shadow"></span>
+      <span class="ring"></span>
+      <span class="glyph"></span>
+    </div>
+
+    <h1>
+      <strong>Introducing Stripe Atlas.</strong>
+      A new way to start an internet business anywhere.
+    </h1>
+
+    <section class="call-to-action">
+      <div class="request-access">
+        <span class="shadow"></span>
+        <button class="main-action">Request access</button>
+      </div>
+      <div class="learn-more">
+        <span class="shadow"></span>
+        <a class="main-action" href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq">Explore the FAQ</a>
+      </div>
+    </section>
+  </header>
+
+  <main class="inner-col">
+    <section id="motivation">
+      <div class="illustration"></div>
+      <div class="content">
+        <h1>Global access to startup tools</h1>
+        <p>With Stripe Atlas, entrepreneurs can easily incorporate a U.S. company, set up a U.S. bank account, and start accepting payments with Stripe. Starting today, it’s available to developers and entrepreneurs globally.</p>
+
+        <p>The promise of the internet is that location matters less. However, geographic barriers and associated complexity make it difficult to start a global business in many parts of the world.</p>
+
+        <p>Developers around the world should have equal access to the tools and services that are available to those in Berlin and Boston. Atlas is designed to help.</p>
+        <ul>
+          <li><a href="atlas/index.html#request-access">Apply for access</a>
+          <li><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq">Read the FAQ</a>
+        </ul>
+      </div>
+    </section>
+
+    <ul id="pillars">
+      <li>
+        <h1>Incorporate your company</h1>
+        <p>Atlas helps you incorporate a U.S. Delaware company in a couple of days. You just fill out a simple form; we generate the necessary paperwork and handle the rest.</p>
+        <p class="learn-more"><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq#incorporation">Learn more</a></p>
+      <li>
+        <h1>Open a business bank account</h1>
+        <p>Stripe Atlas opens a business bank account for you with Silicon Valley Bank, the world’s
+        leading bank for tech companies. There’s no need to visit a bank branch in person to get set up.</p>
+        <p class="learn-more"><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq#bankaccount">Learn more</a></p>
+      <li>
+        <h1>Accept payments with Stripe</h1>
+        <p>We set up a Stripe account that you can use to start accepting payments from customers in 100+ currencies right away. You can take advantage of the complete Stripe product suite, including
+        <a href="marketplaces">Connect</a> and <a href="country?country=CH&amp;redirect=%252Frelay">Relay</a>.</p>
+        <p class="learn-more"><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq#stripeaccount">Learn more</a></p>
+      <li>
+        <h1>Get tax and legal guidance</h1>
+        <p>Stripe Atlas entrepreneurs will have access to guidance on U.S. law and taxes from Orrick, the international
+        tech law firm, and PwC, the global accounting firm. Every Atlas entrepreneur will be able to
+        chat–for free–with a professional from PwC.</p>
+        <p class="learn-more"><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq#taxlegal">Learn more</a></p>
+    </ul>
+
+    <section id="network">
+      <div class="content">
+        <h1>The Stripe Atlas network</h1>
+        <p>Stripe Atlas is invite-only to start. We’ll be scaling it to as many companies as possible as quickly as we can. You can apply directly or get a referral from one of our partners.</p>
+        <p>We’re working with more than sixty accelerators, investors, and partners from around the world to get Atlas in the hands of promising startups. In addition, we’re working with some selected companies to make it easier for Atlas startups to take advantage of services: for example, AWS will extend $15,000 in free credits.
+        <p class="learn-more"><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Who-is-in-the-Stripe-Atlas-network">More about the Stripe Atlas network</a></p>
+      </div>
+    </section>
+  </main>
+
+  <section id="stories">
+    <div class="story active">
+      <div class="content">
+        <blockquote>
+          <p>I believe that we’re going to see a revolution of startups coming to the global market
+          from places that we don’t even know exist. And Atlas could help them to start that
+          company in a global environment from the beginning.</p>
+          <cite><strong>Christian Van Der Henst</strong>, Platzi</cite>
+        </blockquote>
+      </div>
+      <div class="media">
+        <iframe src="https://player.vimeo.com/video/156461504"
+        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="content">
+        <a href="http://coterique.com" target="_blank">
+          <img src="img/atlas/stories/coterique.svg" alt="Coterique">
+        </a>
+        <blockquote>
+          <p>With Coterique I want to support the local economy while being a part of the global
+          economy and Atlas is going to help me do that.</p>
+          <cite><strong>Dana Khater</strong>, <a href="http://coterique.com" target="_blank">Coterique</a></cite>
+        </blockquote>
+      </div>
+      <div class="media">
+        <img data-src="/img/atlas/stories/coterique.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="content">
+        <a href="http://hotelrunner.com" target="_blank">
+          <img src="img/atlas/stories/hotelrunner.svg" alt="Hotel Runner">
+        </a>
+        <blockquote>
+          <p>Atlas will allow us to access a world-class banking system and
+          financial system, which really wasn’t possible before.</p>
+          <cite><strong>Tolga Yalcinkaya</strong>, <a href="http://hotelrunner.com" target="_blank">HotelRunner</a></cite>
+        </blockquote>
+      </div>
+      <div class="media">
+        <img data-src="/img/atlas/stories/hotelrunner.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="content">
+        <a href="https://instabug.com" target="_blank">
+          <img src="img/atlas/stories/instabug.svg" alt="Instabug">
+        </a>
+        <blockquote>
+          <p>Geography shouldn’t be a barrier to building a company. Atlas could motivate and help tons of companies launch.</p>
+          <cite><strong>Omar Gabr and Moataz Soliman</strong>, <a href="https://instabug.com" target="_blank">Instabug</a></cite>
+        </blockquote>
+      </div>
+      <div class="media">
+        <img data-src="/img/atlas/stories/instabug.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="content">
+        <a href="https://platzi.com" target="_blank">
+          <img src="img/atlas/stories/platzi.svg" alt="Platzi">
+        </a>
+        <blockquote>
+          <p>You shouldn’t have to be a Silicon Valley insider to start a global company.</p>
+          <cite><strong>Christian Van Der Henst</strong>, <a href="https://platzi.com" target="_blank">Platzi</a></cite>
+        </blockquote>
+      </div>
+      <div class="media">
+        <img data-src="/img/atlas/stories/platzi.jpg" alt="">
+      </div>
+    </div>
+
+    <nav>
+      <span class="selection"></span>
+    </nav>
+  </section>
+
+  <section id="mini-faq">
+    <ul class="inner-col">
+      <li>
+        <div>
+          <h1>What does it cost?</h1>
+          <p>Stripe Atlas will be free for the first 100 users. After that, the Atlas beta will cost $500, which includes all fees associated with incorporating your company and opening your business bank account. You’ll pay Stripe’s <a href="country?country=US&amp;redirect=%252Fpricing">standard fees</a> of 2.9% + 30¢ per successful charge.</p>
+        </div>
+        <p class="learn-more"><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-does-Atlas-cost">Read more</a></p>
+      <li>
+        <div>
+          <h1>What exactly do I get?</h1>
+          <p>Stripe Atlas will help to incorporate your company in the U.S., open a business bank account,
+          and create a Stripe account so you can charge customers around the world. You’ll also
+          get access to support from PwC, Orrick, and AWS.</p>
+        </div>
+        <p class="learn-more"><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-is-Stripe-Atlas">Read more</a></p>
+      <li>
+        <div>
+          <h1>How long does it take?</h1>
+          <p>Once you provide the required information about your product and team, Stripe Atlas shortens the process that typically takes months into days. In most cases, you’ll be able to start accepting payments from customers in less than a week.</p>
+        </div>
+        <p class="learn-more"><a href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq#How-long-does-it-take-to-set-up">Read more</a></p>
+    </ul>
+  </section>
+
+  <section id="end-actions">
+    <div class="inner-col">
+      <p>
+        <strong>Ready to get started?</strong>
+        Tell us about your idea and we’ll get in touch!
+      </p>
+      <section class="call-to-action">
+        <div class="request-access">
+          <span class="shadow"></span>
+          <button class="main-action">Request access</button>
+        </div>
+        <div class="learn-more">
+          <span class="shadow"></span>
+          <a class="main-action" href="country?country=CH&amp;redirect=%252Fatlas%252Ffaq">Explore the FAQ</a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section id="overlay">
+    <button class="close"><img src="img/atlas/request-access/close.svg" alt="Close"></button>
+    <section id="modal">
+      <h1>Atlas is starting out in beta. We’re going to invite startups to join as quickly as we can.</h1>
+      <p>To apply for access, please tell us a little bit about what you’re working on.</p>
+      <form novalidate>
+        <input type="hidden" name="referral_name" value="cbp163">
+        <section id="personal-info">
+          <section class="field full-name">
+            <img src="img/atlas/request-access/name.svg" alt="">
+            <label for="full-name">Your name</label>
+            <input name="name" id="full-name" placeholder="Jane Diaz" required>
+          </section>
+          <section class="field email">
+            <img src="img/atlas/request-access/email.svg" alt="">
+            <label for="email">Email address</label>
+            <input name="email" id="email" type="email" placeholder="jane.diaz@email.com" value="" required>
+          </section>
+          <section class="field country">
+            <img src="img/atlas/request-access/country.svg" alt="">
+            <label for="country">Country</label>
+            <select name="current_domicile" id="country" required>
+                <option
+                  
+                  value="AF">Afghanistan</option>
+                <option
+                  
+                  value="AL">Albania</option>
+                <option
+                  
+                  value="DZ">Algeria</option>
+                <option
+                  
+                  value="AS">American Samoa</option>
+                <option
+                  
+                  value="AD">Andorra</option>
+                <option
+                  
+                  value="AO">Angola</option>
+                <option
+                  
+                  value="AI">Anguilla</option>
+                <option
+                  
+                  value="AQ">Antarctica</option>
+                <option
+                  
+                  value="AG">Antigua and Barbuda</option>
+                <option
+                  
+                  value="AR">Argentina</option>
+                <option
+                  
+                  value="AM">Armenia</option>
+                <option
+                  
+                  value="AW">Aruba</option>
+                <option
+                  
+                  value="AU">Australia</option>
+                <option
+                  
+                  value="AT">Austria</option>
+                <option
+                  
+                  value="AZ">Azerbaijan</option>
+                <option
+                  
+                  value="BS">Bahamas</option>
+                <option
+                  
+                  value="BH">Bahrain</option>
+                <option
+                  
+                  value="BD">Bangladesh</option>
+                <option
+                  
+                  value="BB">Barbados</option>
+                <option
+                  
+                  value="BY">Belarus</option>
+                <option
+                  
+                  value="BE">Belgium</option>
+                <option
+                  
+                  value="BZ">Belize</option>
+                <option
+                  
+                  value="BJ">Benin</option>
+                <option
+                  
+                  value="BM">Bermuda</option>
+                <option
+                  
+                  value="BT">Bhutan</option>
+                <option
+                  
+                  value="BO">Bolivia</option>
+                <option
+                  
+                  value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                <option
+                  
+                  value="BA">Bosnia and Herzegovina</option>
+                <option
+                  
+                  value="BW">Botswana</option>
+                <option
+                  
+                  value="BV">Bouvet Island</option>
+                <option
+                  
+                  value="BR">Brazil</option>
+                <option
+                  
+                  value="IO">British Indian Ocean Territory</option>
+                <option
+                  
+                  value="BN">Brunei Darussalam</option>
+                <option
+                  
+                  value="BG">Bulgaria</option>
+                <option
+                  
+                  value="BF">Burkina Faso</option>
+                <option
+                  
+                  value="BI">Burundi</option>
+                <option
+                  
+                  value="KH">Cambodia</option>
+                <option
+                  
+                  value="CM">Cameroon</option>
+                <option
+                  
+                  value="CA">Canada</option>
+                <option
+                  
+                  value="CV">Cape Verde</option>
+                <option
+                  
+                  value="KY">Cayman Islands</option>
+                <option
+                  
+                  value="CF">Central African Republic</option>
+                <option
+                  
+                  value="TD">Chad</option>
+                <option
+                  
+                  value="CL">Chile</option>
+                <option
+                  
+                  value="CN">China</option>
+                <option
+                  
+                  value="CX">Christmas Island</option>
+                <option
+                  
+                  value="CC">Cocos (Keeling) Islands</option>
+                <option
+                  
+                  value="CO">Colombia</option>
+                <option
+                  
+                  value="KM">Comoros</option>
+                <option
+                  
+                  value="CG">Congo</option>
+                <option
+                  
+                  value="CD">Congo, The Democratic Republic Of The</option>
+                <option
+                  
+                  value="CK">Cook Islands</option>
+                <option
+                  
+                  value="CR">Costa Rica</option>
+                <option
+                  
+                  value="HR">Croatia</option>
+                <option
+                  
+                  value="CU">Cuba</option>
+                <option
+                  
+                  value="CW">Curaçao</option>
+                <option
+                  
+                  value="CY">Cyprus</option>
+                <option
+                  
+                  value="CZ">Czech Republic</option>
+                <option
+                  
+                  value="CI">Côte D'Ivoire</option>
+                <option
+                  
+                  value="DK">Denmark</option>
+                <option
+                  
+                  value="DJ">Djibouti</option>
+                <option
+                  
+                  value="DM">Dominica</option>
+                <option
+                  
+                  value="DO">Dominican Republic</option>
+                <option
+                  
+                  value="EC">Ecuador</option>
+                <option
+                  
+                  value="EG">Egypt</option>
+                <option
+                  
+                  value="SV">El Salvador</option>
+                <option
+                  
+                  value="GQ">Equatorial Guinea</option>
+                <option
+                  
+                  value="ER">Eritrea</option>
+                <option
+                  
+                  value="EE">Estonia</option>
+                <option
+                  
+                  value="ET">Ethiopia</option>
+                <option
+                  
+                  value="FK">Falkland Islands (Malvinas)</option>
+                <option
+                  
+                  value="FO">Faroe Islands</option>
+                <option
+                  
+                  value="FJ">Fiji</option>
+                <option
+                  
+                  value="FI">Finland</option>
+                <option
+                  
+                  value="FR">France</option>
+                <option
+                  
+                  value="GF">French Guiana</option>
+                <option
+                  
+                  value="PF">French Polynesia</option>
+                <option
+                  
+                  value="TF">French Southern Territories</option>
+                <option
+                  
+                  value="GA">Gabon</option>
+                <option
+                  
+                  value="GM">Gambia</option>
+                <option
+                  
+                  value="GE">Georgia</option>
+                <option
+                  
+                  value="DE">Germany</option>
+                <option
+                  
+                  value="GH">Ghana</option>
+                <option
+                  
+                  value="GI">Gibraltar</option>
+                <option
+                  
+                  value="GR">Greece</option>
+                <option
+                  
+                  value="GL">Greenland</option>
+                <option
+                  
+                  value="GD">Grenada</option>
+                <option
+                  
+                  value="GP">Guadeloupe</option>
+                <option
+                  
+                  value="GU">Guam</option>
+                <option
+                  
+                  value="GT">Guatemala</option>
+                <option
+                  
+                  value="GG">Guernsey</option>
+                <option
+                  
+                  value="GN">Guinea</option>
+                <option
+                  
+                  value="GW">Guinea-Bissau</option>
+                <option
+                  
+                  value="GY">Guyana</option>
+                <option
+                  
+                  value="HT">Haiti</option>
+                <option
+                  
+                  value="HM">Heard and McDonald Islands</option>
+                <option
+                  
+                  value="VA">Holy See (Vatican City State)</option>
+                <option
+                  
+                  value="HN">Honduras</option>
+                <option
+                  
+                  value="HK">Hong Kong</option>
+                <option
+                  
+                  value="HU">Hungary</option>
+                <option
+                  
+                  value="IS">Iceland</option>
+                <option
+                  
+                  value="IN">India</option>
+                <option
+                  
+                  value="ID">Indonesia</option>
+                <option
+                  
+                  value="IR">Iran, Islamic Republic Of</option>
+                <option
+                  
+                  value="IQ">Iraq</option>
+                <option
+                  
+                  value="IE">Ireland</option>
+                <option
+                  
+                  value="IM">Isle of Man</option>
+                <option
+                  
+                  value="IL">Israel</option>
+                <option
+                  
+                  value="IT">Italy</option>
+                <option
+                  
+                  value="JM">Jamaica</option>
+                <option
+                  
+                  value="JP">Japan</option>
+                <option
+                  
+                  value="JE">Jersey</option>
+                <option
+                  
+                  value="JO">Jordan</option>
+                <option
+                  
+                  value="KZ">Kazakhstan</option>
+                <option
+                  
+                  value="KE">Kenya</option>
+                <option
+                  
+                  value="KI">Kiribati</option>
+                <option
+                  
+                  value="KP">Korea, Democratic People's Republic Of</option>
+                <option
+                  
+                  value="KR">Korea, Republic of</option>
+                <option
+                  
+                  value="KW">Kuwait</option>
+                <option
+                  
+                  value="KG">Kyrgyzstan</option>
+                <option
+                  
+                  value="LA">Lao People's Democratic Republic</option>
+                <option
+                  
+                  value="LV">Latvia</option>
+                <option
+                  
+                  value="LB">Lebanon</option>
+                <option
+                  
+                  value="LS">Lesotho</option>
+                <option
+                  
+                  value="LR">Liberia</option>
+                <option
+                  
+                  value="LY">Libya</option>
+                <option
+                  
+                  value="LI">Liechtenstein</option>
+                <option
+                  
+                  value="LT">Lithuania</option>
+                <option
+                  
+                  value="LU">Luxembourg</option>
+                <option
+                  
+                  value="MO">Macao</option>
+                <option
+                  
+                  value="MK">Macedonia, the Former Yugoslav Republic Of</option>
+                <option
+                  
+                  value="MG">Madagascar</option>
+                <option
+                  
+                  value="MW">Malawi</option>
+                <option
+                  
+                  value="MY">Malaysia</option>
+                <option
+                  
+                  value="MV">Maldives</option>
+                <option
+                  
+                  value="ML">Mali</option>
+                <option
+                  
+                  value="MT">Malta</option>
+                <option
+                  
+                  value="MH">Marshall Islands</option>
+                <option
+                  
+                  value="MQ">Martinique</option>
+                <option
+                  
+                  value="MR">Mauritania</option>
+                <option
+                  
+                  value="MU">Mauritius</option>
+                <option
+                  
+                  value="YT">Mayotte</option>
+                <option
+                  
+                  value="MX">Mexico</option>
+                <option
+                  
+                  value="FM">Micronesia, Federated States Of</option>
+                <option
+                  
+                  value="MD">Moldova, Republic of</option>
+                <option
+                  
+                  value="MC">Monaco</option>
+                <option
+                  
+                  value="MN">Mongolia</option>
+                <option
+                  
+                  value="ME">Montenegro</option>
+                <option
+                  
+                  value="MS">Montserrat</option>
+                <option
+                  
+                  value="MA">Morocco</option>
+                <option
+                  
+                  value="MZ">Mozambique</option>
+                <option
+                  
+                  value="MM">Myanmar</option>
+                <option
+                  
+                  value="NA">Namibia</option>
+                <option
+                  
+                  value="NR">Nauru</option>
+                <option
+                  
+                  value="NP">Nepal</option>
+                <option
+                  
+                  value="NL">Netherlands</option>
+                <option
+                  
+                  value="AN">Netherlands Antilles</option>
+                <option
+                  
+                  value="NC">New Caledonia</option>
+                <option
+                  
+                  value="NZ">New Zealand</option>
+                <option
+                  
+                  value="NI">Nicaragua</option>
+                <option
+                  
+                  value="NE">Niger</option>
+                <option
+                  
+                  value="NG">Nigeria</option>
+                <option
+                  
+                  value="NU">Niue</option>
+                <option
+                  
+                  value="NF">Norfolk Island</option>
+                <option
+                  
+                  value="MP">Northern Mariana Islands</option>
+                <option
+                  
+                  value="NO">Norway</option>
+                <option
+                  
+                  value="OM">Oman</option>
+                <option
+                  
+                  value="PK">Pakistan</option>
+                <option
+                  
+                  value="PW">Palau</option>
+                <option
+                  
+                  value="PS">Palestinian Territories</option>
+                <option
+                  
+                  value="PA">Panama</option>
+                <option
+                  
+                  value="PG">Papua New Guinea</option>
+                <option
+                  
+                  value="PY">Paraguay</option>
+                <option
+                  selected="selected"
+                  value="PE">Peru</option>
+                <option
+                  
+                  value="PH">Philippines</option>
+                <option
+                  
+                  value="PN">Pitcairn</option>
+                <option
+                  
+                  value="PL">Poland</option>
+                <option
+                  
+                  value="PT">Portugal</option>
+                <option
+                  
+                  value="PR">Puerto Rico</option>
+                <option
+                  
+                  value="QA">Qatar</option>
+                <option
+                  
+                  value="RO">Romania</option>
+                <option
+                  
+                  value="RU">Russian Federation</option>
+                <option
+                  
+                  value="RW">Rwanda</option>
+                <option
+                  
+                  value="RE">Réunion</option>
+                <option
+                  
+                  value="BL">Saint Barthélemy</option>
+                <option
+                  
+                  value="SH">Saint Helena</option>
+                <option
+                  
+                  value="KN">Saint Kitts And Nevis</option>
+                <option
+                  
+                  value="LC">Saint Lucia</option>
+                <option
+                  
+                  value="MF">Saint Martin</option>
+                <option
+                  
+                  value="PM">Saint Pierre And Miquelon</option>
+                <option
+                  
+                  value="VC">Saint Vincent And The Grenedines</option>
+                <option
+                  
+                  value="WS">Samoa</option>
+                <option
+                  
+                  value="SM">San Marino</option>
+                <option
+                  
+                  value="ST">Sao Tome and Principe</option>
+                <option
+                  
+                  value="SA">Saudi Arabia</option>
+                <option
+                  
+                  value="SN">Senegal</option>
+                <option
+                  
+                  value="RS">Serbia</option>
+                <option
+                  
+                  value="SC">Seychelles</option>
+                <option
+                  
+                  value="SL">Sierra Leone</option>
+                <option
+                  
+                  value="SG">Singapore</option>
+                <option
+                  
+                  value="SX">Sint Maarten</option>
+                <option
+                  
+                  value="SK">Slovakia</option>
+                <option
+                  
+                  value="SI">Slovenia</option>
+                <option
+                  
+                  value="SB">Solomon Islands</option>
+                <option
+                  
+                  value="SO">Somalia</option>
+                <option
+                  
+                  value="ZA">South Africa</option>
+                <option
+                  
+                  value="GS">South Georgia and the South Sandwich Islands</option>
+                <option
+                  
+                  value="SS">South Sudan</option>
+                <option
+                  
+                  value="ES">Spain</option>
+                <option
+                  
+                  value="LK">Sri Lanka</option>
+                <option
+                  
+                  value="SD">Sudan</option>
+                <option
+                  
+                  value="SR">Suriname</option>
+                <option
+                  
+                  value="SJ">Svalbard And Jan Mayen</option>
+                <option
+                  
+                  value="SZ">Swaziland</option>
+                <option
+                  
+                  value="SE">Sweden</option>
+                <option
+                  
+                  value="CH">Switzerland</option>
+                <option
+                  
+                  value="SY">Syrian Arab Republic</option>
+                <option
+                  
+                  value="TW">Taiwan</option>
+                <option
+                  
+                  value="TJ">Tajikistan</option>
+                <option
+                  
+                  value="TZ">Tanzania, United Republic of</option>
+                <option
+                  
+                  value="TH">Thailand</option>
+                <option
+                  
+                  value="TL">Timor-Leste</option>
+                <option
+                  
+                  value="TG">Togo</option>
+                <option
+                  
+                  value="TK">Tokelau</option>
+                <option
+                  
+                  value="TO">Tonga</option>
+                <option
+                  
+                  value="TT">Trinidad and Tobago</option>
+                <option
+                  
+                  value="TN">Tunisia</option>
+                <option
+                  
+                  value="TR">Turkey</option>
+                <option
+                  
+                  value="TM">Turkmenistan</option>
+                <option
+                  
+                  value="TC">Turks and Caicos Islands</option>
+                <option
+                  
+                  value="TV">Tuvalu</option>
+                <option
+                  
+                  value="UG">Uganda</option>
+                <option
+                  
+                  value="UA">Ukraine</option>
+                <option
+                  
+                  value="AE">United Arab Emirates</option>
+                <option
+                  
+                  value="GB">United Kingdom</option>
+                <option
+                  
+                  value="US">United States</option>
+                <option
+                  
+                  value="UM">United States Minor Outlying Islands</option>
+                <option
+                  
+                  value="UY">Uruguay</option>
+                <option
+                  
+                  value="UZ">Uzbekistan</option>
+                <option
+                  
+                  value="VU">Vanuatu</option>
+                <option
+                  
+                  value="VE">Venezuela, Bolivarian Republic of</option>
+                <option
+                  
+                  value="VN">Vietnam</option>
+                <option
+                  
+                  value="VG">Virgin Islands, British</option>
+                <option
+                  
+                  value="VI">Virgin Islands, U.S.</option>
+                <option
+                  
+                  value="WF">Wallis and Futuna</option>
+                <option
+                  
+                  value="EH">Western Sahara</option>
+                <option
+                  
+                  value="YE">Yemen</option>
+                <option
+                  
+                  value="ZM">Zambia</option>
+                <option
+                  
+                  value="ZW">Zimbabwe</option>
+                <option
+                  
+                  value="AX">Åland Islands</option>
+            </select>
+          </section>
+        </section>
+        <section id="business-info">
+          <section class="field website">
+            <img src="img/atlas/request-access/website.svg" alt="">
+            <label for="website">Website</label>
+            <input name="website" id="website" placeholder="mystartup.hn" pattern=".*\..*" required>
+          </section>
+          <section class="field description">
+            <img src="img/atlas/request-access/description.svg" alt="">
+            <label for="description">Business description</label>
+            <textarea name="business_description" id="description" placeholder="Tell us about your product: What are you building? How would you use Atlas?" required></textarea>
+          </section>
+        </section>
+        <section class="call-to-action">
+          <div class="request-access">
+            <p id="thanks">Thanks!</p>
+            <span class="shadow"></span>
+            <button class="main-action">Request access</button>
+          </div>
+        </section>
+      </form>
+    </section>
+  </section>
+</div>
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="country?country=AU&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Australia" src="img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=CA&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Canada" src="img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=DK&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Denmark" src="img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=FI&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Finland" src="img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=GB&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="United Kingdom" src="img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=IE&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Ireland" src="img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=NO&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Norway" src="img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=SE&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Sweden" src="img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=US&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="United States" src="img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=AT&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Austria" src="img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=BE&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Belgium" src="img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=BR&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Brazil" src="img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=FR&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="France" src="img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=DE&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Germany" src="img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=IT&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Italy" src="img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=JP&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Japan" src="img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=LU&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Luxembourg" src="img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=MX&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Mexico" src="img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=NL&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Netherlands" src="img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=PT&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Portugal" src="img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=SG&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Singapore" src="img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=ES&amp;redirect=%252Fatlas" >
+                  <img width="23" height="17" alt="Spain" src="img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=CH&amp;redirect=%252Fatlas" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="pricing">Pricing</a></li>
+      <li><a href="blog/page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+      <script src="assets/atlas/request-access.es5-0740fa966c49e83fe1bc3f0387728a0e.js"></script>
+  <script src="assets/atlas/network.es5-70042310f18fd4105806b01386195a09.js"></script>
+  <script src="assets/atlas/froogaloop.min-26bee972ec399f08c01d2806b7cd7afe.js"></script>
+  <script src="assets/atlas/stories.es5-00e009b65bec567c114dd4cd6d75d974.js"></script>
+
+
+    <script src="assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("atlas");
+    </script>
+
+  </body>
+</html>

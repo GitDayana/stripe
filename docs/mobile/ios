@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>iOS Integration</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="frxFzzMm3s-ETopTFjJFOdxL2ArkYrVQdgUZLCttnJH2lkAMKkWbf3de0INISPmy5PYi4vUJYWi_H45AqmA4Cw==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <style>
+div.screenshots {
+  padding: 0px 0px 20px 0;
+}
+
+div.screenshots img {
+  display: block;
+}
+</style>
+
+<section id="details">
+  <header>
+    <h1>iOS Integration</h1>
+    <p>
+      Accept payments in iPhone and iPad apps, with built-in support for Apple Pay.
+    </p>
+  </header>
+
+  <article>
+    <aside class="content note">
+      <h1>Apple Pay vs. In-App Purchases</h1>
+      <p>Apple Pay doesn’t replace In-App Purchases. You should use Apple Pay when charging for physical goods (such as groceries, clothing, and appliances) or for services (such as club memberships, hotel reservations, and tickets for events).</p>
+      <p>You should continue to use In-App Purchases to charge for virtual goods such as premium content in your app.</p>
+      <p><a href="https://support.stripe.com/questions/apple-and-stripe-tos-and-fees">Learn more</a>.</p>
+    </aside>
+    <p>
+      If you want to build a mobile app like <a href="http://lyft.me">Lyft</a> or <a href="http://www.fancy.com">Fancy</a> and enable people to make purchases directly in your app, our iOS libraries can help. The library also supports <a href="../../blog/apple-pay/index.html">Apple Pay</a> so that your users can make frictionless payments without having to enter in their credit card info.
+    </p>
+    <p>
+      Accepting payments in your app involves 3 steps, which we'll cover in this guide:
+    </p>
+    <ol>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios#collecting-card-information" class="arrow">Collecting credit card information from your customer</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios#creating-tokens" class="arrow">Converting the credit card information to a single-use token</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios#sending-tokens" class="arrow">Sending this token to your server to create a charge</a></li>
+    </ol>
+
+    <h1 id="setup">Getting Started</h1>
+    <h2 id="installation">Step 1: Install the library</h2>
+
+    <h3 id="cocoapods">Using CocoaPods</h3>
+
+    <p>
+      We recommend using CocoaPods to install the <a href="https://github.com/stripe/stripe-ios">Stripe iOS library</a>, since it makes it easy to keep your app's dependencies up to date.
+    </p>
+
+    <p>
+      If you haven't set up Cocoapods before, their <a href="http://cocoapods.org/">site</a> has installation instructions.
+      Then, add <code>pod 'Stripe'</code> to your <code>Podfile</code>, and run <code>pod install</code>.
+    </p>
+
+    <p>
+      (Don't forget to use the <code>.xcworkspace</code> file to open your
+      project in Xcode, instead of the <code>.xcodeproj</code> file, from here on
+      out.)
+    </p>
+
+    <h3 id="manual-installation">Using Carthage</h3>
+    <p>
+      We also support installing our SDK using <a href="https://github.com/Carthage/Carthage">Carthage</a>. You can simply add <code>github "stripe/stripe-ios"</code> to your <code>Cartfile</code>, and follow the Carthage <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">installation instructions</a>.
+    </p>
+
+    <h3 id="manual-installation">Manual installation</h3>
+    <p>
+      We also publish our SDK as a static framework that you can copy directly into your app without any additional tools:
+    </p>
+    <ol>
+      <li>Head to our <a href="https://github.com/stripe/stripe-ios/releases/latest">releases page</a> and download the framework that's right for you.</li>
+      <li>Unzip the file you downloaded.</li>
+      <li>In Xcode, with your project open, click on 'File' then 'Add files to "Project"...'.</li>
+      <li>Select <code>Stripe.framework</code> in the directory you just unzipped.</li>
+      <li>Make sure 'Copy items if needed' is checked.</li>
+      <li>Click 'Add'.</li>
+      <li>In your project settings, go to the "Build Settings" tab, and make sure <code>-ObjC</code> is present under "Other Linker Flags".</li>
+    </ol>
+
+    <h2>Step 2: Configure API keys</h2>
+
+    <p>
+      First, you'll want to configure Stripe with your <a href="https://dashboard.stripe.com/account/apikeys">publishable API key</a>. We recommend doing this in your <code>AppDelegate</code>'s <code><a href="http://developer.apple.com/library/ios/documentation/uikit/reference/uiapplicationdelegate_protocol/Reference/Reference.html#//apple_ref/doc/uid/TP40006786-CH3-SW18">application:didFinishLaunchingWithOptions:</a></code> method so that it'll be set for the entire lifecycle of your app.
+    </p>
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html" data-language="swift">Swift</a>
+        <a href="index.html" data-language="objc">Objective-C</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_set_publishable_key">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>
+      We've placed your <strong>test publishable</strong> API key as the <code>StripePublishableKey</code> constant in the above snippet. You'll need to swap it out with your <strong>live publishable</strong> key in production. You can see all your API keys in <a href="https://dashboard.stripe.com/#account/apikeys">your dashboard</a>.
+    </p>
+
+    <h1 id="collecting-card-information">Collecting credit card information</h1>
+
+    <aside class="content note">
+      <h1>Test Mode</h1>
+      <p>
+        When you're using your test publishable key, our libraries give you the ability to test your payment flow without having to charge real credit cards.
+        <p>
+          If you're building your own form or using <code>STPPaymentCardTextField</code>, using the card number <code>4242424242424242</code> (along with any CVC and
+          future expiration date) will accomplish the same effect.
+        </p>
+        <p>
+          You can learn more in our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">testing documentation.</a>
+        </p>
+      </p>
+    </aside>
+
+    <p>
+      At some point in the flow of your app, you'll want to obtain payment details from the user. There are three ways to do this. You can (in increasing order of complexity):
+    </p>
+    <ol>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios#applepay">Use Apple Pay framework to access your users' stored payment information<span class="arrow"></span></a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios#prebuilt">Use our pre-built form component, <code>STPPaymentCardTextField</code>, to collect new credit card details<span class="arrow"></span></a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios#custom-form">Build your own credit card form from scratch<span class="arrow"></span></a></li>
+    </ol>
+
+    <p>
+      <a href="http://developer.apple.com/apple-pay/">Apple Pay</a> only supports certain US credit cards on the latest iOS devices. We recommend using Apple Pay in combination with option 2 or option 3 as a fallback on devices where Apple Pay is not available.
+    </p>
+
+
+    <h2 id="applepay">Using Apple Pay</h2>
+    <p>
+      With Apple Pay, you'll be able to access payment information stored on your customers' iOS devices.
+    </p>
+
+    <h3>Important note before starting</h3>
+    <p>
+      In order to use Apple Pay, you'll need to add the "Apple Pay" capability to your app in Xcode. This requires creating a merchant ID with Apple first, as explained in <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fapple-pay">this tutorial</a>.
+    </p>
+
+    <p>
+      After you're set up, you'll need to generate a <code>PKPaymentRequest</code> to submit to Apple. We've provided a convenience method to generate one with reasonable defaults. You'll need to set the <code>paymentSummaryItems</code> property to an array of <code>PKPaymentSummaryItem</code>s. These are analogous to line items on a receipt and are used to explain your charge to the user. For a more in-depth reference, see the <a href="http://developer.apple.com/library/ios/documentation/PassKit/Reference/PKPaymentRequest_Ref/index.html">PKPaymentRequest documentation</a>.
+    </p>
+
+    <p>
+      After you create the request, query the device to see if Apple Pay is available (i.e. if your app is running on the latest hardware and the user has added a valid credit card). <code>YOUR_APPLE_MERCHANT_ID</code> is an identifier that you obtain directly from Apple, as explained in <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fapple-pay">this tutorial</a>. If Apple Pay is available, you should create and display the payment request view controller.
+    </p>
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html" data-language="swift">Swift</a>
+        <a href="index.html" data-language="objc">Objective-C</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_create_payment_request">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>
+      You may have noticed that <code>ViewController</code> is a <code>PKPaymentAuthorizationViewControllerDelegate</code>. You'll handle the <code>PKPayment</code> that the payment authorization controller returns by implementing this protocol.
+    </p>
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html" data-language="swift">Swift</a>
+        <a href="index.html" data-language="objc">Objective-C</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_payment_controller_delegate">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+    <p>
+      You can also choose to implement some optional <code>PKPaymentAuthorizationViewControllerDelegate</code> methods for custom events (for example, to recalculate shipping costs based on user selection). See the <a href="http://developer.apple.com/library/ios/documentation/PassKit/Reference/PKPaymentAuthorizationViewController_Ref/index.html">PKPaymentAuthorizationViewController documentation</a> for more information about these callbacks.
+    </p>
+
+    <p>
+      After the controller has returned with a <code>PKPayment</code>, we can move ahead to <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios#pkpayment-token">the next step</a>.
+    </p>
+
+    <h2 id="prebuilt">Using <code>STPPaymentCardTextField</code></h2>
+
+    <p>
+      To use our pre-built form component, we'll create a view controller called <code>PaymentViewController</code> and add a <code>STPPaymentCardTextField</code> property to the view controller.
+    </p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html" data-language="swift">Swift</a>
+        <a href="index.html" data-language="objc">Objective-C</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_add_payment_field">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>
+      Next, let's instantiate the <code>STPPaymentCardTextField</code>, set the <code>PaymentViewController</code> as its <code>STPPaymentCardTextFieldDelegate</code>, and add it to our view.
+    </p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html" data-language="swift">Swift</a>
+        <a href="index.html" data-language="objc">Objective-C</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_configure_payment_field">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>
+      This will add an <code>STPPaymentCardTextField</code> to the controller to accept card numbers, expiration dates, and CVCs. It'll format the input, and validate it on the fly.
+    </p>
+
+    <p>
+      When the user enters text into this field, the <code>paymentCardTextFieldDidChange:</code> method will be called on our view controller. In this callback, we can enable a save button that allows users to submit their valid cards if the form is valid:
+    </p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html" data-language="swift">Swift</a>
+        <a href="index.html" data-language="objc">Objective-C</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_payment_field_delegate">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <h2 id="custom-form">Building your own form</h2>
+    <p>
+      If you build your own payment form, you'll need to collect at least your customers' card numbers and expiration dates. You should likely also collect the CVC to prevent fraud. You can also optionally collect the user's name and billing address for addititional fraud protection.
+    </p>
+
+    <h1 id="creating-tokens">Creating Tokens</h1>
+
+    <p>
+      Our libraries shoulder the burden of PCI compliance by helping you avoid the need to send card data directly to your server. Instead, our libraries send credit card data directly to our servers, where we can convert them to <a href="../api/index.html#tokens">tokens</a>. You can charge these tokens later in your server-side code.
+    </p>
+
+    <h2 id="pkpayment-token">Using a PKPayment (Apple Pay)</h2>
+    <p>
+      After you've received a <code>PKPayment</code>, you can turn it into a single-use Stripe token with a simple method call:
+      <section class="code-example">
+        <nav class="lang-control">
+          <a href="index.html" data-language="swift">Swift</a>
+          <a href="index.html" data-language="objc">Objective-C</a>
+        </nav>
+        <div class="terminal-wrap" data-action="tutorial_create_token_pkpayment">
+          <pre><code><div class="terminal"></div></code></pre>
+        </div>
+      </section>
+    </p>
+
+    <h2 id="stpcard-token">Using STPCardParams</h2>
+    <p>
+      If you're using <code>STPPaymentCardTextField</code> or your own form, you can assemble the data into an <code>STPCardParams</code> object. Once you've collected the card number, expiration, and CVC, package them up in an <code>STPCardParams</code> object and invoke the <code>createTokenWithCard:</code> method on the <code>STPAPIClient</code> class, instructing the library to send off the credit card data to Stripe and return a token.
+    </p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html" data-language="swift">Swift</a>
+        <a href="index.html" data-language="objc">Objective-C</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_create_token_card">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>
+      In the example above, we're calling <code>createTokenWithCard:</code> when a save button is tapped. The important thing to ensure is the <code>createToken</code> isn't called before the user has finished entering their card details.
+    </p>
+
+    <p>
+      Handling error messages and showing activity indicators while we're creating the token is up to you.
+    </p>
+
+    <h1 id="sending-tokens">Sending the token to your server</h1>
+
+    <p>
+      The block you gave to <code>createToken</code> will be called whenever Stripe returns with a token (or error). You'll need to send the token off to your server so you can, for example, <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">charge the card</a>.
+    </p>
+
+    <p>
+      Here's how it looks for a token created with Apple Pay:
+    </p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html" data-language="swift">Swift</a>
+        <a href="index.html" data-language="objc">Objective-C</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_create_backend_charge">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>
+      If you're not using Apple Pay, the above code would be mostly the same, though you'll want a slightly different signature—the <code>completion</code> callback shown above is Apple Pay-specific. You would instead want to implement custom error and success handling.
+    </p>
+
+    <p>
+      On the server, you just need to implement an endpoint that will accept a parameter called <code>stripeToken</code>. Make sure any communication with your server is <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsecurity%252Fssl">SSL secured</a> to prevent eavesdropping.
+    </p>
+
+    <p>
+      Once you have a Stripe token representing a card on our server we can go ahead and charge it, save it for charging later, or sign the user up for a subscription.
+      For more information, proceed to our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">creating charges</a> tutorial.
+    </p>
+
+    <p>
+      Take a look at the full <a href="https://github.com/stripe/stripe-ios/tree/master/Example">example application</a> to see everything put together.
+    </p>
+
+    <hr>
+    <h1>Next up</h1>
+    <p>
+      Once you've retrieved a token from Stripe, you're going to want to do something with the
+      payment details you just collected. This is usually one of two things:
+    </p>
+    <ul>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charge your user immediately</a></li>
+      <li><a href="../subscriptions.1">Create a subscription</a></li>
+    </ul>
+  </article>
+</section>
+
+
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fmobile%252Fios" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fmobile%252Fios" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+<script type="text/javascript">
+var APIValues = {};
+  APIValues["objc"] = {};
+      APIValues["objc"]["tutorial_set_publishable_key"] = "\u003Cspan class=\"highlight_js objc\"\u003E// AppDelegate.m\n\n#import \u0026quot;AppDelegate.h\u0026quot;\n#import \u0026lt;Stripe/Stripe.h\u0026gt;\n\n@implementation AppDelegate\n\n- (BOOL)application:(UIApplication *)application\ndidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {\n    [Stripe setDefaultPublishableKey:@\u0026quot;pk_test_6pRNASCoBOKtIshFeQd4XMUh\u0026quot;];\n    return YES;\n}\n\n@end\u003C/span\u003E";
+      APIValues["objc"]["tutorial_create_payment_request"] = "\u003Cspan class=\"highlight_js objc\"\u003E// ViewController.m\n\nPKPaymentRequest *request =\n  [Stripe paymentRequestWithMerchantIdentifier:\u0026quot;YOUR_APPLE_MERCHANT_ID\u0026quot;];\nNSString *label = @\u0026quot;Premium Llama Food\u0026quot;;\nNSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:@\u0026quot;10.00\u0026quot;];\nrequest.paymentSummaryItems = @[\n    [PKPaymentSummaryItem summaryItemWithLabel:label\n                                        amount:amount]\n];\n\nif ([Stripe canSubmitPaymentRequest:request]) {\n    PKPaymentAuthorizationViewController *paymentController;\n    paymentController = [[PKPaymentAuthorizationViewController alloc]\n                           initWithPaymentRequest:paymentRequest];\n    paymentController.delegate = self;\n    [self presentViewController:paymentController animated:YES completion:nil];\n} else {\n    // Show the user your own credit card form (see options 2 or 3)\n}\u003C/span\u003E";
+      APIValues["objc"]["tutorial_payment_controller_delegate"] = "\u003Cspan class=\"highlight_js objc\"\u003E// ViewController.m\n\n- (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller\n                       didAuthorizePayment:(PKPayment *)payment\n                                completion:(void (^)(PKPaymentAuthorizationStatus))completion {\n    /*\n    We\u0026#39;ll implement this method below in \u0026#39;Creating a single-use token\u0026#39;.\n    Note that we\u0026#39;ve also been given a block that takes a\n    PKPaymentAuthorizationStatus. We\u0026#39;ll call this function with either\n    PKPaymentAuthorizationStatusSuccess or PKPaymentAuthorizationStatusFailure\n    after all of our asynchronous code is finished executing. This is how the\n    PKPaymentAuthorizationViewController knows when and how to update its UI.\n    */\n    [self handlePaymentAuthorizationWithPayment:payment completion:completion];\n}\n\n- (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller {\n    [self dismissViewControllerAnimated:YES completion:nil];\n}\u003C/span\u003E";
+      APIValues["objc"]["tutorial_add_payment_field"] = "\u003Cspan class=\"highlight_js objc\"\u003E// PaymentViewController.m\n\n#import \u0026quot;PaymentViewController.h\u0026quot;\n\n@interface PaymentViewController ()\u0026lt;STPPaymentCardTextFieldDelegate\u0026gt;\n@property(nonatomic) STPPaymentCardTextField *paymentTextField;\n@end\u003C/span\u003E";
+      APIValues["objc"]["tutorial_configure_payment_field"] = "\u003Cspan class=\"highlight_js objc\"\u003E// PaymentViewController.m\n\n- (void)viewDidLoad {\n    [super viewDidLoad];\n    self.paymentTextField = [[STPPaymentCardTextField alloc] initWithFrame:CGRectMake(15, 15, CGRectGetWidth(self.view.frame) - 30, 44)];\n    self.paymentTextField.delegate = self;\n    [self.view addSubview:self.paymentTextField];\n}\u003C/span\u003E";
+      APIValues["objc"]["tutorial_payment_field_delegate"] = "\u003Cspan class=\"highlight_js objc\"\u003E- (void)paymentCardTextFieldDidChange:(STPPaymentCardTextField *)textField { {\n    // Toggle navigation, for example\n    self.saveButton.enabled = textField.isValid;\n}\u003C/span\u003E";
+      APIValues["objc"]["tutorial_create_token_pkpayment"] = "\u003Cspan class=\"highlight_js objc\"\u003E// ViewController.m\n\n- (void)handlePaymentAuthorizationWithPayment:(PKPayment *)payment\n                                   completion:(void (^)(PKPaymentAuthorizationStatus))completion {\n    [[STPAPIClient sharedClient] createTokenWithPayment:payment\n            completion:^(STPToken *token, NSError *error) {\n                if (error) {\n                    completion(PKPaymentAuthorizationStatusFailure);\n                    return;\n                }\n                /*\n                We\u0026#39;ll implement this below in \u0026quot;Sending the token to your server\u0026quot;.\n                Notice that we\u0026#39;re passing the completion block through.\n                See the above comment in didAuthorizePayment to learn why.\n                */\n                [self createBackendChargeWithToken:token completion:completion];\n            }];\n}\u003C/span\u003E";
+      APIValues["objc"]["tutorial_create_token_card"] = "\u003Cspan class=\"highlight_js objc\"\u003E- (IBAction)save:(UIButton *)sender {\n    [[STPAPIClient sharedClient]\n     createTokenWithCard:self.paymentTextField.card\n     completion:^(STPToken *token, NSError *error) {\n         if (error) {\n             [self handleError:error];\n         } else {\n             [self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {\n                 ...\n             }];\n         }\n     }];\n}\u003C/span\u003E";
+      APIValues["objc"]["tutorial_create_backend_charge"] = "\u003Cspan class=\"highlight_js objc\"\u003E// ViewController.m\n\n- (void)createBackendChargeWithToken:(STPToken *)token\n                          completion:(void (^)(PKPaymentAuthorizationStatus))completion {\n    NSURL *url = [NSURL URLWithString:@\u0026quot;https://example.com/token\u0026quot;];\n    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];\n    request.HTTPMethod = @\u0026quot;POST\u0026quot;;\n    NSString *body     = [NSString stringWithFormat:@\u0026quot;stripeToken=%@\u0026quot;, token.tokenId];\n    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];\n    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];\n    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];\n    NSURLSessionDataTask *task =\n    [session dataTaskWithRequest:request\n               completionHandler:^(NSData *data,\n                                   NSURLResponse *response,\n                                   NSError *error) {\n                   if (error) {\n                       completion(PKPaymentAuthorizationStatusFailure);\n                   } else {\n                       completion(PKPaymentAuthorizationStatusSuccess);\n                   }\n               }];\n    [task resume];\n}\u003C/span\u003E";
+  APIValues["swift"] = {};
+      APIValues["swift"]["tutorial_set_publishable_key"] = "\u003Cspan class=\"highlight_js java\"\u003E// AppDelegate.swift\n\nimport Stripe\n\n@UIApplicationMain\nclass AppDelegate: UIResponder, UIApplicationDelegate {\n    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -\u0026gt; Bool {\n        Stripe.setDefaultPublishableKey(\u0026quot;pk_test_6pRNASCoBOKtIshFeQd4XMUh\u0026quot;)\n        return true\n    }\n}\u003C/span\u003E";
+      APIValues["swift"]["tutorial_create_payment_request"] = "\u003Cspan class=\"highlight_js java\"\u003E// ViewController.swift\n\nguard let request = Stripe.paymentRequestWithMerchantIdentifier(\u0026quot;YOUR_APPLE_MERCHANT_ID\u0026quot;) else {\n    // request will be nil if running on \u0026lt; iOS8\n    return\n}\nrequest.paymentSummaryItems = [\n    PKPaymentSummaryItem(label: \u0026quot;Premium Llama Food\u0026quot;, amount: 10.0)\n]\n\nif (Stripe.canSubmitPaymentRequest(request)) {\n    let paymentController = PKPaymentAuthorizationViewController(paymentRequest: request)\n    presentViewController(paymentController, animated: true, completion: nil)\n} else {\n    // Show the user your own credit card form (see options 2 or 3)\n}\u003C/span\u003E";
+      APIValues["swift"]["tutorial_payment_controller_delegate"] = "\u003Cspan class=\"highlight_js java\"\u003E// ViewController.swift\n\nfunc paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: (PKPaymentAuthorizationStatus) -\u0026gt; Void) {\n    /*\n    We\u0026#39;ll implement this method below in \u0026#39;Creating a single-use token\u0026#39;.\n    Note that we\u0026#39;ve also been given a block that takes a\n    PKPaymentAuthorizationStatus. We\u0026#39;ll call this function with either\n    PKPaymentAuthorizationStatusSuccess or PKPaymentAuthorizationStatusFailure\n    after all of our asynchronous code is finished executing. This is how the\n    PKPaymentAuthorizationViewController knows when and how to update its UI.\n    */\n    handlePaymentAuthorizationWithPayment(payment, completion: nil)\n}\n\nfunc paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController) {\n    dismissViewControllerAnimated(true, completion: nil)\n}\u003C/span\u003E";
+      APIValues["swift"]["tutorial_add_payment_field"] = "\u003Cspan class=\"highlight_js java\"\u003E// PaymentViewController.swift\n\nclass PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {\n    let paymentTextField = STPPaymentCardTextField()\n}\u003C/span\u003E";
+      APIValues["swift"]["tutorial_configure_payment_field"] = "\u003Cspan class=\"highlight_js java\"\u003E// PaymentViewController.swift\n\noverride func viewDidLoad() {\n    super.viewDidLoad();\n    paymentTextField.frame = CGRectMake(15, 15, CGRectGetWidth(self.view.frame) - 30, 44)\n    paymentTextField.delegate = self\n    view.addSubview(paymentTextField)\n}\u003C/span\u003E";
+      APIValues["swift"]["tutorial_payment_field_delegate"] = "\u003Cspan class=\"highlight_js java\"\u003Efunc paymentCardTextFieldDidChange(textField: STPPaymentCardTextField) {\n    // Toggle navigation, for example\n    saveButton.enabled = textField.isValid\n}\u003C/span\u003E";
+      APIValues["swift"]["tutorial_create_token_pkpayment"] = "\u003Cspan class=\"highlight_js java\"\u003E// ViewController.swift\n\nfunc handlePaymentAuthorizationWithPayment(payment: PKPayment, completion: PKPaymentAuthorizationStatus -\u0026gt; ()) {\n    STPAPIClient.sharedClient().createTokenWithPayment(payment) { (token, error) -\u0026gt; Void in\n        if error != nil {\n            completion(PKPaymentAuthorizationStatus.Failure)\n            return\n        }\n        /*\n        We\u0026#39;ll implement this below in \u0026quot;Sending the token to your server\u0026quot;.\n        Notice that we\u0026#39;re passing the completion block through.\n        See the above comment in didAuthorizePayment to learn why.\n        */\n        createBackendChargeWithToken(token, completion: completion)\n    }\n}\u003C/span\u003E";
+      APIValues["swift"]["tutorial_create_token_card"] = "\u003Cspan class=\"highlight_js java\"\u003E@IBAction func save(sender: UIButton) {\n    if let card = paymentTextField.card {\n        STPAPIClient.sharedClient().createTokenWithCard(card) { (token, error) -\u0026gt; Void in\n            if let error = error  {\n                handleError(error)\n            }\n            else if let token = token {\n                createBackendChargeWithToken(token) { status in\n                    ...\n                }\n            }\n        }\n    }\n}\u003C/span\u003E";
+      APIValues["swift"]["tutorial_create_backend_charge"] = "\u003Cspan class=\"highlight_js java\"\u003E// ViewController.swift\n\nfunc createBackendChargeWithToken(token: STPToken, completion: PKPaymentAuthorizationStatus -\u0026gt; ()) {\n    let url = NSURL(string: \u0026quot;https://example.com/token\u0026quot;)!\n    let request = NSMutableURLRequest(URL: url)\n    request.HTTPMethod = \u0026quot;POST\u0026quot;\n    let body = \u0026quot;stripeToken=(token.tokenId)\u0026quot;\n    request.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding)\n    let configuration = NSURLSessionConfiguration.ephemeralSessionConfiguration()\n    let session = NSURLSession(configuration: configuration)\n    let task = session.dataTaskWithRequest(request) { (data, response, error) -\u0026gt; Void in\n        if error != nil {\n            completion(PKPaymentAuthorizationStatus.Failure)\n        }\n        else {\n            completion(PKPaymentAuthorizationStatus.Success)\n        }\n    }\n    task.resume()\n}\u003C/span\u003E";
+</script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

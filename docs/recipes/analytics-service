@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Building an Analytics Service</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="3RKYRpYI93q9g5okvh41tYiH_nCHdqjKecbNzSXhK7ZVOJ2Fj2uyyk6TwPTgZIk-sDoEmJYdfPKw3FqhpOyPLA==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Building an Analytics Service</h1>
+    <p>This guide is an in-depth walkthrough to providing an analytics service to Stripe users using <a href="../connect/index.html">Connect</a>.</p>
+  </header>
+  <article>
+
+    <aside class="intro note">
+      <h1>More recipes</h1>
+      <p>Check out our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes">other recipes</a> and discover more ways to integrate Stripe.</p>
+    </aside>
+
+    <p>With thousands of businesses built on top of Stripe, there’s a sizable demand for providing advanced analytics as a service. Although users can always see their information in the Dashboard, custom reporting requires external parsing of data. Just a few of the services you could provide are:</p>
+
+    <ul>
+      <li>Trend identification, such as sales by weekday.</li>
+      <li>Percentage reporting, like how many charges are authorized but not captured or captured and later refunded.</li>
+      <li>Aggregation, such as the total fees paid within a period.</li>
+      <li>Custom accounting, for example, showing the difference between the cash on hand and the transfers pending.</li>
+      <li>Tax reporting, watching sales by geographic location.</li>
+    </ul>
+
+    <p>To implement an analytics service for Stripe users, you can build it using <a href="../connect/index.html">Connect</a>. With Connect, your platform can be hooked into an existing Stripe account and read its data, no matter how the Stripe user processes charges: through their own integration, through a third-party; using subscriptions; using auth and capture; and anywhere in the world that Stripe operates.</p>
+
+    <p>Let’s look at how you’d do that in some detail, with certain assumptions:</p>
+
+    <ul>
+      <li>Your service would neither create nor manage the other Stripe accounts.</li>
+      <li>The connected Stripe accounts may or may not have already processed charges before connecting to your service.</li>
+      <li>Your service would only read data from the connected account, never create transactions on their behalf (i.e., you can see the charges processed, but not initiate any).</li>
+    </ul>
+
+    <h1 id="getting-prepared">Getting prepared</h1>
+
+    <p>The first thing you need to do is <a href="https://dashboard.stripe.com/account/applications/settings">register your platform</a> with Stripe. When you do so, be certain that you have a <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication#webhooks">webhook</a> defined. As your platform won’t take any “create” actions on behalf of connected accounts, webhooks will be the only way to be notified of new transactions as they occur.</p>
+
+    <p>Next, create two pages on your website:</p>
+
+    <ul>
+      <li>A start page that begins the connection process (i.e., where the user goes to connect to your platform).</li>
+      <li>A destination page to which the user will be redirected after connecting their Stripe account.</li>
+    </ul>
+
+    <p>The start page would have your branding—it’s on your site, after all. You should also indicate to the user what you’ll do with their data (e.g., storage and retention policy), that you cannot process charges or transfer funds on the account, and that they will be able to disconnect the platform through the Stripe Dashboard. Basically, you’re offering all the benefits of third-party analytics without any risk of you being able to touch their money.</p>
+
+    <p>This latter page is the <code>redirect_uri</code> value, identified in your platform’s settings. You might use this page to create their account on your site, where they can view the reporting.</p>
+
+    <h1 id="connecting-accounts">Connecting accounts</h1>
+
+    <p>This scenario uses the <a href="../connect/oauth">OAuth flow</a> to connect to a standalone Stripe account (that may or may not already exist). This option is quick to set up, as Stripe handles much of the user experience for you: your user will be redirected to Stripe, prompted to create or connect an existing Stripe account, and then returned to your site.</p>
+
+    <p>Connect supports connections under two different <em>scopes</em>: <code>read_only</code> and <code>read_write</code>. As the analytics service, you’ll want to request <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference#get-authorize-request">read_only scope</a>. This permission type allows you to read data from the user’s account, but not create charges or transfers: you can see the money moving around, but not move it yourself.</p>
+
+    <p>At the end of the OAuth workflow, you’ll be provided with authorization credentials for the connected account:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  ...
+  &quot;stripe_user_id&quot;: &quot;acct_dXHocbQbbpzrml&quot;,
+  ...
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>You’ll want to store the <code>stripe_user_id</code> on your side, as this is used to identify the account.</p>
+
+    <h1 id="fetching-historical-data">Fetching historical data</h1>
+
+    <p>With the connection made, the only remaining issue is how the platform accesses the connected account’s data. There are two options: via the API and via webhook notifications.</p>
+
+    <p>Connect’s core functionality is the ability of one Stripe account to perform API requests on behalf of another Stripe account. Generally speaking, you can perform nearly any kind of request, but when granted only read-level scope, the platform is restricted to GET requests: fetching individual objects (e.g., a single charge) or lists of objects. This means that you can, through the API, make “list all” requests to fetch a connected user’s historical data.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/charges</span> \
+   -u <span class="token string">{YOUR_SECRET_KEY}:</span> \
+   -H <span class="token string">"Stripe-Account: acct_dXHocbQbbpzrml"</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>By default, that request will return the 10 most recent charges, which is just the start of grabbing their data.</p>
+
+    <p>Taking this further, you can use the <code>created</code> parameter to filter what transactions are returned, and paginate the request using the <code>limit</code>, <code>ending_before</code>, and <code>starting_after</code> parameters. As an example of that, this request will fetch the first 50 charges starting at the beginning of the year:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/charges</span> \
+   -u <span class="token string">{YOUR_SECRET_KEY}:</span> \
+   -H <span class="token string">"Stripe-Account: acct_dXHocbQbbpzrml"</span> \
+   -d <span class="token keyword">limit</span>=<span class="token string">50</span> \
+   -d <span class="token keyword">created[lte]</span>=<span class="token string">1451606400</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>The response will look something like this:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;object&quot;: &quot;list&quot;,
+  &quot;url&quot;: &quot;/v1/charges&quot;,
+  &quot;has_more&quot;: true,
+  &quot;data&quot;: [
+  ]
+  ...
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>All of the charges will be within the <code>data</code> attribute, which you can loop through. You could then use the final charge in that group as the <code>after</code> value in the request to retrieve the next 50 charges. (See the <a href="../api/index.html#list_charges">list all charges</a> documentation.)</p>
+
+    <p>Although the API was designed for performance, repeatedly fetching large bodies data will undoubtedly hurt the responsiveness of your application. We recommended storing fetched data on your side for subsequent analysis and reporting.</p>
+
+    <h1 id="watching-for-future-data">Watching for future data</h1>
+
+    <p>The second way you can access a connected account’s data is via <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication#webhooks">webhooks</a>. Once you’ve defined a <a href="https://dashboard.stripe.com/account/webhooks">platform webhook URL in your account</a>, Stripe will send event notifications to your webhook URL for every connected account. Look at the event object’s <code>user_id</code> property to see the account on which the event occurred.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;id&quot;: &quot;evt_0JQjFuLs0AIIBL&quot;,
+  &quot;livemode&quot;: true,
+  &quot;object&quot;: &quot;event&quot;,
+  &quot;type&quot;: &quot;customer.created&quot;,
+  &quot;user_id&quot;: &quot;acct_dXHocbQbbpzrml&quot;,
+  &quot;pending_webhooks&quot;: 2,
+  &quot;created&quot;: 1349654313,
+  &quot;data&quot;: {...}
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>The above event shows that a customer was created in the <code>acct_dXHocbQbbpzrml</code> account. Again, we recommend storing these events locally for subsequent analysis and reporting. By watching for events as they occur, your service won’t require repeated and laborious API requests to fetch previous data.</p>
+
+    <p><strong>Note: timely payment of invoices in Stripe requires proper acknowledgement by all webhooks associated with the account. Please make sure your platform’s webhooks always <a href="../webhooks/index.html#responding_to_a_webhook">respond properly</a> to avoid a delay in your users’ payments.</strong></p>
+
+    <h1 id="disconnecting">Disconnecting</h1>
+
+    <p>At any point in time, a connected user can disconnect their account from your platform. When that occurs, you’ll receive an <code>account.application.deauthorized</code> event notification at your webhook URL. You can use this notification to perform any necessary clean up on your end, such as disabling the user’s account (on your site) and removing their data.</p>
+
+    <p>You can disconnect an account from your platform by making a request to the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference#post-deauthorize">OAuth deauthorization</a> endpoint.</p>
+
+    <h1 id="charging-for-your-service">Charging for your service</h1>
+
+    <p>Your analytics service is working great: you’re connecting users, reading in historical data, recording new events as they occur, and crunching the numbers. But…you’re apparently doing all this for free! When it’s time to monetize your service, Stripe can help there, too.</p>
+
+    <p>As your platform has, appropriately, a read-only connection, you cannot charge your users through Connect. That’s for the best, as such an arrangement may scare off business and make the accounting all wonky. But it’s still easy to accept payment for your service: your platform’s Stripe account can be used to process its own charges. After your customers connect their Stripe accounts, ask for their <a href="https://stripe.com/docs/checkout/tutorial">payment details</a> and then <a href="../subscriptions.1">create a subscription</a> for them in your Stripe account. Store the created customer ID with the associated Stripe ID, and you’ll easily be able to see which of your users are paid and active, and which are not.</p>
+
+    <p>While you’re at it, run your Stripe account’s data through your analytics code to parse how your own business is growing!</p>
+
+    <hr />
+
+    <h1>Other recipes</h1>
+    <p>Looking to build another type of platform? Check out these other recipes.</p>
+    <ul>
+  <li><a href="../connect/index.html">Getting Started with Connect</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fstore-builder">Building a Store Builder</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fon-demand-app">Building an On-demand App</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fanalytics-service" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

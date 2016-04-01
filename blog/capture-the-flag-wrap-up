@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" id="blog" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Follow the Stripe blog for product announcements, feature updates, new countries, and technical posts about payments." />
+
+<link rel="shortcut icon" href="../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../assets/blog-ada6c3a77cd627b09ac436c3a82dd49d.css">
+  <link rel="stylesheet" href="../assets/blogposts-b9a9b6ffe0287dc66146bd753faba55d.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../assets/blog-776e3ed92eef5022ed98688d349fd7af.js"></script>
+  <script src="../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.rss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>    Capture the Flag: Wrap-up
+</title>
+    <meta content="J1FdMjNPw4GxHlRKL2p0Q-aI4P2fjKE_v4h_RiC0meeve1jxKiyGMUIODppxEMjI3jUaFY7ndQd2kugqobk9fQ==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../features">Features</a></li>
+        <li class='pricing'><a href="../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../marketplaces'>Connect</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="page/1">Blog</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <header id="blog-header">
+  	<h1><a href="page/1">Blog</a></h1>
+  	<p><a href="https://twitter.com/stripe">Follow Stripe on Twitter</a></p>
+  </header>
+  
+    <div id='blog-post--capture-the-flag-wrap-up'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../country?country=CH&amp;redirect=%252Fabout#andy">
+      <img src="../img/about/team/andy@2x.jpeg">
+    </a>
+    <h1><a href="../country?country=CH&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up">Capture the Flag: Wrap-up<br /></a></h1>
+    <p>
+      <a class="author" href="../country?country=CH&amp;redirect=%252Fabout#andy">Andy Brody</a>
+      <span>on</span> March 19, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+<p> <strong>Update:</strong> We've also posted downloadable Stripe CTF
+disk images, available by <a
+href="https://stripe-ctf.s3.amazonaws.com/stripe-ctf-server-ubuntu-10.04-lucid-amd64-20120427-0108.img.tar.gz">direct
+download</a> or <a
+href="https://stripe-ctf.s3.amazonaws.com/stripe-ctf-server-ubuntu-10.04-lucid-amd64-20120427-0108.img.tar.gz?torrent">BitTorrent</a>. </p>
+
+<p> You're free to use the disk images to do your own cool things. The
+Stripe code on the disk images is licensed under a BSD license. Third
+party code included in the disk images is subject to its own license,
+which is included. We'd appreciate you letting folks know where you
+got the original code and we'd love to hear what cool things you're
+doing (but that's up to you).</p>
+
+<p> Janos Gyerik has also created a <a
+href="http://www.janosgyerik.com/hacking-contest-on-a-live-cd/">Live
+CD image</a> of the Stripe CTF that makes it even easier to get
+started. </p>
+
+<hr>
+
+<p>
+We ran a
+<a href="../country?country=CH&amp;redirect=%252Fblog%252Fcapture-the-flag">capture the flag</a>
+security challenge a few weeks ago. Expecting only one or two hundred people
+to look at it over the course of its week-long run, we were blown away when
+we found 900 simultaneous users logged in just a couple hours after we
+launched. Thanks for bearing with us while we provisioned more servers to
+handle the load.
+</p>
+
+<div class="image-center">
+<h3 class="chart-title">Simultaneous users over time</h3>
+<img src="../img/blog/posts/ctf-wrap-up/users_over_time_2.png" width="579" height="256" data-hires="true" /></div>
+
+<p>
+Our users were largely anonymous, but we had people log in from 12,000 unique
+IP addresses. Among them we saw everything from startups and security firms to
+major universities and Fortune 100 technology companies. It was awesome to see
+participants hailing from all around the world.
+</p>
+
+<div class="image-center">
+<a href="../img/blog/posts/ctf-wrap-up/map.unique_ips.png" class="zoom" maxSize="2048x1000"><img src="../img/blog/posts/ctf-wrap-up/map.unique_ips.small.png" width="570" height="274" /></a></div>
+
+<p>
+By popular demand, we've created virtual machine images that you can use to run
+your very own Stripe CTF server. They're available in the Amazon Web Services
+us-west-1 and us-east-1 regions as AMIs owned by account
+<strong>928171847254</strong>. When you log in as user <strong>ctf</strong>,
+you'll see instructions on how to get it up and running. We recommend using VPC
+so you can set outbound firewall rules.
+</p>
+
+<p>
+I've posted the
+<a href="http://speakerdeck.com/u/ab/p/stripe-capture-the-flag-meetup">
+slides</a>
+from my short security talk given at the meetup and the
+<a href="https://github.com/abrody/stripe-ctf/">source code</a>
+of each level. Several people have
+<a href="http://blog.zx2c4.com/781">posted</a>
+<a href="https://github.com/dividuum/stripe-ctf">their</a>
+<a href="https://gist.github.com/1899630">solutions</a>
+online.
+You can find more by searching for the final
+password: <a href="https://www.google.com/search?q=theflagl0eFTtT5oi0nOTxO5">
+theflagl0eFTtT5oi0nOTxO5</a>.</p>
+
+<p>To the 250 people who solved every level and
+captured the flag: congratulations, your T-shirts will be in the mail soon! To
+everyone else who participated: we hope you enjoyed it as much as we&nbsp;did.
+</p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      March 19, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+
+  
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../country?country=AU&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Australia" src="../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=CA&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Canada" src="../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=DK&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Denmark" src="../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=FI&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Finland" src="../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=GB&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="United Kingdom" src="../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=IE&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Ireland" src="../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=NO&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Norway" src="../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=SE&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Sweden" src="../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=US&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="United States" src="../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=AT&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Austria" src="../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BE&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Belgium" src="../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BR&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Brazil" src="../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=FR&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="France" src="../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=DE&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Germany" src="../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=IT&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Italy" src="../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=JP&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Japan" src="../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=LU&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Luxembourg" src="../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=MX&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Mexico" src="../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=NL&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Netherlands" src="../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=PT&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Portugal" src="../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=SG&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Singapore" src="../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=ES&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" >
+                  <img width="23" height="17" alt="Spain" src="../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=CH&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../pricing">Pricing</a></li>
+      <li><a href="page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("blog");
+    </script>
+
+  </body>
+</html>

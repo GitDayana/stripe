@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en" id="atlas" class="">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Stripe is a suite of APIs that powers commerce for businesses of all sizes." />
+
+<link rel="shortcut icon" href="../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../assets/atlas_faq-b9c259ffb9aebfafcdf53c1a8b6fe539.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../assets/atlas/animate.min-380d735c9c568662ca312bd3c36f0d6c.js"></script>
+  <script src="../assets/atlas/scroll.min-a526def41d23dfc3b33921d9b5b312ba.js"></script>
+
+
+
+    <title>Stripe: Atlas FAQ</title>
+    <meta content="A8-nVX4J8UbFHwTMYXMkgq31fOCf3DRcU7gHa3a8dQyL5aKWZ2q09jYPXhw_CZgJlUiGCI634GSaopAH97HRlg==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../features">Features</a></li>
+        <li class='pricing'><a href="../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../marketplaces'>Connect</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="../blog/page/1">Blog</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        <div id="main-content">
+  <header>
+    <svg viewBox="0 0 1226 340" id="back-rainbow" preserveAspectRatio="none">
+      <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="15%" id="back-rainbow-gradient">
+          <stop stop-color="#8DC6D8" offset="12%"/>
+          <stop stop-color="#CE97DF" offset="40%"/>
+          <stop stop-color="#FFCF9F" offset="90%"/>
+        </linearGradient>
+      </defs>
+      <path d="M1074 0C673.94.2 303.56 126 0 340h1226V6c-50.1-3.72-100.95-5.8-152-6z"
+        fill="url(#back-rainbow-gradient)" />
+    </svg>
+
+    <svg viewBox="0 0 1031 475" id="front-rainbow" preserveAspectRatio="none">
+      <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="25%" id="front-rainbow-gradient">
+          <stop stop-color="#00D7B9" offset="0%"/>
+          <stop stop-color="#B95DD7" offset="50%"/>
+          <stop stop-color="#FFB367" offset="100%"/>
+        </linearGradient>
+      </defs>
+      <path d="M0 475h1031V0C630.46 33.34 270 208.52 0 475z"
+        fill="url(#front-rainbow-gradient)" fill-opacity="0.65" />
+    </svg>
+
+    <svg viewBox="0 0 1280 110" preserveAspectRatio="none" id="header-curve-shadow">
+      <path d="M1280 3.9V110H0C194 71.33 662-19.9 1280 3.9z" />
+    </svg>
+
+    <svg viewBox="0 0 1280 110" preserveAspectRatio="none" id="header-curve">
+      <path d="M1280 3.9V110H0C194 71.33 662-19.9 1280 3.9z" fill="#fff" />
+    </svg>
+
+    <div id="main-heading">
+      <div id="atlas-logo">
+        <a href="index.html">
+          <span class="shadow"></span>
+          <span class="ring"></span>
+          <span class="glyph"></span>
+        </a>
+      </div>
+      <div id="main-heading-title">
+        <h1>Stripe Atlas</h1>
+        <h2>Frequently asked questions</h2>
+      </div>
+    </div>
+  </header>
+
+  <main class="inner-col">
+    <section id="toc">
+      <table>
+        <caption>Table of Contents</caption>
+        <tr>
+          <th scope="row">General</th>
+          <td>
+            <ul>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-is-Stripe-Atlas">What is Stripe Atlas?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Who-should-use-Atlas">Who should use Atlas?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#How-do-I-get-access">How do I get access?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Who-is-in-the-Stripe-Atlas-network">Who is in the Stripe Atlas network?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-I-use-Stripe-Atlas-if-I-m-based-in-a-country-Stripe-already-supports">Can I use Stripe Atlas if I’m based in a country Stripe already supports?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-I-use-Stripe-Atlas-if-I-m-based-in-Cuba">Can I use Stripe Atlas if I’m based in Cuba?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-does-Atlas-cost">What does Atlas cost?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Are-there-any-additional-costs-I-should-be-aware-of">Are there any additional costs I should be aware of?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-resources-will-I-receive-from-Amazon-Web-Services">What resources will I receive from Amazon Web Services?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Who-advises-Stripe-Atlas">Who advises Stripe Atlas?</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Application</th>
+          <td>
+            <ul>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#How-does-it-work">How does it work?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#How-long-does-it-take-to-set-up">How long does it take to set up?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#I-made-a-mistake-on-my-application--How-can-I-correct-it">I made a mistake on my application. How can I correct it?</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Incorporation</th>
+          <td>
+            <ul>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Why-should-I-incorporate-in-Delaware">Why should I incorporate in Delaware?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-type-of-business-will-be-created">What type of business will be created?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-documents-will-be-created">What documents will be created?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-Stripe-help-me-set-up-a-different-company-structure">Can Stripe help me set up a different company structure?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Do-I-need-to-be-a-U-S--citizen-to-incorporate-a-U-S--company">Do I need to be a U.S. citizen to incorporate a U.S. company?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-Stripe-help-me-incorporate-in-other-countries">Can Stripe help me incorporate in other countries?</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Bank account</th>
+          <td>
+            <ul>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-type-of-bank-account-will-be-opened">What type of bank account will be opened?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-fees-will-be-charged-for-my-bank-account">What fees will be charged for my bank account?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#How-can-I-access-my-bank-account">How can I access my bank account?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-my-Stripe-funds-be-deposited-to-a-bank-account-outside-the-U-S-">Can my Stripe funds be deposited to a bank account outside the U.S.?</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Stripe account</th>
+          <td>
+            <ul>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-can-I-do-with-a-U-S--Stripe-account">What can I do with a U.S. Stripe account?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-I-use-Stripe-Connect">Can I use Stripe Connect?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-I-use-Relay">Can I use Relay?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-I-use-Stripe-Atlas-with-my-non-U-S--bank-account">Can I use Stripe Atlas with my non-U.S. bank account?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Can-I-charge-customers-in-my-local-currency">Can I charge customers in my local currency?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Do-I-have-to-use-Stripe">Do I have to use Stripe?</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Tax &amp; legal</th>
+          <td>
+            <ul>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Will-Stripe-give-me-tax-and-legal-advice">Will Stripe give me tax and legal advice?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-will-my-tax-and-legal-obligations-be-once-I-set-up-the-business">What will my tax and legal obligations be once I set up the business?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Will-Stripe-provide-help-with-ongoing-legal-compliance-and-tax-filings">Will Stripe provide help with ongoing legal compliance and tax filings?</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-is-an-Employer-Identification-Number">What is an Employer Identification Number?</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <dl id="faq">
+        <h2 id="general">General</h2>
+          <dt id="What-is-Stripe-Atlas">What is Stripe Atlas?</dt>
+
+
+            <dd class="faq-answer"><p>Stripe Atlas is a new product designed to give entrepreneurs access to the basic building blocks for starting a global internet business. We help you:</p> <ul>
+  <li>Incorporate a company in the U.S.</li>
+  <li>Open a U.S. bank account and get a tax ID number.</li>
+  <li>Start a Stripe account to accept payments from around the world.</li>
+  <li>Get guidance about U.S. law and taxes from Orrick and PwC.</li>
+  <li>Access tools and resources from Amazon Web Services (as well as $15,000 in AWS promotional credits for beta users).</li>
+</ul> <p><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#How-does-it-work">Learn more</a> about how it works.</p>
+</dd>
+          <dt id="Who-should-use-Atlas">Who should use Atlas?</dt>
+
+
+            <dd class="faq-answer"><p>We expect Atlas to be most beneficial for entrepreneurs who have a global customer base, plan to raise money from global investors, or who plan to build an operational presence in the U.S.</p> <p>While incorporating in the U.S. can make many things much easier, it also comes with long-term legal and tax implications. You should think carefully about whether it’s best for your business and consult advisors as necessary.</p> <p>(Please note that there are a number of <a href="../prohibited-businesses">business categories that we can’t support</a> in the U.S.)</p>
+</dd>
+          <dt id="How-do-I-get-access">How do I get access?</dt>
+
+
+            <dd class="faq-answer"><p>Stripe Atlas is starting out with an invite-only private beta. We want to make Atlas available to as many people as possible as quickly as we can, but we can only accept a limited number of entrepreneurs to start.</p> <p>To get an invite, you can <a href="index.html#request-access">apply directly</a> to Stripe or get a referral from anyone in the <a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Who-is-in-the-Stripe-Atlas-network">Atlas network</a>. In either case, we’ll reach out as quickly as we can.</p>
+</dd>
+          <dt id="Who-is-in-the-Stripe-Atlas-network">Who is in the Stripe Atlas network?</dt>
+
+            <dd>
+              <p>We’re working with more than seventy accelerators, investors, and partners from around the world to get Atlas in the hands of promising startups:</p>
+              <ul id="network">
+                <li>
+                  <a href="http://212ltd.com/">
+                    <strong>212 LTD</strong>
+                    Turkey
+                  </a>
+                </li>
+                <li>
+                  <a href="http://500.co/">
+                    <strong>500 Startups</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="https://abc-accelerator.com/">
+                    <strong>ABC Accelerator</strong>
+                    Slovenia
+                  </a>
+                </li>
+                <li>
+                  <a href="http://allvp.vc/home">
+                    <strong>ALLVP</strong>
+                    Mexico
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.alvencapital.com/en/">
+                    <strong>Alven</strong>
+                    France
+                  </a>
+                </li>
+                <li>
+                  <a href="http://angelpad.org/">
+                    <strong>AngelPad</strong>
+                    USA
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.aslanobacapital.com/">
+                    <strong>Aslanoba Capital</strong>
+                    Turkey
+                  </a>
+                </li>
+                <li>
+                  <a href="http://astrolabs.com/">
+                    <strong>AstroLabs</strong>
+                    United Arab Emirates
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.atomico.com">
+                    <strong>Atomico</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.beenext.com">
+                    <strong>BEENEXT</strong>
+                    Southeast Asia
+                  </a>
+                </li>
+                <li>
+                  <a href="http://blackbox.vc/">
+                    <strong>Blackbox</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.bluechilli.com/">
+                    <strong>BlueChilli</strong>
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.brainsparks.ph/">
+                    <strong>BrainSparks</strong>
+                    Philippines
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.creandum.com/">
+                    <strong>Creandum</strong>
+                    Sweden
+                  </a>
+                </li>
+                <li>
+                  <a href="http://digitalfactory.vc/">
+                    <strong>Digital Factory</strong>
+                    Hungary
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.earlybird.com/">
+                    <strong>Earlybird</strong>
+                    Europe
+                  </a>
+                </li>
+                <li>
+                  <a href="http://east.vc/">
+                    <strong>East Ventures</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="https://efounders.co/">
+                    <strong>eFounders</strong>
+                    France
+                  </a>
+                </li>
+                <li>
+                  <a href="http://11.me/">
+                    <strong>Eleven</strong>
+                    Bulgaria
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.endeavor.org/">
+                    <strong>Endeavor</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.flat6labs.com/">
+                    <strong>Flat6Labs</strong>
+                    Egypt
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.frontline.vc">
+                    <strong>Frontline Ventures</strong>
+                    Ireland
+                  </a>
+                </li>
+                <li>
+                  <a href="http://gan.co">
+                    <strong>GAN</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://germanaccelerator.com">
+                    <strong>German Accelerator</strong>
+                    Germany
+                  </a>
+                </li>
+                <li>
+                  <a href="http://goldengate.vc/">
+                    <strong>Golden Gate Ventures</strong>
+                    Southeast Asia
+                  </a>
+                </li>
+                <li>
+                  <a href="http://goldenvp.com/">
+                    <strong>Golden Venture Partners</strong>
+                    Canada
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.h2.vc/">
+                    <strong>H2 Ventures</strong>
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a href="http://hardgamma.com">
+                    <strong>HardGamma Ventures</strong>
+                    Poland
+                  </a>
+                </li>
+                <li>
+                  <a href="http://hubbathailand.com/">
+                    <strong>Hubba</strong>
+                    Thailand
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.hummingbird.vc/">
+                    <strong>Hummingbird Ventures</strong>
+                    Turkey
+                  </a>
+                </li>
+                <li>
+                  <a href="http://incubadorasinergia.com/home">
+                    <strong>Incubadora Sinergia</strong>
+                    Uruguay
+                  </a>
+                </li>
+                <li>
+                  <a href="http://innovationnest.co">
+                    <strong>Innovation Nest</strong>
+                    Poland
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.internationalaccelerator.com/">
+                    <strong>International Accelerator</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://ispacegh.com/">
+                    <strong>iSpace Foundation</strong>
+                    Ghana
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.jungle-ventures.com/">
+                    <strong>Jungle Ventures</strong>
+                    Singapore
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.kimaventures.com">
+                    <strong>Kima Ventures</strong>
+                    France
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.knifecap.com/">
+                    <strong>Knife Capital</strong>
+                    South Africa
+                  </a>
+                </li>
+                <li>
+                  <a href="http://kstartup.com/">
+                    <strong>Kstartup</strong>
+                    South Korea
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.l5lab.com/">
+                    <strong>L5 Lab</strong>
+                    Nigeria
+                  </a>
+                </li>
+                <li>
+                  <a href="http://launchub.com/">
+                    <strong>LAUNCHub</strong>
+                    Bulgaria
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.lightninglab.co.nz/">
+                    <strong>Lightning Lab</strong>
+                    New Zealand
+                  </a>
+                </li>
+                <li>
+                  <a href="https://accelerator.mymagic.my/en/">
+                    <strong>MaGIC</strong>
+                    Malaysia
+                  </a>
+                </li>
+                <li>
+                  <a href="http://meltwater.org/">
+                    <strong>Meltwater Foundation</strong>
+                    Ghana
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.merchise.com">
+                    <strong>Merchise Startup Circle</strong>
+                    Cuba
+                  </a>
+                </li>
+                <li>
+                  <a href="https://muru-d.com/">
+                    <strong>muru-D</strong>
+                    Australia &amp; Singapore
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.nailab.co.ke/">
+                    <strong>Nailab</strong>
+                    Kenya
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.nazca.vc/">
+                    <strong>Nazca Ventures</strong>
+                    Latin America
+                  </a>
+                </li>
+                <li>
+                  <a href="http://northzone.com">
+                    <strong>Northzone</strong>
+                    Sweden
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nxtplabs.com/">
+                    <strong>Nxtp.Labs</strong>
+                    Latin America
+                  </a>
+                </li>
+                <li>
+                  <a href="http://opencoffeeclub.lt/">
+                    <strong>Open Coffee Club</strong>
+                    Lithuania
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.outbox.co.ug/">
+                    <strong>Outbox Uganda</strong>
+                    Uganda
+                  </a>
+                </li>
+                <li>
+                  <a href="http://plugandplaytechcenter.com/">
+                    <strong>Plug and Play</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.pointninecap.com/">
+                    <strong>Point Nine Capital</strong>
+                    Germany
+                  </a>
+                </li>
+                <li>
+                  <a href="http://realventures.com/">
+                    <strong>Real Ventures</strong>
+                    Canada
+                  </a>
+                </li>
+                <li>
+                  <a href="http://rpev.com.br/">
+                    <strong>Redpoint eVentures</strong>
+                    Brazil
+                  </a>
+                </li>
+                <li>
+                  <a href="http://savannah.vc/">
+                    <strong>Savannah Fund</strong>
+                    Africa
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.seedstars.com/">
+                    <strong>Seedstars</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="https://sosv.com/">
+                    <strong>SOSV</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.sparklabsglobal.com/">
+                    <strong>SparkLabs Global Ventures</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://speedlebanon.com/">
+                    <strong>Speed@BDD</strong>
+                    Lebanon
+                  </a>
+                </li>
+                <li>
+                  <a href="http://startupchile.org/">
+                    <strong>Start-Up Chile</strong>
+                    Chile
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.startmate.com.au/">
+                    <strong>Startmate</strong>
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.startupgrind.com/">
+                    <strong>Startup Grind</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.startupnext.co/">
+                    <strong>Startup Next</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="https://startupturkey.com/">
+                    <strong>Startup Turkey</strong>
+                    Turkey
+                  </a>
+                </li>
+                <li>
+                  <a href="http://startupwiseguys.com/">
+                    <strong>Startup Wise Guys</strong>
+                    Estonia
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.startupbootcamp.org/">
+                    <strong>Startupbootcamp</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://startuphighway.com/">
+                    <strong>StartupHighway</strong>
+                    Lithuania
+                  </a>
+                </li>
+                <li>
+                  <a href="http://startupyard.com">
+                    <strong>StartupYard</strong>
+                    Czech Republic
+                  </a>
+                </li>
+                <li>
+                  <a href="http://stoneandchalk.com.au/">
+                    <strong>Stone &amp; Chalk</strong>
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a href="http://tankstreamlabs.com/">
+                    <strong>Tank Stream Labs</strong>
+                    Australia
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.techstars.com">
+                    <strong>Techstars</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://thejunction.co.il/">
+                    <strong>The Junction</strong>
+                    Israel
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.thefamily.co/#welcome">
+                    <strong>TheFamily</strong>
+                    France
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.vanedgecapital.com/">
+                    <strong>Vanedge Capital</strong>
+                    Canada
+                  </a>
+                </li>
+                <li>
+                  <a href="http://wayra.co/en/">
+                    <strong>Wayra</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.ycombinator.com/">
+                    <strong>Y Combinator</strong>
+                    Global
+                  </a>
+                </li>
+                <li>
+                  <a href="http://zipzg.com/en/">
+                    <strong>ZIP</strong>
+                    Croatia
+                  </a>
+                </li>
+              </ul>
+              <p>We’re continuing to build our network of high-quality incubators, accelerators, investors, and others who can refer top global entrepreneurs to the program. If you fit that bill and would like to join the Stripe Atlas network, please drop us a line at <a href="mailto:atlas@stripe.com">atlas@stripe.com</a>.</p>
+            </dd>
+
+          <dt id="Can-I-use-Stripe-Atlas-if-I-m-based-in-a-country-Stripe-already-supports">Can I use Stripe Atlas if I’m based in a country Stripe already supports?</dt>
+
+
+            <dd class="faq-answer"><p>Atlas can be useful for all entrepreneurs who want to incorporate a company and open a bank account in the U.S. (We’re also looking to add support for other regions in the future.) But, you don’t need to use Atlas to use Stripe! Stripe is already available locally in <a href="../pt">24 countries</a> today—and we’re continuing to add more.
+</dd>
+          <dt id="Can-I-use-Stripe-Atlas-if-I-m-based-in-Cuba">Can I use Stripe Atlas if I’m based in Cuba?</dt>
+
+
+            <dd class="faq-answer"><p>As of March 18, 2016—yes! The expansion of Stripe Atlas to Cuba was facilitated by the rule changes announced on March 15 by the Obama administration. Among other things, the new regulations allow U.S. banks to open accounts for Cuban nationals who reside in Cuba. There are still some restrictions on the types of transactions that American banks are able to process (for instance, any companies owned in part or wholly by the government). Stripe will work closely with our partners, including Silicon Valley Bank, to ensure that any services provided to Cuban nationals comply with the updated guidelines.
+</dd>
+          <dt id="What-does-Atlas-cost">What does Atlas cost?</dt>
+
+
+            <dd class="faq-answer"><p>During the beta, we’ll charge a one-time fee of $500 after everything has been set up. This fee covers incorporating your company in Delaware, opening your business bank account at Silicon Valley Bank, and registering your company with the IRS. You can pay this fee with a credit card or via bank transfer.</p> <p>Just request an invite from a member of the <a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#Who-is-in-the-Stripe-Atlas-network">Atlas network</a> or <a href="index.html#request-access">apply directly</a>.</p>
+</dd>
+          <dt id="Are-there-any-additional-costs-I-should-be-aware-of">Are there any additional costs I should be aware of?</dt>
+
+
+            <dd class="faq-answer"><p>
+  There aren’t any hidden fees to incorporate your company, open a business bank account, or to get set up on Stripe.
+</p> <ul>
+  <li>Atlas users will pay the <a href="../country?country=US&amp;redirect=%252Fpricing">standard Stripe fees</a> of 2.9% + 30¢ per successful charge.</li>
+  <li>Silicon Valley Bank will waive account maintenance fees for the first 24 months. SVB will share more details about your account’s complete fee schedule and functionality once your bank account is open.</li>
+</ul> <p>
+  Starting a business in the U.S. comes with significant obligations, including the payment of U.S. taxes and compliance with applicable laws. You’ll need to be prepared to handle these requirements. At a minimum, you will need to:
+</p> <ul>
+  <li>Pay a registered agent located in Delaware to act as a liaison between your company and the state. Stripe will set you up with a registered agent at a rate of $125 per year. (The first year’s fee is covered by Stripe.)</li>
+  <li>File an annual report with Delaware, which costs $50.</li>
+  <li>Pay an annual Franchise Tax to the state of Delaware—a minimum of $175 per year.</li>
+  <li>Pay federal income tax on income generated in the U.S.</li>
+</ul> <p>
+  We strongly recommend that you work with tax and legal experts to handle these ongoing requirements. To help, Atlas users get direct access to resources and guidance from <a href="https://www.orrick.com/Pages/default.aspx">Orrick</a> and <a href="http://www.pwc.com/">PwC</a>. You can also chat over the phone for free with a professional from PwC.
+</p>
+</dd>
+          <dt id="What-resources-will-I-receive-from-Amazon-Web-Services">What resources will I receive from Amazon Web Services?</dt>
+
+
+            <dd class="faq-answer"><p>
+  Designed to help startups scale their infrastructure, AWS will provide special access to technical labs, web-based training, and specialized support. Beta users of Atlas will also get access to $15,000 of AWS Promotional Credits.
+</p>
+</dd>
+          <dt id="Who-advises-Stripe-Atlas">Who advises Stripe Atlas?</dt>
+
+
+            <dd class="faq-answer"><p>
+  We’ve assembled an advisory board of experienced entrepreneurs and leaders, including:</p>
+  <ul>
+  <li><strong>Larry Summers</strong>: 71st Secretary of the Treasury of the United States.</li>
+  <li><strong>Fadi Ghandour</strong>: Founder and Vice Chairman of Aramex and Executive Chairman of <a href="http://www.wamdacapital.com/">Wamda Capital</a>.</li>
+  <li><strong>Neal Wolin</strong>: Former Deputy Assistant to the President and Deputy Counsel to the President for Economic Policy (Obama Administration).</li>
+  <li><strong>Linda Rottenberg</strong>: Co-founder and CEO of <a href="http://www.endeavor.org/">Endeavor</a>.</li>
+  <li><strong>Ben Lawsky</strong>: Former Superintendent of Financial Services, State of New York.</li>
+</ul> <p>This group will provide guidance to Stripe on the best ways to support global entrepreneurs and improve local economies.</p>
+</dd>
+        <h2 id="application">Application</h2>
+          <dt id="How-does-it-work">How does it work?</dt>
+
+
+            <dd class="faq-answer"><p>
+  Once you’re invited to Stripe Atlas, you’ll provide us with some more information about your product, team, and how you’d like to set up your new company (like the name!).
+</p> <p>
+  Using this info, we’ll generate the necessary documents to incorporate your company, open your bank account, and set up your Stripe account. We’ll invite each of your company representatives to sign the completed documents electronically.
+</p> <p>
+  After you’ve signed the documents, we’ll get to work incorporating your company, opening your bank account, and setting up your Stripe account. We’ll let you know as soon as the process is complete, which generally takes between a few days and a week after the documents are signed. You’ll then be able to start <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">creating live charges</a> using Stripe.
+</p>
+</dd>
+          <dt id="How-long-does-it-take-to-set-up">How long does it take to set up?</dt>
+
+
+            <dd class="faq-answer"><p>
+  As soon as we receive your application, you can <a href="../docs.1">start building</a> your Stripe integration with test data. In most cases, incorporation and setting up a business bank account occurs within a week of submitting signed documents. You’ll have your Tax ID Number within two weeks. You’ll then immediately be able to accept payments from your customers.
+</p>
+</dd>
+          <dt id="I-made-a-mistake-on-my-application--How-can-I-correct-it">I made a mistake on my application. How can I correct it?</dt>
+
+
+            <dd class="faq-answer"><p>
+  You can view, edit, and save your Atlas application until you’re ready to submit it to Stripe. If you notice a mistake on your application after submitting it to Stripe, please email <a href="mailto:atlas@stripe.com">atlas@stripe.com</a> for help.
+</p>
+</dd>
+        <h2 id="incorporation">Incorporation</h2>
+          <dt id="Why-should-I-incorporate-in-Delaware">Why should I incorporate in Delaware?</dt>
+
+
+            <dd class="faq-answer"><p>
+  The U.S. just happens to be the first incorporation hub we support, but we plan to expand the program and offer entrepreneurs the option of incorporating in other regions around the world that also give them access to great tools and banking infrastructure. That said, some hubs better support developers that are looking to establish a company that’s global from day one.
+</p> <p>
+  For example, having an incorporated entity in Delaware allows companies to issue stock to employees, makes it easy to raise money from global investors, and provides the stability of clear corporate rules and case law. (This is why 60% of the Fortune 500 are incorporated in Delaware.) In addition, since the U.S. is such a large and developed economy, many more business services (including Stripe) are available to U.S. companies than might be available to companies based in smaller countries with emerging economies.
+</p>
+</dd>
+          <dt id="What-type-of-business-will-be-created">What type of business will be created?</dt>
+
+
+            <dd class="faq-answer"><p>
+  With Stripe Atlas, you can establish a C-Corporation for your business in Delaware.
+</p> <p>
+  For a little background: most Fortune 500 companies and Silicon Valley startups (including Stripe!) choose to incorporate in Delaware. It’s the only state to have a separate business court system (the Court of Chancery), which means that any legal issues can be ruled on quickly, by judges who specialize in corporate law. Many investors also prefer to invest in Delaware corporations for these reasons.
+</p> <p>
+  You can set up your C-Corporation in one of two ways:
+</p> <ul>
+    <li><strong>Standalone entity</strong>: An entity that could be owned by a group of founders, employees, investors, and others. We’ll help you incorporate the company, and Orrick will provide helpful templates that you can use (with the assistance of legal counsel) to issue shares in the future.</li>
+    <li><strong>Subsidiary entity</strong>: An entity that is a wholly-owned subsidiary of an existing business entity (such as an international parent company).</li>
+</ul> <p>
+  The choice of a standalone or subsidiary company can impact your future tax and compliance obligations. To help with this decision, Atlas users get access to tax and legal guides from PwC and Orrick, and a free phone call with an expert from PwC. If you have your own legal counsel or tax advisors, we’d recommend asking their advice as well.
+</p>
+</dd>
+          <dt id="What-documents-will-be-created">What documents will be created?</dt>
+
+
+            <dd class="faq-answer"><p> After you submit information about your business in the account application, we will generate the basic documents to incorporate your company, open a bank account, and obtain an <a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#What-is-an-Employer-Identification-Number">Employer Identification Number</a> with the IRS. This includes: </p> <ul>
+  <li>Incorporating your company:</li>
+  <ul>
+    <li>Certificate of Incorporation</li>
+    <li>Action by Incorporator</li>
+    <li>Bylaws</li>
+    <li>Board Approval of Organizational Resolutions</li>
+  </ul>
+  <li>Opening a bank account:</li>
+  <ul>
+    <li>Bank Deposit Agreement with Silicon Valley Bank</li>
+  </ul>
+  <li>Taxes:</li>
+  <ul>
+    <li>SS4 (to request an Employee Identification Number from the IRS)</li>
+  </ul>
+</ul> <p>
+  We’ll also give you annotated templates of documents you can use to issue shares to founders, employees and other shareholders, including:
+</p> <ul>
+  <li>Stock Plan</li>
+  <li>Stock Purchase Agreements</li>
+  <li>Stock Option Awards</li>
+  <li>Stockholder Consent</li>
+  <li>Confidentiality and Invention Assignment Agreements</li>
+</ul> <p>
+  All legal documents and annotated templates are provided by the global technology group at Orrick, a leading law firm. Atlas entrepreneurs will also have access to Orrick’s legal guide, which walks through the key decisions for incorporating and managing a U.S. business.
+</p>
+</dd>
+          <dt id="Can-Stripe-help-me-set-up-a-different-company-structure">Can Stripe help me set up a different company structure?</dt>
+
+
+            <dd class="faq-answer"><p>
+  We currently only support establishing a C-Corporation in Delaware but are planning to add support for other structures, such as Limited Liability Companies (LLCs), in the future.
+</p>
+</dd>
+          <dt id="Do-I-need-to-be-a-U-S--citizen-to-incorporate-a-U-S--company">Do I need to be a U.S. citizen to incorporate a U.S. company?</dt>
+
+
+            <dd class="faq-answer"><p>
+  No, there are no requirements that the officers or owners of a U.S. company be U.S. citizens or reside in the U.S.
+</p>
+</dd>
+          <dt id="Can-Stripe-help-me-incorporate-in-other-countries">Can Stripe help me incorporate in other countries?</dt>
+
+
+            <dd class="faq-answer"><p>
+  We currently only support incorporating your company in Delaware but are planning to add support for non-U.S. locations in the future.
+</p> <p>
+  We’re eager to work with banks, government agencies and others who can help us offer incorporation and banking services in non-US locations. Email <a href="mailto:atlas@stripe.com">atlas@stripe.com</a> if you’d like to help us bring Atlas incorporation to your country.
+</p>
+</dd>
+        <h2 id="bankaccount">Bank account</h2>
+          <dt id="What-type-of-bank-account-will-be-opened">What type of bank account will be opened?</dt>
+
+
+            <dd class="faq-answer"><p>
+  Stripe Atlas will open a USD-denominated business bank account for your new company at Silicon Valley Bank.
+</p> <p>
+  Once your account is open, you’ll be able to deposit funds (including transfers from Stripe), send transfers, and get account reports.
+</p>
+</dd>
+          <dt id="What-fees-will-be-charged-for-my-bank-account">What fees will be charged for my bank account?</dt>
+
+
+            <dd class="faq-answer"><p>
+  Silicon Valley Bank will waive account maintenance fees for the first 24 months. SVB will share more details about your account’s complete fee schedule and functionality once your bank account is open.
+</p>
+</dd>
+          <dt id="How-can-I-access-my-bank-account">How can I access my bank account?</dt>
+
+
+            <dd class="faq-answer"><p>
+  You’ll be prompted to select an administrator for your account with Silicon Valley Bank during the Stripe Atlas application process. Online banking login details will be sent by Silicon Valley Bank to the account administrator once the account is open—in most cases, within a week of submitting signed documents to Stripe.
+</p> <p>
+  If you submitted signed documents more than a week ago, and you have not yet received login details, please email <a href="mailto:atlas@stripe.com">atlas@stripe.com</a> for help.
+</p>
+</dd>
+          <dt id="Can-my-Stripe-funds-be-deposited-to-a-bank-account-outside-the-U-S-">Can my Stripe funds be deposited to a bank account outside the U.S.?</dt>
+
+
+            <dd class="faq-answer"><p> Earnings from your Stripe account will be deposited at your U.S. bank account at Silicon Valley Bank. You can request a wire transfer from your SVB account to another U.S. or international bank account. </p>
+</dd>
+        <h2 id="stripeaccount">Stripe account</h2>
+          <dt id="What-can-I-do-with-a-U-S--Stripe-account">What can I do with a U.S. Stripe account?</dt>
+
+
+            <dd class="faq-answer"><p>
+  U.S. Stripe users (including Atlas users) can accept payments from credit or debit cards issued by Visa, MasterCard, American Express, JCB, Discover, and Diners Club, and can also accept payments using ACH, Apple Pay, Android Pay, Alipay, and Bitcoin. We support payments in <a href="../country?country=CH&amp;redirect=%252Fblog%252Fnew-currencies">135 currencies</a> for U.S. accounts.
+</p>
+</dd>
+          <dt id="Can-I-use-Stripe-Connect">Can I use Stripe Connect?</dt>
+
+
+            <dd class="faq-answer"><p>
+  <a href="../marketplaces">Stripe Connect</a> helps you create a marketplace or platform that supports sellers in any of the countries where Stripe is currently available.
+</p> <p>
+  U.S. businesses (including Atlas users) can also get sellers paid using <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">managed accounts</a>.
+</p> <p>
+  Explore the <a href="../docs/connect/index.html">Connect docs</a> for more information on getting started.
+</p>
+</dd>
+          <dt id="Can-I-use-Relay">Can I use Relay?</dt>
+
+
+            <dd class="faq-answer"><p>
+  Yes, <a href="../country?country=CH&amp;redirect=%252Frelay">Relay</a>, a Stripe service that helps you sell your products in other apps such as Twitter or ShopStyle, is available to all U.S. Stripe users (including Atlas users). Explore the <a href="../docs/relay/index.html">Relay docs</a> for more information on how you can sell in multiple apps with a single integration.
+</p>
+</dd>
+          <dt id="Can-I-use-Stripe-Atlas-with-my-non-U-S--bank-account">Can I use Stripe Atlas with my non-U.S. bank account?</dt>
+
+
+            <dd class="faq-answer"><p>
+  Not directly. Atlas helps entrepreneurs to incorporate a U.S. company and establish a U.S. bank account. Any earnings will be deposited in USD to your Silicon Valley Bank account. You’ll then be able to wire funds from your <a href="https://svb.com">Silicon Valley Bank</a> account to your local bank account.
+</p> <p>
+  If you already have a company and bank account in one of the other countries we <a href="../pt">currently support</a>, you can set up a Stripe account in that country to deposit funds to your local bank account.
+</p>
+</dd>
+          <dt id="Can-I-charge-customers-in-my-local-currency">Can I charge customers in my local currency?</dt>
+
+
+            <dd class="faq-answer"><p>
+  U.S. Stripe accounts can charge customers around the world in <a href="https://support.stripe.com/questions/which-currencies-does-stripe-support">135 currencies</a>.
+</p>
+</dd>
+          <dt id="Do-I-have-to-use-Stripe">Do I have to use Stripe?</dt>
+
+
+            <dd class="faq-answer"><p>
+  No, but we hope you will! We’ll automatically create a U.S. Stripe account for all Atlas users but there’s no obligation to use Stripe to accept payments. We’re also here to help you 24/7 with any assistance you need with your Stripe account.
+</p> <p>
+  If you would like to close your Stripe account, you can do so at any time by going to the data tab in your <a href="https://dashboard.stripe.com/account/data">account settings</a> and selecting 'Close my account'
+</p>
+</dd>
+        <h2 id="taxlegal">Tax &amp; legal</h2>
+          <dt id="Will-Stripe-give-me-tax-and-legal-advice">Will Stripe give me tax and legal advice?</dt>
+
+
+            <dd class="faq-answer"><p>We’re trying to streamline and standardize the process of setting up a new company.</p> <p>That said, we’re not providing tax and legal advice. Stripe Atlas users have access to a legal guide prepared by Orrick, a tax guide prepared by PwC, and a free consultation call with an expert from PwC. PwC and Orrick will not provide tailored tax advice unless you engage them to represent you directly as a client. </p> <p>
+  If you have your own legal counsel or tax advisors, we also recommend speaking to them as you decide whether and how to set up your business with Atlas.
+</p>
+</dd>
+          <dt id="What-will-my-tax-and-legal-obligations-be-once-I-set-up-the-business">What will my tax and legal obligations be once I set up the business?</dt>
+
+
+            <dd class="faq-answer"><p>
+  We recommend you take advantage of the guides that cover U.S. legal and tax considerations from Orrick and PwC, and talk to your tax and legal professionals for detailed guidance. At a minimum, you’ll have to pay U.S. federal income taxes on your U.S. income, and pay the Delaware Franchise tax every year.
+</p> <p>
+  If you employ people, own property, or operate locally in the U.S., please seek tax advice on the specific fees and tax obligations for those states.
+</p>
+</dd>
+          <dt id="Will-Stripe-provide-help-with-ongoing-legal-compliance-and-tax-filings">Will Stripe provide help with ongoing legal compliance and tax filings?</dt>
+
+
+            <dd class="faq-answer"><p>
+  No. We strongly encourage you to make arrangements with legal and tax experts for ongoing assistance with legal and tax issues. Orrick and PwC can help with this, if you choose to engage them.
+</p>
+</dd>
+          <dt id="What-is-an-Employer-Identification-Number">What is an Employer Identification Number?</dt>
+
+
+            <dd class="faq-answer"><p>
+  A U.S. Federal Employer Identification Number (EIN) is required to open a U.S. bank account with Silicon Valley Bank, to start a U.S. Stripe account, and to complete federal tax returns. We’ll automatically send Form SS-4 to the IRS to request an EIN for your new company.
+</p> <p>
+  In addition, if your new business entity will have physical employees or pay wages in any U.S. states, you will have to apply for a state employer identification number in those states. We recommend you speak to a tax and legal professional about this.
+</p>
+</dd>
+    </dl>
+    <div id="quick-access">
+      <nav>
+        <h1>Quick access</h1>
+      </nav>
+    </div>
+  </main>
+  <ul id="end-actions" class="inner-col">
+    <li><a href="index.html#request-access">Request access</a>
+    <li><a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq#" class="scroll">Back to top</a>
+  </ul>
+</div>
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../country?country=AU&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Australia" src="../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=CA&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Canada" src="../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=DK&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Denmark" src="../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=FI&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Finland" src="../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=GB&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="United Kingdom" src="../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=IE&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Ireland" src="../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=NO&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Norway" src="../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=SE&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Sweden" src="../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=US&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="United States" src="../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=AT&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Austria" src="../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BE&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Belgium" src="../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BR&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Brazil" src="../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=FR&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="France" src="../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=DE&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Germany" src="../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=IT&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Italy" src="../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=JP&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Japan" src="../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=LU&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Luxembourg" src="../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=MX&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Mexico" src="../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=NL&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Netherlands" src="../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=PT&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Portugal" src="../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=SG&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Singapore" src="../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=ES&amp;redirect=%252Fatlas%252Ffaq" >
+                  <img width="23" height="17" alt="Spain" src="../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=CH&amp;redirect=%252Fatlas%252Ffaq" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../pricing">Pricing</a></li>
+      <li><a href="../blog/page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+      <script src="../assets/atlas/faq.es5-978b0bc64ca8428c125c1da765c6b454.js"></script>
+
+
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("atlas");
+    </script>
+
+  </body>
+</html>

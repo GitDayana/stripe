@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Testing Managed Account Verification</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="otI2ZhBupk6KehhFoThaSEJgshl_W7nO8p2fZxYy5LIq-DOlCQ3j_nlqQpX_QubDet1I8W4wbfY7hwgLlz9AKA==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="selected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Testing Managed Account Verification <span class="beta">Beta</span></h1>
+    <p>A walkthrough of testing different verification states for Connect managed accounts using your test API key.</p>
+  </header>
+  <article>
+
+    <aside class="intro note">
+      <h1>Managed vs. Standalone Accounts</h1>
+      <p>
+    This section deals solely with testing <em>managed</em> accounts, which have fairly involved obligations around information collection and identity verification.
+  </p>
+
+      <p>
+    If you’d like to connect to an existing Stripe account, or have Stripe handle details like identity document collection, take a look at <a href="oauth">standalone accounts</a>.
+  </p>
+    </aside>
+
+    <p>This document assumes you’re familiar with <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">managed accounts</a> overall, as well as <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">updating accounts</a> and <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">identity verification</a>.</p>
+
+    <p>Your platform is responsible for the identity verification process for its managed accounts. Connect streamlines this process by allowing managed accounts to be incrementally verified. Instead of requiring all information up front, Connect asks for a minimal set of information initially but limits how the account can be used (usually by blocking payouts past a certain limit). As the account provides Stripe with more information, we relax these limitations.</p>
+
+    <p>This incremental model of verification is split into stages. Once a managed account does a certain volume, a stage is “triggered”, meaning Stripe will ask for that stage’s information requirements. Once triggered, you have to provide the requested information within a limited time and additional charge volume. Once you’ve provided this information, a stage is completed. We allow you to provide information that may be required before a stage is triggered, which can minimize inconveniences.</p>
+
+    <div style="width: 680px; overflow: scroll;">
+      <p><a href="../../img/connect/testing-verification/connect_verification_diagram.png">
+  <img src="../../img/connect/testing-verification/connect_verification_diagram.png" height="500px" style="border:2px solid #d8d8d8" />
+</a></p>
+    </div>
+
+    <p>The diagram above demonstrates the stages involved in incremental verification for U.S. managed accounts. Note that each country has different requirements.</p>
+
+    <p>In test mode, transitioning between the different stages is done with <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting#trigger-cards">special credit card numbers</a>.</p>
+
+    <p>Let’s manually go through the verification process for a new managed account. It’s recommended to follow this series of commands sequentially. Please note that multiple steps can be completed at the same time: for example, you can create an account with a name and date of birth, bank account, and terms of service acceptance info. This would immediately bypass the first stage of verification, and jump you right to step 5 in this flow.</p>
+
+    <h1 id="creating-a-managed-account">1. Creating a managed account</h1>
+
+    <p>Let’s start by creating a new test mode managed account, adding a bank account, and showing that the managed account holder has accepted the Stripe Terms of Service (ToS.) Explicit ToS acceptance is <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts#tos-acceptance">required for making transfers</a>.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+# Set your secret key: remember to change this to your live secret key in production
+# See your keys here https://dashboard.stripe.com/account/apikeys
+STRIPE_API_KEY=sk_test_BQokikJOvBiI2HlWgH4olfQ2
+
+ACCT=$(&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/accounts&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;managed&lt;/span&gt;=&lt;span class='token string'&gt;true&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;country&lt;/span&gt;=&lt;span class='token string'&gt;US&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;external_account[object]&lt;/span&gt;=&lt;span class='token string'&gt;bank_account&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;external_account[country]&lt;/span&gt;=&lt;span class='token string'&gt;US&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;external_account[currency]&lt;/span&gt;=&lt;span class='token string'&gt;usd&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;external_account[routing_number]&lt;/span&gt;=&lt;span class='token string'&gt;110000000&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;external_account[account_number]&lt;/span&gt;=&lt;span class='token string'&gt;000123456789&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;tos_acceptance[date]&lt;/span&gt;=&lt;span class='token string'&gt;1459289363&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;tos_acceptance[ip]&lt;/span&gt;=&quot;&lt;span class='token string'&gt;190.117.142.204&lt;/span&gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;)
+
+ACCT_ID=$(echo $ACCT | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["id"]')
+echo $ACCT_ID
+</data>
+      <data lang="ruby" hidden="">
+# Set your secret key: remember to change this to your live secret key in production
+# See your keys here https://dashboard.stripe.com/account/apikeys
+Stripe.api_key = &quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2&quot;
+
+acct = Stripe::Account.create(
+  {
+    :country =&gt; 'US',
+    :managed =&gt; true
+  }
+)
+
+acct.external_account.object = 'bank_account'
+acct.external_account.country = 'US'
+acct.external_account.currency = 'usd'
+acct.external_account.routing_number = '110000000'
+acct.external_account.account_number = '000123456789'
+acct.tos_acceptance.date = 1459289363
+acct.tos_acceptance.ip = 190.117.142.204
+acct.save
+
+acct_id = acct.id
+puts acct_id
+</data>
+      <data lang="python" hidden="">
+# Set your secret key: remember to change this to your live secret key in production
+# See your keys here https://dashboard.stripe.com/account/apikeys
+stripe.api_key = &quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2&quot;
+
+acct = stripe.Account.create(
+  managed=True,
+  country='US')
+
+acct.external_account.object = 'bank_account'
+acct.external_account.country = 'US'
+acct.external_account.currency = 'usd'
+acct.external_account.routing_number = '110000000'
+acct.external_account.account_number = '000123456789'
+acct.tos_acceptance.date = 1459289363
+acct.tos_acceptance.ip = 190.117.142.204
+acct.save()
+
+acct_id = acct.id
+print acct_id
+</data>
+      <data lang="php" hidden="">
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here https://dashboard.stripe.com/account/apikeys
+\Stripe\Stripe::setApiKey(&quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2&quot;);
+
+$acct = \Stripe\Account::create(array(
+  &quot;managed&quot; =&gt; true,
+  &quot;country&quot; =&gt; &quot;US&quot;,
+  &quot;external_account&quot; =&gt; array(
+    &quot;object&quot; =&gt; &quot;bank_account&quot;,
+    &quot;country&quot; =&gt; &quot;US&quot;,
+    &quot;currency&quot; =&gt; &quot;usd&quot;,
+    &quot;routing_number&quot; =&gt; &quot;110000000&quot;,
+    &quot;account_number&quot; =&gt; &quot;000123456789&quot;,
+  ),
+  &quot;tos_acceptance&quot; =&gt; array(
+    &quot;date&quot; =&gt; 1459289363,
+    &quot;ip&quot; =&gt; 190.117.142.204
+  )
+));
+
+$acct_id = $acct-&gt;id;
+echo $acct_id;
+</data>
+      <data lang="node" hidden="">
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here https://dashboard.stripe.com/account/apikeys
+var stripe = require(&quot;stripe&quot;)(&quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2&quot;);
+
+var acct;
+
+stripe.accounts.create({
+  managed: true,
+  country: 'US',
+  external_account: {
+    object: &quot;bank_account&quot;,
+    country: &quot;US&quot;,
+    currency: &quot;usd&quot;,
+    routing_number: &quot;110000000&quot;,
+    account_number: &quot;000123456789&quot;,
+  },
+  tos_acceptance: {
+    date =&gt; 1459289363,
+    ip =&gt; 190.117.142.204
+  }
+}, function(err, account) {
+  acct_id = account.id;
+  console.log(acct_id);
+});
+</data>
+      <data lang="java" hidden="">
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here https://dashboard.stripe.com/account/apikeys
+Stripe.apiKey = &quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2&quot;;
+
+Map&lt;String, Object&gt; accountParams = new HashMap&lt;String, Object&gt;();
+accountParams.put(&quot;managed&quot;, false);
+accountParams.put(&quot;country&quot;, 'US');
+
+Map&lt;String, Object&gt; externalAccountParams = new HashMap&lt;String, Object&gt;();
+externalAccountParams.put(&quot;object&quot;, &quot;bank_account&quot;);
+externalAccountParams.put(&quot;country&quot;, &quot;US&quot;);
+externalAccountParams.put(&quot;currency&quot;, &quot;usd&quot;);
+externalAccountParams.put(&quot;routing_number&quot;, &quot;110000000&quot;);
+externalAccountParams.put(&quot;account_number&quot;, &quot;000123456789&quot;);
+accountParams.put(&quot;external_account&quot;, externalAccountParams);
+
+Map&lt;String, Object&gt; tosParams = new HashMap&lt;String, Object&gt;();
+tosParams.put(&quot;date&quot;, 1459289363);
+tosParams.put(&quot;ip&quot;, 190.117.142.204);
+accountParams.put(&quot;tos_acceptance&quot;, tosParams);
+
+Account acct = Account.create(accountParams);
+acctId = acct.id;
+System.out.println(acctId);
+</data>
+    </section>
+
+    <h1 id="first-verification-stage">2. First verification stage</h1>
+
+    <p><img src="../../img/connect/testing-verification/nostate.png" width="200px" /></p>
+
+    <p>Initially, no stages are active. At this point you can make charges but not transfer funds. That is the starting state of all managed accounts.</p>
+
+    <p>Now you will trigger the account’s first stage with one of our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting#trigger-cards">test card numbers</a> (<code>4000 0000 0000 4202</code>). This magic credit card simulates crossing the stage’s trigger threshold. Typically this happens after crossing a specific dollar amount in total charges.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/charges&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;amount&lt;/span&gt;=&lt;span class='token string'&gt;1000&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;currency&lt;/span&gt;=&lt;span class='token string'&gt;usd&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[object]&lt;/span&gt;=&lt;span class='token string'&gt;card&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[number]&lt;/span&gt;=&lt;span class='token string'&gt;4000000000004202&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[exp_month]&lt;/span&gt;=&lt;span class='token string'&gt;2&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[exp_year]&lt;/span&gt;=&lt;span class='token string'&gt;2017&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;destination&lt;/span&gt;=&quot;&lt;span class='token string'&gt;$ACCT_ID&lt;/span&gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+# Re-fetch the account to see what its status is.
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/accounts/$ACCT_ID&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+Stripe::Charge.create(
+  :amount =&gt; 1000,
+  :currency =&gt; "usd",
+  :source =&gt; {
+    :object =&gt; "card",
+    :number =&gt; 4000000000004202,
+    :exp_month =&gt; 2,
+    :exp_year =&gt; 2017
+  },
+  :destination =&gt; acct_id
+)
+
+# Re-fetch the account to see what its status is.
+Stripe::Account.retrieve(acct_id)
+</data>
+      <data lang="python" hidden="">
+stripe.Charge.create(
+  amount=1000,
+  currency="usd",
+  source={
+    object="card",
+    number=4000000000004202,
+    exp_month=2,
+    exp_year=2017
+  },
+  destination=acct_id
+)
+</data>
+      <data lang="php" hidden="">
+\Stripe\Charge::create(array(
+  "amount" =&gt; 1000,
+  "currency" =&gt; "usd",
+  "source" =&gt; array(
+    object =&gt; "card",
+    number =&gt; 4000000000004202,
+    exp_month =&gt; 2,
+    exp_year =&gt; 2017
+  ),
+  "destination" =&gt; $acct_id
+));
+</data>
+      <data lang="node" hidden="">
+stripe.charges.create({
+  amount: 1000,
+  currency: "usd",
+  source: {
+    object: "card",
+    number: 4000000000004202,
+    exp_month: 2,
+    exp_year: 2017
+  },
+  destination: acct_id
+}, function(err, charge) {
+  // asynchronously called
+});
+</data>
+      <data lang="java" hidden="">
+Map&lt;String, Object&gt; chargeParams = new HashMap&lt;String, Object&gt;();
+chargeParams.put("amount", 1000);
+chargeParams.put("currency", "usd");
+chargeParams.put("destination", acctId);
+
+Map&lt;String, Object&gt; sourceParams = new HashMap&lt;String, Object&gt;();
+sourceParams.put("object", "card");
+sourceParams.put("number", 4000000000004202);
+sourceParams.put("exp_month": 2);
+sourceParams.put("exp_year", 2017);
+chargeParams.put("source", sourceParams); // obtained with Stripe.js
+
+Charge.create(chargeParams);
+</data>
+    </section>
+
+    <p>You should now see that in addition to requesting additional information via <code>verification[fields_needed]</code>, there’s now a deadline for providing this information in the <code>verification[due_by]</code> field.</p>
+
+    <p><img src="../../img/connect/testing-verification/stage1a_triggered.png" width="200px" /></p>
+
+    <p>This is because you have triggered the first stage. In this stage, just as with the initial state, charges are enabled but transfers are disabled. You’ll see that <code>charges_enabled</code> on your account is still <code>true</code>: Stripe has given you a deadline to provide this information, but you have not passed it yet.</p>
+
+    <h1 id="triggering-charge-limits">3. Triggering charge limits</h1>
+
+    <p>While the stage allows charges at first, it has a limit to the volume of charges you can make while in that stage. To simulate crossing that limit, you will make a charge with another <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting#trigger-cards">trigger card number</a> (<code>4000 0000 0000 4210</code>).</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/charges&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;amount&lt;/span&gt;=&lt;span class='token string'&gt;1000&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;currency&lt;/span&gt;=&lt;span class='token string'&gt;usd&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[object]&lt;/span&gt;=&lt;span class='token string'&gt;card&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[number]&lt;/span&gt;=&lt;span class='token string'&gt;4000000000004210&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[exp_month]&lt;/span&gt;=&lt;span class='token string'&gt;2&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[exp_year]&lt;/span&gt;=&lt;span class='token string'&gt;2017&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;destination&lt;/span&gt;=&quot;&lt;span class='token string'&gt;$ACCT_ID&lt;/span&gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+Stripe::Charge.create(
+  :amount =&gt; 1000,
+  :currency =&gt; "usd",
+  :source =&gt; {
+    :object =&gt; "card",
+    :number =&gt; 4000000000004210,
+    :exp_month =&gt; 2,
+    :exp_year =&gt; 2017
+  },
+  :destination =&gt; acct_id
+)
+</data>
+      <data lang="python" hidden="">
+stripe.Charge.create(
+  amount=1000,
+  currency="usd",
+  source={
+    object="card",
+    number=4000000000004210,
+    exp_month=2,
+    exp_year=2017
+  },
+  destination=acct_id
+)
+</data>
+      <data lang="php" hidden="">
+\Stripe\Charge::create(array(
+  "amount" =&gt; 1000,
+  "currency" =&gt; "usd",
+  "source" =&gt; array(
+    object =&gt; "card",
+    number =&gt; 4000000000004210,
+    exp_month =&gt; 2,
+    exp_year =&gt; 2017
+  ),
+  "destination" =&gt; $acct_id
+));
+</data>
+      <data lang="node" hidden="">
+stripe.charges.create({
+  amount: 1000,
+  currency: "usd",
+  source: {
+    object: "card",
+    number: 4000000000004210,
+    exp_month: 2,
+    exp_year: 2017
+  },
+  destination: acct_id
+}, function(err, charge) {
+  // asynchronously called
+});
+</data>
+      <data lang="java" hidden="">
+Map&lt;String, Object&gt; chargeParams = new HashMap&lt;String, Object&gt;();
+chargeParams.put("amount", 1000);
+chargeParams.put("currency", "usd");
+chargeParams.put("destination", acctId);
+
+Map&lt;String, Object&gt; sourceParams = new HashMap&lt;String, Object&gt;();
+sourceParams.put("object", "card");
+sourceParams.put("number", 4000000000004210);
+sourceParams.put("exp_month": 2);
+sourceParams.put("exp_year", 2017);
+chargeParams.put("source", sourceParams); // obtained with Stripe.js
+
+Charge.create(chargeParams);
+</data>
+    </section>
+
+    <p><img src="../../img/connect/testing-verification/stage1b_triggered.png" width="200px" /></p>
+
+    <p>Now you are not able to make new charges, and the account has been updated to show both <code>charges_enabled</code> as <code>false</code> and <code>verification[disabled_reason]</code> as <code>fields_needed</code>.</p>
+
+    <h1 id="fulfilling-the-first-stage">4. Fulfilling the first stage</h1>
+
+    <p>To know what fields you need to provide at this stage, you should first get a list of necessary fields.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/accounts/$ACCT_ID&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+puts(Stripe::Account.retrieve(acct_id))
+</data>
+      <data lang="python" hidden="">
+print stripe.Account.retrieve(acct_id)
+</data>
+      <data lang="php" hidden="">
+var_dump(\Stripe\Account::retrieve($acct_id));
+</data>
+      <data lang="node" hidden="">
+stripe.accounts.retrieve(
+  acct_id,
+  function(err, account) {
+    console.log(account);
+  }
+);
+</data>
+      <data lang="java" hidden="">
+System.out.println(Account.retrieve(acctId));
+</data>
+    </section>
+
+    <aside class="content note">
+      <h1>OFAC</h1>
+      <p>OFAC, and related checks Stripe performs at this stage, are legally mandated checks designed to help prevent funding for terrorists and other sanctioned individuals.</p>
+    </aside>
+
+    <p>You’ll see that in the U.S. these <code>verification[fields_needed]</code> are <code>first_name</code>, <code>last_name</code>, and <code>dob</code>.</p>
+
+    <p>Stripe must collect this initial set of fields in order to satisfy our <a href="https://www.treasury.gov/about/organizational-structure/offices/Pages/Office-of-Foreign-Assets-Control.aspx">OFAC</a> requirements. Because of the nature of these checks, if they are not provided Stripe must block charges for the account. While you can charge a certain amount before collecting name and date of birth, since charge blocking is so disruptive to a business, we highly recommend collecting these fields upfront to avoid any potential issues.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/accounts/$ACCT_ID&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[dob][day]&lt;/span&gt;=&lt;span class='token string'&gt;10&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[dob][month]&lt;/span&gt;=&lt;span class='token string'&gt;1&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[dob][year]&lt;/span&gt;=&lt;span class='token string'&gt;1986&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[first_name]&lt;/span&gt;=&lt;span class='token string'&gt;Jonathan&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[last_name]&lt;/span&gt;=&lt;span class='token string'&gt;Goode&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[type]&lt;/span&gt;=&lt;span class='token string'&gt;individual&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+account = Stripe::Account.retrieve(acct_id)
+account.legal_entity.dob.day = 10
+account.legal_entity.dob.month = 01
+account.legal_entity.dob.year = 1986
+account.legal_entity.first_name = "Jonathan"
+account.legal_entity.last_name = "Goode"
+account.legal_entity.type = "individual"
+account.save
+</data>
+      <data lang="python" hidden="">
+account = stripe.Account.retrieve(acct_id)
+account.legal_entity.dob.day = 10
+account.legal_entity.dob.month = 01
+account.legal_entity.dob.year = 1986
+account.legal_entity.first_name = "Jonathan"
+account.legal_entity.last_name = "Goode"
+account.legal_entity.type = "individual"
+account.save()
+</data>
+      <data lang="php" hidden="">
+$account = \Stripe\Account::retrieve($acct_id);
+$account-&gt;legal_entity-&gt;dob-&gt;day = 10;
+$account-&gt;legal_entity-&gt;dob-&gt;month = 01;
+$account-&gt;legal_entity-&gt;dob-&gt;year = 1986;
+$account-&gt;legal_entity-&gt;first_name = "Jonathan";
+$account-&gt;legal_entity-&gt;last_name = "Goode";
+$account-&gt;legal_entity-&gt;type = "individual";
+$account-&gt;save();
+</data>
+      <data lang="node" hidden="">
+stripe.accounts.update(acct_id, {
+  legal_entity: {
+    dob: {
+      day: 10,
+      month: 1,
+      year: 1986
+    },
+    first_name: "Jonathan",
+    last_name: "Goode",
+    type: "individual"
+  }
+});
+</data>
+      <data lang="java" hidden="">
+Account account = Account.retrieve(acctId);
+Map&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();
+Map&lt;String, Object&gt; legalEntityParams = new HashMap&lt;String, Object&gt;();
+Map&lt;String, Object&gt; dobParams = new HashMap&lt;String, Object&gt;();
+dobParams.put("day", 10);
+dobParams.put("month", 1);
+dobParams.put("year", 1986);
+legalEntityParams.put("dob", dobParams)
+legalEntityParams.put("first_name", "Jonathan");
+legalEntityParams.put("last_name", "Goode");
+legalEntityParams.put("type", "individual");
+params.put("legal_entity", legalEntityParams);
+account.update(params);
+</data>
+    </section>
+
+    <p><img src="../../img/connect/testing-verification/stage1_resolved.png" width="200px" /></p>
+
+    <p>Once you provide this information, Stripe immediately re-enables charges, and enables transfers. You’ll also notice that while <code>verification[fields_needed]</code> is still set (with different values,) <code>verification[due_by]</code> is not. This means that while Stripe will require more information in the future, it’s not immediately required, and you are able to defer providing it until the account has charged more.</p>
+
+    <h1 id="second-stage">5. Second stage</h1>
+
+    <p>Let’s go ahead and trigger the next stage using the trigger threshold magic card.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/charges&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;amount&lt;/span&gt;=&lt;span class='token string'&gt;1000&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;currency&lt;/span&gt;=&lt;span class='token string'&gt;usd&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[object]&lt;/span&gt;=&lt;span class='token string'&gt;card&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[number]&lt;/span&gt;=&lt;span class='token string'&gt;4000000000004202&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[exp_month]&lt;/span&gt;=&lt;span class='token string'&gt;2&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[exp_year]&lt;/span&gt;=&lt;span class='token string'&gt;2017&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;destination&lt;/span&gt;=&quot;&lt;span class='token string'&gt;$ACCT_ID&lt;/span&gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+# Re-fetch the account to see what its status is.
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/accounts/$ACCT_ID&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+Stripe::Charge.create(
+  :amount =&gt; 1000,
+  :currency =&gt; "usd",
+  :source =&gt; {
+    :object =&gt; "card",
+    :number =&gt; 4000000000004202,
+    :exp_month =&gt; 2,
+    :exp_year =&gt; 2017
+  },
+  :destination =&gt; acct_id
+)
+
+# Re-fetch the account to see what its status is.
+puts(Stripe::Account.retrieve(acct_id))
+</data>
+      <data lang="python" hidden="">
+stripe.Charge.create(
+  amount=1000,
+  currency="usd",
+  source={
+    object="card",
+    number=4000000000004202,
+    exp_month=2,
+    exp_year=2017
+  },
+  destination=acct_id
+)
+
+# Re-fetch the account to see what its status is.
+print stripe.Account.retrieve(acct_id)
+</data>
+      <data lang="php" hidden="">
+\Stripe\Charge::create(array(
+  "amount" =&gt; 1000,
+  "currency" =&gt; "usd",
+  "source" =&gt; array(
+    object =&gt; "card",
+    number =&gt; 4000000000004202,
+    exp_month =&gt; 2,
+    exp_year =&gt; 2017
+  ),
+  "destination" =&gt; $acct_id
+));
+
+// Re-fetch the account to see what its status is.
+var_dump(\Stripe\Account::retrieve($acct_id));
+</data>
+      <data lang="node" hidden="">
+stripe.charges.create({
+  amount: 1000,
+  currency: "usd",
+  source: {
+    object: "card",
+    number: 4000000000004202,
+    exp_month: 2,
+    exp_year: 2017
+  },
+  destination: acct_id
+}, function(err, charge) {
+  stripe.accounts.retrieve(
+    acct_id,
+    function(err, account) {
+      console.log(account);
+    }
+  );
+);
+
+});
+</data>
+      <data lang="java" hidden="">
+Map&lt;String, Object&gt; chargeParams = new HashMap&lt;String, Object&gt;();
+chargeParams.put("amount", 1000);
+chargeParams.put("currency", "usd");
+chargeParams.put("destination", acctId);
+
+Map&lt;String, Object&gt; sourceParams = new HashMap&lt;String, Object&gt;();
+sourceParams.put("object", "card");
+sourceParams.put("number", 4000000000004202);
+sourceParams.put("exp_month": 2);
+sourceParams.put("exp_year", 2017);
+chargeParams.put("source", sourceParams);
+
+Charge.create(chargeParams);
+
+System.out.println(Account.retrieve(acctId));
+</data>
+    </section>
+
+    <p><img src="../../img/connect/testing-verification/stage2a_triggered.png" width="200px" /></p>
+
+    <p>You can still charge and transfer, just as before, but now <code>verification[due_by]</code> on the account is set, meaning you need to provide more information in the near future.</p>
+
+    <p>The worst that can happen in this stage is that Stripe will disable transfers (again, the only time Stripe disables charges due to verification is in the first stage).</p>
+
+    <h1 id="triggering-transfer-limits">6. Triggering transfer limits</h1>
+
+    <p>While this stage does not have a charge-disabling limit, it does have a transfer-disabling limit. You can trigger a transfer limit using a trigger card number (<code>4000 0000 0000 4236</code>). This is similar to the charge limit, but it blocks transfers.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/charges&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;amount&lt;/span&gt;=&lt;span class='token string'&gt;1000&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;currency&lt;/span&gt;=&lt;span class='token string'&gt;usd&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[object]&lt;/span&gt;=&lt;span class='token string'&gt;card&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[number]&lt;/span&gt;=&lt;span class='token string'&gt;4000000000004236&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[exp_month]&lt;/span&gt;=&lt;span class='token string'&gt;2&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;source[exp_year]&lt;/span&gt;=&lt;span class='token string'&gt;2017&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;destination&lt;/span&gt;=&quot;&lt;span class='token string'&gt;$ACCT_ID&lt;/span&gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+Stripe::Charge.create(
+  :amount =&gt; 1000,
+  :currency =&gt; "usd",
+  :source =&gt; {
+    :object =&gt; "card",
+    :number =&gt; 4000000000004236,
+    :exp_month =&gt; 2,
+    :exp_year =&gt; 2017
+  },
+  :destination =&gt; acct_id
+)
+</data>
+      <data lang="python" hidden="">
+stripe.Charge.create(
+  amount=1000,
+  currency="usd",
+  source={
+    object="card",
+    number=4000000000004236,
+    exp_month=2,
+    exp_year=2017
+  },
+  destination=acct_id
+)
+</data>
+      <data lang="php" hidden="">
+\Stripe\Charge::create(array(
+  "amount" =&gt; 1000,
+  "currency" =&gt; "usd",
+  "source" =&gt; array(
+    object =&gt; "card",
+    number =&gt; 4000000000004236,
+    exp_month =&gt; 2,
+    exp_year =&gt; 2017
+  ),
+  "destination" =&gt; $acct_id
+));
+</data>
+      <data lang="node" hidden="">
+stripe.charges.create({
+  amount: 1000,
+  currency: "usd",
+  source: {
+    object: "card",
+    number: 4000000000004236,
+    exp_month: 2,
+    exp_year: 2017
+  },
+  destination: acct_id
+}, function(err, charge) {
+
+});
+</data>
+      <data lang="java" hidden="">
+Map&lt;String, Object&gt; chargeParams = new HashMap&lt;String, Object&gt;();
+chargeParams.put("amount", 1000);
+chargeParams.put("currency", "usd");
+chargeParams.put("destination", acctId);
+
+Map&lt;String, Object&gt; sourceParams = new HashMap&lt;String, Object&gt;();
+sourceParams.put("object", "card");
+sourceParams.put("number", 4000000000004236);
+sourceParams.put("exp_month": 2);
+sourceParams.put("exp_year", 2017);
+chargeParams.put("source", sourceParams);
+
+Charge.create(chargeParams);
+</data>
+    </section>
+
+    <p><img src="../../img/connect/testing-verification/stage2b_triggered.png" width="200px" /></p>
+
+    <p>After this trigger, all transfers should fail.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+# Will return an error
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/transfers&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -H &lt;span class='token keyword'&gt;Stripe-Account&lt;/span&gt;=&quot;&lt;span class='token string'&gt;$ACCT_ID&lt;/span&gt;&quot; \
+   -d &lt;span class='token keyword'&gt;amount&lt;/span&gt;=&lt;span class='token string'&gt;400&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;currency&lt;/span&gt;=&lt;span class='token string'&gt;usd&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;recipient&lt;/span&gt;=&lt;span class='token string'&gt;self&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+Stripe::Transfer.create(
+  {
+    :amount =&gt; 400,
+    :currency =&gt; "usd",
+    :recipient =&gt; "self",
+  },
+  {
+    :stripe_account =&gt; acct_id
+  }
+)
+</data>
+      <data lang="python" hidden="">
+stripe.Transfer.create(
+  amount=400,
+  currency="usd",
+  recipient="self",
+  stripe_account=acct_id
+)
+</data>
+      <data lang="php" hidden="">
+\Stripe\Transfer::create(
+  array(
+    "amount" =&gt; 400,
+    "currency" =&gt; "usd",
+    "recipient" =&gt; "self"
+  ),
+  array(
+    "stripe_account" =&gt; $acct_id
+  )
+);
+</data>
+      <data lang="node" hidden="">
+stripe.transfers.create({
+  amount: 400,
+  currency: "usd",
+  recipient: "self"
+}, {
+  stripe_account: acct_id
+}, function(err, transfer) {
+  // asynchronously called
+});
+</data>
+      <data lang="java" hidden="">
+RequestOptions requestOptions = RequestOptions.builder().setStripeAccount(acctId).build();
+
+Map&lt;String, Object&gt; transferParams = new HashMap&lt;String, Object&gt;();
+transferParams.put("amount", 400);
+transferParams.put("currency", "usd");
+transferParams.put("recipient", "self");
+
+Transfer.create(transferParams, requestOptions);
+</data>
+    </section>
+
+    <h1 id="fulfilling-the-second-stage">7. Fulfilling the second stage</h1>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/accounts/$ACCT_ID&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[address][line1]&lt;/span&gt;=&quot;&lt;span class='token string'&gt;3180 18th St&lt;/span&gt;&quot; \
+   -d &lt;span class='token keyword'&gt;legal_entity[address][postal_code]&lt;/span&gt;=&lt;span class='token string'&gt;94110&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[address][city]&lt;/span&gt;=&quot;&lt;span class='token string'&gt;San Francisco&lt;/span&gt;&quot; \
+   -d &lt;span class='token keyword'&gt;legal_entity[address][state]&lt;/span&gt;=&lt;span class='token string'&gt;CA&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[ssn_last_4]&lt;/span&gt;=&lt;span class='token string'&gt;1234&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+account = Stripe::Account.retrieve(acct_id)
+account.legal_entity.address.line1 = "3180 18th St"
+account.legal_entity.address.postal_code = 94110
+account.legal_entity.address.city = "San Francisco"
+account.legal_entity.address.state = "CA"
+account.legal_entity.ssn_last_4 = 1234
+account.save
+</data>
+      <data lang="python" hidden="">
+account = stripe.Account.retrieve(acct_id)
+account.legal_entity.address.line1 = "3180 18th St"
+account.legal_entity.address.postal_code = 94110
+account.legal_entity.address.city = "San Francisco"
+account.legal_entity.address.state = "CA"
+account.legal_entity.ssn_last_4 = 1234
+account.save()
+</data>
+      <data lang="php" hidden="">
+$account = \Stripe\Account::retrieve($acct_id);
+$account-&gt;legal_entity-&gt;address.line1 = "3180 18th St";
+$account-&gt;legal_entity-&gt;address.postal_code = 94110;
+$account-&gt;legal_entity-&gt;address.city = "San Francisco";
+$account-&gt;legal_entity-&gt;address.state = "CA";
+$account-&gt;legal_entity-&gt;ssn_last_4 = 1234;
+$account-&gt;save();
+</data>
+      <data lang="node" hidden="">
+stripe.accounts.update(acct_id, {
+  legal_entity: {
+    address: {
+      line1: "3180 18th St",
+      postal_code: 94110,
+      city: "San Francisco",
+      state: "CA"
+    },
+    ssn_last_4: 1234
+  }
+);
+</data>
+      <data lang="java" hidden="">
+Account account = Account.retrieve(acctId);
+Map&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();
+Map&lt;String, Object&gt; legalEntityParams = new HashMap&lt;String, Object&gt;();
+Map&lt;String, Object&gt; addressParams = new HashMap&lt;String, Object&gt;();
+addressParams.put("line1", "3180 18th St");
+addressParams.put("postal_code", 94110);
+addressParams.put("city", "San Francisco");
+addressParams.put("state", "CA");
+legalEntityParams.put("address", addressParams)
+legalEntityParams.put("ssn_last_4", 1234);
+params.put("legal_entity", legalEntityParams);
+account.update(params);
+</data>
+    </section>
+
+    <p><img src="../../img/connect/testing-verification/stage2_resolved.png" width="200px" /></p>
+
+    <p>After fulfilling the stage, transfers work again.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/transfers&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -H &lt;span class='token keyword'&gt;Stripe-Account&lt;/span&gt;=&quot;&lt;span class='token string'&gt;$ACCT_ID&lt;/span&gt;&quot; \
+   -d &lt;span class='token keyword'&gt;amount&lt;/span&gt;=&lt;span class='token string'&gt;400&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;currency&lt;/span&gt;=&lt;span class='token string'&gt;usd&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;recipient&lt;/span&gt;=&lt;span class='token string'&gt;self&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+Stripe::Transfer.create(
+  {
+    :amount =&gt; 400,
+    :currency =&gt; "usd",
+    :recipient =&gt; "self",
+  },
+  {
+    :stripe_account =&gt; acct_id
+  }
+)
+</data>
+      <data lang="python" hidden="">
+stripe.Transfer.create(
+  amount=400,
+  currency="usd",
+  recipient="self",
+  stripe_account=acct_id
+)
+</data>
+      <data lang="php" hidden="">
+\Stripe\Transfer::create(
+  array(
+    "amount" =&gt; 400,
+    "currency" =&gt; "usd",
+    "recipient" =&gt; "self"
+  ),
+  array(
+    "stripe_account" =&gt; $acct_id
+  )
+);
+</data>
+      <data lang="node" hidden="">
+stripe.transfers.create({
+  amount: 400,
+  currency: "usd",
+  recipient: "self"
+}, {
+  stripe_account: acct_id
+}, function(err, transfer) {
+  // asynchronously called
+});
+</data>
+      <data lang="java" hidden="">
+RequestOptions requestOptions = RequestOptions.builder().setStripeAccount(acctId).build();
+
+Map&lt;String, Object&gt; transferParams = new HashMap&lt;String, Object&gt;();
+transferParams.put("amount", 400);
+transferParams.put("currency", "usd");
+transferParams.put("recipient", "self");
+
+Transfer.create(transferParams, requestOptions);
+</data>
+    </section>
+
+    <h1 id="fulfilling-multiple-stages">8. Fulfilling multiple stages</h1>
+
+    <p>As noted before, providing the right information can fulfill multiple stages. Let’s try to complete the last two stages all at once.</p>
+
+    <p>First, obtain the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting#identity-verification">test success image</a> by running <code>wget https://stripe.com/img/documentation/guides/testing/success.png</code>.</p>
+
+    <p>From here, you can <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification#uploading-a-file">upload the test success image</a>.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+FILE_OBJ=$(&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://uploads.stripe.com/v1/files&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -H &lt;span class='token keyword'&gt;Stripe-Account&lt;/span&gt;=&quot;&lt;span class='token string'&gt;$ACCT_ID&lt;/span&gt;&quot; \
+   -F &lt;span class='token keyword'&gt;purpose&lt;/span&gt;=&lt;span class='token string'&gt;identity_document&lt;/span&gt; \
+   -F &lt;span class='token keyword'&gt;file&lt;/span&gt;=&quot;&lt;span class='token string'&gt;@success.png&lt;/span&gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;)
+
+FILE=$(echo $FILE_OBJ | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["id"]')
+</data>
+      <data lang="ruby" hidden="">
+file_obj = Stripe::FileUpload.create(
+  {
+    :purpose =&gt; 'identity_document',
+    :file =&gt; File.new('success.png')
+  },
+  {
+    :stripe_account =&gt; acct_id
+  }
+)
+file = file_obj.id
+</data>
+      <data lang="python" hidden="">
+fp = open('success.png', 'r')
+file_obj = stripe.FileUpload.create(
+  purpose='identity_document',
+  file=fp,
+  stripe_account=acct_id
+)
+file = file_obj.id
+</data>
+      <data lang="php" hidden="">
+$fp = fopen('success.png', 'r');
+$file_obj = \Stripe\FileUpload::create(
+  array(
+    "purpose" =&gt; "identity_document",
+    "file" =&gt; $fp
+  ),
+  array(
+    "stripe_account" =&gt; $acct_id
+  )
+));
+$file = $file_obj-&gt;id;
+</data>
+      <data lang="node" hidden="">
+var fp = fs.readFileSync('success.png');
+var file;
+stripe.fileUploads.create({
+  purpose: 'identity_document',
+  file: {
+    data: fp,
+    name: 'success.png',
+    type: 'application/octet-stream'
+  }
+}, function(err, fileUpload) {
+  file = fileUpload.id;
+});
+</data>
+      <data lang="java" hidden="">
+Map&lt;String, Object&gt; fileUploadParams = new HashMap&lt;String, Object&gt;();
+fileUploadParams.put("purpose", "identity_document");
+fileUploadParams.put("file", new File('success.png'));
+
+FileUpload fileObj = FileUpload.create(fileUploadParams);
+file = fileObj.id;
+</data>
+    </section>
+
+    <p>Once the image is uploaded, you can update the account with both pieces of verification information.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/accounts/$ACCT_ID&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[personal_id_number]&lt;/span&gt;=&lt;span class='token string'&gt;123456789&lt;/span&gt; \
+   -d &lt;span class='token keyword'&gt;legal_entity[verification][document]&lt;/span&gt;=&quot;&lt;span class='token string'&gt;$FILE&lt;/span&gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+account = Stripe::Account.retrieve(acct_id)
+account.legal_entity.personal_id_number = 123456789
+account.legal_entity.verification.document = file
+account.save
+</data>
+      <data lang="python" hidden="">
+account = stripe.Account.retrieve(acct_id)
+account.legal_entity.personal_id_number = 123456789
+account.legal_entity.verification.document = file
+account.save()
+</data>
+      <data lang="php" hidden="">
+$account = \Stripe\Account::retrieve($acct_id);
+$account-&gt;legal_entity-&gt;personal_id_number = 123456789;
+$account-&gt;legal_entity-&gt;verification-&gt;document = $file;
+$account-&gt;save();
+</data>
+      <data lang="node" hidden="">
+stripe.accounts.update(acct_id, {
+  legal_entity: {
+    personal_id_number: 123456789,
+    verification: {
+      document: file
+    }
+  }
+);
+</data>
+      <data lang="java" hidden="">
+Account account = Account.retrieve(acctId);
+Map&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();
+Map&lt;String, Object&gt; legalEntityParams = new HashMap&lt;String, Object&gt;();
+Map&lt;String, Object&gt; verificationParams = new HashMap&lt;String, Object&gt;();
+verificationParams.put("document", file);
+legalEntityParams.put("verification", verificationParams)
+legalEntityParams.put("personal_id_number", 123456789);
+params.put("legal_entity", legalEntityParams);
+account.update(params);
+</data>
+    </section>
+
+    <p><img src="../../img/connect/testing-verification/stage4_resolved.png" width="200px" /></p>
+
+    <p>This single update will actually jump through two stages, from stage 2 fulfilled to complete. You can confirm verification with a GET account call.</p>
+
+    <section class="code-example lang-control-new">
+      <data lang="curl" hidden="">
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;curl &lt;span class='token string'&gt;https://api.stripe.com/v1/accounts/$ACCT_ID&lt;/span&gt; \
+   -u &lt;span class='token string'&gt;&quot;$STRIPE_API_KEY:&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</data>
+      <data lang="ruby" hidden="">
+puts(Stripe::Account.retrieve(acct_id))
+</data>
+      <data lang="python" hidden="">
+print stripe.Account.retrieve(acct_id)
+</data>
+      <data lang="php" hidden="">
+var_dump(\Stripe\Account::retrieve($acct_id));
+</data>
+      <data lang="node" hidden="">
+stripe.accounts.retrieve(
+  acct_id,
+  function(err, account) {
+    console.log(account);
+  }
+);
+</data>
+      <data lang="java" hidden="">
+Account.retrieve(acctId);
+</data>
+    </section>
+
+    <p>You’ll see that <code>verification[fields_needed]</code> is now empty, meaning Stripe will not need any additional information for this account unless a significant exception happens (for example, if the account appears to be used for fraud).</p>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

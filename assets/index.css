@@ -1,0 +1,43 @@
+#doc>nav a {
+ 
+    color: #4D148C;
+}
+
+#doc>nav a:hover {
+    color: #4D148C;
+}
+
+a {
+    color: #4D148C;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#doc #details article>h2, #doc #details article>h3, #doc #details article h1, #doc #details article section>h2, #doc #details article section>h3, h1 {
+    color: #4D148C;
+}
+
+#doc #details.getting-started h2 {
+    font-weight: 700;
+    color: #4D148C;
+}
+
+#doc>nav li.selected a {
+    padding-right: 15px;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: inset 0 1px 0 #53a1ec;
+    text-shadow: 0 -1px 0 rgba(38,89,167,.75);
+    text-decoration: none;
+}
+
+#doc>nav li.selected:before {
+	background: -webkit-linear-gradient(#4D148C, #4D148C);
+	background: linear-gradient(#4D148C, #4D148C);
+	border-bottom: none;
+	border-top: none;
+}
+
+#doc>nav li.selected a {
+	box-shadow: none;
+}

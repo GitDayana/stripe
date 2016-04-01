@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" id="blog" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Follow the Stripe blog for product announcements, feature updates, new countries, and technical posts about payments." />
+
+<link rel="shortcut icon" href="../../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../../assets/blog-ada6c3a77cd627b09ac436c3a82dd49d.css">
+  <link rel="stylesheet" href="../../assets/blogposts-b9a9b6ffe0287dc66146bd753faba55d.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../../assets/blog-776e3ed92eef5022ed98688d349fd7af.js"></script>
+  <script src="../../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../feed.rss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>    Stripe Blog
+</title>
+    <meta content="wQJuQTj0C2_EzGDNuLfonDJlmDMbvXZI2fixNFbIIFpJKGuCIZdO3zfcOh3mzVQXCthi2wrWonAQ4iZY18WEwA==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../../features">Features</a></li>
+        <li class='pricing'><a href="../../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../../marketplaces'>Connect</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="1">Blog</a></li>
+              <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <header id="blog-header">
+  	<h1><a href="1">Blog</a></h1>
+  	<p><a href="https://twitter.com/stripe">Follow Stripe on Twitter</a></p>
+  </header>
+  
+      <div id='blog-post--two-step-verification'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#boucher">
+      <img src="../../img/about/team/boucher@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Ftwo-step-verification">Two-Step Verification<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#boucher">Ross Boucher</a>
+      <span>on</span> December 13, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    <div class="image-right"><img src="../../img/blog/posts/two-step/keys@2x.png" width="214" height="216" /></div>
+
+<p>It's a dangerous world out there! But you can make things a little bit safer by turning on our new two-step verification setting in your Stripe <a href="https://dashboard.stripe.com/account">account settings</a>.</p>
+
+<p>Once you do, you'll need a code generated on your mobile device any time you log in to your Stripe account. You'll also be asked for this code once every two weeks when taking sensitive actions like viewing your account settings, or issuing a refund.</p>
+
+<h2>How do I enable two-step verification?</h2>
+
+<p>You can enable two-step verification in your Stripe account from your <a href="https://dashboard.stripe.com/account">account settings</a>. Download the free Google Authenticator mobile app (available for <a href="http://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Android</a>), and click on the enable button. Scan the barcode on your screen with your mobile device, and finally type the code on your device to finish the process.</p>
+
+
+<div class="image-center"><a href="../../img/blog/posts/two-step/window.png" class="zoom" maxSize="683x458" data-hires="true"><img src="../../img/blog/posts/two-step/window.png" width="341" height="229" data-hires="true" /></a></div>
+
+<p>At the end of this process, we'll show you your <strong>emergency backup code</strong>. Make sure to write down this code and store it somewhere safe. If your mobile device is lost or stolen, you can use this code to disable two-step verification on your account. Without either your device or this code, you won't be able to log in to your Stripe account.</p>
+
+<hr>
+
+<p>Of course, two-step verification is just one useful tool in keeping your account secure. You should also make sure to follow other <a href="http://krebsonsecurity.com/password-dos-and-donts/">password best practices</a>, like using long passwords that don't contain personal information, and using different passwords for each website.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      December 13, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--hack-to-the-future'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#amber">
+      <img src="../../img/about/team/amber@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fhack-to-the-future">Hack to the Future<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#amber">Amber Feng</a>
+      <span>on</span> November 20, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+    <div class="map-image">
+    <a href="http://maps.google.com/maps?q=140%20Second%20Street%20San%20Francisco%20CA&hl=en&hnear=140%20Second%20Street%20San%20Francisco%20CA&t=m&z=15" target="_blank">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=140%20Second%20Street%20San%20Francisco%20CA&zoom=15&size=640x280&sensor=false&style=feature:administrative.land_parcel|element:geometry|visibility:off&style=feature:water|element:geometry.fill|color:0x52b6ef&style=feature:landscape|element:geometry|saturation:-100|lightness:50&style=feature:road|saturation:-100|lightness:50&style=feature:poi|element:geometry|saturation:-100|lightness:50&style=feature:poi|element:labels.text.fill|lightness:30&style=feature:road.arterial|element:labels.text.fill|lightness:-30&style=feature:road.highway|element:geometry.fill|color:0xf2be50&style=feature:road.highway|element:geometry.stroke|color:0xe0994c&style=feature:road.highway|element:labels.text.fill|color:0xb96f1e&style=feature:poi.park|element:geometry|color:0xcbd9b4&style=feature:transit|element:labels|lightness:20&style=feature:administrative|saturation:-100" width="640" height="280" />
+
+        </a>
+
+</div>
+
+
+    <p>Join us at the Stripe office for a day of hacking and time-traveling<sup style='vertical-align: 3px; font-weight: bold;'>1</sup>. Hack on a project, meet other coders, hang out, or just work on eating the food.</p>
+
+    <p>We're trying something a little different this time: while the hackathon will still be informal and you're welcome to hack on anything you'd like, we're encouraging projects built on top of <a href="https://www.stripe.com/connect">Stripe Connect</a>.</p>
+
+    <p>Stripe Connect, released <a href="https://www.stripe.com/blog/stripe-connect">a little over a month ago</a>, uses OAuth to make building apps on top of Stripe data or allowing your users to accept payments easy. Some existing applications include store-builders, marketplaces, and data analytics dashboards&mdash;we're really excited to see what other ideas people come up with.</p>
+
+    <p>If you've been meaning to play around with the <a href="https://www.stripe.com/docs/connect/getting-started">Stripe Connect API</a>, this is a perfect time to check it out or meet others who'd love to collaborate. The team will be around to help you with the integration and answer any questions you may have. Beginners welcome!</p>
+
+    <div class="map-details">
+      <dl>
+        <dt>When:</dt>
+        <dd>Saturday, December 1, 2012 <br /> from 1:00 PM until 10:00 PM</dd>
+
+        <dt>Where:</dt>
+        <dd>Stripe's office at <a href="http://g.co/maps/hhje6">140 Second Street in San Francisco</a>, 4th Floor.</dd>
+      </dl>
+    </div>
+
+    <p>RSVP via our <a href="http://www.meetup.com/Stripe/events/92206302/">Meetup event</a>. Hope to see you there!</p>
+
+    <p><strong>1</strong>: Bring your own DeLorean.</p>
+
+
+  </div>
+
+  <footer>
+    <p>
+      November 20, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--api-mailing-list'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#boucher">
+      <img src="../../img/about/team/boucher@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fapi-mailing-list">API Mailing List<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#boucher">Ross Boucher</a>
+      <span>on</span> November 16, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>As we grow, we're constantly refining our API by adding new capabilities and sometimes
+  by removing or replacing features that aren't working as well as we'd like.
+  To make these changes easier to follow, we've created a new mailing list,
+  <a href="https://groups.google.com/a/lists.stripe.com/group/api-discuss/">available
+  on Google Groups</a>. Going forward, we'll send updates to this mailing list
+  any time we add or change something in the Stripe API.</p>
+
+<p>Whenever we change our API, we make every effort to ensure we won't cause problems for
+  any of our existing users. One of the main ways we maintain backwards compatibility is
+  by marking accounts with specific flags that tell our API to return an older version of
+  a particular response, or enable an older set of input parameters. New users
+  immediately get the new behavior, and we can work with our existing users over time to
+  upgrade their Stripe integrations.</p>
+
+<p>This same system works with Stripe Connect, to ensure that an application accessing
+  many Stripe accounts can still work with a consistent API, even if the individual
+  accounts use a different set of flags when talking to Stripe on their own. If you
+  aren't using Stripe Connect, but you are still working with code used across
+  multiple Stripe accounts (e.g. a Stripe API library), you may need different code for
+  some accounts. If so, it is especially important to
+  <a href="https://groups.google.com/a/lists.stripe.com/group/api-discuss/">sign
+  up for this new list</a> to be updated about changes.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      November 16, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--better-dispute-management'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#sheena">
+      <img src="../../img/about/team/sheena@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fbetter-dispute-management">Better Dispute Management<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#sheena">Sheena Pakanati</a>
+      <span>on</span> November 15, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+	<p>We’re trying to make every part of payments easier, and that includes oft-neglected pieces like handling disputed charges (also known as chargebacks). We’ve just launched some new features to help you manage your disputed charges:</p>
+
+	<div class="feature-list">
+
+		<h3><strong class="new"><span>New</span></strong> API for retrieving and updating dispute details</h3>
+
+		<p>Disputed charges now have a <code>dispute</code> attribute that provides you with <a href="../../docs/api/index.html#dispute_object">details about the dispute</a>.  You can also <a href="../../docs/api/index.html#update_dispute">update dispute evidence</a> via the API, which should be especially handy for <a href="../../marketplaces">Stripe Connect</a> users who need to manage disputes on other Stripe users’ behalf.  The API exposes everything you need to know about the dispute, including the status and an easy-to-understand <a href="../../help/disputes#What+are+the+most+common+reasons+for+a+dispute,+and+how+can+I+prevent+disputes?">reason for the dispute</a> if we have it.</p>
+		<p><em>Note: Currently the disputes API only includes complete dispute data starting from September 23, 2012.</em></p>
+		<h3><strong class="new"><span>New</span></strong> Managing disputes in your dashboard</h3>
+		<p>You can now peruse a <a href="https://dashboard.stripe.com/#disputes">full list of your disputes</a>, filter them by reason or status, tell <a href="https://dashboard.stripe.com/#payments/overview">at a glance</a> what disputes need your attention, and see details about any individual dispute.
+		<p>Responding to a dispute is also much easier than before: just visit your dashboard to submit evidence.  We’ll even suggest what specific details to provide &mdash; based on the disputed charge and the cardholder’s reason for disputing it &mdash; to increase your chances of winning the dispute.
+		</p>
+		<h3><strong class="new"><span>New</span></strong> Better charge dispute events</h3>
+		<p>We’ve added three useful <a href="../../docs/api/index.html#event_types">dispute events</a>: <code>charge.dispute.created</code> (when a charge first gets disputed), <code>charge.dispute.updated</code> (when a dispute’s evidence is updated), and <code>charge.dispute.closed</code> (when a dispute is resolved, either in your favor or in the cardholder’s favor).  If you’ve no need for webhooks, don’t worry: we’ll still send you an email when a dispute is created or closed.</p>
+		<p><em>Note: On Dec 15, 2012, the old <code>charge.disputed</code> event will be deprecated.</em></p>
+	</div>
+
+	<p>Our goal is to work with our users to make sure that disputes don’t arise in the first place, and we hope that you don’t have frequent occasion to use these new features—but we hope they’ll make your life easier when you need them.</p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      November 15, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--live-at-general-assembly'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#saikat">
+      <img src="../../img/about/team/saikat@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Flive-at-general-assembly">Live at General Assembly<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#saikat">Saikat Chakrabarti</a>
+      <span>on</span> November 13, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+	<p>Our friends at General Assembly are hosting a free livestream class on integrating payments using Stripe, and you're invited! </p>
+
+	<p>We've worked together with them over the past week to put together a tutorial that takes you from accepting payments on your website to setting up subscription billing with webhooks.  Chris Castiglione will be using the tutorial to teach the hour-long class, and he will be answering questions live during the event.</p>
+
+	<p>So if you're just thinking about building a new business or already have a website or mobile app and want to start accepting payments, tune in.  You can find the full details of the event <a href="http://www.eventbrite.com/event/4561337082/da02e1747fdfcd4a770c5f4247b23352">here</a>.</p>
+
+	<div class="map-details">
+		<dl>
+			<dt>When:</dt>
+			<dd>Wednesday, November 14, 2012, at 2:00 PM (EST)</dd>
+
+			<dt>Where:</dt>
+			<dd><a href="http://goo.gl/maps/sChp">Zum Schneider</a></dd>
+		</dl>
+	</div>
+
+	<p><a href="http://www.eventbrite.com/event/4561337082/da02e1747fdfcd4a770c5f4247b23352">Sign up</a> to get a link to the livestream.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      November 13, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--stripe-wufoo'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#cristina">
+      <img src="../../img/about/team/cristina@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fstripe-wufoo">Stripe + Wufoo<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#cristina">Cristina Cordova</a>
+      <span>on</span> October 23, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+<div class='image-center'>
+<img src="../../img/blog/posts/stripe-wufoo/wufoo.png" width="352" height="102" data-hires="true" />
+</div>
+
+<p>We recently launched <a href="../../marketplaces">Stripe Connect</a>, a straightforward way for sites to enable payments for their users, and for Stripe users to share their data with other services. Wufoo recently integrated Stripe Connect, and we want to take a moment to show you how it works. It’s a great example of what’s now possible with Stripe Connect.</p>
+
+<p><a href="http://wufoo.com/">Wufoo</a> makes it easy for anyone to create beautiful forms in minutes, with no technical expertise required. With Stripe Connect integration, you can now use Stripe to accept payments directly on your Wufoo form—perfect for managing event registration, taking orders online, accepting donations, and much more.</p>
+
+<h2>How it Works</h2>
+
+<p>Wufoo handles the database, backend and scripts needed to make collecting and understanding your data easy and fast. Once you’ve created your form, head over to your Payment Settings to connect with Stripe:</p>
+
+<p class="image-center">
+<img src="../../img/blog/posts/stripe-wufoo/settings.png" width="405" height="238" style="margin: 0 auto; display:block" class="stripe-wufoo-screen-img" data-hires="true" />
+</p>
+
+<p>As soon as you’ve enabled payments with Stripe, your customers will enter their credit card information directly on the form, and won’t be redirected to a checkout page. Wufoo will collect the data on your form, and Stripe will take care of transferring your payments directly to your bank account.</p>
+
+<p class="image-center"><img src="../../img/blog/posts/stripe-wufoo/summary.png" width="405" height="238" style="margin: 0 auto; display:block" class="stripe-wufoo-screen-img" data-hires="true" /></p>
+
+<p>We’re thrilled to partner with Wufoo. Explore their <a href="http://wufoo.com/payments/stripe/">documentation</a> to learn how to start accepting payments with Stripe, or how to migrate your existing payment-enabled Wufoo forms.</p>
+
+<p>Wufoo + Stripe is just one example of how you can build on top of Stripe for the benefit of your users, and we look forward to seeing what others create. Read more about <a href="../../marketplaces">Stripe Connect</a> or head straight to the <a href="../../docs/connect/index.html">docs</a>.</p>
+
+
+  </div>
+
+  <footer>
+    <p>
+      October 23, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--stripe-nyc-meetup'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#michael">
+      <img src="../../img/about/team/michael@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fstripe-nyc-meetup">Stripe NYC Meetup<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#michael">Michael Schade</a>
+      <span>on</span> October 15, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+    <div class="map-image">
+    <a href="http://maps.google.com/maps?q=11%20East%2036th%20Street,%20New%20York,%20NY%2010016&hl=en&hnear=11%20East%2036th%20Street,%20New%20York,%20NY%2010016&t=m&z=15" target="_blank">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=11%20East%2036th%20Street,%20New%20York,%20NY%2010016&zoom=15&size=640x280&sensor=false&style=feature:administrative.land_parcel|element:geometry|visibility:off&style=feature:water|element:geometry.fill|color:0x52b6ef&style=feature:landscape|element:geometry|saturation:-100|lightness:50&style=feature:road|saturation:-100|lightness:50&style=feature:poi|element:geometry|saturation:-100|lightness:50&style=feature:poi|element:labels.text.fill|lightness:30&style=feature:road.arterial|element:labels.text.fill|lightness:-30&style=feature:road.highway|element:geometry.fill|color:0xf2be50&style=feature:road.highway|element:geometry.stroke|color:0xe0994c&style=feature:road.highway|element:labels.text.fill|color:0xb96f1e&style=feature:poi.park|element:geometry|color:0xcbd9b4&style=feature:transit|element:labels|lightness:20&style=feature:administrative|saturation:-100" width="640" height="280" />
+
+        </a>
+
+</div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252Fabout#richard">Richard</a>, <a href="../../country?country=CH&amp;redirect=%252Fabout#saikat">Saikat</a>, and I will be enjoying our night at <a href="http://www.yelp.com/biz/the-ginger-man-new-york">The Ginger Man</a> on Tuesday. Come by, chat, and have a beer on us!</p>
+
+    <div class="map-details">
+      <dl>
+        <dt>When:</dt>
+        <dd>Tuesday, October 16th, 2012, at 8:30 PM</dd>
+
+        <dt>Where:</dt>
+        <dd><a href="http://goo.gl/maps/0QUKs">The Ginger Man</a></dd>
+      </dl>
+    </div>
+
+    <p>RSVP via our <a href="http://www.meetup.com/Stripe/events/87172352/">Meetup event</a>.</p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      October 15, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--stripe-connect'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#amber">
+      <img src="../../img/about/team/amber@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fstripe-connect">Stripe Connect<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#amber">Amber Feng</a>
+      <span>on</span> October 10, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+<div class="image-center launch-flag">
+<a href="../../marketplaces"><img src="../../img/blog/posts/connect/passport.png" width="549" height="357" class="passport-img" data-hires="true" /></a>
+</div>
+
+<p>Today, we’re proud to launch <a href="../../marketplaces">Stripe Connect</a>, which adds two important new capabilities to Stripe: a straightforward way for sites to enable payments for their users, and a seamless mechanism for Stripe users to securely share their data with other services.</p>
+
+<h2>Stripe for your users</h2>
+
+<p>Some of the most innovative businesses on the internet help others become sellers: store builders, website creators, marketplaces, and many more. In the past, figuring out how to make payments work has been a big barrier to building these kinds of companies—there hasn’t been any good way to immediately facilitate credit card transactions for sellers.</p>
+
+<p>And yet these sellers—the platforms’ users—are often the people who most need a simple way to accept payments online. They’re the people just starting out, focused on getting their business off the ground. By integrating Stripe Connect and having users link with a Stripe account, any service can enable their users to start accepting payments in minutes. This is a big change, and by streamlining this process, we hope to help increase the number of people selling online.</p>
+
+<h2>Unlocking data</h2>
+
+<p>Stripe Connect also enables people already receiving payments with Stripe to link their accounts with other services, making it straightforward for developers to build rich tools that integrate payments data. Anyone using Stripe today can already export their data in CSV or JSON. Stripe Connect facilitates secure sharing of this data with third-party applications. Users can grant either read-write or read-only access to their data, and can revoke the authorization at any time.</p>
+
+<p>Up to now, a business’s transaction data has usually remained siloed and inaccessible. We think it should be easy to safely share payments information with accounting software, analytics tools, and CRM systems—imagine tools that magically generate a tax return, make it easy to tie your web analytics to your purchases, or that show a user’s pricing tier in your customer support system.</p>
+
+<p>Since we can't tackle every conceivable use-case ourselves, we want to encourage an ecosystem where anyone can build applications that leverage Stripe data.</p>
+
+<h2>Building Stripe Connect</h2>
+
+<p>Fundamentally, Stripe Connect is a way for sellers to link their Stripe accounts with third-party services. It’s built on <a href="http://oauth.net">OAuth</a>, the industry-standard federated login mechanism. However, unlike most OAuth implementations, we’ve also made it easy to create an account during the authentication process, since many people may not already have Stripe accounts.</p>
+
+<p>Stripe Connect has been in beta for several months now. During that time, many companies have integrated its capabilities. These include <a href="https://www.shoplocket.com">ShopLocket</a>, <a href="http://shopify.com">Shopify</a>, <a href="http://skillshare.com">Skillshare</a>, <a href="http://wufoo.com">Wufoo</a>, <a href="http://getballpark.com">Ballpark</a>, <a href="http://desktimeapp.com">Desktime</a>, and <a href="http://sumall.com">SumAll</a>. We deeply appreciate the feedback we’ve received from all of our beta users—they’ve shaped the product you see. We look forward to their launch of their integrations.</p>
+
+<p>We’re still in the early days of figuring out the scope of commerce on the internet. At Stripe, we spend our time thinking about how to build better tools for the online economy. Stripe Connect brings some new possibilities to the web, and we can’t wait to see what people build with it.</p>
+
+  <p class="cta">Let your users connect with Stripe. <a href="../../marketplaces" class="button">Learn more about Stripe Connect</a></p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      October 10, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--towards-transparency'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#jon">
+      <img src="../../img/about/team/jon@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Ftowards-transparency">Towards Transparency<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#jon">Jon Zieger</a>
+      <span>on</span> September 28, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>Over the past few years, a number of companies we admire—among them, Google, Twitter, and GitHub—have taken significant steps to increase awareness of the effects of the legal process on their users.</p>
+
+<p>Stripe handles payments, but we believe similar thinking can be applied here too. Today we’re announcing two steps in this area:</p>
+
+<p>First, we’re partnering with <a href="http://chillingeffects.org">Chilling Effects</a>. Developed at the <a href="http://cyber.law.harvard.edu">Berkman Center for Internet &amp; Society</a>, Chilling Effects is run by the <a href="http://eff.org">EFF</a> and law clinics at <a href="http://www.law.harvard.edu">Harvard</a>, <a href="http://www.law.stanford.edu">Stanford</a>, <a href="http://www.law.berkeley.edu">Berkeley</a>, and other universities across the country. Chilling Effects tracks the use of cease-and-desist notices to gauge the impact of legal threats to online expression. This database of notices provides important empirical data concerning the real-world effects of laws and policies.</p>
+
+<p>From now on, whenever a third party sends a legal request for us to stop working with a user, we will pass a copy of the request to Chilling Effects. (We will, however, first give the user the chance to opt out of this disclosure.) Reporting take-down requests is standard practice at Google, Twitter, and GitHub today. Since Stripe is the first payments company to do this, Chilling Effects is creating a new category to track these requests.</p>
+
+<p>Second, we’re updating our <a href="../../privacy">privacy policy</a> to align with emerging internet best-practices.  Specifically, we’re adding a clause that commits us (when possible) to first notify the user if we’re legally compelled by a litigant or government to disclose a user’s private information. The point of this notice is to give users the chance to contest the disclosure if they wish. As with publicizing take-down notices, this notification is becoming common when user data is in question, and we’re happy to join companies like Dropbox and Twitter in providing this protection for our users’ personal information.</p>
+
+<p>These issues rarely arise, and there’s no particular situation that makes this timely. We simply want to implement the right policies as early as possible, and we intend to build on these steps over time. For example, we’re thinking about ways to make data and statistics available in this area, such as what Google has done with their <a href="http://www.google.com/transparencyreport/">Transparency Report</a>.</p>
+
+<p>Our goal with Stripe is to help build the economic infrastructure of the internet. Economic infrastructure, like other fundamental layers of the internet, requires trust and transparency. We hope these policies increase both.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      September 28, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--stripe-in-canada'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#sheena">
+      <img src="../../img/about/team/sheena@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fstripe-in-canada">Stripe in Canada!<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#sheena">Sheena Pakanati</a>
+      <span>on</span> September 19, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+<div class="image-center launch-flag">
+  <img src="../../img/blog/posts/canada/canada.png" width="578" height="333" class="canada" data-hires="true" />
+</div>
+
+  <p>Since we launched Stripe just under a year ago, by far the most frequent piece of feedback we received was: Stripe is great, but you need to make it possible for people outside the US to accept payments.
+
+  <p>Starting today, Stripe is publicly available for use by any individual or business based in Canada. It’s the exact same Stripe that we offer in the US: instant approval, all major card types accepted, the ability to accept payments from anyone in any country, and simple, flat pricing, without monthly fees.</p>
+
+  <p>We’ve been testing our service in Canada over the summer. We’re grateful to have received extensive feedback and help from companies including <a href="http://www.tarsnap.com/">Tarsnap</a>, <a href="http://metalabdesign.com/">MetaLab</a>, and <a href="http://www.shopify.com/">Shopify</a>, all of whom have now been using Stripe for a few months. To them and our other beta users: a huge thank you.</p>
+
+  <p>In many ways, launching in Canada is a big step for us—going from 1 to 2 is often harder than going from 2 to n—but it’s only a small piece of what we have in mind. We grew up in countries from Honduras to Kenya, and a large part of why we’re so eager to build Stripe is to help those outside the US to participate as first-class citizens in the internet economy.</p>
+
+  <p>And so, to those who are not in the US or Canada: we want Stripe to support businesses and individuals anywhere in the world, and the “international” project we kicked off over a year ago won’t be finished until that’s the case. We’re already working on the next set of countries. </p>
+
+  <p>To our friends up north: we’re very excited to see what you create.</p>
+
+      <p class="cta">Start accepting payments instantly. <a href="../../signup" class="button">Get Started with Stripe</a></p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      September 19, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+
+    <footer id="blog-footer">
+    <nav>
+
+      <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F11" class="older-posts">Older posts<!--Page 11--></a>
+
+      <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F9" class="newer-posts">Newer posts<!-- Page 9--></a>
+
+    </nav>
+  </footer>
+
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../../country?country=AU&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Australia" src="../../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=CA&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Canada" src="../../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=DK&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Denmark" src="../../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=FI&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Finland" src="../../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=GB&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="United Kingdom" src="../../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=IE&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Ireland" src="../../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=NO&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Norway" src="../../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=SE&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Sweden" src="../../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=US&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="United States" src="../../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=AT&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Austria" src="../../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=BE&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Belgium" src="../../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=BR&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Brazil" src="../../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=FR&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="France" src="../../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=DE&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Germany" src="../../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=IT&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Italy" src="../../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=JP&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Japan" src="../../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=LU&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Luxembourg" src="../../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=MX&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Mexico" src="../../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=NL&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Netherlands" src="../../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=PT&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Portugal" src="../../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=SG&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Singapore" src="../../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=ES&amp;redirect=%252Fblog%252Fpage%252F10" >
+                  <img width="23" height="17" alt="Spain" src="../../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F10" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../../pricing">Pricing</a></li>
+      <li><a href="1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("blog");
+    </script>
+
+  </body>
+</html>

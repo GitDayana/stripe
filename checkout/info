@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Stripe Checkout: More Info</title>
+    <link rel="stylesheet" href="../assets/checkout/checkout-f7a27f985ddf53c2d4ddde68a4b09d83.css">
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="/assets/checkout/ie8-97364c9a6a4811b2c01bda1898a5bce1.css">
+      <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <link rel="stylesheet" href="/assets/checkout/ie7-794c0d1c835f7bf0296c160ab7045826.css">
+    <![endif]-->
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Checkout: Getting Started</h1>
+        <p><strong>Storing your Payment Information with Stripe</strong></p>
+      </header>
+      <ol>
+        <li>
+          <h1>Account Registration</h1>
+          <p>Click "<strong>Remember me</strong>" to securely store your credit card info for faster checkout on this and other sites that use Stripe.</p>
+        </li>
+        <li>
+          <h1>One-Click Payments</h1>
+          <p>On this computer, when you come back to
+
+          any other participating site, your credit card info will
+
+          already be filled in: just click <strong>Pay</strong> to confirm your purchase.</p>
+          <p>You can edit the card number if you need to. Stripe will store the one you used most recently.</p>
+        </li>
+        <li>
+          <h1>Authentication</h1>
+          <p>Your credit card is linked to your <strong>email address</strong> and your <strong>mobile phone number</strong>.</p>
+          <p>To pay with Stripe on a different computer, or after you log out, just enter your email address during checkout and Stripe will instantly send you a text message to verify your identity.</p>
+          <p>Message and data rates may apply. Frequency of messages depends on user. For help, reply back with HELP. To stop, reply back with <strong>STOP</strong>.</p>
+        </li>
+      </ol>
+    </section>
+    <footer>
+      <ul>
+        <li>
+          <a href="../privacy">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="terms">Terms of Service</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

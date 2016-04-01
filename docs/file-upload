@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>File Upload Guide</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <style>
+pre .kwd {
+  color: #228AFF;
+}
+</style>
+
+    <meta name="csrf-token" content="7Nd1Gu0qaTYiWA4x9Qzr2QC_O5rcxGFNauSqCEnI2jRk_XDZ9EkshtFIVOGrdldSOALBcs2vtXWj_j1kyMV-rg==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../security">Security</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="selected"><a href="guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="file-upload-guide" id="details">
+  <header>
+    <h1>File Upload Guide</h1>
+  </header>
+  <article>
+
+    <h1 id="overview">Overview</h1>
+
+    <p>The File Upload API allows you to upload files to Stripe for a variety of purposes. When you upload a file, the API responds with a file token and other information about the file. The token can then be used in other API calls. This guide provides a detailed walk-through of this process.</p>
+
+    <h1 id="uploading-a-file">Uploading a File</h1>
+
+    <p>To upload a file, you’ll need to send a <code>multipart/form-data</code> request to <code>https://uploads.stripe.com/v1/files</code>. Note that the subdomain <code>uploads.stripe.com</code> is different than most of Stripe’s API endpoints. The request should specify a purpose and a file, where purpose is one of the following:</p>
+
+    <ul>
+      <li><code>identity_document</code>: for uploading a PNG or JPG image to prove your identity during account provisioning. The MIME type of the uploaded file should be either <code>image/jpeg</code> or <code>image/png</code>.</li>
+      <li><code>dispute_evidence</code>: for uploading a PDF or image as evidence in a dispute. The MIME type of the uploaded file should be <code>image/jpeg</code>, <code>image/png</code>, or <code>application/pdf</code>.</li>
+    </ul>
+
+    <p>To upload a file located at <code>/path/to/a/file.jpg</code> on your local file system with purpose <code>identity_document</code>, you can make the following curl request:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js bash"><span class="meta">curl</span> <span class="string">https://uploads.stripe.com/v1/files</span> <span class="meta">\</span>
+  <span class="meta">-u</span> <span class="string">sk_test_BQokikJOvBiI2HlWgH4olfQ2</span><span class="meta">:</span> <span class="meta">\</span>
+  <span class="meta">-F</span> <span class="kwd">purpose</span>=<span class="string">identity_document</span> <span class="meta">\</span>
+  <span class="meta">-F</span> <span class="kwd">file</span>=<span class="string">"@/path/to/a/file.jpg"</span></span></code></pre>
+      </div>
+    </section>
+
+    <p>Once you have sent the request, the server should return a JSON response which has the following form:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;id&quot;: &quot;fil_15BZxW2eZvKYlo2CvQbrn9dc&quot;,
+  &quot;created&quot;: 1420744487,
+  &quot;size&quot;: 1529506,
+  &quot;purpose&quot;: &quot;identity_document&quot;,
+  &quot;url&quot;: null,
+  &quot;type&quot;: &#39;pdf&#39;
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>The <code>url</code> parameter that is returned will contain a publicly accessible URL to view the uploaded file. For security purposes, the <code>url</code> parameter will return null for <code>identity_document</code> uploads.</p>
+
+    <p>The <code>type</code> parameter will return the media type of the file uploaded, and may be <code>pdf</code>, <code>jpeg</code>, or <code>png</code>. Note that for best results, all uploaded PDFs should adhere to the Adobe PDF 1.7 specifications (these are the same as the ISO 32000-1:2008 standards). Most modern PDF creators should default to creating PDFs conforming to this standard, but some older PDF creators may not work.</p>
+
+    <h1 id="retrieving-a-file">Retrieving a File</h1>
+
+    <p>To retrieve a file, you should make a GET request to the <code>uploads.stripe.com</code> subdomain on the <code>/v1/files</code> endpoint using the token of the upload you’d like to retrieve. Here is an example curl request:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js bash"><span class="meta">curl</span> <span class="string">https://uploads.stripe.com/v1/files/fil_15BZxW2eZvKYlo2CvQbrn9dc</span> <span class="meta">\</span>
+  <span class="meta">-u</span> <span class="string">sk_test_BQokikJOvBiI2HlWgH4olfQ2</span><span class="meta">:</span></span></code></pre>
+      </div>
+    </section>
+
+    <p>Once this call is made, the server should return a response which is identical to the one received from uploading a file.</p>
+
+    <h1 id="using-a-file-token">Using a File Token</h1>
+
+    <p>Once you’ve uploaded a file, you can use the returned ID in calls to the main Stripe API. For example, if you would like to attach an uploaded file to a particular dispute as evidence, you would make the following cURL command:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js bash"><span class="meta">curl</span> <span class="string">https://uploads.stripe.com/v1/files/ch_17uUze2eZvKYlo2Caj8ReGAe/dispute</span> <span class="meta">\</span>
+  <span class="meta">-u</span> <span class="string">sk_test_BQokikJOvBiI2HlWgH4olfQ2</span><span class="meta">:</span>
+  <span class="meta">-d</span> <span class="string">"stored_evidence[uncategorized_file]=fil_15BZxW2eZvKYlo2CvQbrn9dc"</span></span></code></pre>
+      </div>
+    </section>
+
+    <p>Note that you can only attach an uploaded file once.</p>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../country?country=AU&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CA&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DK&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FI&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=GB&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IE&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NO&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SE&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=US&amp;redirect=%252Fdocs%252Ffile-upload" class="selected">
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=AT&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BE&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BR&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FR&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DE&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IT&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=JP&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=LU&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=MX&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NL&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=PT&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SG&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=ES&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffile-upload" >
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

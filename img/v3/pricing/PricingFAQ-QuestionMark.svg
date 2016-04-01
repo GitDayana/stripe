@@ -1,0 +1,17 @@
+<svg id="question_mark.svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d4f1d0;
+        opacity: 0.6;
+      }
+
+      .cls-2 {
+        fill: #0abd6b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Shape_8_copy_3" data-name="Shape 8 copy 3" class="cls-1" cx="12" cy="12" r="12"/>
+  <path id="Shape_8_copy_2" data-name="Shape 8 copy 2" class="cls-2" d="M282.23,3237.24a3.3,3.3,0,0,0,1.77-2.88c0-1.16-.85-3.36-3.9-3.36a3.806,3.806,0,0,0-4.1,4h2.36c0-1.45.82-2.06,1.67-2.06a1.184,1.184,0,0,1,1.37,1.3c0,0.96-.15,1.14-1.03,1.82a3.365,3.365,0,0,0-1.57,2.94H281A2.526,2.526,0,0,1,282.23,3237.24ZM280,3243.5a1.5,1.5,0,1,0-1.5-1.5A1.5,1.5,0,0,0,280,3243.5Z" transform="translate(-268 -3225)"/>
+</svg>

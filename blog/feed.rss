@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Stripe Blog</title>
+    <link>https://stripe.com/blog</link>
+    <description>The Stripe Blog</description>
+    <item>
+      <title>Atlas + Cuba</title>
+      <link>https://stripe.com/blog/atlas-cuba</link>
+      <description>&lt;p&gt;Since the 1960s, the U.S. has maintained a trade embargo with Cuba. Today, more than half a century later, many of these restrictions are gradually being lifted. At Stripe, we stand for increasing global commerce and enthusiastically support this action.&lt;/p&gt;
+
+&lt;p&gt;The embargo has many components, among the most significant being the &lt;a href=&quot;https://www.treasury.gov/about/organizational-structure/offices/Pages/Office-of-Foreign-Assets-Control.aspx&quot;&gt;Office of Foreign Asset Control&lt;/a&gt;’s restrictions on access to financial services by Cuban nationals. On Tuesday, these were some of the &lt;a href=&quot;https://www.treasury.gov/press-center/press-releases/Pages/jl0379.aspx&quot;&gt;first restrictions to be relaxed&lt;/a&gt; by the White House. This removes one of the biggest impediments to Cubans participating in the global financial system.&lt;/p&gt;
+
+&lt;p&gt;It also removes one of the biggest barriers to entrepreneurship in Cuba. The restrictions on access to financial services have made it extremely tough for Cuban developers and founders to start new businesses or to work with U.S. investors or partners. Despite this, &lt;a href=&quot;https://www.washingtonpost.com/graphics/world/cuba-poll-2015/&quot;&gt;more than 70% of Cubans&lt;/a&gt; say that they’d like to start a business. In his upcoming historic trip—the first by a sitting U.S. president in 88 years—President Obama will meet Cuban entrepreneurs to learn &lt;a href=&quot;https://www.whitehouse.gov/the-press-office/2016/02/20/weekly-address-new-chapter-cuba&quot;&gt;&quot;how we can help them start new ventures.&quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When the White House reached out to us about the role Stripe might play in this process, we jumped at the idea. As of today, &lt;a href=&quot;/atlas?ref=cbp163&quot;&gt;Stripe Atlas&lt;/a&gt; will be available to entrepreneurs in one of the only countries it didn’t previously serve: Cuba.&lt;/p&gt;
+
+&lt;p&gt;Stripe Atlas is a new product for us—we announced it less than a month ago. It’s based on our belief that there exist individuals with the ability to be successful entrepreneurs everywhere and that the important tools for internet entrepreneurship should be available to everyone. With Atlas, we aim to offer best-in-class tools to founders no matter where they’re based—from Cambodia to (now) Cuba.&lt;/p&gt;
+
+&lt;p&gt;Thanks to Tuesday’s changes, we’ll be working as quickly as possible with our partners, including Silicon Valley Bank, to enable Cuban entrepreneurs to easily incorporate U.S. companies, set up U.S. bank accounts, and use Stripe to start accepting payments from customers around the world. There are more details in &lt;a href=&quot;/atlas/faq#Can-I-use-Stripe-Atlas-if-I-m-based-in-Cuba&quot;&gt;our guide&lt;/a&gt; about how it works.&lt;/p&gt;
+
+&lt;p&gt;Cuban entrepreneurs can &lt;a href=&quot;/atlas?ref=cbp163&quot;&gt;apply for access&lt;/a&gt; immediately and we plan to send the first invitations soon. We’re also extending the &lt;a href=&quot;/atlas/faq#Who-is-in-the-Stripe-Atlas-network&quot;&gt;Stripe Atlas network&lt;/a&gt; to Cuba and we’re delighted to start out by partnering with &lt;a href=&quot;http://www.merchise.com&quot;&gt;Merchise Startup Circle&lt;/a&gt; in Havana.&lt;/p&gt;
+
+&lt;p&gt;Since we announced Atlas, businesses from more than 185 countries have already applied for access. We’re excited to make that 186.&lt;/p&gt;
+
+&lt;p class=&quot;cta&quot;&gt;
+  Get access to global startup tools with Stripe Atlas &lt;a href=&quot;/atlas?ref=cbp163&quot; class=&quot;button&quot;&gt;Request access&lt;/a&gt;
+&lt;/p&gt;</description>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/atlas-cuba</guid>
+      <dc:date>2016-03-18T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Open-Source Retreat meetup</title>
+      <link>https://stripe.com/blog/open-source-retreat-meetup-2016</link>
+      <description>&lt;p&gt;This January, we invited three developers to come work on open-source projects full-time at Stripe. We specifically chose projects for this &lt;a href=&quot;/blog/open-source-retreat-2016-grantees&quot;&gt;Open-Source Retreat&lt;/a&gt; that we felt would have deep impact in a variety of different areas. Over the past few months, our grantees have made significant progress on their projects:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pascal Brandt has been focused on &lt;a href=&quot;http://openmrs.org&quot;&gt;OpenMRS&lt;/a&gt;, a platform that’s widely used to support the delivery of health care in Africa and developing countries. He’s introduced Docker containers for the core platform and reference applications. He’s also written specific containers for a few implementation sites in Mozambique. In preparation for creating a JavaScript API for OpenMRS, he’s rewritten how the API is generated using the OpenAPI standard and has built a Yeoman generator that scaffolds out frontend apps (and includes all the build and deploy tooling required).&lt;/li&gt;
+
+  &lt;li&gt;Christopher Allan Webber has been working exclusively on readying the next release of &lt;a href=&quot;http://mediagoblin.org/&quot;&gt;MediaGoblin&lt;/a&gt;, a free software media platform that anyone can run. Focused on launching federation tooling for the platform, Chris has been working to push forward federation standards with the W3C, overhauling MediaGoblin’s database migration structure, improving the project’s packaging and deployability, and more.&lt;/li&gt;
+
+  &lt;li&gt;Nik Graf has spent most of the past few months working on &lt;a href=&quot;http://nikgraf.github.io/belle&quot;&gt;Belle&lt;/a&gt;, a component library for React that’s focused on great user experience, accessibility, and compatibility across devices and browsers. He’s spent time exploring several architecture options for the next iteration of Belle. Nik is also launching a new plugin architecture atop &lt;a href=&quot;https://nikgraf.github.io/draft-js-plugins/&quot;&gt;DraftJS&lt;/a&gt; that’ll let developers improve their app’s commenting and chat sections across mobile and desktop—even in screenreaders!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;We’re hosting &lt;a href=&quot;/events/oss-meetup-march-2016&quot;&gt;a meetup&lt;/a&gt; in a few weeks at Stripe’s SF office where Nik, Christopher, and Pascal will present what they’ve worked on and answer any questions.&lt;/p&gt;
+
+&lt;div class=&quot;map-image&quot;&gt;
+    &lt;a href=&quot;http://maps.google.com/maps?q=3180%2018th%20Street,%20San%20Francisco,%20CA%2094110&amp;hl=en&amp;hnear=3180%2018th%20Street,%20San%20Francisco,%20CA%2094110&amp;t=m&amp;z=15&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;https://maps.googleapis.com/maps/api/staticmap?center=3180%2018th%20Street,%20San%20Francisco,%20CA%2094110&amp;zoom=15&amp;size=640x280&amp;sensor=false&amp;style=feature:administrative.land_parcel|element:geometry|visibility:off&amp;style=feature:water|element:geometry.fill|color:0x52b6ef&amp;style=feature:landscape|element:geometry|saturation:-100|lightness:50&amp;style=feature:road|saturation:-100|lightness:50&amp;style=feature:poi|element:geometry|saturation:-100|lightness:50&amp;style=feature:poi|element:labels.text.fill|lightness:30&amp;style=feature:road.arterial|element:labels.text.fill|lightness:-30&amp;style=feature:road.highway|element:geometry.fill|color:0xf2be50&amp;style=feature:road.highway|element:geometry.stroke|color:0xe0994c&amp;style=feature:road.highway|element:labels.text.fill|color:0xb96f1e&amp;style=feature:poi.park|element:geometry|color:0xcbd9b4&amp;style=feature:transit|element:labels|lightness:20&amp;style=feature:administrative|saturation:-100&quot; width=&quot;640&quot; height=&quot;280&quot; /&gt;
+
+        &lt;/a&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&quot;map-details&quot;&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;When:&lt;/dt&gt;
+    &lt;dd&gt;Tuesday, March 29th, 2016, at 6:30 PM&lt;/dd&gt;
+
+    &lt;dt&gt;Where:&lt;/dt&gt;
+    &lt;dd&gt;&lt;a href=&quot;https://goo.gl/maps/zWcL7HAUMKF2&quot;&gt;Stripe HQ&lt;/a&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Whether you’re an active open-source contributor or completely new to open source, we’d love to have you join us—please &lt;a href=&quot;/events/oss-meetup-march-2016&quot;&gt;RSVP on the event page&lt;/a&gt; if you can attend!&lt;/p&gt;
+
+&lt;p&gt;If you have any questions about the meetup, the Open-Source Retreat, or the specific projects from this year, please &lt;a href=&quot;mailto:krithika.muthukumar@stripe.com&quot;&gt;get in touch&lt;/a&gt;.&lt;/p&gt;
+
+
+</description>
+      <pubDate>Thu, 17 Mar 2016 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/open-source-retreat-meetup-2016</guid>
+      <dc:date>2016-03-17T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Stripe Atlas</title>
+      <link>https://stripe.com/blog/atlas-beta</link>
+      <description>&lt;div class=&quot;background&quot;&gt;&lt;/div&gt;
+&lt;a href=&quot;/atlas&quot;&gt;
+
+&lt;strong&gt;Introducing Stripe Atlas:&lt;/strong&gt; Global entrepreneurs can now easily incorporate a U.S. company, open a U.S. business bank account, and sign up for Stripe. &lt;span class=&quot;arrow&quot;&gt;Learn more&lt;/span&gt;
+
+&lt;/a&gt;</description>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/atlas-beta</guid>
+      <dc:date>2016-02-24T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Accept ACH payments</title>
+      <link>https://stripe.com/blog/accept-ach-payments</link>
+      <description>&lt;p&gt;
+  Even though there are many benefits, accepting &lt;a href=&quot;https://en.wikipedia.org/wiki/Automated_Clearing_House&quot;&gt;ACH&lt;/a&gt; payments&amp;mdash;that is, payments where you charge a bank account directly&amp;mdash;has traditionally been pretty difficult. Doing so has generally involved baroque, legacy APIs. There’s additional complexity compared to credit cards because the transaction amounts are typically larger and authorization is subtler. Still, being able to handle ACH payments with Stripe has come up a lot as a feature request over the years. And so, today, we’re delighted to &lt;a href=&quot;/docs/ach&quot;&gt;launch support&lt;/a&gt; for ACH payments for all U.S. Stripe users.&lt;/p&gt;
+
+&lt;p&gt;
+  Our ACH support is tightly integrated with the rest of Stripe. You can, of course, directly create one-off transactions and manage them within the Dashboard. You can also charge for subscriptions (as &lt;a href=&quot;https://slack.com&quot;&gt;Slack&lt;/a&gt; or &lt;a href=&quot;https://digitalocean.com&quot;&gt;Digital Ocean&lt;/a&gt; do), while companies using Connect (like &lt;a href=&quot;https://fancy.com&quot;&gt;Fancy&lt;/a&gt; or &lt;a href=&quot;https://tilt.com&quot;&gt;Tilt&lt;/a&gt;) can accept ACH payments on behalf of their customers. No matter what sort of payments you’re dealing with, the reporting pipeline is fully unified with credit card transactions.
+&lt;/p&gt;
+
+&lt;h2&gt;Simplifying setup and verification&lt;/h2&gt;
+
+&lt;p&gt;
+  Our ACH support comes with two key additional features: built-in support for &lt;a href=&quot;/docs/ach#manually-collecting-and-verifying-bank-accounts&quot;&gt;micro-deposits&lt;/a&gt; and optional instant verification with &lt;a href=&quot;https://plaid.com&quot;&gt;Plaid&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;div class=&quot;image-right inactive&quot; id=&quot;plaid-container&quot;&gt;
+  &lt;video width=&quot;406&quot; height=&quot;570&quot; id=&quot;plaid&quot; poster=&quot;/img/blog/posts/accept-ach-payments/plaid@2x.png&quot; loop&gt;
+    &lt;source src=&quot;/img/blog/posts/accept-ach-payments/plaid.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;source src=&quot;/img/blog/posts/accept-ach-payments/plaid.webm&quot; type=&quot;video/webm&quot;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+  With micro-deposits, we send two unique amounts to a customer’s bank account so that your customer can verify their account by entering the amounts they see on their statement.
+&lt;/p&gt;
+
+&lt;p&gt;
+  Alternatively, we’ve worked with Plaid on an integration that provides instant bank account verification. If you choose to use it, your customers can authenticate directly with their bank in real-time&amp;mdash;no digging around for routing numbers. (This process also prevents most of the common errors of mistyping bank account numbers or incorrect routing numbers.)
+&lt;/p&gt;
+
+&lt;p&gt;
+  From a technical perspective, ACH is another type of &lt;code&gt;source&lt;/code&gt; for a customer. It’s easy to create an ACH charge once your customer authenticates:
+&lt;/p&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;meta&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;https://api.stripe.com/v1/charges&lt;/span&gt; &lt;span class=&quot;meta&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;meta&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;sk_test_BQokikJOvBiI2HlWgH4olfQ2&lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;: \&lt;/span&gt;
+  &lt;span class=&quot;meta&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;kwd&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;250000&lt;/span&gt; &lt;span class=&quot;meta&quot;&gt;\
+  -d&lt;/span&gt; &lt;span class=&quot;kwd&quot;&gt;currency&lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;usd&lt;/span&gt; &lt;span class=&quot;meta&quot;&gt;\
+  -d&lt;/span&gt; &lt;span class=&quot;kwd&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;Corp Site License 2016&quot; &lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;\
+  -d&lt;/span&gt; &lt;span class=&quot;kwd&quot;&gt;customer&lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;cus_7hyNnNEjxYuJOE &lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;\
+  -d&lt;/span&gt; &lt;span class=&quot;kwd&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;meta&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;ba_17SYQs2eZvKYlo2CcV8BfFGz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;
+  ACH payments on Stripe cost 0.80%, capped at $5, with no monthly fees or verification fees. So, a $100 payment incurs a $0.80 fee; any payments above $625 cost $5. This can be especially useful if you routinely charge customers large amounts on a recurring basis. (If you’re operating at scale already and would like to discuss pricing, we’d &lt;a href=&quot;mailto:ach@stripe.com&quot;&gt;love to chat&lt;/a&gt;.)
+&lt;/p&gt;
+
+&lt;p&gt;
+  We’re excited to make more of the financial system’s functionality accessible to developers and look forward to seeing what people build. If you’re ready to get started, we’ve created &lt;a href=&quot;/docs/ach&quot;&gt;a guide for ACH payments&lt;/a&gt;. As always, please &lt;a href=&quot;mailto:ach@stripe.com&quot;&gt;let us know&lt;/a&gt; if you have any questions or feedback!
+&lt;/p&gt;
+
+&lt;script&gt;
+  $('#plaid').hover(function() {
+    $('#plaid-container').removeClass('inactive');
+    this.play();
+  }, function() {
+    $('#plaid-container').addClass('inactive');
+    this.pause();
+  });
+&lt;/script&gt;
+</description>
+      <pubDate>Tue, 12 Jan 2016 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/accept-ach-payments</guid>
+      <dc:date>2016-01-12T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Pricing update for Europe</title>
+      <link>https://stripe.com/blog/pricing-update-for-europe</link>
+      <description>&lt;p&gt;Good news! We’re available in &lt;a href=&quot;/global&quot;&gt;14 countries&lt;/a&gt; across the European Union and, today, we’re lowering our prices in all of them.&lt;/p&gt;
+
+&lt;p&gt;Stripe is working to grow the size of the internet economy and new regulations from the EU have enabled us to simplify and unify pricing across the European Union markets we support.&lt;/p&gt;
+
+&lt;p&gt;Our new price is 1.4% + €0.25 for European cards and 2.9% + €0.25 for non-European cards. (Instead of €0.25, the fixed fee in the UK will be 20p and in Denmark and Sweden will be 1.8kr.) As before, we expose our fees on a &lt;a href=&quot;/docs/api#balance_transaction_object-fee&quot;&gt;per-charge basis&lt;/a&gt; in real time.&lt;/p&gt;
+
+&lt;p&gt;The pricing will go into effect immediately and you don’t need to take any action to get the lower price.&lt;/p&gt;
+
+&lt;p&gt;If you’ve any questions or feedback (about this change or Stripe in general), &lt;a href=&quot;mailto:joe.cruttwell@stripe.com&quot;&gt;please email me&lt;/a&gt;.&lt;/p&gt;</description>
+      <pubDate>Wed, 09 Dec 2015 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/pricing-update-for-europe</guid>
+      <dc:date>2015-12-09T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Open-Source Retreat 2016 grantees</title>
+      <link>https://stripe.com/blog/open-source-retreat-2016-grantees</link>
+      <description>&lt;p&gt;Like many developers, we often &lt;a href=&quot;/open-source#personal-projects&quot;&gt;contribute&lt;/a&gt; to open-source software in bits and pieces over long periods of time. So we started the &lt;a href=&quot;/blog/open-source-retreat-2016&quot;&gt;Open-Source Retreat&lt;/a&gt; to help open-source developers make concentrated progress on features and releases with the potential for significant impact.&lt;/p&gt;
+
+&lt;p&gt;For 2016’s Retreat, we’re inviting three developers to work on their projects from Stripe’s office in SF:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;strong&gt;&lt;a href=&quot;https://github.com/nikgraf&quot;&gt;Nik Graf&lt;/a&gt;&lt;/strong&gt; will be working on &lt;a href=&quot;http://nikgraf.github.io/belle&quot;&gt;Belle&lt;/a&gt;, a configurable component library for React that is focused on great user experience, accessibility, and compatibility across devices and browsers. Developers still tend to build the same set of components from scratch for web frameworks like React, Ember, and Angular—and often without considering compatibility or UX issues. We’re excited to see Nik expand the number of components for Belle and improve their usability and accessibility during the Retreat.
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;strong&gt;&lt;a href=&quot;https://github.com/cwebber&quot;&gt;Christopher Allan Webber&lt;/a&gt;&lt;/strong&gt; wants to launch federation tooling for &lt;a href=&quot;http://mediagoblin.org/&quot;&gt;MediaGoblin&lt;/a&gt;, a free software media platform that anyone can run. Think of it as a decentralized alternative to major media publishing services such as Flickr, YouTube, SoundCloud, DeviantArt, etc. We’re huge fans of the federated web and would like to see more software in that space. We see MediaGoblin as more than just a way to share media, but a reference application for building on new, emerging standards, such as the &lt;a href=&quot;http://w3c-social.github.io/activitypump/&quot;&gt;ActivityPump API&lt;/a&gt;.
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;strong&gt;&lt;a href=&quot;https://github.com/psbrandt&quot;&gt;Pascal Brandt&lt;/a&gt;&lt;/strong&gt;’s focus will be on &lt;a href=&quot;http://openmrs.org/&quot;&gt;OpenMRS&lt;/a&gt;, a platform that’s widely used to support the delivery of health care in Africa and developing countries. The introduction of a REST API in their latest version has contributed to an explosion in new front-ends being built atop their medical recording system framework. Pascal hopes to create a single, authoritative JavaScript client for OpenMRS.
+  &lt;/li&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Though there were many more applicants than we could host, we’d like to thank everyone who applied. We’d also especially like to recognize our finalists:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/somdoron&quot;&gt;Doron Samech&lt;/a&gt;: A proposal to bring &lt;a href=&quot;http://netmq.readthedocs.org/&quot;&gt;NetMQ&lt;/a&gt; to feature parity with ZeroMQ.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tgxworld&quot;&gt;Alan Guo Xiang Tan&lt;/a&gt;: Improvements to backfilling and automated regression identification for &lt;a href=&quot;https://rubybench.org/&quot;&gt;RubyBench&lt;/a&gt;, which provides benchmarking for Ruby and Rails.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Anniepoo&quot;&gt;Anne Ogborn&lt;/a&gt;: Writing the authoritative book for programming in &lt;a href=&quot;http://www.swi-prolog.org/&quot;&gt;SWI-Prolog&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Ch3ck&quot;&gt;Nyah Check&lt;/a&gt;: A module for &lt;a href=&quot;http://openmrs.org&quot;&gt;OpenMRS&lt;/a&gt; that would help migrate existing databases to OpenMRS.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nthmost.com/&quot;&gt;Naomi Most&lt;/a&gt;: &lt;a href=&quot;https://pypi.python.org/pypi/metapub&quot;&gt;Metapub&lt;/a&gt;, a Python library that unites the National Library of Medicine databases with CrossRef metadata search to improve search, text-mining, and cross-referencing for academic articles.&lt;/li&gt;
+
+&lt;p&gt;We encourage you to explore (and contribute to!) these projects.
+
+&lt;hr /&gt;
+
+&lt;p&gt;Our three grantees will be working on their proposed projects starting in January and they’ll share their work towards the end of the Retreat. In the meantime, if you have any questions or suggestions, please &lt;a href=&quot;mailto:michelle.bu@stripe.com&quot;&gt;let me know&lt;/a&gt;!</description>
+      <pubDate>Tue, 08 Dec 2015 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/open-source-retreat-2016-grantees</guid>
+      <dc:date>2015-12-08T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Stripe on Fabric</title>
+      <link>https://stripe.com/blog/stripe-on-fabric</link>
+      <description>&lt;div class=&quot;image-center&quot;&gt;
+&lt;img src=&quot;/img/blog/posts/stripe-on-fabric/fabric-logo.png&quot; width=&quot;150&quot; height=&quot;161&quot; class=&quot;no-border icon&quot; data-hires=&quot;true&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you’re using &lt;a href=&quot;https://fabric.io&quot;&gt;Fabric&lt;/a&gt;, you can now add payments to your mobile app using the Stripe kit for &lt;a href=&quot;https://fabric.io/kits/ios/stripe&quot;&gt;iOS&lt;/a&gt; or &lt;a href=&quot;https://fabric.io/kits/android/stripe&quot;&gt;Android&lt;/a&gt;. Fabric enables mobile developers to add additional services (like analytics, ads, and now payments) to their Android and iOS apps through a single integration instead of having to set each of them up manually.&lt;/p&gt;
+
+&lt;p&gt;We built this integration for Fabric so that it’s even easier to get started and accept your first payment on Stripe. You can see it in action in &lt;a href=&quot;http://furni.xyz&quot;&gt;this demo app&lt;/a&gt;. (You can of course still use our &lt;a href=&quot;/docs/mobile&quot;&gt;mobile SDKs&lt;/a&gt; to integrate Stripe directly, too.)&lt;/p&gt;
+
+&lt;p&gt;If you already use Fabric, just enable the Stripe kit in your settings. If you’d like to try Fabric out, head over to their &lt;a href=&quot;https://get.fabric.io&quot;&gt;docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Feel free to &lt;a href=&quot;mailto:jack.flintermann@stripe.com&quot;&gt;email me&lt;/a&gt; if you have any questions or feedback!&lt;/p&gt;</description>
+      <pubDate>Wed, 21 Oct 2015 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/stripe-on-fabric</guid>
+      <dc:date>2015-10-21T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Instant debit card transfers</title>
+      <link>https://stripe.com/blog/instant-debit-card-transfers</link>
+      <description>&lt;p&gt;We’re rolling out a private beta for &lt;a href=&quot;/connect&quot;&gt;Connect&lt;/a&gt; users to instantly have money transferred to a debit card.&lt;/p&gt;
+
+&lt;p&gt;Why might you want this? Many marketplaces, like Kickstarter, Postmates, Instacart, and TaskRabbit, use Connect to get their sellers paid. Rather than having to collect bank account numbers or having sellers wait on their funds, marketplaces can now use instant debit card transfers to get sellers paid faster.&lt;/p&gt;
+
+&lt;p&gt;While we’ve had the ability to &lt;a href=&quot;/blog/send-money-to-debit-cards&quot;&gt;send money to debit cards&lt;/a&gt; for a while, funds used to take two to three days to arrive. Now, they’re basically instant.&lt;/p&gt;
+
+&lt;p&gt;Functionality will be limited to U.S. cardholders to begin with—and not all banks support this yet. We currently have coverage for &lt;a href=&quot;https://support.stripe.com/questions/how-do-i-know-which-banks-support-instant-debit-card-transfers&quot;&gt;64% of U.S. banks&lt;/a&gt;, including Bank of America and Chase. Money can still be sent to unsupported banks, but it’ll take a day to arrive rather than being instant.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;image-right&quot; style=&quot;margin-top: 0;&quot;&gt;
+  &lt;img src=&quot;/img/blog/posts/instant-debit-card-transfers/lyft-logo.png&quot; data-hires=&quot;true&quot; width=&quot;75&quot; data-1x=&quot;/img/blog/posts/instant-debit-card-transfers/lyft-logo.png&quot; data-2x=&quot;/img/blog/posts/instant-debit-card-transfers/lyft-logo@2x.png&quot; data-3x=&quot;/img/blog/posts/instant-debit-card-transfers/lyft-logo@3x.png&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Lyft is using instant transfers to create &lt;a href=&quot;http://blog.lyft.com/posts/wetreatyoubetter&quot;&gt;Express Pay&lt;/a&gt;, which lets drivers get paid out instantly rather than just once a week.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We hope you’ll use this feature to get sellers on your marketplaces paid faster. We’re adding more people to our beta as soon as we can. If you’d like to try it out, please email us at &lt;a href=&quot;mailto:connect@stripe.com&quot;&gt;connect@stripe.com&lt;/a&gt;.</description>
+      <pubDate>Thu, 08 Oct 2015 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/instant-debit-card-transfers</guid>
+      <dc:date>2015-10-08T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Introducing Relay</title>
+      <link>https://stripe.com/blog/relay</link>
+      <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Today, mobile e-commerce websites aren’t working: Ten-step shopping carts, mandatory account signup, slow page loads. When we get linked to a shopping cart on our phone, we usually just give up. That shouldn’t be surprising—most mobile shopping sites are fundamentally the same as the desktop sites that preceded them, despite the medium calling for something completely different.&lt;/p&gt;
+
+&lt;p&gt;The result has been predictable. Despite mobile devices representing 60% of browsing traffic for shopping sites, they only make up 15% of purchases.&lt;/p&gt;
+
+&lt;p&gt;What does work? Native mobile apps, like Postmates or Instacart, with buying experiences designed to let the user transact as quickly as possible, reuse existing payment details across many orders, and finish the entire transaction in the same app they started in.&lt;/p&gt;
+
+&lt;p&gt;Over the past year, a number of companies—Twitter, Pinterest, and Spring, to name a few—have worked to bring this kind of experience to e-commerce, pulling products from many stores into the very apps where users are already spending their time.&lt;/p&gt;
+
+&lt;p&gt;While this works, experiences like this are hard to build, since stores don’t usually make their products programmatically available.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So, we’re trying out something new. We’re launching &lt;a href=&quot;/relay&quot;&gt;Relay&lt;/a&gt;, an API for stores to publish their products, and for apps to read them. Relay makes it easier for developers to build great mobile e-commerce experiences, and for stores to participate in them.&lt;/p&gt;
+
+&lt;img src=&quot;/img/blog/posts/relay/twitter-app.png&quot; width='230' height='467' data-hires='true' class=&quot;twitter-app&quot;&gt;
+
+&lt;p&gt;It’s powered by a few new objects in the Stripe API: Products, SKUs (product variants), and Orders. Stores can provide product information to Stripe via the dashboard, the API, or by linking their existing e-commerce systems. &lt;a href=&quot;http://hybris.com/en&quot;&gt;SAP Hybris&lt;/a&gt; (used by stores like Levi’s, Oakley, and Ted Baker) is the first e-commerce integration we’re announcing, but expect more to come later.&lt;/p&gt;
+
+&lt;p&gt;For stores, you can use Relay to enable instant purchases in third-party mobile apps: one of our launch partners, Twitter, is using Relay to enable anyone to start selling within tweets. (You can try it out on this Tweet from &lt;a href=&quot;https://twitter.com/WarbyParker/status/643472513297682432&quot;&gt;@WarbyParker&lt;/a&gt;.) Or you can submit your products to be shown in a growing number of apps like ShopStyle and Spring.&lt;/p&gt;
+
+&lt;p&gt;For app developers, Relay is a set of APIs for building great in-app buying experiences. People can buy products directly within your app rather than getting pushed to third-party websites. Our friends at Wish have &lt;a href=&quot;/docs/recipes/product-discovery-app&quot;&gt;made their product catalog accessible&lt;/a&gt; starting today via Relay. You can play around with their data and see what kinds of buying experiences you could build.&lt;/p&gt;
+
+&lt;div class=&quot;cta&quot;&gt;
+
+&lt;p&gt;To get started, &lt;a href=&quot;/docs/relay&quot;&gt;browse the API docs&lt;/a&gt; or try &lt;a href=&quot;https://dashboard.stripe.com/products/create&quot;&gt;selling a product on Twitter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you’d like to talk to us about it, we’d love to hear from you: &lt;a href=&quot;mailto:relay@stripe.com&quot;&gt;relay@stripe.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;</description>
+      <pubDate>Mon, 14 Sep 2015 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/relay</guid>
+      <dc:date>2015-09-14T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Open-Source Retreat 2016</title>
+      <link>https://stripe.com/blog/open-source-retreat-2016</link>
+      <description>&lt;p&gt;We increasingly rely on (and &lt;a href=&quot;/open-source&quot;&gt;contribute back to&lt;/a&gt;!) a lot of open-source software to build Stripe, and we’d like to give back and get more people working on open-source.&lt;/p&gt;
+
+&lt;p&gt;Last year, we invited four developers to the Stripe office as part of our &lt;a href=&quot;/blog/stripe-open-source-retreat&quot;&gt;first Open-Source Retreat&lt;/a&gt;. Our grantees made &lt;a href=&quot;/blog/open-source-retreat-meetup&quot;&gt;significant progress&lt;/a&gt; on their projects in a relatively short time—from launching a pure-Python &lt;a href=&quot;https://github.com/pyca/tls&quot;&gt;TLS 1.2 implementation&lt;/a&gt; to releasing a major update to &lt;a href=&quot;https://pypi.python.org/pypi/urllib3#changes&quot;&gt;urllib3&lt;/a&gt;. Julian Shapiro of Velocity.js &lt;a href=&quot;https://medium.com/@Shapiro/stripe-san-francisco-and-velocity-js-37575e29a51b&quot;&gt;wrote about his experience&lt;/a&gt; with the program.&lt;/p&gt;
+
+&lt;p&gt;Starting January, we’re hosting another Open-Source Retreat at Stripe. Just like last year, we’re looking for existing projects where these grants can make a large difference in spurring the development of a new feature or infrastructure.&lt;/p&gt;
+
+&lt;p&gt;We’ll host three to four developers at our office in SF for three months to work full-time on an open-source project. While we’ll ask that they give a couple of internal tech talks over the course of the program, the grant itself is no-strings-attached.&lt;/p&gt;
+
+&lt;h2&gt;Selection process&lt;/h2&gt;
+
+&lt;p&gt;We’ll select projects on based on their importance to the broader community, independently of Stripe itself. Applicants from any country are welcome and we’d love to fund people from backgrounds underrepresented in the open-source community. Here are the criteria we’ll use:
+
+&lt;ul&gt;
+&lt;li&gt; &lt;strong&gt;Impact of our grant.&lt;/strong&gt; Does our grant have the ability to transform this project’s trajectory? Are you an influencer within the project? Will your ability to focus on it full-time move the project forward in some significant way? &lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Importance of the project.&lt;/strong&gt; Is this a project that people already use and has attracted a lot of attention? If this project isn’t itself popular yet, how much potential does it have? Is it a project that, while possibly risky, would be particularly exciting if successful? &lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Likelihood of success.&lt;/strong&gt; Is there a good plan for how these three months will be used? What indicators are there that you’ll be able to pull it off (obvious passion for the project, existing work on the project, previous work on similar projects)?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Selection team&lt;/h3&gt;
+
+&lt;p&gt;Here's the team that will be reviewing your application:&lt;/p&gt;
+  &lt;div class=&quot;person&quot;&gt;
+    &lt;a class=&quot;circle&quot; target=&quot;_blank&quot; href=&quot;/about#d&quot; style=&quot;background-image: url(https://stripe.com/img/about/team/d.jpeg);&quot;&gt;&lt;/a&gt;
+    Danielle
+  &lt;/div&gt;
+  &lt;div class=&quot;person&quot;&gt;
+    &lt;a class=&quot;circle&quot; target=&quot;_blank&quot; href=&quot;/about#evan&quot; style=&quot;background-image: url(https://stripe.com/img/about/team/evan.jpeg);&quot;&gt;&lt;/a&gt;
+    Evan
+  &lt;/div&gt;
+  &lt;div class=&quot;person&quot;&gt;
+    &lt;a class=&quot;circle&quot; target=&quot;_blank&quot; href=&quot;/about#kjc&quot; style=&quot;background-image: url(https://stripe.com/img/about/team/kjc.jpeg);&quot;&gt;&lt;/a&gt;
+    Kyle
+  &lt;/div&gt;
+  &lt;div class=&quot;person&quot;&gt;
+    &lt;a class=&quot;circle&quot; target=&quot;_blank&quot; href=&quot;/about#krithix&quot; style=&quot;background-image: url(https://stripe.com/img/about/team/krithix.jpeg);&quot;&gt;&lt;/a&gt;
+    Krithika
+  &lt;/div&gt;
+  &lt;div class=&quot;person&quot;&gt;
+    &lt;a class=&quot;circle&quot; target=&quot;_blank&quot; href=&quot;/about#michelle&quot; style=&quot;background-image: url(https://stripe.com/img/about/team/michelle.jpeg);&quot;&gt;&lt;/a&gt;
+    Michelle
+  &lt;/div&gt;
+  &lt;div class=&quot;person&quot;&gt;
+    &lt;a class=&quot;circle&quot; target=&quot;_blank&quot; href=&quot;/about#stan&quot; style=&quot;background-image: url(https://stripe.com/img/about/team/stan.jpeg);&quot;&gt;&lt;/a&gt;
+    Stan
+  &lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h2&gt;Logistics&lt;/h2&gt;
+&lt;p&gt;We want to provide everything needed to focus and have a substantial impact on an open-source project:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The program will run from &lt;strong&gt;January 15th until April 15th, 2016&lt;/strong&gt; at Stripe HQ in the Mission District of San Francisco.&lt;/li&gt;
+&lt;li&gt;We’ll provide $7,500 per month in addition to desk space at our office and meals during the week.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&quot;apply&quot;&gt;Application&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Applications are now closed.&lt;/strong&gt; Thanks to everyone who applied. We'll be contacting you individually soon!&lt;/p&gt;
+
+</description>
+      <pubDate>Thu, 03 Sep 2015 00:00:00 -0000</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/open-source-retreat-2016</guid>
+      <dc:date>2015-09-03T00:00:00Z</dc:date>
+    </item>
+  </channel>
+</rss>

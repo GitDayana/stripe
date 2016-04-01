@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bitcoin Guide</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow, noarchive">
+
+    <meta name="csrf-token" content="Kfx8Ah0OtEHUxTmf1pAg-iDKTQTmkzbnkZ_hVaOYyxSh1nnBBG3x8SfVY0-I6pxxGHe37Pf44t9YhXY5IpVvjg==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="ach">ACH Guide</a></li>
+      <li class="selected"><a href="bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <style>
+.checkout-example {
+  float: right;
+  margin: 20px 0 20px 50px;
+  width: 306px;
+  text-align: center;
+  font-style: italic;
+  color: #9ca5b5;
+}
+</style>
+
+<section class="bitcoin-guide" id="details">
+  <header>
+    <h1>Accepting Bitcoin</h1>
+    <p>Stripe supports accepting Bitcoin alongside payments from credit cards. This guide will help you get started with your integration.</p>
+  </header>
+  <article>
+
+    <p><span class="checkout-example">
+  <img src="https://stripe.com/img/documentation/guides/bitcoin/checkout.png" width="306" height="462" data-hires="true" />
+  <span>An example of Bitcoin in <a href="../../country?country=CH&amp;redirect=%252Fcheckout">Stripe Checkout</a>.</span>
+</span></p>
+
+    <p>With Stripe, you can accept Bitcoin in nearly the same way that you accept credit card payments. The key difference lies in how the payment is actually made.</p>
+
+    <p>With credit cards, you collect a card number from your customer. You can use this card number multiple times, but each time, the customer’s bank may choose to decline the charge. Simply collecting the card number does not guarantee access to any particular amount of funds.</p>
+
+    <p>With Bitcoin, there’s no saved number that you can attempt to charge multiple times or at a later date. Instead, you invert the process by telling your customer how much they need to pay you, and then provide a way for them to pay you that amount.</p>
+
+    <p>When you accept Bitcoin with Stripe:</p>
+
+    <ul>
+      <li>You specify the amount that you want to collect from your customer in USD. We determine what amount of bitcoin (BTC) is needed to convert to your specified USD amount.</li>
+      <li>We create what is called a <a href="../api/index.html#bitcoin_receivers">BitcoinReceiver</a>—a wrapper around a Bitcoin address that provides a virtual location that your customer can push the payment to.</li>
+      <li>Once the customer has pushed enough bitcoin into the receiver, you can create a <a href="../api/index.html#charges">charge</a> using this receiver (just as you would use a card token if you were accepting a credit card payment). Because the funds are already in the receiver when you create the charge, there’s no concept of a “decline” the way there would be when using a credit card. You already have the bitcoin, so creating a charge from the BitcoinReceiver cannot fail.</li>
+    </ul>
+
+    <p>If you’re an existing Stripe user, you can likely start accepting Bitcoin payments without making a single change to your server-side integration: all API endpoints and dashboard reports support both Bitcoin and credit card payment types.</p>
+
+    <p>You currently need a US bank account to accept Bitcoin payments. Stripe users in more than twenty countries can attach a US bank account to their Stripe account, but we know it’s not ideal for non-US users, so we’re working to expand Bitcoin acceptance more broadly.</p>
+
+    <p class="notification">To process live Bitcoin payments, you need to <a href="https://dashboard.stripe.com/account/bitcoin/enable" class="arrow">enable the live Bitcoin API on your account</a></p>
+
+    <h1 id="quickstart-example">Quickstart Example</h1>
+
+    <p>The simplest way to accept Bitcoin is to use <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Stripe Checkout</a>. To enable Bitcoin in Checkout, simply add the <code>data-bitcoin="true"</code> option when loading Checkout, as follows:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">&lt;form action=&quot;/create_payment&quot; method=&quot;POST&quot;&gt;
+  &lt;script
+    src=&quot;https://checkout.stripe.com/checkout.js&quot; class=&quot;stripe-button&quot;
+    data-key=&quot;pk_test_6pRNASCoBOKtIshFeQd4XMUh&quot;
+    data-image=&quot;/square-image.png&quot;
+    data-name=&quot;Demo Site&quot;
+    data-description=&quot;2 widgets ($20.00)&quot;
+    data-amount=&quot;2000&quot;
+    data-currency=&quot;usd&quot;
+    data-bitcoin=&quot;true&quot;&gt;
+  &lt;/script&gt;
+&lt;/form&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>If you’re already a Checkout user, this is the only code change you need to make to accept Bitcoin! You don’t need to worry about what amount in bitcoin you want to charge—you simply specify the amount of USD that you want to receive, and we’ll handle showing your customer how much BTC to pay.</p>
+
+    <p>Once the customer has sent the payment, Checkout submits the form and you can then create a charge on your server in much the same way that you would use a credit card token:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/charges</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2</span>: \
+   -d <span class="token keyword">source</span>=<span class="token string">btcrcv_14ctSt2EftWUeI88LEvGiohr</span> \
+   -d <span class="token keyword">amount</span>=<span class="token string">2000</span> \
+   -d <span class="token keyword">currency</span>=<span class="token string">usd</span>
+</code></pre>
+</code></pre>
+      </div>
+    </section>
+
+    <p>That’s all you need to get off the ground with accepting Bitcoin! In the sections below, we’ll cover both the client-side and server-side aspects of the integration in more detail.</p>
+
+    <hr />
+
+    <h1 id="part-1-generating-a-bitcoin-address-for-payment">Part 1: Generating a Bitcoin address for payment</h1>
+
+    <aside class="content note">
+      <h1>Test mode</h1>
+      <p>
+    Test mode does not use real Bitcoin addresses.
+  </p>
+      <p>
+  By default, we simulate filling BitcoinReceiver objects three seconds after creation, but there are certain <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting#how-do-i-test-bitcoin">test values</a> you can use to test edge cases.
+  </p>
+    </aside>
+
+    <p>As mentioned earlier, Bitcoin payments differ from credit card payments in that the customer needs to initiate the payment. Once you decide how much you’d like to charge, you can generate a Bitcoin address by creating a BitcoinReceiver—the returned object will include the converted bitcoin (BTC) amount to send and an <code>inbound_address</code> where the customer can send it to.</p>
+
+    <p>BitcoinReceiver objects here are treated very similarly to card <a href="../api/index.html#tokens">tokens</a>, but there are two major differences:</p>
+
+    <ul>
+      <li>When Checkout or Stripe.js (via callback) passes a BitcoinReceiver back to the server, that receiver is “full”: the customer already sent bitcoin to the specified Bitcoin address, and the bitcoin was converted to USD. If you do not end up using the receiver to claim the payment, the funds will still be debited from the customer. (This is different from not using a card token, where the card will simply not get charged.)</li>
+      <li>Stripe does not currently support recurring or repeated payments with Bitcoin. The receivers can only be used for a single payment.</li>
+    </ul>
+
+    <p>You can use either Stripe Checkout or Stripe.js to build your payment flow. We recommend Checkout, but Stripe.js allows for the most customization.</p>
+
+    <h2 id="using-checkout">Using Checkout</h2>
+
+    <p>In this guide we’re using the simple Checkout integration, but you can check out the main <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">documentation</a> for information on how to further customize Checkout.</p>
+
+    <p>To accept Bitcoin in addition to credit card charges, add a <code>data-bitcoin="true"</code> attribute to the Checkout <code>&lt;script&gt;</code> tag (as seen in the example <a href="bitcoin#quickstart-example">above</a>). Once a Bitcoin payment is received, Checkout will submit the form with the following extra fields: <code>stripeToken</code>, <code>stripeTokenType</code> (with a value of <code>bitcoin_receiver</code>), and <code>stripeEmail</code>.</p>
+
+    <p>To actually claim the payment, you’ll need to create a charge against that BitcoinReceiver via the API. This is explained in the <a href="bitcoin#part-2-creating-a-charge">next section</a>.</p>
+
+    <aside class="content note">
+      <h1>Stripe.js</h1>
+      <p>
+    Be sure to check out the full Stripe.js <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">reference</a> or Bitcoin-specific <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js#collecting-bitcoin-payments">documentation</a>.
+  </p>
+    </aside>
+
+    <h2 id="using-stripejs">Using Stripe.js</h2>
+
+    <p>You should use Stripe.js if you want total control over your Bitcoin payment flow, but you’ll need to build your own user interface, polling logic, etc. (By contrast, <a href="bitcoin#using-checkout">Checkout</a> provides all of this for you.)</p>
+
+    <h3 id="creating-and-displaying-a-bitcoinreceiver">Creating and displaying a BitcoinReceiver</h3>
+
+    <p>First, create a BitcoinReceiver using Stripe.js with the amount in USD that you’d like to charge. The receiver will expose an amount in bitcoin (BTC) and an address that the customer can then send their payment to.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;div id=&quot;bitcoin_address&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;error_response&quot;&gt;&lt;/div&gt;
+
+&lt;script src=&quot;https://js.stripe.com/v2/stripe.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  Stripe.setPublishableKey(&#39;pk_test_6pRNASCoBOKtIshFeQd4XMUh&#39;);
+
+  function populateBitcoinCheckout(status, response) {
+    if (status === 200) {
+      document.getElementById(&quot;bitcoin_address&quot;).innerHTML = response.inbound_address;
+    } else {
+      document.getElementById(&quot;error_response&quot;).innerHTML = JSON.stringify(response);
+    }
+  }
+
+  Stripe.bitcoinReceiver.createReceiver({
+    amount: 2000,
+    currency: &#39;usd&#39;,
+    description: &#39;Socks for christian@stripe.com&#39;,
+    email: &#39;christian@stripe.com&#39;
+  }, populateBitcoinCheckout);
+&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>At creation, Stripe guarantees an exchange rate for 10 minutes. If the customer sends bitcoin to the receiver after the 10 minutes have expired, we’ll still process the transaction but the conversion amount will no longer be guaranteed.</p>
+
+    <p>There are several pieces of information you should display to the customer:</p>
+
+    <ul>
+      <li><code>bitcoin_amount</code>: The amount that the customer must send. <strong>Note</strong>: The bitcoin amount (like all amounts returned by the API) is an integer. This amount is denominated in Satoshi. There are 10^8 (that is, 100,000,000) Satoshi in one bitcoin. You’ll want to divide the returned amount by 100,000,000 to present the amount in bitcoin.</li>
+      <li><code>inbound_address</code>: The Bitcoin address that is specific to this receiver.</li>
+      <li><code>bitcoin_uri</code>: An encoding of the amount and address. If you encode this URI as a QR code, many Bitcoin apps can scan it. If you present this URI as a hyperlink, many customers can click on it to activate their Bitcoin client (much like a <code>mailto</code> link).</li>
+    </ul>
+
+    <h3 id="polling-the-bitcoinreceiver">Polling the BitcoinReceiver</h3>
+
+    <p>Bitcoin payments are asynchronous: after generating the address, you need to wait for the customer to send the payment. We’ve provided a utility method that will help you poll the Stripe API for changes to the receiver.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">Stripe.bitcoinReceiver.pollReceiver(&quot;btcrcv_3hwhfVWdCKxqi9&quot;, filledReceiverHandler);</span></code></pre>
+      </div>
+    </section>
+
+    <p>The method takes in a callback as a second argument; when the requested amount is received (when receiver is “filled”), Stripe.js will call the specified handler. You can use this function to post the ID of the receiver to your server, along with any other necessary customer information.</p>
+
+    <p>Because a receiver’s guaranteed exchange rate expires after 10 minutes, you should keep track of how long it’s been displayed to the customer. Before 10 minutes elapse, you can create a new BitcoinReceiver and update the payment page with the new receiver’s information. You can then use Stripe.js to start polling the new receiver and cancel polling on the old one:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">// Once 10 minutes have elapsed, create a new receiver and start polling it.
+Stripe.bitcoinReceiver.createReceiver(...);
+Stripe.bitcoinReceiver.pollReceiver(newID, filledReceiverHandler);
+
+// Wait before canceling the old receiver in case the customer was already in
+// the process of sending a payment to it.
+setTimeout(function() {
+    Stripe.bitcoinReceiver.cancelReceiverPoll(&quot;btcrcv_3hwhfVWdCKxqi9&quot;);
+}, 60 * 1000);</span></code></pre>
+      </div>
+    </section>
+
+    <h1 id="part-2-creating-a-charge">Part 2: Creating a charge</h1>
+
+    <p>When the receiver is filled (that is, has been sent the full amount of bitcoin to complete payment), the receiver should be submitted to your server for actual charge creation, as you would with a credit card token. This is the final step in completing the payment—if you don’t create a charge object using the receiver, you will not be paid the funds from the transaction.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="../index.html">ruby</a>
+  <a href="../index.html">python</a>
+  <a href="../index.html">php</a>
+  <a href="../index.html">node</a>
+  <a href="../index.html">go</a>
+  <a href="../index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_create_bitcoin_charge">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>There are a couple of important things to note about receivers:</p>
+
+    <ul>
+      <li>A BitcoinReceiver can only be used if it has been filled, and can be used at most once.</li>
+      <li>The charge request must use the same amount and currency as the receiver. (You cannot charge less than the receiver amount.)</li>
+    </ul>
+
+    <p>On the client side, the exchange rate for a BitcoinReceiver expires after 10 minutes. However, a filled BitcoinReceiver never expires since the bitcoin inside of it have already been converted to currency. That being said, you probably want to create a payment immediately after the receiver is filled.</p>
+
+    <p>Bitcoin receivers can also be linked to a Stripe <a href="../api/index.html#customers">customer object</a> and used to create a charge for that customer. Just remember that you can only make one charge against the BitcoinReceiver attached to the customer, and that it must be for the same amount and currency as the BitcoinReceiver.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="../index.html">ruby</a>
+  <a href="../index.html">python</a>
+  <a href="../index.html">php</a>
+  <a href="../index.html">node</a>
+  <a href="../index.html">go</a>
+  <a href="../index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_create_bitcoin_charge_with_customer">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>If you’re currently integrated with Stripe, you’ll notice that the receiver’s ID is passed as the <code>source</code> parameter. This is a change from the <code>card</code> parameter used to create credit card charges.</p>
+
+    <p>Similarly, charges created from a BitcoinReceiver have a <code>source</code> attribute rather than a <code>card</code> attribute. To avoid breaking your existing integration, you’ll need to make sure you update any charge retrieval code to look at the <code>source</code> property instead of the <code>card</code> property, since Bitcoin charges will <strong>not</strong> have a <code>card</code> attribute present.</p>
+
+    <h2 id="refunds">Refunds</h2>
+
+    <p>Like any other type of payment, you can refund Bitcoin charges through the dashboard or API:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="../index.html">ruby</a>
+  <a href="../index.html">python</a>
+  <a href="../index.html">php</a>
+  <a href="../index.html">node</a>
+  <a href="../index.html">go</a>
+  <a href="../index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_refund_bitcoin_charge">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>However, with Bitcoin, you’ll need to provide the Bitcoin address to refund to. In most cases, this means that you need to collect a refund address from your customer.</p>
+
+    <p>When refunding a Bitcoin charge, the amount refunded must be at least $1. A status code of <code>400</code> will be returned in the case you try to refund a smaller amount.</p>
+
+    <h2 id="mispayments">Mispayments</h2>
+
+    <p>The customer is responsible for sending the correct amount of bitcoin to fill the receiver. It is rare but possible that the customer will end up sending an unexpected amount. This is referred to as mispayment; the three basic possibilities are: (a) the customer sends too few bitcoin so you cannot “capture” the payment, (b) the customer sends too many bitcoin and needs to be partially refunded, or (c) the customer sends the correct amount of bitcoin but they send it belatedly or there’s a network error such that the receiver token is never posted to your server.</p>
+
+    <p>In case (c), you can defend against this easily by having your integration listen for <code>bitcoin.receiver.filled</code> webhooks and creating charges from those receivers.</p>
+
+    <p>The easiest way to handle mispayments is to ask Stripe to handle them on your behalf: if you pass <code>refund_mispayments=true</code> when creating a BitcoinReceiver, then Stripe will automatically refund any unused bitcoin one hour after the receiver is created. If no refund address is available for the customer, Stripe will contact them directly using the email address provided when creating the BitcoinReceiver. Stripe Checkout will also automatically refund mispayments one hour after creating a BitcoinReceiver.</p>
+
+    <p>If you prefer to handle mispayments yourself—which is the default if you do not provide a <code>refund_mispayments</code> flag—you can use webhooks to detect when a mispayment occurs (we will fire <code>bitcoin.receiver.transaction.created</code> events whenever someone pushes money to a receiver). You can also use <a href="https://dashboard.stripe.com/bitcoin_receivers">the dashboard</a> to manually look for receivers with unclaimed funds.</p>
+
+    <h2 id="webhooks">Webhooks</h2>
+
+    <p>A successful Bitcoin payment generates the <code>charge.succeeded</code> webhook, which is the same as a successful credit card charge. There are also Bitcoin-receiver specific <code>bitcoin.receiver.created</code>, <code>bitcoin.receiver.transaction.created</code>, and <code>bitcoin.receiver.filled</code> webhooks to notify your server when any of these events have occurred. Refer to the <a href="../webhooks/index.html">webhooks documentation</a> for more information on consuming webhooks.</p>
+
+    <hr />
+
+    <h1>Further Reading</h1>
+    <p>
+  You should now be able to accept Bitcoin payments! Some things you might want to look at next:
+</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Managing your Stripe account</a></li>
+  <li><a href="https://stripe.com/bitcoin/terms">Bitcoin Terms of Service</a></li>
+</ul>
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="https://stripe.com/country?country=AU&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=CA&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=DK&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=FI&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=GB&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=IE&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=NO&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=SE&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=US&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=AT&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=BE&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=BR&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=FR&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=DE&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=IT&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=JP&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=LU&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=MX&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=NL&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=PT&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=SG&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=ES&amp;redirect=/docs/bitcoin" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=CH&amp;redirect=/docs/bitcoin" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["ruby"] = {};
+              APIValues["ruby"]["tutorial_create_bitcoin_charge"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nreceiver = Stripe::BitcoinReceiver.create(\n  :amount =\u0026gt; 1000,    # amount in cents\n  :currency =\u0026gt; \u0026quot;usd\u0026quot;, # presently can only make bitcoin charges in USD\n  :email =\u0026gt; \u0026quot;payinguser+fill_now@example.com\u0026quot;\n)\n\ncharge = Stripe::Charge.create(\n  :amount =\u0026gt; receiver.amount,\n  :currency =\u0026gt; receiver.currency,\n  :source =\u0026gt; receiver.id,\n  :description =\u0026gt; receiver.email\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_create_bitcoin_charge_with_customer"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nreceiver = Stripe::BitcoinReceiver.create(\n  :amount =\u0026gt; 1000,    # amount in cents\n  :currency =\u0026gt; \u0026quot;usd\u0026quot;, # presently can only make bitcoin charges in USD\n  :email =\u0026gt; \u0026quot;payinguser+fill_now@example.com\u0026quot;\n)\n\ncustomer = Stripe::Customer.create(\n  :source =\u0026gt; receiver.id\n)\n\ncharge = Stripe::Charge.create(\n  :amount =\u0026gt; receiver.amount,\n  :currency =\u0026gt; receiver.currency,\n  :customer =\u0026gt; customer.id,\n  :description =\u0026gt; receiver.email,\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_refund_bitcoin_charge"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nch = Stripe::Charge.retrieve(charge_id)\nrefund = ch.refunds.create(:refund_address =\u0026gt; customer_bitcoin_address)\u003C/span\u003E";
+          APIValues["python"] = {};
+              APIValues["python"]["tutorial_create_bitcoin_charge"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nreceiver = stripe.BitcoinReceiver.create(\n    amount=1000,     # amount in cents\n    currency=\u0026quot;usd\u0026quot;, # presently can only make bitcoin charges in USD\n    email=\u0026quot;payinguser+fill_now@example.com\u0026quot;\n)\n\ncharge = stripe.Charge.create(\n    amount=receiver.amount,\n    currency=receiver.currency,\n    source=receiver.id,\n    description=receiver.email\n)\u003C/span\u003E";
+              APIValues["python"]["tutorial_create_bitcoin_charge_with_customer"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nreceiver = stripe.BitcoinReceiver.create(\n    amount=1000,     # amount in cents\n    currency=\u0026quot;usd\u0026quot;, # presently can only make bitcoin charges in USD\n    email=\u0026quot;payinguser+fill_now@example.com\u0026quot;\n)\n\ncustomer = stripe.Customer.create(\n    source=receiver.id\n)\n\ncharge = stripe.Charge.create(\n    amount=receiver.amount,\n    currency=receiver.currency,\n    customer=customer.id,\n    description=receiver.email,\n)\u003C/span\u003E";
+              APIValues["python"]["tutorial_refund_bitcoin_charge"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nch = stripe.Charge.retrieve(charge_id)\nre = ch.refunds.create(refund_address=customer_bitcoin_address)\u003C/span\u003E";
+          APIValues["php"] = {};
+              APIValues["php"]["tutorial_create_bitcoin_charge"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n$receiver = \\Stripe\\BitcoinReceiver::create(array(\n  \u0026quot;amount\u0026quot; =\u0026gt; 1000,    // amount in cents\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;, // presently can only be USD\n  \u0026quot;email\u0026quot; =\u0026gt; \u0026quot;payinguser+fill_now@example.com\u0026quot;\n));\n\n$charge = \\Stripe\\Charge::create(array(\n  \u0026quot;amount\u0026quot; =\u0026gt; $receiver-\u0026gt;amount,\n  \u0026quot;currency\u0026quot; =\u0026gt; $receiver-\u0026gt;currency,\n  \u0026quot;source\u0026quot; =\u0026gt; $receiver-\u0026gt;id,\n  \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Example charge\u0026quot;\n));\u003C/span\u003E";
+              APIValues["php"]["tutorial_create_bitcoin_charge_with_customer"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n$receiver = \\Stripe\\BitcoinReceiver::create(array(\n  \u0026quot;amount\u0026quot; =\u0026gt; 1000,    // amount in cents\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;, // presently can only be USD\n  \u0026quot;email\u0026quot; =\u0026gt; \u0026quot;payinguser+fill_now@example.com\u0026quot;\n));\n\n$customer = \\Stripe\\Customer::create(array(\n  \u0026quot;source\u0026quot; =\u0026gt; $receiver-\u0026gt;id\n));\n\n$charge = \\Stripe\\Charge::create(array(\n  \u0026quot;amount\u0026quot; =\u0026gt; $receiver-\u0026gt;amount,\n  \u0026quot;currency\u0026quot; =\u0026gt; $receiver-\u0026gt;currency,\n  \u0026quot;customer\u0026quot; =\u0026gt; $customer-\u0026gt;id,\n  \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Example charge\u0026quot;,\n));\u003C/span\u003E";
+              APIValues["php"]["tutorial_refund_bitcoin_charge"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n$ch = \\Stripe\\Charge::retrieve(chargeId);\n$re = $ch-\u0026gt;refunds-\u0026gt;create(array(\n  \u0026quot;refund_address\u0026quot; =\u0026gt; customer_bitcoin_address\n));\u003C/span\u003E";
+          APIValues["node"] = {};
+              APIValues["node"]["tutorial_create_bitcoin_charge"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nvar receiver = stripe.bitcoinReceivers.create({\n  amount: 1000,    // amount in cents\n  currency: \u0026quot;usd\u0026quot;, // presently can only be USD\n  email: \u0026quot;payinguser+fill_now@example.com\u0026quot;\n});\n\n// Using the receiver you created earlier\nvar charge = stripe.charges.create({\n  amount: receiver.amount,\n  currency: receiver.currency,\n  source: receiver.id,\n  description: \u0026quot;Example charge\u0026quot;\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_create_bitcoin_charge_with_customer"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nvar receiver = stripe.bitcoinReceivers.create({\n  amount: 1000,    // amount in cents\n  currency: \u0026quot;usd\u0026quot;, // presently can only be USD\n  email: \u0026quot;payinguser+fill_now@example.com\u0026quot;\n});\n\nvar customer = stripe.customer.create({\n  source: receiver.id\n});\n\n// Using the receiver you created earlier\nvar charge = stripe.charges.create({\n  amount: receiver.amount,\n  currency: receiver.currency,\n  customer: customer.id,\n  description: \u0026quot;Example charge\u0026quot;,\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_refund_bitcoin_charge"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.charges.createRefund(\n  chargeId,\n  {\n    refund_address: customer_bitcoin_address\n  },\n  function(err, refund) {\n    // asynchronously called\n  }\n);\u003C/span\u003E";
+          APIValues["go"] = {};
+              APIValues["go"]["tutorial_create_bitcoin_charge"] = "\u003Cspan class=\"highlight_js go\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.Key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nreceiverParams := \u0026amp;stripe.BitcoinReceiverParams{\n  Amount:   1000,         // amount in cents\n  Currency: currency.USD, // presently can only be USD\n  Email:    \u0026quot;payinguser+fill_now@example.com\u0026quot;,\n}\n\nreceiver, err := bitcoinreceiver.New(receiverParams)\n\nif err != nil {\n  // handle error\n  return;\n}\n\nchargeParams := \u0026amp;stripe.ChargeParams{\n  Amount:   receiver.Amount,    // amount in cents\n  Currency: receiver.Currency,  // presently can only be USD\n  Email: \u0026quot;payinguser@example.com\u0026quot;,\n  Desc: receiver.Desc,\n}\nchargeParams.SetSource(receiver.ID)\n\nch, err := charge.New(chargeParams)\n\nif err != nil {\n  // handle error\n  return;\n}\n\n// Use your charge!\u003C/span\u003E";
+              APIValues["go"]["tutorial_create_bitcoin_charge_with_customer"] = "\u003Cspan class=\"highlight_js go\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.Key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nreceiverParams := \u0026amp;stripe.BitcoinReceiverParams{\n  Amount:   1000,         // amount in cents\n  Currency: currency.USD, // presently can only be USD\n  Email:    \u0026quot;payinguser+fill_now@example.com\u0026quot;,\n}\n\nreceiver, err := bitcoinreceiver.New(receiverParams)\n\nif err != nil {\n  // handle error\n  return;\n}\n\ncustomerParams := \u0026amp;stripe.CustomerParams{}\ncustomerParams.SetSource(receiver.ID)\n\ncustomer, err := customer.New(customerParams)\n\nif err != nil {\n  // handle error\n  return;\n}\n\nchargeParams := \u0026amp;stripe.ChargeParams{\n  Amount:   receiver.Amount,    // amount in cents\n  Currency: receiver.Currency,  // presently can only be USD\n  Customer: customer.ID,\n  Desc: receiver.Desc,\n}\n\nch, err := charge.New(chargeParams)\n\n// Use your charge!\u003C/span\u003E";
+              APIValues["go"]["tutorial_refund_bitcoin_charge"] = "\u003Cspan class=\"highlight_js go\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.Key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n// Need to set a valid bitcoin address to refund to\nupdateParams := \u0026amp;stripe.BitcoinReceiverUpdateParams{\n  RefundAddr: validBitcoinRefundAddr,\n}\nreceiver, _ := bitcoinreceiver.Update(receiverID, updateParams)\n\n// Actually create the refund\nrefund, _ := refund.New(\u0026amp;stripe.RefundParams{Charge: chargeId})\u003C/span\u003E";
+          APIValues["java"] = {};
+              APIValues["java"]["tutorial_create_bitcoin_charge"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; receiverParams = new HashMap\u0026lt;String, Object\u0026gt;();\nreceiverParams.put(\u0026quot;amount\u0026quot;, 1000);    // amount in cents\nreceiverParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;); // presently can only be USD\nreceiverParams.put(\u0026quot;email\u0026quot;, \u0026quot;payinguser+fill_now@example.com\u0026quot;);\nBitcoinReceiver receiver = BitcoinReceiver.create(receiverParams);\n\nMap\u0026lt;String, Object\u0026gt; chargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\nchargeParams.put(\u0026quot;source\u0026quot;, receiver.getId());\nchargeParams.put(\u0026quot;amount\u0026quot;, receiver.getAmount());     // amount in cents\nchargeParams.put(\u0026quot;currency\u0026quot;, receiver.getCurrency()); // presently can only be USD\nCharge charge = Charge.create(chargeParams);\u003C/span\u003E";
+              APIValues["java"]["tutorial_create_bitcoin_charge_with_customer"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; receiverParams = new HashMap\u0026lt;String, Object\u0026gt;();\nreceiverParams.put(\u0026quot;amount\u0026quot;, 1000);    // amount in cents\nreceiverParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;); // presently can only be USD\nreceiverParams.put(\u0026quot;email\u0026quot;, \u0026quot;payinguser+fill_now@example.com\u0026quot;);\nBitcoinReceiver receiver = BitcoinReceiver.create(receiverParams);\n\nMap\u0026lt;String, Object\u0026gt; customerParams = new HashMap\u0026lt;String, Object\u0026gt;();\ncustomerParams.put(\u0026quot;source\u0026quot;, receiver.getId());\nCustomer customer = Customer.create(customerParams);\n\nMap\u0026lt;String, Object\u0026gt; chargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\nchargeParams.put(\u0026quot;amount\u0026quot;, receiver.getAmount());     // amount in cents\nchargeParams.put(\u0026quot;currency\u0026quot;, receiver.getCurrency()); // presently can only be USD\nchargeParams.put(\u0026quot;customer\u0026quot;, customer.getId());\nCharge charge = Charge.create(chargeParams);\u003C/span\u003E";
+              APIValues["java"]["tutorial_refund_bitcoin_charge"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; params = new HashMap\u0026lt;String, Object\u0026gt;();\nparams.put(\u0026quot;refund_address\u0026quot;, customer_bitcoin_address);\nCharge ch = Charge.retrieve(chargeId);\nRefund re = ch.getRefunds().create(params);\u003C/span\u003E";
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

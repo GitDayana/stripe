@@ -1,0 +1,16 @@
+<svg id="Plan-receive.svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d4f1d0;
+      }
+
+      .cls-2 {
+        fill: #0abd6b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="circle" class="cls-1" cx="13" cy="13" r="13"/>
+  <path id="arrow" class="cls-2" d="M327.551,623.832l-4.779,4.779a0.943,0.943,0,0,1-.161.161l-0.06.06-0.012-.012a0.9,0.9,0,0,1-1.078,0l-0.012.012-0.06-.06a0.943,0.943,0,0,1-.161-0.161l-4.779-4.779,1.133-1.133L321,626.117V618a1,1,0,0,1,2,0v8.117l3.418-3.418Z" transform="translate(-309 -610)"/>
+</svg>

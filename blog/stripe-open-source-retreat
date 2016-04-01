@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" id="blog" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Follow the Stripe blog for product announcements, feature updates, new countries, and technical posts about payments." />
+
+<link rel="shortcut icon" href="../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../assets/blog-ada6c3a77cd627b09ac436c3a82dd49d.css">
+  <link rel="stylesheet" href="../assets/blogposts-b9a9b6ffe0287dc66146bd753faba55d.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../assets/blog-776e3ed92eef5022ed98688d349fd7af.js"></script>
+  <script src="../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.rss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>    Stripe Open-Source Retreat
+</title>
+    <meta content="GPmm2E1eLKK28HXQTaiLLhy6960OBIdt5pgGQT6VaIuQ06MbVD1pEkXgLwAT0jelJAcNRR9vU1UvgpEtv5jMEQ==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../features">Features</a></li>
+        <li class='pricing'><a href="../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../marketplaces'>Connect</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="page/1">Blog</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <header id="blog-header">
+  	<h1><a href="page/1">Blog</a></h1>
+  	<p><a href="https://twitter.com/stripe">Follow Stripe on Twitter</a></p>
+  </header>
+  
+    <div id='blog-post--stripe-open-source-retreat'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../country?country=CH&amp;redirect=%252Fblog%252Fstripe-open-source-retreat">Stripe Open-Source Retreat<br /></a></h1>
+    <p>
+      <a class="author" href="../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> April 24, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+<p class="lead"> We rely on a lot of open-source software at Stripe, and over time we’ve contributed back our own share of patches and projects. We decided we’d like to do more, though, so we’re launching an open-source retreat program. </p>
+
+<p> We’ll give a grant to a small number of developers to come to San Francisco to work full-time on an open-source project for a period of 3 months. They’ll have space in our SF office. We’ll ask that they give a couple of internal tech talks over the course of the program (ideally focused on what they’re working on), but otherwise it’ll be no-strings-attached. </p>
+
+<p> We’re looking for projects where this grant can make an especially large difference. Maybe it’s a rapidly-growing project where the maintainer can currently barely find time for bugfixes. Maybe it’s a crazy experimental idea that needs to be tried out in practice. Or maybe it’s some infrastructure that every company currently builds in-house. </p>
+
+<p> We’ll select projects using the following criteria: </p>
+
+<ul>
+<li> <strong>Impact of our grant.</strong> Does our grant have the ability to transform this project’s trajectory? Are you an influencer within the project? Will your ability to focus on it full-time move the project forward in some significant way? </li>
+<li> <strong>Importance of the project.</strong> Is this a project that people already use and has attracted a lot of attention? If this project isn’t itself popular yet, how much potential does it have? Is it a project that, while possibly risky, would be particularly exciting if successful? </li>
+<li> <strong>Likelihood of success.</strong> Is there a good plan for how these 3 months will be used? What indicators are there that you’ll be able to pull it off (obvious passion for the project, existing work on the project, previous work on similar projects)? </li>
+</ul>
+
+<h2> Parameters of the program </h2>
+
+<ul>
+<li> The program will run from <strong>September 1st until December 1st, 2014</strong>. (Those exact dates are flexible if need be.) </li>
+<li> The grant will be $7,500 per month. We’ll also provide meals at our office during the week. </li>
+</ul>
+
+<hr>
+
+<h2> To apply </h2>
+
+<p> Please send an email to <a href="mailto:open-source-retreat@stripe.com">open-source-retreat@stripe.com</a>. Please include a writeup explaining why we should select you. We’d be particularly interested to hear: </p>
+
+<ul>
+<li> Some context around the project. What does it do? Who uses it? Why is it interesting? </li>
+<li> Your history with this project. Why is it important to you personally? What contributions have you made to it? What makes you well-suited to working on it? </li>
+<li> A link to the project. (It must already exist, though it might be early-stage.) </li>
+<li> Why this grant will make a difference for you. Why are you interested in participating? </li>
+<li> Your plan for those 3 months. What will you actually spend your time on? Be detailed if useful, but we mostly want to have a sense of what will actually get done as opposed to a day-by-day projection. </li>
+</ul>
+
+<p> Applications will be accepted until the end of <strong>May 31st (UTC-11)</strong>. We’ll select a batch of finalists and do a round of Skype interviews before choosing the grantees. </p>
+
+<hr>
+
+<p>
+We’re targeting two participants to start, though we may end up with more or fewer depending on applications. We’ll select projects based on their importance broadly rather than importance to Stripe in particular.
+</p>
+
+<p>
+While decisions will be based on impact and merit, we’d be especially psyched to fund people from backgrounds often underrepresented in the open-source community. We also will accept applicants from outside the United States (and do what we can to help out with visas).
+</p>
+
+<p> We’re excited to see how this program develops. If you’ve any questions or suggestions about how we could make it better, feel free to <a href="mailto:open-source-retreat@stripe.com">drop us an email</a>. </p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      April 24, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+
+  
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../country?country=AU&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Australia" src="../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=CA&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Canada" src="../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=DK&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Denmark" src="../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=FI&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Finland" src="../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=GB&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="United Kingdom" src="../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=IE&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Ireland" src="../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=NO&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Norway" src="../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=SE&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Sweden" src="../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=US&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="United States" src="../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=AT&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Austria" src="../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BE&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Belgium" src="../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BR&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Brazil" src="../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=FR&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="France" src="../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=DE&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Germany" src="../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=IT&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Italy" src="../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=JP&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Japan" src="../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=LU&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Luxembourg" src="../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=MX&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Mexico" src="../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=NL&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Netherlands" src="../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=PT&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Portugal" src="../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=SG&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Singapore" src="../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=ES&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" >
+                  <img width="23" height="17" alt="Spain" src="../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=CH&amp;redirect=%252Fblog%252Fstripe-open-source-retreat" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../pricing">Pricing</a></li>
+      <li><a href="page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("blog");
+    </script>
+
+  </body>
+</html>

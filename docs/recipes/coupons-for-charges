@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Implementing Your Own Coupon System for Standalone Charges</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="Cku0nFKNacmOuKWM0wTJc21w-Jpx3GIGIElnKM19oY6CYbFfS-4seX2o_1yNfnX4Vc0CcmC3tj7pU_BETHAFFA==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Implementing Your Own Coupon System for Standalone Charges</h1>
+    <p>Create a coupon system that adjusts amounts sent to Stripe for standalone charges. If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+</p>
+  </header>
+
+  <article>
+
+    <aside class="intro note">
+      <h1>More recipes</h1>
+      <p>Check out our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes">other recipes</a> and discover more ways to integrate Stripe.</p>
+    </aside>
+
+    <p>Stripe makes it easy to <a href="../subscriptions.1#coupons-and-discounts">use coupons for subscriptions</a>. Applying coupons to standalone charges is typically a bit more nuanced. For instance, in an online store, coupons might depend on the cart total, might affect just shipping, or might only apply to certain items. As such, a coupon system for standalone charges is best implemented in your app. Fortunately, implementing a basic coupon system is easy.</p>
+
+    <p>The first part of this recipe describes a simple and straightforward approach to implement a basic coupon system by:</p>
+
+    <ol>
+      <li>Adding a form field for a coupon to your checkout page</li>
+      <li>Hard-coding coupon codes in your app, and applying any discount associated with these coupons before charges are sent to Stripe</li>
+      <li>Adding a final order confirmation page so the user can see the discount applied</li>
+    </ol>
+
+    <style type="text/css">.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }</style>
+
+    <div>
+      <video width="480" height="270" id="coupon-workflow" poster="../../img/documentation/recipes/coupon-charges/coupon-recipe.jpg" autoplay="autoplay" loop="" class="image-center">
+    <source src="../../img/documentation/recipes/coupon-charges/coupon-recipe.mp4" type="video/mp4" />
+    <source src="../../img/documentation/recipes/coupon-charges/coupon-recipe.ogv" type="video/ogg" />
+  </video>
+    </div>
+
+    <p><br /></p>
+
+    <p>The second part of the recipe builds off this basic system for a more nuanced solution. It does so by moving the coupons into the database and adding features like expirations and redemption tracking.</p>
+
+    <p>The implementations in this recipe use Rails and build off of the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout%252Frails">Rails Checkout tutorial</a>, but the concepts can be easily ported to other languages and frameworks. The code examples use <a href="https://stripe.com/docs/checkout/tutorial">Stripe Checkout</a> for easy and secure card collection, but you could also use <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a> and your own form just the same.</p>
+
+    <h2 id="basic-coupon-system">Basic coupon system</h2>
+
+    <p>The recipe starts by creating a simple coupon framework, which later can be expanded to something more feature-rich.</p>
+
+    <h3 id="adding-a-form-field">Adding a form field</h3>
+
+    <p>To get started, simply add a coupon field to your checkout page. The coupon will be submitted to your server, along with the <code>stripeToken</code>, after the user submitted their card details via Checkout. While you’re at it, ensure you have a field where errors can be displayed:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># app/views/charges/new.html.erb
+
+&lt;%= form_tag charges_path do %&gt;
+  &lt;% if flash[:error].present? %&gt;
+    &lt;div id=&quot;error_explanation&quot;&gt;
+      &lt;p&gt;&lt;%= flash[:error] %&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;% end %&gt;
+  &lt;p&gt;
+    &lt;label class=&quot;amount&quot;&gt;
+      &lt;span&gt;Amount: $5.00&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;%= label_tag(:couponCode, &#39;Coupon:&#39;) %&gt;
+    &lt;%= text_field_tag(:couponCode) %&gt;
+  &lt;/p&gt;
+
+  &lt;script src=&quot;https://checkout.stripe.com/checkout.js&quot; class=&quot;stripe-button&quot;
+          data-key=&quot;&lt;%= Rails.configuration.stripe[:publishable_key] %&gt;&quot;
+          data-description=&quot;Your Purchase&quot;
+          data-locale=&quot;auto&quot;&gt;&lt;/script&gt;
+&lt;% end %&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>For simplicity’s sake, <code>data-amount</code> is not being set on Checkout. Because the charge amount may change depending on an entered coupon, it is best to refrain from displaying the amount in the Checkout modal.</p>
+
+    <h3 id="managing-coupons-on-the-server">Managing coupons on the server</h3>
+
+    <p>On the server, you want to verify the validity and value of the submitted coupon, then update the amount to be charged before sending the charge request to Stripe. A simple approach is to have a hard-coded hash table, <code>COUPONS</code>, that stores all current coupons and their respective discounts. You can then look up the user-submitted <code>couponCode</code> in this hash, and apply any discount accordingly.</p>
+
+    <p>Note that in keeping with the Rails tutorial this example builds off of, a customer is created first and then charged. You can just make a charge directly too.</p>
+
+    <p>Modify the code in the <code>create</code> method of <code>charges_controller</code>:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># app/controllers/charges_controller.rb
+
+def create
+  # Amount in cents
+  @amount = 500
+  @final_amount = @amount
+
+  @code = params[:couponCode]
+
+  if !@code.blank?
+    @discount = get_discount(@code)
+
+    if @discount.nil?
+      flash[:error] = &#39;Coupon code is not valid or expired.&#39;
+      redirect_to new_charge_path
+      return
+    else
+      @discount_amount = @amount * @discount
+      @final_amount = @amount - @discount_amount.to_i
+    end
+
+    charge_metadata = {
+      :coupon_code =&gt; @code,
+      :coupon_discount =&gt; (@discount * 100).to_s + &#39;%&#39;
+    }
+  end
+
+  charge_metadata ||= {}
+
+  customer = Stripe::Customer.create(
+    :email =&gt; params[:stripeEmail],
+    :source  =&gt; params[:stripeToken]
+  )
+  Stripe::Charge.create(
+    :customer    =&gt; customer.id,
+    :amount      =&gt; @final_amount,
+    :description =&gt; &#39;Rails Stripe customer&#39;,
+    :currency    =&gt; &#39;usd&#39;,
+    :metadata    =&gt; charge_metadata
+  )
+rescue Stripe::CardError =&gt; e
+  flash[:error] = e.message
+  redirect_to new_charge_path
+end</span></code></pre>
+      </div>
+    </section>
+
+    <p>This example also adds the coupon used to the charge’s metadata in the Stripe call. Noting the coupon usage makes it easy to see at any later point that a coupon was used on the charge.</p>
+
+    <p>For the above code to work, you want a hash that stores all of the coupons, and a mechanism to retrieve their respective discounts. Add a <code>COUPONS</code> hash and a <code>get_discount</code> helper method to the bottom of the same controller:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># app/controllers/charges_controller.rb
+
+private
+
+COUPONS = {
+  &#39;RAVINGSAVINGS&#39; =&gt; 0.10,
+  &#39;SUMMERSALE&#39; =&gt; 0.05
+}
+
+def get_discount(code)
+  # Normalize user input
+  code = code.gsub(/ +/, &#39;&#39;)
+  code = code.upcase
+  COUPONS[code]
+end</span></code></pre>
+      </div>
+    </section>
+
+    <p>Some normalization of <code>code</code> is performed, like stripping whitespace, before looking it up in the hash. If the user submitted a coupon but it was not found, no coupon is returned, and the calling code creates a <em>Coupon code is not valid or expired.</em> error, preventing the charge from being processed.</p>
+
+    <h3 id="adding-an-order-confirmation-page">Adding an order confirmation page</h3>
+
+    <p>Next, build an order confirmation page that displays the subtotal, the discount applied, the savings, and the total amount charged. You can use the handy Rails helper <code>number_to_currency()</code> to format the figures, converting them from Stripe-compatible cents into human-friendly dollars:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml"># app/views/charges/create.html.erb
+
+&lt;p&gt;
+  &lt;label class=&quot;subtotal&quot;&gt;
+    &lt;span&gt;Subtotal: &lt;%= number_to_currency(@amount * 0.01) %&gt;&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/p&gt;
+&lt;% if @discount.present? %&gt;
+  &lt;p&gt;
+    &lt;label class=&quot;coupon&quot;&gt;
+      &lt;span&gt;Coupon: &lt;%= @code %&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label class=&quot;savings&quot;&gt;
+      &lt;span&gt;Savings: &lt;%= number_to_currency(@discount_amount * 0.01) %&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label class=&quot;discount&quot;&gt;
+      &lt;span&gt;Discount: &lt;%= (@discount * 100).to_s + &#39;%&#39; %&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+&lt;% end %&gt;
+&lt;p&gt;
+  &lt;label class=&quot;total&quot;&gt;
+    &lt;span&gt;Total: &lt;%= number_to_currency(@final_amount * 0.01) %&gt;&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/p&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>In this basic implementation and the subsequent more advanced one, the user will not know the final charge amount before they submit their details via Checkout. This is because the discount is applied <em>after</em> the <code>stripeToken</code> is generated but <em>before</em> the charge call is made to Stripe. See the end of this recipe for a possible approach to improving this workflow.</p>
+
+    <h2 id="more-advanced-coupon-system">More advanced coupon system</h2>
+
+    <p>The coupon system outlined so far is relatively inflexible. Adding new coupons or removing expired ones requires a code change and a deploy. It would also be valuable to track coupon redemptions. With a bit more effort, you could improve the system by moving the coupons into the database.</p>
+
+    <p>In this example, the <code>Coupon</code> model stores both the <code>code</code> and <code>discount_percent</code>, as well as an optional <code>expires_at</code> timestamp and an optional <code>description</code> for internal use. The example also stores a record of charges in a <code>Charge</code> model. <code>Charge</code> has <code>amount</code> and <code>stripe_id</code> properties, and reflects an associated coupon through <code>coupon_id</code>. This structure will enable you to track coupon redemptions.</p>
+
+    <p>Generate the models and migrations:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby">rails g model coupon code:string discount_percent:integer expires_at:timestamp description:string
+rails g model charges amount:integer coupon_id:integer stripe_id:integer</span></code></pre>
+      </div>
+    </section>
+
+    <p>Then migrate:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby">bundle exec rake db:migrate</span></code></pre>
+      </div>
+    </section>
+
+    <p>Now you can move all coupon-related processing to the <code>Coupon</code> model. It has a <code>get</code> method that normalizes the <code>code</code> and searches for matching, non-expired coupons:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># app/models/coupon.rb
+
+class Coupon &lt; ActiveRecord::Base
+  has_many :charges
+  validates_presence_of :code, :discount_percent
+  validates_uniqueness_of :code
+
+  def self.get(code)
+    where(code: normalize_code(code)).
+    where(&#39;expires_at &gt; ? OR expires_at IS NULL&#39;, Time.now).
+    take
+  end
+
+  def apply_discount(amount)
+    discount = amount * (self.discount_percent * 0.01)
+    (amount - discount.to_i)
+  end
+
+  def discount_percent_human
+    if discount_percent.present?
+      discount_percent.to_s + &#39;%&#39;
+    end
+  end
+
+  private
+
+  def self.normalize_code(code)
+    code.gsub(/ +/, &#39;&#39;).upcase
+  end
+end</span></code></pre>
+      </div>
+    </section>
+
+    <p>Note that <code>has_many :charges</code> enables you to retrieve the redemption count for a coupon by calling <code>coupon.charges.count</code>.</p>
+
+    <p>The <code>Charge</code> model is very simple:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># app/models/charge.rb
+
+class Charge &lt; ActiveRecord::Base
+  belongs_to :coupon
+  validates_presence_of :amount, :stripe_id
+end</span></code></pre>
+      </div>
+    </section>
+
+    <p>Next, modify the application of the coupon in the controller to use the models:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby">  @amount = 500
+  @final_amount = @amount
+
+  code = params[:couponCode]
+
+  if !code.blank?
+    @coupon = Coupon.get(code)
+
+    if @coupon.nil?
+      flash[:error] = &#39;Coupon code is not valid or expired.&#39;
+      redirect_to new_charge_path
+      return
+    else
+      @final_amount = @coupon.apply_discount(@amount.to_i)
+      @discount_amount = (@amount - @final_amount)
+    end
+
+    charge_metadata = {
+      :coupon_code =&gt; @coupon.code,
+      :coupon_discount =&gt; @coupon.discount_percent_human
+    }
+  end</span></code></pre>
+      </div>
+    </section>
+
+    <p>Now, add code that creates a charge in the database after a request to Stripe is completed. If your <code>Charge</code> model grows in complexity, you’ll want to add some error handling around the <code>#create!</code> call, but it’s fine to keep it simple to begin:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby">  customer = Stripe::Customer.create(
+    :email =&gt; params[:stripeEmail],
+    :source  =&gt; params[:stripeToken]
+  )
+  stripe_charge = Stripe::Charge.create(
+    :customer    =&gt; customer.id,
+    :amount      =&gt; @final_amount,
+    :description =&gt; &#39;Rails Stripe customer&#39;,
+    :currency    =&gt; &#39;usd&#39;,
+    :metadata    =&gt; charge_metadata
+  )
+  @charge = Charge.create!(amount: @final_amount, coupon: @coupon, stripe_id: stripe_charge.id)
+rescue Stripe::CardError =&gt; e
+  flash[:error] = e.message
+  redirect_to new_charge_path
+end</span></code></pre>
+      </div>
+    </section>
+
+    <p>Finally, modify the order confirmation page to use the new model-driven coupons and charges:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml"># app/views/charges/create.html.erb
+
+&lt;p&gt;
+  &lt;label class=&quot;subtotal&quot;&gt;
+    &lt;span&gt;Subtotal: &lt;%= number_to_currency(@amount * 0.01) %&gt;&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/p&gt;
+&lt;% if @coupon.present? %&gt;
+  &lt;p&gt;
+    &lt;label class=&quot;coupon&quot;&gt;
+      &lt;span&gt;Coupon: &lt;%= @coupon.code %&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label class=&quot;savings&quot;&gt;
+      &lt;span&gt;Savings: &lt;%= number_to_currency(@discount_amount * 0.01) %&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label class=&quot;discount&quot;&gt;
+      &lt;span&gt;Discount: &lt;%= @coupon.discount_human_percentage %&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+&lt;% end %&gt;
+&lt;p&gt;
+  &lt;label class=&quot;total&quot;&gt;
+    &lt;span&gt;Total: &lt;%= number_to_currency(@charge.amount * 0.01) %&gt;&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/p&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>You can test your new system by simply creating a coupon in the database. Here’s one with an expiry:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># in Rails console
+Coupon.create(code: &#39;SUMMERSALE&#39;, discount_percent: 5, expires_at: 1.week.from_now)</span></code></pre>
+      </div>
+    </section>
+
+    <h2 id="improving-the-user-experience">Improving the user experience</h2>
+
+    <p>This recipe started off implementing a basic coupon system by adding a new field to a checkout page and some logic that modifies the charge amount before being sent to Stripe. It then gave an example of what an order confirmation page would look like. This system was then further improved by moving coupons to the database. Armed with this knowledge, you’re prepared to swiftly implement your own coupon system for your application.</p>
+
+    <p>While these implementations are fully-functional, they do have one obvious opportunity to enhance the user experience. As noted previously, a limitation with these approaches is a user won’t see their order total reflecting an applied coupon until after the order has completed.</p>
+
+    <p>An improvement would be allowing the user to submit a coupon and see the final charge amount before opening the Checkout modal. One method of accomplishing this would be to add a button next to the coupon field that submits an Ajax request to a <code>/coupons</code> endpoint on your server. The response from <code>/coupons</code> would indicate whether or not the coupon is valid and what discount should be applied. JavaScript would then update both the <code>amount</code> displayed on the page as well as the <code>data-amount</code> attribute on the Checkout <code>script</code> element. After the user completes Checkout, your server would then run a similar check as detailed above to double-check the math before making the charge call to Stripe.</p>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

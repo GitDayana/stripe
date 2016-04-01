@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" id="newsroom" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Stripe is a suite of APIs that powers commerce for businesses of all sizes." />
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="assets/press-97a052362c82aa21e78b040820b0d31a.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="assets/press-0edf21158a1d10b81c6d52b86cd7d4ac.js"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Stripe: Press resources</title>
+    <meta content="4uJVDGRGMKARNjTFHy1wF9jc7L7HzQnwBLCKF9u6PkRqyFDPfSV1EOImbhVBV8yc4GEWVtam3cjNqh17Wrea3g==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="features">Features</a></li>
+        <li class='pricing'><a href="pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='marketplaces'>Connect</a></li>
+              <li><a href='country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="blog/page/1">Blog</a></li>
+              <li><a href="country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+    <header class='title'>
+      <div class='inner-col'>
+        <h1>Press resources</h1>
+        <p>News, company info, and media resources.</p>
+
+        <p class='contact'>
+          <span class='kelly'>Kelly Sims</span>
+          <a class='email' href='mailto:media@stripe.com'>media@stripe.com</a>
+        </p>
+      </div>
+    </header>
+
+    <div class='content-wrap inner-col'>
+
+      <nav class='inner-nav'>
+        <ul>
+          <li><a href='country?country=CH&amp;redirect=%252Fpress#about' class='current'>About</a></li>
+          <li><a href='country?country=CH&amp;redirect=%252Fpress#press'>Press</a></li>
+          <li><a href='country?country=CH&amp;redirect=%252Fpress#timeline'>Timeline</a></li>
+          <li><a href='country?country=CH&amp;redirect=%252Fabout%252Fresources'><span class='external'>Logos &amp; Resources</span></a></li>
+          <li><a href='files/press_kit/stripe_press_kit_2015_11_17.zip'><span class='external'>Press kit</span></a></li>
+        </ul>
+        <ul class='social'>
+          <li><a href='http://twitter.com/stripe' class='twitter'>Twitter</a></li>
+          <li><a href='http://facebook.com/StripePayments' class='facebook'>Facebook</a></li>
+        </ul>
+      </nav>
+
+      <div class='content'>
+
+      <!-- About -->
+      <div id='about'>
+
+        <h3>Economic infrastructure for the internet</h3>
+        <p>Stripe is the best way to accept payments online. Stripe aims to expand internet commerce by making it easy to process transactions and manage an online business. We want to increase the GDP of the internet.</p>
+
+        <h3>Code</h3>
+        <p>We believe that enabling more transactions is a problem rooted in code and design, not finance. Stripe is built for developers, makers, and creators.</p>
+
+        <h3>Backstory</h3>
+        <p>We had experienced first-hand the difficulty of accepting online payments. On almost every front, it was becoming easier to build and launch an online business. Payments, however, remained dominated by clunky legacy players. It seemed clear that there should be a developer-focused, instant-setup payment platform that would scale to any size. Stripe launched in September 2011.</p>
+
+        <h3>Public launches to public companies</h3>
+        <p>Stripe now processes billions of dollars a year for thousands of businesses, from newly-launched start-ups to Fortune 500 companies. Since Stripe powers so many new businesses, it's a snapshot of how the internet is changing; many users are in categories that barely existed five years ago. Web and mobile businesses around the world using Stripe include Twitter, Kickstarter, Shopify, Salesforce, Lyft, and <a href="country?country=CH&amp;redirect=%252Fgallery">many more</a>.</p>
+
+        <h3>Company</h3>
+        <p>Stripe is 424 people and headquartered in an old trunk factory in the Mission district of San Francisco. The company has received around $300 million in funding to date; investors include Sequoia Capital, Visa, American Express, Peter Thiel, and Elon Musk.</p>
+      </div>
+
+    <!-- Press -->
+    <article id='press'>
+      <h2>Press</h2>
+
+      <a href='country?country=CH&amp;redirect=%252Fpress#' class='directional-arrow next'>Next</a>
+
+      <div class='carousel'>
+      <div class='slides'>
+
+          <div class='slide'>
+            <ul>
+              <li class="wsj">
+                <a href="http://www.wsj.com/articles/online-payments-upstart-stripe-to-launch-business-in-cuba-1458324904">The Wall Street Journal: Online Payments Upstart Stripe Launching Business in Cuba</a>
+                <span class="quote">
+                  “The company was chosen to accompany the delegation after White House officials met with a group of Cuban startup entrepreneurs in Havana in recent weeks...The group said it could use Stripe’s service to help their ventures accept payments from customers outside of Cuba, which led the White House to invite Stripe.”
+                </span>
+              </li>
+              <li class="nyt">
+                <a href="http://www.nytimes.com/2016/02/25/technology/stripe-atlas-aims-to-ease-the-way-for-foreign-entrepreneurs.html">The New York Times: Stripe Atlas Aims to Ease the Way for Foreign Entrepreneurs</a>
+                <span class="quote">
+                  “...Atlas could let start-up founders sidestep some of the bureaucratic hurdles that often hamper building a new business..”
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class='slide'>
+            <ul>
+              <li class="forbes">
+                <a href="http://www.forbes.com/sites/miguelhelft/2016/01/04/cashiers-of-the-internet/#1c9d103d6afc">Forbes: How John And Patrick Collison Built Stripe Into The PayPal Of The Mobile Era</a>
+                <span class="quote">
+                  “Stripe’s success at making digital payments easy is only a step toward its larger ambition: becoming the edifice upon which new forms of commerce are created.”
+                </span>
+              </li>
+              <li class="telegraph">
+                <a href="http://www.telegraph.co.uk/finance/newsbysector/retailandconsumer/11857207/Stripe-the-invisible-5bn-start-up-powering-the-internet-economy.html">The Telegraph: Stripe: the Invisible $5 Billion Startup powering the internet economy</a>
+                <span class="quote">
+                  “Online commerce is the last Google-sized problem on the internet and James Allgrove thinks his company has the solution.”
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class='slide'>
+            <ul>
+              <li class="wired">
+                <a href="http://www.wired.com/2014/07/the-startup-that-wants-to-change-the-language-of-online-payments/">Wired: The Internet Needs a Better Way to Handle Money. This Startup Has the Key</a>
+                <span class="quote">
+                  “Collison believes that eliminating barriers to the flow of funds through shared-resource marketplaces frees up these fast-growing startups to focus on building a better product.”
+                </span>
+              </li>
+              <li class="fortune">
+                <a href="http://fortune.com/2015/07/15/stripe-presidential-campaign/">Fortune: How Stripe is Powering the Campaign Donations for 2016</a>
+                <span class="quote">
+                  “‘[Presidential campaigns] are basically a form of startup,’ Patrick said in explaining the importance of flexibility and creating an easy and reliable way for customers (or donors) to fork over their money. ’They can’t afford to miss a beat or be behind for a month.’”
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class='slide'>
+            <ul>
+              <li class="cnbc">
+                <a href="http://www.cnbc.com/2015/05/07/stripe-expands-into-asia-latin-america.html">CNBC: The Startup that's out to Conquer Mobile Payments</a>
+                <span class="quote">
+                  “Stripe's international expansion is focused on both helping U.S. customers collect payments in more currencies and providing tools to businesses in countries where online payment options hardly exist.”
+                </span>
+              </li>
+              <li class="bloomberg">
+                <a href="http://www.bloomberg.com/news/2014-09-17/stripe-lands-apple-in-quest-for-720-billion-in-payments.html">Bloomberg Businessweek: Stripe Lands Apple in Quest for $720 Billion in Payments</a>
+                <span class="quote">
+                  “Stripe’s partnerships with Apple and Twitter now catapult it onto a bigger stage, cementing its elite spot among Silicon Valley startups.”
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class='slide'>
+            <ul>
+              <li class="recode">
+                <a href="http://recode.net/2014/03/27/stripe-merchants-will-soon-be-able-to-accept-bitcoin-payments/">Re/Code: Stripe Merchants Will Soon Be Able to Accept Bitcoin Payments</a>
+                <span class="quote">
+                  “The decision to build an integration for bitcoin payments is more about the company’s mission to increase the amount of commerce transacted online than it is a bet that bitcoin will be a crucial payment method years from now.”
+                </span>
+              </li>
+              <li class="ft">
+                <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CCoQqQIwAA&amp;url=http%3A%2F%2Fblogs.ft.com%2Ftech-blog%2F2014%2F02%2Fpayments-start-up-stripe-adds-support-for-more-than-130-currencies%2F&amp;ei=4mH6UrqiEojg2AW514HYDQ&amp;usg=AFQjCNG3A9fUbnpXsZgjiFfMxM8sWhLc1Q&amp;sig2=4G6jrty2TMGXyzNcvmFPDw&amp;bvm=bv.61190604,d.b2I">The Financial Times: Payments start-up Stripe adds support for more than 130 currencies</a>
+                <span class="quote">
+                  “‘It’s easy to send a packet of information anywhere in the world, but sending money isn’t so easy,’ he says. ‘It’s a question of the economic infrastructure that’s underneath the web. We personally think that’s a really important problem–you have great connectivity at the information level but not at the payments level.’”
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class='slide'>
+            <ul>
+              <li class="fast-company">
+                <a href="http://www.fastcolabs.com/3008301/hiring-brilliant-women-engineers-starts-job-listing">Fast Company: Hiring Brilliant Women Engineers Starts With The Job Listing</a>
+                <span class="quote">
+                  “At Stripe, ‘We do want to have a diverse team. We make a large effort to keep our eyes open and do active outreach,’ Feng says. ‘I think in terms of being able to hire women, our culture has played a large part in that.’”
+                </span>
+              </li>
+              <li class="atlantic">
+                <a href="http://www.theatlantic.com/technology/archive/2012/09/online-payment-system-stripe-makes-its-first-international-move/262577/">The Atlantic: Online Payment System, Stripe, Makes Its First International Move</a>
+                <span class="quote">
+                  “Stripe, the online payments system that has built a reputation as the simplest way for online retailers to start accepting credit cards instantly, has just launched in Canada, its first non-US country.”
+                </span>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </div>
+
+    <nav><ul></ul></nav>
+
+    </article>
+
+
+    <!-- Timeline -->
+     <article id='timeline'>
+      <h2>Timeline</h2>
+
+      <div>
+        <section class='year'>
+          <h3>2009</h3>
+          <section>
+            <h4>October</h4>
+            <ul>
+              <li>Stripe's first lines of code are written.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section class='year'>
+          <h3>2010</h3>
+          <section>
+            <h4>January</h4>
+            <ul>
+              <li>Stripe gets its first user: <a href="http://www.crunchbase.com/company/280-north">280 North</a>.</li>
+              <li>Stripe receives seed funding from Y Combinator.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Summer</h4>
+            <ul>
+              <li>Peter Thiel, Sequoia Capital, and Andreessen Horowitz <a href="http://techcrunch.com/2011/03/28/stealth-payment-startup-stripe-paypal/">invest</a> in Stripe.<li>
+            </ul>
+          </section>
+          <section>
+            <h4>October</h4>
+            <ul>
+              <li>Stripe moves out of an apartment and into its first office in downtown Palo Alto, CA.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section class='year'>
+          <h3>2011</h3>
+
+          <section>
+            <h4>May</h4>
+            <ul>
+              <li>Stripe receives a $20M Series A investment led by Sequoia Capital.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>September</h4>
+            <ul>
+              <li>After an extensive private beta, Stripe <a href="https://news.ycombinator.com/item?id=3053883">launches publicly</a>.</li>
+              <li>Stripe is 10 people.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section class='year'>
+          <h3>2012</h3>
+
+          <section>
+            <h4>January</h4>
+            <ul>
+              <li>Stripe moves to San Francisco.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>May</h4>
+            <ul>
+              <li>Stripe receives a Series B investment from General Catalyst, Sequoia Capital, Peter Thiel, Elad Gil, Redpoint Ventures, Chris Dixon, and Aaron Levie.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>September</h4>
+            <ul>
+              <li>Stripe <a href='country?country=CH&amp;redirect=%252Fblog%252Fstripe-in-canada'>launches in Canada</a>.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>October</h4>
+            <ul>
+              <li>Stripe launches <a href='marketplaces'>Connect</a>, allowing third-party services to integrate Stripe data and capabilities.</li>
+              <li>Stripe is 30 people.</li>
+            </ul>
+          </section>
+        </section>
+
+
+        <section class='year'>
+          <h3>2013</h3>
+
+          <section>
+            <h4>January</h4>
+            <ul>
+              <li>Stripe releases first version of <a href='country?country=CH&amp;redirect=%252Fblog%252Fstripe-checkout'>Checkout</a>.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>March</h4>
+            <ul>
+              <li>Stripe opens an office in London, UK.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>April</h4>
+            <ul>
+              <li>Stripe moves to new headquarters in the Mission district of San Francisco.</li>
+              <li>Stripe <a href="https://twitter.com/paulg/status/319861207634960384">processes</a> more payments in one day than in its entire two-year beta period. (October ’09 - September ’11.)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>June</h4>
+            <ul>
+              <li>Stripe launches <a href='country?country=CH&amp;redirect=%252Fblog%252Fsend-payouts-with-stripe'>bank transfer API</a> for marketplaces.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>August</h4>
+            <ul>
+              <li>Stripe <a href='country?country=CH&amp;redirect=%252Fblog%252Fintroducing-stripe-uk'>launches publicly in the UK</a>.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>September</h4>
+            <ul>
+              <li>Stripe <a href='country?country=CH&amp;redirect=%252Fblog%252Fstripe-ireland'>launches in Ireland</a>.</li>
+              <li>Stripe rolls out betas in Spain, France, Germany, Netherlands, Belgium, Australia.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>December</h4>
+            <ul>
+              <li>Stripe rolls out a beta in Finland, bringing the total number of <a href="pt">supported countries</a> to 12.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section class='year'>
+          <h3>2014</h3>
+
+          <section>
+            <h4>January</h4>
+            <ul>
+              <li>Stripe receives a $80M Series C investment from Sequoia Capital, Founders Fund, Khosla Ventures, and Allen &amp; Co.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>February</h4>
+            <ul>
+              <li>US and European businesses can accept payments in <a href="blog/new-currencies/index.html">135 new currencies</a> with Stripe.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>March</h4>
+            <ul>
+              <li>Stripe becomes the first major payment company to accept Bitcoin.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>June</h4>
+            <ul>
+              <li>Stripe adds support for <a href="country?country=CH&amp;redirect=%252Fblog%252Fstripe-alipay">Alipay</a> to Checkout.</li>
+              <li>Stripe rolls out betas in Italy and Switzerland, bringing the total number of <a href="pt">supported countries</a> to 14.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>July</h4>
+            <ul>
+              <li>Stripe officially launches in <a href="country?country=CH&amp;redirect=%252Fblog%252Fstripe-in-australia">Australia</a>.</li>
+              <li>Stripe rolls out betas in Denmark, Norway, and Sweden, bringing the total number of <a href="pt">supported countries</a> to 17.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>September</h4>
+            <ul>
+              <li>Stripe launches an <a href="country?country=CH&amp;redirect=%252Fapple-pay">Apple Pay</a> integration.</li>
+              <li>General Catalyst announces the <a href="http://www.gcvp.com/press">GC Stripe Platform Fund</a>, investing up to $10 million in businesses built on Stripe.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>December</h4>
+            <ul>
+              <li>Stripe receives a $70M Series C-1 investment from Thrive Capital, Sequoia Capital, Founders Fund, Khosla Ventures, and General Catalyst.</li>
+            </ul>
+          </section>
+        </section>
+        <section class='year'>
+          <h3>2015</h3>
+
+          <section>
+            <h4>January</h4>
+            <ul>
+              <li>Stripe launches machine learning-based fraud protection for all users.</li>
+            </ul>
+          </section>
+          <section>
+			      <h4>March</h4>
+            <ul>
+              <li>Stripe launches <a href="marketplaces">Connect</a> to help marketplaces rapidly grow the number of sellers on their platforms globally.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>May</h4>
+            <ul>
+              <li>Stripe opens private beta in Mexico and Japan.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>July</h4>
+            <ul>
+              <li>Stripe receives around $100M Series C-2 investment from American Express, Visa, Kleiner Perkins Caufield &amp; Byers, and Sequoia Capital.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>August</h4>
+            <ul>
+              <li>Stripe opens private beta in Singapore.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>September</h4>
+            <ul>
+              <li>Stripe launches <a href="country?country=CH&amp;redirect=%252Frelay">Relay</a> to let businesses sell products in other apps.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>November</h4>
+            <ul>
+              <li>Stripe opens private beta in Portugal and Brazil.</li>
+            </ul>
+          </section>
+        </section>
+        <section class='year'>
+          <h3>2016</h3>
+          <section>
+            <h4>January</h4>
+            <ul>
+              <li>Stripe adds support for <a href="country?country=CH&amp;redirect=%252Fblog%252Faccept-ach-payments">ACH payments</a> to let businesses charge a bank account directly.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>February</h4>
+            <ul>
+              <li>Stripe opens private beta in New Zealand.</li>
+              <li>Stripe launches <a href="atlas/index.html">Atlas</a>, a new product designed to give entrepreneurs everywhere access to the basic building blocks for starting a global internet business.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>March</h4>
+            <ul>
+              <li>Stripe opens Atlas to Cuban entrepreneurs, joining President Barack Obama on his historic trip to Havana.</li>
+            </ul>
+          </section>
+          <!-- be sure to add new sections above this: -->
+          <section>
+            <h4>Today</h4>
+            <ul>
+              <li>Stripe is 424 people. Of these, 28% hail from outside the U.S.</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </article>
+
+  </div>
+
+    <div class="blog-link">
+      <p>
+        We share our latest product announcements and news on our blog.
+        <a href="blog/page/1" class="arrow">Read the latest</a>
+      </p>
+    </div>
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="country?country=AU&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Australia" src="img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=CA&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Canada" src="img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=DK&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Denmark" src="img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=FI&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Finland" src="img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=GB&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="United Kingdom" src="img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=IE&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Ireland" src="img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=NO&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Norway" src="img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=SE&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Sweden" src="img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="country?country=US&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="United States" src="img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=AT&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Austria" src="img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=BE&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Belgium" src="img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=BR&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Brazil" src="img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=FR&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="France" src="img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=DE&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Germany" src="img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=IT&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Italy" src="img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=JP&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Japan" src="img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=LU&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Luxembourg" src="img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=MX&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Mexico" src="img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=NL&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Netherlands" src="img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=PT&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Portugal" src="img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=SG&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Singapore" src="img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=ES&amp;redirect=%252Fpress" >
+                  <img width="23" height="17" alt="Spain" src="img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="country?country=CH&amp;redirect=%252Fpress" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="pricing">Pricing</a></li>
+      <li><a href="blog/page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("newsroom");
+    </script>
+
+  </body>
+</html>

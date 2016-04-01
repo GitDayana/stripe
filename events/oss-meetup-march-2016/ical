@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:iCalendar-Ruby
+BEGIN:VEVENT
+DESCRIPTION:
+DTSTAMP:20160329T232521
+LOCATION:Stripe\n3180 18th St\nSan Francisco
+SEQUENCE:0
+SUMMARY:Open-Source Retreat meetup
+UID:2016-03-29T23:25:21+00:00_79537693@sitebox5.northwest.stripe.io
+URL:https://stripe.com/events/oss-meetup-march-2016
+DTSTART:20160330T013000Z
+DTEND:20160330T033000Z
+ORGANIZER;CN="Stripe Community":mailto:stripe-community@stripe.com
+ATTENDEE;CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ-PARTICIPANT;X-NUM-
+ GUESTS=0;CN="Stripe Community":mailto:stripe-community@stripe.com
+END:VEVENT
+END:VCALENDAR

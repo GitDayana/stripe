@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating Your First Subscription</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="H6a-_E_-aVfhx2s7qKdcWDtlO68LQjDw6aTUqG4yN4SXjLs_Vp0s5xLXMev23eDTA9jBRxop5MggvkPE7z-THg==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="selected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+
+  <header>
+    <h1>Creating Your First Subscription</h1>
+    <p>Learn how to set up basic recurring billing for your customers. If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+</p>
+  </header>
+
+  <article>
+
+    <p>Billing your customers periodically is a common use case, and it’s easy
+to do with Stripe, requiring only two steps:</p>
+
+    <ol>
+      <li><a href="../subscriptions.1#create-plan">Create a plan</a> that defines how much should be billed and at what interval</li>
+      <li>Associate a plan with a customer to <a href="../subscriptions.1#create-subscription">create a subscription</a></li>
+    </ol>
+
+    <p>(After creating a plan once, you simply execute the second step for every subsequent customer.)</p>
+
+    <p>Before getting started, you’ll want to
+install one of our <a href="../libraries/index.html">client libraries</a> on your server, which is where you’ll run this tutorial’s code. You’ll need to also collect your customer’s credit card info. If you haven’t set up that functionality, look at our <a href="https://stripe.com/docs/checkout/tutorial">Checkout</a> and
+<a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">custom form</a> tutorials before reading on.</p>
+
+    <h2 id="create-plan">Step 1: Create a plan</h2>
+
+    <p>Stripe’s subscription billing has two main primitives: <em>plans</em> and
+<em>customers</em>. Plans are objects representing a set cost and billing cycle. You may define just one plan or several hundred, covering the diversity of service levels you offer. For example, if you have two groups of customers–one using the basic
+features of your application for $10 per month and another using the pro features for $30 per month–you can create a <strong>Basic</strong> plan
+and a <strong>Pro</strong> plan in Stripe.</p>
+
+    <p>There are two ways to create plans:</p>
+
+    <ul>
+      <li>In the Stripe Dashboard, on the <a href="https://dashboard.stripe.com/plans">plans page</a></li>
+      <li>Via the <a href="../api/index.html#create_plan">API</a></li>
+    </ul>
+
+    <p>The creation of a single plan via the API uses code like:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_plan_create">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>We’ve placed a random test API key in the code. Replace it with your <a href="https://dashboard.stripe.com/account/apikeys">actual API key</a> to test this code through your Stripe account.</p>
+
+    <p>Each plan requires a unique ID. You’ll provide this value in API requests when you actually subscribe a customer to one of your plans. The rest of this tutorial assumes you’ve created a <strong>gold</strong> plan using either the Dashboard or the API.</p>
+
+    <p>As a reminder, the plan itself only needs to be created once. It’s the association of the plan with a customer that creates a subscription.</p>
+
+    <h2 id="create-subscription">Step 2: Subscribing a customer to a plan</h2>
+
+    <p>Customers are the other main component of subscriptions. In a broad
+sense, a <code>Customer</code> object is just a generic way to associate your own users with
+your Stripe account. Typically, you’ll want to associate some metadata, like an email address, with a customer. <code>Customer</code> objects can also have a stored
+a payment method, such as a credit card, that allows for subsequent billing.</p>
+
+    <p>You can create customers via the Dashboard, but as you’ll likely create them as part of the workflow at your site, it makes more sense to use the API. Below is a self-contained example that creates a customer and associates that customer with a plan
+in a single request. Also notice that a credit card is being attached to the customer. The card is represented by a token, collected from a <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcards">payment form</a>.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_customer_create_and_subscribe">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>If the credit card is valid, Stripe will return a new <code>Customer</code> object with all the relevant details:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;object&quot;: &quot;customer&quot;,
+  &quot;created&quot;: 1409190039,
+  &quot;id&quot;: &quot;cus_4fdAW5ftNQow1a&quot;,
+  &quot;livemode&quot;: false,
+  &quot;email&quot;: &quot;payinguser@example.com&quot;,
+  ...
+  &quot;subscriptions&quot;: {
+    &quot;object&quot;: &quot;list&quot;,
+    &quot;total_count&quot;: 1,
+    &quot;has_more&quot;: false,
+    &quot;url&quot;: &quot;/v1/customers/cus_4fdAW5ftNQow1a/subscriptions&quot;,
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: &quot;sub_4fdAS9IlSOFfiv&quot;,
+        &quot;plan&quot;: {
+          &quot;interval&quot;: &quot;month&quot;,
+          &quot;name&quot;: &quot;Amazing Gold Plan&quot;,
+          &quot;created&quot;: 1409178429,
+          &quot;amount&quot;: 2000,
+          &quot;currency&quot;: &quot;usd&quot;,
+          &quot;id&quot;: &quot;gold&quot;,
+          &quot;object&quot;: &quot;plan&quot;,
+          &quot;livemode&quot;: false,
+          &quot;interval_count&quot;: 1,
+          &quot;trial_period_days&quot;: null,
+          &quot;metadata&quot;: {},
+          &quot;statement_descriptor&quot;: null
+        },
+        ...
+      }
+    ]
+  },
+  ...
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>Once you create a customer, you should store its <code>id</code> in your own
+database for later reference. This customer will be charged immediately for the first month of their subscription (often called <em>pre-billing</em>). They will continue to be billed $20 every month–the plan’s cost and interval–until the subscription is canceled.</p>
+
+    <p>If the credit card had not been valid, an error would have been returned instead of a <code>Customer</code> object.</p>
+
+    <p>Behind the scenes, Stripe creates an
+<a href="../api/index.html#retrieve_invoice">Invoice</a> object for every billing cycle. The invoice reflects what your customer will be charged, when, and the payment status.
+You can even add <a href="../api/index.html#create_invoiceitem">additional items</a> to an
+invoice to factor in one-off charges like setup fees.</p>
+
+    <p>Since most subscription activity happens automatically from this point forward, you’ll want to setup <a href="../webhooks/index.html">webhooks</a> to be notified of events as they occur.</p>
+
+    <hr />
+
+    <h2 id="next-up">Next up</h2>
+
+    <p>Congrats! You’ve gone through the basics of creating a subscription in Stripe. Some things you might want to read next:</p>
+
+    <ul>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed subscriptions guide</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments">Recipe for sending emails to customers for failed subscription payments</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fsubscription-signup">Recipe for using Checkout with subscription signups</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards">Recipe for handling customer card updates on your website</a></li>
+      <li><a href="../api/index.html">Full API Documentation</a></li>
+    </ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Ftutorial" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["ruby"] = {};
+              APIValues["ruby"]["tutorial_plan_create"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nStripe::Plan.create(\n  :amount =\u0026gt; 2000,\n  :interval =\u0026gt; \u0026#39;month\u0026#39;,\n  :name =\u0026gt; \u0026#39;Amazing Gold Plan\u0026#39;,\n  :currency =\u0026gt; \u0026#39;usd\u0026#39;,\n  :id =\u0026gt; \u0026#39;gold\u0026#39;\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_customer_create_and_subscribe"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken = params[:stripeToken]\n\n# Create a Customer\ncustomer = Stripe::Customer.create(\n  :source =\u0026gt; token,\n  :plan =\u0026gt; \u0026quot;gold\u0026quot;,\n  :email =\u0026gt; \u0026quot;payinguser@example.com\u0026quot;\n)\u003C/span\u003E";
+          APIValues["python"] = {};
+              APIValues["python"]["tutorial_plan_create"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nstripe.Plan.create(\n  amount=2000,\n  interval=\u0026#39;month\u0026#39;,\n  name=\u0026#39;Amazing Gold Plan\u0026#39;,\n  currency=\u0026#39;usd\u0026#39;,\n  id=\u0026#39;gold\u0026#39;)\u003C/span\u003E";
+              APIValues["python"]["tutorial_customer_create_and_subscribe"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken = request.POST[\u0026#39;stripeToken\u0026#39;]\n\n# Create a Customer\ncustomer = stripe.Customer.create(\n  source=token,\n  plan=\u0026quot;gold\u0026quot;,\n  email=\u0026quot;payinguser@example.com\u0026quot;\n)\u003C/span\u003E";
+          APIValues["php"] = {};
+              APIValues["php"]["tutorial_plan_create"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n\\Stripe\\Plan::create(array(\n  \u0026quot;amount\u0026quot; =\u0026gt; 2000,\n  \u0026quot;interval\u0026quot; =\u0026gt; \u0026quot;month\u0026quot;,\n  \u0026quot;name\u0026quot; =\u0026gt; \u0026quot;Amazing Gold Plan\u0026quot;,\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;id\u0026quot; =\u0026gt; \u0026quot;gold\u0026quot;)\n);\u003C/span\u003E";
+              APIValues["php"]["tutorial_customer_create_and_subscribe"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// Get the credit card details submitted by the form\n$token = $_POST[\u0026#39;stripeToken\u0026#39;];\n\n$customer = \\Stripe\\Customer::create(array(\n  \u0026quot;source\u0026quot; =\u0026gt; $token,\n  \u0026quot;plan\u0026quot; =\u0026gt; \u0026quot;gold\u0026quot;,\n  \u0026quot;email\u0026quot; =\u0026gt; \u0026quot;payinguser@example.com\u0026quot;)\n);\u003C/span\u003E";
+          APIValues["node"] = {};
+              APIValues["node"]["tutorial_plan_create"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.plans.create({\n  amount: 2000,\n  interval: \u0026quot;month\u0026quot;,\n  name: \u0026quot;Amazing Gold Plan\u0026quot;,\n  currency: \u0026quot;usd\u0026quot;,\n  id: \u0026quot;gold\u0026quot;\n}, function(err, plan) {\n  // asynchronously called\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_customer_create_and_subscribe"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// (Assuming you\u0026#39;re using express - expressjs.com)\n// Get the credit card details submitted by the form\nvar stripeToken = request.body.stripeToken;\n\nstripe.customers.create({\n  source: stripeToken,\n  plan: \u0026quot;gold\u0026quot;,\n  email: \u0026quot;payinguser@example.com\u0026quot;\n}, function(err, customer) {\n  // ...\n});\u003C/span\u003E";
+          APIValues["java"] = {};
+              APIValues["java"]["tutorial_plan_create"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; planParams = new HashMap\u0026lt;String, Object\u0026gt;();\nplanParams.put(\u0026quot;amount\u0026quot;, 2000);\nplanParams.put(\u0026quot;interval\u0026quot;, \u0026quot;month\u0026quot;);\nplanParams.put(\u0026quot;name\u0026quot;, \u0026quot;Amazing Gold Plan\u0026quot;);\nplanParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\nplanParams.put(\u0026quot;id\u0026quot;, \u0026quot;gold\u0026quot;);\n\nPlan.create(planParams);\u003C/span\u003E";
+              APIValues["java"]["tutorial_customer_create_and_subscribe"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\n// Get the credit card details submitted by the form\nString token = request.getParameter(\u0026quot;stripeToken\u0026quot;);\n\nMap\u0026lt;String, Object\u0026gt; customerParams = new HashMap\u0026lt;String, Object\u0026gt;();\ncustomerParams.put(\u0026quot;source\u0026quot;, token);\ncustomerParams.put(\u0026quot;plan\u0026quot;, \u0026quot;gold\u0026quot;);\ncustomerParams.put(\u0026quot;email\u0026quot;, \u0026quot;payinguser@example.com\u0026quot;);\n\nCustomer.create(customerParams);\u003C/span\u003E";
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

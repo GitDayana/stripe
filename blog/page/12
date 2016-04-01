@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en" id="blog" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Follow the Stripe blog for product announcements, feature updates, new countries, and technical posts about payments." />
+
+<link rel="shortcut icon" href="../../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../../assets/blog-ada6c3a77cd627b09ac436c3a82dd49d.css">
+  <link rel="stylesheet" href="../../assets/blogposts-b9a9b6ffe0287dc66146bd753faba55d.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../../assets/blog-776e3ed92eef5022ed98688d349fd7af.js"></script>
+  <script src="../../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../feed.rss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>    Stripe Blog
+</title>
+    <meta content="fuU-mtG7b4PM3IjcMB-NPjAmxbItOJouM9QdYgtO66T2zztZyNgqMz_M0gxuZTG1CJs_WjxTThb6zooOikNPPg==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../../features">Features</a></li>
+        <li class='pricing'><a href="../../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../../marketplaces'>Connect</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="1">Blog</a></li>
+              <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <header id="blog-header">
+  	<h1><a href="1">Blog</a></h1>
+  	<p><a href="https://twitter.com/stripe">Follow Stripe on Twitter</a></p>
+  </header>
+  
+      <div id='blog-post--sit-hack-and-relax'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fsit-hack-and-relax">Sit Hack and Relax<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> June 26, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+    <div class="map-image">
+    <a href="http://maps.google.com/maps?q=140%20Second%20Street%20San%20Francisco%20CA&hl=en&hnear=140%20Second%20Street%20San%20Francisco%20CA&t=m&z=15" target="_blank">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=140%20Second%20Street%20San%20Francisco%20CA&zoom=15&size=640x280&sensor=false&style=feature:administrative.land_parcel|element:geometry|visibility:off&style=feature:water|element:geometry.fill|color:0x52b6ef&style=feature:landscape|element:geometry|saturation:-100|lightness:50&style=feature:road|saturation:-100|lightness:50&style=feature:poi|element:geometry|saturation:-100|lightness:50&style=feature:poi|element:labels.text.fill|lightness:30&style=feature:road.arterial|element:labels.text.fill|lightness:-30&style=feature:road.highway|element:geometry.fill|color:0xf2be50&style=feature:road.highway|element:geometry.stroke|color:0xe0994c&style=feature:road.highway|element:labels.text.fill|color:0xb96f1e&style=feature:poi.park|element:geometry|color:0xcbd9b4&style=feature:transit|element:labels|lightness:20&style=feature:administrative|saturation:-100" width="640" height="280" />
+
+        </a>
+
+</div>
+
+
+    <p>
+        You've had a long week. You deserve a nice relaxing hackathon at the Stripe office this weekend. Hack on a project, meet other coders, hang out, or just work on eating the food. Feel free to bring your own project or start one on the fly. All are welcome!
+    </p>
+
+    <div class="map-details">
+      <dl>
+        <dt>When:</dt>
+        <dd>Saturday, June 30th, 2012 <br /> from 1:00 PM until 10:00 PM</dd>
+
+        <dt>Where:</dt>
+        <dd>Stripe's office at <a href="http://g.co/maps/hhje6">140 Second Street in San Francisco</a>, 4th Floor.</dd>
+      </dl>
+    </div>
+
+    <p>RSVP via our <a href="http://www.meetup.com/Stripe/events/70851812/">Meetup event</a>. Hope to see you there!</p>
+
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      June 26, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--exploring-python-using-gdb'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#evan">
+      <img src="../../img/about/team/evan@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fexploring-python-using-gdb">Exploring Python Using GDB<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#evan">Evan Broder</a>
+      <span>on</span> June 13, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    <p> People tend to have a narrow view of the problems they can solve
+using <a href="http://sources.redhat.com/gdb/">GDB</a>. Many think
+that GDB is just for debugging <a
+href="http://en.wikipedia.org/wiki/Segmentation_fault">segfaults</a>
+or that it's only useful with C or C++ programs. In reality, GDB is an
+impressively general and powerful tool. When you know how to use it,
+you can debug just about anything, including Python, Ruby, and other
+dynamic languages. It's not just for inspection either&mdash;GDB can
+also be used to modify a program's behavior while it's running. </p>
+
+<p> When we ran our <a
+href="../../country?country=CH&amp;redirect=%252Fblog%252Fcapture-the-flag">Capture The Flag</a>
+contest, a lot of people asked us about introductions to that kind of
+low-level work. GDB can be a great way to get started. In order to
+demonstrate some of GDB's flexibility, and show some of the steps
+involved in practical GDB work, we've put together a brief example of
+debugging Python with GDB.</p>
+
+<p> Imagine you're building a web app in Django. The standard cycle
+for building one of these apps is to edit some code, hit an error, fix
+it, restart the server, and refresh in the browser. It's a little
+tedious. Wouldn't it be cool if you could hit the error, fix the code
+while the request is still pending, and then have the request complete
+successfully?</p>
+
+<p> As it happens, the <a
+href="http://www.youtube.com/watch?v=M54qmZZKKPA">Seaside</a>
+framework supports exactly this. Using one of Stripe's <a
+href="https://github.com/stripe/monospace-django">example
+projects</a>, let's take a look at how we could pull it off in Python
+using GDB:</p>
+
+<p>
+  <script type="text/javascript">
+    document.write(unescape("%3Cscript src='//cdn.sublimevideo.net/js/sprnm7bi.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <video class="sublime" poster="../../img/blog/posts/exploring-python-using-gdb/demo-poster-frame.png" width="580" height="326" data-name="GDB Demo Screencast" data-uid="e42303bc" preload="none">
+    <source src="https://d31m30xrqokm0z.cloudfront.net/exploring-python-using-gdb/gdb-demo.mp4" />
+    <source src="https://d31m30xrqokm0z.cloudfront.net/exploring-python-using-gdb/gdb-demo.webm" />
+  </video>
+</p>
+
+<p> Pretty cool, right? Though a little contrived, this example
+demonstrates many helpful techniques for making effective real-world
+use of GDB. I'll walk through what we did in a little more detail, and
+explain some of the GDB tricks as we go.</p>
+
+<p> For the sake of brevity, I'll show the commands I type, but elide
+some of the output they generate. I'm working on Ubuntu 12.04 with GDB
+7.4. The manipulation should still work on other platforms, but you
+probably won't get automatic pretty-printing of Python types. You can
+generate them by hand by running <code>p
+PyString_AsString(PyObject_Repr(obj))</code> in GDB. </p>
+
+<h2> Getting Set Up </h2>
+
+<p> First, let's start the monospace-django server with
+<code>--noreload</code> so that Django's autoreloading doesn't get in
+the way of our GDB-based reloading. We'll also use the
+<code>python2.7-dbg</code> interpreter, which will ensure that less of
+the program's state is optimized away. </p>
+
+<p>
+<pre>
+$ <strong>git clone http://github.com/stripe/monospace-django</strong>
+$ <strong>cd monospace-django/</strong>
+$ <strong>virtualenv --no-site-packages env</strong>
+$ <strong>cp /usr/bin/python2.7-dbg env/bin/python</strong>
+$ <strong>source env/bin/activate</strong>
+(env)$ <strong>pip install -r requirements.txt</strong>
+(env)$ <strong>python monospace/manage.py syncdb</strong>
+(env)$ <strong>python monospace/manage.py runserver --noreload</strong>
+
+$ <strong>sudo gdb -p $(pgrep -f monospace/manage.py)</strong>
+GNU gdb (Ubuntu/Linaro 7.4-2012.04-0ubuntu2) 7.4-2012.04
+Copyright (C) 2012 Free Software Foundation, Inc.
+[...]
+Attaching to process 946
+Reading symbols from /home/evan/monospace-django/env/bin/python...done.
+(gdb) <strong>symbol-file /usr/bin/python2.7-dbg</strong>
+Load new symbol table from "/usr/bin/python2.7-dbg"? (y or n) y
+Reading symbols from /usr/bin/python2.7-dbg...done.
+</pre>
+</p>
+
+<p> As of version 7.0 of GDB, it's possible to <a
+href="http://sourceware.org/gdb/current/onlinedocs/gdb/Python.html">automatically
+script GDB's behavior</a>, and even register your own code to
+pretty-print C types. Python comes with its own hooks which can
+pretty-print Python types (such as <code>PyObject *</code>) and
+understand the Python stack. These hooks are loaded automatically if
+you have the <code>python2.7-dbg</code> package installed on
+Ubuntu. </p>
+
+<p>Whatever you're debugging, you should look to see if there are
+relevant GDB scripts available&mdash;useful helpers have been created
+for many dynamic languages.</p>
+
+<h2> Catching the Error </h2>
+
+<p> The Python interpreter creates a <code>PyFrameObject</code> every
+time it starts executing a Python stack frame. From that frame object,
+we can get the name of the function being executed. It's stored as a
+Python object, so we can convert it to a C string using
+<code>PyString_AsString</code>, and then stop the interpreter only if
+it begins executing a function called
+<code>handle_uncaught_exception</code>. </p>
+
+<p>The obvious way to catch this would be by creating a GDB
+breakpoint. A lot of frames are allocated in the process of executing
+Python code, though. Rather than tediously continue through hundreds
+of false positives, we can set a <i>conditional breakpoint</i> that'll
+break on only the frame we care about:</p>
+
+<p>
+<pre>
+(gdb) <strong>b PyEval_EvalFrameEx if strcmp(PyString_AsString(f-&gt;f_code-&gt;co_name), "handle_uncaught_exception") == 0</strong>
+Breakpoint 1 at 0x519d64: file ../Python/ceval.c, line 688.
+(gdb) <strong>c</strong>
+Continuing.
+</pre>
+</p>
+
+<p> Breakpoint conditions can be pretty complex, but it's worth noting
+that conditional breakpoints that fire often (like
+<code>PyEval_EvalFrameEx</code>) can slow the program down
+significantly. </p>
+
+<h2> Generating the Initial Return Value </h2>
+
+<p> Okay, let's see if we can actually fix things during the next
+request. We resubmit the form. Once again, GDB halts when the app
+starts generating the internal server error response. While we
+investigate more, let's disable the breakpoint in order to keep things
+fast. </p>
+
+<p> What we really want to do here is to let the app finish generating
+its original return value (the error response) and then to replace
+that with our own (the correct response). We find the stack frame
+where <code>get_response</code> is being evaluated. Once we've jumped
+to that frame with the <a
+href="http://sourceware.org/gdb/current/onlinedocs/gdb/Selection.html#index-up-451"><code>up</code></a>
+or <a
+href="http://sourceware.org/gdb/current/onlinedocs/gdb/Frames.html#index-frame_0040r_007b_002c-command_007d-430"><code>frame</code></a>
+command, we can use the <a
+href="http://sourceware.org/gdb/current/onlinedocs/gdb/Continuing-and-Stepping.html#index-finish-314"><code>finish</code></a>
+command to wait until the currently selected stack frame finishes
+executing and returns.
+
+<p>
+<pre>
+Breakpoint 1, PyEval_EvalFrameEx (f=
+    Frame 0x3534110, for file [...]/django/core/handlers/base.py, line 186, in handle_uncaught_exception [...], throwflag=0) at ../Python/ceval.c:688
+688 ../Python/ceval.c: No such file or directory.
+(gdb) <strong>disable 1</strong>
+(gdb) <strong>frame 3</strong>
+#3  0x0000000000521276 in PyEval_EvalFrameEx (f=
+    Frame 0x31ac000, for file [...]/django/core/handlers/base.py, line 169, in get_response [...], throwflag=0) at ../Python/ceval.c:2666
+2666      in ../Python/ceval.c
+(gdb) <strong>finish</strong>
+Run till exit from #3  0x0000000000521276 in PyEval_EvalFrameEx (f=
+    Frame 0x31ac000, for file [...]/django/core/handlers/base.py, line 169, in get_response [...], throwflag=0) at ../Python/ceval.c:2666
+0x0000000000526871 in fast_function (func=&lt;function at remote 0x26e96f0&gt;, 
+    pp_stack=0x7fffb296e4b0, n=2, na=2, nk=0) at ../Python/ceval.c:4107
+4107                         in ../Python/ceval.c
+Value returned is $1 = 
+    &lt;HttpResponseServerError[...] at remote 0x3474680&gt;
+</pre>
+</p>
+
+<h2> Patching the Code </h2>
+
+<p> Now that we've gotten the interpreter into the state we want, we
+can use <a href="http://docs.python.org/c-api/index.html">Python's
+internals</a> to modify the running state of the application. GDB
+allows you to make fairly complicated dynamic function invocations,
+and we'll use lots of that here. </p>
+
+<p> We use the C equivalent of the Python <a
+href="http://docs.python.org/library/functions.html#reload"><code>reload</code></a>
+function to reimport the code. We have to also reload the
+<code>monospace.urls</code> module so that it picks up the new code in
+<code>monospace.views</code>. </p>
+
+<p>One handy trick, which we use to invoke git in the video and curl
+here, is that you can run shell commands from within GDB.</p>
+
+<p>
+<pre>
+(gdb) <strong>shell curl -s -L https://gist.github.com/raw/2897961/ | patch -p1</strong>
+patching file monospace/views.py
+(gdb) <strong>p PyImport_ReloadModule(PyImport_AddModule("monospace.views"))</strong>
+$2 = &lt;module at remote 0x31d4b58&gt;
+
+(gdb) <strong>p PyImport_ReloadModule(PyImport_AddModule("monospace.urls"))</strong>
+$3 = &lt;module at remote 0x31d45a8&gt;
+</pre>
+</p>
+
+<p> We've now patched and reloaded the code. Next, let's generate a
+new response by finding <code>self</code> and <code>request</code>
+from the local variables in this stack frame, and fetch and call its
+<code>get_response</code> method. </p>
+
+<p>
+<pre>
+(gdb) <strong>p $self = PyDict_GetItemString(f-&gt;f_locals, "self")</strong>
+$4 = 
+    &lt;WSGIHandler([...]) at remote 0x311c610&gt;
+(gdb) <strong>set $request = PyDict_GetItemString(f-&gt;f_locals, "request")</strong>
+(gdb) <strong>set $get_response = PyObject_GetAttrString($self, "get_response")</strong>
+(gdb) <strong>set $args = Py_BuildValue("(O)", $request)</strong>
+(gdb) <strong>p PyObject_Call($get_response, $args, 0)</strong>
+$5 = 
+    &lt;HttpResponse([...]) at remote 0x31b9fb0&gt;
+</pre>
+</p>
+
+<p>In the above snippet, we use GDB's <code>set</code> command to
+assign values to variables.</p>
+
+<p> Alright, we now have a new response. Remember that we stopped the
+program right where the original <code>get_response</code> method
+returned. The C return value for the Python interpreter is the same as
+the Python return value. And so, to replace that return value on x86,
+we just have to store the new return value in a
+register&mdash;<code>$rax</code> on 64-bit x86&mdash; and then allow
+the execution to continue.
+
+<p>GDB allows you to refer to refer to the values returned by every
+command you evaluate by number. In this case, we want
+<code>$5</code>:</p>
+
+<p>
+<pre>
+(gdb) <strong>set $rax = $5</strong>
+(gdb) <strong>c</strong>
+Continuing.
+</pre>
+</p>
+
+<p>And, like magic, our web request finishes successfully.</p>
+
+<p> GDB is a powerful precision tool. Even if you spend most of your
+time writing code in a much higher-level language, it can be extremely
+useful to have it available when you need to investigate subtle bugs
+or complex issues in running applications. </p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      June 13, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--meet-einhorn'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fmeet-einhorn">Meet Einhorn<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> May 24, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    <div class="image-center">
+<a href="https://github.com/stripe/einhorn"><img src="../../img/blog/posts/meet-einhorn/einhorn.png" width="665" height="307" class="no-border icon" data-hires="true" /></a>
+</div>
+
+<p> Today we're happy to release <a
+href="https://github.com/stripe/einhorn">Einhorn</a>, the
+language-independent shared socket manager. Einhorn makes it easy to
+have multiple instances of an application server listen on the same
+port. You can also seamlessly restart your workers without dropping
+any requests. Einhorn requires minimal application-level support,
+making it easy to use with an existing project. </p>
+
+<h2> Motivation </h2>
+
+<p> The main alternatives for achieving this functionality are <a
+href="http://www.fastcgi.com">FastCGI</a> (and related options such as
+<a href="http://modrails.com/">Phusion Passenger</a>) and <a
+href="https://github.com/blog/517-unicorn">Unicorn</a> (and
+derivatives such as <a
+href="http://bogomips.org/rainbows.git">Rainbows!</a>). In our case
+using either would have required significant application changes. As
+well, we could only use them for applications speaking HTTP. So we
+decided to build a general solution. </p>
+
+<p> Unicorn's architecture has a lot going for it, though. It uses a
+shared socket opened by a master process and then inherited by
+workers. This means all concurrency is handled by your operating
+system's <a
+href="http://en.wikipedia.org/wiki/Scheduling_(computing)">scheduler</a>. At
+any time, you can ask Unicorn to upgrade your workers, and it will
+spin up a new pool of workers before killing off the old. Unicorn can
+also preload your application, meaning it loads everything prior to
+forking so that your code is only <a
+href="http://en.wikipedia.org/wiki/Copy-on-write">stored in memory
+once</a>. </p>
+
+<p> We decided to take the best features of Unicorn and roll them into
+a language-independent shared socket manager, which we dubbed Einhorn
+(the German word for Unicorn). </p>
+
+<h2> Using Einhorn </h2>
+
+<p> Installing Einhorn is easy: </p>
+
+<p><pre>$ <b>gem install einhorn</b></pre></p>
+
+<p> Running a process under Einhorn is as simple as: </p>
+
+<p>
+<pre>
+$ <b>einhorn -n 3 sleep 5</b>
+[MASTER 19665] INFO: Writing PID to /tmp/einhorn.pid
+[MASTER 19665] INFO: Launching 3 new workers
+[MASTER 19665] INFO: ===> Launched 19666
+[WORKER 19666] INFO: About to exec ["/bin/sleep", "5"]
+[MASTER 19665] INFO: ===> Launched 19667
+[WORKER 19667] INFO: About to exec ["/bin/sleep", "5"]
+[MASTER 19665] INFO: ===> Launched 19668
+[WORKER 19668] INFO: About to exec ["/bin/sleep", "5"]
+...
+</pre>
+</p>
+
+<p> This will spawn and autorestart three copies of <code>sleep
+5</code>. Einhorn is configured with a handful command line flags (run
+<code>einhorn -h</code> for usage). </p>
+
+<p> Einhorn ships with a sample app, <code><a
+href="https://github.com/stripe/einhorn/blob/master/example/time_server">time_server</a></code>,
+that shows how to use Einhorn's shared-socket features. To run it,
+<code>cd</code> into the <code>example</code> directory, and execute
+something like the following: </p>
+
+<p>
+<pre>
+$ <b>einhorn -m manual ./time_server srv:127.0.0.1:2345,so_reuseaddr</b>
+[MASTER 20265] INFO: Writing PID to /tmp/einhorn.pid
+[MASTER 20265] INFO: Binding to 127.0.0.1:2345 with flags ["so_reuseaddr"]
+[MASTER 20265] INFO: Launching 1 new workers
+[MASTER 20265] INFO: ===> Launched 20266
+[WORKER 20266] INFO: About to exec ["./time_server", "6"]
+Called with ["6"]
+[MASTER 20265] INFO: [client 2:7] client connected
+[MASTER 20265] INFO: Received a manual ACK from 20266
+[MASTER 20265] INFO: Up to 1 / 1 manual ACKs
+[MASTER 20265] INFO: [client 2:7] client disconnected
+...
+</pre>
+</p>
+
+<p> Let's break down the arguments here. The <code>-m manual</code>
+flag indicates that Einhorn should wait for an explicit
+acknowledgement from the <code>time_server</code> before considering
+it "up". (By default, Einhorn will consider a worker up if it's been
+alive for one second.) When it's ready, the <code>time_server</code>
+worker connects to the Einhorn master and sends an ACK command. </p>
+
+<p> The remaining arguments serve as a template of the program to
+run. Einhorn scans for server socket specifications of the form
+<code>srv:(IP:PORT)[<,OPT>...]</code>. When it finds one, it
+configures a corresponding socket and replaces the specification with
+the socket's <a
+href="http://en.wikipedia.org/wiki/File_descriptor">file
+descriptor</a> number. The specification
+<code>srv:127.0.0.1:2345,so_reuseaddr</code> is taken to mean "create
+a socket listening on <code>127.0.0.1:2345</code> with the <code><a
+href="http://www.unixguide.net/network/socketfaq/4.5.shtml">SO_REUSEADDR</a></code>
+flag set". In the above case, the opened socket had file descriptor
+number 6. See the <a
+href="https://github.com/stripe/einhorn/blob/master/README.md#server-sockets">README</a>
+for more details on specifying server sockets.</p>
+
+<h2> Features </h2>
+
+<p> Einhorn lets you spin up any number of worker processes (the
+number can be adjusted on the fly) each possessing one or more shared
+sockets. Einhorn can spawn a new pool of workers and gracefully kill
+off the old ones, allowing seamless upgrades to new versions of your
+code. As well, Einhorn gets out of your application's way &mdash; the
+shared sockets are just file descriptors which your application
+manipulates directly or manages with an existing framework. You can
+introspect a running Einhorn's state or send it administrative
+commands using its command shell, <code><a
+href="https://github.com/stripe/einhorn/blob/master/bin/einhornsh">einhornsh</a
+></code>. </p>
+
+<p> If you happen to be using Ruby, Einhorn can also preload your
+application. Just pass a <code>-p PATH_TO_CODE</code> and define a
+method <code>einhorn_main</code> as your workers' entry point:</p>
+
+<p>
+<pre>
+$ <b>einhorn -n 2 -p ./pool_worker.rb ./pool_worker.rb argument</b>
+[MASTER 20873] INFO: Writing PID to /tmp/einhorn.pid
+[MASTER 20873] INFO: Set ARGV = ["argument"]
+[MASTER 20873] INFO: Requiring ./pool_worker.rb (if this hangs, make sure your code can be properly loaded as a library)
+From PID 20873: loading /home/gdb/stripe/einhorn/example/pool_worker.rb
+[MASTER 20873] INFO: Successfully loaded ./pool_worker.rb
+[MASTER 20873] INFO: Launching 2 new workers
+[MASTER 20873] INFO: ===> Launched 20875
+[WORKER 20875] INFO: About to tear down Einhorn state and run einhorn_main
+[WORKER 20875] INFO: Set $0 = "./pool_worker.rb argument",  ARGV = ["argument"]
+[MASTER 20873] INFO: ===> Launched 20878
+From PID 20875: Doing some work
+[WORKER 20878] INFO: About to tear down Einhorn state and run einhorn_main
+[WORKER 20878] INFO: Set $0 = "./pool_worker.rb argument",  ARGV = ["argument"]
+From PID 20878: Doing some work
+...
+</pre>
+</p>
+
+<p> As in Unicorn, this reduces memory usage and makes spawning
+additional workers very lightweight. Preloading is Einhorn's only
+language-dependent feature (and was easy to implement because Einhorn
+is itself written in Ruby). Adding preloading for other languages
+would require some architectural changes, but we might do it in the
+future. </p>
+
+<hr>
+
+<div class="image-right">
+<img src="../../img/blog/posts/meet-einhorn/diagram.png" width="121" height="264" class="diagram no-border" />
+</div>
+
+<p> Though Einhorn requires very little cooperation from your code, we
+still had to do some work to make our API servers compatible. In
+particular, we use <a
+href="http://code.macournoyer.com/thin/">Thin</a> and <a
+href="http://rubyeventmachine.com/">EventMachine</a>, both of which
+needed patching to support the use of an existing file descriptor. The
+relevant patches are on the master branch of our public forks of the
+<a href="https://github.com/stripe/thin">respective</a> <a
+href="https://github.com/stripe/eventmachine">projects</a>. </p>
+
+<p> These days, we use Einhorn to run all of our application
+servers. We also use it to run our non-web processes where we want to
+spawn and keep alive multiple instances. We run Einhorn under a
+process manager (we use <a
+href="http://cr.yp.to/daemontools.html">daemontools</a>, but any will
+work) &mdash; adding Einhorn into your existing infrastructure should
+just require adding an <code>einhorn</code> into the command-line
+arguments of your managed processes. </p>
+
+<p> We've been using Einhorn in production for a number of months
+now. We hope you'll find it useful as well. If you want to run a web
+app but can't use Unicorn, or if you have a worker process that you
+want to start pooling, you should check Einhorn out and <a
+href="mailto:info@stripe.com">let us know</a> what you think!  </p>
+
+
+  </div>
+
+  <footer>
+    <p>
+      May 24, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--office-hours'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#anurag">
+      <img src="../../img/about/team/anurag@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Foffice-hours">Office Hours<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#anurag">Anurag Goel</a>
+      <span>on</span> May 7, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+    <div class="map-image">
+    <a href="http://maps.google.com/maps?q=140%20Second%20Street%20San%20Francisco%20CA&hl=en&hnear=140%20Second%20Street%20San%20Francisco%20CA&t=m&z=15" target="_blank">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=140%20Second%20Street%20San%20Francisco%20CA&zoom=15&size=640x280&sensor=false&style=feature:administrative.land_parcel|element:geometry|visibility:off&style=feature:water|element:geometry.fill|color:0x52b6ef&style=feature:landscape|element:geometry|saturation:-100|lightness:50&style=feature:road|saturation:-100|lightness:50&style=feature:poi|element:geometry|saturation:-100|lightness:50&style=feature:poi|element:labels.text.fill|lightness:30&style=feature:road.arterial|element:labels.text.fill|lightness:-30&style=feature:road.highway|element:geometry.fill|color:0xf2be50&style=feature:road.highway|element:geometry.stroke|color:0xe0994c&style=feature:road.highway|element:labels.text.fill|color:0xb96f1e&style=feature:poi.park|element:geometry|color:0xcbd9b4&style=feature:transit|element:labels|lightness:20&style=feature:administrative|saturation:-100" width="640" height="280" />
+
+        </a>
+
+</div>
+
+
+    <p>
+        Stripe is holding Office Hours this Thursday. If you're planning to integrate payments into your app any time soon, this is a great way to get started. The team will be around to help you with the integration and answer any questions you may have about accepting payments.
+
+        We'll have food as well.
+    </p>
+
+    <div class="map-details">
+      <dl>
+        <dt>When:</dt>
+        <dd>Thursday, May 10th, 2012, at 7:00 PM</dd>
+
+        <dt>Where:</dt>
+        <dd>Stripe's office at <a href="http://g.co/maps/hhje6">140 Second Street in San Francisco</a>.</dd>
+      </dl>
+    </div>
+
+    <p>RSVP via our <a href="http://www.meetup.com/Stripe/events/63711732/">Meetup event</a>. Hope to see you there!</p>
+
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      May 7, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--boston-drinkup'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fboston-drinkup">Boston Drinkup<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> April 23, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+    <div class="map-image">
+    <a href="http://maps.google.com/maps?q=321%20Massachusetts%20Ave,%20Cambridge,%20MA%2002139&hl=en&hnear=321%20Massachusetts%20Ave,%20Cambridge,%20MA%2002139&t=m&z=15" target="_blank">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=321%20Massachusetts%20Ave,%20Cambridge,%20MA%2002139&zoom=15&size=640x280&sensor=false&style=feature:administrative.land_parcel|element:geometry|visibility:off&style=feature:water|element:geometry.fill|color:0x52b6ef&style=feature:landscape|element:geometry|saturation:-100|lightness:50&style=feature:road|saturation:-100|lightness:50&style=feature:poi|element:geometry|saturation:-100|lightness:50&style=feature:poi|element:labels.text.fill|lightness:30&style=feature:road.arterial|element:labels.text.fill|lightness:-30&style=feature:road.highway|element:geometry.fill|color:0xf2be50&style=feature:road.highway|element:geometry.stroke|color:0xe0994c&style=feature:road.highway|element:labels.text.fill|color:0xb96f1e&style=feature:poi.park|element:geometry|color:0xcbd9b4&style=feature:transit|element:labels|lightness:20&style=feature:administrative|saturation:-100" width="640" height="280" />
+
+        </a>
+
+</div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252Fabout#siddarth">Siddarth</a> and I will be hanging out at <a href="http://www.yelp.com/biz/miracle-of-science-bar-grill-cambridge">Miracle of Science</a> on Wednesday night. Come by, chat, and have a beer on us!</p>
+
+    <div class="map-details">
+      <dl>
+        <dt>When:</dt>
+        <dd>Monday, April 23rd, 2012, at 7:00 PM</dd>
+
+        <dt>Where:</dt>
+        <dd><a href="http://g.co/maps/27kvv">Miracle of Science Bar + Grill</a></dd>
+      </dl>
+    </div>
+
+    <p>RSVP via our <a href="http://www.meetup.com/Stripe/events/61783242/">Meetup event</a>.</p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      April 23, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--stripe-gallery'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#patrick">
+      <img src="../../img/about/team/patrick@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fstripe-gallery">Stripe Gallery<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#patrick">Patrick Collison</a>
+      <span>on</span> April 18, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    <div class="gallery-images">
+    <a href="../../country?country=CH&amp;redirect=%252Fgallery">
+      <img class="first" src="../../img/gallery/large/ted-thumb.jpg" width="245" height="152">
+      <img class="second" src="../../img/gallery/large/shopify-thumb.jpg" width="245" height="152">
+      <img class="third" src="../../img/gallery/large/taskrabbit-thumb.jpg" width="245" height="152">
+  </a>
+</div>
+
+<p>Stripe is for large enterprises, rapidly-growing startups, side projects, and everything in between.</p>
+
+<p>A few weeks ago, we decided to build something that shows the kinds of things being created with Stripe. As we did, it became clear fairly quickly that highlighting just a few users wouldn&#8217;t be enough. And so, rather than focus on a small number of sites, we instead put together the <a href="../../country?country=CH&amp;redirect=%252Fgallery">Stripe Gallery</a>. It&#8217;s a detailed cross-section of what hundreds of Stripe users are building.</p>
+
+<p>You can look at Stripe as a web company, a payments company, and a technology company. It is all of these things, but we look at Stripe through a different lens: we’re out to build a platform that makes it easy for others to implement their ideas. The internet is humanity’s most exciting invention. It’s always been great at facilitating communication and the real-time exchange of information, but the economic layer has lagged behind. It’s been cumbersome to build a business on the web.</p>
+
+<p>Many of Stripe&#8217;s users&mdash;even those at large companies&mdash;tell us that, without Stripe, they simply wouldn&#8217;t be charging for anything. Hearing this is what tells us that we&#8217;re on the right track.</p>
+
+<p>We&#8217;re very proud of our users, and we&#8217;re excited to show what they&#8217;re creating. Check out the <a href="../../country?country=CH&amp;redirect=%252Fgallery">Stripe Gallery</a>, and let us know what you think.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      April 18, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--capture-the-flag-wrap-up'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#andy">
+      <img src="../../img/about/team/andy@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fcapture-the-flag-wrap-up">Capture the Flag: Wrap-up<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#andy">Andy Brody</a>
+      <span>on</span> March 19, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+<p> <strong>Update:</strong> We've also posted downloadable Stripe CTF
+disk images, available by <a
+href="https://stripe-ctf.s3.amazonaws.com/stripe-ctf-server-ubuntu-10.04-lucid-amd64-20120427-0108.img.tar.gz">direct
+download</a> or <a
+href="https://stripe-ctf.s3.amazonaws.com/stripe-ctf-server-ubuntu-10.04-lucid-amd64-20120427-0108.img.tar.gz?torrent">BitTorrent</a>. </p>
+
+<p> You're free to use the disk images to do your own cool things. The
+Stripe code on the disk images is licensed under a BSD license. Third
+party code included in the disk images is subject to its own license,
+which is included. We'd appreciate you letting folks know where you
+got the original code and we'd love to hear what cool things you're
+doing (but that's up to you).</p>
+
+<p> Janos Gyerik has also created a <a
+href="http://www.janosgyerik.com/hacking-contest-on-a-live-cd/">Live
+CD image</a> of the Stripe CTF that makes it even easier to get
+started. </p>
+
+<hr>
+
+<p>
+We ran a
+<a href="../../country?country=CH&amp;redirect=%252Fblog%252Fcapture-the-flag">capture the flag</a>
+security challenge a few weeks ago. Expecting only one or two hundred people
+to look at it over the course of its week-long run, we were blown away when
+we found 900 simultaneous users logged in just a couple hours after we
+launched. Thanks for bearing with us while we provisioned more servers to
+handle the load.
+</p>
+
+<div class="image-center">
+<h3 class="chart-title">Simultaneous users over time</h3>
+<img src="../../img/blog/posts/ctf-wrap-up/users_over_time_2.png" width="579" height="256" data-hires="true" /></div>
+
+<p>
+Our users were largely anonymous, but we had people log in from 12,000 unique
+IP addresses. Among them we saw everything from startups and security firms to
+major universities and Fortune 100 technology companies. It was awesome to see
+participants hailing from all around the world.
+</p>
+
+<div class="image-center">
+<a href="../../img/blog/posts/ctf-wrap-up/map.unique_ips.png" class="zoom" maxSize="2048x1000"><img src="../../img/blog/posts/ctf-wrap-up/map.unique_ips.small.png" width="570" height="274" /></a></div>
+
+<p>
+By popular demand, we've created virtual machine images that you can use to run
+your very own Stripe CTF server. They're available in the Amazon Web Services
+us-west-1 and us-east-1 regions as AMIs owned by account
+<strong>928171847254</strong>. When you log in as user <strong>ctf</strong>,
+you'll see instructions on how to get it up and running. We recommend using VPC
+so you can set outbound firewall rules.
+</p>
+
+<p>
+I've posted the
+<a href="http://speakerdeck.com/u/ab/p/stripe-capture-the-flag-meetup">
+slides</a>
+from my short security talk given at the meetup and the
+<a href="https://github.com/abrody/stripe-ctf/">source code</a>
+of each level. Several people have
+<a href="http://blog.zx2c4.com/781">posted</a>
+<a href="https://github.com/dividuum/stripe-ctf">their</a>
+<a href="https://gist.github.com/1899630">solutions</a>
+online.
+You can find more by searching for the final
+password: <a href="https://www.google.com/search?q=theflagl0eFTtT5oi0nOTxO5">
+theflagl0eFTtT5oi0nOTxO5</a>.</p>
+
+<p>To the 250 people who solved every level and
+captured the flag: congratulations, your T-shirts will be in the mail soon! To
+everyone else who participated: we hope you enjoyed it as much as we&nbsp;did.
+</p>
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      March 19, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--better-faster-dashboard'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#amber">
+      <img src="../../img/about/team/amber@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fbetter-faster-dashboard">Better, Faster Dashboard<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#amber">Amber Feng</a>
+      <span>on</span> March 15, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>We recently rolled out three cool new improvements to <a href="http://dashboard.stripe.com">dashboard.stripe.com</a>. Enjoy!</p>
+
+<div style="float:right; margin:20px -64px 20px 20px"><img src="../../img/blog/posts/better-faster-dashboard/search1.png" width="375" height="376" /></div>
+
+<h2>Search</h2>
+
+<p>Search has been much improved. One of the most common uses of the Stripe dashboard is to immediately jump to a particular charge or customer, but doing so used to be fairly slow in a variety of cases.</p>
+
+<p>To address this, we have deployed <a href="http://www.elasticsearch.com">elasticsearch</a> to make all queries far faster. In addition, we've simplified search semantics. Typeahead results used to differ from full search results; now, we always return the same results in both cases.</p>
+
+<h2>Client-side Caching</h2>
+
+<p>Until recently, every time you viewed a list of items in the dashboard (for example, the payments or customer lists), we fetched the latest data from the API. This round-trip led to a noticeable delay in rendering the page each time.</p>
+
+<p>Within a session, though, it's usually the case that the list is the same as the last time you viewed it. To take advantage of that, we now use HTML5's LocalStorage (technically <code>sessionStorage</code>) to present the list immediately, without any latency, while fetching the most up-to-date data in the background. If there's new data to be displayed, you'll see a small notification at the top of the list.</p>
+
+<h2>Logs</h2>
+
+<p>Figuring out what’s going wrong in a complex stack can be pretty annoying. Building applications with Stripe involves sometimes subtle communication between your servers, your users' browsers, and Stripe, and debugging usually involves too much <code>tail(1)</code> and <code>console.log</code>.</p>
+
+<div class="image-center"><a href="../../img/blog/posts/better-faster-dashboard/logs1.png" class="zoom" maxSize="1002x302"><img src="../../img/blog/posts/better-faster-dashboard/logs1.png" width="578" height="174"></a></div>
+
+<p>It becomes even more complicated when you try to figure out at a later stage why something happened. For example, you may see a refunded charge and want to know how, why, or when it happened. To systematically solve issues like this, we decided to expose the raw HTTP requests sent to Stripe. Now, every Stripe API operation, including requests made using the dashboard itself, are available for inspection.</p>
+
+<p>You can see all your requests in the new "Logs" section in the sidebar. Additionally, pages for individual objects (payments, customers, and so on) now show the HTTP requests pertaining to that particular object.</p>
+
+<p>We expect that this will make development and debugging much easier, and we're really excited to launch it.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      March 15, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--stripe-ctf-meetup'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fstripe-ctf-meetup">Stripe CTF Meetup<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> February 27, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    
+
+
+    <div class="map-image">
+    <a href="http://maps.google.com/maps?q=140%20Second%20Street%20San%20Francisco%20CA&hl=en&hnear=140%20Second%20Street%20San%20Francisco%20CA&t=m&z=15" target="_blank">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=140%20Second%20Street%20San%20Francisco%20CA&zoom=15&size=640x280&sensor=false&style=feature:administrative.land_parcel|element:geometry|visibility:off&style=feature:water|element:geometry.fill|color:0x52b6ef&style=feature:landscape|element:geometry|saturation:-100|lightness:50&style=feature:road|saturation:-100|lightness:50&style=feature:poi|element:geometry|saturation:-100|lightness:50&style=feature:poi|element:labels.text.fill|lightness:30&style=feature:road.arterial|element:labels.text.fill|lightness:-30&style=feature:road.highway|element:geometry.fill|color:0xf2be50&style=feature:road.highway|element:geometry.stroke|color:0xe0994c&style=feature:road.highway|element:labels.text.fill|color:0xb96f1e&style=feature:poi.park|element:geometry|color:0xcbd9b4&style=feature:transit|element:labels|lightness:20&style=feature:administrative|saturation:-100" width="640" height="280" />
+
+        </a>
+
+</div>
+
+
+    <p>Come learn how common exploits work, or show off your
+    own solutions to our <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fcapture-the-flag">Capture the Flag</a>
+    challenge! We're hosting a CTF Meetup at our office this
+    Thursday.</p>
+
+    <p>The CTF organizers
+    (<a href="../../country?country=CH&amp;redirect=%252Fabout#siddarth">Sidd</a>,
+    <a href="../../country?country=CH&amp;redirect=%252Fabout#andy">Andy</a>, and
+    <a href="../../country?country=CH&amp;redirect=%252Fabout#greg">I</a>)
+    will be giving a walkthrough of how to solve each level
+    of the challenge. Beer and snacks are on us, and people
+    of any technical skill level are welcome.</p>
+
+    <!--<p> We'll be shutting down the CTF servers on Wednesday at 12:00pm
+    PST, so make sure you've finished your solving by then! </p>-->
+
+    <div class="map-details">
+      <dl>
+        <dt>When:</dt>
+        <dd>Thursday, March 1st, 2012, at 7:00 PM</dd>
+
+        <dt>Where:</dt>
+        <dd>Stripe's office at <a href="http://g.co/maps/hhje6">140 Second Street in San Francisco</a>.</dd>
+      </dl>
+    </div>
+
+    <p>
+        RSVP via our <a href="http://www.meetup.com/Stripe/events/54071002/">Meetup event</a>.
+    </p>
+
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      February 27, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--capture-the-flag'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#sidd">
+      <img src="../../img/about/team/sidd@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fcapture-the-flag">Capture the Flag<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#sidd">Siddarth Chandrasekaran</a>
+      <span>on</span> February 22, 2012
+    </p>
+  </header>
+  
+  <div class="content">
+    <p> <strong>Update:</strong> The CTF has now ended. Thanks for playing! We'll have another follow-up post here soon. </p>
+
+<hr>
+
+<div class='image-right'>
+<img src="../../img/blog/posts/ctf/flag.png" width="172" height="222" class="flag" />
+</div>
+
+<p> The hardest part of writing secure code is learning to think like
+an attacker. For example, every programmer is told to watch out for
+SQL injections, but it's hard to appreciate just how exploitable they
+are until you've written a SQL injection of your&nbsp;own. </p>
+
+<p> We built Stripe Capture the Flag, a security wargame inspired by
+<a href="http://io.smashthestack.org:84/">SmashTheStack's IO</a>, to
+help the community (as well our team!) practice identifying and
+exploiting common security problems.</p>
+
+<p>After completing our CTF, you
+should have a greatly improved understanding of how attackers will try
+to break your code (and hopefully will have fun in the process!). </p>
+
+<p> You can begin Stripe's CTF challenge by running <code>ssh
+level01@ctf.stri.pe</code> from your shell and entering the
+password <code>e9gx26YEb2</code>. </p>
+
+<p> Your goal is to read the contents of
+<code>/home/level02/.password</code>. In <code>/levels/level01</code>, you'll find
+a setuid binary owned by level02 (as well as its source code)
+&#8212 you will probably find it useful.</p>
+
+<p> Once you have the password, you can ssh in as level02. There are
+six levels in all; once you've logged in as level06 your goal is to
+read the password from <code>/home/the-flag/.password</code>. </p>
+
+<hr>
+
+<p> If you've successfully captured the flag, let us know at <a
+href="mailto:ctf@stripe.com">ctf@stripe.com</a>! We'll send a
+special-edition Stripe CTF T-shirt to anyone who successfully captures
+the flag. Include the following information in your email:
+
+<div class="stripe-ctf-block">
+<ul>
+<li> The password to the-flag. </li>
+<li> Code or a brief description of how you escalated through each level. </li>
+<li> Your mailing address and T-shirt size. </li>
+</ul>
+</div>
+
+
+
+
+  </div>
+
+  <footer>
+    <p>
+      February 22, 2012
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+
+    <footer id="blog-footer">
+    <nav>
+
+
+      <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F11" class="newer-posts">Newer posts<!-- Page 11--></a>
+
+    </nav>
+  </footer>
+
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../../country?country=AU&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Australia" src="../../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=CA&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Canada" src="../../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=DK&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Denmark" src="../../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=FI&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Finland" src="../../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=GB&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="United Kingdom" src="../../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=IE&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Ireland" src="../../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=NO&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Norway" src="../../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=SE&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Sweden" src="../../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=US&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="United States" src="../../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=AT&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Austria" src="../../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=BE&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Belgium" src="../../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=BR&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Brazil" src="../../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=FR&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="France" src="../../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=DE&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Germany" src="../../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=IT&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Italy" src="../../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=JP&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Japan" src="../../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=LU&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Luxembourg" src="../../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=MX&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Mexico" src="../../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=NL&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Netherlands" src="../../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=PT&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Portugal" src="../../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=SG&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Singapore" src="../../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=ES&amp;redirect=%252Fblog%252Fpage%252F12" >
+                  <img width="23" height="17" alt="Spain" src="../../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F12" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../../pricing">Pricing</a></li>
+      <li><a href="1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("blog");
+    </script>
+
+  </body>
+</html>

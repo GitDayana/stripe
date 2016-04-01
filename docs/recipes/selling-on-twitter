@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Selling on Twitter with Relay</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="g77f4laz_9cUVnFnqJ2ZO0feM44u7W_vIYhz0NPmfygLlNohT9C6Z-dGK7f25yWwf2PJZj-Gu9fokuS8Uuvbsg==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="twitter-guide" id="details">
+  <header>
+    <h1>Selling on Twitter through Relay</h1>
+    <p>Leverage Stripe Relay to sell products directly through Twitter.</p>
+  </header>
+  <article>
+
+    <div id="twitter-android-modal" alt="Buy Now in Twitter" class="caption-image right"></div>
+    <p>Stripe Relay provides facilities for representing your product catalog in a structured manner, allowing seamless integration with Twitter’s “Buy now” functionality. With Relay, selling on Twitter is as easy as setting up your product catalog on Stripe. The most complicated steps–taking the customer’s information, creating an order, and accepting payment for the order–are handled for you.</p>
+
+    <p>This recipe walks through the simple, basic steps:</p>
+
+    <ol>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter#connect">Connect your Stripe account</a> to Twitter</li>
+      <li>Set your <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter#shipping-taxes">shipping and tax</a> policies</li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter#create-products">Create products</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter#tweet">Tweet!</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter#manage-orders">Manage your orders</a></li>
+    </ol>
+
+    <p>All of this can be done using the <a href="https://dashboard.stripe.com">Dashboard</a> alone, which is the focus in this guide. If you’re a developer, you can use the powerful Stripe API instead, and the <a href="../relay/index.html">Relay overview</a> goes through that experience in detail (but not focused on Twitter alone).</p>
+
+    <h2 id="connect">Connect your Stripe account to Twitter</h2>
+
+    <p>The heart of Relay is the ability to allow common and popular platforms, such as Twitter, to process orders on your behalf. You’ll need to grant Twitter–or any application–permission to do so by connecting your Stripe account to their app.</p>
+
+    <ol>
+      <li>Start on the Relay tab of your <a href="https://dashboard.stripe.com/account/relay">account settings</a>.</li>
+      <li>Click <strong>Sign in with Twitter</strong>.</li>
+      <li>On the resulting Twitter page, click <strong>Authorize app</strong>. (This does assume you are logged into your Twitter account.)</li>
+      <li>When you are returned to the Stripe Dashboard, enter your sales terms and shipping policy in the dialog, and click <strong>Enable</strong>.</li>
+    </ol>
+
+    <p>Your Stripe account is now connected to Twitter! Rest assured that although Twitter can create and handle payments for your orders, they cannot access your bank account or your personal information. And, of course, you can easily disconnect the Twitter app–on the Relay tab of your account settings–at any time. </p>
+
+    <h2 id="shipping-taxes">Set your shipping and tax policies</h2>
+
+    <p>Next, configure your shipping and tax preferences in your <a href="https://dashboard.stripe.com/account/relay/settings">Stripe account</a>. Shipping can be set as: </p>
+
+    <ul>
+      <li><code>free</code> : No additional cost, the default.</li>
+      <li><code>flat_rate</code>: A flat additional cost, regardless of the items ordered, the quantity, or the customer’s geographic location. You can even opt to waive the shipping cost above a certain order total.</li>
+    </ul>
+
+    <p>Tax can be set as:</p>
+
+    <ul>
+      <li><code>included</code>: No additional cost, the default.</li>
+      <li><code>percentage</code>: A flat additional cost, as a percent of the order total, before shipping.</li>
+    </ul>
+
+    <p>Once you’ve set your shipping and tax policies, Twitter will automatically factor those costs in when orders are created.</p>
+
+    <h2 id="create-products">Create products</h2>
+
+    <p>Having connected your account to Twitter, you need products to sell! There are two core ideas involved:</p>
+
+    <ul>
+      <li>A <em>product</em> is an umbrella for something you sell, such as a “Fixed-Gear Bicycle”. </li>
+      <li>A <em>SKU</em> is a particular <a href="https://en.wikipedia.org/wiki/Stock_keeping_unit">stock keeping unit</a> representing a specific version of a product, such as a “Women’s, Road Version” (of the “Fixed-Gear Bicycle”).</li>
+    </ul>
+
+    <p>Products should not be too generally defined, and SKUs will be the actual item purchased. This relationship will make even more sense when you create both in the Dashboard, and see that key order-related information–price, inventory, and so on–are part of the SKUs, not the products. </p>
+
+    <p>As another example, “Sunglasses” would be too vague as a product, but “Knightly Sunglasses”–in theory, a specific line of sunglasses you offer, would be appropriate. The SKUs for such a product might then be:</p>
+
+    <ul>
+      <li>Women’s, standard</li>
+      <li>Women’s, polarized</li>
+      <li>Men’s, standard</li>
+      <li>Men’s, polarized</li>
+    </ul>
+
+    <p>For more on the distinction between products and SKUs, see the Relay <a href="../relay/index.html#defining-products-and-skus">best practices</a>. </p>
+
+    <p>With a mental model of your catalog in place, start creating products and SKUs in the Dashboard. Products are created first:</p>
+
+    <ol>
+      <li>On your account’s <a href="https://dashboard.stripe.com/products">Products</a> page, click  <strong>Create your first product</strong> (or <strong>New product</strong>, if you’ve already created one). Only real, live products can be sold through Twitter.</li>
+      <li>On the <strong>Create a product</strong> page, fill out the form and click <strong>Save product</strong>.
+        <ul>
+          <li><strong>Name</strong> should be descriptive but short-ish, and meant to be seen by the customer.</li>
+          <li><strong>Caption</strong> and <strong>Description</strong> will be shown to customers through Twitter.</li>
+          <li>Use the <strong>URL</strong> input to provide a link to the product on your site for even more details.</li>
+          <li><strong>Attributes</strong> will distinguish SKUs–product variations (e.g., <strong>Gender</strong>, <strong>Model</strong>, or <strong>Style</strong>).</li>
+          <li>Provide one or more images to help your products sell. To best display your product, the product image should be a square (1x1). Twitter crops the top and bottom of the image to a rectangle (2x1) when displaying it in the timeline, so the product should be within the middle 50% of the image.</li>
+          <li>Mark physical products as <strong>Shippable</strong> and then fill in the product’s size and weight.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <style>
+  div.screenshots {
+    padding: 20px 20px 0;
+  }
+  div.screenshots img {
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),
+                0 2px 3px 0 rgba(0,0,0,0.3);
+  }
+  div.screenshots p {
+    text-align: center;
+    color: #888;
+    padding-top: 15px;
+  }
+</style>
+
+    <div class="screenshots clearfix">
+      <div style="width: 39%; float: left;">
+        <p><a href="../../img/documentation/relay/product-create.png" data-hires="true" class="zoom" maxsize="711x670"><img src="../../img/documentation/relay/product-create-thumb.png" width="255" height="260" data-hires="true" /></a></p>
+        <p>The form for creating a product.</p>
+      </div>
+      <div style="width: 59%; float: right;">
+        <p><a href="../../img/documentation/relay/product-example.png" data-hires="true" class="zoom" maxsize="710x450"><img src="../../img/documentation/relay/product-example-thumb.png" width="360" height="227" data-hires="true" /></a></p>
+        <p>The newly created product.</p>
+      </div>
+    </div>
+
+    <p>Having created a product, you can now create SKUs for it. Remember that a SKU is the actual version of the product that the customer will purchase.</p>
+
+    <ol>
+      <li>On the product’s page in the Dashboard, click <strong>Add SKU</strong>.</li>
+      <li>In the resulting dialog,
+        <ul>
+          <li>Select an <strong>Image</strong> to use. Twitter will display this as a square (1x1) image, cropping it if necessary.</li>
+          <li>Enter the <strong>Price</strong>.</li>
+          <li>Fill out the attribute values for this particular SKU (e.g., <strong>Women’s</strong> for <strong>Gender</strong> and <strong>Road Version</strong> for <strong>Model</strong>).</li>
+          <li>Set the inventory available for sale. The inventory can be <em>finite</em>–a specific number on hand, <em>infinite</em>, or <em>bucket</em>, which allows you to just indicate the inventory is “In stock”, “Out of stock”, or “Limited”.</li>
+        </ul>
+      </li>
+      <li>Click <strong>Add SKU</strong>.</li>
+      <li>Repeat these steps for each product variation you’re selling. </li>
+    </ol>
+
+    <div class="screenshots clearfix">
+      <div style="width: 99%; float: center;">
+        <p><a href="../../img/documentation/relay/sku-create.png" data-hires="true" class="zoom" maxsize="402x770"><img src="../../img/documentation/relay/sku-create-thumb.png" width="136" height="260" data-hires="true" /></a></p>
+        <p>The form for creating a SKU.</p>
+      </div>
+    </div>
+
+    <h2 id="twitter-buy-now-requirements">Twitter Buy Now Requirements</h2>
+
+    <p>To make your product ready for selling on Twitter, double check that it:</p>
+
+    <ul>
+      <li>Is marked as <code>active</code></li>
+      <li>Has at least one SKU marked as <code>active</code></li>
+      <li>Has an image that is least 280x280 pixels</li>
+      <li>Has no more than three attributes</li>
+      <li>Has an accurate description</li>
+    </ul>
+
+    <h2 id="tweet">Tweet!</h2>
+
+    <p>The moment of truth! On your product’s page within the Stripe Dashboard, select and copy the <strong>Tweetable URL</strong> for your product. Tweet this URL, as part of a message: “Our latest, greatest fixed-gear bicycle! https://products.stripe.com/twitter/acct_1xieu3ZypJUk5ob5FHRm/products/prod_6yk2nr0y97WMag”.</p>
+
+    <p>And that is it! The Twitter app will show users a “Buy now” button along with the first image of your product as part of an interface similar to that shown at the top of this page. After clicking “Buy now”, users will also see the first image from each of the product’s SKUs. People will see your tweet and be able to purchase your product simply by clicking “Buy now”. The Twitter app will handle the rest of the payment directly through Twitter without the user ever going to your website. </p>
+
+    <h2 id="manage-orders">Manage your orders</h2>
+
+    <p>When a Twitter user clicks a “Buy Now” button, generated by the URL you tweeted, they are taken to a page within Twitter that showcases the product and optionally allows them to choose a particular SKU to purchase. Once the user selects what they want to purchase, Twitter creates an order in your Stripe account.</p>
+
+    <p>Stripe responds to the creation request by providing the proper amounts considering your shipping and tax policies, and returns that information to Twitter. Twitter then displays the full total to the user. During this entire flow, the user never has to leave Twitter (unless they decide to follow the product’s <strong>URL</strong> you provided to Stripe.) The user completes the checkout flow–paying for the order, and the transaction is complete.</p>
+
+    <p>We’ll automatically notify you via email about all created and paid orders. When you receive notice that an email has been paid for, click the link in the email to view the order in your Dashboard (you can also browse within the <a href="https://dashboard.stripe.com/orders">Dashboard orders</a> page to find it).</p>
+
+    <p>On the order page, you can view the customer’s details–such as name and shipping address, and the items purchased. After shipping the order, click <strong>Mark as fulfilled</strong> in the Dashboard to indicate you’ve done so.</p>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

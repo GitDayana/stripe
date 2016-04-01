@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sending Emails for Failed Payments</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="ytPIVyrLHLvFF2uH4oXEHJ9k6BYqIYkf34XSuklU-2dC-c2UM6hZCzYHMVe8_3iXp9kS_jtKXScWn0XWyFlf_Q==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Sending Emails for Failed Payments</h1>
+    <p>Watch for account-related events using webhooks. Then keep your customers notified of problems with their subscription billing. </p>
+  </header>
+  <article>
+
+    <aside class="intro note">
+      <h1>More recipes</h1>
+      <p>Check out our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes">other recipes</a> and discover more ways to integrate Stripe.</p>
+    </aside>
+
+    <p>Running a subscription business with recurring revenue is great. Your customer signs up for your service, enters their credit card details, and is subscribed to your plan. Stripe handles billing your customer at the interval defined in your plan, and life is good.  </p>
+
+    <p>But sometimes when a customer’s subscription comes due, the payment fails. The customer might have canceled their card, the card may have expired, or the payment might be declined by the bank for some other reason. Suddenly, life is less good. Thankfully, Stripe makes handling automated notifications in situations just like these pretty easy. This recipe explains how to set up a system that automatically notifies your customers when a subscription payment fails. </p>
+
+    <h2 id="understanding-webhooks-and-events">Understanding webhooks and events</h2>
+
+    <p>Webhook endpoints are essentially just scripts written in a server-side programming language like PHP or Ruby. You could think of a webhook endpoint as a phone number that you give Stripe to call every time a thing happens in your Stripe account. Webhooks are particularly useful for handling events that happen automatically behind the scenes, like recurring billing. </p>
+
+    <aside class="content note">
+      <h1>Not familiar with webhooks?</h1>
+      <p>Here are some other helpful resources:</p>
+      <ul>
+    <li><a href="../webhooks/index.html">Webhooks documentation</a></li>
+    <li><a href="../api/index.html#event_types">List of all event types</a></li>
+  </ul>
+    </aside>
+
+    <p>Using webhooks in your Stripe account can save you a lot of time and effort, and provides an easy way to automate repetitive tasks. The only thing webhooks are being used for in this recipe is to notify your customers about a failed payment, but you could use webhooks to notify customers about problems with their account, send custom receipts upon purchase, update your application state to reflect some change, or all sorts of other cool things. </p>
+
+    <p>When something worth notifying you about occurs in your Stripe account, we create an <em>event</em>. Events are essentially just objects that contain data explaining what happened. We create events for all sorts of things, from customers being created in your Stripe account to transfers being made to your bank account. </p>
+
+    <h2 id="creating-your-webhook-endpoint">Creating your webhook endpoint</h2>
+
+    <p>This recipe will create a webhook endpoint in PHP, but you can use your favorite programming language instead. The webhook script will listen for and respond to the <code>invoice.payment_failed</code> event. When it receives this event, the webhook script sends an email to the customer to let them know their subscription payment had a problem. </p>
+
+    <p>To start, you’ll need to create a new PHP file, called <strong>webhook.php</strong>, that begins with the following code. </p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php">&lt;?php
+// Sends an email to customers if their payment fails
+
+// If you&#39;re using Composer, use Composer&#39;s autoload
+require_once(&#39;vendor/autoload.php&#39;);
+
+// Be sure to replace this with your actual test API key (switch to the live key later)
+\Stripe\Stripe::setApiKey(&quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2&quot;);
+
+// Retrieve the request&#39;s body and parse it as JSON
+$input = @file_get_contents(&quot;php://input&quot;);
+$event_json = json_decode($input);</span></code></pre>
+      </div>
+    </section>
+
+    <p>We’ve placed a random API key in the code. Replace this with your <a href="https://dashboard.stripe.com/account/apikeys">actual API key</a> to test this code for yourself.</p>
+
+    <p>The <code>@file_get_contents("php://input")</code> line reads the data from the event that Stripe sends. The <code>json_decode()</code> function converts that data to a PHP variable for later use.</p>
+
+    <p>You might notice the example uses <a href="https://getcomposer.org/">Composer</a>. Composer is a really great dependency management tool for PHP, but not something you have to use. You could also download and use <a href="https://github.com/stripe/stripe-php">Stripe’s PHP library</a> in your application directly, but you’ll need to change the code above accordingly.</p>
+
+    <h2 id="verifying-the-event">Verifying the event</h2>
+
+    <p>Since the webhook endpoint is accessible to the scary Internet, it should ensure it received a valid event from Stripe before taking action. After the previous PHP code, add a new line to retrieve the event data from Stripe, using the received event ID:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php">// Check against Stripe to confirm that the ID is valid
+$event = \Stripe\Event::retrieve($event_json-&gt;id);</span></code></pre>
+      </div>
+    </section>
+
+    <h2 id="using-the-event-data">Using the event data</h2>
+
+    <p>Next, the retrieved event data must be examined and used. To notify the customer that their payment failed, their email address and the payment amount are required. If you create <code>Customer</code> objects in Stripe, with a stored email address, you can obtain that email address right from the <code>Customer</code> object; you could alternatively obtain the email address from your application’s database if you don’t store email addresses on the <code>Customer</code> object. </p>
+
+    <p>The PHP code will create some variables for the email address and payment amount. Add the following below your existing code:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php">if (isset($event) &amp;&amp; $event-&gt;type == &quot;invoice.payment_failed&quot;) {
+  $customer = \Stripe\Customer::retrieve($event-&gt;data-&gt;object-&gt;customer);
+  $email = $customer-&gt;email;
+  // Sending your customers the amount in pennies is weird, so convert to dollars
+  $amount = sprintf(&#39;$%0.2f&#39;, $event-&gt;data-&gt;object-&gt;amount_due / 100.0);
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>At this point, the webhook script has the data needed to contact the customer: their email address and payment amount. If you wanted, you could also retrieve details about the invoice itself, such as the plan name. </p>
+
+    <h2 id="sending-notification-emails">Sending notification emails</h2>
+
+    <p>Although it’s possible to send email directly from your server, this recipe uses <a href="http://www.mailgun.com/">Mailgun</a>. You’ll want to <a href="https://mailgun.com/signup">sign up</a> for a free Mailgun account to get started. (Alternatively, you can use PHP’s <code>mail()</code> function directly, if your server is configured to send email.)</p>
+
+    <p>Once you’ve signed up, follow the instructions to install the Mailgun PHP library. Mailgun also uses Composer in their example, but you can download and include the <a href="https://github.com/mailgun/mailgun-php">Mailgun Library</a> if you prefer. </p>
+
+    <p>To use Mailgun (after installing the library), you’ll need to add the code to actually send an email to your customer when their payment fails. First, configure Mailgun by adding the following to the script, immediately after the Stripe API key is set at the top of the page:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php"> // Require Mailgun stuff
+ use Mailgun\Mailgun;
+
+ // Be sure to replace with your Mailgun key and domain
+ $mgClient = new Mailgun(&#39;key-yourKeyGoesHere&#39;);
+ $domain = &quot;yourDomainGoesHere&quot;;</span></code></pre>
+      </div>
+    </section>
+
+    <p>Next, add the code to actually send an email–this should come after the variables you created from the event, but inside of your conditional statement (so emails are only sent for the correct event type).</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php">  // Make the call to the client
+  $result = $mgClient-&gt;sendMessage($domain, array(
+    // Be sure to replace the from address with the actual email address you&#39;re sending from
+    &#39;from&#39;    =&gt; &#39;YourApp Billing &lt;mailgun@sandbox695f17069ce947b6aa93805a0a6111f3.mailgun.org&gt;&#39;,
+    &#39;to&#39;      =&gt; $email,
+    &#39;subject&#39; =&gt; &#39;Your most recent invoice payment failed&#39;,
+    &#39;text&#39;    =&gt; &#39;Hi there,
+    
+    Unfortunately your most recent invoice payment for &#39; . $amount . &#39; was declined. 
+    This could be due to a change in your card number or your card expiring, cancelation of your credit card, 
+    or the bank not recognizing the payment and taking action to prevent it. 
+
+    Please update your payment information as soon as possible by logging in here:
+    https://yoursite.com/login&#39;
+  ));</span></code></pre>
+      </div>
+    </section>
+
+    <p><strong>Note:</strong> This example includes a link to your website where the customer can update their card details; you’ll want to be sure you have a form on your site set up to handle this workflow. You can find a tutorial that covers handling customer card updates on your website <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards">here</a>.</p>
+
+    <p>Upload the <strong>webhook.php</strong> file to your server and ensure you’re able to access the URL for your webhook (e.g., by going to <strong>http://yoursite.com/webhook.php</strong> in your browser, which should show a blank page, not an error message). </p>
+
+    <h2 id="adding-your-webhook-endpoint-to-stripe">Adding your webhook endpoint to Stripe</h2>
+
+    <p>Once your webhook endpoint URL is live on the web, test it to make sure it’s working as expected. Visit the <a href="https://dashboard.stripe.com/account/webhooks">webhooks tab</a> in your account settings, then click <strong>Add endpoint</strong>.</p>
+
+    <p>In the modal window that appears, add the URL for your new webhook and set the mode to <strong>Test</strong>. Click <strong>Create endpoint</strong>. </p>
+
+    <p>Your webhook endpoint is now enabled on your Stripe account (for test mode).</p>
+
+    <h2 id="testing">Testing</h2>
+
+    <p>To actually test the webhook, simulate an invoice payment failure, the event to catch when a subscription payment fails. You could test this by subscribing a customer to a plan with a very short trial period and wait for the invoice to fail. But to run a webhook test a bit faster, you can recreate the same event by generating an invoice and then failing in the attempt to pay it. To do that, use a test card that can be added to a <code>Customer</code> object but fails for charges: card number <strong>4000 0000 0000 0341</strong>, listed in Stripe’s <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">testing documentation</a>. </p>
+
+    <ol>
+      <li>Head back to the <a href="https://dashboard.stripe.com/test/customers">Customers page</a> on your test Dashboard and click <strong>+ New</strong> on the top-right area of the page to create a test customer. </li>
+      <li>Enter <strong>your actual email address</strong> in the field and click <strong>Create customer</strong>.</li>
+      <li>Click <strong>Add Card</strong> on the newly created customer’s page in the Dashboard, and enter the special test card number ending in <strong>0341</strong>.</li>
+      <li>On the same customer’s page, click <strong>Add Invoice Item</strong> and enter <strong>$10.00</strong> as the amount. </li>
+      <li>Click <strong>Create invoice item</strong>. </li>
+      <li>Once the invoice item has been added, click <strong>Invoice Now</strong> next to the <strong>Pending Invoice Items</strong> header on the customer page. Click <strong>Invoice now</strong> again to confirm. </li>
+      <li>The invoice should appear–grayed out, since it hasn’t been paid yet–under the <strong>Invoices</strong> heading. Click the invoice to load the invoice page.</li>
+      <li>Click the <strong>Pay Now</strong> button to attempt to pay the invoice. You’ll receive a message that “Your card was declined”, and the <code>invoice.payment_failed</code> event will be created. You can find this event by <a href="https://dashboard.stripe.com/test/events">visiting your test events page</a> and looking for the message “…invoice for $10.00 failed payment”. </li>
+      <li>Click the event to view the details and scroll to the bottom of that page. You’ll see that the event was delivered to your webhook endpoint. </li>
+    </ol>
+
+    <p>If everything went well, you should receive the email indicating that your payment failed. Huzzah!</p>
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+
+    <p>If your webhook shows “pending” in the Dashboard, click the webhook URL to expand the details and be sure your server isn’t sending back a non-<code>2xx</code> status, which would indicate a problem with your code or server. If you are receiving an error, take a look at the code in your webhook script to be sure things match the code above (and that you’ve replaced API keys as needed). Reviewing your server’s error logs can also be useful in finding the source of the problem.</p>
+
+    <h2 id="making-the-endpoint-live">Making the endpoint live</h2>
+
+    <p>As the last step, make this webhook live on your server to send real payment failure notifications to your customers. First, update your code to change the test Stripe API key to your <a href="https://dashboard.stripe.com/account/apikeys">live key</a>. </p>
+
+    <p>Next, visit the <a href="https://dashboard.stripe.com/account/webhooks">webhooks page</a> in your account settings again, and add the endpoint URL in live mode. Your customers will now receive emails when their subscription payment fails, prompting them to update their card details. (Remember to create a real page for doing so.)</p>
+
+    <hr />
+
+    <h2 id="other-ideas-for-webhooks">Other ideas for webhooks</h2>
+
+    <p>Though this webhook script was created for the purpose of notifying customers when their subscription payments fail, you could also modify this code to do all sorts of interesting things. Some examples include:</p>
+
+    <ul>
+      <li>Notifying your sales team when an invoice payment fails so they can follow up with the customer</li>
+      <li>Listening for <code>invoice.payment_succeeded</code> events and sending a custom invoice or receipt to your user</li>
+      <li>Catching <code>customer.subscription.deleted</code> events to send subscription cancellation notifications to your customers</li>
+    </ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fsending-emails-for-failed-payments" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

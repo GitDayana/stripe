@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Handling Customer Card Updates on Your Website</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="vTzQQH_nBnhYjjSt3oKT-paKjq9eFyQVA21p56rJ2HI1FtWDZoRDyKuebn2A-C9xrjd0R0988C3Kd_6LK8R86A==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Handling Customer Card Updates on Your Website</h1>
+    <p>Use a simple <a href="../../country?country=CH&amp;redirect=%252Fcheckout">Checkout</a> form and a PHP script to collect and update card details for your customers.
+If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+</p>
+  </header>
+
+  <article>
+
+    <aside class="intro note">
+      <h1>More recipes</h1>
+      <p>Check out our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes">other recipes</a> and discover more ways to integrate Stripe.</p>
+    </aside>
+
+    <p>Sometimes your customers need to change the card info that they have on record with your business, whether that’s just to swap in a preferred card, or because the bank issued a replacement. Though Stripe does take care of <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fsmarter-saved-cards">updating expiring cards</a> for you, the ability to change the card a customer has on file is something you’ll likely want to enable for your users.</p>
+
+    <p>The good news is that updating the customer’s payment source in Stripe is pretty straightforward. The process is almost the exact same as that used to create the customer and store their card details initially, with just a couple of minor changes.</p>
+
+    <h2 id="thinking-through-the-implementation">Thinking through the implementation</h2>
+
+    <p>The focus in this recipe is on how to use Stripe to update a customer’s card, so it will help to first think through what the entire process might look like for your application.</p>
+
+    <aside class="content note">
+      <h1>Updating a customer</h1>
+      <p>You can find more on updating a customer in our <a href="../api/index.html#update_customer">API docs</a>. </p>
+    </aside>
+
+    <ol>
+      <li>On your website, your customer clicks a link to access their profile or payment details page where they can update their payment info.</li>
+      <li>Through a form on your site, they add their new card details. The payment details are securely sent directly to Stripe.</li>
+      <li>Stripe returns a token representing the new card details. This token is then submitted to your server to be used in an API call.</li>
+      <li>Your script obtains, from storage on your site, the Stripe ID of the customer that needs to be updated. This would likely be stored in a database.</li>
+      <li>The token is used in your script to update the customer’s default payment source in Stripe.</li>
+      <li>Your application displays a message to the customer to let them know the update was successful.</li>
+    </ol>
+
+    <p>One important thing to note here is you’ll need the Stripe customer ID to make the update request. Presumably you have some sort of user table that tracks your users and allows them to log in. This table could also store the user’s Stripe customer ID, created when they first registered at your site.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>user_id</th>
+          <th>email</th>
+          <th>pass</th>
+          <th>stripe_customer</th>
+          <th>created_at</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>user@email.com</td>
+          <td>KJAoe8c$jdy2@idsaje</td>
+          <td>cus_aBCdef123456</td>
+          <td>2015-11-26</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="creating-an-update-your-card-form">Creating an “update your card” form</h2>
+
+    <p>The first step is to tokenize the details of the customer’s new card. This process should look familiar, since you’ve likely used the same functionality to obtain their initial card details. The only real difference here is that you’re <em>updating</em> the <code>Customer</code> object in Stripe to use this new card instead of <em>creating</em> a <code>Customer</code> object with it.</p>
+
+    <p>Since <a href="https://stripe.com/docs/checkout/tutorial">Checkout</a> handles styling and input validation out-of-the-box, it’s the solution used in this example. If having full control over the look and feel of the form is more your style, you could use <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a> and a <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">custom form</a> to handle this instead. To get started, create a new PHP file called <strong>update.php</strong> and add the Checkout form below:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;
+  &lt;script
+  src=&quot;https://checkout.stripe.com/checkout.js&quot; class=&quot;stripe-button&quot;
+  data-key=&quot;pk_test_6pRNASCoBOKtIshFeQd4XMUh&quot;
+  data-image=&quot;/path/to/your/logo.png&quot;
+  data-name=&quot;Your Website Name&quot;
+  data-panel-label=&quot;Update Card Details&quot;
+  data-label=&quot;Update Card Details&quot;
+  data-allow-remember-me=false
+  data-locale=&quot;auto&quot;&gt;
+  &lt;/script&gt;
+&lt;/form&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>Notice that the <code>data-amount</code> attribute isn’t set, which prevents an amount from being presented in Checkout. Instead, the text is “Update Card Details”. As written, the customer also has to enter their email address again here, which is a bit suboptimal, so a better solution is explained at the end of this recipe.</p>
+
+    <div class="screenshots clearfix">
+      <div style="width: 99%; float: center;">
+        <p><img src="../../img/documentation/recipes/updating-customer-cards/checkout_update.png" width="354" height="398" data-hires="false" /></p>
+      </div>
+    </div>
+
+    <p>As a reminder, this particular version of Checkout would only be displayed on your site to logged-in users wanting to update their payment details.</p>
+
+    <h2 id="using-the-token-to-update-the-customers-card">Using the token to update the customer’s card</h2>
+
+    <p>Next, you need some server-side code to update the customer’s card in Stripe, so create a script called <strong>update_card.php</strong>. This script will handle receiving the token that’s submitted to your server, and will use that token to update the <code>Customer</code> object.</p>
+
+    <p>This article assumes that you’re already using Stripe within your app to create customers and charges, so you’ll want to be sure you <a href="../libraries/index.html#php-library">load the Stripe library</a> and <a href="../api/php#authentication">authenticate</a> using your API key as a first step in your <strong>update_card.php</strong> file.</p>
+
+    <p>After authenticating, add the following code to your <strong>update_card.php</strong> script to obtain the token that was submitted and update the <code>Customer</code> object:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php">&lt;?php
+// Updates the payment source on file for a customer
+
+// If you&#39;re using Composer, use Composer&#39;s autoload
+require_once(&#39;vendor/autoload.php&#39;);
+
+// Use your test API key (switch to the live key later)
+\Stripe\Stripe::setApiKey(&quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2&quot;);
+
+if (isset($_POST[&#39;stripeToken&#39;])){
+  try {
+    $cu = \Stripe\Customer::retrieve($customer_id); // stored in your application
+    $cu-&gt;source = $_POST[&#39;stripeToken&#39;]; // obtained with Checkout
+    $cu-&gt;save();
+
+    $success = &quot;Your card details have been updated!&quot;
+  }
+  catch(\Stripe\Error\Card $e) {
+
+    // Use the variable $error to save any errors
+    // To be displayed to the customer later in the page
+    $body = $e-&gt;getJsonBody();
+    $err  = $body[&#39;error&#39;];
+    $error = $err[&#39;message&#39;];
+  }
+  // Add additional error handling here as needed
+}
+?&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>We’ve placed a random API key in the code. Replace this with your <a href="https://dashboard.stripe.com/account/apikeys">actual API key</a> to test this code for yourself.</p>
+
+    <h2 id="putting-it-all-together">Putting it all together</h2>
+
+    <p>Require the <strong>update_card.php</strong> file immediately at the top of your <strong>update.php</strong> page before your Checkout form. As a simple trick, you can have it be included only upon form submission:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php">&lt;?php if ($_SERVER[&#39;REQUEST_METHOD&#39;] == &#39;POST&#39;) require_once(&#39;./update_card.php&#39;); ?&gt;
+...</span></code></pre>
+      </div>
+    </section>
+
+    <p>Your customer will want to know when their card details have been updated, so the final step is to add a message letting them know the update was successful. Before the form tag in your <strong>update.php</strong> page, output the error or success message:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php">&lt;?php
+if (isset($error)) {
+  echo $error;
+} elseif (isset($success)) {
+  echo $success;
+}
+?&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>This example uses some pretty blunt error handling, so you’ll likely want to read through our <a href="../api/index.html#errors">error handling documentation</a> and code something a bit more professional, along with applying error and success CSS styles to match your application.</p>
+
+    <h2 id="extending-this-recipe">Extending this recipe</h2>
+
+    <p>This recipe outlines a simple implementation you can use to update cards for your customers through your website. Two ways you may want to expand these concepts to provide an even better experience for your user include setting the email address for them and displaying information about the current card on file.</p>
+
+    <h3 id="adding-the-data-email-attribute">Adding the <code>data-email</code> attribute</h3>
+
+    <p>To save your customers from having to enter their email address in the Checkout form, provide the customer’s current email address (obtained from your app just like the customer ID) as the <code>data-email</code> attribute value in Checkout. Doing so pre-fills the email address in the displayed Checkout form. Assuming the variable <code>$email</code> contains the email address of the user stored within and retrieved from your application, your code might look like this:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;
+  &lt;script
+  src=&quot;https://checkout.stripe.com/checkout.js&quot; class=&quot;stripe-button&quot;
+  data-key=&quot;pk_test_6pRNASCoBOKtIshFeQd4XMUh&quot;
+  data-image=&quot;/path/to/your/logo.png&quot;
+  data-name=&quot;Your Website Name&quot;
+  data-panel-label=&quot;Update Card Details&quot;
+  data-label=&quot;Update Card Details&quot;
+  data-allow-remember-me=false
+  data-locale=&quot;auto&quot;
+  data-email=&quot;&lt;?php echo $email; ?&gt;&quot;&gt;
+  &lt;/script&gt;
+&lt;/form&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>Find other Checkout configuration options <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout#integration-simple-options">in the docs</a>.</p>
+
+    <h3 id="displaying-the-default-card-on-record">Displaying the default card on record</h3>
+
+    <p>Just before the card update form, you could display the current default card for the customer by using the <a href="../api/index.html#retrieve_customer">retrieve a customer</a> API call to get that information from Stripe. The following code <a href="../api/index.html#expanding_objects">expands</a> the customer’s <code>default_source</code> object to fetch the card details with a single API call.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js php">&lt;?php
+// Fetch the details of a customer&#39;s default payment source
+
+// If you&#39;re using Composer, use Composer&#39;s autoload
+require_once(&#39;vendor/autoload.php&#39;);
+
+// Use your test API key (switch to the live key later)
+\Stripe\Stripe::setApiKey(&quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2&quot;);
+
+// Retrieve the customer and expand their default source
+$cu = \Stripe\Customer::Retrieve(
+  array(&quot;id&quot; =&gt; $customer_id, &quot;expand&quot; =&gt; array(&quot;default_source&quot;))
+);
+
+// Echo the card brand and last 4 digits
+echo $cu-&gt;default_source-&gt;brand . &quot; ending in &quot; . $cu-&gt;default_source-&gt;last4;</span></code></pre>
+      </div>
+    </section>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fupdating-customer-cards" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

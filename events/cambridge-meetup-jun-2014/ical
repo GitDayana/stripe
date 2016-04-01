@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:iCalendar-Ruby
+BEGIN:VEVENT
+DESCRIPTION:
+DTSTAMP:20160329T234301
+LOCATION:John Harvard's\n33 Dunster Street\nCambridge\, MA 02138
+SEQUENCE:0
+SUMMARY:Meetup in Cambridge
+UID:2016-03-29T23:43:01+00:00_807827016@sitebox2.northwest.stripe.io
+URL:https://stripe.com/events/cambridge-meetup-jun-2014
+DTSTART:20140606T000000Z
+DTEND:20140606T030000Z
+ORGANIZER;CN="Stripe Community":mailto:stripe-community@stripe.com
+ATTENDEE;CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ-PARTICIPANT;X-NUM-
+ GUESTS=0;CN="Stripe Community":mailto:stripe-community@stripe.com
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Stripe Connect Platform Agreement</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="yKuCbYgymiz9_lHyWEONIpUfaoKwFSNJ2RQuYv4ZOWBAgYeukVHfnA7uCyIGOTGpraKQaqF-93EQDrkOfxSd-g==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../docs/mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../security">Security</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../docs/webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../docs/guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../docs/guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../docs/guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../docs/disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../docs/libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../docs/api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../docs/subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../docs/relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../docs/connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../docs/connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header id="cpagmt">
+    <h1 id="stripe-connect-platform-agreement">Stripe Connect Platform Agreement</h1>
+    <p>Last Updated: March 23, 2015. Previous versions and diffs are <a href="https://github.com/stripe/terms">available here</a>.</p>
+  </header>
+  <article>
+
+    <h1 id="about-stripe-connect--connect-platform">About Stripe Connect – Connect Platform</h1>
+
+    <p>Thank you for using <a href="../marketplaces">Stripe Connect</a>.  Stripe Connect lets platform providers like you enable customers to use Stripe for accepting payments and lets you manage certain aspects of your customers’ Stripe accounts, including initiating charges or refunds, handling of disputes, and other functions available through Stripe Connect.  You must inform any of your customers that use Stripe Connect to accept payments or permit you to manage their account that they are doing so.</p>
+
+    <h1 id="stripe-connect-platform-agreement-1">Stripe Connect Platform Agreement</h1>
+
+    <p>This Stripe Connect Platform Agreement is a legal agreement (“Connect Platform Agreement”) between the legal entity (including sole proprietors) that you identified on the registration page (“Connect Platform” or “you”) and Stripe (“Stripe”).  The products and services that you provide through the Connect Platform, regardless of whether or not fees are charged, are referred to in this Connect Platform Agreement as “Platform Services.”  This Connect Platform Agreement also governs how Connect Platforms may manage users’ Stripe accounts (each a “Connected Account”).  Management of Connected Accounts includes use and administration of data about Connected Accounts and their transactions (“Data”) and initiating Activity.  As used in this Connect Platform Agreement, any action submitted using the Stripe Connect API on behalf of a Connected Account is referred to as “Activity,” which includes initiating charges or Refunds, handling disputes or Chargebacks, and other features available through Stripe Connect.</p>
+
+    <p>You represent to Stripe that all of the information you provided to us is accurate and complete, that you are authorized to agree to this Connect Platform Agreement on behalf of the Connect Platform.  You agree to the terms and conditions of this Connect Platform Agreement, and to the Stripe ToS.  Please read them carefully, as both your use of the Stripe Service and your treatment of Connected Accounts are subject to your acceptance of these terms and conditions.</p>
+
+    <h2 id="relationship-to-other-agreements">1. Relationship to Other Agreements</h2>
+
+    <p>By using Stripe Connect, including the Stripe Service, you expressly agree to abide by the terms and conditions of this Connect Platform Agreement, the Stripe ToS, and to any updates or modifications to either of those documents that may occasionally be made by Stripe.  The Stripe ToS is a three-party agreement between you, Stripe, and Stripe’s financial services providers (the “Bank”), and is incorporated into this Connect Platform Agreement by reference as it relates to your use of the Stripe Service.  This Connect Platform Agreement contains additional terms and conditions relating to your use of the features of Stripe Connect made available to Connect Platforms.  To the extent that there is a conflict between the Stripe ToS and this Connect Platform Agreement related to your use of Stripe Connect, this Connect Platform Agreement will prevail.  Nothing in this Connect Platform Agreement alters the terms and conditions of the Stripe ToS as between you and the Bank.  Any capitalized terms that are used but not defined in this Connect Platform Agreement are defined in the Stripe ToS.</p>
+
+    <h2 id="stripe-connect--connect-platform">2. Stripe Connect – Connect Platform</h2>
+
+    <p>Stripe Connect allows you to integrate Stripe Service into your platform and help manage the payments experience for your customers, who may be selling goods or services, or receive bona fide charitable donations.  You may provide some services on their behalf, such as web development or hosting services, customer service, processing of refunds, handling consumer complaints, or other Activity.  It is your sole responsibility, and Stripe disclaims all liability or responsibility, to clearly explain to Connected Accounts the nature of the Platform Services and the Activity that you will manage as part of the Connected Account’s utilizing the Stripe Service.</p>
+
+    <p>Stripe has a direct contractual relationship with each Connected Account and provides the Stripe Service directly to the Connected Account.  Connected Account owners may choose to use the Stripe Service outside of the relationship with the Connect Platform.  If the Connected Account ends its relationship with the Connect Platform, it may still maintain a relationship with Stripe and Stripe may keep Data associated with each Connected Account.</p>
+
+    <p>You consent to Stripe’s disclosure of your name and address, and information about the transactions that you process through the Stripe Service to the Bank and our service providers to facilitate the provision of Stripe Connect and Stripe Services to you and to Connected Accounts.  You also consent to Stripe’s use of information provided to or collected by us as part of providing the Stripe Service for our internal analyses and fraud monitoring.  For more information regarding Stripe’s use of data, please review <a href="../privacy">Stripe’s Privacy Policy</a>.</p>
+
+    <h2 id="your-obligations">3. Your Obligations</h2>
+
+    <p><strong>a. Agreements with Connected Accounts:</strong>  You must have a written agreement with the business entity or individual that owns each  Connected Account explaining the Platform Services, how the Connect Platform accesses and uses Data, and the Activities that are performed by the Connect Platform (collectively, the “Platform Agreement”).  Stripe is not responsible to Connected Accounts for any Platform Services you provide - you are solely responsible for providing Platform Services to Connected Accounts as described in the Platform Agreement.  You may only engage in Activity on the Connected Account to the extent that you are doing so as an agent on behalf of the Connected Account (as a merchant payee) for the limited purpose of processing or acceptance of payments using the Stripe Service, which must be clearly stated in your Platform Agreement.</p>
+
+    <p><strong>b. Management of Connected Accounts:</strong>  Depending on <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">the specific integration with the Connect Platform</a>, you may have the ability to manage Connected Accounts.  You are responsible for any Activity initiated by you, on your behalf, or using your credentials on any Connected Account either through the Stripe dashboard or through Stripe Connect.  Likewise, where either Stripe or the Connected Account incurs any losses based on unauthorized Activity initiated by you, or your employees, or your agents, you will be immediately financially liable for such losses and will pay the amounts on demand.</p>
+
+    <p><strong>c. Compliance:</strong>  You will comply with all applicable laws and regulations, payment network rules applicable to your activity (including the Network Rules), agreements with third parties that are binding on you, and this Connect Platform Agreement when using Stripe Connect or Stripe Services.</p>
+
+    <p><strong>d. Limitations:</strong>  You may only use Stripe Connect and any information obtained from Connected Accounts for the purposes for which you have expressly authorized by the Connected Account.  You will take all reasonable steps to ensure that the Connected Accounts do not use Stripe Service in violation of the Stripe ToS or for any activity that is expressly prohibited, including those activities listed at <a href="../prohibited_businesses">Prohibited Businesses List</a>.</p>
+
+    <p>You and Stripe are independent entities, and this Connect Platform Agreement does not create any partnership, agency, or employment relationship between you and Stripe, or the employees or agents of either party.  You may not and may not attempt to represent, warrant, or obligate Stripe to commitment to Connected Account or third party.  You may not use any Stripe logo, or trade or service mark in a manner inconsistent with the <a href="../terms/marks">Stripe Marks Usage Agreement</a>.</p>
+
+    <p>You may not use Stripe Connect: (a) to access any Data or initiate any Activity, or attempt to do either, for which a Connected Account has not given you express authorization or such authorization was withdrawn; (b) for any fraudulent, unlawful, deceptive, or abusive purposes or in any manner intended to harm a Connected Account, Stripe, or any third party; or (c) to circumvent Stripe’s intended limitations for any feature of Connect or in a manner inconsistent with <a href="../docs/connect/index.html">Connect API</a>.</p>
+
+    <p><strong>e. Data Protection</strong>:  You may only use Stripe Connect and Data consistent with this Connect Platform Agreement.  You will have a privacy policy that tells Connected Accounts what Data you access and how you will use, display, or transfer that Data.  You will include a prominent link to or affirmatively share your privacy policy available to all Connected Accounts.  You will obtain explicit consent from Connected Accounts before using Data for any purpose other than providing Platform Services.  You will use all reasonable efforts to protect and secure Data from unauthorized use or disclosure, and will promptly notify Connected Accounts and Stripe where Data is accessed or disclosed without permission.</p>
+
+    <h2 id="onboarding-connected-accounts">4. Onboarding Connected Accounts</h2>
+
+    <p>Stripe provides various mechanisms for you to allow your customers to create and manage Connected Accounts, which are described in the <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connect documentation</a>.  You are solely responsible for the selection of the mechanism by which Connected Accounts integrate into the Connect Platform, which may include assisting your customers in creating a Connected Account or integrating an existing Stripe account into the Connect Platform.  Selection of the manner of integration impacts your liability for Activity on the Connected Accounts.  Please read the following sections carefully prior to selecting the option that is appropriate for your business when onboarding Connected Accounts:</p>
+
+    <p><strong>a. <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Standard Onboarding</a>:</strong>  Your customers may already have a Stripe account but want to utilize Platform Services, or they may want to create a standalone Connected Account to use with the Connect Platform.  In these cases, once created, Connected Accounts will have the ability to add or remove access to Connect Platform through the <a href="https://dashboard.stripe.com">Stripe dashboard</a>.  Each Connected Account must agree to the <a href="../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a> prior to using their Connected Account on the Connect Platform.</p>
+
+    <p>Where Connected Accounts are created or connected to the Connect Platform through standard onboarding, the Connect Platform will have access to some of the Data and have the ability to initiate Activity.  Where your customer does not have an existing account with Stripe, you will have the ability to prepopulate Data prior to the owner activating the Connected Account.  Stripe may require you to collect and provide additional Data to validate a Connected Account.  The Connected Account is responsible for Data provided by the Connected Account to Stripe as part of the standard onboarding process.</p>
+
+    <p>Once a Connected Account is created, you understand and agree that you are solely responsible for use of any Data accessed and any Activity performed, and for any inaccurate or incomplete information provided to Stripe, by you, your employees, or your agents. Connected Account owners may terminate your access to the Connected Account at any time upon notice to Stripe.</p>
+
+    <p>For a Connected Account created using standard onboarding, except where expressly stated herein, the Connected Accounts are responsible and liable to Stripe for all Activity on the Connected Account (including all transactions, Chargebacks, Refunds, Claims, fines associated with such Activity, or use of the Stripe Service in a manner prohibited under this Connect Platform Agreement or the Stripe ToS).</p>
+
+    <p><strong>b. <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Deferred Onboarding</a>:</strong>  Your customers may not have a pre-existing Stripe account and you may want to collect less information upfront to allow for creation of a standalone Connected Account, and delay collection of the Data necessary to activate a Connected Account and allow customers to receive funds.  With deferred onboarding, certain Data will be required to create a pre-activated Connected Account, including email address and name.  These Connected Accounts will not be able to initiate transfers to their bank accounts until the Connected Account has been activated by the owner, which may be done through the activation page.  Except where otherwise agreed upon in writing by Stripe, activation requires that the Connected Account provide additional Data within 7 days of the first successful charge.  Each Connected Account must agree to the <a href="../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a> prior to activating their Connected Account.</p>
+
+    <p>Where Connected Accounts are created through deferred onboarding, the Connect Platform will have access to some of the Data and have the ability to initiate Activity.  While the owner of the Connected Account will ultimately activate the Connected Account and provide Data as part of this activation, you are responsible for any Data you prepopulate as part of this process.  You will use best efforts to verify that any Data provided to Stripe as part of provisioned onboarding is accurate and complete.</p>
+
+    <p>Once a Connected Account is created, you understand and agree that you are solely responsible for your use of any Data accessed and any Activity that you perform.  Any Connected Account may terminate your access to the Connected Account at any time upon notice to Stripe.   While Stripe may require you to collect and provide additional Data to validate a Connected Account, the Connect Platform is solely liable for any inaccurate or incomplete information provided to Stripe as part of the creation of the Connected Account, as applicable.</p>
+
+    <p>For a Connected Account created using deferred onboarding, except as expressly stated herein, the Connected Accounts are responsible and liable to Stripe for all Activity on the Connected Account (including all transactions, Chargebacks, Refunds, Claims, fines associated with such Activity, or use of the Stripe Service in a manner prohibited under this Connect Platform Agreement or the Stripe ToS).</p>
+
+    <p><strong>c. <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Managed Onboarding</a>:</strong>  You may want to manage the end-to-end experience of your customers, including the creation and administration of a Connected Account.  Using managed onboarding, you will be responsible for both creating and managing Connected Accounts.  Connected Account owners will not have access to the Stripe dashboard and all account Activity will be managed by the Connect Platform.</p>
+
+    <p>Where Connected Accounts go through managed onboarding, you will have responsibility for providing Data regarding the Connected Account to Stripe.  Stripe may require certain data fields through the Stripe Connect API to create the Connected Account.  You will use best efforts to verify that any information collected about Connected Accounts provided to Stripe as part of the onboarding process is accurate and complete.</p>
+
+    <p>You are solely responsible for ensuring that each Connected Account expressly agrees to comply with the <a href="../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a>.  You will ensure that Connected Account owners agree to the <a href="../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a> in a manner that clearly evidences their consent and makes clear that Stripe is providing Stripe Services to them subject to the <a href="../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a>.  You will ensure that each Connected Account has an opportunity to review the Stripe Connected Account Agreement prior to acceptance, that the Connect Account owner’s acceptance is consistent with applicable law, and will ensure that such acceptance can be confirmed, recorded, and audited.  For each Connected Account created through managed onboarding, at the time of creation you will also provide to Stripe: (i) the IP address of the Connected Account owner, (ii) the exact date and time of acceptance by the Connected Account owner, and (iii) user agent information captured from the browser of the Connected Account owner.  Stripe may, at any point, (iv) require that you provide additional information as part of the managed onboarding flow or may audit records retained regarding such acceptance or (v) require you to alter the acceptance process for the <a href="../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a> if we believe it is not consistent with applicable law, industry standard practices, or Stripe’s standards.</p>
+
+    <p>For a Connected Account created using managed onboarding, except as provided herein, you understand and agree that you are responsible and liable to Stripe for all Activity on the Connected Account, whether initiated by you or not (including all transactions, Chargebacks, Refunds, Claims, fines associated with such Activity, or use of the Stripe Service in a manner prohibited under this Connect Platform Agreement or the Stripe ToS).  Where so configured, Stripe may attempt to collect any amounts owed from the Connected Account prior to collecting such amounts from the Connect Platform, however the Connect Platform remains directly liable to Stripe for any of the foregoing and Stripe may debit the Bank Account identified by the Connect Platform.  In addition, you agree to are liable for any inaccurate or incomplete information provided to Stripe as part of the provisioning of the Connected Account.</p>
+
+    <h2 id="underwriting-and-screening">5. Underwriting and Screening</h2>
+
+    <p>Stripe may require that you establish certain criteria for accepting Connected Accounts consistent with both Stripe’s and the Bank’s programs for underwriting Connected Accounts (“Underwriting Policies”).  Stripe will have ultimate discretion regarding its underwriting and risk decisions including, without limitation, any decision of whether or not to provide Stripe Service to any Connected Account.  Stripe reserves the right to suspend or terminate provision of Stripe Service to any Connected Account at any time if (a) Stripe determines that the Connected Account’s activities violate Stripe’s Underwriting Policies, the <a href="../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a>, the <a href="../terms">Stripe ToS</a> (including Network Rules), or applicable law; (b) a Connected Account is engaged in activities listed on the <a href="../prohibited_businesses">Prohibited Businesses List</a>; or (c) such activity otherwise reflects negatively on Stripe’s or the Bank’s brand or reputation.</p>
+
+    <p>To the extent that you become aware of a Connected Account being engaged in any illegal, deceptive, or fraudulent activity, you agree to promptly notify Stripe.  Likewise, Stripe will use commercially reasonable efforts to promptly terminate or suspend any such accounts once notified by you.</p>
+
+    <h2 id="connect-pricing-and-platform-fees">6. Connect Pricing and Platform Fees</h2>
+
+    <p>Except as expressly agreed upon in writing between you and Stripe, the pricing for your use of the Stripe Service and Stripe Connect on the Connect Platform will be provided as described on <a href="../pricing">Stripe’s pricing page</a> (“Fee Schedule”).  These fees may include fees for processing Activity using Stripe Services (including Chargebacks), fees for managing Connected Accounts, fees for cross-border transactions, and other amounts.  All fees charged by Stripe will be reflected in your <a href="https://dashboard.stripe.com">Stripe dashboard</a>, and you agree that Stripe will have the right to deduct such fees from amounts processed by Stripe for you or any Connected Accounts.</p>
+
+    <p>You are solely responsible for communicating any use, recurring, or application fees charged to Connected Accounts for their use of Platform Services (“Platform Fees”) and agree to clearly communicate any Platform Fees in advance of charging the Connected Accounts.  You must accurately reflect any fees charged for Stripe Services to Connected Accounts.</p>
+
+    <h2 id="indemnification">7. Indemnification</h2>
+
+    <p>In addition to indemnification obligations under the Stripe ToS, you agree to defend, indemnify, and hold harmless Stripe, the Bank, and their respective employees and agents (each a “Disclaiming Entity”) from and against any claim, suit, demand, loss, liability, damage, action, or proceeding arising out of or relating to (a) your breach of any provision of this Connect Platform Agreement; (b) any disputes between you and Connected Accounts, including those arising from use of Data or Activity by you, your employees, or your agents, whether for the Connect Platform or a Connected Account; or (c) your use of Stripe Connect in a manner that is illegal or inconsistent with the <a href="../docs/connect/index.html">Connect API</a>.</p>
+
+    <p>Where a Connected Account was created as part of a managed onboarding flow, you also agree to defend, indemnify, and hold harmless all Disclaiming Entities from and against any claim, suit, demand, loss, liability, damage, action, or proceeding arising out of or relating to (d) Activity on the Connected Account, whether initiated by you or not (including all transactions, Chargebacks, Refunds, Claims, fines associated with such Activity, or use of the Stripe Service in a manner prohibited under this Connect Platform Agreement or the Stripe ToS); (e) any inaccurate or incomplete information provided to Stripe as part of the provisioned onboarding of Connected Accounts; and (f) your failure to acquire appropriate consent to the <a href="../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a> from any Connected Account.</p>
+
+    <p>Stripe agrees to defend, indemnify, and hold harmless the Connect Platform from and against any claim, suit, demand, action, or proceeding to the extent that such arises from out of or relates to Stripe Connect infringing the intellectual property rights of third parties to this Connect Platform Agreement.</p>
+
+    <h2 id="representations-and-warranties">8. Representations and Warranties</h2>
+
+    <p>In addition to the representations and warranties of the Stripe ToS, you represent and warrant to Stripe that you will (a) obtain authorization for all Activity initiated on behalf of a Connected Account, and for any Data obtained through or used with Stripe Connect, by you, your employees, or your agents; (b) dutifully comply with the onboarding and underwriting obligations described herein; and (c) not use Stripe Connect or knowingly permit the use of Stripe Services by Connected Accounts in a manner that is illegal or deceptive.</p>
+
+    <p>Stripe represents and warrants that it will provide Stripe Connect (a) in a manner consistent with the documentation for the <a href="../docs/connect/index.html">Connect API</a>, and with the terms and conditions of this Connect Platform Agreement and (b) will not use Data provided by you in manner that is illegal or deceptive.</p>
+
+    <p>EXCEPT AS EXPRESSLY PROVIDED HEREIN, STRIPE PROVIDES STRIPE CONNECT TO YOU ON AN “AS IS” “AS AVAILABLE” BASIS, WITHOUT ANY WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY.  STRIPE WILL NOT, UNDER ANY CIRCUMSTANCES, BE LIABLE TO YOU FOR ANY AMOUNT, WHETHER AS INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH USE OF STRIPE CONNECT, WHETHER BASED ON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT (INCLUDING NEGLIGENCE, PRODUCT LIABILITY, OR OTHERWISE), OR ANY OTHER FINANCIAL LOSS, WHETHER OR NOT YOU ADVISED US OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+
+    <h2 id="limitations-of-liability">9. Limitations of Liability</h2>
+
+    <p>Stripe is not responsible for and disclaims all liability for your, your employees’, and your agents’ (a) acts or omissions in providing Platform Services to your customers (including Connected Accounts), which includes but is not limited to delivery of goods or services to your customers or third parties, or properly describing Platform Services; (b) compliance with applicable laws and obligations related to your offering or providing Platform Services; and (c) providing customer service, notifications, or receipts, handling refunds or consumer complaints, or taking other actions related the Platform Service.</p>
+
+    <p>IN NO EVENT WILL A DISCLAIMING ENTITY BE LIABLE FOR ANY LOST PROFITS, OR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES ARISING OUT OF, IN CONNECTION WITH, OR RELATING TO THIS CONNECT PLATFORM AGREEMENT OR STRIPE CONNECT, INCLUDING WITHOUT LIMITATION THE USE OF, INABILITY TO USE, OR UNAVAILABILITY OF STRIPE CONNECT OR THE STRIPE SERVICE.  UNDER NO CIRCUMSTANCES WILL ANY DISCLAIMING ENTITY BE RESPONSIBLE FOR ANY DAMAGE, LOSS, OR INJURY RESULTING FROM HACKING, TAMPERING, OR OTHER UNAUTHORIZED ACCESS OR USE OF STRIPE CONNECT, THE STRIPE SERVICE, YOUR STRIPE ACCOUNT OR THE INFORMATION CONTAINED THEREIN, BASED ON YOUR FAILURE TO USE OR IMPLEMENT SECURITY CONTROLS THAT ARE APPROPRIATE FOR YOUR BUSINESS.</p>
+
+    <p>THE DISCLAIMING ENTITIES ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (A) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM USE OF STRIPE CONNECT OR THE STRIPE SERVICE; (B) ANY UNAUTHORIZED ACCESS TO OR USE OF THIRD-PARTY SERVERS USED IN CONNECTION WITH STRIPE CONNECT OR THE STRIPE SERVICE AND/OR ANY PERSONAL INFORMATION STORED THEREIN; (C) ANY INTERRUPTION OR CESSATION OF STRIPE CONNECT; (D) ANY SOFTWARE BUGS, VIRUSES, TROJAN HORSES, OR OTHER HARMFUL CODE THAT MAY BE TRANSMITTED TO OR THROUGH STRIPE CONNECT; (E) ERRORS, INACCURACIES, OR OMISSIONS OF INFORMATION, OR ANY LOSSES INCURRED AS A RESULT OF, RESULTING FROM THE USE OF STRIPE CONNECT; (F) INFORMATION THAT IS TRANSMITTED USING STRIPE CONNECT THAT IS DEFAMATORY, OFFENSIVE, OR ILLEGAL; AND/OR (G) ANYCONDUCT OF ANY THIRD PARTY.</p>
+
+    <p>WITHOUT LIMITING THE FOREGOING PROVISIONS OF THIS SECTION 9, THE DISCLAIMING ENTITIES’ CUMULATIVE LIABILITY TO YOU WILL BE LIMITED TO DIRECT DAMAGES AND IN ALL EVENTS WILL NOT EXCEED IN THE AGGREGATE THE AMOUNT OF FEES PAID BY YOU TO STRIPE DURING THE THREE (3) MONTH PERIOD IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE CLAIM FOR LIABILITY.</p>
+
+    <p>THIS LIMITATION OF LIABILITY SECTION APPLIES REGARDLESS OF THE LEGAL THEORY ON WHICH THE CLAIM IS BASED, INCLUDING WITHOUT LIMITATION CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER BASIS. THE LIMITATIONS APPLY EVEN IF THE DISCLAIMING ENTITIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+    <h2 id="other-general-legal-terms">10.  Other General Legal Terms</h2>
+
+    <p><strong>a. Term, Termination, and the Effects of Termination:</strong> The term of this Connect Platform Agreement will begin when you register your platform with Stripe and will end when terminated by you or by Stripe as described in this Connect Platform Agreement.  You may terminate this Connect Platform Agreement at any time by providing notice to Stripe and immediately ceasing your use of Stripe Connect.  However, if you commence using Stripe Connect again after such notice, you will be considered to have consented to this Connect Platform Agreement again.  Stripe may terminate this Connect Platform Agreement (a) if you are in breach of this Connect Platform Agreement and fail to cure the breach upon 30 days’ notice by Stripe (such notice only being required if curing the breach is feasible); (b) upon 120 days’ notice for any reason; (c) if the Connect Platform is the subject of any voluntary or involuntary bankruptcy or insolvency petition or proceeding; or (d) if required to do so by demand of the Bank, the Card Networks, or under court or legal order.</p>
+
+    <p>Sections 7 through 10 and all provisions giving rise to continuing obligations (including Section 3.e) will survive termination of this Connect Platform Agreement.  As stated above, the Stripe ToS governs your use of Stripe Services, so the termination of this Connect Platform Agreement will not immediately trigger termination of the Stripe ToS.  All obligations in the Stripe ToS will only be terminated when done so under the terms and conditions of the Stripe ToS.</p>
+
+    <p><strong>b. Governing Law, Disputes, and Interpretation:</strong>  This Connect Platform Agreement is governed by the laws of the State of California (without regard to its choice of law provisions).  The exclusive venue for any actions or claims arising under or related to this Connect Platform Agreement will be in the appropriate state or federal court located in San Francisco County, California. ALL PARTIES IRREVOCABLY WAIVE ANY AND ALL RIGHTS THEY MAY HAVE TO A TRIAL BY JURY IN ANY PROCEEDING INVOLVING ANY CLAIM OR DISPUTE RELATING TO OR ARISING UNDER THIS CONNECT PLATFORM AGREEMENT.</p>
+
+    <p>Headings are included for convenience only, and should not be considered in interpreting this Connect Platform Agreement.  This Connect Platform Agreement does not limit any rights of enforcement that we may have under trade secret, copyright, patent, or other laws.  Our delay or failure to assert any right or provision under this Connect Platform Agreement does not constitute a waiver of such right or provision.  No waiver of any term of this Connect Platform Agreement will be deemed a further or continuing waiver of such term or any other term.</p>
+
+    <p><strong>c. Right to Amend:</strong>  Stripe may amend this Connect Platform Agreement upon notice to you, which may be provided through email, the Stripe dashboard, or Stripe’s web site.  You agree that any changes to this Connect Platform Agreement will be binding on you within 7 days of such notice.  If you elect to not accept the changes to this Connect Platform Agreement, you must (a) provide notice to Stripe and (b) immediately cease using Stripe Connect.  Where no such notice is provided or where you continue to use Stripe Connect, you agree that you are consenting to any such changes to the Connect Platform Agreement.</p>
+
+    <p><strong>d. Assignment:</strong>  You may not assign or attempt to assign this Connect Platform Agreement without the express consent of Stripe in advance.  While we will generally consent to such an assignment where we consider it reasonable, we are not required to and will deny requests where such an assignment would violate this Connect Platform Agreement (such as assignment to a prohibited business) or would pose a material risk to Stripe or our partners.</p>
+
+    <p><strong>e. Entire Agreement:</strong>  This Connect Platform Agreement constitutes the entire agreement between you and Stripe with respect to Stripe Connect.  Except where expressly stated in a separate agreement duly executed by Stripe, if there is any conflict between this Connect Platform Agreement and any other Stripe agreement related to Stripe Connect, this Connect Platform Agreement will prevail.  Keep in mind, however, that with regard to your use of the Stripe Services for your own purposes (i.e. to receive payment for products or services you provide), the Stripe ToS will prevail.  These terms and conditions describe the entire liability of you and Stripe, and set forth your exclusive remedies with respect to Stripe Connect.  If any provision of this Connect Platform Agreement (or portion thereof) is held to be invalid or unenforceable under applicable law, then it should be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law, and the remaining provisions will continue in full force and effect.</p>
+
+    <p>Thank you and welcome to Stripe Connect!</p>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../country?country=AU&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CA&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DK&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FI&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=GB&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IE&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NO&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SE&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=US&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=AT&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BE&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BR&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FR&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DE&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IT&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=JP&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=LU&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=MX&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NL&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=PT&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SG&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=ES&amp;redirect=%252Fconnect%252Fterms" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CH&amp;redirect=%252Fconnect%252Fterms" class="selected">
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

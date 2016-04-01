@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" id="blog" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Follow the Stripe blog for product announcements, feature updates, new countries, and technical posts about payments." />
+
+<link rel="shortcut icon" href="../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../assets/blog-ada6c3a77cd627b09ac436c3a82dd49d.css">
+  <link rel="stylesheet" href="../assets/blogposts-b9a9b6ffe0287dc66146bd753faba55d.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../assets/blog-776e3ed92eef5022ed98688d349fd7af.js"></script>
+  <script src="../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.rss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>    Game Day Exercises at Stripe: Learning from `kill -9`
+</title>
+    <meta content="hy672jEppiMD92DCsOJNepatQL6DsRMmkwiY4WyLFJcPBL4ZKErjk_DnOhLumPHxrhC6VpLaxx5aEg-N7YawDQ==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../features">Features</a></li>
+        <li class='pricing'><a href="../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../marketplaces'>Connect</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="page/1">Blog</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <header id="blog-header">
+  	<h1><a href="page/1">Blog</a></h1>
+  	<p><a href="https://twitter.com/stripe">Follow Stripe on Twitter</a></p>
+  </header>
+  
+    <div id='blog-post--game-day-exercises-at-stripe'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../country?country=CH&amp;redirect=%252Fabout#marc">
+      <img src="../img/about/team/marc@2x.jpeg">
+    </a>
+    <h1><a href="../country?country=CH&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe">Game Day Exercises at Stripe: <br /> Learning from `kill -9`<br /></a></h1>
+    <p>
+      <a class="author" href="../country?country=CH&amp;redirect=%252Fabout#marc">Marc Hedlund</a>
+      <span>on</span> October 28, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    <p id="src0"> We’ve started running game day exercises at Stripe. During a recent game day, we tested failing over a Redis cluster by running <code>kill -9</code> on its primary node <a href="../country?country=CH&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe#ref0">[0]</a>, and ended up losing all data in the cluster. We were very surprised by this, but grateful to have found the problem in testing. This result and others from this exercise convinced us that game days like these are quite valuable, and we would highly recommend them for others. </p>
+
+<p id="src1"> If you’re not familiar with game days, the best introductory article is <a href="http://queue.acm.org/detail.cfm?id=2353017">this one</a> from John Allspaw <a href="../country?country=CH&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe#ref1">[1]</a>. Below, we’ll lay out a playbook for how to run a game day, and describe the results from our latest exercise to show why we believe they are valuable. </p>
+
+<h2> How to run a game day exercise </h2>
+
+<p> The system we recently tested, scoring-srv, is one part of our fraud detection system. The scoring-srv processes run on a cluster of boxes and connect to a three-node Redis cluster to store fraud scoring data. Our internal charge-processing code connects to scoring-srv for each charge made on Stripe’s network, so it needs to be very low-latency; likewise, accurate scoring requires historical data, so it needs durable storage. </p>
+
+<p> The scoring-srv developers and a member of our systems team, who could help run the tests, got together around a whiteboard. We drew a basic block diagram of the machines and processes, the data stores, and the network connections between the components. With that diagram, we were able to come up with a list of possible failures. </p>
+
+<p> We came up with a list of six tests we could run easily: </p>
+
+<ul>
+<li> destroying and restoring a scoring-srv box, </li>
+<li> destroying progressively more scoring-srv boxes until calls to it began timing out, </li>
+<li> partitioning the network between our charge processing code and scoring-srv, </li>
+<li> increasing the load on the primary Redis node, </li>
+<li> killing the primary Redis node, and </li>
+<li> killing one of the Redis replicas. </li>
+</ul>
+
+<p id="src2"> Since the team was new to game days, we did not try to be comprehensive or clever. We instead chose the simplest, easiest to simulate failures we could think of. We’d take a blunt instrument, like <code>kill -9</code> or <code>aws ec2 terminate-instances</code>, give the system a good hard knock, and see how it reacted <a href="../country?country=CH&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe#ref2">[2]</a>. </p>
+
+<p> For each test, we came up with one or more hypotheses for what would happen when we ran it. For instance, we guessed that partitioning the network between charge processing and scoring-srv would cause these calls to time out and fail open (that is, allow the charge to go through immediately). Then, we decided on an order to perform the tests, saved a backup of a recent Redis snapshot as a precaution, and dove in. </p>
+
+<p> Here, then, is a quick-start checklist for running a game day: </p>
+
+<ol class="checklist">
+<li> Get the development team together with someone who can modify the network and destroy or provision servers, and block off an afternoon to run the exercise. </li>
+<li> Make a simple block diagram of the machines, processes, and network connections in the system you’re testing. </li>
+<li> Come up with 5-7 of the simplest failures you can easily induce in the system. </li>
+<li> Write down one or more hypotheses for what will happen after each failure. </li>
+<li> Back up any data you can’t lose. </li>
+<li> Induce each failure and observe the results, filing bugs for each surprise you encounter. </li>
+</ol>
+
+<h2> Observations and results </h2>
+
+<p> We were able to terminate a scoring-srv machine and restore it with a single command in roughly the estimated time. This gave us confidence that replacing or adding cluster machines would be fast and easy. We also saw that killing progressively more scoring-srv machines never caused timeouts, showing we currently have more capacity than necessary. Partitioning the network between the charge-processing code and scoring-srv caused a spike in latency, where we’d expected calls to scoring-srv to time out and fail open quickly. This test also should have immediately alerted the teams responsible for this system, but did not. </p>
+
+<p> The first Redis test went pretty well. When we stopped one of the replicas with <code>kill -9</code>, it flapped several times on restart, which was surprising and confusing to observe. As expected, though, the replica successfully restored data from its snapshot and caught up with replication from the primary. </p>
+
+<p> Then we moved to the Redis primary node test, and had a bigger surprise. While developing the system, we had become concerned about latency spikes during snapshotting of the primary node. Because scoring-srv is latency-sensitive, we had configured the primary node not to snapshot its data to disk. Instead, the two replicas each made frequent snapshots. In the case of failure of the primary, we expected one of the two replicas to be promoted to primary; when the failed process came back up, we expected it to restore its data via replication from the new primary. That didn’t happen. Instead, when we ran <code>kill -9</code> on the primary node (and it was restarted by daemontools), it came back up – after, again, flapping for a short time – with no data, but was still acting as primary. From there, it restarted replication and sent its empty dataset to the two replica nodes, which lost their datasets as a result. In a few seconds, we’d gone from a three-node replicated data store to an empty data set. Fortunately, we had saved a backup and were able to get the cluster re-populated quickly. </p>
+
+<p> The full set of tests took about 3.5 hours to run. For each failure or surprise, we filed a bug describing the expected and actual results. We wound up with 15 total issues from the five tests we performed (we wound up skipping the Redis primary load test) – a good payoff for the afternoon’s work. Closing these, and re-running the game day to verify that we now know what to expect in these cases, will greatly increase our confidence in the system and its behavior. </p>
+
+<h2> Learning from the game day </h2>
+
+<p> The invalidation of our Redis hypothesis left us questioning our approach to data storage for scoring-srv. Our original Redis setup had all three nodes performing snapshots (that is, periodically saving data to disk). We had tested failover from the primary node due to a clean shutdown and it had succeeded. While analyzing the cluster once we had live data running through it, though, we observed that the low latency we’d wanted from it would hit significant spikes, above 1 second, during snapshotting: </p>
+
+<div class="image-center">
+<a href="../img/blog/posts/game-day-exercises-at-stripe/enabled.png" class="zoom img" maxSize="777x282"><img width="550" src="../img/blog/posts/game-day-exercises-at-stripe/enabled.png"></a>
+</div>
+
+<p> Obviously these spikes were concerning for a latency-sensitive application. We decided to disable snapshotting on the primary node, leaving it enabled on the replica nodes, and you can see the satisfying results below, with snapshotting enabled, then disabled, then enabled again: </p>
+
+<div class="image-center">
+<a href="../img/blog/posts/game-day-exercises-at-stripe/disabled.png" class="zoom img" maxSize="777x282"><img width="550" src="../img/blog/posts/game-day-exercises-at-stripe/disabled.png"></a>
+</div>
+
+<p> Since we believed that failover would not be compromised in this configuration, this seemed like a good trade-off: relying on the primary node for performance and replication, and the replica nodes for snapshotting, failover, and recovery. As it turned out, this change was made the day before the game day, as part of the final lead-up to production readiness. (One could imagine making a similar change in the run-up to a launch!) </p>
+
+<p> The game day wound up being the first full test of the configuration including all optimizations and changes made during development. We had tested the system with a primary node shutdown, then with snapshotting turned off on the primary, but this was the first time we’d seen these conditions operating together. The value of testing on production systems, where you can observe failures under the conditions you intend to ship, should be clear from this result. </p>
+
+<p> After discussing the results we observed with some friends, a long and heated discussion about the failure took place on Twitter, in which Redis’ author said he had not expected the configuration we were using. Since there is no guarantee the software you’re using supports or expects the way you’re using it, the only way to see for certain how it will react to a failure is to try it.  </p>
+
+<p> While Redis is functional for scoring-srv with snapshotting turned on, the needs of our application are likely better served by other solutions. The trade-off between high-latency spikes, with primary node snapshotting enabled, versus total cluster data loss, with it disabled, leaves us feeling neither option is workable. For other configurations at Stripe – especially single-node topologies for which data loss is less costly, such as rate-limiting counters – Redis remains a good fit for our needs. </p>
+
+<h2> Conclusions </h2>
+
+<p> In the wake of the game day, we’ve run a simple experiment with PostgreSQL RDS as a possible replacement for the Redis cluster in scoring-srv. The results suggest that we could expect comparable latency without suffering snapshotting spikes. Our testing, using a similar dataset, had a 99th percentile read latency of 3.2 milliseconds, and a 99th percentile write latency of 11.3 milliseconds. We’re encouraged by these results and will be continuing our experiments with PostgreSQL for this application (and obviously, we will run similar game day tests for all systems we consider).  </p>
+
+<p> Any software will fail in unexpected ways unless you first watch it fail for yourself. We completely agree with Kelly Sommers’ point in the Twitter thread about this: </p>
+
+<blockquote class="twitter-tweet" align="center" lang="en"><p>If there&#39;s anything to learn from this Redis problem, even a simple kill -9 test needs to happen more often in our industry.</p>&mdash; Kelly Sommers (@kellabyte) <a href="https://twitter.com/kellabyte/status/524969416606633984">October 22, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p> We’d highly recommend game day exercises to any team deploying a complex web application. Whether your hypotheses are proven out or invalidated, either way you’ll leave the exercise with greater confidence in your ability to respond to failures, and less need for on-the-fly diagnosis. Having that happen for the first time while you’re rested, ready, and watching is the best failure you can hope for. </p>
+
+<h2> Notes </h2>
+
+<p id="ref0"> <a href="../country?country=CH&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe#src0">[0]</a> We’ve chosen to use the terms “primary” and “replica” in discussing Redis, rather than the terms “master” and “slave” used in the Redis documentation, to support inclusivity. For some interesting and heated discussion of this substitution, we’d recommend this <a href="https://github.com/django/django/pull/2692">Django pull request</a> and this <a href="https://www.drupal.org/node/2275877">Drupal change</a>. </p>
+
+<p id="ref1"> <a href="../country?country=CH&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe#src1">[1]</a> Some other good background articles for further reading: “<a href="http://queue.acm.org/detail.cfm?id=2371516">Weathering the Unexpected</a>”; “<a href="http://queue.acm.org/detail.cfm?id=2371297">Resilience Engineering: Learning to Embrace Failure</a>”; “<a href="http://www.kitchensoap.com/2011/05/10/training-organizational-resilience-in-escalating-situations/">Training Organizational Resilience in Escalating Situations</a>”; “<a href="http://www.theatlantic.com/technology/archive/2012/11/when-the-nerds-go-marching-in/265325/">When the Nerds Go Marching In</a>.”</p>
+
+<p id="ref2"> <a href="../country?country=CH&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe#src2">[2]</a> If you’d like to run more involved tests and you’re on AWS, this <a href="http://techblog.netflix.com/2014/10/fit-failure-injection-testing.html">Netflix Tech Blog post</a> from last week describes the tools they use for similar testing approaches. </p>
+
+<h2> Thanks </h2>
+
+<p> Thanks much to <a href="https://twitter.com/allspaw">John Allspaw</a>, <a href="https://twitter.com/jmhodges">Jeff Hodges</a>, <a href="https://twitter.com/aphyr">Kyle Kingsbury</a>, and <a href="https://twitter.com/raffi">Raffi Krikorian</a> for reading drafts of this post, and to <a href="https://twitter.com/kellabyte">Kelly Sommers</a> for permission to quote her tweet. Any errors are ours alone. </p>
+
+  </div>
+
+  <footer>
+    <p>
+      October 28, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+
+  
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../country?country=AU&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Australia" src="../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=CA&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Canada" src="../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=DK&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Denmark" src="../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=FI&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Finland" src="../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=GB&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="United Kingdom" src="../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=IE&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Ireland" src="../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=NO&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Norway" src="../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=SE&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Sweden" src="../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=US&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="United States" src="../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=AT&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Austria" src="../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BE&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Belgium" src="../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BR&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Brazil" src="../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=FR&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="France" src="../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=DE&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Germany" src="../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=IT&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Italy" src="../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=JP&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Japan" src="../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=LU&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Luxembourg" src="../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=MX&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Mexico" src="../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=NL&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Netherlands" src="../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=PT&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Portugal" src="../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=SG&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Singapore" src="../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=ES&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" >
+                  <img width="23" height="17" alt="Spain" src="../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=CH&amp;redirect=%252Fblog%252Fgame-day-exercises-at-stripe" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../pricing">Pricing</a></li>
+      <li><a href="page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("blog");
+    </script>
+
+  </body>
+</html>

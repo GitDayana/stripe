@@ -1,0 +1,16 @@
+<svg id="Plan-measure.svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d4f1d0;
+      }
+
+      .cls-2 {
+        fill: #0abd6b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="circle" class="cls-1" cx="13" cy="13" r="13"/>
+  <path id="bars" class="cls-2" d="M326,668a1,1,0,0,1-1-1v-7a1,1,0,0,1,2,0v7A1,1,0,0,1,326,668Zm-4,0a1,1,0,0,1-1-1v-9a1,1,0,0,1,2,0v9A1,1,0,0,1,322,668Zm-4,0a1,1,0,0,1-1-1v-4a1,1,0,0,1,2,0v4A1,1,0,0,1,318,668Z" transform="translate(-309 -650)"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.062" height="4.031" viewBox="0 0 7.062 4.031">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #25305d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="common-legacyNavArrow.svg" class="cls-1" d="M42.465,21L44.5,23.036,46.536,21h1l0.5,0.5L44.5,25.036,40.965,21.5l0.5-.5h1Z" transform="translate(-40.969 -21)"/>
+</svg>

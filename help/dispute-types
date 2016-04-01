@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dispute Types</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="f8FZnz0TCKS6iRDlPpxWSoyPRtu3P--pKOgaITfoD8H361xcJHBNFEmZSjVg5urBtDK8M6ZUO5Hh8o1NtuWrWw==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../docs/mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../security">Security</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../docs/webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../docs/guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../docs/guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../docs/guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../docs/disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="selected sub"><a href="dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../docs/libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../docs/api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../docs/subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../docs/relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../docs/connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../docs/connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="contact">Contact</a></li>
+      <li class="unselected"><a href="../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Dispute Types</h1>
+  </header>
+  <article>
+
+    <p>All disputes you’ll face fall into one of the following categories:</p>
+
+    <ul>
+      <li><a href="dispute-types#fraudulent">Fraudulent</a></li>
+      <li><a href="dispute-types#unrecognized">Unrecognized</a></li>
+      <li><a href="dispute-types#product-not-received">Product not received</a></li>
+      <li><a href="dispute-types#product-unacceptable">Product unacceptable</a></li>
+      <li><a href="dispute-types#credit-not-processed">Credit not processed</a></li>
+      <li><a href="dispute-types#duplicate">Duplicate</a></li>
+      <li><a href="dispute-types#subscription-canceled">Subscription canceled</a></li>
+      <li><a href="dispute-types#general">General</a></li>
+    </ul>
+
+    <p>For each type, there are best practices for how to respond and what kinds of evidence you should be prepared to provide (check out our <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">submitting evidence guide</a> for the mechanics of responding). Additionally, there are some <a href="../docs/disputes/index.html#general-evidence">general evidence fields</a> that we recommend including when responding to <em>all</em> types of disputes.</p>
+
+    <hr />
+
+    <h1 id="fraudulent">Fraudulent</h1>
+
+    <p><strong>What it means</strong>: The owner of the card says that they didn’t authorize the charge. This is the most common reason for a dispute and can happen if the card was lost or stolen. It can also happen if the cardholder doesn’t recognize the charge as it appears on the billing statement from their bank.</p>
+
+    <p><strong>Required to overturn dispute</strong>: Get the cardholder to withdraw the dispute by helping them identify the charge or prove to the bank that their cardholder did authorize the transaction (this is the hardest type of dispute to win).</p>
+
+    <p><strong>How to respond</strong>: First, try to get in touch with the cardholder. Sometimes people forget about charges they make. It’s also possible that someone they authorized to use the card–for instance, their spouse–made the charge and they were unaware of it at the time. If this is the case, ask them to let their bank know that they want to drop the dispute. Getting the cardholder to close the dispute from their end is by far the best way for you to make sure a dispute is resolved in your favor. If they agree to do this, you should still submit evidence for the dispute. The evidence should include a statement that the cardholder said they would withdraw the dispute (including the email if you corresponded by email), as well as the suggested fields below.</p>
+
+    <p>If you believe the charge was actually made using a stolen credit card, unfortunately you will need to accept the dispute. The credit card networks assign liability for accepting fraudulent online transactions to you, the business. However, if you believe the cardholder is mistaken or lying, you can attempt to prove this with the following information:</p>
+
+    <p>If a digital product or service was provided:</p>
+
+    <ul>
+      <li><code>access_activity_log</code>: Any server or activity logs showing proof that the cardholder accessed or downloaded the purchased digital product. This information should include IP addresses, corresponding timestamps, and any detailed recorded activity.</li>
+    </ul>
+
+    <p>If an offline service was provided:</p>
+
+    <ul>
+      <li><code>service_date</code>: The date on which the cardholder received or began receiving the purchased service, in a clear human-readable format.</li>
+      <li><code>service_documentation</code>: Documentation showing proof that a service was provided to the cardholder. This could include a copy of a signed contract, work order, or other form of written agreement.</li>
+    </ul>
+
+    <p>If a physical product was shipped:</p>
+
+    <ul>
+      <li><code>shipping_address</code>: The address to which a physical product was shipped. You should try to include as much complete address information as possible. The shipping address should <strong>match a verified billing address</strong> to maximize your likelihood of winning the dispute.</li>
+      <li><code>shipping_date</code>: The date on which a physical product began its route to the shipping address, in a clear human-readable format. This date should be prior to the date of the dispute.</li>
+      <li><code>shipping_carrier</code>: The delivery service that shipped a physical product, such as Fedex, UPS, USPS, etc. If multiple carriers were used for this purchase, please separate them with commas.</li>
+      <li><code>shipping_tracking_number</code>: The tracking number for a physical product, obtained from the delivery service. If multiple tracking numbers were generated for this purchase, please separate them with commas. When we compile your evidence into a single document, these tracking numbers will be expanded to include detailed delivery information from the carrier.</li>
+      <li><code>shipping_documentation</code>: Documentation showing proof that a product was shipped to the cardholder at the same address the cardholder provided to you. This could include a copy of the shipment receipt, shipping label, etc, and should show the full shipping address of the cardholder, if possible.</li>
+    </ul>
+
+    <p><strong>How to prevent it</strong>: Make sure your <a href="https://dashboard.stripe.com/#account">statement descriptor</a> is easily recognizable to your customers (and reflects the URL they would associate with their purchase) so they can tell who charged them. Send receipts upon payment to remind your customers what they paid for. If you ship physical products, consider shipping only to addresses that match a verified billing address (in the US, Canada, and the UK) or reaching out to the customer before shipping to such addresses.</p>
+
+    <hr />
+
+    <h1 id="unrecognized">Unrecognized</h1>
+
+    <p><strong>What it means</strong>: The customer doesn’t recognize the charge appearing on their card statement.</p>
+
+    <p><strong>Required to overturn dispute</strong>: As with fraudulent disputes, get your customer to withdraw the dispute by helping them identify the charge.</p>
+
+    <p><strong>How to respond</strong>: Try to get in touch with your customer. Sometimes people forget about charges they make. It’s also possible that someone they authorized to use the card – for instance, their spouse – made the charge and they were unaware of it at the time. If this is the case, ask them to let their bank know that they want to drop the dispute. Getting your customer to close the dispute from their end is by far the best way for you to make sure a dispute is resolved in your favor. If they agree to do this, you should still submit evidence for the dispute. The evidence should include a statement that the cardholder said they would withdraw the dispute (including the email if you corresponded by email, included as <code>customer_communication</code>), as well as the evidence below. We recommend including <code>product_description</code> for all types of disputes, but you should include additional information about your business to help identify it to the cardholder.</p>
+
+    <p>If a digital product or service was provided:</p>
+
+    <ul>
+      <li><code>access_activity_log</code>: Any server or activity logs showing proof that the customer accessed or downloaded the purchased digital product. This information should include IP addresses, corresponding timestamps, and any detailed recorded activity.</li>
+    </ul>
+
+    <p>If an offline service was provided:</p>
+
+    <ul>
+      <li><code>service_date</code>: The date on which the customer received or began receiving the purchased service, in a clear human-readable format.</li>
+      <li><code>service_documentation</code>: Documentation showing proof that a service was provided to the customer. This could include a copy of a signed contract, work order, or other form of written agreement.</li>
+    </ul>
+
+    <p>If a physical product was shipped:</p>
+
+    <ul>
+      <li><code>shipping_address</code>: The address to which a physical product was shipped. You should try to include as much complete address information as possible. The shipping address should <strong>match a verified billing address</strong> to maximize your likelihood of winning the dispute.</li>
+      <li><code>shipping_date</code>: The date on which a physical product began its route to the shipping address, in a clear human-readable format. This date should be prior to the date of the dispute.</li>
+      <li><code>shipping_carrier</code>: The delivery service that shipped a physical product, such as Fedex, UPS, USPS, etc. If multiple carriers were used for this purchase, please separate them with commas.</li>
+      <li><code>shipping_tracking_number</code>: The tracking number for a physical product, obtained from the delivery service. If multiple tracking numbers were generated for this purchase, please separate them with commas. When we compile your evidence into a single document, these tracking numbers will be expanded to include detailed delivery information from the carrier.</li>
+      <li><code>shipping_documentation</code>: Documentation showing proof that a product was shipped to the customer at the same address the customer provided to you. This could include a copy of the shipment receipt, shipping label, etc, and should show the full shipping address of the customer, if possible.</li>
+    </ul>
+
+    <p><strong>How to prevent it</strong>: Make sure your <a href="https://dashboard.stripe.com/#account">statement descriptor</a> is easily recognizable to your customers (and reflects the URL they would associate with their purchase) so they can tell who charged them.</p>
+
+    <hr />
+
+    <h1 id="product-not-received">Product not received</h1>
+
+    <p><strong>What it means</strong>: The customer says they did not receive the products or services purchased.</p>
+
+    <p><strong>Required to overturn dispute</strong>: Demonstrate that the customer received a physical product or offline service <em>prior to the date the dispute was initiated</em>, or made use of a digital product or online service <em>prior to the date the dispute was initiated</em>.</p>
+
+    <p><strong>How to respond</strong>: First, get in touch with your customer. Understanding why they filed the dispute will be important for helping make sure your customer gets the product and will give you critical information to prevent this from happening to other customers. If you are able to resolve the issue with your customer, getting your customer to close the dispute from their end is by far the best way for you to make sure a dispute is resolved in your favor. If they agree to do this, you should still submit evidence for the dispute. The evidence should include a statement that the cardholder said they would withdraw the dispute (including the email if you corresponded by email), as well as the evidence below.</p>
+
+    <p>If a digital product or service was provided:</p>
+
+    <ul>
+      <li><code>access_activity_log</code>: Any server or activity logs showing proof that the customer accessed or downloaded the purchased digital product. This information should include IP addresses, corresponding timestamps, and any detailed recorded activity.</li>
+    </ul>
+
+    <p>If an offline service was provided:</p>
+
+    <ul>
+      <li><code>service_date</code>: The date on which the customer received or began receiving the purchased service, in a clear human-readable format.</li>
+      <li><code>service_documentation</code>: Documentation showing proof that a service was provided to the customer. This could include a copy of a signed contract, work order, or other form of written agreement.</li>
+    </ul>
+
+    <p>If a physical product was shipped:</p>
+
+    <ul>
+      <li><code>shipping_address</code>: The address to which a physical product was shipped. You should try to include as much complete address information as possible. The shipping address should <strong>match a verified billing address</strong> to maximize your likelihood of winning the dispute.</li>
+      <li><code>shipping_date</code>: The date on which a physical product began its route to the shipping address, in a clear human-readable format. This date should be prior to the date of the dispute.</li>
+      <li><code>shipping_carrier</code>: The delivery service that shipped a physical product, such as Fedex, UPS, USPS, etc. If multiple carriers were used for this purchase, please separate them with commas.</li>
+      <li><code>shipping_tracking_number</code>: The tracking number for a physical product, obtained from the delivery service. If multiple tracking numbers were generated for this purchase, please separate them with commas. When we compile your evidence into a single document, these tracking numbers will be expanded to include detailed delivery information from the carrier.</li>
+      <li><code>shipping_documentation</code>: Documentation showing proof that a product was shipped to the customer at the same address the customer provided to you. This could include a copy of the shipment receipt, shipping label, etc, and should show the full shipping address of the customer, if possible.</li>
+    </ul>
+
+    <p><strong>How to prevent it</strong>: For physical products, promptly ship products after collecting payment. Estimate shipping and delivery dates as accurately as you can, and communicate clearly with your customer. If shipping delays arise unexpectedly, keep your customer apprised. Save shipping labels, and for high value products considering requiring a signature upon receipt. For digital goods or services, maintain access logs or documentation that tie use back to the customer.</p>
+
+    <hr />
+
+    <h1 id="product-unacceptable">Product unacceptable</h1>
+
+    <p><strong>What it means</strong>: The product or service was received but was defective, damaged, or not as described.</p>
+
+    <p><strong>Required to overturn dispute</strong>: Demonstrate that the product or service was delivered as described at the time of purchase.</p>
+
+    <p><strong>How to respond</strong>: First, get in touch with your customer. If you understand why they’re dissatisfied, there is a chance for you to explain the misunderstanding or to make it right. If you’re able to resolve the issue with your customer, getting them to close the dispute from their end is by far the best way for you to make sure a dispute is resolved in your favor. If they agree to do this, you should still submit evidence for the dispute. The evidence should include a statement that the cardholder said they would withdraw the dispute (including the email if you corresponded by email), as well as the evidence below. If your customer made no attempt to return the product or cancel the service, or if you provided a replacement product or service, make sure to note that as well.</p>
+
+    <p>*<code>product_description</code>: A description of the product or service which was sold and any relevant detail on how this was presented to the customer at the time of purchase.</p>
+
+    <p>If a digital product or service was provided:</p>
+
+    <ul>
+      <li><code>access_activity_log</code>: Any server or activity logs showing proof that the customer accessed or downloaded the purchased digital product. This information should include IP addresses, corresponding timestamps, and any detailed recorded activity.</li>
+    </ul>
+
+    <p>If an offline service was provided:</p>
+
+    <ul>
+      <li><code>service_date</code>: The date on which the customer received or began receiving the purchased service, in a clear human-readable format.</li>
+      <li><code>service_documentation</code>: Documentation showing proof that a service was provided to the customer. This could include a copy of a signed contract, work order, or other form of written agreement.</li>
+    </ul>
+
+    <p>If a physical product was shipped:</p>
+
+    <ul>
+      <li><code>shipping_address</code>: The address to which a physical product was shipped. You should try to include as much complete address information as possible. The shipping address should <strong>match a verified billing address</strong> to maximize your likelihood of winning the dispute.</li>
+      <li><code>shipping_date</code>: The date on which a physical product began its route to the shipping address, in a clear human-readable format. This date should be prior to the date of the dispute.</li>
+      <li><code>shipping_carrier</code>: The delivery service that shipped a physical product, such as Fedex, UPS, USPS, etc. If multiple carriers were used for this purchase, please separate them with commas.</li>
+      <li><code>shipping_tracking_number</code>: The tracking number for a physical product, obtained from the delivery service. If multiple tracking numbers were generated for this purchase, please separate them with commas. When we compile your evidence into a single document, these tracking numbers will be expanded to include detailed delivery information from the carrier.</li>
+      <li><code>shipping_documentation</code>: Documentation showing proof that a product was shipped to the customer at the same address the customer provided to you. This could include a copy of the shipment receipt, shipping label, etc, and should show the full shipping address of the customer, if possible.</li>
+    </ul>
+
+    <p><strong>How to prevent it</strong>: Make sure your product descriptions are clear and accurate. If you’re shipping physical products, ensure that you pack and ship your products in a way that protects them from being damaged in transit.  Respond promptly and accede to customer requests for replacements for defective or damaged products.</p>
+
+    <hr />
+
+    <h1 id="credit-not-processed">Credit not processed</h1>
+
+    <p><strong>What it means</strong>: The customer says that the purchased product was returned or the transaction was otherwise canceled, but you have not yet refunded or credited the customer.</p>
+
+    <p><strong>Required to overturn dispute</strong>: Demonstrate that you refunded your customer through other means or that your customer is not entitled to a refund.</p>
+
+    <p><strong>How to respond</strong>: Get in touch with your customer. If you understand what their complaint is, there is a chance for you to explain the misunderstanding or to make it right. If you’re able to resolve the issue with your customer, getting them to close the dispute from their end is by far the best way for you to make sure a dispute is resolved in your favor. If they agree to do this, you should still submit evidence for the dispute. The evidence should include a statement that the cardholder said they would withdraw the dispute (including the email if you corresponded by email, included as <code>customer_communication</code>), as well as the evidence below.</p>
+
+    <p>Note that you cannot issue a refund once a charge is already disputed. If you believe that your customer was owed a refund that you did not provide, you can simply choose to not submit evidence which will guarantee that they get their money back.</p>
+
+    <p>If you do wish to respond, you should include:</p>
+
+    <ul>
+      <li><code>refund_policy</code>: Your refund policy, as shown to the customer.</li>
+      <li><code>refund_policy_disclosure</code>: An explanation of how and when the customer was shown your refund policy prior to purchase.</li>
+      <li><code>refund_refusal_explanation</code>: A justification for why the customer is not entitled to a refund.</li>
+    </ul>
+
+    <p><strong>How to prevent it</strong>: Have a clear return policy, and make it easy to find.  Honor your return/refund policy by issuing refunds promptly.</p>
+
+    <hr />
+
+    <h1 id="duplicate">Duplicate</h1>
+
+    <p><strong>What it means</strong>: The customer says you charged their card multiple times for the same product or service.</p>
+
+    <p><strong>Required to overturn dispute</strong>: Demonstrate that each charge was for a seperate product or service.</p>
+
+    <p><strong>How to respond</strong>: Determine if your customer was incorrectly charged multiple times. If they were, you should accept the dispute, which you can do by not submitting evidence. It is not possible to issue a refund once a charge has already been disputed.</p>
+
+    <p>If there were two or more separate transactions, get in touch with your customer. If you understand what their complaint is, there is a chance for you to explain the misunderstanding or to make it right. If you’re able to resolve the issue with your customer, getting them to close the dispute from their end is by far the best way for you to make sure a dispute is resolved in your favor. If they agree to do this, you should still submit evidence for the dispute. The evidence should include a statement that the cardholder said they would withdraw the dispute (including the email if you corresponded by email, included as <code>customer_communication</code>), as well as the evidence below.</p>
+
+    <p>Collect any and all information documenting that the two transactions were separate. This might include copies of the sales receipts – if the receipts don’t include the items purchased, be sure to include an itemized list. The receipts should clearly indicate that the two transactions are not charges for the same items or services. If you’ve been able to get in touch with the customer you should be sure to address any concerns they had in your evidence.</p>
+
+    <ul>
+      <li><code>duplicate_charge_id</code>: The Stripe ID for the prior charge which appears to be a duplicate of the disputed charge.</li>
+      <li><code>duplicate_charge_explanation</code>: An explanation of the difference between the disputed charge and the prior charge that appears to be a duplicate.</li>
+      <li><code>duplicate_charge_documentation</code>: Documentation for the prior charge that can uniquely identify the charge. This document should be paired with a similar document from the disputed payment that proves the two payments are separate.
+        <ul>
+          <li>If a physical product was shipped: Provide a shipping label or receipt for the disputed charge as <code>shipping_documentation</code> and a separate label or receipt for the other charge as <code>duplicate_charge_documentation</code>. If the products were shipped together, provide a packing list that shows both purchases.</li>
+          <li>If a digital product or service was provided: Provide a receipt for the disputed charge as <code>receipt</code> and a separate receipt for the other charge as <code>duplicate_charge_documentation</code>.</li>
+          <li>If an offline service was provided: Provide service documentation for the disputed charge as <code>service_documentation</code> and separate documentation for the other charge as <code>duplicate_charge_documentation</code>.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><strong>How to prevent it</strong>: Ensure your Stripe integration can handle errors without double-charging.  If a double charge does happen accidentally, refund the second charge right away and get in touch with your customer. Sending detailed receipts that explain each charge will also help prevent this type of dispute in the future.</p>
+
+    <hr />
+
+    <h1 id="subscription-canceled">Subscription canceled</h1>
+
+    <p><strong>What it means</strong>: The customer says that you continued to charge them after a subscription was canceled.</p>
+
+    <p><strong>Required to overturn dispute</strong>: Demonstrate that the subscription was still active and that the customer was aware of, and did not follow, your cancellation procedure.</p>
+
+    <p><strong>How to respond</strong>: First, get in touch with your customer. If you understand what they believe happened, there is a chance for you to explain the misunderstanding or to make it right. If you’re able to resolve the issue with your customer, getting them to close the dispute from their end is by far the best way for you to make sure a dispute is resolved in your favor. If they agree to do this, you should still submit evidence for the dispute. The evidence should include a statement that the cardholder said they would withdraw the dispute (including the email if you corresponded by email), as well as the evidence below.</p>
+
+    <ul>
+      <li><code>cancellation_policy</code>: Your subscription cancellation policy, as shown to the customer.</li>
+      <li><code>cancellation_policy_disclosure</code>: An explanation of how and when the customer was shown your cancellation policy prior to purchase.</li>
+      <li><code>cancellation_rebuttal</code>: A justification for why the customer’s subscription was not canceled.</li>
+      <li><code>customer_communication</code>: (If available) a notification sent to the customer of a renewal or continuation of the subscription, or an acknowledgement from the customer of their continued use of the product or service after the date they claim they canceled the subscription.</li>
+    </ul>
+
+    <p>If a digital product or service was provided:</p>
+
+    <ul>
+      <li><code>access_activity_log</code>: Any server or activity logs showing proof that the customer accessed or downloaded the purchased digital product <strong>after the date they claim they canceled the subscription</strong>. This information should include IP addresses, corresponding timestamps, and any detailed recorded activity.</li>
+    </ul>
+
+    <p><strong>How to prevent it</strong>: Promptly cancel subscriptions upon request, making sure to pass the cancellation along to Stripe if you use Stripe’s subscription functionality, and provide your customer with a confirmation of the cancellation.  Make clear on your signup page that your customers are agreeing to a recurring charge and include information about whether or not you plan to notify the customer before each recurring charge. Make sure cancellation procedures are clearly communicated to your customers.</p>
+
+    <hr />
+
+    <h1 id="general">General</h1>
+
+    <p><strong>What it means</strong>: This is an uncategorized dispute. Since these are most commonly <a href="dispute-types#fraudulent">fraudulent</a>, we recommend following the suggestion listed for that type.</p>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../country?country=AU&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CA&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DK&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FI&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=GB&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IE&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NO&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SE&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=US&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=AT&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BE&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BR&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FR&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DE&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IT&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=JP&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=LU&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=MX&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NL&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=PT&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SG&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=ES&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Ftypes" class="selected">
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

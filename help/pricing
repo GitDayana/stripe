@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" id="pricing" class="">
+  <head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<script src="../assets/v3/external/jquery-b177c152b6cf53312f00e8986b489fbf.js"></script>
+
+
+  <meta name="description" content="  Stripe features simple, transparent, pay-as-you-go pricing, with no up-front costs, no monthly fees, no refund costs, no hidden fees, and no contracts or commitments.
+" />
+
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon/152x152.png?2" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon/120x120.png?2" />
+
+    <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+    <link rel="image_src" type="image/png" href="../img/open-graph/logo.png?2"/>
+
+
+  <script src="../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+
+
+
+
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+
+  <link rel="stylesheet" href="../assets/v3/external/normalize-d4b3bf01f6478e8401ffc3613020a1ef.css">
+  <link rel="stylesheet" href="../assets/v3/external/flexboxgrid-3c3ca8240ad6b1323be0508375248d8a.css">
+  <link rel="stylesheet" href="../assets/v3/shared-dad7738950a66c82e80536e75a466abc.css">
+  <link rel="stylesheet" href="../assets/v3/pricing-a80ebea60295728cda95d813d73c029c.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+  <!--<script src="/assets/v3/pricing-af2e88d0e5e5961c6ba6e91fad92adcb.js"></script>-->
+
+  <meta name="viewport" content="width=600px, initial-scale=0.6, maximum-scale=1.0">
+
+
+    <title>Stripe: Pricing</title>
+    <meta content="TOXyQQMf613dVUEgmoZP-0c36DKgd16I13jCnuWiFBzEz_eCGnyu7S5FG_DE_PNwf4oS2rEcirAeYlXyZK-whg==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+
+
+    <div class='container common-LegacyNavContainer'>
+      <header id="main-header" class='x-transparent'>
+  <div class="inner-col">
+    <h1><a href="../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../features">Features</a></li>
+        <li class='pricing'><a href="../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../marketplaces'>Connect</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="../blog/page/1">Blog</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    </div>
+
+
+    
+<header class='Header'>
+
+  <div class='HeaderBackground'>
+      <svg viewbox='0 0 1300 907' class='HeaderBackground-svg' preserveAspectRatio='xMidYMid meet'>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+      .cls-2 {
+        opacity: 0.1;
+        fill: url(pricing);
+      }
+      .cls-3 {
+        fill: #75e8cd;
+      }
+      .cls-4 {
+        fill: url(pricing);
+      }
+      .cls-5 {
+        fill: #8dd4ec;
+        opacity: 0.3;
+      }
+      .cls-6 {
+        fill: url(pricing);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="113.393" y1="93" x2="480.326" y2="637" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#47d2ff"/>
+      <stop offset="0.995" stop-color="#0b6081"/>
+      <stop offset="1" stop-color="#0b6081"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1300" y1="337.985" x2="593.594" y2="337.984" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#233a93"/>
+      <stop offset="1" stop-color="#192a69"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="946.86" y1="1054" x2="946.86" y2="407" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.099" stop-color="#fff"/>
+      <stop offset="0.102" stop-color="#fff"/>
+      <stop offset="0.498" stop-color="#f7fbfc" stop-opacity="0.51"/>
+      <stop offset="1" stop-color="#edf5f8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path id="Background" class="cls-1" d="M0,637L1300,407v593H0V637Z" transform="translate(0 -93)"/>
+  <path id="Left1" class="cls-2" d="M0,637V93L593.711,531.959Z" transform="translate(0 -93)"/>
+  <path id="Left2" class="cls-3" d="M0,858V637L593.6,531.979Z" transform="translate(0 -93)"/>
+  <path id="Right1" class="cls-4" d="M593.6,531.979L1300,144V407Z" transform="translate(0 -93)"/>
+  <path id="Right2" class="cls-5" d="M1300,407L593.711,531.959,1300,1054V407Z" transform="translate(0 -93)"/>
+  <path id="Right2-2" class="cls-6" d="M1300,407L593.711,531.959,1300,1054V407Z" transform="translate(0 -93)"/>
+</svg>
+
+  </div>
+
+  <div class='Header-container container-fluid'>
+
+  <div class='row center-xs'>
+    <div class='col-xs-12'>
+      <h1 class='Header-title'>Simple, transparent pricing. <span class='Header-subTitle'>Always know what you’ll pay.</span></h2>
+
+    </div>
+  </div>
+
+  <div class='row middle-xs center-xs'>
+    <div class='col-xs-12
+                col-sm-6
+                col-md-6
+                col-lg-6'>
+
+      <div class='Plan Plan--standard'>
+        <h2 class='Plan-title'>Pay As You Go</h2>
+
+
+
+
+
+          <div class='Plan-cardPricing'>
+          <div class='Plan-cardRate'>
+
+                <div class='Plan-cardRate-percent'>
+                  2.9%
+                </div>
+
+                  <div class='Plan-cardRate-plus'>+</div>
+
+                <div class='Plan-cardRate-fixed'>
+                  30c
+                </div>
+
+            </div>
+
+            <div class='Plan-cardRate-description'>
+              per successful card charge
+            </div>
+
+        </div>
+
+
+        <ul class='Plan-list'>
+          <li class='Plan-listItem'>
+            <img src='../img/v3/pricing/Plan-star.svg' width='26' height='26'>
+            No setup, monthly, or hidden fees
+          </li>
+          <li class='Plan-listItem'>
+            <img src='../img/v3/pricing/Plan-receive.svg' width='26' height='26'>
+            Pay only for what you use
+          </li>
+          <li class='Plan-listItem'>
+            <img src='../img/v3/pricing/Plan-measure.svg' width='26' height='26'>
+            Real-time fee reporting
+          </li>
+        </ul>
+          <a href="../pt" class='Plan-button'>Get notified</a>
+      </div>
+
+    </div>
+    <div class='col-xs-11
+                col-sm-6
+                col-md-6
+                col-lg-6'>
+
+      <div class='Plan Plan--enterprise'>
+        <h2 class='Plan-title Plan-title--enterprise'>Enterprise</h2>
+        <div class='Plan-description'>Stripe offers everything needed to run an online business at scale. Get in touch for details.</div>
+        <div class='Plan-tableContainer'>
+          <table class='Plan-table'>
+            <tr class='Plan-table-row'>
+              <td class='Plan-table-cell'>Account management</td>
+              <td class='Plan-table-cell'>Customized pricing</td>
+            </tr>
+            <tr>
+              <td class='Plan-table-cell'>Migration assistance</td>
+              <td class='Plan-table-cell'>Priority support</td>
+            </tr>
+          </table>
+        </div>
+        <a href="../contact/sales/index.html" class='Plan-button Plan-Button--enterprise'>Contact sales</a>
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+  <aside class='TransfersAside'>
+    <div class='container'>
+    <div class='row center-xs'>
+      <div class='col-xs
+                  col-sm-12
+                  col-md-9'>
+        <img src='../img/v3/pricing/transfers.svg' width='48' height='53'>
+        <p class='TransfersAside-body'>
+          <strong class='TransfersAside-title'>Fast, predictable transfers.</strong>
+          Once you’re set up, transfers arrive in your bank account on a 7-day rolling basis.
+        </p>
+      </div>
+    </div>
+  </div>
+  </aside>
+
+</header>
+
+
+<article class='PricingDetails'>
+
+  <div class='container'>
+
+<!--   <header class='PricingDetails-header'>
+    <div class='row'>
+      <div class='col-xs'>
+        <h3 class='PricingDetails-title'>Pricing details</h3>
+      </div>
+      <div class='col-xs end-xs common-alignRight'>
+        <a href='#' class='PricingDetails-countrySelector'>
+          United States
+        </a>
+      </div>
+    </div>
+  </header> -->
+
+  <section class='PricingDetails-section'>
+
+    <!-- Credit card payments -->
+    <div class='row end-xs PricingDetailsRow'>
+      <div class='col-xs-12
+                  col-md-3'>
+        <h4 class='PricingDetailsRow-paymentTypeTitle'>
+          <img src="../img/v3/pricing/products/payments.svg" width='28' height='28'>
+          Payments
+       </h4>
+      </div>
+      <div class='col-xs-8
+                  col-md-6'>
+        <h4 class='PricingDetailsRow-title'>Credit &amp; debit cards</h4>
+        <p class='PricingDetailsRow-body'>
+          We charge a percentage-based fee each time you accept a credit or debit card payment. The price is the same for all major cards. There's no additional fee for international cards, failed charges, or refunds.
+        </p>
+      </div>
+      <div class='col-xs-offset-1
+                  col-xs-3
+                  col-md-2
+                  PricingDetailsRow-priceContainer'>
+
+        <p class='PricingDetailsRow-price'>
+            2.9% + 30c
+        </p>
+      </div>
+    </div>
+
+    <!-- Bank payments -->
+
+    <!-- Also included -->
+    <div class='row end-xs PricingDetailsRow'>
+      <div class='col-xs-12
+                  col-md-9'>
+        <aside class='PricingDetailsRow-alsoIncluded'>
+          <h4 class='PricingDetailsRow-title'>Also included</h4>
+          <p class='PricingDetailsRow-body '>
+            Get access to <a href="../features" class='common-Link'>100+ features</a> right out of the box:
+          </p>
+
+          <div class='PricingDetailsList-container no-margin-container'>
+              <ul class='PricingDetailsList'>
+                <div class='row'>
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'><!-- <a href="/blog/smarter-saved-cards" class='common-Link'> -->Smarter saved cards<!-- </a> --></li>
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'>Simple PCI compliance</li>
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'><!-- <a href="/blog/fraud-reporting" class='common-Link'> -->Integrated fraud tools<!-- </a> --></li>
+
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'>Full data portability</li>
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'><!-- <a href="/docs/integrations" class='common-Link'> -->Accounting integrations<!-- </a> --></li>
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'><!-- <a href="/blog/team-activity-in-the-dashboard" class='common-Link'> -->Team security controls<!-- </a> --></li>
+
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'><!-- <a href="/apple-pay" class='common-Link'> -->Apple Pay<!-- </a> -->, <!-- <a href="/android-pay" class='common-Link'> -->Android Pay<!-- </a> --></li>
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'><!-- <a href="https://support.stripe.com/questions/do-i-need-to-be-pci-compliant-what-do-i-have-to-do" class='common-link'> -->iOS Dashboard<!-- </a> --></li>
+                  <li class='PricingDetailsList-item
+                            col-xs-12
+                            col-sm-6
+                            col-lg-4'><!-- <a href="/dashboard/iphone" class='common-Link'> -->Webhooks<!-- </a> --></li>
+
+</div>
+
+                </ul>
+
+          </div>
+
+        </aside>
+      </div>
+    </div>
+
+    <!-- Chargebacks -->
+    <div class='row end-xs PricingDetailsRow'>
+      <div class='col-xs-8
+                  col-md-6'>
+        <h4 class='PricingDetailsRow-title'>Disputes</h4>
+        <p class='PricingDetailsRow-body'>
+          Disputed payments, such as chargebacks, incur a fee. If the customer’s bank resolves the dispute in your favor, the fee is fully refunded. <a href="disputes" class='common-Link common-Link--arrow'>Learn more</a>
+        </p>
+      </div>
+      <div class='col-xs-offset-1
+                  col-xs-3
+                  col-md-2
+                  PricingDetailsRow-priceContainer'>
+        <p class='PricingDetailsRow-price'>CHF 15.00 or CHF 0</p>
+      </div>
+    </div>
+
+  </section>
+
+  </div>
+
+  <section class='PricingDetails-section PricingDetails-section--alternate'>
+
+  <div class='container'>
+
+    <!-- Subscriptions -->
+    <div class='row end-xs PricingDetailsRow PricingDetailsRow--alternate'>
+      <div class='col-xs-12
+                  col-md-3'>
+        <h4 class='PricingDetailsRow-paymentTypeTitle PricingDetailsRow-paymentTypeTitle--alternate'>
+          <img src="../img/v3/pricing/products/subscriptions.svg" width='28' height='28'>
+          Subscriptions
+        </h4>
+      </div>
+      <div class='col-xs-8
+                  col-md-6'>
+        <p class='PricingDetailsRow-body PricingDetailsRow-body--alternate'>
+          All businesses can use Stripe’s powerful subscriptions engine to build and manage every aspect of their recurring billing. <a href='../country?country=CH&amp;redirect=%252Fsubscriptions' class='common-Link common-Link--arrow common-Link--PricingDetailsRow'>Learn&nbsp;more</a>
+        </p>
+      </div>
+      <div class='col-xs-offset-1
+                  col-xs-3
+                  col-md-2
+                  PricingDetailsRow-priceContainer
+                  PricingDetailsRow-priceContainer--alternate'>
+        <p class='PricingDetailsRow-price PricingDetailsRow-price--alternate'>Included</p>
+      </div>
+    </div>
+
+    <!-- Relay -->
+    <div class='row end-xs PricingDetailsRow PricingDetailsRow--alternate'>
+      <div class='col-xs-12
+                  col-md-3'>
+        <h4 class='PricingDetailsRow-paymentTypeTitle PricingDetailsRow-paymentTypeTitle--alternate'>
+          <img src="../img/v3/pricing/products/relay.svg" width='28' height='28'>
+          Relay
+        </h4>
+      </div>
+      <div class='col-xs-8
+                  col-md-6'>
+        <p class='PricingDetailsRow-body PricingDetailsRow-body--alternate'>
+          Let customers buy your products directly within other mobile apps with Relay. There are no extra fees for making your products available in apps like Twitter. <a href='../country?country=CH&amp;redirect=%252Frelay' class='common-Link common-Link--arrow common-Link--PricingDetailsRow'>Learn&nbsp;more</a>
+        </p>
+      </div>
+      <div class='col-xs-offset-1
+                  col-xs-3
+                  col-md-2
+                  PricingDetailsRow-priceContainer
+                  PricingDetailsRow-priceContainer--alternate'>
+        <p class='PricingDetailsRow-price PricingDetailsRow-price--alternate'>Included</p>
+      </div>
+    </div>
+
+    <!-- Connect -->
+    <div class='row end-xs PricingDetailsRow PricingDetailsRow--alternate'>
+      <div class='col-xs-12
+                  col-md-3'>
+        <h4 class='PricingDetailsRow-paymentTypeTitle PricingDetailsRow-paymentTypeTitle--alternate'>
+          <img src="../img/v3/pricing/products/connect.svg" width='28' height='28'>
+          Connect
+        </h4>
+      </div>
+      <div class='col-xs-8
+                  col-md-6'>
+        <p class='PricingDetailsRow-body PricingDetailsRow-body--alternate'>
+          Connect is a complete platform for running a marketplace for getting sellers paid, including support for ID verification, international sellers, and tax reporting. <a href='../marketplaces' class='common-Link common-Link--arrow common-Link--PricingDetailsRow'>Learn&nbsp;more</a>
+        </p>
+      </div>
+      <div class='col-xs-offset-1
+                  col-xs-3
+                  col-md-2
+                  PricingDetailsRow-priceContainer
+                  PricingDetailsRow-priceContainer--alternate'>
+        <p class='PricingDetailsRow-price PricingDetailsRow-price--alternate'>Up to 0.5%</p>
+      </div>
+    </div>
+
+    <!-- Atlas -->
+    <div class='row end-xs PricingDetailsRow PricingDetailsRow--alternate'>
+      <div class='col-xs-12
+                  col-md-3'>
+        <h4 class='PricingDetailsRow-paymentTypeTitle PricingDetailsRow-paymentTypeTitle--alternate'>
+          <img src="../img/v3/pricing/products/atlas.svg" width='28' height='28'>
+          Atlas
+        </h4>
+      </div>
+      <div class='col-xs-8
+                  col-md-6'>
+        <p class='PricingDetailsRow-body PricingDetailsRow-body--alternate'>
+          During the <a href="../atlas/index.html" class='common-Link common-Link--PricingDetailsRow'>Stripe Atlas</a> beta, we’ll charge a flat rate to cover all fees associated with incorporating a U.S. company and opening a business bank account. Businesses will pay Stripe’s standard fees of 2.9% + 30¢ per successful charge. <a href='../atlas/index.html' class='common-Link common-Link--arrow common-Link--PricingDetailsRow'>Learn&nbsp;more</a>
+        </p>
+      </div>
+      <div class='col-xs-offset-1
+                  col-xs-3
+                  col-md-2
+                  PricingDetailsRow-priceContainer
+                  PricingDetailsRow-priceContainer--alternate'>
+        <p class='PricingDetailsRow-price PricingDetailsRow-price--alternate'>USD $500</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+</article>
+
+<article class='PricingCallToAction'>
+
+  <div class='container'>
+
+    <div class='row middle-xs'>
+      <div class='col-xs-6'>
+        <section class='common-CallToAction'>
+          <h1 class='PricingCallToAction-title'>
+            <span class='PricingCallToAction-titleRow'>
+              Ready to get started?
+            </span>
+            Get in touch, or create an account.
+          </h1>
+
+        </section>
+      </div>
+      <div class='col-xs-6
+                  common-alignRight'>
+          <a href="../pt" class='common-Button
+                                   common-Button--CallToAction'>
+            Get notified
+          </a>
+
+        <a href='../contact/sales/index.html' class='common-Button
+                           common-Button--default
+                           common-Button--CallToAction'>
+          <figure class='common-ButtonIcon common-ButtonIcon--EmailIcon'><img src='../img/v3/pricing/email.svg' width='17' height='12'></figure>
+          Contact sales
+          <span class='common-Button-icon common-Button-icon--arrow'></span>
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+
+</article>
+
+<div class='container'>
+
+    <div class='PricingFAQ'>
+
+      <div class='row PricingFAQ-row'>
+        <div class='col-xs-12
+                    col-sm-6'>
+
+          <h5 class='PricingFAQ-title'>
+              Are volume discounts available?
+          </h5>
+          <p class='PricingFAQ-body'>
+            We offer customized pricing for larger businesses. If&nbsp;you accept more than CHF 30,000 per month, <a href='../contact/sales/index.html' class='common-Link common-Link--arrow'>get in touch</a>
+          </p>
+
+        </div>
+
+        <div class='col-xs-12
+                    col-sm-6'>
+
+          <h5 class='PricingFAQ-title'>
+              Is there a fee to use Apple Pay?
+          </h5>
+          <p class='PricingFAQ-body'>
+            There are no additional fees for using using our mobile SDKs, Apple Pay, Android Pay, or Amex Express Checkout. <a href='../docs/mobile/index.html' class='common-Link common-Link--arrow'>Read more</a>
+          </p>
+
+        </div>
+      </div>
+
+      <div class='row PricingFAQ-row'>
+        <div class='col-xs-12
+                    col-sm-6'>
+
+          <h5 class='PricingFAQ-title'>
+              How do refunds work?
+          </h5>
+          <p class='PricingFAQ-body'>
+            You can issue either partial or full refunds from the Dashboard or via the API. When you refund a charge, the fees you paid to accept the payment are also returned to you. <a href='https://support.stripe.com/questions/how-do-i-issue-refunds' class='common-Link common-Link--arrow'>Read more</a>
+          </p>
+
+        </div>
+
+        <div class='col-xs-12
+                    col-sm-6'>
+
+          <h5 class='PricingFAQ-title'>
+              Do you support non-profits?
+          </h5>
+          <p class='PricingFAQ-body'>
+            Yes! Non-profits around the world use Stripe to accept payments. Just <a href='mailto:nonprofit@stripe.com' class='common-Link'>sign up for an account</a> to get started. 
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+    <div class='container'>
+      <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../country?country=AU&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Australia" src="../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=CA&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Canada" src="../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=DK&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Denmark" src="../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=FI&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Finland" src="../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=GB&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="United Kingdom" src="../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=IE&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Ireland" src="../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=NO&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Norway" src="../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=SE&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Sweden" src="../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=US&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="United States" src="../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=AT&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Austria" src="../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BE&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Belgium" src="../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BR&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Brazil" src="../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=FR&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="France" src="../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=DE&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Germany" src="../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=IT&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Italy" src="../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=JP&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Japan" src="../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=LU&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Luxembourg" src="../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=MX&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Mexico" src="../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=NL&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Netherlands" src="../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=PT&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Portugal" src="../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=SG&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Singapore" src="../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=ES&amp;redirect=%252Fpricing" >
+                  <img width="23" height="17" alt="Spain" src="../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=CH&amp;redirect=%252Fpricing" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../pricing">Pricing</a></li>
+      <li><a href="../blog/page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+
+
+    
+
+
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("pricing");
+    </script>
+
+
+<!--     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;">
+      <defs>
+        <g id="common-LinkArrow">
+          <path class="path1" d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
+        </g>
+      </defs>
+    </svg> -->
+
+  </body>
+</html>

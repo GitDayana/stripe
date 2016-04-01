@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" id="blog" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Follow the Stripe blog for product announcements, feature updates, new countries, and technical posts about payments." />
+
+<link rel="shortcut icon" href="../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../assets/blog-ada6c3a77cd627b09ac436c3a82dd49d.css">
+  <link rel="stylesheet" href="../assets/blogposts-b9a9b6ffe0287dc66146bd753faba55d.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../assets/blog-776e3ed92eef5022ed98688d349fd7af.js"></script>
+  <script src="../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.rss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>    CTF3 architecture
+</title>
+    <meta content="b1Ws8QHZN60V6D1nY0AbgFy_CpCY81y6E62GEOj9WDXnf6kyGLpyHeb4Z7c9OqcLZALweImYiILatxF8afD8rw==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../features">Features</a></li>
+        <li class='pricing'><a href="../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../marketplaces'>Connect</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="page/1">Blog</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <header id="blog-header">
+  	<h1><a href="page/1">Blog</a></h1>
+  	<p><a href="https://twitter.com/stripe">Follow Stripe on Twitter</a></p>
+  </header>
+  
+    <div id='blog-post--ctf3-architecture'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../country?country=CH&amp;redirect=%252Fblog%252Fctf3-architecture">CTF3 architecture<br /></a></h1>
+    <p>
+      <a class="author" href="../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> February 4, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    
+  <p> In
+    philosophy, <a href="../country?country=CH&amp;redirect=%252Fblog%252Fctf3-launch">CTF3</a>
+    was the same as our previous CTFs: we gave people a chance to
+    solve problems they normally would only get to read
+    about. However, in terms of infrastructure, this was by far our
+    most complex CTF: we needed to build, run, and test arbitrary
+    distributed systems code. In the course of the week it was live,
+    our 7,500 participants pushed over 640,000 times, meaning we
+    needed a scalable and robust architecture that provided isolation
+    between users. </p>
+
+  <p> Participants have released a
+    <a href="https://github.com/kratorius/stripe-ctf3">number</a>
+    <a href="http://tullo.ch/articles/stripe-ctf-golfing/">of</a>
+    <a href="http://muehe.org/posts/stripe-ctf-3-writeup/">walkthroughs</a>
+    <a href="http://blog.joneisen.me/post/75008410654">for</a>
+    <a href="http://daniel.fone.net.nz/blog/2014/01/31/laziest-possible-solutions-for-stripes-ctf/">the</a>
+    <a href="https://github.com/xthexder/stripe-ctf-3.0">actual</a> levels,
+    so we won't be releasing official solutions here. Instead, we'll
+    give you a tour of how we made the systems work. (If you'd prefer
+    to see this in video form, we've just released the video from our
+    <a href="http://youtu.be/zktac6QKzUk">CTF3 wrapup</a>.) </p>
+
+  <p> As an aside, the architecture for CTF reflects a lot of what
+    we've learned in building Stripe. If you're interested in this
+    kind of thing, <a href="../jobs/index.html#engineer">we're hiring</a> engineers
+    in San Francisco and remotely within US timezones. I also wrote
+    a <a href="http://www.quora.com/Stripe-company/What-engineering-problems-and-challenges-is-Stripe-solving">Quora
+    post</a> about the problems we're working on. (It turns out we do
+    things besides just building CTFs :).) </p>
+
+  <h2> Overview </h2>
+
+  <p> CTF3 consisted
+    of <a href="https://github.com/ctfs/write-ups/tree/master/stripe-ctf3">five
+      levels</a>. Most of the levels looked pretty similar from a high
+    level: the user would push some code to us, we'd run it in a sandbox
+    environment, and then we'd return a score. The one exception was
+    the <a href="https://github.com/ctfs/write-ups/tree/master/stripe-ctf3/level1">Gitcoin</a>
+    level, where we would just validate Git commits people had mined
+    locally (or on their cloud vendor). </p>
+
+  <p> Code was submitted to us in the simplest possible way: you just
+    ran <code>git push</code>. On the backend, we received your code
+    via <a href="http://git-scm.com/docs/git-shell.html"><code>git-shell</code></a>
+    and used wrappers and commit hooks to implement the CTF-specific
+    logic. </p>
+
+  <p> The "wrappers and commit hooks" had lot of moving parts,
+    though. One important design goal was to decouple components and
+    make it possible to horizontally scale any given piece of the
+    system. Stateful pieces were few in number and were constrained to
+    be low volume. In the following sections, we'll go into detail about
+    how all the pieces worked, but here's how things roughly fit
+    together: </p>
+
+<div class="image-center">
+<a href="../img/blog/posts/ctf3-architecture/servers.png" class="zoom img" maxSize="605x397"><img width="500" src="../img/blog/posts/ctf3-architecture/servers.png"></a>
+</div>
+
+  <h2> Submission pipeline </h2>
+
+  <p> Wondering what actually happened after you ran git push? The
+    following steps were common between all levels. </p>
+
+  <ol>
+    <li>
+      <p> You resolved <code>stripe-ctf.com</code> to the public IP for
+	one of our <code>gate</code> frontend servers.
+      </p>
+    </li>
+
+    <li> 
+      <p>
+	You connected to port 22 on your chosen gate server. An
+	<a href="http://haproxy.1wt.eu/"><code>haproxy</code></a> daemon
+	load-balanced your traffic to one of our <code>submitter</code>
+	boxes. We had three submitter boxes in the pool for much of the
+	event.
+      </p>
+
+      <p>
+	As an optimization, the load balancing used IP stickiness to route
+	you to the same submitter backend on each connection. The
+	submitters were mostly stateless: all that they held was the code
+	you were pushing and
+	convenience <a href="http://git-scm.com/book/en/Git-Basics-Tagging">tags</a>
+	for each submission. If you'd committed a large blob though, being
+	routed to the same submitter was nice since you wouldn't have to
+	re-upload it on each push.
+      </p>
+
+      <p> In previous CTFs, rather than load balancing, we'd just exposed
+	our machine hostnames (so you'd connect to directly to
+	e.g. <code>level0-01.stripe-ctf.com</code>). In that case, it was
+	hard to drop a machine out of the pool or rebalance
+	traffic. Controlling the load balancing here gave us operational
+	flexibility at the cost of additional constraints on our system
+	design (e.g. haproxy knew only your IP address, so we couldn't do
+	stickiness based on username). </p>
+    </li>
+
+    <li>
+      <p> The public-facing sshd on your chosen submitter received the
+	username we'd given you in the web interface, which looked
+	like <code>lvl0-ohngii5M</code>. </p>
+
+      <p> We'd configured our PAM stack to
+	use <a href="http://wiki.debian.org/LDAP/NSS#NSS_Setup_with_libnss-ldapd">LDAP</a>. So
+	we could share the user database with the web interface, we put
+	together a quick-and-dirty LDAP server implementation
+	(called <a href="https://github.com/stripe-ctf/fakeuser">fakeuser</a>)
+	to grab usernames directly out of our central database. The users
+	had empty passwords, which (given appropriate settings
+	in <a href="https://github.com/stripe-ctf/ctf-3-snippets/blob/master/ssh/sshd_config"><code>sshd.conf</code></a>
+	and PAM) meant that you could log in without pasting a password or
+	giving us your SSH key. Of course, the downside was that your
+	username became a secret credential. </p>
+    </li>
+
+    <li>
+      <p> At this point the sshd ran your user's shell, which was a custom
+	script in <code>/usr/local/bin/login-shell</code>. The shell was
+	pretty simple: it set some environment variables, took out
+	an <a href="http://linux.die.net/man/1/flock"><code>flock</code></a>
+	on a per-user file, and then (conceptually) ran a bunch of Ruby code
+	that did all of the level-specific work.
+      </p>
+
+      <p> At first, we'd actually spawn a new Ruby interpreter and load
+	our code on each login. This turned out to be untenable. First of
+	all, loading <a href="http://bundler.io/">Bundler</a> plus all our
+	code took a few seconds, which was way too slow for a login
+	session. So we split out the code intended for just the login
+	session into a module we called <code>CTF3NoBundler</code>. This was
+	painful to manage, and meant the no-bundler code couldn't use most
+	of the libraries we were writing over in Bundler-land. </p>
+
+      <p> Even with this split, it still took about 100-200 milliseconds
+	to load our code, which was effectively all CPU time. When we tested
+	continuously running about 20 concurrent logins, the submitter box
+	ground to a halt under the load. We effectively DOSed ourselves
+	through the work of loading the same code over and over again. </p>
+
+      <p> At this point, perhaps the most obvious thing to do would be to
+	rewrite in a faster-loading language. However, there's actually a
+	decent amount of code involved in submission, and there was nothing
+	wrong with the code once it was up and running. So instead, we
+	decided to try a load-once, fork-for-each-login model. We took a
+	look at using <a href="https://github.com/burke/zeus">Zeus</a> for
+	this purpose. It's a cool tool, but unfortunately it's aimed at
+	development rather than production, and doesn't have the kind of
+	robust failure handling we'd need for something as core as this. So
+	instead, we wrote a simpler implementation based off similar ideas,
+	called <a href="https://github.com/stripe-ctf/poseidon">Poseidon</a>. </p>
+    </li>
+  </ol>
+
+  <h2> Standard pipeline </h2>
+
+  <p> Here's the point at which Gitcoin and the standard pipelines
+    diverged. The remainder of the standard submission pipeline looked
+    like the following: </p>
+
+  <ol>
+    <li>
+      <p> Next, we constructed your user's level repository (that is, the
+	actual repository that you would clone) if it didn't already exist
+	on disk. This lazy assembly meant we didn't have to waste disk space
+	on users until they'd actually fetched some code. </p>
+    </li>
+
+    <li> <p> In the case of a pull, we would just run git-shell and be
+	done with it. Pushes had a lot more going on, however. </p></li>
+
+    <li> <P> In order to make submission as easy to test drive as
+	possible, we wanted it to be possible to <code>git push</code>
+	straight from a fresh clone. So before running git-shell, we
+	played
+	some <a href="https://github.com/stripe-ctf/ctf-3-snippets/blob/master/ruby/standard_submitter_shell.rb#L20-L48">branch
+	  renaming</a> tricks. </p>
+    </li>
+
+    <li>
+      <p> We then invoked git-shell, which in turn invoked
+	a <a href="http://git-scm.com/book/ch7-3.html#Server-Side-Hooks"><code>post-receive</code></a>
+	hook. The hook was also implemented as a Poseidon client for fast
+	boot. </p> </li>
+
+    <li> 
+      <p> The post-receive code in the Poseidon master then served as
+	the coordinator of your scoring run. First, it called to a
+	<code>test_case_assigner</code> service, which ran on the
+	singleton <code>colossus</code> server. For this and other
+	services which required synchronous responses, we used the Ruby
+	Thrift abstractions we use internally at Stripe. </p>
+
+      <p> The test_case_assigner simply grabbed some free test case
+	records from the database, marked them as allocated, and then
+	returned the resulting cases. These test cases were originally
+	created by the <code>test_case_generator</code> daemon (running on
+	the <code>testasaurus</code> boxes &mdash; ok, we ran out of good
+	names at some point). The generator simply ran our benchmark
+	solution against random test cases. We stored metadata in our
+	database, with the actual blob data stored on S3 so your client
+	could later download it. </p>
+    </li>
+
+    <li>
+      <p> Once the post-receive hook had its test cases, it started
+	listening on two new <a href="http://www.rabbitmq.com/">RabbitMQ</a>
+	queues: one for results and one for output to display to the
+	user. The hook then submitted
+	a <a href="https://github.com/stripe-ctf/ctf-3-snippets/blob/master/ruby/build_rpc.rb">build
+	  RPC</a> over RabbitMQ. We used RabbitMQ as a buffer for RPCs that we
+	expected might get backed up, or where a synchronous response wasn't
+	needed. </p>
+    </li>
+
+    <li>
+      <p> At the other end of the queue was a <code>builder</code> daemon,
+	running on one of our aptly-named <code>build</code> boxes. Upon
+	receiving the RPC, the daemon fetched the code from the relevant
+	submitter's <a href="https://www.kernel.org/pub/software/scm/git/docs/git-daemon.html"><code>git-daemon</code></a>
+	into a temporary directory. </p>
+
+      <p> The builder then asked a central <code>build_cacher</code>
+	Thrift service if the built commit was cached. Assuming not, the
+	builder spawned a <a href="https://www.docker.io/">Docker</a>
+	container with your code mounted at your user's home directory and
+	ran <code>./build.sh</code> in the container. We then streamed back
+	the
+	first <a href="https://github.com/stripe-ctf/ctf-3-snippets/blob/master/ruby/rpc.rb#L17-L61">few
+	  hundred KB</a> of output. </p>
+
+      <p> The builder
+	then <a href="http://www.cyberciti.biz/faq/how-do-i-compress-a-whole-linux-or-unix-directory/"><code>tarred</code></a>
+	up your output directory and generated a RabbitMQ score RPC for
+	each test case. The score RPC contained a URL to fetch the tarball
+	from an <a href="http://nginx.org/"><code>nginx</code></a> running
+	on the build box. Finally, the builder uploaded the built tarball
+	to S3 and informed the build_cacher about the new SHA1. </p>
+
+      <p> In the cached case, the builder just short-circuited this logic
+	and sent the score RPCs right away. </p>
+    </li>
+
+    <li>
+      <p> Each score RPC was serviced by an <code>executor</code> daemon
+	on a <code>worker</code> box. The executor fetched the build product
+	and then spawned a new container with the code mounted into it. It
+	then (finally!) ran your code, again streaming output back to
+	you. Once complete, the executor determined the results of your
+	trial and then sent a result RPC back to the post-receive hook. </p>
+    </li>
+
+    <li>
+      <p> The post-receive hook aggregated your results and from there
+	compiled a final result. It sent a single <code>FinalScoreRPC</code>
+	representing the results of the test run to RabbitMQ. </p>
+    </li>
+
+    <li>
+      <p> At the other end of the wire, a <code>resulter</code> daemon
+	hung around on the colossus box waiting to consume the
+	FinalScoreRPC. Upon consuming the RPC, it updated your user's high
+	score. </p>
+    </li>
+</ol>
+
+<h2> Gitcoin pipeline </h2>
+
+<p> Gitcoin had its own architecture. Since we didn't need to run any
+  of your code (we just needed to validate the purported Gitcoin), we
+  could get by with a lot less complexity. </p>
+
+<h3> Our mining bots </h3>
+
+<p> To clear the level, you just needed to mine faster than our
+  bots. The obvious design is to spawn a new miner for each
+  end-user. However, this would be pretty expensive, as we'd have to
+  be mining hundreds of Gitcoins at any one time. </p>
+
+<p> So instead, we had miners on a single central repository on
+  the <code>gitcoin</code> box, which produced a steady stream of
+  Gitcoins. Each submitter had a <code>gitcoin</code> daemon whose job
+  was to periodically fetch from the central repository and then release
+  at most one new commit to a machine-local Gitcoin instance. </p>
+
+<p> We'd started out with a coin release frequency of <code>25 +
+    rand(20)</code> seconds, but after seeing how many people were
+  struggling to mine that quickly, we dropped the frequency to a
+  flat 90 seconds. </p>
+
+<p> When you pushed, we had a
+  git <a href="http://git-scm.com/book/ch7-3.html#Server-Side-Hooks"><code>update</code></a>
+  hook which would perform a bunch
+  of <a href="https://github.com/stripe-ctf/ctf-3-snippets/blob/master/ruby/update_hook.rb#L324-L335">sanity
+    checks</a> to ensure it was a valid Gitcoin. Once your commit was
+  accepted, the bots had to stop because our pre-mined Gitcoins
+  wouldn't apply cleanly to your repository. </p>
+
+<h3> Gitcoin bonus round </h3>
+
+<p> In this round, we pitted everyone together in a master Gitcoin
+  instance. Conveniently for us, we didn't have to run our own miners,
+  since people provided plenty of competition against each other. </p>
+
+<p> The architecture here was a single shared (created
+  using <a href="https://www.kernel.org/pub/software/scm/git/docs/git-init.html"><code>git
+      init --bare --shared=all</code></a>) global Gitcoin repository on
+  the gitcoin box. The submitters maintained their own clone of this
+  repository. </p>
+
+<p> On pull, you just hit the submitter repository. On push, the
+  commit was validated by the submitter, which then pushed (via a new
+  SSH connection) to the backend gitcoin box. If the backend push was
+  successful, a Thrift service on the gitcoin box would synchronously
+  push the new commit to all other submitters. </p>
+
+<p> One consequence of this architecture was that submitting Gitcoins
+  was decently slow &mdash; we weren't maintaining persistent
+  connections to the backend gitcoin server, so there was a decent
+  amount of overhead. We compensated for this by tuning the difficulty
+  to ensure the time to mine a coin was large compared to the time to
+  complete a push. By the contest's end, the difficulty
+  was <code>0000000005</code>, a full 4 (!) orders of magnitude harder
+  than the difficulty we'd started with. </p>
+
+<hr />
+
+<p> I hope you had as much fun playing CTF3 as we had building it. If
+  you're curious about any details I didn't cover here, feel free
+  to <a href="mailto:gdb@stripe.com">send me an email</a>. </p>
+
+
+  </div>
+
+  <footer>
+    <p>
+      February 4, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+
+  
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../country?country=AU&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Australia" src="../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=CA&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Canada" src="../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=DK&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Denmark" src="../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=FI&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Finland" src="../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=GB&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="United Kingdom" src="../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=IE&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Ireland" src="../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=NO&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Norway" src="../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=SE&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Sweden" src="../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=US&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="United States" src="../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=AT&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Austria" src="../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BE&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Belgium" src="../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BR&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Brazil" src="../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=FR&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="France" src="../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=DE&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Germany" src="../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=IT&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Italy" src="../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=JP&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Japan" src="../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=LU&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Luxembourg" src="../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=MX&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Mexico" src="../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=NL&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Netherlands" src="../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=PT&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Portugal" src="../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=SG&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Singapore" src="../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=ES&amp;redirect=%252Fblog%252Fctf3-architecture" >
+                  <img width="23" height="17" alt="Spain" src="../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=CH&amp;redirect=%252Fblog%252Fctf3-architecture" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../pricing">Pricing</a></li>
+      <li><a href="page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("blog");
+    </script>
+
+  </body>
+</html>

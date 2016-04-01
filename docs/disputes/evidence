@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dispute Evidence Guide</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="30edB-AQodu2ctqxiYTv_oJ_feQ9aks4eoSgjZwXhaRXbZjE-XPka0VigGHX_lN1usKHDCwBnwCznjfhHRohPg==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="index.html">Disputes</a></li>
+      <li class="selected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="dispute-evidence-guide" id="details">
+  <header>
+    <h1>Submitting Dispute Evidence</h1>
+    <p>To help resolve disputes in your favor, submit evidence about the legitimacy of a charge to your customer’s bank or card issuer through Stripe. If you need help after reading this, check out our answers to <a href="https://support.stripe.com/search?q=dispute%20evidence">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </header>
+
+  <article>
+
+    <aside class="intro note">
+      <h1>Dispute information</h1>
+      <p>For more information on how the dispute process works, check out our <a href="index.html">Disputes overview</a>.</p>
+    </aside>
+
+    <p>A dispute occurs when a customer initiates a chargeback with their bank or credit card issuer. However, a dispute can be overturned by the customer’s bank if they receive enough information showing that the chargeback isn’t justified. When the bank or issuer finds the dispute in your favor, you are refunded the disputed amount that had been withdrawn, including the chargeback fee.</p>
+
+    <p>What evidence to provide depends upon the <a href="../../help/dispute-types">type of dispute</a>. While it’s not required that you include every piece of information to submit your evidence, providing as much evidence as you can greatly improves your chances of overturning a dispute. </p>
+
+    <p>There are two ways you can submit evidence to Stripe:</p>
+
+    <ul>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence#using-the-dashboard">Using the Dashboard</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence#using-the-api">Using the API</a></li>
+    </ul>
+
+    <h2 id="using-the-dashboard">Using the Dashboard</h2>
+
+    <p>You can manage <a href="https://dashboard.stripe.com/disputes">disputes</a> in the Dashboard and it’s the recommended route for most users. The Dashboard guides you through the submission process, step-by-step—automatically formatting the information you provide. You’re asked to provide different pieces of evidence and upload any necessary files, depending on the dispute type. All this works to increase the likelihood of a dispute being found in your favor.</p>
+
+    <style>
+  div.screenshots {
+    padding: 20px 20px 0;
+  }
+  div.screenshots img {
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),
+                0 2px 3px 0 rgba(0,0,0,0.3);
+  }
+  div.screenshots p {
+    text-align: center;
+    color: #888;
+    padding-top: 15px;
+  }
+</style>
+
+    <div class="screenshots clearfix">
+      <div style="width: 49%; float: left;">
+        <p><a href="../../img/documentation/dispute-overview.png" data-hires="true" class="zoom" maxsize="955x798"><img src="../../img/documentation/dispute-overview.png" width="255" height="212" data-hires="true" /></a></p>
+        <p>The disputes overview page.</p>
+      </div>
+      <div style="width: 49%; float: right;">
+        <p><a href="../../img/documentation/dispute-response.png" data-hires="true" class="zoom" maxsize="955x798"><img src="../../img/documentation/dispute-response.png" width="255" height="212" data-hires="true" /></a></p>
+        <p>Responding to a dispute.</p>
+      </div>
+    </div>
+
+    <h2 id="using-the-api">Using the API</h2>
+
+    <p>While we do recommend handling disputes through the Dashboard, you may prefer to use the Stripe API to submit dispute evidence directly from your integration. Structured evidence is submitted using an API request to update the <code>Dispute</code> object, with the necessary information provided as fields within the <code>evidence</code> parameter. </p>
+
+    <aside class="content note">
+      <h1>File evidence</h1>
+      <p>You can provide documents or images, like a contract or screenshot, as part of dispute evidence using the <a href="../guides/file-upload">File Upload API</a>.</p>
+    </aside>
+
+    <h3 id="api-evidence-fields">Evidence fields</h3>
+
+    <p>All available fields for the <code>evidence</code> parameter are found in the <a href="../api/index.html#dispute_evidence_object">API reference</a>. There are two types of evidence you can provide, depending on the field being updated:</p>
+
+    <ul>
+      <li><em>Text evidence</em>, such as <code>customer_email</code> and <code>service_date</code>, take a string of text</li>
+      <li><em>File evidence</em>, such as <code>service_documentation</code> and <code>customer_communication</code>, take a <em>file token</em></li>
+    </ul>
+
+    <p>A file token is a unique ID that represents a document or image uploaded with the <a href="../guides/file-upload">File Upload API</a>. A document is first uploaded with the purpose of <code>dispute_evidence</code>, which generates a file token that you can use in the appropriate field. </p>
+
+    <p>If you’re only interested in submitting a single file or a large amount of plaintext as evidence, use the <code>uncategorized_text</code> or <code>uncategorized_file</code> fields. However, we strongly recommend filling in as many fields as possible so you have the best chance at overturning a dispute.</p>
+
+    <h3 id="submitting-evidence">Submitting evidence</h3>
+
+    <p>This example updates the dispute evidence with the following evidence fields:</p>
+
+    <ul>
+      <li><code>customer_email</code></li>
+      <li><code>shipping_date</code></li>
+      <li><code>shipping_documentation</code> (a file token)</li>
+    </ul>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a>
+<a href="index.html">go</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_dispute_submit_evidence">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <h3 id="fetching-evidence">Fetching evidence</h3>
+
+    <p>The <code>Dispute</code> object contains information about its evidence, when it’s due, and how many submissions have been attempted. Fetch the evidence status of a disputed charge using an API request:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+<a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a>
+<a href="index.html">go</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_dispute_fetch_evidence">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>The above returns the following in response:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  object: &quot;dispute&quot;
+  id: &quot;dp_17sGETLpSdVJN1iVw8BHvseP&quot;,
+  charge: &quot;ch_5Q4BjL06oPWwho&quot;,
+  evidence: {
+    customer_name: &quot;Jane Austen&quot;,
+    customer_email_address: &quot;email@example.com&quot;,
+    customer_purchase_ip: &quot;127.0.0.1&quot;,
+    product_description: &quot;Widget ABC, color: red&quot;,
+    shipping_date: &quot;2016-02-28&quot;,
+    shipping_tracking_number: &quot;Z01234567890&quot;,
+    uncategorized_text: &quot;Additional notes and comments&quot;,
+    uncategorized_file: &quot;file_17sapWLpSdVJN1iV0X1yRT8Z&quot;
+  },
+  evidence_details: {
+    due_by: 1403047735,
+    submission_count: 1
+  }
+  ...
+}</span></code></pre>
+      </div>
+    </section>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+   <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["curl"] = {};
+              APIValues["curl"]["tutorial_dispute_submit_evidence"] = "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/disputes/dp_17sGETLpSdVJN1iVw8BHvseP\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003Esk_test_BQokikJOvBiI2HlWgH4olfQ2\u003C/span\u003E: \\\n   -d \u003Cspan class='token keyword'\u003Eevidence[customer_email_address]\u003C/span\u003E=\"\u003Cspan class='token string'\u003Eemail@example.com\u003C/span\u003E\" \\\n   -d \u003Cspan class='token keyword'\u003Eevidence[shipping_date]\u003C/span\u003E=\u003Cspan class='token string'\u003E2016-02-28\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Eevidence[shipping_documentation]\u003C/span\u003E=\u003Cspan class='token string'\u003Efile_17sapWLpSdVJN1iV0X1yRT8Z\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E";
+              APIValues["curl"]["tutorial_dispute_fetch_evidence"] = "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/disputes/dp_17sGETLpSdVJN1iVw8BHvseP\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003Esk_test_BQokikJOvBiI2HlWgH4olfQ2\u003C/span\u003E:\n\u003C/code\u003E\u003C/pre\u003E";
+          APIValues["ruby"] = {};
+              APIValues["ruby"]["tutorial_dispute_submit_evidence"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\ndispute = Stripe::Dispute.retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;)\ndispute.evidence = {\n  :customer_email_address =\u0026gt; \u0026quot;email@example.com\u0026quot;,\n  :shipping_date =\u0026gt; \u0026quot;2016-02-28\u0026quot;,\n  :shipping_documentation =\u0026gt; \u0026quot;file_17sapWLpSdVJN1iV0X1yRT8Z\u0026quot;\n}\ndispute.save\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_dispute_fetch_evidence"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nStripe::Dispute.retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;)\u003C/span\u003E";
+          APIValues["python"] = {};
+              APIValues["python"]["tutorial_dispute_submit_evidence"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\ndispute = stripe.Dispute.retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;)\ndispute.evidence = {\n  \u0026quot;customer_email_address\u0026quot;: \u0026#39;email@example.com\u0026#39;,\n  \u0026quot;shipping_date\u0026quot;: \u0026#39;2016-02-28\u0026#39;,\n  \u0026quot;shipping_documentation\u0026quot;: \u0026#39;file_17sapWLpSdVJN1iV0X1yRT8Z\u0026#39;\n}\ndispute.save()\u003C/span\u003E";
+              APIValues["python"]["tutorial_dispute_fetch_evidence"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nstripe.Dispute.retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;)\u003C/span\u003E";
+          APIValues["php"] = {};
+              APIValues["php"]["tutorial_dispute_submit_evidence"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n$dp = \\Stripe\\Dispute::retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;);\n$dp-\u0026gt;evidence = array(\n  \u0026quot;customer_email_address\u0026quot; =\u0026gt; \u0026quot;email@example.com\u0026quot;,\n  \u0026quot;shipping_date\u0026quot; =\u0026gt; \u0026quot;2016-02-28\u0026quot;,\n  \u0026quot;shipping_documentation\u0026quot; =\u0026gt; \u0026quot;file_17sapWLpSdVJN1iV0X1yRT8Z\u0026quot;\n);\n$dp-\u0026gt;save();\u003C/span\u003E";
+              APIValues["php"]["tutorial_dispute_fetch_evidence"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n\\Stripe\\Dispute::retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;);\u003C/span\u003E";
+          APIValues["node"] = {};
+              APIValues["node"]["tutorial_dispute_submit_evidence"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.disputes.update(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;,\n  {\n    evidence: {\n      customer_email_address: \u0026#39;email@example.com\u0026#39;,\n      shipping_date: \u0026#39;2016-02-28\u0026#39;,\n      shipping_documentation: \u0026#39;file_17sapWLpSdVJN1iV0X1yRT8Z\u0026#39;\n    }\n  },\n  function(err, dispute) {\n    // asynchronously called\n  }\n);\u003C/span\u003E";
+              APIValues["node"]["tutorial_dispute_fetch_evidence"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nstripe.disputes.retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;,\n  function(err, dispute) {\n    // asynchronously called\n  }\n);\u003C/span\u003E";
+          APIValues["java"] = {};
+              APIValues["java"]["tutorial_dispute_submit_evidence"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nDispute dp = Dispute.retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;);\nMap\u0026lt;String, Object\u0026gt; params = new HashMap\u0026lt;String, Object\u0026gt;();\nMap\u0026lt;String, Object\u0026gt; evidence = new HashMap\u0026lt;String, Object\u0026gt;();\nevidence.put(\u0026quot;customer_email_address\u0026quot;, \u0026quot;email@example.com\u0026quot;);\nevidence.put(\u0026quot;shipping_date\u0026quot;, \u0026quot;2016-02-28\u0026quot;);\nevidence.put(\u0026quot;shipping_documentation\u0026quot;, \u0026quot;file_17sapWLpSdVJN1iV0X1yRT8Z\u0026quot;);\nparams.put(\u0026quot;evidence\u0026quot;, evidence);\ndp.update(params);\u003C/span\u003E";
+              APIValues["java"]["tutorial_dispute_fetch_evidence"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nDispute.retrieve(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;);\u003C/span\u003E";
+          APIValues["go"] = {};
+              APIValues["go"]["tutorial_dispute_submit_evidence"] = "\u003Cspan class=\"highlight_js go\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.Key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nd, err := dispute.Update(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;,\n  \u0026amp;stripe.DisputeParams{\n    Evidence: \u0026amp;stripe.DisputeEvidenceParams{\n      CustomerEmail: \u0026quot;email@example.com\u0026quot;,\n      ShippingDate: \u0026quot;2016-02-24\u0026quot;,\n      ShippingDoc: \u0026quot;file_17sapWLpSdVJN1iV0X1yRT8Z\u0026quot;\n    },\n  },\n)\u003C/span\u003E";
+              APIValues["go"]["tutorial_dispute_fetch_evidence"] = "\u003Cspan class=\"highlight_js go\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.Key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nd, err := dispute.Get(\u0026quot;dp_17sGETLpSdVJN1iVw8BHvseP\u0026quot;, nil)\u003C/span\u003E";
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

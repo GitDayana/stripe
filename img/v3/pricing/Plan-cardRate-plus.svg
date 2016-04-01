@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #221945;
+        fill-rule: evenodd;
+        opacity: 0.45;
+      }
+    </style>
+  </defs>
+  <path id="Plan-cardRate-plus.svg" class="cls-1" d="M512,456h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2Z" transform="translate(-500 -449)"/>
+</svg>

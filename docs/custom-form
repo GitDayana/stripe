@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Building a custom payment form</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="eJsWrvLaRuxJd4EhpCWDCGWoG1qW92IiKeWSMdKS9JDwsRNt67kDXLpn2_H6Xz-DXRXhsoecthrg_wVdU59QCg==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="selected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../security">Security</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Building a custom payment form</h1>
+    <p>This tutorial helps you build your first payment form with Stripe. If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+</p>
+  </header>
+
+  <article>
+
+    <aside class="intro note">
+      <h1>Note</h1>
+      <p>An alternative to building your own forms is using the <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a>,
+    or avoid coding altogether with Stripe’s <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">third-party integrations</a>.</p>
+    </aside>
+
+    <p>At a high level, here’s what you’ll accomplish in this tutorial:</p>
+
+    <ol>
+      <li>Collect credit card information with Stripe.js</li>
+      <li>Convert those details to what we call a single-use token</li>
+      <li>Send that token, with the rest of your form, to your server</li>
+    </ol>
+
+    <p>We’ll cover what to do after that in our next tutorial. Before we get to the first step, let’s take a quick look at a typical payment form. This is the part you can build with your web framework, or by hand in HTML — however you’re used to building forms on the web.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;form action=&quot;&quot; method=&quot;POST&quot; id=&quot;payment-form&quot;&gt;
+  &lt;span class=&quot;payment-errors&quot;&gt;&lt;/span&gt;
+
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;label&gt;
+      &lt;span&gt;Card Number&lt;/span&gt;
+      &lt;input type=&quot;text&quot; size=&quot;20&quot; data-stripe=&quot;number&quot;/&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;label&gt;
+      &lt;span&gt;CVC&lt;/span&gt;
+      &lt;input type=&quot;text&quot; size=&quot;4&quot; data-stripe=&quot;cvc&quot;/&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;label&gt;
+      &lt;span&gt;Expiration (MM/YYYY)&lt;/span&gt;
+      &lt;input type=&quot;text&quot; size=&quot;2&quot; data-stripe=&quot;exp-month&quot;/&gt;
+    &lt;/label&gt;
+    &lt;span&gt; / &lt;/span&gt;
+    &lt;input type=&quot;text&quot; size=&quot;4&quot; data-stripe=&quot;exp-year&quot;/&gt;
+  &lt;/div&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Submit Payment&lt;/button&gt;
+&lt;/form&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <aside class="content note">
+      <h1>Tip</h1>
+      <p>In test mode, you can use the card number <code>4242424242424242</code> with any CVC and a
+  valid expiration date. Read more in our <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">testing</a> documentation.</p>
+    </aside>
+
+    <p>Fairly standard. Note how input fields representing sensitive card data (number, CVC, expiration month and year) do not have a “name” attribute. This prevents them from hitting your server when the form is submitted. We’re also including a <code>data-stripe</code> attribute on the relevant fields, which we’ll discuss later in the tutorial.</p>
+
+    <p>Your life becomes easier if sensitive cardholder data does not hit your servers. You no longer need to worry about redacting logs, encrypting cardholder details, or other burdens of PCI compliance.</p>
+
+    <p>With Stripe.js, you never have to handle sensitive card data. It’s automatically converted to a token which you can safely send to your servers and use to charge your customers.</p>
+
+    <h1 id="step-1-collecting-credit-card-information">Step 1: Collecting credit card information</h1>
+
+    <p>First, include Stripe.js in the page:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;script type=&quot;text/javascript&quot; src=&quot;https://js.stripe.com/v2/&quot;&gt;&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>To prevent problems with some older browsers, we recommend putting the script tag in the <code>&lt;head&gt;</code> tag of your page, or as a direct descendant of the <code>&lt;body&gt;</code> at the end of your page.</p>
+
+    <p>In a separate script tag, after the first, set your publishable key:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;script type=&quot;text/javascript&quot;&gt;
+  // This identifies your website in the createToken call below
+  Stripe.setPublishableKey(&#39;pk_test_6pRNASCoBOKtIshFeQd4XMUh&#39;);
+  // ...
+&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p><code>Stripe.setPublishableKey(..)</code> identifies your website when communicating with Stripe. Note that we’ve pre-filled the example with your <strong>test publishable</strong> API key. Remember to replace the test key with your live key in production. You can get all your keys from <a href="https://dashboard.stripe.com/account/apikeys">your account page</a>.</p>
+
+    <h1 id="step-2-create-a-single-use-token">Step 2: Create a single use token</h1>
+
+    <p>Next, we will want to create a single-use token that can be used to represent the credit card information your customer enters. Note that you <strong>should not store or attempt to reuse</strong> single-use tokens – if you wish to charge a credit card multiple times, you should <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges#saving-credit-card-details-for-later">use your token to create a Customer object</a>. After the code we just added, we’ll add an event handler to our form. We want to capture the <code>submit</code> event, and then use the credit card information to create a single-use token:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">jQuery(function($) {
+  $(&#39;#payment-form&#39;).submit(function(event) {
+    var $form = $(this);
+
+    // Disable the submit button to prevent repeated clicks
+    $form.find(&#39;button&#39;).prop(&#39;disabled&#39;, true);
+
+    Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from submitting with the default action
+    return false;
+  });
+});</span></code></pre>
+      </div>
+    </section>
+
+    <aside class="content note">
+      <h1>Library agnostic</h1>
+      <p>
+    While we use <a href="http://jquery.com/">jQuery</a> in this example, you do not need jQuery
+    to use Stripe.js – it has no external dependencies.
+  </p>
+    </aside>
+
+    <p>The important code to notice is the call to <code>Stripe.card.createToken</code>. The first argument is the form element containing credit card data entered by the user. The relevant values are fetched from their associated inputs using the <code>data-stripe</code> attribute specified in the first example.</p>
+
+    <p>You should provide at least the card number and expiration info. The complete list of fields you can provide is available <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js#createToken">in the Stripe.js documentation</a>.</p>
+
+    <p>The second argument <code>stripeResponseHandler</code> is a callback that handles the response from Stripe. <code>createToken</code> is an asynchronous call – it returns immediately and invokes <code>stripeResponseHandler</code> when it receives a response from Stripe’s servers. Whatever function you pass should take two arguments, <code>status</code> and <code>response</code>:</p>
+
+    <p><code>status</code> is one of the status codes described in the <a href="api/index.html#errors">API docs</a>.</p>
+
+    <p><code>response</code> is an Object with these properties:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  id: &quot;tok_u5dg20Gra&quot;, // String of token identifier,
+  card: {...}, // Dictionary of the card used to create the token
+  created: 1459289332, // Integer of date token was created
+  currency: &quot;usd&quot;, // String currency that the token was created in
+  livemode: true, // Boolean of whether this token was created with a live or test API key
+  object: &quot;token&quot;, // String identifier of the type of object, always &quot;token&quot;
+  used: false // Boolean of whether this token has been used
+}</span></code></pre>
+      </div>
+    </section>
+
+    <aside class="content note">
+      <h1>Input Validation</h1>
+      <p>
+    We’ve written a general purpose library called <a href="https://github.com/stripe/jquery.payment">jQuery.payment</a> to help with client-side input validation and formatting card numbers.
+  </p>
+    </aside>
+
+    <h1 id="step-3-sending-the-form-to-your-server">Step 3: Sending the form to your server</h1>
+
+    <p>In our example, this is done in <code>stripeResponseHandler</code>:</p>
+
+    <ul>
+      <li>If the card information entered by the user returned an error, it gets displayed on the page.</li>
+      <li>If no errors were returned (i.e. a single-use token was created successfully), add the returned token to the form in the <code>stripeToken</code> field and submit the form to the server.</li>
+    </ul>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">function stripeResponseHandler(status, response) {
+  var $form = $(&#39;#payment-form&#39;);
+
+  if (response.error) {
+    // Show the errors on the form
+    $form.find(&#39;.payment-errors&#39;).text(response.error.message);
+    $form.find(&#39;button&#39;).prop(&#39;disabled&#39;, false);
+  } else {
+    // response contains id and card, which contains additional card details
+    var token = response.id;
+    // Insert the token into the form so it gets submitted to the server
+    $form.append($(&#39;&lt;input type=&quot;hidden&quot; name=&quot;stripeToken&quot; /&gt;&#39;).val(token));
+    // and submit
+    $form.get(0).submit();
+  }
+};</span></code></pre>
+      </div>
+    </section>
+
+    <p>Notice that in order to add the token to the info submitted to your server, we’re adding a new <code>input</code> tag into the form, and setting its value to the id of the token.</p>
+
+    <p>After we’ve added the info to the form, we re-submit the form (remember, we stopped it from submitting before so we could wait for Stripe to tokenize the credit card details). We call <code>submit()</code> on the form directly, rather than the jQuery wrapper, so that we don’t run into an infinite loop. The data will be sent as an HTTP POST to the URL in the form’s action.</p>
+
+    <p>Take a look at the <a href="https://gist.github.com/briancollins/6365455">full example form</a> to see everything put together.</p>
+
+    <hr />
+
+    <h1 id="next-up">Next up</h1>
+
+    <p>Once you’ve sent your form to your server, you’re going to want to do something with the payment details you just collected. This is usually one of two things:</p>
+
+    <ul>
+      <li><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charge your user immediately</a></li>
+      <li><a href="subscriptions.1">Sign them up for a subscription</a></li>
+    </ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../country?country=AU&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CA&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DK&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FI&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=GB&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IE&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NO&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SE&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=US&amp;redirect=%252Fdocs%252Fcustom-form" class="selected">
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=AT&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BE&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BR&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FR&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DE&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IT&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=JP&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=LU&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=MX&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NL&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=PT&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SG&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=ES&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form" >
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" id="blog" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Follow the Stripe blog for product announcements, feature updates, new countries, and technical posts about payments." />
+
+<link rel="shortcut icon" href="../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../assets/blog-ada6c3a77cd627b09ac436c3a82dd49d.css">
+  <link rel="stylesheet" href="../assets/blogposts-b9a9b6ffe0287dc66146bd753faba55d.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../assets/blog-776e3ed92eef5022ed98688d349fd7af.js"></script>
+  <script src="../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.rss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>    Bitcoin: the Stripe perspective
+</title>
+    <meta content="j30Lrd-BU5wx2dbZDWkARynGXK48-EE5UuHL5ZRkuhkHVw5uxuIWLMLJjAlTE7zMEXumRi2TlQGb-1yJFWkegw==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../features">Features</a></li>
+        <li class='pricing'><a href="../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../marketplaces'>Connect</a></li>
+              <li><a href='../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="page/1">Blog</a></li>
+              <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <header id="blog-header">
+  	<h1><a href="page/1">Blog</a></h1>
+  	<p><a href="https://twitter.com/stripe">Follow Stripe on Twitter</a></p>
+  </header>
+  
+    <div id='blog-post--bitcoin-the-stripe-perspective'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../country?country=CH&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective">Bitcoin: the Stripe perspective<br /></a></h1>
+    <p>
+      <a class="author" href="../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> July 21, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>
+  Many people have remarked that Bitcoin resembles the internet in the early 90s: we haven’t yet built the Googles that will make it accessible or the Facebooks and Netflixes that will make it broadly useful. So it’s an open question: what might a Bitcoin that’s useful for the mainstream look like?
+</p>
+
+<h2>Money</h2>
+
+<p>
+  Money has three functions: it’s a store of value (that is, somewhere you can put your life savings), a unit of account (that is, a measure of value), and a medium of exchange (a way to transport value). On the first two fronts, Bitcoin has shown promise in <a href="http://www.coindesk.com/bitcoins-role-combatting-inflation/">high-inflation economies</a>, but it’s a much tougher sell for mainstream consumers in stable countries. There, consumers mostly want a safe place to hold their savings, and the existing bank account insurances and consumer protections have set a high bar.
+</p>
+
+<p>
+  However, Bitcoin has huge potential as a way to transport value. It’s surprisingly difficult to move money today, and the experience of paying for something online is just about the only part of the internet that hasn’t changed dramatically in the past twenty years. There are a few walled gardens with great payment experiences (the App Store, Amazon), but otherwise it’s still a wild west of punching in your card details. (We’re <a href="../country?country=CH&amp;redirect=%252Fcheckout">working on it</a>, though.)
+</p>
+
+<p>
+  Compounding the issue, value transport becomes especially challenging as soon as there’s a regional border involved. This is in stark contrast to the transmission of information: if you’re using the internet in Honduras, you don’t need to figure out how to hook up your local ISP to send packets to Kenya. But traditional payment systems look a lot like computer networks before the internet.
+</p>
+
+<p>
+  Cryptocurrencies have given us a real opportunity to solve these problems.
+</p>
+
+<h2>Gateways</h2>
+
+<p>
+  If we want to make Bitcoin useful but still allow consumers to think in their local currencies, the place to start is likely by building a series of “gateways”. These gateways should allow people to transparently get into and out of the network, while always thinking in terms of their normal currency.
+</p>
+
+<p class='image-center'>
+  <img src="../img/blog/posts/bitcoin-the-stripe-perspective/gateway.png" data-hires="true" width="473" height='49' />
+</p>
+
+<p>
+  A consumer could go and sign up for a gateway in their country, link their local bank account, and then specify all their actions in currencies they understand: “send £10 to this destination; send $20 to that destination”.
+</p>
+
+<p>
+  Behind the scenes, the sender’s gateway would convert the specified amount to Bitcoin and send those bitcoins to the recipient’s gateway. The recipient’s gateway would then translate the received amount back into the recipient’s preferred currency.
+</p>
+
+<p>
+  If this became widely adopted, we’d suddenly have proper connectivity between the world’s financial systems. Today, each of those systems does a reasonable job of moving money around within one country or market, but there’s no great way to move money between systems. If every system backends to Bitcoin (or another cryptocurrency), suddenly the world starts to look a lot like this:
+</p>
+
+<p class='image-center'>
+  <img src="../img/blog/posts/bitcoin-the-stripe-perspective/network.png" data-hires="true" width="469" height='189' />
+</p>
+
+<p>
+  You could imagine the gateway ecosystem choosing a traditional financial system as their backend in place of Bitcoin. However, doing so would require each to navigate the regulatory and partnership landscape in two countries: their local country, which they likely understand well, and the country in which the backing system is based, which they likely do not. For example, if American ACH were the chosen backing system, an entrepreneur building an Australian direct debit gateway would need a relationship with both an Australian bank and an American one.
+</p>
+
+<h2 id="ip-layer">Bitcoin as the IP layer</h2>
+
+<p>
+  One exciting consequence of having a network of gateways built on top of Bitcoin is that they’ll all be technology-driven companies in an open ecosystem. They’ll be willing to adopt new open protocols that deliver additional value. For example, you can imagine a protocol to make the web payment experience look like the following:
+</p>
+
+<p class='image-center'>
+  <img src="../img/blog/posts/bitcoin-the-stripe-perspective/form.png" data-hires="true" width="272" height='270' />
+</p>
+
+<p>
+  Namely, every entity on the internet could have a payment address that feels like an email address. To pay on a site, you would just provide your payment address. The merchant’s gateway would then request funds from yours, which you could authorize via a push notification to your phone.
+</p>
+
+<p>
+  In this way, Bitcoin would start to become the <a href="http://en.wikipedia.org/wiki/Internet_Protocol">IP</a> layer of payments. Just as users are used to human-readable hostnames (such as stripe.com) which resolve down to an IP address, this system would result in human-readable names (alice@cad-gateway.com) being what people know and remember. Behind the scenes, systems would still use <a href="https://en.bitcoin.it/wiki/Address">Bitcoin addresses</a> to speak to one another. (Mike Hearn has some <a href="https://medium.com/@octskyward/ecdh-in-the-payment-protocol-cb2f81962c1b">ideas</a> here.)
+</p>
+
+<p class='image-center'>
+  <img src="../img/blog/posts/bitcoin-the-stripe-perspective/network2.png" data-hires="true" width="329" height='88' />
+</p>
+
+<p>
+  And in the end, we’d have a globally-connected network. It wouldn’t replace the existing financial systems—consumers would still be able to use all the infrastructure they use today. But it would make the existing system incredibly more valuable, in the same way that connecting everyone’s local networks via the internet multiplied the value of what was already there.
+</p>
+
+<h2>Contrast with other global networks</h2>
+
+<p>
+  This would not, of course, be the first global payments network. One obvious comparison is with <a href="https://www.paypal.com/">PayPal</a>. The fundamental advantage a Bitcoin gateway ecosystem has over PayPal is that it’s open. Any closed network will, by nature, be deprived of structural pressures that force it to improve. A third-party can’t improve a closed network; if they really want to, they first have to try to replicate the network itself from scratch. In contrast, the Bitcoin space is already seeing rapid iteration and compounding  improvements.
+</p>
+
+<p>
+  <a href="http://www.swift.com/index.page?lang=en">Swift</a> is another global network. When sending money with Swift, one bank says to another “I’m going to send you 100 euros”, and then finds a path of peered banks to actually move the money. Fees and currency conversion are handled in an ad hoc (and <a href="http://abdussamad.com/archives/333-International-Payment-methods-for-Pakistan:-SWIFT-Wire-transfer.html">often surprising</a>) fashion. The more you can bake “what will happen” into the network protocol, the more understandable and usable the resulting system will be. Bitcoin does better than Swift by including money movement and transaction fees in the protocol, though it similarly lacks native currency conversion.
+</p>
+
+<p>
+  There are a number of cryptocurrencies which already have gateways baked in at a protocol level (such as <a href="http://opentransactions.org/">Open Transactions</a> and <a href="https://ripple.com/">Ripple</a>). However, there are huge network effects in any financial system, and to date these other systems have failed to win the necessary user support.
+</p>
+
+<h2>Comparison to the card networks</h2>
+
+<p>
+  If we really want to make a Bitcoin-backed global network useful to consumers, it’s worth comparing it against a system that is already quite useful to them: namely, <a href="https://visa.com">Visa</a>. Visa has a number of functions, which can be roughly bucketed into three categories:
+</p>
+
+<ol>
+  <li> 
+    <a href="http://www.fastcompany.com/1784751/how-visa-protects-your-data">Network</a> for initiating transactions and moving funds.
+  </li>
+  <li>
+    Setting <a href="http://usa.visa.com/merchants/merchant-support/international-operating-regulations.jsp">rules and regulations</a>.
+  </li>
+  <li> 
+    Consumer trust and protection (<a href="http://en.wikipedia.org/wiki/Chargeback">chargebacks</a>, stolen cards).
+  </li>
+</ol>
+
+<p>
+  (Other functions such as consumer credit are provided by the banks rather than Visa itself.)
+</p>
+
+<p>
+  Of these, the Bitcoin gateway network described above provides 1 and the technical aspects of 2 (“this is how the protocol works” is covered, while “every online merchant needs a privacy policy” is not). But the other functions are very important. Ultimately, the message Visa delivers to consumers is that if they see the Visa logo, they are safe. If something goes wrong (such as the merchant delivering a bad product), the consumer will be made whole. This results in many transactions happening that otherwise would not, and makes the whole ecosystem more valuable.
+</p>
+
+<p>
+  And so, unless we solve decentralized reputation (which people are starting to <a href="https://bitcointalk.org/index.php?topic=312.0">think</a> <a href="http://hal.archives-ouvertes.fr/docs/00/76/50/21/PDF/drspp-RR.pdf">about</a>), the Bitcoin ecosystem will see the emergence of a few centralized consumer “trust providers”.
+</p>
+
+<p>
+  You can already start to see the need for this with the emergence of Bitcoin escrow services. However, escrow isn’t actually a solution to trust—it’s a way <b>not</b> to trust. It makes sense only for a certain segment of purchases, and requires you to jump through stressful hoops like completing an inspection of the goods before irrevocably releasing the funds.
+</p>
+
+<p>
+  The winners in this space will instead be companies which inspire consumers to trust those they endorse. They’ll provide consumer protection services like chargeback mediation (and have a direct relationship with the merchant to actually recoup funds for those chargebacks). They’ll gain acceptance among Bitcoin-accepting merchants if they can boost sales:
+</p>
+
+<p class='image-center'>
+  <img src="../img/blog/posts/bitcoin-the-stripe-perspective/example_protected.png" data-hires="true" width="272" height='316' />
+</p>
+
+<p>
+  Because the trust providers’ main assets are their brands, and those brands benefit from network effects, it’ll generally make sense for these companies to consolidate. Ultimately there will be one or a few major players, just like there are in the credit card world.
+</p>
+
+<p>
+  Other participants in the ecosystem will want to display the brand too. You’ll see gateways cobranding with the trust providers, just like today you see cards cobranded with Visa and their issuing bank.
+</p>
+
+<p class='image-center'>
+  <img src="../img/blog/posts/bitcoin-the-stripe-perspective/card.png" data-hires="true" width="294" height="204" style="margin-bottom: -50px" />
+</p>
+
+<p>
+  As a result, the trust providers will be building a network of vetted merchants and gateways. To make sure only good actors are in the system, they’ll need to set and enforce rules and regulations for acceptable behavior—otherwise their brand will become less meaningful. This brings us back to a world of a few entities who get to set the rules.
+</p>
+
+<h2>Conclusion</h2>
+
+<p>
+  So what would all of this buy us? There would be three major improvements to the existing financial system.
+</p>
+
+<p>
+  First, the resulting ecosystem is technologically open. Open ecosystems have a way of getting better much faster than their closed counterpart. Anyone can enter, connect to the network, and start building good tools and <a href="https://chain.com/">applications</a> on top of it. The emerging <a href="http://upstart.bizjournals.com/companies/innovation/2014/07/17/new-york-prepares-to-become-the-first-state-to.html?page=all">regulatory landscape</a> may change some of the constants, but this fundamental advantage will remain.
+</p>
+
+<p>
+  Second, this model unbundles the existing financial system into layers run by independent companies. To see the value of this, contrast with the US mobile carriers, who used to own the entire stack. They owned the handsets, the operating systems, the applications running on the phone, and the service. This meant that most of the stack never had anything pushing it to get very good, and there were even incentives to hold it back in order to preserve legacy revenue-generating facilities like SMS. By enabling competition at individual layers of the financial system, each one should <a href="http://mercatus.org/permissionless/permissionlessinnovation.html">improve</a>.
+</p>
+
+<p>
+  And third, this would be the first truly global payments network: anyone would be empowered to start a gateway in their country, rather than relying on it eventually making sense for some centralized actor. This is especially powerful for people in countries with underdeveloped banking systems, which many traditional payment systems never reach.
+</p>
+
+<p>
+  So what role will Stripe play here? We already provide <a href="../country?country=CH&amp;redirect=%252Fbitcoin">Bitcoin acceptance</a>, and we’re actively investigating other functionality. We’ll have other updates on this front before too long. 
+</p>
+
+<p>
+  We’re still in the very early days, but we can already start to see the shape of the potential impact of Bitcoin and other cryptocurrencies. If we get things right, life is going to be much better for billions of people.
+</p>
+
+  </div>
+
+  <footer>
+    <p>
+      July 21, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+
+  
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../country?country=AU&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Australia" src="../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=CA&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Canada" src="../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=DK&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Denmark" src="../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=FI&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Finland" src="../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=GB&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="United Kingdom" src="../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=IE&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Ireland" src="../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=NO&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Norway" src="../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=SE&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Sweden" src="../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../country?country=US&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="United States" src="../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=AT&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Austria" src="../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BE&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Belgium" src="../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=BR&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Brazil" src="../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=FR&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="France" src="../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=DE&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Germany" src="../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=IT&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Italy" src="../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=JP&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Japan" src="../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=LU&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Luxembourg" src="../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=MX&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Mexico" src="../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=NL&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Netherlands" src="../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=PT&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Portugal" src="../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=SG&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Singapore" src="../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=ES&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" >
+                  <img width="23" height="17" alt="Spain" src="../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../country?country=CH&amp;redirect=%252Fblog%252Fbitcoin-the-stripe-perspective" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../pricing">Pricing</a></li>
+      <li><a href="page/1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("blog");
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Use Avalara for taxes calculation in Relay</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="772ar-NmiKJdVPdoSLtx9qobarH86nbLrZNSpOemUyZnl59s-gXNEq5ErbgWwc19kqaQWe2BovNkicXIZqv3vA==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="orders-guide" id="details">
+  <header>
+    <h1>Automatic tax calculations on Stripe using Avalara</h1>
+    <p>Setup <a href="http://www.avalara.com/products/avatax/">AvaTax by Avalara</a> to get powerful automatic tax calculations on your Stripe orders. If you need help after reading this, check out our answers to <a href="https://support.stripe.com/search?q=relay">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+
+</p>
+  </header>
+  <article>
+
+    <p>The <a href="index.html">Relay API</a> enables Stripe users to represent their inventory as products, SKUs, and orders directly in the Stripe API. While Relay provides basic tax calculation options, these options are quite limited for merchants selling in multiple states or countries. To help businesses calculate accurate taxes using Relay, Stripe has partnered with <a href="http://www.avalara.com/">Avalara</a> to integrate Avalara tax calculations into Relay. If you are not yet familiar with the APIs for products, SKUs, and orders, we recommend that you visit the <a href="index.html">Relay API Overview</a> documentation before diving into tax calculations.</p>
+
+    <p>When the Avalara integration is activated, Stripe will automatically contact Avalara each time an order is created to compute taxes using the order information: products, SKUs, and shipping addresses. Stripe handles everything related to tax calculations in Avalara when an order is created, paid, or returned to let you add tax calculations to your orders without needing to update anything outside of Stripe. </p>
+
+    <h2 id="set-up-the-avalara-integration">Set up the Avalara integration</h2>
+
+    <p>To use Avalara with Relay and your Stripe account, you’ll need to first setup and activate your Avalara account.</p>
+
+    <h3 id="retrieve-your-credentials-from-avalara">Retrieve your credentials from Avalara</h3>
+
+    <p>The Avalara integration is only available in live mode. For that reason, only Avalara production credentials can be used to activate Avalara in the Stripe dashboard. We automatically validate your credentials when you connect to Avalara, and test credentials will be refused.</p>
+
+    <p class="notification">
+To create a production Avalara account, please visit the <a href="http://www.avalara.com/integrations/stripe-relay/?mode=buy">Avalara Sign-up Page</a>.
+</p>
+
+    <p>You should retrieve your production credentials via email after signing up. The credentials required to activate the Avalara integration in Stripe are:</p>
+
+    <ul>
+      <li><code>Account Number</code>: your Avalara Account Number (production)</li>
+      <li><code>License Key</code>: your Avalara License Key (production)</li>
+    </ul>
+
+    <h3 id="activate-avalara-as-a-provider-in-stripe">Activate Avalara as a provider in Stripe</h3>
+
+    <p>Next, log into your Stripe account and navigate to the <a href="https://dashboard.stripe.com/account/relay/settings">Relay Settings</a>. Choose “Live mode” under settings and click on <strong>Change tax</strong> under the Taxes setting. Choose <strong>Provider</strong> under Type and <strong>Avalara</strong> under Provider. Enter your production <strong>Account Number</strong> and <strong>License Key</strong> into the fields in the form. If you have multiple companies under the same Avalara account (this is not common), you can specify which company Stripe should use in the <strong>Company Name</strong> field. Click <strong>Update</strong> to validate your credentials. If the pop-up disappears without error, your Avalara integration is live.</p>
+
+    <p>If the message <strong>Invalid Avalara production credentials</strong> appears, Stripe was unable to contact Avalara (in production) using the credentials provided. You should verify your credentials and contact Avalara if you’re unable to make progress.</p>
+
+    <h2 id="how-the-integration-works">How the integration works</h2>
+
+    <p>The Relay/Avalara integration automatically manages everything necessary to compute and commit tax quotes when creating orders. When you create an order, Stripe retrieves a tax estimate from Avalara based on the SKUs and shipping address. This tax estimate service is provided free of charge by Avalara, so <em>creating</em> orders with Stripe does not by itself cost you anything. Once you pay an order, Stripe <a href="http://developer.avalara.com/api-documentation/avatax-15-api/designing-your-integration/posttax-and-committax">commits the estimate with Avalara</a>. Avalara will persist the transaction, and you should be able to view it your Avalara dashboard as well as in any reports and liability calculations. Should you later return or cancel the order, Stripe will automatically void the transactions with Avalara to help you keep your reports accurate.</p>
+
+    <p>Once you have set up your Avalara integration, you should automatically see <code>tax</code> items in your orders’ <code>items</code> array. For example, the following request will create an order shippable to the US:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/orders</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+   -d <span class="token keyword">items[][parent]</span>=<span class="token string">sku_8ABj2RTkfIWt45</span> \
+   -d <span class="token keyword">currency</span>=<span class="token string">usd</span> \
+   -d <span class="token keyword">shipping[name]</span>="<span class="token string">Jenny Rosen</span>" \
+   -d <span class="token keyword">shipping[address][line1]</span>="<span class="token string">123 Main Street</span>" \
+   -d <span class="token keyword">shipping[address][postal_code]</span>=<span class="token string">94110</span> \
+   -d <span class="token keyword">shipping[address][city]</span>="<span class="token string">San Francisco</span>" \
+   -d <span class="token keyword">shipping[address][state]</span>=<span class="token string">CA</span> \
+   -d <span class="token keyword">shipping[address][country]</span>=<span class="token string">US</span> \
+   -d <span class="token keyword">email</span>="<span class="token string">jenny@ros.en</span>"
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>When processing the request, Stripe will use the Avalara API to obtain tax line items and include them directly in the response. For example, the response below includes the 7.5% Californa sales tax applicable to the order as computed by Avalara:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;id&quot;: &quot;or_17pkOFDAu10Yox5ReR89xhT1&quot;,
+  &quot;object&quot;: &quot;order&quot;,
+  &quot;amount&quot;: 7524,
+  &quot;amount_returned&quot;: null,
+  &quot;application&quot;: null,
+  &quot;application_fee&quot;: null,
+  &quot;charge&quot;: null,
+  &quot;created&quot;: 1458156787,
+  &quot;currency&quot;: &quot;usd&quot;,
+  &quot;customer&quot;: null,
+  &quot;email&quot;: &quot;jenny@ros.en&quot;,
+  &quot;items&quot;: [
+    {
+      &quot;object&quot;: &quot;order_item&quot;,
+      &quot;amount&quot;: 6999,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;description&quot;: &quot;Slim Jeans&quot;,
+      &quot;parent&quot;: &quot;avalara_test_sku&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;type&quot;: &quot;sku&quot;
+    },
+    {
+      &quot;object&quot;: &quot;order_item&quot;,
+      &quot;amount&quot;: 525,
+      &quot;currency&quot;: &quot;usd&quot;,
+      &quot;description&quot;: &quot;CA STATE TAX (PC040100)&quot;,
+      &quot;parent&quot;: null,
+      &quot;quantity&quot;: null,
+      &quot;type&quot;: &quot;tax&quot;
+    }
+  ],
+  &quot;livemode&quot;: true,
+  &quot;metadata&quot;: null,
+  &quot;returns&quot;: [],
+  &quot;selected_shipping_method&quot;: null,
+  &quot;shipping&quot;: {
+    &quot;address&quot;: {
+      &quot;city&quot;: &quot;San Francisco&quot;,
+      &quot;country&quot;: &quot;US&quot;,
+      &quot;line1&quot;: &quot;123 Main Street&quot;,
+      &quot;line2&quot;: null,
+      &quot;postal_code&quot;: &quot;94110&quot;,
+      &quot;state&quot;: &quot;CA&quot;
+    },
+    &quot;name&quot;: &quot;Jenny Rosen&quot;,
+    &quot;phone&quot;: null
+  },
+  &quot;shipping_methods&quot;: [],
+  &quot;status&quot;: &quot;created&quot;,
+  &quot;status_transitions&quot;: null,
+  &quot;updated&quot;: 1458156788
+}</span></code> </pre>
+      </div>
+    </section>
+
+    <h2 id="advanced-settings">Advanced Settings</h2>
+
+    <p>The basic integration will work for most users but there are a couple of advanced settings to consider.</p>
+
+    <h3 id="setting-your-company-address">Setting your company address</h3>
+
+    <p>When calculating taxes, Avalara uses an <strong>Origin</strong> address and a <strong>Destination</strong> address. The <strong>Origin</strong> address is set to your Stripe account’s legal entity address, configurable in the Dashboard’s <a href="https://dashboard.stripe.com/account">main settings page</a>. The <strong>Destination</strong> address is set to the shipping address of the order object being created.</p>
+
+    <h3 id="setting-up-product-tax-codes">Setting up product tax codes</h3>
+
+    <p>It is possible to assign an <a href="https://taxcode.avatax.avalara.com/">Avalara tax code</a> to the SKUs represented in Relay by setting the <code>avalara_tax_code</code> metadata value on product objects. When present on the product object, the value associated with the metadata field <code>avalara_tax_code</code> will be used as <code>TaxCode</code> on the associated tax line created in Avalara when creating and paying an order. The <code>avalara_tax_code</code> metadata property can be set either in the Stripe dashboard on the product page or using the API. To set the tax code on a product, navigate to a product page, click the <strong>Edit</strong> button under <strong>Metadata</strong> and add a value for <code>avalara_tax_code</code>. You can also <code>POST</code> to <code>/v1/products</code> like using a request like the one below:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/products/pr_6rpcQjKz7PexY2</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+   -d <span class="token keyword">metadata[avalara_tax_code]</span>=<span class="token string">AB230</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frelay%252Favalara" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Favalara" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

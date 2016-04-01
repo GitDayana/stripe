@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:iCalendar-Ruby
+BEGIN:VEVENT
+DESCRIPTION:
+DTSTAMP:20160329T234149
+LOCATION:The Artful Dodger\n10 Isabella St\, Toronto
+SEQUENCE:0
+SUMMARY:Stripe Toronto Meetup
+UID:2016-03-29T23:41:49+00:00_133270921@sitebox4.northwest.stripe.io
+URL:https://stripe.com/events/toronto-meetup-october-2014
+DTSTART:20141002T230000Z
+DTEND:20141003T010000Z
+ORGANIZER;CN="Stripe Community":mailto:stripe-community@stripe.com
+ATTENDEE;CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ-PARTICIPANT;X-NUM-
+ GUESTS=0;CN="Stripe Community":mailto:stripe-community@stripe.com
+END:VEVENT
+END:VCALENDAR

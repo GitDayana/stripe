@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en" id="blog" class="tablet mobile">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8" />
+
+<meta name="description" content="Follow the Stripe blog for product announcements, feature updates, new countries, and technical posts about payments." />
+
+<link rel="shortcut icon" href="../../favicon.ico">
+
+<link rel="apple-touch-icon-precomposed" href="../../img/apple-touch-icon/152x152.png?2" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../img/apple-touch-icon/120x120.png?2" />
+
+  <meta property="og:image" content="https://stripe.com/img/open-graph/logo.png?2" />
+  <link rel="image_src" type="image/png" href="../../img/open-graph/logo.png?2"/>
+
+<link rel="stylesheet" href="https://cloud.typography.com/711858/764882/css/fonts.css" />
+<link rel="stylesheet" href="../../assets/shared-site-aec6cecd411e700a28df6c9943d37801.css" />
+  <link rel="stylesheet" href="../../assets/blog-ada6c3a77cd627b09ac436c3a82dd49d.css">
+  <link rel="stylesheet" href="../../assets/blogposts-b9a9b6ffe0287dc66146bd753faba55d.css">
+
+
+<!--[if lt IE 9]>
+<script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+<![endif]-->
+
+<script src="../../assets/shared-site-68b6ee96f2b06c9ee69778bf0979b5fb.js"></script>
+  <script src="../../assets/blog-776e3ed92eef5022ed98688d349fd7af.js"></script>
+  <script src="../../assets/zoom-3a00e8ab5b6e3ee875d7dc1bbfe183c3.js"></script>
+
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../feed.rss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>    Stripe Blog
+</title>
+    <meta content="H7xkFUi9PX20o8Vtr-jOGs7AqBbx0KutZDZxRmL8KqKXlmHWUd54zUezn73xknKR9n1S_uC7f5WtLOYq4_GOOA==" name="csrf-token" />
+  </head>
+  <body id="" class="">
+    <div id="main">
+
+      <header id="main-header" class=''>
+  <div class="inner-col">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F" title="Stripe"></a></h1>
+    <nav>
+      <ul class="pages">
+        <li class="home"><a href="../../country?country=CH&amp;redirect=%252F">Home</a></li>
+        <li class="features"><a href="../../features">Features</a></li>
+        <li class='pricing'><a href="../../pricing">Pricing</a></li>
+        <li class="more">
+            <span>Products</span>
+            <ul>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fcheckout'>Checkout</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fsubscriptions'>Subscriptions</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Frelay'>Relay</a></li>
+              <li><a href='../../marketplaces'>Connect</a></li>
+              <li><a href='../../country?country=CH&amp;redirect=%252Fbitcoin'>Bitcoin</a></li>
+              <li><a class="new" href='../../atlas/index.html'>Atlas</a></li>
+
+              <li class='separator'><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+              <li><a href="1">Blog</a></li>
+              <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+              <li><a href="../../jobs/index.html">Jobs</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="external">
+        <li><a href="../../docs.1">Documentation</a></li>
+        <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+
+        <li class="button">
+          <a data-adroll-segment='submit_two' href="https://dashboard.stripe.com/login">Sign in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="main-content">
+        
+  <header id="blog-header">
+  	<h1><a href="1">Blog</a></h1>
+  	<p><a href="https://twitter.com/stripe">Follow Stripe on Twitter</a></p>
+  </header>
+  
+      <div id='blog-post--bitcoin-launch'>
+<article class='link'>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#christian">
+      <img src="../../img/about/team/christian@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fbitcoin-launch">Bitcoin Launch<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#christian">Christian Anderson</a>
+      <span>on</span> February 19, 2015
+    </p>
+  </header>
+  
+  <div class="content">
+    <a href="../../country?country=CH&amp;redirect=%252Fbitcoin">
+  
+Our Bitcoin support is now fully live. You can start accepting payments from anywhere with just a few lines of code. <span class="arrow">Learn more</span>
+
+</a>
+  </div>
+
+  <footer>
+    <p>
+      February 19, 2015
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--smarter-saved-cards'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#michelle">
+      <img src="../../img/about/team/michelle@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fsmarter-saved-cards">Smarter saved cards<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#michelle">Michelle Bu</a>
+      <span>on</span> January 21, 2015
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>
+Outdated card details are a big problem for online businesses. If your customers get a new card from their banks (or the number or expiry date changes), they have to manually re-add it to every service or the service stops working. It’s frustrating for customers, and loses paying customers for businesses needlessly.
+</p>
+
+<p>
+We’ve rolled out support for handling new cards nicely. Now, when you <a href="../../docs/api/index.html#create_customer">save a customer</a> with Stripe, their card will continue to work even if the physical card gets replaced by the bank. Stripe works directly with card networks so that your customers can continue using your service without interruption.
+</p>
+
+<p>
+There’s no extra work required, and this feature works with most MasterCard, Discover, and Visa cards—without this improvement, over half of the cards stored with Stripe in the last year would stop working by 2016 if they weren’t updated.
+</p>
+
+<pre><code>{
+  <span class="kwd">"id"</span>: <span class="string">"evt_5WmzN8V26JZQ1B"</span>,
+  <span class="kwd">"type"</span>: <span class="string">"customer.source.updated"</span>,
+  <span class="kwd">"object"</span>: <span class="string">"event"</span>,
+  <span class="kwd">"data"</span>: {
+    <span class="kwd">"object"</span>: {
+      <span class="kwd">"id"</span>: <span class="string">"card_0ggBPvHF5HODr5"</span>,
+      <span class="kwd">"object"</span>: <span class="string">"card"</span>,
+      <span class="kwd">"last4"</span>: <span class="string">"3110"</span>,
+      <span class="kwd">"exp_month"</span>: <span class="int">11</span>,
+      <span class="kwd">"exp_year"</span>: <span class="int">2017</span>,
+      <span class="kwd">"customer"</span>: <span class="string">"cus_8h42pwFc41m2"</span>,
+      <span class="meta">...</span>
+    },
+    <span class="kwd">"previous_attributes"</span>: {
+      <span class="kwd">"exp_year"</span>: <span class="int">2014</span>
+    }
+  },
+  <span class="meta">...</span>
+}</code></pre>
+
+<div class="image-center"><p>The <code><a href="../../docs/api/index.html#event_types">customer.source.updated</a></code> webhook will fire if your customers’ info changes.</p></div>
+
+<p>
+The saved card only stays working as long as the credit or debit card account stays open. Your customers won’t have to worry about being billed after they’ve canceled their subscription or after they’ve closed a credit card account.
+</p>
+
+<p>
+We hope this makes life easier for you and your users alike. If you have any questions or feedback, <a href="mailto:michelle.bu@stripe.com">get in touch</a>!
+</p>
+
+  </div>
+
+  <footer>
+    <p>
+      January 21, 2015
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--fraud-reporting'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#mlm">
+      <img src="../../img/about/team/mlm@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Ffraud-reporting">Machine learning for fraud detection<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#mlm">Michael Manapat</a>
+      <span>on</span> January 14, 2015
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>Using data from across the Stripe network, we’ve developed a machine learning system that evaluates charges in real-time and blocks those that are almost certainly fraudulent. By analyzing hundreds of different characteristics pertaining to each payment, these algorithms have already shielded businesses on Stripe from millions of attempted fraudulent charges.</p>
+
+<p>Starting today, you can help improve these models. By letting us know when we’ve missed a charge that you believe to be fraudulent, or declined one that you think is legitimate, you can help train a model that’s optimized for your business. This ensures that the protection you receive will get better over time.</p>
+
+<p>In practice, it’s very simple. In the dashboard, you can now:</p>
+
+<ul>
+
+  <li>Report and refund charges you believe to be fraudulent—just follow the “Report fraudulent payment” link when viewing a charge.</li>
+
+  <li>Mark as safe charges that Stripe blocked as suspected fraud. Charges we believe to be fraudulent will appear with a status of “Blocked” in the payments list and have a prominent message on the payment detail page. If you mark one of these charges as safe, you can retry it—we will not attempt to block it again.</li>
+
+</ul>
+
+<p>There’s also equivalent functionality available in the API—check out <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">the documentation</a> for more details.</p>
+
+<p>Over time, businesses on Stripe should not have to think about fraud and disputes. By enabling this feedback loop—between you and other businesses built on Stripe on the one hand, and our fraud detection infrastructure on the other—we’re confident that we’ll be able to deliver significant improvements in the future.</p>
+
+<p>If you have any feedback or suggestions on these tools, or other thoughts about how we could better help you block fraud, please <a href="mailto:michael.manapat@stripe.com">drop me a line</a>.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      January 14, 2015
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--optimizing-dispute-management'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#jason">
+      <img src="../../img/about/team/jason@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Foptimizing-dispute-management">Better disputes<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#jason">Jason Eberle</a>
+      <span>on</span> January 12, 2015
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>
+  Disputed payments—"chargebacks"—can be awkward and time-consuming. We’re taking advantage of the data we’ve seen across millions of transactions to make handling disputes easier and quicker, and to maximize the chance that you win disputes.
+</p>
+
+<div class="feature-list">
+
+  <h3><strong class="new"><span>New</span></strong>Enumerated evidence fields</h3>
+  <p>
+    Previously, you could only upload evidence for disputes as a string or a single file. We’ve learned that separating the type of evidence can come in handy, and you can now use <a href="../../help/dispute-types">typed fields</a> such as <code>product_description</code>, <code>shipping_documentation</code>, or <code>customer_communication</code> in the API. (You can use the Dashboard to submit this data as well.)
+  </p>
+
+  <h3><strong class="new"><span>New</span></strong>File uploads through the API</h3>
+  <p>
+    Before now, we only accepted evidence documents as a PDF through our dashboard. Based on your feedback, you can now upload PDFs, JPGs, or PNGs <a href="../../docs/guides/file-upload">via the API</a> or in the Dashboard.
+  </p>
+
+  <h3><strong class="update"><span>Update</span></strong>Disputes in the Dashboard</h3>
+  <p>
+    We’ve also updated the evidence form in the Dashboard to take full advantage of these API changes. The new interface adapts to help you submit the most relevant evidence to win the dispute. For example, if a customer claims a product wasn’t received, the form will ask for shipping info if it’s a physical product or server access logs if it’s a digital service.
+  </p>
+</div>
+
+<div class="image-center">
+  <a href="../../img/blog/posts/disputes/evidence-form@2x.png" class="zoom img" maxSize="700x679"><img width="500" src="../../img/blog/posts/disputes/evidence-form.png" data-hires="true"></a>
+</div>
+
+<p>
+  As much as we’d like these changes to be helpful if you face a dispute, we’re working to reduce disputes for all our users—we actually hope you have to use these tools as little as possible. If you’ve got any feedback, <a href="mailto:jason.eberle@stripe.com">let us know</a>.
+</p>
+
+  </div>
+
+  <footer>
+    <p>
+      January 12, 2015
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--team-activity-in-the-dashboard'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#jack">
+      <img src="../../img/about/team/jack@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fteam-activity-in-the-dashboard">Track team activity in the dashboard<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#jack">Jack Flintermann</a>
+      <span>on</span> January 7, 2015
+    </p>
+  </header>
+  
+  <div class="content">
+    
+<p>
+We’ve added two new tools to the <a href="https://dashboard.stripe.com">Dashboard</a> to help you keep track of activity on your account.
+</p>
+
+<div class="image-center">
+  <a href="../../img/blog/posts/security-history/screenshot@2x.png" class="zoom img" maxSize="711x549"><img width="400" src="../../img/blog/posts/security-history/screenshot.png" data-hires="true"></a>
+</div>
+
+<p>
+First, it’s now easier to see activity on your account (and monitor for potentially unauthorized actions) with the <a href="https://dashboard.stripe.com/security_history">security history overview</a>. Your overview will show recent actions from all of your team members—from password and bank account changes to suspicious logins or data exports.
+</p>
+
+<div class="image-center">
+  <a href="../../img/blog/posts/security-history/screenshot2.png" class="zoom img" maxSize="605x397"><img width="400" src="../../img/blog/posts/security-history/screenshot2.png"></a>
+</div>
+
+<p>
+Second, you can now see in your <a href="https://dashboard.stripe.com/logs">logs</a> which of your team members performed any given action through the Dashboard. This should both increase security and reduce confusion when multiple team members are managing an account.
+</p>
+
+<p>
+As always, please <a href="mailto:support@stripe.com">contact us</a> if you’re ever worried that your account has been compromised. And of course, if you have any feedback, feel free to <a href="mailto:jack.flintermann@stripe.com">reach out</a>!
+</p>
+
+  </div>
+
+  <footer>
+    <p>
+      January 7, 2015
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--the-interview'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#patrick">
+      <img src="../../img/about/team/patrick@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fthe-interview">The Interview<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#patrick">Patrick Collison</a>
+      <span>on</span> December 24, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>Starting at 10am Pacific Time this morning, you can watch <a href="http://en.wikipedia.org/wiki/The_Interview_(2014_film)">The Interview</a> at <a href="https://www.seetheinterview.com">SeeTheInterview.com</a>, powered by Stripe. The Interview was originally intended to be broadly available in theaters, but its release was curtailed after a number of distribution partners backed out.</p>
+
+ <p> We’re happy to be involved because we think it’s important that the internet remains an impartial
+ platform. We’re proud to work with organizations defending digital
+ freedoms such as the <a href="https://www.eff.org">Electronic Frontier Foundation</a> and the <a href="https://freedom.press/about">Freedom of
+   the Press Foundation</a>. We’ve <a href="../../country?country=CH&amp;redirect=%252Fblog%252Ftowards-transparency">partnered</a> with Chilling Effects to prevent
+ takedown notices becoming a censorship tool and <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fnetwork-neutrality">supported net
+   neutrality</a> to try to keep businesses on a level playing field.</p>
+
+ <p> We don’t always endorse what businesses sell through Stripe, but we do
+ think it’s critical that we and our peers don’t act as gatekeepers for
+ what is and isn’t acceptable content.</p>
+
+ <p> Online freedom isn’t automatic, and it’s only through active effort
+ that the internet will stay an open platform for creativity and
+ innovation. We take our role seriously.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      December 24, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--libscore'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Flibscore">Libscore<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> December 16, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    <p> When we announced the <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fstripe-open-source-retreat">Open Source retreat</a>,
+we'd pictured it primarily as giving people the opportunity to work on
+projects they'd already been meaning to do. However, the environment
+we provided also became a place for people to come up with new ideas
+and give them a try. One of these ideas, <a
+ href="http://libscore.com">Libscore</a>, is launching publicly today. </p>
+
+<!--<div class="image-center">
+<a href="http://libscore.com"><img src="/img/blog/posts/libscore/libscore.png" width="284" height="46" class="no-border icon" data-hires="true" /></a>
+</div>-->
+
+
+<div class="image-center">
+<a href="http://libscore.com"><img src="../../img/blog/posts/libscore/site.png" width="373" height="361" class="no-border icon" data-hires="true" /></a>
+<p>Top libraries used across the web.</p>
+</div>
+
+<p> Libscore, built by <a href="https://twitter.com/shapiro">Julian
+  Shapiro</a> with support from both us and <a href="https://www.digitalocean.com/">Digital Ocean</a>,
+  makes it possible for frontend developers to see where their work is
+  being used. The service periodically crawls the top million
+  websites, determines the JavaScript libraries in use on each, and
+  makes that data publicly queriable. </p>
+
+<p> For example, wondering about MVC framework popularity? <a href="http://libscore.com/#Backbone">Backbone</a> is
+  used on about 8,000 of the top million sites while <a
+  href="http://libscore.com/#Ember">Ember</a> appears on only 185. You
+  can also query which libraries are used on <a
+  href="http://libscore.com/#Stripe.com">your favorite site</a>, or
+  view some precompiled <a href="http://libscore.com/data.html">aggregates</a>. </p>
+
+<hr>
+
+<p> We were attracted to Libscore because it sounded like internet
+  infrastructure that should exist. Sometimes—as with our support
+  for <a
+  href="../../country?country=CH&amp;redirect=%252Fblog%252Fstripe-alipay">Alipay</a>—we get to
+  build such components directly; sometimes, it seems better to support
+  something external—as with <a href="https://www.stellar.org/">Stellar</a>. If
+  you have other ideas, please <a href="mailto:open-source-retreat@stripe.com">let us know</a> (or work on them <a href="../../jobs/index.html">here</a>!). </p>
+
+  </div>
+
+  <footer>
+    <p>
+      December 16, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--scaling-email-transparency'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">
+      <img src="../../img/about/team/gdb@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fscaling-email-transparency">Scaling email transparency<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#gdb">Greg Brockman</a>
+      <span>on</span> December 8, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    <p> In February 2013, we blogged about <a
+href="../../country?country=CH&amp;redirect=%252Fblog%252Femail-transparency">email
+transparency</a> at Stripe. Since then a number of other companies
+have implemented their own versions of it (which a <a href="http://blog.frontapp.com/spreading-email-transparency-or-why-you-should-share-your-inbox-with-your-team/">few</a> <a
+href="http://bjk5.com/post/71887196490/email-transparency-at-khan-academy">have</a>
+<a
+href="http://joel.is/post/69066438261/how-we-handle-team-emails-at-our-startup-defaulting-to">talked</a>
+about publicly). We often get asked whether email transparency is
+still around, and if so, how we've scaled it. </p>
+
+<p> Email transparency continues to be one important tool for state
+transfer at Stripe. The vast majority of Stripe email (<a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F3#common-exceptions">excluding</a> particularly
+sensitive classes of email or threads where a participant has a strong
+expectation of privacy) remains publicly available through the
+company. </p>
+
+<p> Today we're publishing two key components that have allowed us to
+  scale it this far: our list manager tool and updated internal
+  documentation reflecting what we've learned over the past year and a
+  half. Hopefully these will make it easier for others to run email
+  transparency at their own organizations.
+</p>
+
+<h2> Gaps </h2>
+
+<p> In the time since our first post, we've grown our mailing list
+count almost linearly with headcount: from 40 employees and 119
+mailing lists in February 2013 to now 164 people and 428 lists. A
+plurality are project lists (<tt>sys@</tt>, <tt>sys-archive@</tt>, <tt>sys-bots@</tt>, <tt>sys-ask@</tt>),
+but there's also a long tail on topics ranging from
+country operations (<tt>australia@</tt>) to ideas
+for things Stripe should try (<tt>crazyideas@</tt>). </p>
+
+<p> We use Google Groups for our email list infrastructure. Today
+we're releasing the web interface we've built on Google's APIs to make
+managing many list subscriptions (and <a href="../../country?country=CH&amp;redirect=%252Fblog%252Femail-transparency#filters">associated filters</a>) easy. This interface, called <a href="https://github.com/stripe/gaps">Gaps</a>, lets you do things like: </p>
+
+<ul>
+<li> Quickly subscribe to or unsubscribe from a list. </li>
+<li> View your organization's lists (categorized by topic), and which
+you're subscribed to (including indirect subscriptions through other
+lists). </li>
+<li> Get notifications when new lists are created. </li>
+<li> Generate and upload GMail filters. </li>
+</ul>
+
+<p> Here's a quick sample of what Gaps looks like: </p>
+
+<div class="image-center">
+<a href="../../img/blog/posts/scaling-email-transparency/gaps.png" class="zoom img" maxSize="777x228">
+<img style="margin: 0 auto; display:block" width="550px" src="../../img/blog/posts/scaling-email-transparency/gaps.png" />
+</a>
+</div>
+
+<p> <a href="https://github.com/stripe/gaps">Check it out</a> and <a href="mailto:oss@stripe.com">let us know</a>
+what you think! </p>
+
+<h2> Updated internal documentation </h2>
+
+<p> Scaling email transparency has required active cultural effort and
+adaptation. As our team grew, we'd notice that formerly good patterns
+could turn sour. For example, at first email transparency would
+improve many conversations by letting people drop in with helpful
+tidbits. But with a larger team, having many people jumping into a
+conversation would instead grind the thread to a halt. </p>
+
+<p> As we've identified cases where email transparency didn't scale
+well, we've made changes to our culture. Below is our updated internal
+documentation on how we approach email transparency. It embodies what
+we've learned about how to make email transparency work at an
+organization of our size: </p>
+
+<blockquote>
+
+<h2> Email transparency (from our internal wiki) </h2>
+
+<p> One of Stripe's core strategies is <a href="http://www.quora.com/What-is-the-engineering-interview-process-like-at-Stripe">hiring
+great people</a>
+and then making sure they have enough information to make <a href="http://www.quora.com/Does-Stripe-have-product-managers-or-do-engineers-manage-the-products-themselves">good local
+decisions</a>. Email transparency is one system that has helped make
+this possible. As with any rule at Stripe, you should consider the
+recommendations in this document to be strong <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F3#common-exceptions">defaults</a>,
+which you should just override if they don't make sense in a
+particular circumstance. </p>
+
+<h2> How it works </h2>
+
+<p> Email transparency is fairly simple: make your emails transparent
+by CCing a list, and make it easy for others to be transparent by
+observing the responsibilities below. </p>
+
+<p> The main mechanisms of email transparency are the
+specially-designated <a
+href="../../country?country=CH&amp;redirect=%252Fblog%252Femail-transparency#archive-list">archive</a> lists, to
+which you should CC all mail that would normally be off-list, but only
+because of its apparent irrelevance rather than out of any particular
+desire for secrecy. The goal isn't to share things that would
+otherwise be secret: it's to unlock the wealth of information that
+would otherwise be accidentally locked up in a few people's inboxes. </p>
+
+<p> In general, if you are debating including an archive list, you
+should include it. This includes internal P2P email which you would
+normally leave off a list, emails to vendors, and scheduling
+email. Don't be afraid to send "boring" email to an archive list —
+people have specifically chosen to subscribe to that list. You should
+expect most people will autoarchive this list traffic (hence the
+name!), and then dip into it as they prefer. </p>
+
+<p> If you're new to it, email transparency always feels a bit weird
+at first, but it doesn't take long to get used to it. </p>
+
+<h2> What's the point? </h2>
+
+<p> Email transparency is something few other organizations try to
+do. It's correspondingly on us to make sure we have really good
+indicators for how it's valuable. Here's a sample of things people
+have found useful about email transparency: </p>
+
+<ul>
+  <li>
+    Provides the full history on interactions that are relevant to
+    you. If you're pulled into something, you can always pull up the
+    relevant state. This is especially useful for external
+    communications with users or vendors.
+  </li>
+
+  <li>
+    Provides a way for serendipitous interactions to happen — someone
+    who has more state on something may notice what's happening and
+    jump in to help (subject to the limitations about jumping in).
+  </li>
+
+  <li> Lets you keep up with things going on at various other parts of
+    Stripe, at whatever granularity you want. This reduces siloing,
+    makes it easier to function as a remote (and even just know what
+    we're working on), and generally increases the feeling of
+    connectedness.  </li>
+
+  <li> Requires ~no additional effort from the sender.  </li>
+
+  <li>
+    Makes conversations persistent and linkable, which is particularly
+    useful for new hires.
+  </li>
+
+  <li>
+    Forces us to think about how we're segmenting information — if
+    you're tempted to send something off-list, you should think
+    through why.
+  </li>
+
+  <li>
+    Makes spin-up easier by immersing yourself in examples of Stripe
+    tone and culture, and enabling you to answer your own questions
+    via the archives.
+  </li>
+
+  <li>
+    Helps you learn how different parts of the business work.
+  </li>
+</ul>
+
+<h2> Reader responsibilities </h2>
+
+<p> Email transparency cuts two ways. Being able to see the raw feed
+  of happenings at Stripe as they unfold is awesome, but it also
+  implies an obligation to consume responsibly. Overall, threads on an
+  archive list merit a level of <a href="http://en.wikipedia.org/wiki/Civil_inattention">civil inattention</a>
+  — you should feel free to read it, but be careful about adding your
+  own contributions. </p>
+
+
+<ul>
+<li> <b>Talk to people rather than silently judging.</b> If you see something on an email list that rubs you the wrong way or that you think doesn't make sense (e.g. "why are we working on that?", "that email seems overly harsh/un-Stripelike"), you should talk to that person directly (or their manager, if there's a reason you can't talk to them about it). Remember that we hire smart people, and if something seems off you're likely missing context or a view of the larger picture. No one wants their choice to send email on-list to result in a bunch of people making judgements without telling them, or chattering behind their back — if that can happen, then people will be less likely to CC a list in the future. </li>
+
+<li> <b>Avoid jumping in.</b> A conversation on an archive list should be considered a private conversation between the participants. When people jump into the thread, it often grinds to a halt and nothing gets done. There will be some very rare occasions (e.g. if you have some factual knowledge the participants probably don't) where it's ok to lurk in to the thread, but in practice these should be very rare. By convention, the people on the thread may ignore your email; don't take it personally — it's just a way of making sure that email transparency doesn't accidentally make email communication harder. Knowing when to jump in is an art, and when in doubt, don't. </li>
+
+<li> <b>Don't penalize people for choosing to CC a list.</b> Ideally, people are writing their emails exactly as they would if they were off-list. So be cognizant about creating additional overhead for people because they chose to CC the list. There may be typos or things that you're wondering about or don't make sense. If you're *concerned* about something being actively bad, then you should talk to the person, but if it's something small (e.g. "there's a typo", "this tone isn't Stripelike", "this conversation seems like a waste of time"), you should trust that there's either a reason, or the person's manager will be on the lookout to help them (especially if they're new). </li>
+
+<li> <b> Help others live by the above responsibilities. </b> The only way we can preserve email transparency is by collectively nudging each other onto the right course. Whether it's poking someone to CC a list, or telling someone to stop venting about an email but just go talk to the author, the person responsible for fixing the shortfalls you see is the same as the <a href="http://www.whoownsmyavailability.com/">one responsible for your availability</a>. </li>
+</ul>
+
+<h2> Common scenarios/FAQs </h2>
+
+<ul>
+  <li> <b> I don't mind people being able to read this boring scheduling email, but I don't think it's worth anyone's time to read. </b> You should still send it to an archive list! Archive lists are intended to be the feed of everything going on within a particular team — let the people who are subscribing decide if it's worth their time or not. </li>
+
+  <li> <b>I have a small joke on this thread. Should I CC it to the list, or just send it to one person (or a small set of people)?</b> Small jokes are <a href="http://www.youtube.com/watch?v=oHg5SJYRHA0">good</a>! The main cost is potentially derailing the relevant thread. So generally, if it's a productive, focused thread, just send your joke off-list, but if it's already fairly broad, then you should feel free to send the joke publicly. </li>
+
+  <li> <b>I feel like I need to write my email for the broad audience that might be reading it, rather than the one person it's actually meant for.</b> The only change between how you write emails for email transparency and how you would write them privately to other Stripes should be that one has a CC. That is, if you feel a need to rewrite your emails for the audience, then that likely indicates a bug in the organization we should fix. If you notice yourself having this tendency, talk to gdb — we should be able to shift the norms of the organization so this isn't a problem. </li>
+
+  <li> <b>How do we make sure this respects outside people's expectations?</b> In many ways, email transparency is just a more extreme version of what happens at other organizations — since it's opt-in, all of the emails are human-vetted to be shareable. Email transparency is mostly about changing the default thresholds. As a corollary, if someone requests that their email not be shared, then certainly respect their request. </li>
+</ul>
+
+<h2 id="common-exceptions"> Common exceptions </h2>
+
+<p> Like any tool, email transparency has its limitations. Since it's
+in many ways a one-way communication system, email transparency is bad
+for sensitive situations where people may react strongly. It's also
+important to preserve people's privacy. The following is a description
+of the classes of things which you may not see on an archive list. </p>
+
+<ul>
+  <li> Anything personnel related (e.g. performance). </li>
+  <li> Some recruiting conversations, especially during closing or when people are confidentially looking around. People's decision-making process at that stage is usually quite personal, and even if people have a hard time picking Stripe, we want to make sure that they start with a blank slate. </li>
+  <li> Communications of mixed personal and professional nature (e.g. recruiting a friend). </li>
+  <li> Early stage discussions about topics that will affect Stripes personally (e.g. changing our approach to compensation). </li>
+  <li> Some particularly sensitive partnerships. </li>
+</ul>
+</blockquote>
+
+<p> As we said in the original email transparency post, it's hard to
+  know how far it will scale. That doesn't bother us much: we continue
+  to do <a href="http://paulgraham.com/ds.html">unscalable things</a>
+  until they break down. The general sentiment at Stripe is that email
+  transparency adds a lot of value, and it seems we'll keep being able
+  to find tweaks to keep it going. </p>
+
+<p> Hopefully these components will help you with email transparency
+  in your own organization. If you end up implementing something
+  similar, I'd love to <a href="mailto:gdb@stripe.com">hear about it</a>! </p>
+
+  </div>
+
+  <footer>
+    <p>
+      December 8, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--pagerduty-analytics-with-pd2pg'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#mark">
+      <img src="../../img/about/team/mark@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpagerduty-analytics-with-pd2pg">PagerDuty analytics with Postgres<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#mark">Mark McGranaghan</a>
+      <span>on</span> December 2, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>We’re open-sourcing the tool we use to collect and analyze on-call data from <a href="https://pagerduty.com">PagerDuty</a>. We use <a href="https://github.com/stripe/pd2pg">pd2pg</a> to improve the on-call experience for engineers at Stripe, and we think it’ll be useful for your teams too.</p>
+
+<h2>PagerDuty data in Postgres</h2>
+
+<p>PagerDuty is an important source of data about how services behave in production and the on-call load experienced by engineers. This data has been instrumental for managing and evolving our on-call rotations: over five months, we’ve reduced on-call load for our systems team by about 75%.</p>
+
+<p>We import data from the <a href="https://developer.pagerduty.com/documentation/rest">PagerDuty API</a> into a Postgres database using pd2pg, where we can use the full power of Postgres’ SQL queries.</p>
+
+<p>Here’s how you import your data:</p>
+
+<pre><span class="meta">$</span> <span class="kwd">export</span> PAGERDUTY_SUBDOMAIN=<span class="string">"your-company"</span>
+<span class="meta">$</span> <span class="kwd">export</span> PAGERDUTY_API_KEY=<span class="string">"..."</span>
+<span class="meta">$</span> <span class="kwd">export</span> DATABASE_URL=<span class="string">"postgres://..."</span>
+<span class="meta">$</span> bundle exec ruby pd2pg.rb</pre>
+
+<p>The script incrementally updates existing data, so it’s trivial to refresh your database periodically. (It also fetches historical data from your account, so you can get started with long-term analysis right away.)</p>
+
+<h2>Querying PagerDuty data with SQL</h2>
+
+<p>You can start analyzing and exploring your PagerDuty data once it’s in the database with <code>psql</code>:</p>
+
+<pre><span class="meta">$</span> psql <span class="string">$DATABASE_URL</span>
+<span class="meta">></span> <span class="kwd">\d</span> incidents
+           Column            <span class="meta">|</span>           Type           <span class="meta">|</span> Modifiers 
+<span class="meta">-----------------------------+--------------------------+-----------</span>
+ id                          <span class="meta">|</span> character varying        <span class="meta">|</span> not null
+ incident_number             <span class="meta">|</span> integer                  <span class="meta">|</span> not null
+ created_at                  <span class="meta">|</span> timestamp with time zone <span class="meta">|</span> not null
+ html_url                    <span class="meta">|</span> character varying        <span class="meta">|</span> not null
+ incident_key                <span class="meta">|</span> character varying        <span class="meta">|</span> 
+ service_id                  <span class="meta">|</span> character varying        <span class="meta">|</span> 
+ escalation_policy_id        <span class="meta">|</span> character varying        <span class="meta">|</span> 
+ trigger_summary_subject     <span class="meta">|</span> character varying        <span class="meta">|</span> 
+ trigger_summary_description <span class="meta">|</span> character varying        <span class="meta">|</span> 
+ trigger_type                <span class="meta">|</span> character varying        <span class="meta">|</span> not null
+ 
+<span class="meta">></span> select count(*) from incidents;
+ count 
+-------
+ 3466
+<span class="meta">(1 row)</span></pre>
+
+<p>As an example of a real query, here’s how you’d count the number of incidents per service over the past 28 days:</p>
+
+<pre><span class="kwd">select</span>
+  services.name,
+  <span class="kwd">count</span>(incidents.id)
+<span class="kwd">from</span>
+  incidents,
+  services
+<span class="kwd">where</span>
+  incidents.created_at > <span class="kwd">now</span>() - <span class="string">'28 days'</span>::<span class="kwd">interval</span> <span class="kwd">and</span>
+  incidents.service_id = services.id
+<span class="kwd">group by</span>
+  services.name
+<span class="kwd">order by</span>
+  <span class="kwd">count</span>(incidents.id) <span class="kwd">desc</span></pre>
+
+<h2>How we use pd2pg at Stripe</h2>
+
+<ul>
+
+<li><b>Weekly team report</b>: Our sys team reviews a <a href="https://github.com/stripe/pd2pg/blob/master/examples/team-detail.sql">detailed on-call report</a> each week. It covers all alerts sent by either a team-owned service or fielded by an engineer (which can include escalations from other team’s services). This detailed report helps us understand the types of incidents we’re seeing so we can prevent or respond to them better.</li>
+
+<li><b>Per-service incident counts</b>: Aggregates like <a href="https://github.com/stripe/pd2pg/blob/master/examples/incidents-per-service.sql">per-service incident counts</a> help give us a high-level overview. (They’re not actionable results in themselves, but do show us high-load services we should review further.)</li>
+
+<li><b>Interrupted hours metric</b>: A common way to measure on-call load is counting the number of incidents over a period a time. Sometimes, this over-represents issues that cause several related alerts to fire at the same time (which aren’t actually more costly than a single alert firing). To get a more accurate view of on-call load, we calculate an <a href="https://github.com/stripe/pd2pg/blob/master/examples/interrupted-hours-per-week.sql">"interrupted hours" metric</a> that counts the intervals in which an engineer receives one or more pages. This metric provides pretty good insight into real on-call load by suppressing noise from issues that result in multiple pages and more heavily weighting incidents with escalations.</li>
+
+<li><b>On-hours vs. off-hours alerts</b>: Pages during the work day are less costly than ones that wake an engineer up at 3am on a Sunday. So, we look at the metrics discussed above broken down by <a href="https://github.com/stripe/pd2pg/blob/master/examples/off-hours-incidents-per-service.sql">on-hours vs. off-hours incidents</a>.</li>
+
+<li><b>Escalation rate analysis</b>: Frequent or repeated escalations may indicate that either that responders aren’t able to get to a computer, or they aren’t prepared to deal with the issue. Some escalations are expected, but keeping an eye on <a href="https://github.com/stripe/pd2pg/blob/master/examples/escalation-rate-per-service.sql">escalation rates across services</a> helps us keep an eye out for organizational bugs.</li>
+
+<li><b>Individual on-call load</b>: Being primary on-call is a major
+responsibility, and high on-call load can cause burnout in engineers.
+To help understand on-call load at the individual level, we can perform <a href="https://github.com/stripe/pd2pg/blob/master/examples/individual-detail.sql">user-specific variants</a> of the above queries.</li>
+
+</ul>
+
+<hr />
+
+<p>
+We’d love to hear how you use <a class="github" href="https://github.com/stripe/pd2pg">pd2pg</a>. If you’ve got any feedback, please <a href="mailto:mark@stripe.com">get in touch</a> or send us a PR.</p>
+
+  </div>
+
+  <footer>
+    <p>
+      December 2, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+      <div id='blog-post--four-new-hadoop-projects'>
+<article class=''>
+
+  <header>
+    <a class="picture" href="../../country?country=CH&amp;redirect=%252Fabout#colin">
+      <img src="../../img/about/team/colin@2x.jpeg">
+    </a>
+    <h1><a href="../../country?country=CH&amp;redirect=%252Fblog%252Ffour-new-hadoop-projects">Open-sourcing tools for Hadoop<br /></a></h1>
+    <p>
+      <a class="author" href="../../country?country=CH&amp;redirect=%252Fabout#colin">Colin Marc</a>
+      <span>on</span> November 21, 2014
+    </p>
+  </header>
+  
+  <div class="content">
+    <p>
+Stripe’s batch data infrastructure is built largely on top of <a href="http://hadoop.apache.org">Apache Hadoop</a>. We use these systems for everything from fraud modeling to business analytics, and we’re open-sourcing a few pieces today:</p>
+
+
+<h3><a class="github" href="https://github.com/stripe/timberlake">Timberlake</a></h3>
+
+<p>
+Timberlake is a dashboard that gives you insight into the Hadoop jobs running on your cluster. <a href="https://twitter.com/jeffbalogh">Jeff</a> built it as a replacement for the web interfaces currently provided by <a href="http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html">YARN</a>’s ResourceManager and MRv2’s JobHistory server, and it has some features we’ve found useful:
+
+<ul>
+  <li>Map and reduce task waterfalls and timing plots</li>
+  <li>Scalding and Cascading awareness</li>
+  <li>Error tracebacks for failed jobs</li>
+</ul>
+
+
+<h3><a class="github" href="https://github.com/stripe/brushfire">Brushfire</a></h3>
+
+<p>
+<a href="https://twitter.com/avibryant">Avi</a> wrote a Scala framework for distributed learning of ensemble decision tree models called Brushfire. It’s inspired by Google’s <a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36296.pdf">PLANET</a>, but built on Hadoop and Scalding. Designed to be highly generic, Brushfire can build and validate random forests and similar models from very large amounts of training data.
+</p>
+
+
+<h3><a class="github" href="https://github.com/stripe/sequins">Sequins</a></h3>
+
+<p>
+Sequins is a static database for serving data in Hadoop’s <a href="https://hadoop.apache.org/docs/current/api/org/apache/hadoop/io/SequenceFile.html">SequenceFile</a> format. I wrote it to provide low-latency access to key/value aggregates generated by Hadoop. For example, we use it to give our API access to historical fraud modeling features, without adding an online dependency on HDFS.
+</p>
+
+
+<h3><a class="github" href="https://github.com/stripe/herringbone">Herringbone</a></h3>
+
+<p>
+At Stripe, we use <a href="http://parquet.incubator.apache.org/">Parquet</a> extensively, especially in tandem with <a href="http://www.cloudera.com/content/cloudera/en/products-and-services/cdh/impala.html">Cloudera Impala</a>. <a href="https://twitter.com/DanielleSucher">Danielle</a>, Jeff, and Avi wrote Herringbone (a collection of small command-line utilities) to make working with Parquet and Impala easier.
+</p>
+
+<hr />
+
+<p>
+If you’re interested in trying out these projects, there’s more info on how to use them (and how they were designed) in the READMEs. If you’ve got feedback, please <a href="mailto:colin@stripe.com">get in touch</a> or send us a PR.
+</p>
+
+<p>
+Happy Hadooping!
+</p>
+
+  </div>
+
+  <footer>
+    <p>
+      November 21, 2014
+    </p>
+  </footer>
+  
+</article>
+</div>
+
+
+
+    <footer id="blog-footer">
+    <nav>
+
+      <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F4" class="older-posts">Older posts<!--Page 4--></a>
+
+      <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F2" class="newer-posts">Newer posts<!-- Page 2--></a>
+
+    </nav>
+  </footer>
+
+
+
+        <footer id="main-footer" class="">
+  <div class='inner-col'>
+    <p>&copy; Stripe</p>
+
+      <div class="country-selector">
+          <a class="select">
+              <span>
+                  <img width="23" height="17" alt="Switzerland" src="../../img/flags/ch.png" data-hires="true" />
+                  <strong>Switzerland</strong>
+              </span>
+          </a>
+
+          <ul>
+              <li >
+                <a href="../../country?country=AU&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Australia" src="../../img/flags/au.png" data-hires="true" />
+                  <span>Australia</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=CA&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Canada" src="../../img/flags/ca.png" data-hires="true" />
+                  <span>Canada</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=DK&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Denmark" src="../../img/flags/dk.png" data-hires="true" />
+                  <span>Denmark</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=FI&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Finland" src="../../img/flags/fi.png" data-hires="true" />
+                  <span>Finland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=GB&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="United Kingdom" src="../../img/flags/gb.png" data-hires="true" />
+                  <span>United Kingdom</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=IE&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Ireland" src="../../img/flags/ie.png" data-hires="true" />
+                  <span>Ireland</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=NO&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Norway" src="../../img/flags/no.png" data-hires="true" />
+                  <span>Norway</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=SE&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Sweden" src="../../img/flags/se.png" data-hires="true" />
+                  <span>Sweden</span>
+                </a>
+              </li>
+              <li >
+                <a href="../../country?country=US&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="United States" src="../../img/flags/us.png" data-hires="true" />
+                  <span>United States</span>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=AT&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Austria" src="../../img/flags/at.png" data-hires="true" />
+                  <span>Austria</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=BE&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Belgium" src="../../img/flags/be.png" data-hires="true" />
+                  <span>Belgium</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=BR&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Brazil" src="../../img/flags/br.png" data-hires="true" />
+                  <span>Brazil</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=FR&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="France" src="../../img/flags/fr.png" data-hires="true" />
+                  <span>France</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=DE&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Germany" src="../../img/flags/de.png" data-hires="true" />
+                  <span>Germany</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=IT&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Italy" src="../../img/flags/it.png" data-hires="true" />
+                  <span>Italy</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=JP&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Japan" src="../../img/flags/jp.png" data-hires="true" />
+                  <span>Japan</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=LU&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Luxembourg" src="../../img/flags/lu.png" data-hires="true" />
+                  <span>Luxembourg</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=MX&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Mexico" src="../../img/flags/mx.png" data-hires="true" />
+                  <span>Mexico</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=NL&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Netherlands" src="../../img/flags/nl.png" data-hires="true" />
+                  <span>Netherlands</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=PT&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Portugal" src="../../img/flags/pt.png" data-hires="true" />
+                  <span>Portugal</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=SG&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Singapore" src="../../img/flags/sg.png" data-hires="true" />
+                  <span>Singapore</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=ES&amp;redirect=%252Fblog%252Fpage%252F3" >
+                  <img width="23" height="17" alt="Spain" src="../../img/flags/es.png" data-hires="true" />
+                  <span>Spain</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+              <li class="beta">
+                <a href="../../country?country=CH&amp;redirect=%252Fblog%252Fpage%252F3" class="selected">
+                  <img width="23" height="17" alt="Switzerland" src="../../img/flags/ch.png" data-hires="true" />
+                  <span>Switzerland</span>
+                    <em>Beta</em>
+                </a>
+              </li>
+            <li class='notify-signup-link'>
+              <a href='../../pt'>
+                Stripe is expanding, more countries <span class='arrow'>coming soon</span>
+              </a>
+            </li>
+          </ul>
+
+      </div>
+
+    <ul>
+      <li><a href="../../pricing">Pricing</a></li>
+      <li><a href="1"><span>Blog</span></a></li>
+      <li><a href="https://status.stripe.com"><span>API Status</span></a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+      <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fopen-source">Open Source</a></li>
+      <li><a href="../../country?country=CH&amp;redirect=%252Fcontact">Contact</a></li>
+      <li><a href="../../terms">Privacy&nbsp;&amp;&nbsp;Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+      </div>
+
+    </div>
+
+    
+
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <script type="text/javascript">
+      Analytics.viewed("blog");
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Getting Paid</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="_c8HkDue-TecN_FfdDawxz-qJI2VoXko3gbpea4B9Et15QJTIv28h28nq48qTAxMBxfeZYTKrRAXHH4VLwxQ0Q==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../security">Security</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="selected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Getting Paid</h1>
+  </header>
+  <article>
+    <h1 id="when-and-how-do-i-get-paid">When and how do I get paid?</h1>
+
+    <p>Stripe will transfer funds to your bank account based on the
+<a href="https://dashboard.stripe.com/account/transfers">schedule listed in your dashboard</a>.
+For example, “Daily — 7 day rolling basis” would mean that charges processed on March 1st would be grouped
+together and deposited in your account on March 8th, and “Weekly (Monday) — 2 business day rolling basis” would mean that charges processed before a given Thursday will be grouped together and deposited in your account on the following Monday.</p>
+
+    <p>Your transfer schedule can be <a href="https://dashboard.stripe.com/account/transfers">configured</a> to simplify your accounting. We currently offer the option for funds to be transferred daily, weekly (on a custom day of the week), or monthly (on a custom day of the month).</p>
+
+    <p>You can see all transfers Stripe attempts to your bank account <a href="https://dashboard.stripe.com/transfers/overview">on your dashboard</a>.</p>
+
+    <h1 id="stripe-says-a-transfer-has-been-submitted-but-i-havent-received-the-money-in-my-bank-account-yet--whats-going-on">Stripe says a transfer has been submitted, but I haven’t received the money in my bank account yet.  What’s going on?</h1>
+
+    <p>Stripe submits transfers every day, but most banks will only process the transfer on business days. This means that if Stripe sent you money on a holiday or a weekend, you will probably see the money in your bank the next day your bank is open. For transfers sent on business days, you should see the money for it by the next day.</p>
+
+    <p>If the transfer was submitted on a business day and you don’t see the money in your bank account within a couple of days, this probably means the transfer failed. Banks take 3-5 business days to inform Stripe about transfers that did not go through, at which time we e-mail you about the issue and how to fix it.</p>
+
+    <h1 id="i-just-got-a-notification-that-a-transfer-to-my-bank-account-failed-what-does-this-mean-and-what-should-i-do">I just got a notification that a transfer to my bank account failed. What does this mean and what should I do?</h1>
+
+    <p>When Stripe fails to make a transfer to you, it usually means there was an issue with the bank account that you have on file with Stripe. As a result, we also hold all pending transfers to your account until the issue with your bank account is resolved. If you <a href="https://dashboard.stripe.com/account/transfers">update your bank account</a> to a valid checking account, the failed transfers will be automatically retried.  If your current account is already valid and you are not sure why the transfer failed, you should get in touch with your bank to resolve the issue and then <a href="https://dashboard.stripe.com/transfers/overview">manually retry the failed transfers from your dashboard</a>.</p>
+
+    <h1 id="it-looks-like-my-first-transfer-will-arrive-in-seven-days-but-i-was-expecting-to-receive-funds-sooner">It looks like my first transfer will arrive in seven days, but I was expecting to receive funds sooner.</h1>
+
+    <p>Stripe needs to treat every user’s first transfer differently from subsequent transfers. We wait seven days
+after your first successful charge before sending the first electronic transfer to your bank account. Delaying your first transfer for a few extra days allows Stripe to address some of the risks that are inherent in providing credit services
+to our users.</p>
+
+    <h1 id="my-funds-are-transferred-on-a-two-business-day-schedule-what-counts-as-a-business-day">My funds are transferred on a two-business-day schedule. What counts as a business day?</h1>
+
+    <p>Business days are Monday to Friday, except <a href="http://en.wikipedia.org/wiki/Federal_holidays_in_the_United_States#List_of_Federal_Holidays">U.S. federal holidays</a>.
+For example, under a two-business-day transfer schedule, payments processed on a Friday would arrive in
+your bank account on the following Tuesday. Similarly, payments processed on a Monday, July 3rd
+would arrive in your bank account on Thursday, July 6th, due to Independence
+Day on July 4th.</p>
+
+    <h1 id="what-are-common-reasons-a-transfer-can-fail-and-what-should-i-do-to-fix-the-problem-for-each-case">What are common reasons a transfer can fail and what should I do to fix the problem for each case?</h1>
+
+    <p>Transfers can fail for a number of reasons, but a few common issues make up the majority of transfer failures.</p>
+
+    <!-- The h2 elements below have the 'text' class on them so that Mobile Safari will weight them more highly when evaluating if the page can be displayed in Safari Reader. -->
+    <h2 class="text">Insufficient funds</h2>
+    <ul>
+      <li><em>What it means</em>: Your bank account did not have enough money for a negative transfer we tried to make against it.</li>
+      <li><em>What to do about it</em>: In most cases, you will simply want to add more funds to your bank account and then <a href="https://dashboard.stripe.com/transfers/overview">retry your transfer from your dashboard</a>.  You also have the option to <a href="https://dashboard.stripe.com/account/transfers">update your bank account</a> to another checking account with enough money, and that will automatically retry the transfer.</li>
+    </ul>
+
+    <h2 class="text">Account closed</h2>
+    <ul>
+      <li><em>What it means</em>: Your bank informed us that the account associated with your bank account details was closed.</li>
+      <li><em>What to do about it</em>: You will need to <a href="https://dashboard.stripe.com/account/transfers">update your bank account</a> to a valid checking account.</li>
+    </ul>
+
+    <h2 class="text">No account</h2>
+    <ul>
+      <li><em>What it means</em>: No bank account could be found with the details that you have on file, so you probably misentered either your routing number or account number.</li>
+      <li><em>What to do about it</em>: You will need to <a href="https://dashboard.stripe.com/account/transfers">update your bank account</a> to a valid checking account.</li>
+    </ul>
+
+    <h2 class="text">Invalid account number</h2>
+    <ul>
+      <li><em>What it means</em>: Your routing number seems ok, but your bank informed us that the account number is not valid.</li>
+      <li><em>What to do about it</em>: You will need to <a href="https://dashboard.stripe.com/account/transfers">update your bank account</a> to a valid checking account.</li>
+    </ul>
+
+    <h2 class="text">Debit not authorized</h2>
+    <ul>
+      <li><em>What it means</em>: Your current bank account does not allow us to make negative transfers against your bank account.</li>
+      <li><em>What to do about it</em>: You can often resolve the issue by getting in touch with your bank to make sure both credit and debit transfers are allowed on your bank account. Once you do so, you can <a href="https://dashboard.stripe.com/transfers/overview">retry your transfer from your dashboard</a>. Alternatively, you can <a href="https://dashboard.stripe.com/account/transfers">update your bank account</a> to another checking account that allows both credit and debit transfers.</li>
+    </ul>
+
+    <h2 class="text">Bank ownership changed</h2>
+    <ul>
+      <li><em>What it means</em>: Your bank’s branch was bought by another bank, and as a result, your account information (such as your routing number) has changed.</li>
+      <li><em>What to do about it</em>: You will probably need to <a href="https://dashboard.stripe.com/account/transfers">update your bank account</a> to a valid checking account.</li>
+    </ul>
+
+    <h2 class="text">Account frozen</h2>
+    <ul>
+      <li><em>What it means</em>: Your bank notified us that the funds in your account are currently frozen.</li>
+      <li><em>What to do about it</em>: Get in touch with your bank to figure out what the issue is. Once you’ve resolved the issue, you can <a href="https://dashboard.stripe.com/transfers/overview">retry your transfer from your dashboard</a>. Alternatively, you can <a href="https://dashboard.stripe.com/account/transfers">change your bank account</a> to another active checking account.</li>
+    </ul>
+
+    <h2 class="text">Bank account restricted</h2>
+    <ul>
+      <li><em>What it means</em>: Your bank notified us that your account has restrictions on either the type or number of transfers allowed. This normally indicates that you are using a savings or other non-checking account with your Stripe account.</li>
+      <li><em>What to do about it</em>: You should <a href="https://dashboard.stripe.com/account/transfers">update your bank account</a> to a valid checking account. If your current account is already a checking account, get in touch with your bank to figure out why the transfer isn’t going through and then <a href="https://dashboard.stripe.com/transfers/overview">retry your transfer from your dashboard</a>.</li>
+    </ul>
+
+    <h2 class="text">Invalid currency</h2>
+    <ul>
+      <li><em>What it means</em>: Your bank is not set up to process transfers in the given currency.</li>
+      <li><em>What to do about it</em>: In most cases, you may need to <a href="https://dashboard.stripe.com/account/transfers">change your bank account</a> to another that is set up to accept transfers in the same currency that you are processing in. Alternatively, if your bank claimed that it can process transfers in this currency, you should get in touch with them and then <a href="https://dashboard.stripe.com/transfers/overview">retry your transfer from your dashboard</a> once the issue is resolved.</li>
+    </ul>
+
+    <h2 class="text">Could not process</h2>
+    <ul>
+      <li><em>What it means</em>: Something unexpected went wrong and your bank was unable to process the transfer Stripe sent them.</li>
+      <li><em>What to do about it</em>: <a href="https://support.stripe.com/email">Get in touch with us</a> or your bank to resolve the issue, and then <a href="https://dashboard.stripe.com/transfers/overview">retry your transfer from your dashboard</a>.</li>
+    </ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../country?country=AU&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CA&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DK&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FI&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=GB&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IE&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NO&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SE&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=US&amp;redirect=%252Fdocs%252Ftransfers" class="selected">
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=AT&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BE&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BR&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FR&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DE&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IT&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=JP&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=LU&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=MX&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NL&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=PT&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SG&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=ES&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers" >
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

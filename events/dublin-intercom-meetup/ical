@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:iCalendar-Ruby
+BEGIN:VEVENT
+DESCRIPTION:
+DTSTAMP:20160329T234109
+LOCATION:Intercom\n2nd Floor\, Stephen Court\, 18-21 St. Stephen’s Green\, 
+ Dublin 2
+SEQUENCE:0
+SUMMARY:Intercom and Stripe Meetup
+UID:2016-03-29T23:41:09+00:00_69673150@sitebox2.northwest.stripe.io
+URL:https://stripe.com/events/dublin-intercom-meetup
+DTSTART:20141106T183000Z
+DTEND:20141106T203000Z
+ORGANIZER;CN="Stripe Community":mailto:stripe-community@stripe.com
+ATTENDEE;CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ-PARTICIPANT;X-NUM-
+ GUESTS=0;CN="Stripe Community":mailto:stripe-community@stripe.com
+END:VEVENT
+END:VCALENDAR

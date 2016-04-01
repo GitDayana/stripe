@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sharing Customers</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="YySH-VxHr5gLy9RpAQlUqZfcXMdntLXjL_pwWrcqGzrrDoI6RSTqKPjbjrlfc-gir2GmL3bfYdvm4Oc2Nie_oA==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Sharing Customers</h1>
+    <p>
+With Connect, you can save your customers’ payment information for reuse across any of your connected accounts.
+</p>
+  </header>
+  <article>
+    <aside class="intro note">
+      <h1>Note</h1>
+      <p>Sharing customers is only relevant if you are <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#creating-payments">creating charges on connected accounts</a>. If you are making all charges on your platform account, this is unnecessary, as you can just pass the customer ID directly into the charge request.
+</p>
+    </aside>
+
+    <p>For some business models, it’s useful to reuse your customers’ payment information across connected accounts. For example, a customer who makes a purchase from one of your connected sellers wouldn’t need to re-enter their credit card or bank account details to purchase from another seller.</p>
+
+    <p>With Connect, this is possible by storing all Stripe <a href="../api/index.html#customers">Customer objects</a> on the platform account. Whenever you’d like to reuse customer payment information, you’ll make an extra <a href="../api/index.html#create_card_token">token creation</a> API request to fetch the relevant data from Stripe.</p>
+
+    <h1 id="storing-customers">Storing Stripe customers</h1>
+
+    <p>Normally, without shared customers, you would save the Stripe <a href="../api/index.html#customers">Customer objects</a> on each individual Stripe account. To share customers, you’ll instead save the customers on your (the platform owner) Stripe account.</p>
+
+    <p><strong>Be sure to use your own secret and publishable keys instead of the connected user’s authorization credentials.</strong> You want to save the customer objects on your own Stripe account, not on your users’ accounts.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_store_customer">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <h1 id="making-a-charge">Charging a customer</h1>
+
+    <p>When you’re ready to charge a saved customer, you’ll need:</p>
+
+    <ul>
+      <li>The Stripe account ID  (it looks something like <code>acct_cy5jgPfEHXfaCCDx</code>) of the Stripe user for whom you’re making the charge</li>
+      <li>The customer ID (it looks something like <code>cus_sEfpjp4VEqUfNP7T</code>) of the customer (in the platform account) being charged. Note that the customer object <strong>must</strong> be stored on the platform’s Stripe account.</li>
+      <li>The card or bank account ID for that customer, if you want to charge a specific card or bank account rather than the default.</li>
+    </ul>
+
+    <p>Make a <a href="../api/index.html#create_card_token">create token</a> API request, passing in the customer ID (and optionally, the card or bank account ID):</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_connect_reuse_customer">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Like a regular token creation, this returns a token that acts as a credit card number. You can use the token to create a <a href="../api/index.html#create_charge">one-time charge</a> or even <a href="../api/index.html#create_customer">save the customer</a> (again) to the connected account. If you save the customer on a connected account, you can also create a subscription for them (to a plan defined on the connected account).</p>
+
+    <hr />
+
+    <h1>Further reading</h1>
+    <p>Read up on the rest of this section to discover what other functionality is available for your users.</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case transfers</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fshared-customers" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["ruby"] = {};
+              APIValues["ruby"]["tutorial_connect_store_customer"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken_id = params[:stripeToken]\n\n# Create a Customer\ncustomer = Stripe::Customer.create(\n  :source =\u0026gt; token_id,\n  :description =\u0026gt; \u0026quot;Example customer\u0026quot;\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_connect_reuse_customer"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Create a Token from the existing customer on the platform\u0026#39;s account\nStripe::Token.create(\n  {:customer =\u0026gt; CUSTOMER_ID, :card =\u0026gt; CARD_ID},\n  {:stripe_account =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID} # id of the connected account\n)\u003C/span\u003E";
+          APIValues["python"] = {};
+              APIValues["python"]["tutorial_connect_store_customer"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken_id = request.POST[\u0026#39;stripeToken\u0026#39;]\n\n# Create a Customer\ncustomer = stripe.Customer.create(\n    source=token_id,\n    description=\u0026quot;Example customer\u0026quot;\n)\u003C/span\u003E";
+              APIValues["python"]["tutorial_connect_reuse_customer"] = "\u003Cspan class=\"highlight_js python\"\u003E# Create a Token from the existing customer on the platform\u0026#39;s account\nstripe.Token.create(\n  customer=CUSTOMER_ID,\n  card=CARD_ID,\n  stripe_account=CONNECTED_STRIPE_ACCOUNT_ID # id of the connected account\n)\u003C/span\u003E";
+          APIValues["php"] = {};
+              APIValues["php"]["tutorial_connect_store_customer"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// Get the credit card details submitted by the form\n$token_id = $_POST[\u0026#39;stripeToken\u0026#39;];\n\n// Create a Customer\n$customer = \\Stripe\\Customer::create(array(\n  \u0026quot;source\u0026quot; =\u0026gt; $token_id,\n  \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Example customer\u0026quot;)\n);\u003C/span\u003E";
+              APIValues["php"]["tutorial_connect_reuse_customer"] = "\u003Cspan class=\"highlight_js php\"\u003E// Create a Token from the existing customer on the platform\u0026#39;s account\n\\Stripe\\Token::create(\n  array(\u0026quot;customer\u0026quot; =\u0026gt; CUSTOMER_ID, \u0026quot;card\u0026quot; =\u0026gt; CARD_ID),\n  array(\u0026quot;stripe_account\u0026quot; =\u0026gt; CONNECTED_STRIPE_ACCOUNT_ID) // id of the connected account\n);\u003C/span\u003E";
+          APIValues["node"] = {};
+              APIValues["node"]["tutorial_connect_store_customer"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// (Assuming you\u0026#39;re using express - expressjs.com)\n// Get the credit card details submitted by the form\nvar tokenID = request.body.stripeToken;\n\n// Create a Customer\nstripe.customers.create({\n  source: tokenID,\n  description: \u0026quot;Example customer\u0026quot;\n}, function(err, customer) {\n\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_connect_reuse_customer"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Create a Token from the existing customer on the platform\u0026#39;s account\nstripe.tokens.create(\n  { customer: CUSTOMER_ID, card: CARD_ID },\n  { stripe_account: CONNECTED_STRIPE_ACCOUNT_ID }, // id of the connected account\n  function(err, token) {\n    // callback\n  }\n);\u003C/span\u003E";
+          APIValues["java"] = {};
+              APIValues["java"]["tutorial_connect_store_customer"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\n// Get the credit card details submitted by the form\nString tokenID = request.getParameter(\u0026quot;stripeToken\u0026quot;);\n\n// Create a Customer\nMap\u0026lt;String, Object\u0026gt; customerParams = new HashMap\u0026lt;String, Object\u0026gt;();\ncustomerParams.put(\u0026quot;source\u0026quot;, tokenID);\ncustomerParams.put(\u0026quot;description\u0026quot;, \u0026quot;Example customer\u0026quot;);\n\nCustomer customer = Customer.create(customerParams);\u003C/span\u003E";
+              APIValues["java"]["tutorial_connect_reuse_customer"] = "\u003Cspan class=\"highlight_js java\"\u003E// Create a Token from the existing customer on the platform\u0026#39;s account\nMap\u0026lt;String, Object\u0026gt; tokenParams = new HashMap\u0026lt;String, Object\u0026gt;();\ntokenParams.put(\u0026quot;customer\u0026quot;, CUSTOMER_ID);\ntokenParams.put(\u0026quot;card\u0026quot;, CARD_ID);\n\nRequestOptions requestOptions = RequestOptions.builder().setStripeAccount(CONNECTED_STRIPE_ACCOUNT_ID).build();\n\nToken.create(tokenParams, requestOptions);\u003C/span\u003E";
+  </script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

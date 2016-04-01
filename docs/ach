@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ACH Guide</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow, noarchive">
+
+    <meta name="csrf-token" content="LKK7oA9J94zIA12f3d_B_olC1XkldzGPknTI2deChn6kiL5jFiqyPDsTB0-DpX11sf8vkTQc5bdbbl-1Vo8i5A==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../security">Security</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="webhooks/index.html">Webhooks</a></li>
+      <li class="selected"><a href="guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="ach-guide" id="details">
+
+  <header>
+    <h1>ACH Guide</h1>
+    <p>Stripe supports accepting ACH payments–direct from bank accounts–alongside credit cards. If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+</p>
+  </header>
+
+  <article>
+
+    <p>Before making livemode ACH charges, you will need to <a href="https://dashboard.stripe.com/login?redirect=https://stripe.com/docs/ach">sign into</a> your account and agree to our Terms of Service available <a href="https://stripe.com/terms/ach-payments">here</a>.</p>
+
+    <hr />
+
+    <p>With Stripe, you can accept ACH payments in nearly the same way as you accept credit card payments, merely providing a verified bank account as the <code>source</code> argument for a charge request. However, accepting bank accounts requires a slightly different initial workflow than accepting credit cards:</p>
+
+    <ol>
+      <li>Bank accounts must first be <a href="guides/ach#verifying">verified</a>.</li>
+      <li>Bank accounts must be <a href="guides/ach#authorization">authorized</a> for your use by the customer.</li>
+    </ol>
+
+    <p>Once both steps have been taken for a bank account, it can mostly be used just like any other payment source, including for recurring charges and <a href="guides/ach#connect">Connect</a> applications. The two key differences between using bank accounts and credit cards are:</p>
+
+    <ul>
+      <li>ACH payments take up to 5 business days to receive acknowledgment of their success or failure. Because of this, ACH payments take up to 7 business days to be reflected in your available Stripe balance.</li>
+      <li>You can only accept funds in USD and only from US bank accounts. In addition, your account must have a US/USD bank account to accept ACH payments.</li>
+    </ul>
+
+    <h2 id="verifying">Collecting and verifying bank accounts</h2>
+
+    <p>Before you can create an ACH charge, you must first collect and verify your customer’s bank account and routing number. In order to properly identify the bank account, you will also need to collect the name of the person or business who owns the account, and if the account is owned by an individual or a company. Stripe provides two methods for doing so: instant collection and verification via <a href="https://plaid.com/">Plaid</a> or collection via <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a> with delayed-verification using micro-deposits.</p>
+
+    <p>As charging a bank account requires both verification of the account and customer authorization to use it, the best practice is to store the bank account on a <code>Customer</code> object in Stripe for easy reuse.</p>
+
+    <aside class="content note">
+      <h1>Setup instant verification</h1>
+
+      <p>To get started using <a href="https://dashboard.plaid.com/signup/stripe/">Plaid</a>, you  first need to setup a Plaid account and connect it to your Stripe account.</p>
+
+      <p><a class="button-example" href="https://dashboard.plaid.com/signup/stripe/" target="_blank"><span>Setup Plaid</span></a></p>
+      <p><!-- <p><a class="button-green-disabled" href="#"><span>Connected to Plaid</span></a></p> -->
+  <!-- TODO: What to show when they are logged out? --></p>
+    </aside>
+
+    <h2 id="using-plaid">Using Plaid</h2>
+
+    <p>Plaid provides the quickest way to collect and verify your customer’s banking information. Using the Stripe + Plaid integration, you’re able to instantly receive a verified bank account, allowing for immediate charging. This is done by using <a href="https://plaid.com/docs/link/stripe">Plaid Link</a>, receiving the Stripe bank account token directly from Plaid.</p>
+
+    <h3 id="integrating-plaid">Integrating Plaid</h3>
+
+    <p>Once your Plaid account is setup and connected to your Stripe account, add Plaid Link to your site.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;button id=&#39;linkButton&#39;&gt;Open Plaid Link&lt;/button&gt;
+&lt;script src=&quot;https://cdn.plaid.com/link/stable/link-initialize.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+var linkHandler = Plaid.create({
+  env: &#39;tartan&#39;,
+  clientName: &#39;Stripe / Plaid Test&#39;,
+  key: &#39;[Plaid key]&#39;,
+  product: &#39;auth&#39;,
+  selectAccount: true,
+  onSuccess: function(public_token, metadata) {
+    // Send the public_token and account ID to your app server.
+    console.log(&#39;public_token: &#39; + public_token);
+    console.log(&#39;account ID: &#39; + metadata.account_id);
+  },
+});
+
+// Trigger the Link UI
+document.getElementById(&#39;linkButton&#39;).onclick = function() {
+  linkHandler.open();
+};
+&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>The above code uses a custom Plaid Link integration. You’ll need to replace the <code>clientName</code> with something meaningful to your business and the <code>key</code> value with your <a href="https://dashboard.plaid.com/login/">public Plaid key</a>. An <code>env</code> value of <strong>tartan</strong> is for testing purposes; use <strong>production</strong> when it’s time to go live.</p>
+
+    <p>Once your server has the <code>public_token</code>, you will need to make one additional call to the Plaid server to get the Stripe bank account token along with the Plaid access token that can be used for other Plaid API requests.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.plaid.com/exchange_token</span> \
+   -d <span class="token keyword">client_id</span>="<span class="token string">[Plaid client ID]</span>" \
+   -d <span class="token keyword">secret</span>="<span class="token string">[Plaid secret]</span>" \
+   -d <span class="token keyword">public_token</span>="<span class="token string">[Plaid Link public_token]</span>" \
+   -d <span class="token keyword">account_id</span>="<span class="token string">[Plaid Link account_id]</span>"
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>The response will contain a verified Stripe bank account token ID. You can attach this token to a Stripe <code>Customer</code> object, or create a charge directly on it.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;sandbox&quot;: false,
+  &quot;access_token&quot;: &quot;[Plaid API access token]&quot;,
+  &quot;stripe_bank_account_token&quot;: &quot;btok_MUCrfUAfcAQ7hrIgEBy6&quot;,
+  &quot;account_id&quot;: &quot;[Plaid Account ID]&quot;
+}</span></code></pre>
+      </div>
+    </section>
+
+    <h3 id="manually-collecting-and-verifying-bank-accounts">Manually collecting and verifying bank accounts</h3>
+
+    <p>Plaid supports instant verification for many of the most popular banks. However, if your customer’s bank is not supported or you do not wish to integrate with Plaid, collect and verify the customer’s bank using Stripe alone.</p>
+
+    <p>First, use <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js#collecting-bank-account-details">Stripe.js</a> to securely collect your customer’s bank account information, receiving a representative token in return. Once you have that, attach it to a Stripe customer in your account.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_ach_create_customer">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>After adding the bank account to a customer, it needs to be verified. When using Stripe without Plaid, verification is done via two small deposits into the bank account that Stripe will automatically send. These deposits will take 1-2 business days to appear on the customer’s online statement. The statement description for these deposits will be <code>VERIFICATION</code>. Your customer will need to relay the value of the two deposits to you.</p>
+
+    <p>When accepting these values, be sure to note that there is a limit of 10 failed verification attempts. Once this limit has been crossed, the bank account will be unable to be verified. Careful messaging about what these microdeposits are and how they are used can help your end customers avoid this isssue. Once you have these values, you can verify the bank account:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_ach_verify_bank_account">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Once the bank account is verified, you can make charges against it.</p>
+
+    <h2 id="authorization">Payment authorization</h2>
+
+    <p>Before creating an ACH charge, it is important that you’ve received authorization from your customer to debit their account. Doing so ensures compliance with the ACH network and helps protect you from disputes, additional fees, and reversed payments. See our <a href="https://support.stripe.com/questions/accepting-ach-payments-with-stripe#ach-authorization">support page</a> for more information on authorization requirements.</p>
+
+    <h2 id="creating-an-ach-charge">Creating an ACH charge</h2>
+
+    <p>To create a charge on a verified bank account, simply use the stored <code>Customer</code> object the same way you would when using a card.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_ach_charge_customer">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>Attempting to charge an unverified bank account results in an error with the message “The customer’s bank account must be verified in order to create an ACH payment.”</p>
+
+    <p>If the customer has multiple stored sources (of any type), specify which bank account to use by passing its ID in as the <a href="api/index.html#create_charge-source">source</a> parameter.</p>
+
+    <h2 id="testing-ach">Testing ACH</h2>
+
+    <p>You can mimic successful and failed ACH charges using the following bank account and routing numbers:</p>
+
+    <ul>
+      <li>Routing number: <code>110000000</code></li>
+      <li>Account number: <code>000123456789</code> (success), <code>000111111116</code> (failure upon use)</li>
+    </ul>
+
+    <p>To mimic successful and failed bank account verifications, use these meaningful amounts:</p>
+
+    <ul>
+      <li><code>[32, 45]</code> (success)</li>
+      <li><code>[any other number combinations]</code> (failure)</li>
+    </ul>
+
+    <h2 id="ach-payments-workflow">ACH payments workflow</h2>
+
+    <p>ACH payments take up to 5 business days to receive acknowledgment of their success or failure:</p>
+
+    <ul>
+      <li>When created, ACH charges will have the initial status of <code>pending</code>.</li>
+      <li>A <em>pending</em> balance transaction will immediately be created reflecting the payment amount, less our fee.</li>
+      <li>During the next 4 business days, the payment will either transition to <code>succeeded</code> or <code>failed</code> depending on the customer’s bank.</li>
+      <li>Successful ACH payments will be reflected in your Stripe available balance after 7 business days, at which point the funds are available for automatic or manual transfer to your bank account.</li>
+      <li>Failed ACH payments will reverse the <em>pending</em> balance transaction created.</li>
+      <li>Your customer will see the payment reflected on their bank statement 1-2 days after creating the charge. (Your customer will know the payment succeeded before the bank notifies Stripe.)</li>
+    </ul>
+
+    <p>Failures can happen for a number of reasons such as: insufficient funds, a bad account number, or the customer disabled debits from their bank account.</p>
+
+    <h2 id="ach-disputes">ACH disputes</h2>
+
+    <p>Disputes on ACH payments are fundamentally different than those on the credit card payments. If a customer disputes a charge and the customer’s bank accepts the request to return the funds, Stripe immediately removes the funds for the charge from your Stripe account. Unlike credit card disputes, you are not able to contest ACH reversals. You will need to directly reach out to your customer to resolve the situation.</p>
+
+    <p>The ACH network allows 60 days for consumers to contest a debit on their account. Business accounts only have 2 business days, but since there is no way to be sure that the end account is a business account or personal account, you should never rely on this as a way to reduce risk.</p>
+
+    <h2 id="ach-refunds">ACH refunds</h2>
+
+    <p>Like other payment methods, ACH charges can be refunded using the <a href="api/index.html#refunds">Refund endpoint</a>. However, the timing and risks associated with ACH refunds are different than card refunds. To learn more about those differences, please refer to our <a href="https://support.stripe.com/questions/accepting-ach-payments-with-stripe#ach-refunds">support guide</a>.</p>
+
+    <h2 id="ach-specific-webhook-notifications">ACH-specific webhook notifications</h2>
+
+    <p>When using ACH, you will receive many of the standard charge webhook notifications, with a couple of notable differences:</p>
+
+    <ul>
+      <li>After creating the charge, you will receive a <code>charge.pending</code> notification. You will not receive <code>charge.succeeded</code> or <code>charge.failed</code> notification until up to 5 business days later.</li>
+      <li>You will receive a <code>charge.succeeded</code> notification once the charge has transitioned to <code>succeeded</code> and the funds are available in your balance.</li>
+      <li>You will receive a <code>charge.failed</code> notification if the ACH transfer fails for any reason. The charge’s <code>failure_code</code> and <code>failure_message</code> will be set, and the funds will be reversed from your Stripe pending balance at this point.</li>
+      <li>You will receive a <code>customer.source.updated</code> notification when the bank account is properly verified. The bank account’s <code>status</code> will be set to <code>verified</code>.</li>
+      <li>If the bank account could not be verified because either of the two small deposits failed, you will receive a <code>customer.source.updated</code> notification. The bank account’s <code>status</code> will be set to <code>verification_failed</code>.</li>
+    </ul>
+
+    <h2 id="connect">Connect support</h2>
+
+    <p>Applications can create ACH payments on behalf of connected accounts and collect an <code>application_fee</code>. As with <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">credit card payments</a>, you can either:</p>
+
+    <ul>
+      <li>Create the customer in the platform account and use the <code>destination</code> parameter to create the charge for the connected user (as in the code below)</li>
+      <li>Create the customer in a connected account and create the charge directly on that account</li>
+    </ul>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">ruby</a>
+<a href="index.html">python</a>
+<a href="index.html">php</a>
+<a href="index.html">node</a>
+<a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_ach_connect_charge">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <hr />
+
+    <h1>Terms of Service</h1>
+    <p>
+  Use of the live mode API is subject to the Terms of Service available <a href="https://stripe.com/terms/ach-payments">here</a>. Let us know if you have any questions on that agreement.
+</p>
+  </article>
+
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="https://stripe.com/country?country=AU&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=CA&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=DK&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=FI&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=GB&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=IE&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=NO&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=SE&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=US&amp;redirect=/docs/ach" class="selected">
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=AT&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=BE&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=BR&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=FR&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=DE&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=IT&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=JP&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=LU&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=MX&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=NL&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=PT&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=SG&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=ES&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=CH&amp;redirect=/docs/ach" >
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  <script src="../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+<script type="text/javascript">
+  var APIValues = {};
+    APIValues["ruby"] = {};
+      APIValues["ruby"]["tutorial_ach_create_customer"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the bank token submitted by the form\ntoken_id = params[:stripeToken]\n\n# Create a Customer\ncustomer = Stripe::Customer.create(\n  :source =\u0026gt; token_id,\n  :description =\u0026gt; \u0026quot;Example customer\u0026quot;\n)\u003C/span\u003E";
+      APIValues["ruby"]["tutorial_ach_charge_customer"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nStripe::Charge.create(\n  :amount   =\u0026gt; 1500,\n  :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n  :customer =\u0026gt; customer_id # Previously stored, then retrieved\n)\u003C/span\u003E";
+      APIValues["ruby"]["tutorial_ach_connect_charge"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nStripe::Charge.create(\n  :amount   =\u0026gt; 1500,\n  :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n  :customer =\u0026gt; customer_id, # Previously stored, then retrieved\n  :destination =\u0026gt; {CONNECTED_STRIPE_ACCOUNT_ID}\n)\u003C/span\u003E";
+      APIValues["ruby"]["tutorial_ach_verify_bank_account"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# get the existing bank account\ncustomer = Stripe::Customer.retrieve(\u0026quot;cus_7iLOlPKxhQJ75a\u0026quot;)\nbank_account = customer.sources.retrieve(\u0026quot;ba_17SHwa2eZvKYlo2CUx7nphbZ\u0026quot;)\n\n# verify the account\nbank_account.verify(amounts: [32, 45])\u003C/span\u003E";
+    APIValues["python"] = {};
+      APIValues["python"]["tutorial_ach_create_customer"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the bank token submitted by the form\ntoken_id = request.POST[\u0026#39;stripeToken\u0026#39;]\n\n# Create a Customer\ncustomer = stripe.Customer.create(\n    source=token_id,\n    description=\u0026quot;Example customer\u0026quot;\n)\u003C/span\u003E";
+      APIValues["python"]["tutorial_ach_charge_customer"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nstripe.Charge.create(\n    amount=1500,\n    currency=\u0026quot;usd\u0026quot;,\n    customer=customer_id # Previously stored, then retrieved\n)\u003C/span\u003E";
+      APIValues["python"]["tutorial_ach_connect_charge"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\nstripe.Charge.create(\n    amount=1500,\n    currency=\u0026quot;usd\u0026quot;,\n    customer=customer_id, # Previously stored, then retrieved\n    destination={CONNECTED_STRIPE_ACCOUNT_ID}\n)\u003C/span\u003E";
+      APIValues["python"]["tutorial_ach_verify_bank_account"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.stripe.com/account/apikeys\nstripe.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# get the existing bank account\ncustomer = stripe.Customer.retrieve(\u0026quot;cus_7iLOlPKxhQJ75a\u0026quot;)\nbank_account = customer.sources.retrieve(\u0026quot;ba_17SHwa2eZvKYlo2CUx7nphbZ\u0026quot;)\n\n# verify the account\nbank_account.verify(amounts= [32, 45])\u003C/span\u003E";
+    APIValues["php"] = {};
+      APIValues["php"]["tutorial_ach_create_customer"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// Get the bank token submitted by the form\n$token_id = $_POST[\u0026#39;stripeToken\u0026#39;];\n\n// Create a Customer\n$customer = \\Stripe\\Customer::create(array(\n  \u0026quot;source\u0026quot; =\u0026gt; $token_id,\n  \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Example customer\u0026quot;)\n);\u003C/span\u003E";
+      APIValues["php"]["tutorial_ach_charge_customer"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n\\Stripe\\Charge::create(array(\n  \u0026quot;amount\u0026quot;   =\u0026gt; 1500,\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;customer\u0026quot; =\u0026gt; $customerId // Previously stored, then retrieved\n  ));\u003C/span\u003E";
+      APIValues["php"]["tutorial_ach_connect_charge"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n\\Stripe\\Charge::create(array(\n  \u0026quot;amount\u0026quot;   =\u0026gt; 1500,\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;customer\u0026quot; =\u0026gt; $customerId, // Previously stored, then retrieved\n  \u0026quot;destination\u0026quot; =\u0026gt; {CONNECTED_STRIPE_ACCOUNT_ID}\n  ));\u003C/span\u003E";
+      APIValues["php"]["tutorial_ach_verify_bank_account"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\n\\Stripe\\Stripe::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// get the existing bank account\n$customer = \\Stripe\\Customer::retrieve(\u0026quot;cus_7iLOlPKxhQJ75a\u0026quot;);\n$bank_account = $customer-\u0026gt;sources-\u0026gt;retrieve(\u0026quot;ba_17SHwa2eZvKYlo2CUx7nphbZ\u0026quot;);\n\n// verify the account\n$bank_account-\u0026gt;verify(array(\u0026#39;amounts\u0026#39; =\u0026gt; array(32, 45)));\u003C/span\u003E";
+    APIValues["node"] = {};
+      APIValues["node"]["tutorial_ach_create_customer"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// (Assuming you\u0026#39;re using express - expressjs.com)\n// Get the bank token submitted by the form\nvar tokenID = request.body.stripeToken;\n\n// Create a Customer\nstripe.customers.create({\n  source: tokenID,\n  description: \u0026quot;Example customer\u0026quot;\n}, function(err, customer) {\n\n});\u003C/span\u003E";
+      APIValues["node"]["tutorial_ach_charge_customer"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// (Assuming you\u0026#39;re using express - expressjs.com)\nstripe.charges.create({\n  amount: 1500,\n  currency: \u0026quot;usd\u0026quot;,\n  customer: customerId // Previously stored, then retrieved\n});\u003C/span\u003E";
+      APIValues["node"]["tutorial_ach_connect_charge"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// (Assuming you\u0026#39;re using express - expressjs.com)\nstripe.charges.create({\n  amount: 1500,\n  currency: \u0026quot;usd\u0026quot;,\n  customer: customerId, // Previously stored, then retrieved\n  destination: {CONNECTED_STRIPE_ACCOUNT_ID}\n});\u003C/span\u003E";
+      APIValues["node"]["tutorial_ach_verify_bank_account"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nvar stripe = require(\u0026quot;stripe\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\nvar data = {amounts: [32,45]}\nstripe.customers.verifySource(\n  \u0026#39;cus_7iLOlPKxhQJ75a\u0026#39;,\n  \u0026#39;ba_17SHwa2eZvKYlo2CUx7nphbZ\u0026#39;,\n  {\n    amounts: [32, 45]\n  },\n  function(err, bankAccount) {\n\n});\u003C/span\u003E";
+    APIValues["java"] = {};
+      APIValues["java"]["tutorial_ach_create_customer"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\n// Get the bank token submitted by the form\nString tokenID = request.getParameter(\u0026quot;stripeToken\u0026quot;);\n\n// Create a Customer\nMap\u0026lt;String, Object\u0026gt; customerParams = new HashMap\u0026lt;String, Object\u0026gt;();\ncustomerParams.put(\u0026quot;source\u0026quot;, tokenID);\ncustomerParams.put(\u0026quot;description\u0026quot;, \u0026quot;Example customer\u0026quot;);\n\nCustomer customer = Customer.create(customerParams);\u003C/span\u003E";
+      APIValues["java"]["tutorial_ach_charge_customer"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; otherChargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\notherChargeParams.put(\u0026quot;amount\u0026quot;, 1500);\notherChargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\notherChargeParams.put(\u0026quot;customer\u0026quot;, customerId); // Previously stored, then retrieved\n\nCharge.create(otherChargeParams);\u003C/span\u003E";
+      APIValues["java"]["tutorial_ach_connect_charge"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\nMap\u0026lt;String, Object\u0026gt; otherChargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\notherChargeParams.put(\u0026quot;amount\u0026quot;, 1500);\notherChargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\notherChargeParams.put(\u0026quot;customer\u0026quot;, customerId); // Previously stored, then retrieved\notherChargeParams.put(\u0026quot;destination\u0026quot;, {CONNECTED_STRIPE_ACCOUNT_ID});\n\nCharge.create(otherChargeParams);\u003C/span\u003E";
+      APIValues["java"]["tutorial_ach_verify_bank_account"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.stripe.com/account/apikeys\nStripe.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\n// get the existing bank account\nCustomer customer = Customer.retrieve(\u0026quot;cus_7iLOlPKxhQJ75a\u0026quot;);\nExternalAccount source = customer.getSources().retrieve(\u0026quot;ba_17SHwa2eZvKYlo2CUx7nphbZ\u0026quot;);\n\n// verify the account\nMap params = new HashMap\u0026lt;String, Object\u0026gt;();\nArrayList amounts = new ArrayList();\namounts.add(32);\namounts.add(45);\nparams.put(\u0026quot;amounts\u0026quot;, amounts);\nsource.verify(params);\u003C/span\u003E";
+</script>
+
+<script>
+(function () {
+  var button = $('#tos-acceptance-button');
+  var csrf = $('tos-acceptance-csrf').val();
+
+  button.click(function (e) {
+    e.preventDefault();
+    button.prop('disabled', true);
+
+    if (button.hasClass('button-green-disabled')) {
+      return;
+    }
+
+    $.post("/ach-tos-acceptance", {csrf_token: csrf}, function (_, status) {
+      console.log('status', status);
+      if (status == 'success') {
+        button.removeClass('button-example');
+        button.addClass('button-green-disabled');
+        button.find('span').text('ACH Activated');
+      }
+    });
+  });
+}());
+</script>
+
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

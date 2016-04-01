@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>checkout-email-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1280" height="650"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.121568627   0 0 0 0 0.149019608  0 0 0 0.558922101 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.7 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.489855239 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.48627451   0 0 0 0 0.48627451   0 0 0 0 0.498039216  0 0 0 0.209219899 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Bitcoin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard" sketch:type="MSArtboardGroup" transform="translate(-535.000000, -271.000000)">
+            <g id="header-bg">
+                <use fill="#00333F" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <use fill="none" xlink:href="#path-1"></use>
+            </g>
+            <rect id="popover-bg" stroke="#FFFFFF" fill="#F5F5F7" filter="url(#filter-2)" sketch:type="MSShapeGroup" x="490" y="112" width="300" height="430" rx="6"></rect>
+            <rect id="email-input" stroke-opacity="0.245203355" stroke="#7C7C7F" fill="#FFFFFF" filter="url(#filter-3)" sketch:type="MSShapeGroup" x="526" y="258" width="228" height="37" rx="4"></rect>
+            <path d="M537.005859,271 C535.898054,271 535,271.900176 535,272.992017 L535,280.007983 C535,281.108144 535.89706,282 537.005859,282 L546.994141,282 C548.101946,282 549,281.099824 549,280.007983 L549,272.992017 C549,271.891856 548.10294,271 546.994141,271 L537.005859,271 Z M537.002473,272 C536.448823,272 536,272.446311 536,272.997545 L536,280.002455 C536,280.553384 536.455761,281 537.002473,281 L546.997527,281 C547.551177,281 548,280.553689 548,280.002455 L548,272.997545 C548,272.446616 547.544239,272 546.997527,272 L537.002473,272 Z" id="Rectangle-31" fill="#FA9C19" sketch:type="MSShapeGroup"></path>
+            <path d="M548,272.633333 L542,277.3 L536,272.633333 L536,271.8 L536.6,271.8 L542,276 L547.4,271.8 L548,271.8 L548,272.633333 Z" id="Rectangle-40" fill="#FA9C19" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

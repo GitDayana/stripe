@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Supporting a Variable Amount in Checkout</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow, noarchive">
+
+    <meta name="csrf-token" content="o0uMmwbPbdoq6kl01Gb3TE9ytFlrCVwsJEjEOq9WGvsrYYlYH6woatn6E6SKHEvHd89OsXpiiBTtUlNWLlu-YQ==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="../connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="../connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Supporting a Variable Amount in Checkout</h1>
+    <p>Add a field to your payments page that enables users to specify the amount to be charged.  If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+</p>
+  </header>
+  <article>
+    <aside class="intro note">
+      <h1>More recipes</h1>
+      <p>Check out our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes">other recipes</a> and discover more ways to integrate Stripe.</p>
+    </aside>
+
+    <p>Stripe <a href="../../country?country=CH&amp;redirect=%252Fcheckout">Checkout</a> takes care of building an HTML form for securely collecting your customers’ card data. When loading the Checkout modal, you can specify the payment amount presented to the user. In many applications, this amount has already been determined when the page is rendered and is simply included as an attribute on Checkout’s <code>script</code> tag:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;script
+  src=&quot;https://checkout.stripe.com/checkout.js&quot; class=&quot;stripe-button&quot;
+  data-amount=&quot;2000&quot; // $20
+  // Other configurations
+  &gt;
+&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>However, some applications prefer to let their users specify a specific amount of money to be charged. This is most commonly seen in businesses that  accept donations or empower the user to pay what they think an item is worth. Checkout supports this approach, too, and this recipe walks through a sample implementation:</p>
+
+    <ol>
+      <li><a href="variable-amount-checkout#form">Create a form</a> with a text field for the donation amount, along with a “Donate” button.</li>
+      <li><a href="variable-amount-checkout#javascript">Define a JavaScript handler</a> that validates the user input and launches  Checkout with the user-specified amount.</li>
+      <li><a href="variable-amount-checkout#controller">Write a controller</a> on the server that processes the amount and makes the charge.</li>
+    </ol>
+
+    <p>It’s important to note that the JavaScript modifies the amount displayed in Checkout purely for usability purposes. The server-side request to Stripe dictates the actual amount being charged.</p>
+
+    <p>This implementation uses <a href="http://rubyonrails.org/">Rails</a>, but the concepts can be easily ported to other languages and frameworks. The JavaScript in this example uses <a href="https://jquery.com/">jQuery</a>.</p>
+
+    <h2 id="setup-the-application">Setup the application</h2>
+
+    <p>The steps below prepare the scaffolding for a basic payments page. If you already have a payments page, there’s no need to change anything according to these instructions. You can easily adapt the rest of this recipe to your existing implementation.</p>
+
+    <p>First, ensure the Stripe gem is in your application’s <code>Gemfile</code>, and then run <code>bundle install</code>. Next, add an initializer that configures the Stripe client library:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># config/initializers/stripe.rb
+Rails.configuration.stripe = {
+  :publishable_key =&gt; ENV[&#39;PUBLISHABLE_KEY&#39;],
+  :secret_key      =&gt; ENV[&#39;SECRET_KEY&#39;]
+}
+Stripe.api_key = Rails.configuration.stripe[:secret_key]</span></code></pre>
+      </div>
+    </section>
+
+    <p>Note that this example uses environment variables for the Stripe API keys. By doing so, sensitive credentials cannot be accidentally submitted to your version control repository. The end of this recipe demonstrates launching the server with values provided for these environment variables.</p>
+
+    <p>Then, generate a new <code>Charges</code> controller:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js shell">$ rails g controller charges new create</span></code></pre>
+      </div>
+    </section>
+
+    <p>This creates a few files, depending on your setup. For this recipe, the files you’ll be working with are:</p>
+
+    <ul>
+      <li><code>app/controllers/charges_controller.rb</code></li>
+      <li><code>app/views/charges/new.html.erb</code></li>
+      <li><code>app/views/charges/create.html.erb</code></li>
+    </ul>
+
+    <p>Last, edit <code>routes.rb</code>, replacing any Rails-generated routes for <code>charges</code> with:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># config/routes.rb
+resources :charges</span></code></pre>
+      </div>
+    </section>
+
+    <h2 id="form">Create the payment form and the confirmation page</h2>
+
+    <p>The application requires two view files. The first is the payments page, containing the form in which the user specifies the donation amount and a button that ultimately launches Checkout. The second view is a basic confirmation page the user is redirected to after completing the payment. Once the views are in place, you’ll proceed to adding the JavaScript to properly communicate the donation amount to Checkout.</p>
+
+    <p>As a point of reference, for applications with a fixed payment amount, a basic Checkout page might be:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml"># Example Checkout page that *does not* support a variable amount!
+&lt;%= form_tag charges_path do %&gt;
+  &lt;div id=&quot;error_explanation&quot;&gt;
+    &lt;% if flash[:error].present? %&gt;
+        &lt;p&gt;&lt;%= flash[:error] %&gt;&lt;/p&gt;
+    &lt;% end %&gt;
+  &lt;/div&gt;
+  &lt;article&gt;
+    &lt;label class=&quot;amount&quot;&gt;
+      &lt;span&gt;Amount: &lt;%= number_to_currency(@amount * 100) %&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/article&gt;
+  &lt;script src=&quot;https://checkout.stripe.com/checkout.js&quot; class=&quot;stripe-button&quot;
+  data-key=&quot;&lt;%= Rails.configuration.stripe[:publishable_key] %&gt;&quot;
+  data-description=&quot;One-time donation&quot;
+  data-amount=&quot;&lt;%= @amount %&gt;&quot;
+  data-locale=&quot;auto&quot;&gt;&lt;/script&gt;
+&lt;% end %&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>Note that the page is rendered with a known amount, <code>@amount</code>, that is also the provided value for the <code>data-amount</code> attribute in the Checkout <code>script</code> tag. This enables the Checkout modal to display the amount to the user as they’re entering their card details. Note also that the Checkout script is responsible for rendering a button on the form.</p>
+
+    <p>For this donation example, two immediate changes are required:</p>
+
+    <ul>
+      <li>You want a text field where the user can specify an amount to donate.</li>
+      <li>You don’t want Checkout to render a button on the page. Instead, you’ll have your own “Donate” button. This way, when the user clicks the “Donate” button, you can run some JavaScript that verifies the user’s input and then launches the Checkout modal.</li>
+    </ul>
+
+    <p>With those changes in mind, begin your form in <code>new.html.erb</code>:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml"># app/views/charges/new.html.erb
+&lt;%=form_tag charges_path do %&gt;
+  &lt;div id=&quot;error_explanation&quot;&gt;
+    &lt;% if flash[:error].present? %&gt;
+        &lt;p&gt;&lt;%=flash[:error] %&gt;&lt;/p&gt;
+    &lt;% end %&gt;
+  &lt;/div&gt;
+  &lt;article&gt;
+    &lt;%=label_tag(:amount, &#39;Donation Amount:&#39;) %&gt;
+    &lt;%=text_field_tag(:amount) %&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;%=hidden_field_tag(:stripeToken) %&gt;
+  &lt;/article&gt;
+  &lt;button id=&#39;donateButton&#39;&gt;Donate&lt;/button&gt;
+&lt;% end %&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>Along with the two changes already mentioned, there’s a new hidden field called <code>stripeToken</code>. The hidden field is how the <code>stripeToken</code> generated by Checkout is submitted to your server. Your JavaScript will set this field after Checkout has collected the user’s payment information and received the token from Stripe.</p>
+
+    <p>Now add the code for the other view, <code>create.html.erb</code>: the donation confirmation page. You can use the handy Rails helper <code>number_to_currency()</code> to format the amount, converting it from Stripe-compatible cents into human-friendly dollars:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml"># app/views/charges/create.html.erb
+&lt;h2&gt;Thank you!&lt;/h2&gt;
+&lt;p&gt;Your donation of &lt;strong&gt;&lt;%=number_to_currency(@amount * 0.01) %&gt;&lt;/strong&gt;
+ has been received.&lt;/p&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <h2 id="javascript">Define the JavaScript</h2>
+
+    <p>The first bit of JavaScript to add to the payment view configures basic Checkout functionality. You can give Checkout a function to call after the user has entered their payment information. This callback sets the <code>stripeToken</code> field on the form and submits the form to the server.</p>
+
+    <p>Add a <code>script</code> tag to include the Checkout library as well as your custom JavaScript to the bottom of <code>new.html.erb</code>. This should go after the <code>end</code> tag for the form. Write the <code>StripeCheckout</code> handler first:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml"># app/views/charges/new.html.erb
+&lt;script src=&quot;https://checkout.stripe.com/checkout.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var handler = StripeCheckout.configure({
+  key: &#39;&lt;%=Rails.configuration.stripe[:publishable_key] %&gt;&#39;,
+  locale: &#39;auto&#39;,
+  name: &#39;Sand Castles United&#39;,
+  description: &#39;One-time donation&#39;,
+  token: function(token) {
+    $(&#39;input#stripeToken&#39;).val(token.id);
+    $(&#39;form&#39;).submit();
+  }
+});
+&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>The <code>handler</code> object is configured with a few options, including your public API key and a callback for the token. See the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout#integration-custom-options">Checkout docs</a> for a comprehensive list of all available configuration options.</p>
+
+    <p>Next, clicking the “Donate” button needs to call a JavaScript function that verifies the user-specified amount. If the amount is valid, the function launches Checkout, passing in the amount. Still within the <code>script</code> tags, add the following click handler (explained below):</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript"># app/views/charges/new.html.erb
+$(&#39;#donateButton&#39;).on(&#39;click&#39;, function(e) {
+  e.preventDefault();
+
+  $(&#39;#error_explanation&#39;).html(&#39;&#39;);
+
+  var amount = $(&#39;input#amount&#39;).val();
+  amount = amount.replace(/$/g, &#39;&#39;).replace(/,/g, &#39;&#39;)
+
+  amount = parseFloat(amount);
+
+  if (isNaN(amount)) {
+    $(&#39;#error_explanation&#39;).html(&#39;&lt;p&gt;Please enter a valid amount in USD ($).&lt;/p&gt;&#39;);
+  }
+  else if (amount &lt; 5.00) {
+    $(&#39;#error_explanation&#39;).html(&#39;&lt;p&gt;Donation amount must be at least $5.&lt;/p&gt;&#39;);
+  }
+  else {
+    amount = amount * 100; // Needs to be an integer!
+    handler.open({
+      amount: Math.round(amount)
+    })
+  }
+});
+&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>First, an event handler is added to <code>#donateButton</code>. When that button is clicked, the function calls <code>preventDefault()</code> on the event to halt the form’s submission. Remember, you want Checkout to collect the user’s payment information and set the <code>stripeToken</code> <em>before</em> the form is submitted.</p>
+
+    <p>The user’s input is then verified:</p>
+
+    <ul>
+      <li>Any dollar signs or commas are removed</li>
+      <li><code>parseFloat()</code> then attempts to convert the string into a float</li>
+      <li>If conversion to a float fails (by returning <code>NaN</code>), <code>#error_explanation</code> is set to inform the user</li>
+    </ul>
+
+    <p>Note that this verification has some flexibility: <strong>7</strong>, <strong>07</strong> and <strong>7.00</strong> are all treated as $7.</p>
+
+    <p>This example also enforces a minimum donation amount of $5.00. This is not required, but as a minimum of $0.50 is needed for a Stripe charge, you will want to enforce a minimum of at least that amount in your implementation.</p>
+
+    <p>Note that this code assumes a user-specified amount in US dollars. Applications in other countries or with international audiences will want to consider other strategies, discussed at the end of this recipe.</p>
+
+    <p>The Checkout modal is opened with <code>handler.open()</code>. It’s now dynamically provided with an amount, converted to integer cents, as required by Checkout.</p>
+
+    <p>Finally, still within the <code>script</code> tag and right below the click handler, add an event handler for <code>popstate</code>. This ensures the Checkout modal is closed should the user attempt to navigate away from the page:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml"># app/views/new.html.erb
+// Close Checkout on page navigation
+$(window).on(&#39;popstate&#39;, function() {
+  handler.close();
+});
+&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>With the views and client-side code prepared, you can now turn your attention to setting up the server.</p>
+
+    <h2 id="controller">Write the controller</h2>
+
+    <p>After the user has completed Checkout, the form will be submitted to the server with the parameters <code>amount</code> and <code>stripeToken</code>. At this point, you want to process and verify the user-specified <code>amount</code> once more server-side, using the same logic as in the JavaScript.</p>
+
+    <p>Add the following methods to <strong>charges_controller.rb</strong>:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby"># app/controllers/charges_controller.rb
+def new
+end
+
+def create
+  @amount = params[:amount]
+
+  @amount = @amount.gsub(&#39;$&#39;, &#39;&#39;).gsub(&#39;,&#39;, &#39;&#39;)
+
+  begin
+    @amount = Float(@amount).round(2)
+  rescue
+    flash[:error] = &#39;Charge not completed. Please enter a valid amount in USD ($).&#39;
+    redirect_to new_charge_path
+    return
+  end
+
+  @amount = (@amount * 100).to_i # Must be an integer!
+
+  if @amount &lt; 500
+    flash[:error] = &#39;Charge not completed. Donation amount must be at least $5.&#39;
+    redirect_to new_charge_path
+    return
+  end
+
+  Stripe::Charge.create(
+    :amount =&gt; @amount,
+    :currency =&gt; &#39;usd&#39;,
+    :source =&gt; params[:stripeToken],
+    :description =&gt; &#39;Custom donation&#39;
+  )
+
+  rescue Stripe::CardError =&gt; e
+    flash[:error] = e.message
+    redirect_to new_charge_path
+  end
+end</span></code></pre>
+      </div>
+    </section>
+
+    <p>Here the amount submitted to the server is processed in the same manner as in the JavaScript. Parsing the string using <code>Float()</code> raises errors if the string has any non-numeric characters. Again, the minimum donation amount of $5.00 or 500 cents is enforced. If the amount fails any of these checks, the charge is not made and the user is alerted to the problem. Otherwise, the charge is completed.</p>
+
+    <p>It’s important that these validations are repeated on the server in case the user has manipulated or bypassed your JavaScript validations. It is also necessary to ensure your parsing and validation logic are robust. You want your client logic to come to the same conclusion as your server logic as to what the user should be charged. JavaScript’s <code>parseFloat()</code> function is fairly lenient, but Ruby’s <code>Float()</code> function is strict. Having this strictness on the server ensures input with ambiguity (like <strong>‘5 5’</strong>) is rejected before a charge is made.</p>
+
+    <p>With everything in place, you’re ready to test your solution. Remember to boot your app with your Stripe credentials:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js ruby">$ PUBLISHABLE_KEY=pk_test_6pRNASCoBOKtIshFeQd4XMUh \
+SECRET_KEY=sk_test_BQokikJOvBiI2HlWgH4olfQ2 bundle exec rails s</span></code></pre>
+      </div>
+    </section>
+
+    <p>We’ve placed random API keys in the code. Replace these with your <a href="https://dashboard.stripe.com/account/apikeys">actual API keys</a> to test this code for yourself.</p>
+
+    <p>Then you can find your payments page in your web browser at <strong>http://localhost:3000/charges/new</strong>.</p>
+
+    <h2 id="advanced-features">Advanced features</h2>
+
+    <p>The recipe to this point explains all the basic functionality needed to accept user-defined payments through Checkout. As always, there are ways you can improve upon this approach.</p>
+
+    <h3 id="supporting-multiple-currencies">Supporting multiple currencies</h3>
+
+    <p>The validation and parsing logic above assumes the payment being made is in US dollars. It ignores the dollar symbol ($) and the digit group separator used in the US (the comma). Should your payment form accept a different currency, you may need to modify this logic.</p>
+
+    <p>If you’d like to support multiple currencies, one solution is to add a drop-down currency selector next to the amount input field. The currency selected in this drop-down would then be considered both by JavaScript and the server, perhaps using a switch statement to determine what parsing and validation logic to use. When launching Checkout, you would then pass in the parameter <code>currency</code>. This is the 3-letter ISO code for the currency. For more information about this parameter and other configuration options for Checkout, see the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout#integration-custom-options">Checkout documentation</a>.</p>
+
+    <h3 id="supporting-coupons">Supporting coupons</h3>
+
+    <p>Another situation wherein you might dynamically change the amount displayed in Checkout is if you have your own coupon system. We have a <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges">detailed recipe</a> on supporting coupons for standalone charges. However, the solution in that recipe modifies only the server’s charge request and not the amount displayed in Checkout to the user.</p>
+
+    <p>Using the concepts from this recipe, you could use JavaScript to validate a user-submitted coupon code by making an Ajax request to an endpoint on the server, such as <strong>/coupons</strong>. The endpoint would return a discount percentage, and the JavaScript would then launch Checkout with the appropriate, discounted amount.</p>
+
+    <h3 id="localizing-error-messages">Localizing error messages</h3>
+
+    <p>Checkout supports <a href="https://support.stripe.com/questions/what-languages-does-stripe-checkout-support">localization in multiple languages</a> whereas the error messages generated by this application are only in English. If your site has a multilingual audience, you’ll want to localize the application’s error messages, too, for a better user experience.</p>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                <strong>Switzerland</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="https://stripe.com/country?country=AU&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=CA&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=DK&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=FI&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=GB&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=IE&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=NO&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=SE&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=US&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=AT&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=BE&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=BR&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=FR&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=DE&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=IT&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=JP&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=LU&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=MX&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=NL&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=PT&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=SG&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=ES&amp;redirect=/docs/recipes/variable-amount-checkout" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://stripe.com/country?country=CH&amp;redirect=/docs/recipes/variable-amount-checkout" class="selected">
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

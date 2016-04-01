@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Recipient to Account Migrations</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="78BLOwHgHsiwS_obQNcGWfl36AAfpYUa-i8Ce7Ni2_Zn6k74GINbeENboMserbrSwcoS6A7OUSIzNZUXMm9_bA==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="selected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+  <header>
+    <h1>Recipient to Account Migrations <span class="beta">Beta</span></h1>
+    <p>Learn how to migrate your existing recipients to Connect.
+  </p>
+  </header>
+  <article>
+
+    <p>If you’ve previously used Stripe to transfer money to third-parties, you’ve likely created <a href="../api/index.html#recipients">Recipient</a> objects to represent your users.</p>
+
+    <p>With <a href="index.html">Connect</a>, we’re deprecating recipients and replacing the functionality with <a href="../api/index.html#account">Accounts</a>. To help you transition, Stripe provides a migration path for turning your Recipient objects
+into Account objects. This guide will also help you convert your current
+integration to a new integration with the new API.</p>
+
+    <p>Why would you want to migrate? Recipients will be deprecated by the end of 2015—we will not break any existing integrations, but we won’t be documenting or maintaining it anymore. Secondly, the new APIs come with a lot of new functionality. If you’ve ever found yourself wishing that recipients worked better (e.g. tax reporting, improved identity verification), you might want to check out the new APIs.</p>
+
+    <h1 id="api-differences">API differences</h1>
+
+    <p>There are several differences between the managed accounts you’ll be switching to and the recipients you currently use:</p>
+
+    <ul>
+      <li>Accounts have balances. Whereas with recipients you would transfer funds directly from your balance to a recipient’s bank
+account, accounts hold their own balances. This introduces an extra conceptual step: funds are transferred to the recipient’s
+Stripe balance (normally as part of the charge request), and then the funds are paid out from that balance to their bank account. This enables Stripe to automatically
+handle a lot more payout models automatically. For example, you can use Stripe to payout recipients on a weekly basis
+with no additional work: simply set the account to weekly payouts, and Stripe will accumulate balances for the
+account as payments come in, paying them to the bank account on the schedule you specify.</li>
+      <li>When transfering to an account, you should usually specify the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees#charging-through-the-platform">destination</a> at charge time (though you may keep a
+portion of this as an <code>application_fee</code>). While Stripe supports transfering directly from your balance to a third-party
+account’s balance, this should be done fairly infrequently. If you are unable to determine the recipient of funds at charge time, Stripe may not be
+able to support your business model currently.</li>
+    </ul>
+
+    <h1 id="changes-required">Changes required</h1>
+
+    <p>To start using managed accounts you must first <a href="https://dashboard.stripe.com/account/applications/settings">activate your account as a
+platform</a>. You must also be on at least version
+“2014-12-17” of the API. If you’re on an older version, please <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">upgrade</a> before migrating to managed accounts.</p>
+
+    <p>Additionally, you <strong>must</strong> have all of your users <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts#tos-acceptance">agree to Stripe’s Terms of Service</a>. For example, you can usually
+update your terms to include a reference to Stripe’s terms, and properly notify users of the change. However, Stripe
+cannot provide legal advice on what constitutes agreement to the terms; you should consult an attorney. It is your
+responsibility to ensure that your users have properly agreed to these terms.</p>
+
+    <h1 id="migrating-existing-recipients">Migrating existing recipients</h1>
+
+    <p>Stripe provides a new endpoint for turning any recipient into an account. Stripe will copy over the identity details, verification state, and bank account information, although we will not migrate historical transfer data. <strong>This migration will also put the recipient
+in read-only mode.</strong> Any Recipient object that has been migrated to an Account object can no longer be used for updates or transfers: you must use the new account instead.</p>
+
+    <p>To migrate a recipient to an account, make a POST request to <code>/v1/accounts</code>, passing the existing recipient ID:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/accounts</span> \
+   -u <span class="token string">{PLATFORM_SECRET_KEY}:</span> \
+   -d <span class="token keyword">from_recipient</span>=<span class="token string">{RECIPIENT_ID}</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>The request returns an Account object <a href="../api/index.html#account_object">as described here</a>. The Recipient object
+will now be read-only, and will contain a reference to the newly created account:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/recipients/{RECIPIENT_ID}</span> \
+   -u <span class="token string">{PLATFORM_SECRET_KEY}:</span>
+</code></pre>
+<span class="highlight_js javascript">{
+  &quot;id&quot;: &quot;{RECIPIENT_ID}&quot;,
+  ...
+  &quot;migrated_to&quot;: &quot;{STRIPE_ACCOUNT_ID}&quot;
+}</span></code></pre>
+      </div>
+    </section>
+
+    <h1 id="creating-a-new-account">Creating a new account</h1>
+
+    <p>To create a new account (as opposed to creating a recipient), use the same <code>/v1/accounts</code> endpoint, but provide more information than you would when creating a recipient:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/accounts</span> \
+   -u <span class="token string">{PLATFORM_SECRET_KEY}:</span> \
+   -d <span class="token keyword">country</span>=<span class="token string">US</span> \
+   -d <span class="token keyword">managed</span>=<span class="token string">true</span> \
+   -d <span class="token keyword">legal_entity[type]</span>=<span class="token string">individual</span> \
+   -d <span class="token keyword">legal_entity[first_name]</span>=<span class="token string">Bob</span> \
+   -d <span class="token keyword">legal_entity[last_name]</span>=<span class="token string">Smith</span> \
+   -d <span class="token keyword">legal_entity[dob][day]</span>=<span class="token string">20</span> \
+   -d <span class="token keyword">legal_entity[dob][month]</span>=<span class="token string">7</span> \
+   -d <span class="token keyword">legal_entity[dob][year]</span>=<span class="token string">1969</span> \
+   -d <span class="token keyword">external_account</span>=<span class="token string">EXTERNAL_ACCOUNT_TOKEN</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>Note the <code>managed=true</code> parameter, which is necessary to indicate that the account will not be able to login. All
+parameters after this are optional: they may be provided at later dates, but you must provide at least the name and date of birth in order to enable transfers. (<a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Learn more about managed accounts.</a>)</p>
+
+    <p>The <code>external_account</code> parameter can be either a hash of bank account details or a bank account token obtained from
+<a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js#collecting-bank-account-details">Stripe.js</a>.</p>
+
+    <h1 id="transferring-funds">Transferring Funds</h1>
+
+    <p>The strongly preferred way to transfer funds to a third-party is to specify the recipient of funds at charge time. You may do this using
+the <code>destination</code> parameter. For example, to charge $10 USD, keeping $2 USD for yourself and sending $8 USD to another
+account:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/charges</span> \
+   -u <span class="token string">{PLATFORM_SECRET_KEY}:</span> \
+   -d <span class="token keyword">customer</span>=<span class="token string">{STRIPE_CUSTOMER_ID}</span> \
+   -d <span class="token keyword">amount</span>=<span class="token string">1000</span> \
+   -d <span class="token keyword">currency</span>=<span class="token string">usd</span> \
+   -d <span class="token keyword">destination</span>=<span class="token string">{CONNECTED_STRIPE_ACCOUNT_ID}</span> \
+   -d <span class="token keyword">application_fee</span>=<span class="token string">200</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>(The Stripe fees will come out of the platform account’s $2.)</p>
+
+    <p>This will, by default, pay out available funds to the third-party’s bank account on a rolling basis as funds become
+available, usually 2 days for managed accounts in the U.S. (<a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Learn more about processing charges.</a>)</p>
+
+    <p>If you want to charge a variable fee that is unknown at the time of the charge, collect the largest amount upfront and
+then refund the difference using <a href="../api/index.html#create_fee_refund">application fee refunds</a>. You can access the application
+fee ID and object via the <code>application_fee</code> parameter returned as part of the charge object.</p>
+
+    <p>If you need to pay out additional funds, for example as a bonus for reaching certain goals, you may do so via the
+Transfers API. For example:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.stripe.com/v1/transfers</span> \
+   -u <span class="token string">{PLATFORM_SECRET_KEY}:</span> \
+   -d <span class="token keyword">amount</span>=<span class="token string">1000</span> \
+   -d <span class="token keyword">currency</span>=<span class="token string">usd</span> \
+   -d <span class="token keyword">destination</span>=<span class="token string">{CONNECTED_STRIPE_ACCOUNT_ID}</span>
+</code></pre></code></pre>
+      </div>
+    </section>
+
+    <p>Again, with this new design, it should be fairly uncommon to need to transfer funds directly from your Stripe account to another. (<a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Learn more about sending transfers.</a>)</p>
+
+    <h2 id="updating-an-account">Updating an account</h2>
+
+    <p>In order to keep an account in good standing, Stripe will occasionally ask for additional information. It is your
+obligation to collect this information from the user, and provide it to Stripe. To do this, you should listen for
+the <code>account.updated</code> event via <a href="https://dashboard.stripe.com/account/webhooks">platform webhooks</a>. When you receive an <code>account.updated</code> event, you’ll want to check the received data for three relevant fields:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;verification&quot;: {
+    &quot;fields_needed&quot;: [
+      &quot;legal_entity.address.line1&quot;,
+      &quot;legal_entity.address.city&quot;,
+      &quot;legal_entity.address.state&quot;,
+      &quot;legal_entity.address.postal_code&quot;,
+      &quot;legal_entity.ssn_last_4&quot;
+    ],
+    &quot;due_by&quot;: 1459548000,
+    &quot;contacted&quot;: false
+  }
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>In this example, Stripe is requesting the address and last 4 of the Social Security number, and informing you that you
+have three days to provide it (with the usual consequence that Stripe will pause transfers for the account if not received in time). See the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts#account-verification">managed account
+guide</a> for more details on these fields.</p>
+
+    <p>In the United States name, date of birth, address, and SSN last 4 is usually, but not always, sufficient to fully
+verify an identity.</p>
+
+    <hr />
+
+    <h1>Now that you’re migrated</h1>
+    <p>Read more about what you can do with your connected accounts.</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed accounts</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating accounts</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and fees</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

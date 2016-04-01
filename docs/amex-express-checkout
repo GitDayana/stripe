@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Amex Express Checkout Guide</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="V4egrBRHr5L5yYK_urzSlZ-ho-Ay108uG1Vf1JZnGQPfraVvDSTqIgrZ2G_kxm4epxxZCCO8mxbST8i4F2q9mQ==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../security">Security</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="amex-express-checkout-guide" id="details">
+  <header>
+    <h1>Amex Express Checkout</h1>
+    <p>You can accept payments via <a href="../country?country=CH&amp;redirect=%252Famex-express-checkout">Amex Express Checkout</a> without modifying your existing Stripe integration.</p>
+  </header>
+  <article>
+
+    <aside class="intro note">
+      <p>If you have an American Express account, you can try out the flow by clicking the button below. Your card will not actually be charged.<br /><br /></p>
+      <div id="amex-express-checkout"></div>
+    </aside>
+    <p>By including the Amex Express Checkout button on your page, you enable American Express cardholders to pay directly from their account with American Express. For the customer, it is secure and convenient—they do not have to provide their card number. American Express creates a <a href="api/index.html#token_object">Card token</a> that is linked to the customer’s card and works with your existing Stripe integration. This token will contain the customer’s information such as name, billing address, email, and phone number.</p>
+
+    <h1 id="the-amex-express-checkout-button">The Amex Express Checkout button</h1>
+
+    <p>To include this button, your checkout page must load the helper library from American Express:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;script src=&quot;https://icm.aexp-static.com/Internet/IMDC/US_en/RegisteredCard/AmexExpressCheckout/js/AmexExpressCheckout.js&quot;&gt;&lt;/script&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>Before loading this library your page should configure the button using an <code>amex:init</code> tag:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;amex:init client_id=&quot;CLIENT_ID&quot; env=&quot;production&quot; callback=&quot;aecCallbackHandler&quot;/&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>You must <b><a href="https://dashboard.stripe.com/account/amex_express_checkout/enable">generate your client ID</a></b> in the Stripe Dashboard.</p>
+
+    <p>The <code>amex:init</code> tag accepts optional parameters to change the appearance of the button. These parameters are:</p>
+
+    <table>
+  <thead>
+    <th>Parameter</th>
+    <th>Notes</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>theme</code></td>
+      <td>Theme may be <code>"desktop"</code> (default) or <code>"mobile"</code></td>
+    </tr>
+    <tr>
+      <td><code>button_color</code></td>
+      <td>Button color may be <code>"dark"</code> (default) or <code>"light"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+    <p>As the name suggests, the <code>callback</code> parameter should be a function that handles the JSON object returned by Amex Express Checkout. For example:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">function aecCallbackHandler(response) {
+  window.console &amp;&amp; console.log(JSON.stringify(response));
+  return response.token;
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>The string <code>response.token</code> is the ID of a Stripe card token.</p>
+
+    <p>When you load the American Express javascript library, it will insert the button into the <code>div</code> with ID <code>amex-express-checkout</code>. So you should place such a div in the location that you wish the button to appear:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;div id=&quot;amex-express-checkout&quot;&gt;&lt;/div&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>The button will not be shown if the customer’s browser is not supported. Amex Express Checkout supports all recent desktop and mobile browsers.</p>
+
+    <h1 id="stripe-card-token">Stripe Card Token</h1>
+
+    <p>The card token created by Amex Express Checkout behaves the same as any other: it can be <a href="api/index.html#create_charge">charged</a> or <a href="api/index.html#customers">attached to a Customer</a> for repeated charging. An example card token is:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;id&quot;: &quot;tok_6gpp55Fir1Ca8u&quot;,
+  &quot;livemode&quot;: true,
+  &quot;created&quot;: 1438056436,
+  &quot;used&quot;: false,
+  &quot;object&quot;: &quot;token&quot;,
+  &quot;type&quot;: &quot;card&quot;,
+  &quot;card&quot;: {
+    &quot;id&quot;: &quot;card_6gpqVeoHsV3beV&quot;,
+    &quot;object&quot;: &quot;card&quot;,
+    &quot;last4&quot;: &quot;1234&quot;,
+    &quot;brand&quot;: &quot;American Express&quot;,
+    &quot;funding&quot;: &quot;credit&quot;,
+    &quot;exp_month&quot;: 7,
+    &quot;exp_year&quot;: 2018,
+    &quot;fingerprint&quot;: &quot;5q9AI2LPS47YQtLX&quot;,
+    &quot;country&quot;: &quot;US&quot;,
+    &quot;name&quot;: &quot;CHRISTINE ROBERTS&quot;,
+    &quot;address_line1&quot;: &quot;1 DR. CARLTON B. GOODLETT PLACE&quot;,
+    &quot;address_line2&quot;: &quot;&quot;,
+    &quot;address_city&quot;: &quot;SAN FRANCISCO&quot;,
+    &quot;address_state&quot;: &quot;CA&quot;,
+    &quot;address_zip&quot;: &quot;94110&quot;,
+    &quot;address_country&quot;: &quot;US&quot;,
+    &quot;cvc_check&quot;: null,
+    &quot;address_line1_check&quot;: &quot;unchecked&quot;,
+    &quot;address_zip_check&quot;: &quot;unchecked&quot;,
+    &quot;tokenization_method&quot;: &quot;amex_express_checkout&quot;,
+    &quot;metadata&quot;: {
+      &quot;phone&quot;: &quot;5555551212&quot;,
+    }
+  },
+  &quot;email&quot;: &quot;foo@example.com&quot;,
+  &quot;client_ip&quot;: &quot;192.0.2.1&quot;,
+  &quot;usage&quot;: null
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>American Express will always provide the name and billing address of the customer. The customer’s first name will be truncated to ten characters if it is longer than that. Additionally, American Express will provide the customer’s email address and phone number if they are available.</p>
+
+    <h1 id="test-mode">Test mode</h1>
+
+    <p>You can test the Amex Express Checkout flow in test mode by configuring the library as follows:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;amex:init client_id=&quot;799a098b-b65c-47dc-abb3-d9832bfc7227&quot; env=&quot;qa&quot; callback=&quot;aecCallbackHandler&quot;/&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <p>Because you are not currently logged in to the Stripe website, this client ID is not specific to your account, and you won’t be able to fetch the tokens created with it. If you <a href="https://dashboard.stripe.com/login">log in</a> and reload this page, you’ll see a test mode client ID linked to your Stripe account.</p>
+
+    <p>The American Express QA environment corresponds to Stripe test mode. To authenticate to Amex Express Checkout in QA, use the credentials:</p>
+
+    <ul>
+      <li>Username: <b>test_user</b></li>
+      <li>Password: <b>password</b></li>
+      <li>One-time access code: <b>123456</b></li>
+    </ul>
+
+    <p>Here is an example page using Amex Express Checkout in test mode:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js xml">&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Amex Express Checkout test page&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;amex-express-checkout&quot;&gt;&lt;/div&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    function aecCallbackHandler(response) {
+      window.console &amp;&amp; console.log(JSON.stringify(response));
+      return response.token;
+    }
+  &lt;/script&gt;
+  &lt;amex:init client_id=&quot;799a098b-b65c-47dc-abb3-d9832bfc7227&quot; env=&quot;qa&quot; callback=&quot;aecCallbackHandler&quot; /&gt;
+  &lt;script src=&quot;https://icm.aexp-static.com/Internet/IMDC/US_en/RegisteredCard/AmexExpressCheckout/js/AmexExpressCheckout.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <hr />
+
+    <h1 id="further-reading">Further Reading</h1>
+    <p>
+  You should now be able to accept payments via Amex Express Checkout! Some things you might want to look at next:
+</p>
+    <ul>
+  <li><a href="../country?country=CH&amp;redirect=%252Fdocs%252Famex-express-checkout-button-guidelines">Button Implementation Guidelines</a></li>
+  <li><a href="../country?country=CH&amp;redirect=%252Famex-express-checkout%252Fterms">Amex Express Checkout Terms of Service</a></li>
+</ul>
+
+    <script type="text/javascript">
+  function aecCallbackHandler(response) {
+    window.console && console.log(JSON.stringify(response));
+  }
+</script>
+
+    <amex:init client_id="30e73189-96f4-4797-83d4-6730bf6bed19" env="production" callback="aecCallbackHandler" />
+
+    <script src="https://icm.aexp-static.com/Internet/IMDC/US_en/RegisteredCard/AmexExpressCheckout/js/AmexExpressCheckout.js"></script>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../country?country=AU&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CA&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DK&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FI&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=GB&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IE&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NO&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SE&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=US&amp;redirect=%252Fdocs%252Famex-express-checkout" class="selected">
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=AT&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BE&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BR&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FR&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DE&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IT&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=JP&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=LU&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=MX&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NL&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=PT&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SG&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=ES&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CH&amp;redirect=%252Fdocs%252Famex-express-checkout" >
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

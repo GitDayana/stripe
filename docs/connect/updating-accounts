@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Updating Account Info</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="h2SamiNyWoYAIwsE_eImCDDmYoHBrfwr58DLZmargH8PTp9ZOhEfNvMzUdSjmJqDCFuYadDGKBMu2lwK56Yk5Q==" />
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="../../docs.1">Getting Started</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="../mobile/index.html">Mobile Apps</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+      <li class="unselected"><a href="../../security">Security</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
+      <li class="unselected"><a href="../webhooks/index.html">Webhooks</a></li>
+      <li class="unselected"><a href="../guides/ach">ACH Guide</a></li>
+      <li class="unselected"><a href="../guides/bitcoin">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>
+      <li class="unselected"><a href="../guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="getting-started">Account</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Your Account</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>
+      <li class="unselected"><a href="../disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fdisputes%252Fevidence">Submitting Evidence</a></li>
+      <li class="unselected sub"><a href="../../help/dispute-types">Dispute Types</a></li>
+      <li class="unselected sub"><a href="../../help/disputes">Disputes FAQ</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
+      <li class="unselected"><a href="../libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
+
+      <li class="unselected">
+        <a href="../api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions">Subscriptions</h1>
+    <ul>      <li class="unselected"><a href="../subscriptions.1">Getting Started</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Detailed Guide</a></li>
+</ul>
+
+    <h1 class="orders">Relay</h1>
+    <ul>      <li class="unselected"><a href="../relay/index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Apps Guide</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+    <h1 class="connect">Connect</h1>
+    <ul>      <li class="unselected"><a href="index.html">Overview</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="selected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul>
+
+    <h1 class="more">About Stripe</h1>
+    <ul>      <li class="unselected"><a href="../../help/contact">Contact</a></li>
+      <li class="unselected"><a href="../../pt">Global Users</a></li>
+      <li class="unselected last"><a href="../../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+
+  <header>
+    <h1>Updating Accounts <span class="beta">Beta</span></h1>
+    <p>When you create and manage Stripe accounts through the API, you’ll need to be mindful of what information you need to provide Stripe, and when.</p>
+  </header>
+  <article>
+    <aside class="intro note">
+      <h1>Managed vs. Standalone Accounts</h1>
+      <p>
+    This section deals solely with creating <em>managed</em> accounts, where you are responsible for all communication and interaction with the account holder.
+  </p>
+
+      <p>
+  If you’d like to connect to an existing Stripe account, or have Stripe handle details like identity document collection, take a look at <a href="oauth">standalone accounts</a>.
+  </p>
+    </aside>
+
+    <p>Running a managed account gives you a huge amount of power to work with: almost every setting that Stripe makes available for standalone accounts is available via this API. With this power comes the expectation that you will shepherd the account through various risk and compliance processing, mainly taking the form of collecting information Stripe requests.</p>
+
+    <p>The full list of settable properties on the account object is available in the <a href="../api/index.html#update_account">API reference</a>: this section points out the ones most relevant to managed accounts, and goes into some more detail on the more nuanced ones.</p>
+
+    <h1 id="account-verification">Account verification</h1>
+
+    <p>Managed accounts have a <code>verification</code> property, a read-only hash representing information Stripe needs about the account holder (see also <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">identity verification</a>). This is a very important section to keep track of for managed accounts, as ignoring it will result in transfers being disabled for accounts you control.</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">  &quot;verification&quot;: {
+    &quot;fields_needed&quot;: [
+      &quot;legal_entity.type&quot;
+    ],
+    &quot;due_by&quot;: null,
+    &quot;disabled_reason&quot;: null
+  },</span></code></pre>
+      </div>
+    </section>
+
+    <p>The <code>fields_needed</code> property is an array of strings representing the account fields required for verification. These strings usually correlate directly to <code>Account</code> object properties. For example, the string <code>legal_entity.type</code> corresponds to the <code>type</code> field in the <code>legal_entity</code> hash. If <code>fields_needed</code> is not empty–if additional information is required, that information is necessary to either enable additional capabilities (if, for example, <code>transfers_enabled</code> is false), or to prevent capabilities from eventually being disabled (if <code>due_by</code> is set).</p>
+
+    <p>If <code>fields_needed</code> is not an empty array, <code>due_by</code> may be set. This is a Unix timestamp identifying when the information is needed by. Usually, if we don’t receive the information we need by the due date, we will disable bank transfers on the account. However, there can be other consequences for rarer situations. For example, if transfers are already disabled and our inquiries are not being responded to within a reasonable period of time, Stripe may also disable the ability to process charges. Unless fraud or other rare circumstances occur, Stripe will always provide at least 3 days for the information to be provided before limiting account functionality.</p>
+
+    <p>Separately, the <code>disabled_reason</code> property may also be set. This is a string describing the reason why this account is unable to make transfers or charges. The reason can fall into several categories:</p>
+
+    <ol>
+      <li><code>rejected.fraud</code> this account is rejected due to suspected fraud or illegal activity.</li>
+      <li><code>rejected.terms_of_service</code> -  this account is rejected due to suspected terms of service violations.</li>
+      <li><code>rejected.listed</code> -  this account is rejected due to a match on a third party prohibited persons or companies list (such as financial services provider or government).</li>
+      <li><code>rejected.other</code> - this account is rejected for some other reason.</li>
+      <li><code>fields_needed</code> - additional verification information is required in order to enable transfer or charge capabilities on this account.</li>
+      <li><code>listed</code> - this account might be a match on a prohibited persons or companies list. Stripe will investigate and either reject or reinstate the account appropriately.</li>
+      <li><code>other</code> - this account is not rejected but disabled for other reasons.</li>
+    </ol>
+
+    <p>You can examine the <code>charges_enabled</code> and <code>transfers_enabled</code> properties to understand the account’s current capabilities. Feel free to reach out to us if you would like more details.</p>
+
+    <p>The first time you will interact with <code>fields_needed</code> is when creating an account: before transfers can be enabled, we need a certain set of information. The specific needs vary depending on the country and legal entity type. Rather than having to keep track of the requirements for every combination of these options (and changes to those requirements), use <code>fields_needed</code> to discover and address verification needs as they arise.</p>
+
+    <p>That being said, knowing the information that will eventually be requested is useful for planning. We provide some <a href="https://support.stripe.com/questions/what-information-do-i-need-to-provide-to-verify-managed-accounts">advice and guidelines</a> to help you decide what information to collect.</p>
+
+    <p>We expect developers to use this flow when creating new accounts:</p>
+
+    <ol>
+      <li>Decide what information you’ll request up-front, usually a subset of <code>fields_needed</code> in the countries you wish to support.</li>
+      <li>Request this information from the user and use it when creating an account for them.</li>
+      <li>After creating the account, check <code>verification[fields_needed]</code> for any additional requirements. If additional information is required, obtain it from the user and update the connected account.</li>
+      <li>Watch for <code>account.updated</code> webhooks to see if <code>verification[fields_needed]</code> changes, reaching out to your user for additional information as needed.</li>
+    </ol>
+
+    <p>Finally, there are a few special <code>fields_needed</code> values that warrant noting:</p>
+
+    <ul>
+      <li><code>legal_entity.additional_owners</code>: see the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts#additional-owners"><code>additional_owners</code> section</a> below for information on the EU owner requirements</li>
+      <li><code>legal_entity.verification.document</code>: see the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">identity verification section</a> for information and verifying individual identities. Note that this also applies to <code>legal_entity.additional_owners.#.verification.document</code> (where <code>#</code> can be 0, 1, 2, or 3).</li>
+      <li><code>external_account</code>: noting the singular–this means Stripe needs a bank account for the Stripe account to complete activation. See the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">bank transfers guide</a> for details on providing this.</li>
+    </ul>
+
+    <h1 id="additional-owners">Additional owners</h1>
+
+    <p>The <code>legal_entity[additional_owners]</code> parameter is an array of hashes of individual information. In <a href="https://en.wikipedia.org/wiki/Single_Euro_Payments_Area">Single Euro Payments Area</a> member countries, Stripe is required to collect and verify information about anybody that owns at least 25% of the company, in addition to the representative. For each owner, the possible fields are <code>first_name</code>, <code>last_name</code>, <code>dob</code>, and <code>address</code>. The address and dob fields are identical in formatting to the top-level <code>legal_entity[address]</code> and <code>legal_entity[dob]</code> fields, and the address does not need to be in the same country as the account. Stripe will attempt to verify each owner, and if the verification fails, we may request more information. As such, each additional owner has a <code>verification</code> property that works exactly the same as the <code>legal_entity[verification]</code> hash (see the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">identity verification section</a>), but for that individual.</p>
+
+    <p>When <code>legal_entity.additional_owners</code> is listed in the <code>verification[fields_needed]</code> array, you must ask the user to provide any additional owners. You may pass an array or integer-indexed hash with information on additional owners. Otherwise, if there are no additional owners, you need to update <code>legal_entity[additional_owners]</code> as shown in the examples below.</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+  <a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_additional_owners">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <h1 id="tos-acceptance">Terms of Service Acceptance</h1>
+
+    <p>Stripe requires that all managed accounts accept the <a href="../../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a>. Prior to making any payouts to their bank account you are required to ensure that the user has accepted this agreement and provide these parameters to Stripe:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">curl</a>
+  <a href="index.html">ruby</a>
+  <a href="index.html">python</a>
+  <a href="index.html">php</a>
+  <a href="index.html">node</a>
+  <a href="index.html">java</a></p>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_tos_acceptance">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>It is your responsibility to ensure that your users agree to the <a href="../../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a> before accepting payments through Stripe on your platform. Your users must minimally be presented with a link to the agreement and expressly consent to the agreement prior to using Stripe, such as at the point of activating their account. For example:</p>
+
+    <p class="button-example"><span>Register Your Account</span></p>
+
+    <p class="submit-note">
+  By registering your account, you agree to our <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts#tos-acceptance">Terms of Service</a> and the <a target="_blank" href="../../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a>.
+</p>
+
+    <p>We also suggest that you incorporate a term into your agreement with your users that makes it clear that their acceptance of payments is provided subject to the <a href="../../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a>. One way to achieve this is by including a clear reference and link to the <a href="../../country?country=CH&amp;redirect=%252Fconnect%252Faccount-terms">Stripe Connected Account Agreement</a> in your customer agreement. An example provision may look like the following:</p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <p><a href="index.html">english</a>
+  <a href="index.html">french</a>
+  <a href="index.html">spanish</a>
+  <a href="index.html">italian</a>
+  <a href="index.html">portuguese</a>
+  <a href="index.html">german</a></p>
+      </nav>
+      <div class="terminal-wrap" style="font-size: 13px" data-action="terms_of_service">
+        <div class="terminal"></div>
+      </div>
+    </section>
+
+    <h1 id="webhooks">Webhooks</h1>
+
+    <p>All changes, including the important <code>verification</code> hash changes for managed accounts, will be delivered via webhooks as an <code>account.updated</code> event. Be certain to establish a platform webhook URL in your <a href="https://dashboard.stripe.com/account/webhooks">webhook settings</a> to watch for these.</p>
+
+    <hr />
+
+    <h1>Next up</h1>
+    <p>Keep reading to learn more about verifying your users and customizing your payment flow.</p>
+    <ul>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity verification</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank transfers</a></li>
+  <li><a href="../api/index.html">Full API reference</a></li>
+</ul>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  <script src="../../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+<script type="text/javascript">
+  var APIValues = {};
+    APIValues["curl"] = {
+      tutorial_additional_owners: "# Create or update additional owners\n\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/accounts/{CONNECTED_STRIPE_ACCOUNT_ID}\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Elegal_entity[additional_owners][0][first_name]\u003C/span\u003E=\u003Cspan class='token string'\u003EBob\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Elegal_entity[additional_owners][0][last_name]\u003C/span\u003E=\u003Cspan class='token string'\u003ESmith\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Elegal_entity[additional_owners][1][first_name]\u003C/span\u003E=\u003Cspan class='token string'\u003EJane\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Elegal_entity[additional_owners][1][last_name]\u003C/span\u003E=\u003Cspan class='token string'\u003EDoe\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E\n# Indicate that there are no additional owners\n\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/accounts/{CONNECTED_STRIPE_ACCOUNT_ID}\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Elegal_entity[additional_owners]\u003C/span\u003E=\u003Cspan class='token string'\u003E\u003C/span\u003E\n\u003C/code\u003E\u003C/pre\u003E",
+      tutorial_tos_acceptance: "\u003Cpre class=\"language-bash\"\u003E\u003Ccode class=\"language-bash\"\u003Ecurl \u003Cspan class='token string'\u003Ehttps://api.stripe.com/v1/accounts/{CONNECTED_STRIPE_ACCOUNT_ID}\u003C/span\u003E \\\n   -u \u003Cspan class='token string'\u003E{PLATFORM_SECRET_KEY}:\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Etos_acceptance[date]\u003C/span\u003E=\u003Cspan class='token string'\u003E1459289361\u003C/span\u003E \\\n   -d \u003Cspan class='token keyword'\u003Etos_acceptance[ip]\u003C/span\u003E=\"\u003Cspan class='token string'\u003E190.117.142.204\u003C/span\u003E\"\n\u003C/code\u003E\u003C/pre\u003E"
+    };
+    APIValues["ruby"] = {
+      tutorial_additional_owners: "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\naccount = Stripe::Account.retrieve({CONNECTED_STRIPE_ACCOUNT_ID})\n\n# Create additional owners\naccount.legal_entity.additional_owners = [\n  {:first_name =\u0026gt; \u0026#39;Bob\u0026#39;, :last_name =\u0026gt; \u0026#39;Smith\u0026#39;},\n  {:first_name =\u0026gt; \u0026#39;Jane\u0026#39;, :last_name =\u0026gt; \u0026#39;Doe\u0026#39;}\n]\n\n# Add an additional owner\nlength = account.legal_entity.additional_owners.length\naccount.legal_entity.additional_owners[length] = {\n  :first_name =\u0026gt; \u0026#39;Andrew\u0026#39;,\n  :last_name =\u0026gt; \u0026#39;Jackson\u0026#39;\n}\n\n# Update additional owners\naccount.legal_entity.additional_owners[0].first_name = \u0026#39;Robert\u0026#39;\n\n# Indicate that there are no additional owners\naccount.legal_entity.additional_owners = nil\n\naccount.save\u003C/span\u003E",
+      tutorial_tos_acceptance: "\u003Cspan class=\"highlight_js ruby\"\u003EStripe.api_key = PLATFORM_SECRET_KEY\naccount = Stripe::Account.retrieve({CONNECTED_STRIPE_ACCOUNT_ID})\naccount.tos_acceptance.date = Time.now.to_i\naccount.tos_acceptance.ip = request.remote_ip # Assumes you\u0026#39;re not using a proxy\naccount.save\u003C/span\u003E"
+    };
+    APIValues["python"] = {
+      tutorial_additional_owners: "\u003Cspan class=\"highlight_js python\"\u003Estripe.api_key = PLATFORM_SECRET_KEY\naccount = stripe.Account.retrieve({CONNECTED_STRIPE_ACCOUNT_ID})\n\n# Create additional owners\naccount.legal_entity.additional_owners = [\n  dict(first_name=\u0026#39;Bob\u0026#39;, last_name=\u0026#39;Smith\u0026#39;),\n  dict(first_name=\u0026#39;Jane\u0026#39;, last_name=\u0026#39;Doe\u0026#39;)\n]\n\n# Add an additional owner\nlength = len(account.legal_entity.additional_owners)\naccount.legal_entity.additional_owners[length] = dict(\n  first_name=\u0026#39;Andrew\u0026#39;,\n  last_name=\u0026#39;Jackson\u0026#39;\n)\n\n# Update additional owners\naccount.legal_entity.additional_owners[0].first_name = \u0026#39;Robert\u0026#39;\n\n# Indicate that there are no additional owners\naccount.legal_entity.additional_owners = None\n\naccount.save()\u003C/span\u003E",
+      tutorial_tos_acceptance: "\u003Cspan class=\"highlight_js python\"\u003Eimport time\nstripe.api_key = PLATFORM_SECRET_KEY\naccount = stripe.Account.retrieve({CONNECTED_STRIPE_ACCOUNT_ID})\naccount.tos_acceptance.date = int(time.time())\naccount.tos_acceptance.ip = \u0026#39;190.117.142.204\u0026#39; # Depends on what web framework you\u0026#39;re using\naccount.save()\u003C/span\u003E"
+    };
+    APIValues["php"] = {
+      tutorial_additional_owners: "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n$account = \\Stripe\\Account::retrieve({CONNECTED_STRIPE_ACCOUNT_ID});\n\n// Create additional owners\n$account-\u0026gt;legal_entity-\u0026gt;additional_owners = array(\n  array(\u0026#39;first_name\u0026#39; =\u0026gt; \u0026#39;Bob\u0026#39;, \u0026#39;last_name\u0026#39; =\u0026gt; \u0026#39;Smith\u0026#39;),\n  array(\u0026#39;first_name\u0026#39; =\u0026gt; \u0026#39;Jane\u0026#39;, \u0026#39;last_name\u0026#39; =\u0026gt; \u0026#39;Doe\u0026#39;)\n);\n\n// Add an additional owner\n$count = count($account-\u0026gt;legal_entity-\u0026gt;additional_owners);\n$account-\u0026gt;legal_entity-\u0026gt;additional_owners[$count] = array(\n  \u0026#39;first_name\u0026#39; =\u0026gt; \u0026#39;Andrew\u0026#39;,\n  \u0026#39;last_name\u0026#39; =\u0026gt; \u0026#39;Jackson\u0026#39;\n);\n\n// Update additional owners\n$account-\u0026gt;legal_entity-\u0026gt;additional_owners[0]-\u0026gt;first_name = \u0026#39;Robert\u0026#39;;\n\n// Indicate that there are no additional owners\n$account-\u0026gt;legal_entity-\u0026gt;additional_owners = null;\n\n$account-\u0026gt;save();\u003C/span\u003E",
+      tutorial_tos_acceptance: "\u003Cspan class=\"highlight_js php\"\u003E\\Stripe\\Stripe::setApiKey(PLATFORM_SECRET_KEY);\n$account = \\Stripe\\Account::retrieve({CONNECTED_STRIPE_ACCOUNT_ID});\n$account-\u0026gt;tos_acceptance-\u0026gt;date = time();\n// Assumes you\u0026#39;re not using a proxy\n$account-\u0026gt;tos_acceptance-\u0026gt;ip = $_SERVER[\u0026#39;REMOTE_ADDR\u0026#39;];\n$account-\u0026gt;save();\u003C/span\u003E"
+    };
+    APIValues["node"] = {
+      tutorial_additional_owners: "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\n\n// Create and update additional owners\nstripe.accounts.update(\n  {CONNECTED_STRIPE_ACCOUNT_ID},\n  {\n    legal_entity: {\n      additional_owners: {\n        // Note the use of an object instead of an array\n        0: {first_name: \u0026#39;Bob\u0026#39;, last_name: \u0026#39;Smith\u0026#39;},\n        1: {first_name: \u0026#39;Jane\u0026#39;, last_name: \u0026#39;Doe\u0026#39;}\n      }\n    }\n  }\n);\n\n// Indicate that there are no additional owners\nstripe.accounts.update(\n  {CONNECTED_STRIPE_ACCOUNT_ID},\n  {legal_entity: {additional_owners: \u0026#39;\u0026#39;}}\n);\u003C/span\u003E",
+      tutorial_tos_acceptance: "\u003Cspan class=\"highlight_js javascript\"\u003Evar stripe = require(\u0026#39;stripe\u0026#39;)(PLATFORM_SECRET_KEY);\nstripe.accounts.update(\n  {CONNECTED_STRIPE_ACCOUNT_ID},\n  {\n    tos_acceptance: {\n      date: Math.floor(Date.now() / 1000),\n      ip: request.connection.remoteAddress // Assumes you\u0026#39;re not using a proxy\n    }\n  }\n);\u003C/span\u003E"
+    };
+    APIValues["java"] = {
+      tutorial_additional_owners: "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\nAccount account = Account.retrieve({CONNECTED_STRIPE_ACCOUNT_ID}, (RequestOptions) null);\n\nMap\u0026lt;String, Object\u0026gt; accountParams = new HashMap\u0026lt;String, Object\u0026gt;();\nMap\u0026lt;String, Object\u0026gt; legalEntityParams = new HashMap\u0026lt;String, Object\u0026gt;();\nList\u0026lt;Map\u0026lt;String, Object\u0026gt;\u0026gt; additionalOwnersParams = new LinkedList\u0026lt;Map\u0026lt;String, Object\u0026gt;\u0026gt;();\n\n// Create additional owners\nMap\u0026lt;String, Object\u0026gt; newOwner1 = new HashMap\u0026lt;String, Object\u0026gt;();\nnewOwner1.put(\u0026quot;first_name\u0026quot;, \u0026quot;Bob\u0026quot;);\nnewOwner1.put(\u0026quot;last_name\u0026quot;, \u0026quot;Smith\u0026quot;);\n\nMap\u0026lt;String, Object\u0026gt; newOwner2 = new HashMap\u0026lt;String, Object\u0026gt;();\nnewOwner2.put(\u0026quot;first_name\u0026quot;, \u0026quot;Jane\u0026quot;);\nnewOwner2.put(\u0026quot;last_name\u0026quot;, \u0026quot;Doe\u0026quot;);\n\nadditionalOwnersParams.add(newOwner1);\nadditionalOwnersParams.add(newOwner2);\n\n// Add an additional owner\nint size = additionalOwnersParams.size();\nMap\u0026lt;String, Object\u0026gt; newOwner3 = new HashMap\u0026lt;String, Object\u0026gt;();\nnewOwner3.put(\u0026quot;first_name\u0026quot;, \u0026quot;Andrew\u0026quot;);\nnewOwner3.put(\u0026quot;last_name\u0026quot;, \u0026quot;Jackson\u0026quot;);\nadditionalOwnersParams.add(size, newOwner3);\n\n// Update additional owners\nadditionalOwnersParams.get(0).put(\u0026quot;first_name\u0026quot;, \u0026quot;Robert\u0026quot;);\n\n// Indicate that there are no additional owners\nlegalEntityParams.put(\u0026quot;additional_owners\u0026quot;, new LinkedList\u0026lt;Object\u0026gt;());\n\naccountParams.put(\u0026quot;legal_entity\u0026quot;, legalEntityParams);\n\naccount.update(accountParams);\u003C/span\u003E",
+      tutorial_tos_acceptance: "\u003Cspan class=\"highlight_js java\"\u003EStripe.apiKey = PLATFORM_SECRET_KEY;\nAccount account = Account.retrieve({CONNECTED_STRIPE_ACCOUNT_ID}, (RequestOptions) null);\n\nMap\u0026lt;String, Object\u0026gt; tosAcceptanceParams = new HashMap\u0026lt;String, Object\u0026gt;();\ntosAcceptanceParams.put(\u0026quot;date\u0026quot;, (long) System.currentTimeMillis() / 1000L);\ntosAcceptanceParams.put(\u0026quot;ip\u0026quot;, request.getRemoteAddr()); // Assumes you\u0026#39;re not using a proxy\n\nMap\u0026lt;String, Object\u0026gt; accountParams = new HashMap\u0026lt;String, Object\u0026gt;();\naccountParams.put(\u0026quot;tos_acceptance\u0026quot;, tosAcceptanceParams);\n\naccount.update(accountParams);\u003C/span\u003E"
+    };
+    APIValues["english"] = {
+      terms_of_service: "Payment processing services for [account holder term, e.g. drivers or sellers] on [platform name] are provided by Stripe and are subject to the \u003Ca href=\"https://stripe.com/connect/account-terms\"\u003EStripe Connected Account Agreement\u003C/a\u003E, which includes the \u003Ca href=\"https://stripe.com/terms\"\u003EStripe Terms of Service\u003C/a\u003E (collectively, the “Stripe Services Agreement”). By agreeing to [this agreement / these terms / etc.] or continuing to operate as a [account holder term] on [platform name], you agree to be bound by the Stripe Services Agreement, as the same may be modified by Stripe from time to time. As a condition of [platform name] enabling payment processing services through Stripe, you agree to provide [platform name] accurate and complete information about you and your business, and you authorize [platform name] to share it and transaction information related to your use of the payment processing services provided by Stripe."
+    };
+    APIValues["french"] = {
+      terms_of_service: "Les services de paiement pour les [terme désignant les détenteurs de compte: marchands, chauffeurs, porteurs de projet…] officiant sur [nom de la plateforme] sont fournis par Stripe et soumis à l’Accord sur les comptes Stripe Connected (\u003Ca href=\"https://stripe.com/connect/account-terms\"\u003EStripe Connected Account Agreement\u003C/a\u003E), qui inclut les Modalités de service de Stripe (l’ensemble étant appelé les “Conditions Générales d’Utilisation Stripe” -  “\u003Ca href=\"https://stripe.com/fr/terms\"\u003EStripe Services Agreement\u003C/a\u003E”.) En agréant aux présentes [Conditions Générales d’Utilisation / de Vente] ou en continuant à opérer en tant que [terme désignant les détenteurs de compte] officiant sur [nom de la plateforme], vous acceptez d’être lié aux Conditions Générales d’Utilisation Stripe, celles-ci pouvant occasionnellement faire l’objet de modifications de la part de Stripe. Du fait que [nom de la plateforme] permette d’effectuer les paiements via Stripe, vous acceptez de fournir à [nom de la plateforme] des informations précises et complètes sur vous et votre activité, et autorisez [nom de la plateforme] à partager ces informations ainsi que celles concernant les transactions effectuées via la solution de paiement fournie par Stripe."
+    };
+    APIValues["spanish"] = {
+      terms_of_service: "Los servicios de procesamiento de pago para [término de titular de cuenta, p.ej. conductor o vendedor] en [nombre de plataforma] son proporcionados por Stripe y están sujetos al Acuerdo de cuentas conectadas de Stripe (\u003Ca href=\"https://stripe.com/connect/account-terms\"\u003EStripe Connected Account Agreement\u003C/a\u003E), que incluye los Términos de servicio de Stripe (Stripe Terms of Service), en conjunto, el “Acuerdo de servicio de Stripe” (“\u003Ca href=\"https://stripe.com/es/terms\"\u003EStripe Services Agreement\u003C/a\u003E”). Al aceptar [este acuerdo / estos términos / etc.] o seguir operando como [término de titular de cuenta] en [nombre de plataforma], usted acepta cumplir las obligaciones del Acuerdo de servicios de Stripe, que puede ser modificado por Stripe de tanto en tanto. Para que [nombre de plataforma] pueda ofrecer servicios de procesamiento de pagos a través de Stripe, usted acepta proporcionar a [nombre de plataforma] información completa y exacta sobre usted y su negocio, y autoriza a [nombre de plataforma] a compartir dicha información y los datos de las transacciones relacionadas con el uso de los servicios de procesamiento de pago proporcionados por Stripe."
+    };
+    APIValues["italian"] = {
+      terms_of_service: "I servizi di elaborazione dei pagamenti per [termine definito dal proprietario dell’account, come “conducenti”, “venditori”, ecc.] su [nome piattaforma] sono forniti da Stripe e sono soggetti alle condizioni dell’Accordo relativo agli account connessi Stripe (\u003Ca href=\"https://stripe.com/connect/account-terms\"\u003EStripe Connected Account Agreement\u003C/a\u003E), che include i Termini del servizio Stripe (Stripe Terms of Service), collettivamente detti “Accordo sui servizi Stripe” (“\u003Ca href=\"https://stripe.com/it/terms\"\u003EStripe Services Agreement\u003C/a\u003E”). Accettando [questo accordo, i suddetti termini, ecc.] o continuando a operare in qualità di [termine definito dal proprietario dell’account] su [nome piattaforma], l’utente accetta di essere vincolato all’Accordo sui servizi Stripe e alle eventuali modifiche apportate da Stripe di tanto in tanto. Affinché [nome piattaforma] possa offrire detti servizi di elaborazione dei pagamenti tramite Stripe, l’utente accetta di fornire a [nome piattaforma] informazioni accurate e complete sull’utente e sulla sua azienda, e autorizza [nome piattaforma] a condividere tali informazioni e i dati delle transazioni correlate con l’utilizzo dei servizi di elaborazione dei pagamenti forniti da Stripe."
+    };
+    APIValues["portuguese"] = {
+      terms_of_service: "Os serviços de processamento de pagamento de [account holder term, e.g. drivers or sellers] em [platform name] são fornecidos pela Stripe e estão sujeitos ao \u003Ca href=\"https://stripe.com/connect/account-terms\"\u003EStripe Connected Account Agreement\u003C/a\u003E (Contrato de Conta Vinculada da Stripe), que inclui os Stripe Terms of Service(Termos de Serviço da Stripe, conjuntamente, “\u003Ca href=\"ttps://stripe.com/terms\"\u003EStripe Services Agreement\u003C/a\u003E”, Contrato de Serviços da Stripe). Ao concordar com [this agreement / these terms / etc.] ou continuar a operar como [account holder term] em [platform name], você aceita o Contrato de Serviços da Stripe, que pode ser alterado pela Stripe periodicamente. Como condição da utilização de serviços de processamento de pagamento pela [platform name] por meio da Stripe, você concorda em fornecer a [platform name] informações precisas e completas sobre você e sua empresa e autoriza [platform name] a compartilhá-las, além das informações de transações relacionadas ao seu uso dos serviços de processamento de pagamento fornecidos pela Stripe."
+    };
+    APIValues["german"] = {
+      terms_of_service: "Zahlungsdienstleistungen für [Beschreibung des Account-Inhabers, z.B. Reinigungskraft oder Verkäufer] auf [Name der Plattform] werden von Stripe erbracht und unterliegen der Stripe Connected Account Vereinbarung (\u003Ca href=\"https://stripe.com/connect/account-terms\"\u003EStripe Connected Account Agreement\u003C/a\u003E), welche die Stripe Nutzungsbedingungen (Stripe Terms of Service) beinhaltet (zusammengefasst unter dem Sammelbegriff “\u003Ca href=\"https://stripe.com/de/terms\"\u003EStripe Services Agreement\u003C/a\u003E”). Durch die Zustimmung zu den vorliegenden [Nutzungsbedingungen, Bedingungen, …] oder das weitere agieren als [Beschreibung des Account-Inhaber, z.B. Reinigungskraft oder Verkäufer] auf [Name der Plattform], akzeptieren Sie die Bedingungen der Vereinbarung “Stripe Services Agreement”, welche von Stripe von Zeit zu Zeit angepasst werden darf. Als Voraussetzung, dass [Name der Plattform] die Zahlungsdienstleistungen von Stripe in Anspruch nehmen kann, stimmen Sie zu, vollständige und komplette Informationen über sich und ihr Unternehmen für [Name der Plattform] bereitzustellen, und sie autorisieren [Name der Plattform], diese Informationen und Transaktionsinformationen, die im Zusammenhang mit ihrer Nutzung der von Stripe offerierten Zahlungsdienstleistungen stehen, weiterzugeben."
+    };
+</script>
+
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>
