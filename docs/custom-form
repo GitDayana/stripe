@@ -24,6 +24,8 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
     <meta name="csrf-token" content="eJsWrvLaRuxJd4EhpCWDCGWoG1qW92IiKeWSMdKS9JDwsRNt67kDXLpn2_H6Xz-DXRXhsoecthrg_wVdU59QCg==" />
+    <link rel="stylesheet" type="text/css" href="../assets/index.css">
+    
 </head>
 <body id="documentation">
 
@@ -46,12 +48,12 @@
   <nav>
 
     <h1 class="references">Development</h1>
-    <ul>      <li class="unselected"><a href="../docs.1">Getting Started</a></li>
-      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Embedded Form</a></li>
-      <li class="selected sub"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">Custom Forms</a></li>
-      <li class="unselected sub"><a href="mobile/index.html">Mobile Apps</a></li>
-      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li>
-      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Testing</a></li>
+    <ul>      <li class="unselected"><a href="../docs.1">Introduction</a></li>
+      <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Quick Code Form</a></li>
+      <li class="selected sub"><a href="../docs/custom-form">Custom Forms</a></li>
+      <li class="unselected sub"><a href="mobile/index.html">Integrations</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Testing</a></li>
+      <!--<li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Security</a></li>-->
       <li class="unselected"><a href="../security">Security</a></li>
       <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>
       <li class="unselected"><a href="webhooks/index.html">Webhooks</a></li>

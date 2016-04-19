@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Fraud Protection</title>
+    <title>Fraud Prevention Service</title>
     <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
     <script type="text/javascript">
         var _sf_startpt=(new Date()).getTime()
@@ -24,6 +24,9 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
     <meta name="csrf-token" content="rX4pYaibSGTzoseW7MrdnSEwvBAf5sNWq5C3PILDlXElVCyisfgN1ACynUaysGEWGY1G-A6NF25iiiBQA84x6w==" />
+    <!--FontColor-->
+    <link rel="stylesheet" type="text/css" href="../assets/index.css">
+
 </head>
 <body id="documentation">
 
@@ -125,7 +128,7 @@
       <section id="details">
 
   <header>
-    <h1>Fraud Protection</h1>
+    <h1>Fraud Prevention Service</h1>
     <p>
       Stripe offers integrated, automatic fraud protection for users of Stripe.js and Checkout.
     </p>

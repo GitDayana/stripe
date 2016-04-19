@@ -29,6 +29,8 @@ pre .kwd {
 </style>
 
     <meta name="csrf-token" content="-ma75ULxiRSfK5ArkBQbm1O_leD9r_VHCa-ree5S1s9yTL4mW5LMpGw7yvvObqcQawJvCOzEIX_AtTwVb19yVQ==" />
+
+    <link rel="stylesheet" type="text/css" href="../../assets/index.css">
 </head>
 <body id="documentation">
 
