@@ -24,6 +24,8 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
     <meta name="csrf-token" content="3aLfX-LjLRAOcCwOVuQMS4FLttY7HlHhC1PrJWM87KVViNqc-4BooP1gdt4InrDAufZMPip1hdnCSXxJ4jFIPw==" />
+    <link rel="stylesheet" type="text/css" href="../../assets/index.css">
+
 </head>
 <body id="documentation">
 

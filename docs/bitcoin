@@ -26,6 +26,7 @@
 <meta name="googlebot" content="noindex, nofollow, noarchive">
 
     <meta name="csrf-token" content="v2JvxExrGjFYMPn2OJLT2iaaGh8HPTzMUiZubK0THAM3SGoHVQhfgasgoyZm6G9RHifg9xZW6PSbPPkALB64mQ==" />
+    <link rel="stylesheet" type="text/css" href="../assets/index.css">
 </head>
 <body id="documentation">
 
