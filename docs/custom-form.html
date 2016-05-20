@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Building a custom payment form</title>
+    <title>Custom Forms</title>
     <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
     <script type="text/javascript">
         var _sf_startpt=(new Date()).getTime()
@@ -10,7 +10,8 @@
     </script>
     <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
     
-<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a
+  4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
 
 <script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
 <script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
@@ -30,7 +31,7 @@
 <body id="documentation">
 
   <div id="header">
-    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Crossborder</a></h1>
     <div class="navigation">
     <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
 
@@ -50,7 +51,7 @@
     <h1 class="references">Development</h1>
     <ul>      <li class="unselected"><a href="../docs.1">Introduction</a></li>
       <li class="unselected sub"><a href="https://stripe.com/docs/checkout/tutorial">Quick Code Form</a></li>
-      <li class="selected sub"><a href="../docs/custom-form">Custom Forms</a></li>
+      <li class="selected sub"><a href="../docs/custom-form.html">Custom Forms</a></li>
       <li class="unselected sub"><a href="mobile/index.html">Integrations</a></li>
       <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Testing</a></li>
       <!--<li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">Security</a></li>-->
@@ -75,9 +76,9 @@
 
     <h1 class="faq">References</h1>
     <ul>      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Examples</a></li>
-      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>
+      <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Crossborder.js</a></li>
       <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>
-      <li class="unselected"><a href="libraries/index.html">API Libraries</a></li>
+      <li class="unselected"><a href="libraries/index.html">SDK</a></li>
       <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>
 
       <li class="unselected">
@@ -115,7 +116,7 @@
       <li class="unselected"><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
 </ul>
 
-    <h1 class="more">About Stripe</h1>
+    <h1 class="more">About Crossborder</h1>
     <ul>      <li class="unselected"><a href="../help/contact">Contact</a></li>
       <li class="unselected"><a href="../pt">Global Users</a></li>
       <li class="unselected last"><a href="../country?country=CH&amp;redirect=%252Fgallery">Gallery</a></li>
@@ -126,8 +127,8 @@
     <section id="content">
       <section id="details">
   <header>
-    <h1>Building a custom payment form</h1>
-    <p>This tutorial helps you build your first payment form with Stripe. If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+    <h1>Custom Forms</h1>
+    <p>This tutorial helps you build your first payment form with Crossborder. If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#Crossborder</a> on freenode.
 </p>
   </header>
 
@@ -136,13 +137,13 @@
     <aside class="intro note">
       <h1>Note</h1>
       <p>An alternative to building your own forms is using the <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a>,
-    or avoid coding altogether with Stripe’s <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">third-party integrations</a>.</p>
+    or avoid coding altogether with Crossborder <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fintegrations">third-party integrations</a>.</p>
     </aside>
 
     <p>At a high level, here’s what you’ll accomplish in this tutorial:</p>
 
     <ol>
-      <li>Collect credit card information with Stripe.js</li>
+      <li>Collect credit card information with Crossborder.js</li>
       <li>Convert those details to what we call a single-use token</li>
       <li>Send that token, with the rest of your form, to your server</li>
     </ol>
@@ -157,24 +158,24 @@
   &lt;div class=&quot;form-row&quot;&gt;
     &lt;label&gt;
       &lt;span&gt;Card Number&lt;/span&gt;
-      &lt;input type=&quot;text&quot; size=&quot;20&quot; data-stripe=&quot;number&quot;/&gt;
+      &lt;input type=&quot;text&quot; size=&quot;20&quot; data-Crossborder=&quot;number&quot;/&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;form-row&quot;&gt;
     &lt;label&gt;
       &lt;span&gt;CVC&lt;/span&gt;
-      &lt;input type=&quot;text&quot; size=&quot;4&quot; data-stripe=&quot;cvc&quot;/&gt;
+      &lt;input type=&quot;text&quot; size=&quot;4&quot; data-Crossborder=&quot;cvc&quot;/&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;form-row&quot;&gt;
     &lt;label&gt;
       &lt;span&gt;Expiration (MM/YYYY)&lt;/span&gt;
-      &lt;input type=&quot;text&quot; size=&quot;2&quot; data-stripe=&quot;exp-month&quot;/&gt;
+      &lt;input type=&quot;text&quot; size=&quot;2&quot; data-Crossborder=&quot;exp-month&quot;/&gt;
     &lt;/label&gt;
     &lt;span&gt; / &lt;/span&gt;
-    &lt;input type=&quot;text&quot; size=&quot;4&quot; data-stripe=&quot;exp-year&quot;/&gt;
+    &lt;input type=&quot;text&quot; size=&quot;4&quot; data-Crossborder=&quot;exp-year&quot;/&gt;
   &lt;/div&gt;
 
   &lt;button type=&quot;submit&quot;&gt;Submit Payment&lt;/button&gt;
@@ -188,19 +189,19 @@
   valid expiration date. Read more in our <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting">testing</a> documentation.</p>
     </aside>
 
-    <p>Fairly standard. Note how input fields representing sensitive card data (number, CVC, expiration month and year) do not have a “name” attribute. This prevents them from hitting your server when the form is submitted. We’re also including a <code>data-stripe</code> attribute on the relevant fields, which we’ll discuss later in the tutorial.</p>
+    <p>Fairly standard. Note how input fields representing sensitive card data (number, CVC, expiration month and year) do not have a “name” attribute. This prevents them from hitting your server when the form is submitted. We’re also including a <code>data-Crossborder</code> attribute on the relevant fields, which we’ll discuss later in the tutorial.</p>
 
     <p>Your life becomes easier if sensitive cardholder data does not hit your servers. You no longer need to worry about redacting logs, encrypting cardholder details, or other burdens of PCI compliance.</p>
 
-    <p>With Stripe.js, you never have to handle sensitive card data. It’s automatically converted to a token which you can safely send to your servers and use to charge your customers.</p>
+    <p>With Crossborder.js, you never have to handle sensitive card data. It’s automatically converted to a token which you can safely send to your servers and use to charge your customers.</p>
 
     <h1 id="step-1-collecting-credit-card-information">Step 1: Collecting credit card information</h1>
 
-    <p>First, include Stripe.js in the page:</p>
+    <p>First, include Crossborder.js in the page:</p>
 
     <section class="code-example">
       <div class="terminal-wrap">
-        <pre><code><span class="highlight_js xml">&lt;script type=&quot;text/javascript&quot; src=&quot;https://js.stripe.com/v2/&quot;&gt;&lt;/script&gt;</span></code></pre>
+        <pre><code><span class="highlight_js xml">&lt;script type=&quot;text/javascript&quot; src=&quot;https://js.crossborder.com/v2/&quot;&gt;&lt;/script&gt;</span></code></pre>
       </div>
     </section>
 
@@ -212,13 +213,13 @@
       <div class="terminal-wrap">
         <pre><code><span class="highlight_js xml">&lt;script type=&quot;text/javascript&quot;&gt;
   // This identifies your website in the createToken call below
-  Stripe.setPublishableKey(&#39;pk_test_6pRNASCoBOKtIshFeQd4XMUh&#39;);
+  Crossborder.setPublishableKey(&#39;pk_test_6pRNASCoBOKtIshFeQd4XMUh&#39;);
   // ...
 &lt;/script&gt;</span></code></pre>
       </div>
     </section>
 
-    <p><code>Stripe.setPublishableKey(..)</code> identifies your website when communicating with Stripe. Note that we’ve pre-filled the example with your <strong>test publishable</strong> API key. Remember to replace the test key with your live key in production. You can get all your keys from <a href="https://dashboard.stripe.com/account/apikeys">your account page</a>.</p>
+    <p><code>Crossborder.setPublishableKey(..)</code> identifies your website when communicating with Crossborder. Note that we’ve pre-filled the example with your <strong>test publishable</strong> API key. Remember to replace the test key with your live key in production. You can get all your keys from <a href="https://dashboard.stripe.com/account/apikeys">your account page</a>.</p>
 
     <h1 id="step-2-create-a-single-use-token">Step 2: Create a single use token</h1>
 
@@ -233,7 +234,7 @@
     // Disable the submit button to prevent repeated clicks
     $form.find(&#39;button&#39;).prop(&#39;disabled&#39;, true);
 
-    Stripe.card.createToken($form, stripeResponseHandler);
+    Crossborder.card.createToken($form, CrossborderResponseHandler);
 
     // Prevent the form from submitting with the default action
     return false;
@@ -246,15 +247,15 @@
       <h1>Library agnostic</h1>
       <p>
     While we use <a href="http://jquery.com/">jQuery</a> in this example, you do not need jQuery
-    to use Stripe.js – it has no external dependencies.
+    to use Crossborder.js – it has no external dependencies.
   </p>
     </aside>
 
-    <p>The important code to notice is the call to <code>Stripe.card.createToken</code>. The first argument is the form element containing credit card data entered by the user. The relevant values are fetched from their associated inputs using the <code>data-stripe</code> attribute specified in the first example.</p>
+    <p>The important code to notice is the call to <code>Crossborder.card.createToken</code>. The first argument is the form element containing credit card data entered by the user. The relevant values are fetched from their associated inputs using the <code>data-Crossborder</code> attribute specified in the first example.</p>
 
-    <p>You should provide at least the card number and expiration info. The complete list of fields you can provide is available <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js#createToken">in the Stripe.js documentation</a>.</p>
+    <p>You should provide at least the card number and expiration info. The complete list of fields you can provide is available <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js#createToken">in the Crossborder.js documentation</a>.</p>
 
-    <p>The second argument <code>stripeResponseHandler</code> is a callback that handles the response from Stripe. <code>createToken</code> is an asynchronous call – it returns immediately and invokes <code>stripeResponseHandler</code> when it receives a response from Stripe’s servers. Whatever function you pass should take two arguments, <code>status</code> and <code>response</code>:</p>
+    <p>The second argument <code>CrossborderResponseHandler</code> is a callback that handles the response from Crossborder. <code>createToken</code> is an asynchronous call – it returns immediately and invokes <code>CrossborderResponseHandler</code> when it receives a response from Crossborder servers. Whatever function you pass should take two arguments, <code>status</code> and <code>response</code>:</p>
 
     <p><code>status</code> is one of the status codes described in the <a href="api/index.html#errors">API docs</a>.</p>
 
@@ -283,16 +284,16 @@
 
     <h1 id="step-3-sending-the-form-to-your-server">Step 3: Sending the form to your server</h1>
 
-    <p>In our example, this is done in <code>stripeResponseHandler</code>:</p>
+    <p>In our example, this is done in <code>CrossborderResponseHandler</code>:</p>
 
     <ul>
       <li>If the card information entered by the user returned an error, it gets displayed on the page.</li>
-      <li>If no errors were returned (i.e. a single-use token was created successfully), add the returned token to the form in the <code>stripeToken</code> field and submit the form to the server.</li>
+      <li>If no errors were returned (i.e. a single-use token was created successfully), add the returned token to the form in the <code>CrossborderToken</code> field and submit the form to the server.</li>
     </ul>
 
     <section class="code-example">
       <div class="terminal-wrap">
-        <pre><code><span class="highlight_js javascript">function stripeResponseHandler(status, response) {
+        <pre><code><span class="highlight_js javascript">function CrossborderResponseHandler(status, response) {
   var $form = $(&#39;#payment-form&#39;);
 
   if (response.error) {
@@ -303,7 +304,7 @@
     // response contains id and card, which contains additional card details
     var token = response.id;
     // Insert the token into the form so it gets submitted to the server
-    $form.append($(&#39;&lt;input type=&quot;hidden&quot; name=&quot;stripeToken&quot; /&gt;&#39;).val(token));
+    $form.append($(&#39;&lt;input type=&quot;hidden&quot; name=&quot;CrossborderToken&quot; /&gt;&#39;).val(token));
     // and submit
     $form.get(0).submit();
   }
@@ -313,7 +314,7 @@
 
     <p>Notice that in order to add the token to the info submitted to your server, we’re adding a new <code>input</code> tag into the form, and setting its value to the id of the token.</p>
 
-    <p>After we’ve added the info to the form, we re-submit the form (remember, we stopped it from submitting before so we could wait for Stripe to tokenize the credit card details). We call <code>submit()</code> on the form directly, rather than the jQuery wrapper, so that we don’t run into an infinite loop. The data will be sent as an HTTP POST to the URL in the form’s action.</p>
+    <p>After we’ve added the info to the form, we re-submit the form (remember, we stopped it from submitting before so we could wait for Crossborder to tokenize the credit card details). We call <code>submit()</code> on the form directly, rather than the jQuery wrapper, so that we don’t run into an infinite loop. The data will be sent as an HTTP POST to the URL in the form’s action.</p>
 
     <p>Take a look at the <a href="https://gist.github.com/briancollins/6365455">full example form</a> to see everything put together.</p>
 
@@ -498,7 +499,7 @@
     </div>
 
 
-    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Crossborder</a></p>
 
     <ul>
         <li><a href="https://status.stripe.com"><span>System Status</span></a></li>

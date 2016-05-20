@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Testing</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="PKJMCpGAEYIpRc1PtRR-zvGj1wgR6sDcn813NCKqiUu0iEnJiONUMtpVl5_rbsJFyR4t4ACBFORW1-BYo6ct0Q==" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/index.css">
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">Stripe</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+    <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="docs.html">Introduction</a></li>
+      <li class="unselected sub"><a href="docs/quick-code-form.html">Quick Code Form</a></li>
+      <li class="unselected sub"><a href="docs/custom-form">Custom Forms</a></li>
+     <!-- <li class="unselected sub"><a href="docs/mobile/index.html">Mobile Apps</a></li>-->
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li> -->
+      <li class="unselected sub"><a href="docs/mobile/index.html">Integrations</a></li>
+      <li class="unselected"><a href="docs/testing.html">Testing</a></li>
+      <li class="unselected"><a href="security.html">Security</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>-->
+      <!--<li class="unselected"><a href="docs/webhooks/index.html">Webhooks</a></li>-->
+      <li class="unselected"><a href="docs/webhooks/index.html">Webhooks</a></li>
+      <!--<li class="unselected"><a href="docs/guides/bitcoin">Bitcoin Guide</a></li>-->
+      <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>-->
+      <li class="unselected"><a href="docs/guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="Introduction">Account</h1>
+    <ul>      <li class="unselected"><a href="docs/dashboard.html">Your Account</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>-->
+      <li class="unselected"><a href="docs/disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="docs/disputes/evidence.html">Submitting Evidence</a></li>
+     <!-- <li class="unselected sub"><a href="help/dispute-types">Dispute Types</a></li>-->
+      <li class="unselected sub"><a href="help/disputes.html">Disputes FAQ</a></li>
+      <li class="unselected"><a href="docs/integrations.html">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="docs/examples.html">Examples</a></li>
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>-->
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>-->
+    <li class="unselected"><a href="docs/libraries/index.html">SDK</a></li>
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>-->
+
+      <li class="unselected">
+        <a href="docs/api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions"> Pay & Process</h1>
+    <ul>      <li class="unselected"><a href="docs/relay/overview-pay-process.html">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/charges">Charging Cards</a></li>
+      <li class="unselected"><a href="docs/testing-pay-process.html">Testing</a></li>
+      <li class="unselected"><a href="docs/ach.html">ACH Guide</a></li>
+      <li class="unselected"><a href="docs/bitcoin.html">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="docs/alipay.html">Alipay Guide</a></li>
+      <li class="selected"><a href="docs/examples-pay-process.html">Examples</a></li>
+</ul>
+
+    <h1 class="orders">Order & Shipping</h1>
+    <ul>      <li class="unselected"><a href="docs/relay/overview-pay-process">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/testing-order-shipping.html">Testing</a></li>
+      <li class="unselected"><a href="docs/overview-order-shipping.html">Examples</a></li>
+      <li class="unselected"><a href="docs/relay/apps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+<h1 class="subscriptions"> Landed Cost</h1>
+    <ul>  <li class="unselected"><a href="docs/relay/index.html">Overview</a></li>
+          <li class="unselected"><a href="docs/subscriptions/guide">Detailed Guide</a></li>
+          <li class="unselected"><a href="docs/testing">Testing</a></li>
+          <li class="unselected"><a href="docs/examples.html">Examples</a></li>
+          <li class="unselected"><a href="docs/relay/apps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+<h1 class="subscriptions"> Cross Border Singles</h1>
+    <ul>    <li class="unselected"><a href="docs/subscriptions.1">CrossBorder Availability</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Product Clasification</a></li>
+      <li class="unselected"><a href="docs/subscriptions.2">Cost Calculation</a></li>
+      <li class="unselected"><a href="docs/subscriptions.3">Tracking Engine</a></li>
+      <!--<li class="unselected"><a href="docs/subscriptions.4">Fraud Prevention Service</a></li>-->
+      <li class="unselected"><a href="docs/fraud">Fraud Prevention Service</a></li>
+      <li class="unselected"><a href="docs/subscriptions.5">Currency Service</a></li>
+</ul>
+
+    <h1 class="connect">Super Skins</h1>
+    <ul>      
+      <li class="unselected"><a href="docs/connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/examples">Examples</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="docs/connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul> -->
+
+    <h1 class="more">FedEx Cross Border</h1>
+    <ul>      <li class="unselected"><a href="help/contact">Contact</a></li>
+      <li class="unselected"><a href="pt">Global Users</a></li>
+      <li class="unselected last"><a href="gallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+
+<header>
+    <h1>Testing</h1>
+</header>
+
+<article>
+  <h1 id="what-should-i-test-as-i-integrate-stripe">What should I test as I integrate Stripe?</h1>
+
+<p>When using Stripe.js, you should ensure the following:</p>
+<ul>
+    <li>The card number, expiration, CVC and amount are set correctly in <code>createToken</code>.</li>
+    <li>In the response handler for <code>createToken</code>, card errors are handled and displayed properly.</li>
+    <li>Only a valid token is passed to your server as part of payment form submission.</li>
+    <li>Sensitive card details (number, expiration and CVC) are not included in form data submitted to your server.</li>
+</ul>
+
+<p>In server-side code, you can test the following:</p>
+<ul>
+    <li>All values submitted from the payment form are valid and expected.</li>
+    <li>All <a href="api/index.html#errors">API errors</a> are handled properly.</li>
+    <li>Relevant <a href="webhooks/index.html">webhooks</a> are handled correctly (more on how to test webhooks below).</li>
+</ul>
+
+<p>Before you go live, verify your publishable and secret keys. You can see all your keys on your <a href="https://dashboard.stripe.com/account">account page</a>.</p>
+
+<h1 id="account-settings"> Account Settings </h1>
+
+<p> You can configure your decline settings
+in <a href="https://dashboard.stripe.com/account">https://dashboard.stripe.com/account</a>. <p>
+
+<p> These allow you to decide whether a failing <code>cvc_check</code>
+or failing <code>address_zip_check</code> should cause the charge to
+be rejected. Perhaps surprisingly, even if these details are wrong,
+the charge can succeed; it's up to you decide what to do in that
+case. By default, Stripe will decline charges with a failing <code>cvc_check</code>.
+If you'd prefer to allow these charges to succeed, you can update your
+<a href="https://dashboard.stripe.com/account">decline settings</a>.</p>
+
+<p> Note that we don't have a setting
+for <code>address_line1_check</code> failures to cause a decline, as
+the data for this particular check tends to be pretty noisy. </p>
+
+<p> We recommend leaving these settings at their defaults unless you
+have special requirements. </p>
+
+<h1 id="logs">Logs</h1>
+
+<p>As you integrate and test Stripe, you may find it useful to <a href="https://dashboard.stripe.com/logs">view logs</a> of your requests.</p>
+
+<h1 id="how-do-i-debug-javascript">How do I debug JavaScript?</h1>
+
+  <p>There are many tools for tracking down problems in your client side code. We recommend reading about the <a href="https://developers.google.com/chrome-developer-tools/">Chrome Web Inspector</a>. Should you need it, you can also load a debug version of Stripe.js at <code>https://js.stripe.com/v2/stripe-debug.js</code>.</p>
+
+<h1 id="how-do-i-test-stripe-webhooks">How do I test webhooks?</h1>
+
+<p>The Dashboard has a test feature built in. Navigate to your <a href="https://dashboard.stripe.com/account/webhooks">webhook settings</a> and click <em>Test Webhooks</em>. You can select a type of webhook, and one of your test webhook URLs. If you don't have any test webhook URLs defined, you'll have to define one first.</p>
+
+<p>If you don't have a server set up to receive webhooks but want to see example webhook requests, we suggest using a service like <a href='http://requestb.in/'>RequestBin</a> to inspect the requests we send.</p>
+
+<p>If you'd like to test subscription webhooks with live data, a useful trick is setting the subscription's <code>trial_end</code> attribute to a short time in the future. This ensures you don't have to wait a month to receive an invoice webhook.</p>
+
+<h1 id="cards">Which card numbers should I use for testing?</h1>
+
+<p>In test mode, you can use these test cards to simulate a successful transaction:</p>
+
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Card type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>4242<span></span>4242<span></span>4242<span></span>4242</code></td><td>Visa</td></tr>
+    <tr><td class="number"><code>4012<span></span>8888<span></span>8888<span></span>1881</code></td><td>Visa</td></tr>
+    <tr><td class="number"><code>4000<span></span>0566<span></span>5566<span></span>5556</code></td><td>Visa (debit)</td></tr>
+    <tr><td class="number"><code>5555<span></span>5555<span></span>5555<span></span>4444</code></td><td>MasterCard</td></tr>
+    <tr><td class="number"><code>5200<span></span>8282<span></span>8282<span></span>8210</code></td><td>MasterCard (debit)</td></tr>
+    <tr><td class="number"><code>5105<span></span>1051<span></span>0510<span></span>5100</code></td><td>MasterCard (prepaid)</td></tr>
+    <tr><td class="number"><code>3782<span></span>822463<span></span>10005</code></td><td>American Express</td></tr>
+    <tr><td class="number"><code>3714<span></span>496353<span></span>98431</code></td><td>American Express</td></tr>
+    <tr><td class="number"><code>6011<span></span>1111<span></span>1111<span></span>1117</code></td><td>Discover</td></tr>
+    <tr><td class="number"><code>6011<span></span>0009<span></span>9013<span></span>9424</code></td><td>Discover</td></tr>
+    <tr><td class="number"><code>3056<span></span>9309<span></span>0259<span></span>04</code></td><td>Diners Club</td></tr>
+    <tr><td class="number"><code>3852<span></span>0000<span></span>0232<span></span>37</code></td><td>Diners Club</td></tr>
+    <tr><td class="number"><code>3530<span></span>1113<span></span>3330<span></span>0000</code></td><td>JCB</td></tr>
+    <tr><td class="number"><code>3566<span></span>0020<span></span>2036<span></span>0505</code></td><td>JCB</td></tr>
+  </tbody>
+</table>
+
+<p>In addition, these cards will produce specific responses that are useful for testing different scenarios:</p>
+
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0077</code></td><td>Charge will succeed and funds will be added directly to your available balance (bypassing your pending balance).</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0093</code></td><td>Charge will succeed and domestic pricing will be used (other test cards use international pricing). This card is only significant in countries with split pricing.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0010</code></td><td>With default <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting#account-settings">account settings</a>, charge will succeed but <code>address_line1_check</code> and <code>address_zip_check</code> will both fail.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0028</code></td><td>With default <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting#account-settings">account settings</a>, charge will succeed but <code>address_line1_check</code> will fail.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0036</code></td><td>With default <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting#account-settings">account settings</a>, charge will succeed but <code>address_zip_check</code> will fail.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0044</code></td><td>With default <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting#account-settings">account settings</a>, charge will succeed but <code>address_zip_check</code> and <code>address_line1_check</code> will both be <code>unavailable</code>.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0101</code></td><td>With default <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting#account-settings">account settings</a>, charge will succeed unless a CVC is entered, in which case <code>cvc_check</code> will fail and the charge will be declined.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0341</code></td><td>Attaching this card to a <a href="api/index.html#customer_object"><code>Customer</code></a> object will succeed, but attempts to charge the customer will fail.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0002</code></td><td>Charge will be declined with a <code>card_declined</code> code.</td></tr>
+    <tr><td class="number"><code>4100<span></span>0000<span></span>0000<span></span>0019</code></td><td>Charge will be declined with a <code>card_declined</code> code and a <code>fraudulent</code> reason.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0127</code></td><td>Charge will be declined with an <code>incorrect_cvc</code> code.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0069</code></td><td>Charge will be declined with an <code>expired_card</code> code.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0119</code></td><td>Charge will be declined with a <code>processing_error</code> code.</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Additional test mode validation:</strong> By default, passing address or CVC data with the card number will cause the <a href="api/index.html#charge_object">address and CVC checks</a> to succeed. If not specified, the value of the checks will be <code>null</code>. Any expiration date in the future will be considered valid.</p>
+
+<h1 id="how-do-i-test-specific-error-codes">How do I test specific error codes?</h1>
+
+<p>Some suggestions:</p>
+
+<ul>
+    <li><code>card_declined</code>: Use this special card number - <code>4000000000000002</code>.</li>
+    <li><code>incorrect_number</code>: Use a number that fails the Luhn check, e.g. <code>4242424242424241</code>.</li>
+    <li><code>invalid_expiry_month</code>: Use an invalid month e.g. <code>13</code>.</li>
+    <li><code>invalid_expiry_year</code>: Use a year in the past e.g. <code>1970</code>.</li>
+    <li><code>invalid_cvc</code>: Use a two digit number e.g. <code>99</code>.</li>
+</ul>
+
+<p>The full list of API error codes is available <a href="api/index.html#errors">here</a>.</p>
+
+
+<h1 id="how-do-i-test-bitcoin">How do I test accepting Bitcoin?</h1>
+
+<p>In test mode, you can use the following test emails (set on BitcoinReceiver objects) to test different edge cases. By default, a receiver will always be paid 3 seconds after creation.</p>
+
+<table>
+  <thead>
+    <th>Email</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+  <tr><td class="number"><code>{any_prefix}+fill_never@{any_domain}</code></td><td>Bitcoin are never sent to the receiver address.
+</td></tr>
+<tr><td class="number"><code>{any_prefix}+fill_now@{any_domain}</code></td><td>The next time that the receiver is retrieved after creation, it has been filled by bitcoin.</td></tr>
+  </tbody>
+</table>
+
+<h1 id="how-do-i-test-disputes">How do I test disputes?</h1>
+
+<p>In test mode, you can use the test card below to simulate a disputed transaction:</p>
+
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>4000<span></span>0000<span></span>0000<span></span>0259</code></td><td>With default <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting#account-settings">account settings</a>, charge will succeed, only to be disputed.</td></tr>
+  </tbody>
+</table>
+
+<p>The following evidence, when submitted in the `uncategorized_text`, will produce specific actions that are useful for testing the dispute flow:</p>
+
+<table>
+  <thead>
+    <th>Evidence</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>winning_evidence</code></td><td>The dispute will be closed and marked as won. Your account will be credited the amount of the charge and related fees.</td></tr>
+    <tr><td class="number"><code>losing_evidence</code></td><td>The dispute will be closed and marked as lost. Your account will not be credited.</td></tr>
+  </tbody>
+</table>
+
+<h1 id="how-do-i-test-sending-transfers">How do I test sending transfers?</h1>
+
+<p>When sending <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fsending-transfers">third-party transfers</a> in test mode, you can use these test bank accounts, tax IDs, and debit card numbers.</p>
+
+<h2>Test tax IDs</h2>
+
+<p>Pass in any name and one of these tax IDs (they work as both SSNs and EINs) for the desired recipient verification behavior.</p>
+
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>000000000</code></td><td>Successful verification</td></tr>
+    <tr><td class="number"><code>000000001</code></td><td>Successful verification as a non-profit</td></tr>
+    <tr><td class="number"><code>111111111</code></td><td>Unsuccessful verification (identity mismatch)</td></tr>
+  </tbody>
+</table>
+
+<h2>Test debit card numbers</h2>
+
+<p>You can attach these test debit card numbers to your recipient to test transferring to a debit card. These can only be used with test secret keys.</p>
+
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>5200<span></span>8282<span></span>8282<span></span>8210</code></td><td>MasterCard debit. Transfer will succeed.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0566<span></span>5566<span></span>5556</code></td><td>Visa debit. Transfer will succeed.</td></tr>
+    <tr><td class="number"><code>4000<span></span>0566<span></span>5566<span></span>5564</code></td><td>Visa debit. Transfer will fail with a <code>could_not_process</code> code.</td></tr>
+  </tbody>
+</table>
+
+
+<h2>Test bank account numbers</h2>
+
+<p>There are various test routing and account numbers you can use to trigger certain events. These can only be used with test secret keys. When creating test transfers, you must use a test account number but you can use any valid US routing number.</p>
+
+<h3>Routing numbers</h3>
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>110000</code></td><td>STRIPE TEST BANK AU routing number</td></tr>
+    <tr><td class="number"><code>11000-000</code></td><td>STRIPE TEST BANK CA routing number</td></tr>
+    <tr><td class="number"><code>108800</code></td><td>STRIPE TEST BANK GB sort code</td></tr>
+    <tr><td class="number"><code>1100000</code></td><td>STRIPE TEST BANK JP routing number</td></tr>
+    <tr><td class="number"><code>110000000</code></td><td>STRIPE TEST BANK US routing number</td></tr>
+  </tbody>
+</table>
+
+
+<h3>Account numbers</h3>
+
+<section class="code-example tab-control">
+<data display-name="US/CA" hidden>
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>000123456789</code></td><td>Transfer will succeed.</td></tr>
+    <tr><td class="number"><code>000111111116</code></td><td>Transfer will fail with a <code>no_account</code> code.</td></tr>
+    <tr><td class="number"><code>000111111113</code></td><td>Transfer will fail with an <code>account_closed</code> code.</td></tr>
+    <tr><td class="number"><code>000222222227</code></td><td>Transfer will fail with an <code>insufficient_funds</code> code.</td></tr>
+    <tr><td class="number"><code>000333333335</code></td><td>Transfer will fail with a <code>debit_not_authorized</code> code.</td></tr>
+    <tr><td class="number"><code>000444444440</code></td><td>Transfer will fail with an <code>invalid_currency</code> code.</td></tr>
+  </tbody>
+</table>
+</data>
+<data display-name="AU" hidden>
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>000123456</code></td><td>Transfer will succeed.</td></tr>
+    <tr><td class="number"><code>111111116</code></td><td>Transfer will fail with a <code>no_account</code> code.</td></tr>
+    <tr><td class="number"><code>111111113</code></td><td>Transfer will fail with an <code>account_closed</code> code.</td></tr>
+    <tr><td class="number"><code>222222227</code></td><td>Transfer will fail with an <code>insufficient_funds</code> code.</td></tr>
+    <tr><td class="number"><code>333333335</code></td><td>Transfer will fail with a <code>debit_not_authorized</code> code.</td></tr>
+    <tr><td class="number"><code>444444440</code></td><td>Transfer will fail with an <code>invalid_currency</code> code.</td></tr>
+  </tbody>
+</table>
+</data>
+<data display-name="JP" hidden>
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>00012345</code></td><td>Transfer will succeed.</td></tr>
+    <tr><td class="number"><code>11111116</code></td><td>Transfer will fail with a <code>no_account</code> code.</td></tr>
+    <tr><td class="number"><code>11111113</code></td><td>Transfer will fail with an <code>account_closed</code> code.</td></tr>
+    <tr><td class="number"><code>22222227</code></td><td>Transfer will fail with an <code>insufficient_funds</code> code.</td></tr>
+    <tr><td class="number"><code>33333335</code></td><td>Transfer will fail with a <code>debit_not_authorized</code> code.</td></tr>
+    <tr><td class="number"><code>44444440</code></td><td>Transfer will fail with an <code>invalid_currency</code> code.</td></tr>
+  </tbody>
+</table>
+</data>
+<data display-name="GB" hidden>
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>00012345</code></td><td>Transfer will succeed.</td></tr>
+    <tr><td class="number"><code>11111116</code></td><td>Transfer will fail with a <code>no_account</code> code.</td></tr>
+    <tr><td class="number"><code>11111113</code></td><td>Transfer will fail with an <code>account_closed</code> code.</td></tr>
+    <tr><td class="number"><code>22222227</code></td><td>Transfer will fail with an <code>insufficient_funds</code> code.</td></tr>
+    <tr><td class="number"><code>33333335</code></td><td>Transfer will fail with a <code>debit_not_authorized</code> code.</td></tr>
+    <tr><td class="number"><code>44444440</code></td><td>Transfer will fail with an <code>invalid_currency</code> code.</td></tr>
+  </tbody>
+</table>
+</data>
+<data display-name="IBAN (EU)" hidden>
+<p>These test IBANs will work for any EU country and any valid currency for that country. The IBANs specified here are German IBANs. However, you can simply replace DE with the country of your choosing. See <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements">here</a> for country codes.</p>
+<table>
+  <thead>
+    <th>Number</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr><td class="number"><code>DE89370400440532013000</code></td><td>Transfer will succeed.</td></tr>
+    <tr><td class="number"><code>DE89370400440532013001</code></td><td>Transfer will fail with a <code>no_account</code> code.</td></tr>
+    <tr><td class="number"><code>DE89370400440532013002</code></td><td>Transfer will fail with an <code>account_closed</code> code.</td></tr>
+    <tr><td class="number"><code>DE89370400440532013003</code></td><td>Transfer will fail with an <code>insufficient_funds</code> code.</td></tr>
+    <tr><td class="number"><code>DE89370400440532013004</code></td><td>Transfer will fail with a <code>debit_not_authorized</code> code.</td></tr>
+    <tr><td class="number"><code>DE89370400440532013005</code></td><td>Transfer will fail with an <code>invalid_currency</code> code.</td></tr>
+  </tbody>
+</table>
+</data>
+</section>
+
+</article>
+</section>
+
+
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../country?country=AU&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CA&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DK&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FI&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=GB&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IE&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NO&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SE&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=US&amp;redirect=%252Fdocs%252Ftesting" class="selected">
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=AT&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BE&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BR&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FR&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DE&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IT&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=JP&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=LU&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=MX&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NL&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=PT&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SG&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=ES&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftesting" >
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; Stripe</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  <script src="../assets/tabs-cbb67502aaa9d2e23079a63a3bb8b2cc.js"></script>
+
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

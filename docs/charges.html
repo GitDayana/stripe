@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Charging Cards</title>
+    <link rel="stylesheet" type="text/css" href="../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.CrossBorder.com/internal/v2/analytics.min.js"></script>
+<script src="../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="wZV9SldTB28Z3b_bVMUlK5oAu00dbjfXHSzxMvm5XrtJv3iJTjBC3-rN5QsKv5mgor1BpQwF4-_UNmZeeLT6IQ==" />
+    <link rel="stylesheet" type="text/css" href="../assets/index.css">
+
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../country?country=CH&amp;redirect=%252F">CrossBorder</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.CrossBorder.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.CrossBorder.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="selected"><a href="docs.html">Introduction</a></li>
+      <li class="unselected sub"><a href="docs/quick-code-form.html">Quick Code Form</a></li>
+      <li class="unselected sub"><a href="docs/custom-form.html">Custom Forms</a></li>
+     <!-- <li class="unselected sub"><a href="docs/mobile/index.html">Mobile Apps</a></li>-->
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li> -->
+      <li class="unselected sub"><a href="docs/mobile/index.html">Integrations</a></li>
+      <li class="unselected"><a href="docs/testing.html">Testing</a></li>
+      <li class="unselected"><a href="security.html">Security</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>-->
+      <!--<li class="unselected"><a href="docs/webhooks/index.html">Webhooks</a></li>-->
+      <li class="unselected"><a href="docs/webhooks/index.html">Webhooks</a></li>
+      <!--<li class="unselected"><a href="docs/guides/bitcoin">Bitcoin Guide</a></li>-->
+      <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>-->
+      <li class="unselected"><a href="docs/guides/file-upload.html">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="Introduction">Account</h1>
+    <ul>      <li class="unselected"><a href="docs/dashboard.html">Your Account</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>-->
+      <li class="unselected"><a href="docs/disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="docs/disputes/evidence.html">Submitting Evidence</a></li>
+     <!-- <li class="unselected sub"><a href="help/dispute-types">Dispute Types</a></li>-->
+      <li class="unselected sub"><a href="help/disputes.html">Disputes FAQ</a></li>
+      <li class="unselected"><a href="docs/integrations.html">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="docs/examples.html">Examples</a></li>
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>-->
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>-->
+    <li class="unselected"><a href="docs/libraries/index.html">SDK</a></li>
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>-->
+
+      <li class="unselected">
+        <a href="docs/api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions"> Pay & Process</h1>
+    <ul>      <li class="unselected"><a href="docs/relay/overview-pay-process.html">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide.html">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/charges.html">Charging Cards</a></li>
+      <li class="unselected"><a href="docs/testing-pay-process.html">Testing</a></li>
+      <li class="unselected"><a href="docs/ach.html">ACH Guide</a></li>
+      <li class="unselected"><a href="docs/bitcoin.html">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="docs/alipay.html">Alipay Guide</a></li>
+      <li class="unselected"><a href="docs/examples-pay-process.html">Examples</a></li>
+</ul>
+
+    <h1 class="orders">Order & Shipping</h1>
+    <ul> 
+    <li class="unselected"><a href="docs/relay/overview-order-shipping.html">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide-order-shipping.html">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/testing-order-shipping.html">Testing</a></li>
+      <li class="unselected"><a href="docs/examples.html">Examples</a></li>
+      <li class="unselected"><a href="docs/relay/apps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+<h1 class="subscriptions"> Landed Cost</h1>
+    <ul>  <li class="unselected"><a href="docs/relay/index-landed-cost.html">Overview</a></li>
+          <li class="unselected"><a href="docs/subscriptions/guide-landed-cost.html">Detailed Guide</a></li>
+          <li class="unselected"><a href="docs/testing-landed-cost.html">Testing</a></li>
+          <li class="unselected"><a href="docs/examples-landed-cost.html">Examples</a></li>
+          <li class="unselected"><a href="docs/relay/apps-error-guide-lc.html">Error Handling Guide</a></li>
+</ul>
+
+<h1 class="subscriptions"> Cross Border Singles</h1>
+    <ul>    <li class="unselected"><a href="docs/singles/cbavaliability.html">CrossBorder Availability</a></li>
+      <li class="unselected"><a href="docs/singles/productclassification.html">Product Clasification</a></li>
+      <li class="unselected"><a href="docs/singles/costcalculation.html">Cost Calculation</a></li>
+      <li class="unselected"><a href="docs/singles/trackingengine.html">Tracking Engine</a></li>
+      <!--<li class="unselected"><a href="docs/subscriptions.4">Fraud Prevention Service</a></li>-->
+      <li class="unselected"><a href="docs/singles/fraud.html">Fraud Prevention Service</a></li>
+      <li class="unselected"><a href="docs/singles/currencyservice.html">Currency Service</a></li>
+</ul>
+
+    <h1 class="connect">Super Skins</h1>
+    <ul>      
+      <li class="unselected"><a href="docs/connect/index-superskin-overview.html">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide-superskin-overview.html">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/examples-superskins.html">Examples</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="docs/connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul> -->
+
+    <h1 class="more">FedEx Cross Border</h1>
+    <ul>      <li class="unselected"><a href="help/contact">Contact</a></li>
+      <li class="unselected"><a href="pt">Global Users</a></li>
+      <li class="unselected last"><a href="gallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section id="details">
+
+  <header>
+    <h1>Charging Cards</h1>
+    <p>Use CrossBorder's API and your server-side code to process charges.
+      If you need help after reading this, check out our answers to <a href="https://support.CrossBorder.com/search?q=charging%20cards">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/CrossBorder">#CrossBorder</a> on freenode.
+
+    </p>
+  </header>
+
+  <article>
+
+    <aside class="intro note">
+      <h1>Tutorial requirement</h1>
+      <p>This tutorial assumes you've already implemented a solution for collecting and tokenizing your customers' credit cards. If you haven't, check out our <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcards">receiving cards docs</a> before proceeding.
+      </p>
+    </aside>
+
+    <p>Once you've securely collected and tokenized your customer's credit card using <a href="https://CrossBorder.com/docs/checkout/tutorial">Checkout</a> or <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcustom-form">CrossBorder.js</a>, you can charge the card. Unlike collection, which occurs in the browser, charge attempts are made from your server, normally using one of our <a
+      href="libraries/index.html">client libraries</a>. If you haven't already,
+      install the library for your favorite language now. This tutorial shows code for Ruby, PHP, Python, and Node, but we also have libraries for Java and Go.
+    </p>
+
+    <p>
+      On your server, grab the CrossBorder token in the POST parameters submitted by your form. From there, it's one simple API call to charge the card:
+    </p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html">ruby</a>
+        <a href="index.html">python</a>
+        <a href="index.html">php</a>
+        <a href="index.html">node</a>
+        <a href="index.html">java</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_charge_create">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>As a convenience, if you're logged in while reading this page, we've pre-filled the example with your <em>test secret</em> API key. Only you can see this value. This will
+      authenticate you to CrossBorder, so keep it secret and keep it safe.
+      Remember to replace the test key with your live key in production.
+      You can get all your keys from <a href="https://dashboard.CrossBorder.com/account/apikeys">your account page</a>.
+    </p>
+
+    <aside class="content note">
+    <h1>Synchronicity</h1>
+    <p>
+      Charging cards with CrossBorder is a <em>synchronous</em> process. Your code will immediately receive the result of the request: either a <code>Charge</code> object upon success or an exception upon failure. No asynchronous webhook or IPN script is required.
+    </p>
+    </aside>
+
+    <p>
+      That's it! If the charge creation request succeeds, the card has been successfully charged.
+      You will automatically receive your money in <a href="../country?country=CH&amp;redirect=%252Fdocs%252Ftransfers#when-and-how-do-i-get-paid">
+      two days</a>. If the charge attempt fails, we'll return an <a href="api/index.html#errors">error</a> instead.
+    </p>
+
+    <h2 id="saving-credit-card-details-for-later">Saving credit card details for later</h2>
+
+    <p>
+      CrossBorder tokens can only be used once, but that doesn't mean you have to request your customer's card details for every payment. CrossBorder provides a <code>Customer</code> object type that makes it easy to save
+      this&mdash;and other&mdash;information for later use.
+    </p>
+
+    <p>
+      Instead of charging the card immediately, create a new <code>Customer</code>, saving the token on the <code>Customer</code> in the process. This will let you charge the customer at any point in
+      the future:
+    </p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html">ruby</a>
+        <a href="index.html">python</a>
+        <a href="index.html">php</a>
+        <a href="index.html">node</a>
+        <a href="index.html">java</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_customer_create_and_charge">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <p>After creating a customer in CrossBorder with a stored payment method, you can  charge that customer at any point in time by passing the customer ID&mdash;instead of a card representation&mdash;in the charge request. Be certain to store the customer ID on your side for later use.
+    </p>
+
+    <h2 id="storing-information-in-metadata">Storing information in metadata</h2>
+
+    <p>CrossBorder supports adding <a href="api/index.html#metadata">metadata</a> to the most common requests you'll make, such as processing charges. Metadata is for your use only: it won't be shown to customers or factored into whether or not a charge is declined.
+    </p>
+
+    <p>Through metadata, you can associate other information&mdash;meaningful to you&mdash;with CrossBorder activity. Any metadata you include will be viewable in the Dashboard (e.g., when looking at the page for an individual charge), and will also be available in common reports and exports. As an example, your store's order ID can be attached to the charge used to pay for that order. Doing so allows you, your accountant, or your finance team to easily reconcile charges in CrossBorder to orders in your system.
+    </p>
+
+    <section class="code-example">
+      <nav class="lang-control">
+        <a href="index.html">ruby</a>
+        <a href="index.html">python</a>
+        <a href="index.html">php</a>
+        <a href="index.html">node</a>
+        <a href="index.html">java</a>
+      </nav>
+      <div class="terminal-wrap" data-action="tutorial_charge_create_metadata">
+        <pre><code><div class="terminal"></div></code></pre>
+      </div>
+    </section>
+
+    <hr>
+    <h2>Next up</h2>
+    <p>
+      Congrats! You've processed your first charge using CrossBorder. Some things you might want to
+      see next:
+    </p>
+    <ul>
+      <li><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fdashboard">Managing your CrossBorder account</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fdocs%252Fexamples">Sample projects using CrossBorder</a></li>
+      <li><a href="api/index.html">Full API Documentation</a></li>
+      <li><a href="../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fcoupons-for-charges">Implement your own coupon system for standalone charges</a></li>
+    </ul>
+  </article>
+</section>
+
+
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.CrossBorder.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/CrossBorder">#CrossBorder</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../country?country=AU&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CA&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DK&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FI&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=GB&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IE&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NO&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SE&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=US&amp;redirect=%252Fdocs%252Fcharges" class="selected">
+                            <img src="../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=AT&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BE&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=BR&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=FR&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=DE&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=IT&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=JP&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=LU&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=MX&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=NL&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=PT&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=SG&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=ES&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../country?country=CH&amp;redirect=%252Fdocs%252Fcharges" >
+                            <img src="../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../country?country=CH&amp;redirect=%252F">&copy; CrossBorder</a></p>
+
+    <ul>
+        <li><a href="https://status.CrossBorder.com"><span>System Status</span></a></li>
+        <li><a href="../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/CrossBorder">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../terms">Terms of Service</a></li>
+        <li><a href="../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+    <script src="../assets/tutorial-f035eaa45be8fa19a028ee35613aca55.js"></script>
+  <script type="text/javascript">
+      var APIValues = {};
+          APIValues["ruby"] = {};
+              APIValues["ruby"]["tutorial_charge_create"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken = params[:CrossBorderToken]\n\n# Create the charge on CrossBorder\u0026#39;s servers - this will charge the user\u0026#39;s card\nbegin\n  charge = CrossBorder::Charge.create(\n    :amount =\u0026gt; 1000, # amount in cents, again\n    :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n    :source =\u0026gt; token,\n    :description =\u0026gt; \u0026quot;Example charge\u0026quot;\n  )\nrescue CrossBorder::CardError =\u0026gt; e\n  # The card has been declined\nend\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_customer_create_and_charge"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken = params[:CrossBorderToken]\n\n# Create a Customer\ncustomer = CrossBorder::Customer.create(\n  :source =\u0026gt; token,\n  :description =\u0026gt; \u0026quot;Example customer\u0026quot;\n)\n\n# Charge the Customer instead of the card\nCrossBorder::Charge.create(\n    :amount =\u0026gt; 1000, # in cents\n    :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n    :customer =\u0026gt; customer.id\n)\n\n# YOUR CODE: Save the customer ID and other info in a database for later!\n\n# YOUR CODE: When it\u0026#39;s time to charge the customer again, retrieve the customer ID!\n\nCrossBorder::Charge.create(\n  :amount   =\u0026gt; 1500, # $15.00 this time\n  :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n  :customer =\u0026gt; customer_id # Previously stored, then retrieved\n)\u003C/span\u003E";
+              APIValues["ruby"]["tutorial_charge_create_metadata"] = "\u003Cspan class=\"highlight_js ruby\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken = params[:CrossBorderToken]\n\n# Create the charge on CrossBorder\u0026#39;s servers - this will charge the user\u0026#39;s card\nbegin\n  charge = CrossBorder::Charge.create(\n    :amount =\u0026gt; 1000, # amount in cents, again\n    :currency =\u0026gt; \u0026quot;usd\u0026quot;,\n    :source =\u0026gt; token,\n    :description =\u0026gt; \u0026quot;Example charge\u0026quot;,\n    :metadata =\u0026gt; {\u0026quot;order_id\u0026quot; =\u0026gt; \u0026quot;6735\u0026quot;}\n  )\nrescue CrossBorder::CardError =\u0026gt; e\n  # The card has been declined\nend\u003C/span\u003E";
+          APIValues["python"] = {};
+              APIValues["python"]["tutorial_charge_create"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken = request.POST[\u0026#39;CrossBorderToken\u0026#39;]\n\n# Create the charge on CrossBorder\u0026#39;s servers - this will charge the user\u0026#39;s card\ntry:\n  charge = CrossBorder.Charge.create(\n      amount=1000, # amount in cents, again\n      currency=\u0026quot;usd\u0026quot;,\n      source=token,\n      description=\u0026quot;Example charge\u0026quot;\n  )\nexcept CrossBorder.error.CardError, e:\n  # The card has been declined\n  pass\u003C/span\u003E";
+              APIValues["python"]["tutorial_customer_create_and_charge"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken = request.POST[\u0026#39;CrossBorderToken\u0026#39;]\n\n# Create a Customer\ncustomer = CrossBorder.Customer.create(\n    source=token,\n    description=\u0026quot;Example customer\u0026quot;\n)\n\n# Charge the Customer instead of the card\nCrossBorder.Charge.create(\n    amount=1000, # in cents\n    currency=\u0026quot;usd\u0026quot;,\n    customer=customer.id\n)\n\n# YOUR CODE: Save the customer ID and other info in a database for later!\n\n# YOUR CODE: When it\u0026#39;s time to charge the customer again, retrieve the customer ID!\n\nCrossBorder.Charge.create(\n    amount=1500, # $15.00 this time\n    currency=\u0026quot;usd\u0026quot;,\n    customer=customer_id # Previously stored, then retrieved\n)\u003C/span\u003E";
+              APIValues["python"]["tutorial_charge_create_metadata"] = "\u003Cspan class=\"highlight_js python\"\u003E# Set your secret key: remember to change this to your live secret key in production\n# See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.api_key = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;\n\n# Get the credit card details submitted by the form\ntoken = request.POST[\u0026#39;CrossBorderToken\u0026#39;]\n\n# Create the charge on CrossBorder\u0026#39;s servers - this will charge the user\u0026#39;s card\ntry:\n  charge = CrossBorder.Charge.create(\n      amount=1000, # amount in cents, again\n      currency=\u0026quot;usd\u0026quot;,\n      source=token,\n      description=\u0026quot;Example charge\u0026quot;,\n      metadata={\u0026quot;order_id\u0026quot;: \u0026quot;6735\u0026quot;}\n  )\nexcept CrossBorder.error.CardError, e:\n  # The card has been declined\n  pass\u003C/span\u003E";
+          APIValues["php"] = {};
+              APIValues["php"]["tutorial_charge_create"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\n\\CrossBorder\\CrossBorder::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// Get the credit card details submitted by the form\n$token = $_POST[\u0026#39;CrossBorderToken\u0026#39;];\n\n// Create the charge on CrossBorder\u0026#39;s servers - this will charge the user\u0026#39;s card\ntry {\n  $charge = \\CrossBorder\\Charge::create(array(\n    \u0026quot;amount\u0026quot; =\u0026gt; 1000, // amount in cents, again\n    \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n    \u0026quot;source\u0026quot; =\u0026gt; $token,\n    \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Example charge\u0026quot;\n    ));\n} catch(\\CrossBorder\\Error\\Card $e) {\n  // The card has been declined\n}\u003C/span\u003E";
+              APIValues["php"]["tutorial_customer_create_and_charge"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\n\\CrossBorder\\CrossBorder::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// Get the credit card details submitted by the form\n$token = $_POST[\u0026#39;CrossBorderToken\u0026#39;];\n\n// Create a Customer\n$customer = \\CrossBorder\\Customer::create(array(\n  \u0026quot;source\u0026quot; =\u0026gt; $token,\n  \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Example customer\u0026quot;)\n);\n\n// Charge the Customer instead of the card\n\\CrossBorder\\Charge::create(array(\n  \u0026quot;amount\u0026quot; =\u0026gt; 1000, // amount in cents, again\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;customer\u0026quot; =\u0026gt; $customer-\u0026gt;id)\n);\n\n// YOUR CODE: Save the customer ID and other info in a database for later!\n\n// YOUR CODE: When it\u0026#39;s time to charge the customer again, retrieve the customer ID!\n\n\\CrossBorder\\Charge::create(array(\n  \u0026quot;amount\u0026quot;   =\u0026gt; 1500, // $15.00 this time\n  \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n  \u0026quot;customer\u0026quot; =\u0026gt; $customerId // Previously stored, then retrieved\n  ));\u003C/span\u003E";
+              APIValues["php"]["tutorial_charge_create_metadata"] = "\u003Cspan class=\"highlight_js php\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\n\\CrossBorder\\CrossBorder::setApiKey(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// Get the credit card details submitted by the form\n$token = $_POST[\u0026#39;CrossBorderToken\u0026#39;];\n\n// Create the charge on CrossBorder\u0026#39;s servers - this will charge the user\u0026#39;s card\ntry {\n  $charge = \\CrossBorder\\Charge::create(array(\n    \u0026quot;amount\u0026quot; =\u0026gt; 1000, // amount in cents, again\n    \u0026quot;currency\u0026quot; =\u0026gt; \u0026quot;usd\u0026quot;,\n    \u0026quot;source\u0026quot; =\u0026gt; $token,\n    \u0026quot;description\u0026quot; =\u0026gt; \u0026quot;Example charge\u0026quot;,\n    \u0026quot;metadata\u0026quot; =\u0026gt; array(\u0026quot;order_id\u0026quot; =\u0026gt; \u0026quot;6735\u0026quot;)\n    ));\n} catch(\\CrossBorder\\Error\\Card $e) {\n  // The card has been declined\n}\u003C/span\u003E";
+          APIValues["node"] = {};
+              APIValues["node"]["tutorial_charge_create"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\nvar CrossBorder = require(\u0026quot;CrossBorder\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// (Assuming you\u0026#39;re using express - expressjs.com)\n// Get the credit card details submitted by the form\nvar CrossBorderToken = request.body.CrossBorderToken;\n\nvar charge = CrossBorder.charges.create({\n  amount: 1000, // amount in cents, again\n  currency: \u0026quot;usd\u0026quot;,\n  source: CrossBorderToken,\n  description: \u0026quot;Example charge\u0026quot;\n}, function(err, charge) {\n  if (err \u0026amp;\u0026amp; err.type === \u0026#39;CrossBorderCardError\u0026#39;) {\n    // The card has been declined\n  }\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_customer_create_and_charge"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\nvar CrossBorder = require(\u0026quot;CrossBorder\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// (Assuming you\u0026#39;re using express - expressjs.com)\n// Get the credit card details submitted by the form\nvar CrossBorderToken = request.body.CrossBorderToken;\n\nCrossBorder.customers.create({\n  source: CrossBorderToken,\n  description: \u0026#39;payinguser@example.com\u0026#39;\n}).then(function(customer) {\n  return CrossBorder.charges.create({\n    amount: 1000, // amount in cents, again\n    currency: \u0026quot;usd\u0026quot;,\n    customer: customer.id\n  });\n}).then(function(charge) {\n  // YOUR CODE: Save the customer ID and other info in a database for later!\n});\n\n// YOUR CODE: When it\u0026#39;s time to charge the customer again, retrieve the customer ID!\n\nCrossBorder.charges.create({\n  amount: 1500, // amount in cents, again\n  currency: \u0026quot;usd\u0026quot;,\n  customer: customerId // Previously stored, then retrieved\n});\u003C/span\u003E";
+              APIValues["node"]["tutorial_charge_create_metadata"] = "\u003Cspan class=\"highlight_js javascript\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\nvar CrossBorder = require(\u0026quot;CrossBorder\u0026quot;)(\u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;);\n\n// (Assuming you\u0026#39;re using express - expressjs.com)\n// Get the credit card details submitted by the form\nvar CrossBorderToken = request.body.CrossBorderToken;\n\nvar charge = CrossBorder.charges.create({\n  amount: 1000, // amount in cents, again\n  currency: \u0026quot;usd\u0026quot;,\n  source: CrossBorderToken,\n  description: \u0026quot;Example charge\u0026quot;,\n  metadata: {\u0026#39;order_id\u0026#39;: \u0026#39;6735\u0026#39;}\n}, function(err, charge) {\n  if (err \u0026amp;\u0026amp; err.type === \u0026#39;CrossBorderCardError\u0026#39;) {\n    // The card has been declined\n  }\n});\u003C/span\u003E";
+          APIValues["java"] = {};
+              APIValues["java"]["tutorial_charge_create"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\n// Get the credit card details submitted by the form\nString token = request.getParameter(\u0026quot;CrossBorderToken\u0026quot;);\n\n// Create the charge on CrossBorder\u0026#39;s servers - this will charge the user\u0026#39;s card\ntry {\n  Map\u0026lt;String, Object\u0026gt; chargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\n  chargeParams.put(\u0026quot;amount\u0026quot;, 1000); // amount in cents, again\n  chargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\n  chargeParams.put(\u0026quot;source\u0026quot;, token);\n  chargeParams.put(\u0026quot;description\u0026quot;, \u0026quot;Example charge\u0026quot;);\n\n  Charge charge = Charge.create(chargeParams);\n} catch (CardException e) {\n  // The card has been declined\n}\u003C/span\u003E";
+              APIValues["java"]["tutorial_customer_create_and_charge"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\n// Get the credit card details submitted by the form\nString token = request.getParameter(\u0026quot;CrossBorderToken\u0026quot;);\n\n// Create a Customer\nMap\u0026lt;String, Object\u0026gt; customerParams = new HashMap\u0026lt;String, Object\u0026gt;();\ncustomerParams.put(\u0026quot;source\u0026quot;, token);\ncustomerParams.put(\u0026quot;description\u0026quot;, \u0026quot;Example customer\u0026quot;);\n\nCustomer customer = Customer.create(customerParams);\n\n// Charge the Customer instead of the card\nMap\u0026lt;String, Object\u0026gt; chargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\nchargeParams.put(\u0026quot;amount\u0026quot;, 1000); // amount in cents, again\nchargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\nchargeParams.put(\u0026quot;customer\u0026quot;, customer.getId());\n\nCharge.create(chargeParams);\n\n// YOUR CODE: Save the customer ID and other info in a database for later!\n\n// YOUR CODE: When it\u0026#39;s time to charge the customer again, retrieve the customer ID!\n\nMap\u0026lt;String, Object\u0026gt; otherChargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\notherChargeParams.put(\u0026quot;amount\u0026quot;, 1500); // $15.00 this time\notherChargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\notherChargeParams.put(\u0026quot;customer\u0026quot;, customerId); // Previously stored, then retrieved\n\nCharge.create(otherChargeParams);\u003C/span\u003E";
+              APIValues["java"]["tutorial_charge_create_metadata"] = "\u003Cspan class=\"highlight_js java\"\u003E// Set your secret key: remember to change this to your live secret key in production\n// See your keys here https://dashboard.CrossBorder.com/account/apikeys\nCrossBorder.apiKey = \u0026quot;sk_test_BQokikJOvBiI2HlWgH4olfQ2\u0026quot;;\n\n// Get the credit card details submitted by the form\nString token = request.getParameter(\u0026quot;CrossBorderToken\u0026quot;);\n\n// Create the charge on CrossBorder\u0026#39;s servers - this will charge the user\u0026#39;s card\ntry {\n  Map\u0026lt;String, Object\u0026gt; chargeParams = new HashMap\u0026lt;String, Object\u0026gt;();\n  chargeParams.put(\u0026quot;amount\u0026quot;, 1000); // amount in cents, again\n  chargeParams.put(\u0026quot;currency\u0026quot;, \u0026quot;usd\u0026quot;);\n  chargeParams.put(\u0026quot;source\u0026quot;, token);\n  chargeParams.put(\u0026quot;description\u0026quot;, \u0026quot;Example charge\u0026quot;);\n  Map\u0026lt;String, String\u0026gt; initialMetadata = new HashMap\u0026lt;String, String\u0026gt;();\n  initialMetadata.put(\u0026quot;order_id\u0026quot;, \u0026quot;6735\u0026quot;);\n  chargeParams.put(\u0026quot;metadata\u0026quot;, initialMetadata);\n\n  Charge charge = Charge.create(chargeParams);\n} catch (CardException e) {\n  // The card has been declined\n}\u003C/span\u003E";
+  </script>
+
+
+  <script src="../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Relay Error Handling for Apps</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/site-e2d44e0334cb99f0b81b5a86ba15fc05.css" media="screen" />
+    <script type="text/javascript">
+        var _sf_startpt=(new Date()).getTime()
+        var APIValues = {};
+    </script>
+    <script src="../../assets/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="../../assets/analytics-0ea5a2b2ad899260c73440d84f5ab7bc.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv-17761200a17ebcb716dda86cca6d2472.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://use.typekit.net/gbh7uto.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <meta name="csrf-token" content="NwuhOmqd5XuInWfi2NNOcaIigQCe0j0UtGO_BG3Dfxe_IaT5c_6gy3uNPTKGqfL6mp976I-56Sx9eSho7M7bjQ==" />
+    <link rel="stylesheet" type="text/css" href="../../assets/index.css">
+</head>
+<body id="documentation">
+
+  <div id="header">
+    <h1><a href="../../country?country=CH&amp;redirect=%252F">CrossBorder</a></h1>
+    <div class="navigation">
+    <div class="signin"><a id='signin' href="https://dashboard.stripe.com/login"><span>Sign In</span></a></div>
+
+  <ul class="global">
+    <li><a href="../../docs.1" class="selected">Documentation</a></li>
+    <li><a href="https://support.stripe.com">Help &amp; Support</a></li>
+  </ul>
+</div>
+
+  </div><!-- #header -->
+
+  <section id="doc">
+
+
+  <nav>
+
+    <h1 class="references">Development</h1>
+    <ul>      <li class="unselected"><a href="docs.html">Introduction</a></li>
+      <li class="unselected sub"><a href="docs/quick-code-form.html">Quick Code Form</a></li>
+      <li class="unselected sub"><a href="docs/custom-form">Custom Forms</a></li>
+     <!-- <li class="unselected sub"><a href="docs/mobile/index.html">Mobile Apps</a></li>-->
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fcharges">Charging Cards</a></li> -->
+      <li class="unselected sub"><a href="docs/mobile/index.html">Integrations</a></li>
+      <li class="unselected"><a href="docs/testing.html">Testing</a></li>
+      <li class="unselected"><a href="security.html">Security</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Ffraud">Fraud Protection</a></li>-->
+      <!--<li class="unselected"><a href="docs/webhooks/index.html">Webhooks</a></li>-->
+      <li class="unselected"><a href="docs/webhooks/index.html">Webhooks</a></li>
+      <!--<li class="unselected"><a href="docs/guides/bitcoin">Bitcoin Guide</a></li>-->
+      <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Falipay">Alipay Guide</a></li>-->
+      <li class="unselected"><a href="docs/guides/file-upload">File Upload Guide</a></li>
+</ul>
+
+    <h1 class="Introduction">Account</h1>
+    <ul>      <li class="unselected"><a href="docs/dashboard.html">Your Account</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Ftransfers">Getting Paid</a></li>-->
+      <li class="unselected"><a href="docs/disputes/index.html">Disputes</a></li>
+      <li class="unselected sub"><a href="docs/disputes/evidence.html">Submitting Evidence</a></li>
+     <!-- <li class="unselected sub"><a href="help/dispute-types">Dispute Types</a></li>-->
+      <li class="unselected sub"><a href="help/disputes.html">Disputes FAQ</a></li>
+      <li class="unselected"><a href="docs/integrations.html">Integrations</a></li>
+</ul>
+
+    <h1 class="faq">References</h1>
+    <ul>      <li class="unselected"><a href="docs/examples.html">Examples</a></li>
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fstripe.js">Stripe.js</a></li>-->
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fcheckout">Checkout</a></li>-->
+    <li class="unselected"><a href="docs/libraries/index.html">API Libraries</a></li>
+    <!--<li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fupgrades">API Upgrades</a></li>-->
+
+      <li class="unselected">
+        <a href="docs/api/index.html" class="external" target="_blank">Full API Reference</a>
+      </li>
+    </ul>
+
+    <h1 class="subscriptions"> Pay & Process</h1>
+    <ul>      <li class="unselected"><a href="docs/relay/overview-pay-process.html">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/charges.html">Charging Cards</a></li>
+      <li class="unselected"><a href="docs/testing-pay-process.html">Testing</a></li>
+      <li class="unselected"><a href="docs/ach.html">ACH Guide</a></li>
+      <li class="unselected"><a href="docs/bitcoin.html">Bitcoin Guide</a></li>
+      <li class="unselected"><a href="docs/alipay.html">Alipay Guide</a></li>
+      <li class="unselected"><a href="docs/examples-pay-process.html">Examples</a></li>
+</ul>
+
+    <h1 class="orders">Order & Shipping</h1>
+    <ul> 
+    <li class="unselected"><a href="docs/relay/overview-order-shipping.html">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide-order-shipping.html">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/testing-order-shipping.html">Testing</a></li>
+      <li class="unselected"><a href="docs/examples.html">Examples</a></li>
+      <li class="unselected"><a href="docs/relay/apps-error-guide">Error Handling Guide</a></li>
+</ul>
+
+<h1 class="subscriptions"> Landed Cost</h1>
+    <ul>  <li class="unselected"><a href="docs/relay/index-landed-cost.html">Overview</a></li>
+          <li class="unselected"><a href="docs/subscriptions/guide-landed-cost.html">Detailed Guide</a></li>
+          <li class="unselected"><a href="docs/testing-landed-cost.html">Testing</a></li>
+          <li class="unselected"><a href="docs/examples-landed-cost.html">Examples</a></li>
+          <li class="selected"><a href="docs/relay/apps-error-guide-lc.html">Error Handling Guide</a></li>
+</ul>
+
+<h1 class="subscriptions"> Cross Border Singles</h1>
+    <ul>    <li class="unselected"><a href="docs/subscriptions.1">CrossBorder Availability</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fsubscriptions%252Fguide">Product Clasification</a></li>
+      <li class="unselected"><a href="docs/subscriptions.2">Cost Calculation</a></li>
+      <li class="unselected"><a href="docs/subscriptions.3">Tracking Engine</a></li>
+      <!--<li class="unselected"><a href="docs/subscriptions.4">Fraud Prevention Service</a></li>-->
+      <li class="unselected"><a href="docs/fraud">Fraud Prevention Service</a></li>
+      <li class="unselected"><a href="docs/subscriptions.5">Currency Service</a></li>
+</ul>
+
+    <h1 class="connect">Super Skins</h1>
+    <ul>      
+      <li class="unselected"><a href="docs/connect/index.html">Overview</a></li>
+      <li class="unselected"><a href="docs/subscriptions/guide">Detailed Guide</a></li>
+      <li class="unselected"><a href="docs/examples">Examples</a></li>
+     <!-- <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fconnecting-to-accounts">Connecting to Accounts</a></li>
+      <li class="unselected sub"><a href="docs/connect/oauth">Standalone Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fauthentication">Authentication</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Freference">OAuth Reference</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fpayments-fees">Payments and Fees</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fspecial-case-transfers">Special-case Transfers</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmanaged-accounts">Managed Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fupdating-accounts">Updating Accounts</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fidentity-verification">Identity Verification</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Frequired-verification-information">Verification Fields</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting-verification">Testing Verification</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbank-transfers">Bank Transfers</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fmigrating">Migrating Recipients</a></li>
+      <li class="unselected sub"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Fbest-practices">Best Practices</a></li>
+      <li class="unselected"><a href="country?country=CH&amp;redirect=%252Fdocs%252Fconnect%252Ftesting">Testing</a></li>
+</ul> -->
+
+    <h1 class="more">FedEx Cross Border</h1>
+    <ul>      <li class="unselected"><a href="help/contact">Contact</a></li>
+      <li class="unselected"><a href="pt">Global Users</a></li>
+      <li class="unselected last"><a href="gallery">Gallery</a></li>
+</ul>
+
+  </nav>
+
+    <section id="content">
+      <section class="relay-guide" id="details">
+  <header>
+    <h1>Relay Error Handling for Apps</h1>
+    <p>This guide helps you test and gracefully handle errors returned by the Relay API to build a great checkout experience. If you need help after reading this, check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#CrossBorder</a> on freenode.
+
+</p>
+  </header>
+
+  <article>
+
+    <p>The Relay API lets you place orders with a large numbers of merchants through a single simple API. Sometimes, however, a merchant can’t fulfill an order because a given product is out of stock or because some piece of customer data is missing. The Relay API abstracts all retailer-specific error handling from you to let you worry about only a small set of errors related to SKUs and orders.</p>
+
+    <h2 id="sku-level-errors">SKU-level errors</h2>
+
+    <p>These errors are caused by a specific SKU. The error response will always contain a value for <code>"params"</code> of the form <code>"items[{index}]"</code> where <code>{index}</code> will be the index of the SKU that triggered the error. For example, if the SKU you tried to order from a retailer is out of stock, the CrossBorder API will respond with:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;error&quot;: {
+    &quot;code&quot;: &quot;out_of_inventory&quot;,
+    &quot;param&quot;: &quot;items[0]&quot;,
+    &quot;message&quot;: &quot;This SKU cannot be used to create an order: sku_80jcxrvoPNd57O is out of stock&quot;,
+    &quot;type&quot;: &quot;invalid_request_error&quot;
+  }
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>The following are example <code>code</code>s for SKU-level errors:</p>
+
+    <ul>
+      <li><code>sku_inactive</code>: The SKU is no longer available for purchase and will not be back in stock.</li>
+      <li><code>out_of_inventory</code>: The SKU is no longer in stock.</li>
+      <li><code>product_inactive</code>: The product this SKU belongs to is no longer available for purchase.</li>
+      <li><code>maximum_sku_quantity_exceeded</code>: The merchant does not allow ordering this many of the given SKU.</li>
+      <li><code>upstream_price_mismatch</code>: The price that the retailer has does not match CrossBorder price. You should update the price displayed to the customer and let them try placing their order again.</li>
+    </ul>
+
+    <h2 id="order-level-errors">Order-level errors</h2>
+
+    <p>These errors are triggered by the shipping address, billing address, email, or phone number of the order but not a specific SKU. If the error was caused by a single parameter, the response will contain a value for the field <code>"params"</code>. For example, if the merchant failed to calculate shipping because of an issue with the customer’s postal code, the CrossBorder API will respond with:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><span class="highlight_js javascript">{
+  &quot;error&quot;: {
+    &quot;code&quot;: &quot;shipping_calculation_failed&quot;,
+    &quot;param&quot;: &quot;shipping.address.postal_code&quot;,
+    &quot;message&quot;: &quot;Shipping calculation failed: The zip code `123456` is not a valid.&quot;,
+    &quot;type&quot;: &quot;invalid_request_error&quot;
+  }
+}</span></code></pre>
+      </div>
+    </section>
+
+    <p>The possible order-level errors are:</p>
+
+    <ul>
+      <li><code>order_required_parameter</code>: The merchant is missing one or more fields before they can process the order. You should prompt the user to fill out this information based on the contents of <code>"param"</code>.</li>
+      <li><code>address_verification_failed</code>: The merchant could not verify the shipping or billing address. The value of <code>"params"</code> will tell you which field (if any) caused the validation error. You should prompt the user to update those fields.</li>
+      <li><code>shipping_calculation_failed</code>: The merchant failed to calculate a set of valid shipping options. If <code>"params"</code> is specified, you should prompt the user to update that field.</li>
+      <li><code>taxes_calculation_failed</code>: The merchant failed to calculate tax for the order. If <code>"params"</code> is specified, you should prompt the user to update the field it refers to.</li>
+      <li><code>order_creation_failed</code>: Generic error code to indicate that order creation failed. It is safe to retry creating the order.</li>
+      <li><code>order_payment_failed</code>: Generic error code to indicate that order payment failed. It is safe to retry paying the order.</li>
+    </ul>
+
+    <p>When the error pertains to a specific request parameter, the possible values for <code>"param"</code> are:</p>
+
+    <ul>
+      <li><code>email</code></li>
+      <li><code>shipping.phone</code></li>
+      <li><code>shipping.name</code></li>
+      <li><code>shipping.address</code></li>
+      <li><code>card.name</code></li>
+      <li><code>card.address</code></li>
+    </ul>
+
+    <p>The <code>address</code> fields above (<code>shipping.address</code> and <code>card.address</code>) can refer to a more specific component of the address. For example, an issue with the shipping address can also return the <code>"param"</code>:</p>
+
+    <ul>
+      <li><code>shipping.address.line1</code></li>
+      <li><code>shipping.address.line2</code></li>
+      <li><code>shipping.address.city</code></li>
+      <li><code>shipping.address.state</code></li>
+      <li><code>shipping.address.postal_code</code></li>
+      <li><code>shipping.address.country</code></li>
+    </ul>
+
+    <hr />
+
+    <h1 id="testing-your-application">Testing your application</h1>
+
+    <p>To help you test your error handling easily and deterministically, we have set up a test merchant that will send back an error response solely based on your API request. This merchant (<code>acct_17ki35KuoS4pPl69</code>) has a dummy T-shirt for sale with ID <code>CrossBorder_shirt</code> and three different sizes (S, M, L). This merchant is set up to only accept test mode requests, so you should only use this connection for testing your Relay app.</p>
+
+    <p>If you have not yet built your Relay Connect app, consider building a basic checkout experience using the <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fproduct-discovery-app">Relay Demo catalog</a>. To get started with advanced error handling, connect your application to our test account below:</p>
+
+    <p class="notification">This tutorial assumes you are logged in and have already <a href="https://dashboard.stripe.com/account/applications/settings" class="arrow">registered your platform</a></p>
+
+    <p>This merchant looks at two pieces of data when determining which error to return: SKU quantity and shipping address. The SKU quantity determines which error gets returned and the shipping address determines which value of <code>"param"</code> (if any) gets returned along with that error. Below are the quantities that will trigger an error. Note that if your order contains more than one SKU, the <em>first</em> SKU with a quantity greater than 1 will be used to determine the error returned.</p>
+
+    <p>When you <a href="../api/index.html#create_order">create an order</a> with the given SKU quantities, the CrossBorder API returns one of the following error codes:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Quantity</th>
+          <th>Error</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>No error</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><code>sku_inactive</code></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><code>out_of_inventory</code></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><code>product_inactive</code></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><code>maximum_sku_quantity_exceeded</code></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><code>upstream_price_mismatch</code></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><code>upstream_coupon_code_invalid</code></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><code>shipping_calculation_failed</code></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><code>taxes_calculation_failed</code></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><code>address_verification_failed</code></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td><code>order_required_parameter</code></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><code>order_creation_failed</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>When you <a href="../api/index.html#pay_order">pay for an order</a>, the CrossBorder API returns one of the following error codes:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Quantity</th>
+          <th>Error</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20</td>
+          <td><code>order_payment_failed</code></td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td><code>order_required_parameter</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The other component controlling the error is the first line of the shipping address on the order (<code>shipping[address][line1]</code> in your request). If the first line of the address contains <code>"XXX Main Street"</code> and <code>XXX</code> is specified in the table below, the given parameter will be returned in the <code>"param"</code> of the error response.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Address</th>
+          <th>Param</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1600</td>
+          <td><code>"shipping.address.line1"</code></td>
+        </tr>
+        <tr>
+          <td>1601</td>
+          <td><code>"shipping.address.line2"</code></td>
+        </tr>
+        <tr>
+          <td>1602</td>
+          <td><code>"shipping.address.city"</code></td>
+        </tr>
+        <tr>
+          <td>1603</td>
+          <td><code>"shipping.address.postal_code"</code></td>
+        </tr>
+        <tr>
+          <td>1604</td>
+          <td><code>"shipping.address.state"</code></td>
+        </tr>
+        <tr>
+          <td>1605</td>
+          <td><code>"shipping.address.country"</code></td>
+        </tr>
+        <tr>
+          <td>1606</td>
+          <td><code>"shipping.address"</code></td>
+        </tr>
+        <tr>
+          <td>1607</td>
+          <td><code>"shipping.name"</code></td>
+        </tr>
+        <tr>
+          <td>1608</td>
+          <td><code>"shipping.phone"</code></td>
+        </tr>
+        <tr>
+          <td>1700</td>
+          <td><code>"card.address.line1"</code></td>
+        </tr>
+        <tr>
+          <td>1701</td>
+          <td><code>"card.address.line2"</code></td>
+        </tr>
+        <tr>
+          <td>1702</td>
+          <td><code>"card.address.city"</code></td>
+        </tr>
+        <tr>
+          <td>1703</td>
+          <td><code>"card.address.postal_code"</code></td>
+        </tr>
+        <tr>
+          <td>1704</td>
+          <td><code>"card.address.state"</code></td>
+        </tr>
+        <tr>
+          <td>1705</td>
+          <td><code>"card.address.country"</code></td>
+        </tr>
+        <tr>
+          <td>1706</td>
+          <td><code>"card.address"</code></td>
+        </tr>
+        <tr>
+          <td>1707</td>
+          <td><code>"card.name"</code></td>
+        </tr>
+        <tr>
+          <td>1800</td>
+          <td><code>"email"</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>For example, the following request specifies quantity 8 and the address <code>"1604 Main Street"</code>. Based on the tables above, we know the response will have the error code <code>"shipping_calculation_failed"</code> and include the parameter <code>"shipping.address.state"</code>:</p>
+
+    <section class="code-example">
+      <div class="terminal-wrap">
+        <pre><code><pre class="language-bash"><code class="language-bash">curl <span class="token string">https://api.CrossBorder.com/v1/orders</span> \
+   -u <span class="token string">sk_test_BQokikJOvBiI2HlWgH4olfQ2:</span> \
+   -H <span class="token string">"CrossBorder-Account: acct_17ki35KuoS4pPl69"</span> \
+   -d <span class="token keyword">items[][type]</span>=<span class="token string">sku</span> \
+   -d <span class="token keyword">items[][parent]</span>=<span class="token string">CrossBorder_shirt_large</span> \
+   -d <span class="token keyword">items[][quantity]</span>=<span class="token string">8</span> \
+   -d <span class="token keyword">currency</span>=<span class="token string">usd</span> \
+   -d <span class="token keyword">shipping[name]</span>="<span class="token string">Jenny Rosen</span>" \
+   -d <span class="token keyword">shipping[address][line1]</span>="<span class="token string">1604 Main Street</span>" \
+   -d <span class="token keyword">shipping[address][city]</span>=<span class="token string">Anytown</span> \
+   -d <span class="token keyword">shipping[address][postal_code]</span>=<span class="token string">123456</span> \
+   -d <span class="token keyword">shipping[address][state]</span>=<span class="token string">CA</span> \
+   -d <span class="token keyword">shipping[address][country]</span>=<span class="token string">US</span>
+</code></pre>
+<span class="highlight_js javascript">{
+  &quot;error&quot;: {
+    &quot;type&quot;: &quot;invalid_request_error&quot;,
+    &quot;code&quot;: &quot;shipping_calculation_failed&quot;,
+    &quot;param&quot;: &quot;shipping.address.state&quot;,
+    &quot;message&quot;: &quot;Shipping calculation failed: Couldn&#39;t verify your shipping address&quot;
+  }
+}</span>
+</code></pre>
+      </div>
+    </section>
+
+    <h1>Get in touch</h1>
+    <p>If you notice anything surprising, or have feedback or more importantly questions, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#108;&#097;&#121;&#064;&#115;&#116;&#114;&#105;&#112;&#101;&#046;&#099;&#111;&#109;">get in touch!</a></p>
+
+    <hr />
+
+    <h1>More about Relay</h1>
+    <p>Looking to learn more about Relay? Check out these other guides:</p>
+    <ul>
+  <li><a href="index.html">Relay API Overview</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-guide">Relay API for Apps</a></li>
+  <li><a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frecipes%252Fselling-on-twitter">Selling on Twitter with Relay</a></li>
+</ul>
+
+    <script type="text/javascript">
+  function connect() {
+    $.post("/relay/relay-errors/connect", function() {
+      location.reload()
+    })
+  }
+  function disconnect() {
+    $.post("/relay/relay-errors/disconnect", function() {
+      location.reload()
+    })
+  }
+</script>
+
+  </article>
+</section>
+
+      <footer class="clearfix">
+  <section class="questions">
+    <h1>Questions?</h1>
+    <p>We're always happy to help with code or other questions you might have! Check out our answers to <a href="https://support.stripe.com">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#CrossBorder</a> on freenode.</p>
+
+  </section>
+</footer>
+    </section>
+
+  </section><!-- #documentation -->
+
+  <div id="footer">
+    <div class="country-dropdown-view">
+        <a class="select">
+            <span>
+                <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                <strong>United States</strong>
+            </span>
+        </a>
+
+        <div class="popover">
+            <div class="arrow"></div>
+            <h4>Select your Country</h4>
+            <ul>
+                    <li>
+                        <a href="../../country?country=AU&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/au.png" width="23" height="17" data-hires="true" />
+                            <span>Australia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CA&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/ca.png" width="23" height="17" data-hires="true" />
+                            <span>Canada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DK&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/dk.png" width="23" height="17" data-hires="true" />
+                            <span>Denmark</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FI&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/fi.png" width="23" height="17" data-hires="true" />
+                            <span>Finland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=GB&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/gb.png" width="23" height="17" data-hires="true" />
+                            <span>United Kingdom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IE&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/ie.png" width="23" height="17" data-hires="true" />
+                            <span>Ireland</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NO&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/no.png" width="23" height="17" data-hires="true" />
+                            <span>Norway</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SE&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/se.png" width="23" height="17" data-hires="true" />
+                            <span>Sweden</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=US&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" class="selected">
+                            <img src="../../img/flags/us.png" width="23" height="17" data-hires="true" />
+                            <span>United States</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=AT&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/at.png" width="23" height="17" data-hires="true" />
+                            <span>Austria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BE&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/be.png" width="23" height="17" data-hires="true" />
+                            <span>Belgium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=BR&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/br.png" width="23" height="17" data-hires="true" />
+                            <span>Brazil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=FR&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/fr.png" width="23" height="17" data-hires="true" />
+                            <span>France</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=DE&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/de.png" width="23" height="17" data-hires="true" />
+                            <span>Germany</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=IT&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/it.png" width="23" height="17" data-hires="true" />
+                            <span>Italy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=JP&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/jp.png" width="23" height="17" data-hires="true" />
+                            <span>Japan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=LU&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/lu.png" width="23" height="17" data-hires="true" />
+                            <span>Luxembourg</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=MX&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/mx.png" width="23" height="17" data-hires="true" />
+                            <span>Mexico</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=NL&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/nl.png" width="23" height="17" data-hires="true" />
+                            <span>Netherlands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=PT&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/pt.png" width="23" height="17" data-hires="true" />
+                            <span>Portugal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=SG&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/sg.png" width="23" height="17" data-hires="true" />
+                            <span>Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=ES&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/es.png" width="23" height="17" data-hires="true" />
+                            <span>Spain</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../country?country=CH&amp;redirect=%252Fdocs%252Frelay%252Fapps-error-guide" >
+                            <img src="../../img/flags/ch.png" width="23" height="17" data-hires="true" />
+                            <span>Switzerland</span>
+                        </a>
+                    </li>
+          </ul>
+        </div>
+    </div>
+
+
+    <p><a href="../../country?country=CH&amp;redirect=%252F">&copy; CrossBorder</a></p>
+
+    <ul>
+        <li><a href="https://status.stripe.com"><span>System Status</span></a></li>
+        <li><a href="../../country?country=CH&amp;redirect=%252Fabout">About</a></li>
+        <li><a href="../../blog/page/1"><span>Blog</span></a></li>
+        <li><a href="../../jobs/index.html"><span>Jobs</span></a></li>
+        <li><a href="http://twitter.com/stripe">Twitter</a></li>
+    </ul>
+    <ul class="lesser">
+        <li><a href="../../terms">Terms of Service</a></li>
+        <li><a href="../../privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+<div class="country-dropdown-overlay"></div>
+
+    <script src="../../assets/jquery-47d53801b9f61ca8a21dcc2571aeb3ec.js"></script>
+    <script src="../../assets/shared-3abadcaa3af6e785a085062e45894014.js"></script>
+
+
+  
+
+  <script src="../../assets/documentation-4ba5fcc79adb6fc04e36d4af597eb53b.js"></script>
+  <script src="../../assets/highlight.pack-2286570da0bb1b3179fb57ccf73939c5.js"></script>
+<script src="../../assets/highlighter-e9cf653413c50b1b2558992fba0cb323.js"></script>
+
+  <script type="text/javascript">
+    Analytics.viewed("docs");
+  </script>
+</body>
+</html>
